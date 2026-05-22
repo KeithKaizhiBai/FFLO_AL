@@ -1,0 +1,33 @@
+# Default: let Git detect text files
+* text=auto
+
+# Scripts and source code should keep LF
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.m text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+
+# Windows PowerShell scripts can use CRLF
+*.ps1 text eol=crlf
+
+# Binary / data files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.zip binary
+*.tar.gz binary
+*.npz binary
+*.npy binary
+*.mat binary
+*.pt binary
+*.pth binary
+*.ckpt binary

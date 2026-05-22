@@ -1,0 +1,238 @@
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+*.egg-info/
+
+
+# =========================
+# OS / editor files
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+slurm-*.out
+*.out
+*.err
+
+
+# =========================
+# Secrets / tokens / credentials
+# =========================
+.env
+.env.*
+!.env.example
+
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cert
+*.token
+*.secret
+credentials.json
+token.json
+secrets.json
+config.private.*
+private_config.*
+
+
+# =========================
+# Large data
+# =========================
+data/
+datasets/
+raw_data/
+processed_data/
+external_data/
+
+*.h5
+*.hdf5
+*.nc
+*.npy
+*.npz
+*.mat
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.pkl
+*.pickle
+
+!tests/fixtures/*.csv
+!tests/fixtures/*.npz
+!examples/*.csv
+!examples/*.npz
+
+
+# =========================
+# Simulation outputs / numerical results
+# =========================
+results/
+outputs/
+runs/
+active_runs/
+exact_runs/
+figures_generated/
+plots_generated/
+
+*.dat
+*.bin
+*.dump
+*.vtk
+*.vtu
+*.xdmf
+
+
+# =========================
+# ML checkpoints / model artifacts
+# =========================
+checkpoints/
+ckpts/
+models/
+weights/
+wandb/
+mlruns/
+tensorboard/
+
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+
+# =========================
+# LaTeX build files
+# =========================
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+cache/
+.cache/
+*.tmp
+*.bak
+*.backup
+
+# =========================
+# Secrets / keys
+# =========================
+id_rsa
+id_rsa.pub
+*.pem
+*.key
+*.token
+.env
+.env.*
+!.env.example
+credentials.json
+token.json
+secrets.json
+
+
+# =========================
+# Local editor/history/cache
+# =========================
+.history/
+.matplotlib/
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.log
+
+
+# =========================
+# Generated numerical results / smoke tests
+# =========================
+ML_Phase_acquisition_only_smoke/
+ML_Phase_boundary_smoke/
+ML_Phase_boundary_smoke2/
+ML_Phase_discovery_smoke/
+ML_Phase_local4090/
+ML_Phase_stop_controller_smoke/
+
+tmp_boundary_band_merge/
+active_runs/
+results/
+outputs/
+runs/
+checkpoints/
+ckpts/
+
+
+# =========================
+# HPC upload packages / generated bundles
+# =========================
+hpc_upload*/
+gbu_active_learning_hpc_upload_*/
+*.tar.gz
+*.zip
+
+
+# =========================
+# Large generated phase-diagram outputs
+# =========================
+eta_phase_diagram_nkt*/
+*.npz
+*.npy
+*.mat
+*.h5
+*.hdf5
+*.dat
+*.bin
+*.pkl
+*.pickle
+
+
+# =========================
+# OS / temporary
+# =========================
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
