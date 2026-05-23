@@ -90,3 +90,27 @@ For project webpages, reports, slides, workflow diagrams, and other explanatory
 materials, write mathematical formulas in LaTeX notation. Avoid ASCII
 pseudo-formulas for physical or ML equations unless the text is explicitly
 showing code, filenames, command-line arguments, or raw configuration keys.
+
+## Report synchronization and ChatGPT handoff protocol
+
+This project often uses Codex to run numerical audits, generate reports, and
+then ask ChatGPT to interpret the results. To make this reliable, every
+report-generation task must produce machine-readable companion files in
+addition to any PDF.
+
+### 1. Never rely on PDF alone
+
+When generating a report, always output:
+
+```text
+<report_name>.pdf          # human-readable final report
+<report_name>.md           # full Markdown report with the same scientific content
+tables/*.csv               # all key numerical tables
+figures/*.png              # all important figures
+decision_log.md            # short decision-level summary
+```
+
+The Markdown report must preserve the scientific definitions, assumptions,
+main numerical results, and caveats from the PDF. The decision log should be
+short and should state what was concluded, what remains unresolved, and what
+the next calculation should check.
