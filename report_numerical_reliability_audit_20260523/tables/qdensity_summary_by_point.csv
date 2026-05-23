@@ -1,0 +1,7 @@
+point_id,kBT,JA,eta_3200,eta_6400,eta_12800,classification,reason
+11,0.0023333333333333,1.3382500000000002,1.0,1.0,-1.0,sign-changing artifact,eta sign changes between nq=6400 and nq=12800
+13,0.0,1.344875,1.0,-1.0,1.0,sign-changing artifact,eta sign changes between nq=6400 and nq=12800
+17,0.0046666666666666,1.3250000000000002,-1.0,-1.0,1.0,sign-changing artifact,eta sign changes between nq=6400 and nq=12800
+20,0.007,1.3515,1.0,1.0,-1.0,sign-changing artifact,eta sign changes between nq=6400 and nq=12800
+21,0.0,1.3382500000000002,-1.0,1.0,1.0,unresolved,fails one or more convergence tolerances
+25,0.0,1.318375,1.0,1.0,1.0,q-extremum-location unstable,critical-current extremum shifts exceed tolerance
