@@ -1,0 +1,56 @@
+{
+  "run_id": "active_boundary_discovery_512seed_256x50",
+  "ml_phase_root": "hpc_upload_qdelta_discovery_512seed_256x50_20260520_210207\\ML_Phase_512_seed_v1",
+  "final_dataset": "hpc_upload_qdelta_discovery_512seed_256x50_20260520_210207\\ML_Phase_512_seed_v1\\active_runs\\active_boundary_discovery_512seed_256x50\\dataset_iter020.npz",
+  "source_audit_tables": "hpc_upload_qdelta_discovery_512seed_256x50_20260520_210207\\ML_Phase_512_seed_v1\\reports\\audit_tables",
+  "qwindow_audit": {
+    "q_expansion_levels": [
+      {
+        "name": "expand_0p5_width",
+        "side_pad_width_factor": 0.5,
+        "n_q_multiplier_min": 1.5
+      },
+      {
+        "name": "expand_1p0_width",
+        "side_pad_width_factor": 1.0,
+        "n_q_multiplier_min": 2.0
+      }
+    ],
+    "q_max_abs": 3.141592653589793,
+    "delta_eps": 0.001,
+    "q_eps": 0.01,
+    "phase_deltaf_tol": 1e-08,
+    "local_minima_energy_window": 0.0001
+  },
+  "delta_refinement": {
+    "delta_eps_strict": 0.001,
+    "q_eps": 0.01,
+    "free_energy_ambiguity_tol_strict": 1e-08,
+    "positive_delta_gap_tol_strict": 1e-10,
+    "delta_refine_half_width": 0.01,
+    "n_delta_refined": 1000,
+    "max_delta_refinements": 3,
+    "enable_q_expansion": true,
+    "q_expand_factor": 2.0,
+    "q_expand_pad_steps": 80,
+    "max_q_refinements": 4,
+    "q_max_abs": 3.141592653589793
+  },
+  "selection_rules": {
+    "high_JA_low_T_normal_sc_boundary": "JA > 1.1 and distance_to_normal_sc_boundary <= 0.025",
+    "delta_sensitive": "delta_ambiguous or delta_unresolved or boundary_band_normal or needs_rerun_exact",
+    "control_points": "up to 20 trusted high-JA boundary points without ambiguity flags"
+  },
+  "safety": {
+    "audit_only": true,
+    "do_not_modify_active_learning": true,
+    "do_not_append_training_data": true,
+    "do_not_redefine_phase_criterion": true
+  },
+  "input_counts": {
+    "qwindow_sensitive_points": 342,
+    "delta_sensitive_points": 96,
+    "clean_control_points": 20,
+    "combined_unique_points": 345
+  }
+}

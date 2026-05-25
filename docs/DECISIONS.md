@@ -604,3 +604,39 @@ A0_for_pool, active_pool_fraction, selected boundary-band fraction, and
 N_eff/active_pool_size to verify that late batches become more boundary
 focused.
 ```
+
+## D24. Separate Phase Robustness Audits from Eta Response Audits
+
+Decision:
+
+```text
+Add an audit-only production-oriented phase robustness workflow for high-JA,
+low-T boundary-sensitive points.  The workflow expands the free-energy q window,
+saves F_min(q), records low-energy local q minima, and applies stricter
+near-zero Delta refinement.
+```
+
+Reason:
+
+```text
+The numerical reliability audit showed that high-JA positive eta anomalies are
+response-extraction pathologies unless eta_response_valid=true.  The remaining
+important uncertainty is phase-side robustness: whether the scanned q window
+and near-zero Delta resolution are sufficient for high-JA normal/SC boundary
+points.
+```
+
+Consequences:
+
+```text
+The basic phase criterion is unchanged.  Finding one positive-Delta state with
+F_SC < F_N is sufficient for superconducting classification within the scanned
+window.  Expanded q-window scans are used to test q_opt stability, branch
+identity, boundary robustness, and future topology readiness; they are not a
+new requirement for proving superconductivity.
+
+Audit outputs must remain separate from active-learning datasets unless the
+user explicitly asks to append them.  Reports must distinguish basic SC
+classification, branch-resolved completeness, topology readiness, and eta
+response validity.
+```

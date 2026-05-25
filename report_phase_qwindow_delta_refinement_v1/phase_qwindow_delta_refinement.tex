@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\begin{document}
+\section*{Phase q-window and Delta-refinement audit}
+
+Status: input points and HPC helper scripts prepared; exact reruns are pending.
+
+\subsection*{Input Counts}
+
+\begin{verbatim}
+{
+  "qwindow_sensitive_points": 342,
+  "delta_sensitive_points": 96,
+  "clean_control_points": 20,
+  "combined_unique_points": 345
+}
+\end{verbatim}
+
+\subsection*{Scope}
+
+This is an audit-only production-oriented numerical robustness update. It does
+not modify acquisition, StopController, NN training, or the active-learning
+dataset.
+
+\subsection*{Required interpretation rules}
+
+\noindent $\bullet$ q-window expansion is not required to prove superconductivity once a\\
+  lower-free-energy positive-Delta superconducting state is already found.
+\noindent $\bullet$ q-window expansion is required to check branch identity, q\_opt stability,\\
+  boundary robustness, and future topology classification.
+\noindent $\bullet$ eta response has already been downgraded to response-extraction pathology\\
+  unless `eta\_response\_valid=True`.
+\end{document}

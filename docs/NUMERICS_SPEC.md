@@ -181,3 +181,60 @@ write exact_trusted_iterXXX.npz containing only trusted exact points
 ```
 
 Use `PYTHON_BIN` directly in SLURM scripts when conda activation is unreliable.
+
+## Phase q-window and Delta-refinement Audit Workflow
+
+For high-\(J_A\), low-\(T\) normal/SC boundary-sensitive points, the project now
+uses an audit-only phase robustness workflow:
+
+```text
+scripts/phase_qwindow_delta_refinement_audit.py
+report_phase_qwindow_delta_refinement_v1/
+```
+
+This workflow does not redefine the phase criterion, does not modify
+active-learning acquisition, and does not append audit-only rerun outputs to
+the training dataset.
+
+Phase q-window expansion records:
+
+```text
+old q_opt, Delta_opt, DeltaF_min, phase label
+expanded q_opt, Delta_opt, DeltaF_min, phase label
+phase_q_window_valid
+phase_q_window_expanded_checked
+q_opt_edge_margin
+expanded_window_found_lower_branch
+phase_changed_by_q_expansion
+uniform_fflo_changed_by_q_expansion
+F_min(q) = min_Delta F(Delta, q)
+Delta_star(q)
+low_energy_local_minima_count
+```
+
+The purpose of q-window expansion is not to prove superconductivity after a
+lower-free-energy positive-\(\Delta\) state has already been found.  It checks
+branch identity, \(q_{\rm opt}\) stability, boundary robustness, and whether
+low-energy FFLO local minima are saved for later topology calculations.
+
+Near-zero Delta refinement records:
+
+```text
+old_phase
+refined_phase
+old_Delta_opt
+refined_Delta_opt
+old_DeltaF
+refined_DeltaF
+delta_refinement_triggered
+delta_refinement_valid
+boundary_ambiguous
+changed_after_delta_refinement
+```
+
+The report must also carry the response caveat:
+
+```text
+eta_response_valid is false unless a separate response-level q-window,
+q-density, and response-curve pathology audit has validated the point.
+```
