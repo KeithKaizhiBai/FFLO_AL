@@ -1,0 +1,19 @@
+field,present,source,notes
+point_id,True,dataset_iter035.npz,
+kBT,True,dataset_iter035.npz,
+J_A,True,dataset_iter035.npz,
+Delta_opt,True,dataset_iter035.npz,
+q_opt,True,dataset_iter035.npz,
+thermo_phase,True,dataset_iter035.npz,
+trusted_exact,True,dataset_iter035.npz,
+training_eligible_exact,True,dataset_iter035.npz,
+rerun_required,True,dataset_iter035.npz,
+q_unresolved,True,dataset_iter035.npz,
+delta_unresolved,True,dataset_iter035.npz,
+free_energy_opt,False,missing_or_derived,free_energy_opt and normal_state_free_energy are not stored separately
+normal_state_free_energy,False,missing_or_derived,free_energy_opt and normal_state_free_energy are not stored separately
+free_energy_gap_to_normal,True,dataset_iter035.npz,
+t,True,EtaPhaseConfig defaults,1.0
+lambda_ry,True,EtaPhaseConfig defaults,0.6
+lambda_rz,True,EtaPhaseConfig defaults,0.6
+mu,True,EtaPhaseConfig defaults,0.55

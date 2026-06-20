@@ -1,0 +1,12 @@
+run_id: topology_pass_dataset_iter035_v1
+dataset_path: rankcap_k3_tail_surprise_continuation_results/ML_Phase_512_RankCapK3_TailContinuation/active_runs/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/dataset_iter035.npz
+dataset_sha256: f2d751d0cfae8a3c63da786109903ffd1969a3f90c20a17d92665d8f252e2700
+exact_merged_path: rankcap_k3_tail_surprise_continuation_results/ML_Phase_512_RankCapK3_TailContinuation/active_runs/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/iter034/exact_merged_iter034.npz
+t: 1.0
+lambda_ry: 0.6
+lambda_rz: 0.6
+mu: 0.55
+pf_tol_rel: 1.0e-8
+gap_tol_rel: 1.0e-8
+nk_values: [512, 1024, 2048]
+nk_refine: 4096

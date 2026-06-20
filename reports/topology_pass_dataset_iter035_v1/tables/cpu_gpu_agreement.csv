@@ -1,0 +1,2 @@
+nk,max_abs_gap_diff,median_abs_gap_diff,allclose_rtol_1e-8_atol_1e-10
+2048,7.771561172376096e-16,1.1102230246251565e-16,True

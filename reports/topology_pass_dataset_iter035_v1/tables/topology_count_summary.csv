@@ -1,0 +1,9 @@
+thermo_phase,topology_label,count
+uniform_SC,trivial,715
+uniform_SC,topological,0
+uniform_SC,gapless_SC,0
+uniform_SC,topology_unresolved,0
+FFLO,trivial,3127
+FFLO,topological,1515
+FFLO,gapless_SC,195
+FFLO,topology_unresolved,15
