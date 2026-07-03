@@ -21,18 +21,28 @@ class TopologyModelParams:
     lambda_rz: float = 0.6
     mu: float = 0.55
 
-    def energy_scale(self, ja: np.ndarray | float, delta: np.ndarray | float) -> np.ndarray:
+    def energy_scale(
+        self,
+        ja: np.ndarray | float,
+        delta: np.ndarray | float,
+        mu: np.ndarray | float | None = None,
+    ) -> np.ndarray:
         ja_arr = np.asarray(ja, dtype=np.float64)
         delta_arr = np.asarray(delta, dtype=np.float64)
+        mu_arr = np.asarray(self.mu if mu is None else mu, dtype=np.float64)
+        shape = np.broadcast(ja_arr, delta_arr, mu_arr).shape
+        ja_arr = np.broadcast_to(ja_arr, shape)
+        delta_arr = np.broadcast_to(delta_arr, shape)
+        mu_arr = np.broadcast_to(mu_arr, shape)
         scale = np.maximum.reduce(
             [
-                np.full_like(ja_arr, abs(self.t), dtype=np.float64),
-                np.full_like(ja_arr, abs(self.lambda_ry), dtype=np.float64),
-                np.full_like(ja_arr, abs(self.lambda_rz), dtype=np.float64),
-                np.full_like(ja_arr, abs(self.mu), dtype=np.float64),
+                np.full(shape, abs(self.t), dtype=np.float64),
+                np.full(shape, abs(self.lambda_ry), dtype=np.float64),
+                np.full(shape, abs(self.lambda_rz), dtype=np.float64),
+                np.abs(mu_arr),
                 np.abs(ja_arr),
                 np.abs(delta_arr),
-                np.full_like(ja_arr, 1.0, dtype=np.float64),
+                np.full(shape, 1.0, dtype=np.float64),
             ]
         )
         return scale
@@ -77,6 +87,7 @@ def bdg_hamiltonian_numpy_from_project_builder(
     delta: float,
     ja: float,
     params: TopologyModelParams,
+    mu: float | None = None,
 ) -> np.ndarray:
     """Build one Hamiltonian through the same project BdG batch builder."""
     k_t = torch.as_tensor(k, dtype=torch.float64)
@@ -91,7 +102,7 @@ def bdg_hamiltonian_numpy_from_project_builder(
         lambda_ry=float(params.lambda_ry),
         lambda_rz=float(params.lambda_rz),
         ja=ja_t,
-        mu=float(params.mu),
+        mu=float(params.mu if mu is None else mu),
         complex_dtype=torch.complex128,
     )
     return h.detach().cpu().numpy().astype(np.complex128)
@@ -109,6 +120,7 @@ class TopologyPfaffianOracle:
         delta: np.ndarray | float,
         q: np.ndarray | float,
         ja: np.ndarray | float,
+        mu: np.ndarray | float | None = None,
     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         """Return P0, Ppi, product, and dimensionless margin.
 
@@ -119,14 +131,16 @@ class TopologyPfaffianOracle:
         delta_a = np.asarray(delta, dtype=np.float64).copy()
         q_a = np.asarray(q, dtype=np.float64).copy()
         ja_a = np.asarray(ja, dtype=np.float64).copy()
+        mu_a = np.asarray(self.params.mu if mu is None else mu, dtype=np.float64)
+        mu_a = np.broadcast_to(mu_a, np.broadcast(delta_a, q_a, ja_a).shape)
         c = np.cos(q_a / 2.0)
         s = np.sin(q_a / 2.0)
         d2 = (ja_a * c + self.params.lambda_rz * s) ** 2
         y2 = (self.params.lambda_ry * s) ** 2
-        p0 = (self.params.mu - self.params.t * c) ** 2 + delta_a**2 - y2 - d2
-        ppi = (self.params.mu + self.params.t * c) ** 2 + delta_a**2 - y2 - d2
+        p0 = (mu_a - self.params.t * c) ** 2 + delta_a**2 - y2 - d2
+        ppi = (mu_a + self.params.t * c) ** 2 + delta_a**2 - y2 - d2
         product = p0 * ppi
-        e_scale = self.params.energy_scale(ja_a, delta_a)
+        e_scale = self.params.energy_scale(ja_a, delta_a, mu=mu_a)
         margin = np.minimum(np.abs(p0), np.abs(ppi)) / np.maximum(e_scale**2, 1e-300)
         return p0, ppi, product, margin
 
@@ -135,9 +149,10 @@ class TopologyPfaffianOracle:
         delta: np.ndarray,
         q: np.ndarray,
         ja: np.ndarray,
+        mu: np.ndarray | None = None,
     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-        p0, ppi, product, margin = self.analytic_pfaffians(delta, q, ja)
-        e_scale = self.params.energy_scale(ja, delta)
+        p0, ppi, product, margin = self.analytic_pfaffians(delta, q, ja, mu=mu)
+        e_scale = self.params.energy_scale(ja, delta, mu=mu)
         pf_tol = self.pf_tol_rel * np.maximum(e_scale**2, 1e-300)
         boundary = (np.abs(p0) <= pf_tol) | (np.abs(ppi) <= pf_tol)
         z2 = np.full(product.shape, -1, dtype=np.int64)
@@ -145,12 +160,18 @@ class TopologyPfaffianOracle:
         z2[(product > 0) & ~boundary] = 0
         return p0, ppi, product, margin, z2
 
-    def numeric_pfaffians(self, delta: float, q: float, ja: float) -> tuple[complex, complex, float, float]:
+    def numeric_pfaffians(
+        self,
+        delta: float,
+        q: float,
+        ja: float,
+        mu: float | None = None,
+    ) -> tuple[complex, complex, float, float]:
         pfs: list[complex] = []
         antisym_errors: list[float] = []
         imag_maxes: list[float] = []
         for k in (0.0, math.pi):
-            h = bdg_hamiltonian_numpy_from_project_builder(k, q, delta, ja, self.params)
+            h = bdg_hamiltonian_numpy_from_project_builder(k, q, delta, ja, self.params, mu=mu)
             a = majorana_antisymmetric_from_bdg(h)
             denom = max(float(np.linalg.norm(a)), 1e-300)
             antisym_errors.append(float(np.linalg.norm(a + a.T) / denom))
@@ -181,7 +202,7 @@ class BulkGapOracle:
             return torch.device("cuda")
         return torch.device("cpu")
 
-    def gap_at_k(self, delta: float, q: float, ja: float, k: float) -> float:
+    def gap_at_k(self, delta: float, q: float, ja: float, k: float, mu: float | None = None) -> float:
         """Evaluate the minimum absolute BdG eigenvalue at one momentum."""
         h = bdg_hamiltonian_numpy_from_project_builder(
             k=float(k),
@@ -189,6 +210,7 @@ class BulkGapOracle:
             delta=float(delta),
             ja=float(ja),
             params=self.params,
+            mu=mu,
         )
         eig = np.linalg.eigvalsh(h)
         return float(np.min(np.abs(eig)))
@@ -199,6 +221,7 @@ class BulkGapOracle:
         q: np.ndarray,
         ja: np.ndarray,
         nk: int,
+        mu: np.ndarray | None = None,
     ) -> dict[str, object]:
         device = self.device()
         if device.type == "cuda":
@@ -208,6 +231,8 @@ class BulkGapOracle:
         delta_a = np.asarray(delta, dtype=np.float64).copy()
         q_a = np.asarray(q, dtype=np.float64).copy()
         ja_a = np.asarray(ja, dtype=np.float64).copy()
+        mu_a = np.full_like(delta_a, float(self.params.mu), dtype=np.float64) if mu is None else np.asarray(mu, dtype=np.float64).copy()
+        mu_a = np.broadcast_to(mu_a, delta_a.shape).astype(np.float64, copy=False)
         n = int(delta_a.size)
         gaps = np.full(n, np.inf, dtype=np.float64)
         k_at = np.full(n, np.nan, dtype=np.float64)
@@ -217,6 +242,7 @@ class BulkGapOracle:
             d_t = torch.as_tensor(delta_a[p0:p1], dtype=torch.float64, device=device).view(-1, 1)
             q_t = torch.as_tensor(q_a[p0:p1], dtype=torch.float64, device=device).view(-1, 1)
             ja_t = torch.as_tensor(ja_a[p0:p1], dtype=torch.float64, device=device).view(-1, 1)
+            mu_t = torch.as_tensor(mu_a[p0:p1], dtype=torch.float64, device=device).view(-1, 1)
             best_gap = torch.full((p1 - p0,), torch.inf, dtype=torch.float64, device=device)
             best_k = torch.full((p1 - p0,), torch.nan, dtype=torch.float64, device=device)
             for k0 in range(0, int(nk), self.k_chunk):
@@ -230,7 +256,7 @@ class BulkGapOracle:
                     lambda_ry=float(self.params.lambda_ry),
                     lambda_rz=float(self.params.lambda_rz),
                     ja=ja_t,
-                    mu=float(self.params.mu),
+                    mu=mu_t,
                     complex_dtype=torch.complex128,
                 )
                 evals = torch.linalg.eigvalsh(h).real
@@ -243,7 +269,7 @@ class BulkGapOracle:
                 del h, evals, gap_by_k, local_gap, local_idx, better
             gaps[p0:p1] = best_gap.detach().cpu().numpy()
             k_at[p0:p1] = best_k.detach().cpu().numpy()
-            del d_t, q_t, ja_t, best_gap, best_k
+            del d_t, q_t, ja_t, mu_t, best_gap, best_k
         if device.type == "cuda":
             torch.cuda.synchronize(device)
             peak_vram = float(torch.cuda.max_memory_allocated(device) / (1024.0**2))

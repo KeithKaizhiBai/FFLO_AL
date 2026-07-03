@@ -6,6 +6,7 @@ from typing import Dict, Tuple
 import numpy as np
 
 from .config import ActiveLearningConfig
+from .topology_oracle import TopologyPfaffianOracle
 
 
 @dataclass
@@ -134,6 +135,98 @@ def observation_repulsion(d_obs_min: np.ndarray, ell: float, floor: float) -> np
     return np.clip(out, floor, 1.0)
 
 
+def _topology_weight_schedule(cfg: ActiveLearningConfig, iteration: int | None) -> tuple[float, float, float]:
+    if iteration is not None and int(iteration) >= int(cfg.topo_late_iter):
+        return (
+            float(cfg.topo_late_phase_weight),
+            float(cfg.topo_late_spectral_weight),
+            float(cfg.topo_late_coverage_weight),
+        )
+    return (
+        float(cfg.topo_phase_weight),
+        float(cfg.topo_spectral_weight),
+        float(cfg.topo_coverage_weight),
+    )
+
+
+def _topology_context_points(context: dict[str, np.ndarray] | None, key: str) -> np.ndarray:
+    if not context:
+        return np.empty((0, 2), dtype=np.float64)
+    arr = np.asarray(context.get(key, np.empty((0, 2))), dtype=np.float64)
+    if arr.size == 0:
+        return np.empty((0, 2), dtype=np.float64)
+    return arr.reshape(-1, 2)
+
+
+def _compute_topology_acquisition_components(
+    cfg: ActiveLearningConfig,
+    grid: CandidateGrid,
+    delta_pred: np.ndarray,
+    q_pred: np.ndarray,
+    p_sc: np.ndarray,
+    topology_context: dict[str, np.ndarray] | None,
+) -> dict[str, np.ndarray]:
+    n = grid.points.shape[0]
+    pf = TopologyPfaffianOracle()
+    delta_sc = np.maximum(np.asarray(delta_pred, dtype=np.float64), 0.0)
+    q_sc = np.asarray(q_pred, dtype=np.float64)
+    ja = np.asarray(grid.points[:, 1], dtype=np.float64)
+    p0, ppi, product, margin = pf.analytic_pfaffians(delta_sc, q_sc, ja)
+    margin_score = np.exp(-np.clip(margin, 0.0, np.inf) / max(float(cfg.topo_pf_margin_scale), 1.0e-12)) * p_sc
+
+    kt_range = (float(cfg.kt_min), float(cfg.kt_max))
+    ja_range = (float(cfg.ja_min), float(cfg.ja_max))
+    trivial_points = _topology_context_points(topology_context, "trivial_points")
+    topological_points = _topology_context_points(topology_context, "topological_points")
+    gapless_points = _topology_context_points(topology_context, "gapless_points")
+    trusted_points = _topology_context_points(topology_context, "trusted_topology_points")
+
+    d_trivial = normalized_min_distance(grid.points, trivial_points, kt_range, ja_range)
+    d_topological = normalized_min_distance(grid.points, topological_points, kt_range, ja_range)
+    d_gapless = normalized_min_distance(grid.points, gapless_points, kt_range, ja_range)
+    d_trusted = normalized_min_distance(grid.points, trusted_points, kt_range, ja_range)
+
+    edge_len = max(float(cfg.topo_edge_length), 1.0e-12)
+    gapless_len = max(float(cfg.topo_gapless_length), 1.0e-12)
+    coverage_len = max(float(cfg.topo_coverage_length), 1.0e-12)
+    if trivial_points.shape[0] > 0 and topological_points.shape[0] > 0:
+        near_both = np.exp(-np.minimum(d_trivial, d_topological) / edge_len)
+        balanced = np.exp(-np.abs(d_trivial - d_topological) / edge_len)
+        z2_edge = near_both * balanced * p_sc
+    else:
+        z2_edge = np.zeros(n, dtype=np.float64)
+    if gapless_points.shape[0] > 0:
+        gapless_edge = np.exp(-d_gapless / gapless_len) * p_sc
+    else:
+        gapless_edge = np.zeros(n, dtype=np.float64)
+    if trusted_points.shape[0] > 0:
+        coverage = (1.0 - np.exp(-((d_trusted / coverage_len) ** 2))) * p_sc
+    else:
+        coverage = p_sc.copy()
+
+    spectral = np.maximum.reduce([margin_score, z2_edge, gapless_edge])
+    return {
+        "A_spectral": np.clip(spectral, 0.0, 1.0),
+        "A_topology": np.clip(spectral, 0.0, 1.0),
+        "A_topology_pf_margin": np.clip(margin_score, 0.0, 1.0),
+        "A_topology_z2_edge": np.clip(z2_edge, 0.0, 1.0),
+        "A_topology_gapless_edge": np.clip(gapless_edge, 0.0, 1.0),
+        "A_coverage": np.clip(coverage, 0.0, 1.0),
+        "topology_pfaffian_p0_pred": p0,
+        "topology_pfaffian_ppi_pred": ppi,
+        "topology_pfaffian_product_pred": product,
+        "topology_pfaffian_margin_pred": margin,
+        "topology_distance_to_trivial": d_trivial,
+        "topology_distance_to_topological": d_topological,
+        "topology_distance_to_gapless": d_gapless,
+        "topology_distance_to_trusted": d_trusted,
+        "topology_trivial_count": np.full(n, int(trivial_points.shape[0]), dtype=np.int64),
+        "topology_topological_count": np.full(n, int(topological_points.shape[0]), dtype=np.int64),
+        "topology_gapless_count": np.full(n, int(gapless_points.shape[0]), dtype=np.int64),
+        "topology_trusted_count": np.full(n, int(trusted_points.shape[0]), dtype=np.int64),
+    }
+
+
 def _finite_percentiles(values: np.ndarray, percentiles: list[float]) -> dict[str, float | None]:
     arr = np.asarray(values, dtype=np.float64)
     arr = arr[np.isfinite(arr)]
@@ -188,6 +281,19 @@ def _w_ext_for_iteration(cfg: ActiveLearningConfig, iteration: int | None) -> fl
             end_iter=int(cfg.w_ext_end_iter),
         )
     return float(cfg.w_extrapolation)
+
+
+def _w_ext_simple_for_iteration(cfg: ActiveLearningConfig, iteration: int | None) -> float:
+    if str(cfg.w_ext_simple_schedule) == "piecewise":
+        return _piecewise_value(
+            iteration,
+            start=float(cfg.w_ext_simple_start),
+            mid=float(cfg.w_ext_simple_mid),
+            end=float(cfg.w_ext_simple_end),
+            mid_iter=int(cfg.w_ext_simple_mid_iter),
+            end_iter=int(cfg.w_ext_simple_end_iter),
+        )
+    return float(cfg.w_ext_simple_start)
 
 
 def _active_pool_quantile_for_iteration(cfg: ActiveLearningConfig, iteration: int | None) -> float:
@@ -423,6 +529,7 @@ def compute_acquisition_scores(
     predictions: Dict[str, np.ndarray],
     existing_points: np.ndarray,
     iteration: int | None = None,
+    topology_context: dict[str, np.ndarray] | None = None,
 ) -> Dict[str, np.ndarray]:
     reg_mean = np.asarray(predictions["reg_mean"], dtype=np.float64)
     reg_std = np.asarray(predictions["reg_std"], dtype=np.float64)
@@ -478,22 +585,75 @@ def compute_acquisition_scores(
     )
     extrapolation_uncertain = extrapolation_raw * np.maximum(phase["cls_uncertainty_mix"], u_reg_phase)
     w_ext_current = _w_ext_for_iteration(cfg, iteration)
+    w_ext_simple_current = _w_ext_simple_for_iteration(cfg, iteration)
+    acquisition_profile = str(cfg.acquisition_profile)
+    if acquisition_profile not in {"full", "simple_phase", "surprise_cleanup", "topo_trivial"}:
+        raise ValueError(f"unknown acquisition_profile={acquisition_profile!r}")
+    topo_components = _compute_topology_acquisition_components(
+        cfg=cfg,
+        grid=grid,
+        delta_pred=delta_pred,
+        q_pred=q_pred,
+        p_sc=p_sc,
+        topology_context=topology_context,
+    )
 
-    a_phase = (
+    a_phase_full = (
         float(cfg.w_cls_mix) * phase["cls_uncertainty_mix"]
         + float(cfg.w_reg_phase) * u_reg_phase
         + float(cfg.w_delta_boundary) * delta_boundary
         + float(cfg.w_q_boundary_sc) * q_boundary_sc
         + float(cfg.w_gradient_phase) * gradient_phase
     )
-    a_numerical = float(cfg.w_q_edge_risk) * q_edge_risk_sc
-    a_explore = float(w_ext_current) * extrapolation_uncertain
+    a_numerical_full = float(cfg.w_q_edge_risk) * q_edge_risk_sc
+    a_explore_full = float(w_ext_current) * extrapolation_uncertain
+    a_phase_simple = (
+        float(cfg.w_cls_simple) * phase["cls_uncertainty_mix"]
+        + float(cfg.w_ns_simple) * delta_boundary
+        + float(cfg.w_uf_simple) * (q_boundary_raw * u_uf)
+        + float(cfg.w_grad_simple) * gradient_phase
+        + float(cfg.w_reg_simple) * u_reg_phase
+    )
+    a_explore_simple = float(w_ext_simple_current) * extrapolation_uncertain
     a_response = (
         float(cfg.w_eta_response) * eta_boundary_response
         + float(cfg.w_gradient_response) * gradient_response
         + float(cfg.w_reg_response) * u_reg_response
     )
-    a0_main = a_phase + a_numerical + a_explore
+    if acquisition_profile == "full":
+        a_phase = a_phase_full
+        a_numerical = a_numerical_full
+        a_explore = a_explore_full
+        a0_main = a_phase_full + a_numerical_full + a_explore_full
+        surprise_cleanup_qedge_factor = np.ones_like(a0_main, dtype=np.float64)
+    elif acquisition_profile == "simple_phase":
+        a_phase = a_phase_simple
+        a_numerical = np.zeros_like(u_reg_phase, dtype=np.float64)
+        a_explore = a_explore_simple
+        a0_main = a_phase_simple + a_explore_simple
+        surprise_cleanup_qedge_factor = np.ones_like(a0_main, dtype=np.float64)
+    elif acquisition_profile == "topo_trivial":
+        w_phase, w_spectral, w_coverage = _topology_weight_schedule(cfg, iteration)
+        a_phase = _normalize_01(a_phase_full)
+        a_numerical = topo_components["A_spectral"]
+        a_explore = topo_components["A_coverage"]
+        a0_main = w_phase * a_phase + w_spectral * a_numerical + w_coverage * a_explore
+        surprise_cleanup_qedge_factor = np.ones_like(a0_main, dtype=np.float64)
+    else:
+        a_phase = a_phase_full
+        a_numerical = np.zeros_like(u_reg_phase, dtype=np.float64)
+        a_explore = float(cfg.surprise_cleanup_explore_scale) * a_explore_full
+        cleanup_base = (
+            a_phase
+            + a_explore
+            + float(cfg.surprise_cleanup_response_weight) * a_response
+        )
+        surprise_cleanup_qedge_factor = np.clip(
+            1.0 - float(cfg.surprise_cleanup_qedge_penalty) * np.clip(q_edge_risk_sc, 0.0, 1.0),
+            float(cfg.surprise_cleanup_qedge_floor),
+            1.0,
+        )
+        a0_main = cleanup_base * surprise_cleanup_qedge_factor
 
     high_confidence_interior = (
         (phase["P_max"] > float(cfg.p_conf_threshold))
@@ -525,7 +685,31 @@ def compute_acquisition_scores(
         "A_phase": a_phase,
         "A_numerical": a_numerical,
         "A_explore": a_explore,
+        "A_phase_full": a_phase_full,
+        "A_numerical_full": a_numerical_full,
+        "A_explore_full": a_explore_full,
+        "A_phase_simple": a_phase_simple,
+        "A_explore_simple": a_explore_simple,
         "A_response": a_response,
+        "A_spectral": topo_components["A_spectral"],
+        "A_topology": topo_components["A_topology"],
+        "A_topology_pf_margin": topo_components["A_topology_pf_margin"],
+        "A_topology_z2_edge": topo_components["A_topology_z2_edge"],
+        "A_topology_gapless_edge": topo_components["A_topology_gapless_edge"],
+        "A_coverage": topo_components["A_coverage"],
+        "topology_pfaffian_p0_pred": topo_components["topology_pfaffian_p0_pred"],
+        "topology_pfaffian_ppi_pred": topo_components["topology_pfaffian_ppi_pred"],
+        "topology_pfaffian_product_pred": topo_components["topology_pfaffian_product_pred"],
+        "topology_pfaffian_margin_pred": topo_components["topology_pfaffian_margin_pred"],
+        "topology_distance_to_trivial": topo_components["topology_distance_to_trivial"],
+        "topology_distance_to_topological": topo_components["topology_distance_to_topological"],
+        "topology_distance_to_gapless": topo_components["topology_distance_to_gapless"],
+        "topology_distance_to_trusted": topo_components["topology_distance_to_trusted"],
+        "topology_trivial_count": topo_components["topology_trivial_count"],
+        "topology_topological_count": topo_components["topology_topological_count"],
+        "topology_gapless_count": topo_components["topology_gapless_count"],
+        "topology_trusted_count": topo_components["topology_trusted_count"],
+        "surprise_cleanup_qedge_factor": surprise_cleanup_qedge_factor,
         "cls_uncertainty": phase["cls_uncertainty_mix"],
         "cls_entropy": phase["cls_entropy"],
         "cls_margin_uncertainty": phase["cls_margin_uncertainty"],
@@ -563,6 +747,8 @@ def compute_acquisition_scores(
         "extrapolation_risk_score": extrapolation_uncertain,
         "extrapolation_raw": extrapolation_raw,
         "w_ext_current": np.full_like(a0_main, float(w_ext_current), dtype=np.float64),
+        "w_ext_simple_current": np.full_like(a0_main, float(w_ext_simple_current), dtype=np.float64),
+        "acquisition_profile": np.asarray([acquisition_profile] * a0_main.shape[0]),
         "interior_penalty": interior_penalty,
         "interior_penalty_value": np.full_like(a0_main, float(interior_penalty_value), dtype=np.float64),
         "interior_penalty_applied": high_confidence_interior.astype(np.int8),
@@ -630,6 +816,7 @@ def select_acquisition_batch(
         requested_min=min_batch,
     )
     sampling_power = _sampling_power_for_iteration(cfg, iteration)
+    acquisition_profile = str(cfg.acquisition_profile)
 
     scores["active_pool_mask"] = active_pool.astype(np.int8)
     scores["Aselect_initial"] = np.where(active_pool, a0_for_pool * r_obs, -np.inf)
@@ -652,12 +839,19 @@ def select_acquisition_batch(
                 "A_numerical": float(scores.get("A_numerical", np.zeros_like(score))[idx]),
                 "A_explore": float(scores.get("A_explore", np.zeros_like(score))[idx]),
                 "A_response": float(scores.get("A_response", np.zeros_like(score))[idx]),
+                "A_spectral": float(scores.get("A_spectral", np.zeros_like(score))[idx]),
+                "A_topology": float(scores.get("A_topology", np.zeros_like(score))[idx]),
+                "A_topology_pf_margin": float(scores.get("A_topology_pf_margin", np.zeros_like(score))[idx]),
+                "A_topology_z2_edge": float(scores.get("A_topology_z2_edge", np.zeros_like(score))[idx]),
+                "A_topology_gapless_edge": float(scores.get("A_topology_gapless_edge", np.zeros_like(score))[idx]),
+                "A_coverage": float(scores.get("A_coverage", np.zeros_like(score))[idx]),
                 "R_obs": float(scores.get("R_obs", np.ones_like(score))[idx]),
                 "R_batch": float(r_batch[idx]),
                 "Aselect": float(final_score_value),
                 "final_score": float(final_score_value),
                 "selection_score": float(final_score_value),
                 "sampling_probability_before_pick": float(probability),
+                "acquisition_profile": acquisition_profile,
                 "active_pool_quantile_used": pool_info.get("active_pool_quantile_used"),
                 "active_pool_threshold_quantile": pool_info.get("active_pool_threshold_quantile"),
                 "active_pool_threshold_rel_p95": pool_info.get("active_pool_threshold_rel_p95"),
@@ -693,6 +887,9 @@ def select_acquisition_batch(
                 "G_phase": float(scores.get("gradient_score", np.zeros_like(score))[idx]),
                 "q_edge_risk_score": float(scores.get("q_edge_risk_score", np.zeros_like(score))[idx]),
                 "E_q_SC": float(scores.get("q_edge_risk_score", np.zeros_like(score))[idx]),
+                "surprise_cleanup_qedge_factor": float(
+                    scores.get("surprise_cleanup_qedge_factor", np.ones_like(score))[idx]
+                ),
                 "extrapolation_risk_score": float(scores.get("extrapolation_risk_score", np.zeros_like(score))[idx]),
                 "E_ext_uncertain": float(scores.get("extrapolation_risk_score", np.zeros_like(score))[idx]),
                 "interior_penalty": float(scores.get("interior_penalty", np.ones_like(score))[idx]),
@@ -700,6 +897,15 @@ def select_acquisition_batch(
                 "high_confidence_interior": int(scores.get("high_confidence_interior", np.zeros_like(score, dtype=np.int8))[idx]),
                 "sampling_power": float(sampling_power),
                 "w_ext_current": float(scores.get("w_ext_current", np.full_like(score, np.nan))[idx]),
+                "topology_pfaffian_margin_pred": float(scores.get("topology_pfaffian_margin_pred", np.full_like(score, np.nan))[idx]),
+                "topology_distance_to_trivial": float(scores.get("topology_distance_to_trivial", np.full_like(score, np.inf))[idx]),
+                "topology_distance_to_topological": float(scores.get("topology_distance_to_topological", np.full_like(score, np.inf))[idx]),
+                "topology_distance_to_gapless": float(scores.get("topology_distance_to_gapless", np.full_like(score, np.inf))[idx]),
+                "topology_distance_to_trusted": float(scores.get("topology_distance_to_trusted", np.full_like(score, np.inf))[idx]),
+                "topology_trivial_count": int(scores.get("topology_trivial_count", np.zeros_like(score, dtype=np.int64))[idx]),
+                "topology_topological_count": int(scores.get("topology_topological_count", np.zeros_like(score, dtype=np.int64))[idx]),
+                "topology_gapless_count": int(scores.get("topology_gapless_count", np.zeros_like(score, dtype=np.int64))[idx]),
+                "topology_trusted_count": int(scores.get("topology_trusted_count", np.zeros_like(score, dtype=np.int64))[idx]),
             }
         )
 
@@ -762,6 +968,7 @@ def select_acquisition_batch(
             float(neff / max(int(pool_info.get("active_pool_size") or 0), 1)) if neff is not None else None
         ),
         "selected_less_than_max_reason": "" if len(selected) >= requested_batch else break_reason,
+        "acquisition_profile": acquisition_profile,
     }
     scores["_selection_summary"] = summary
     scores["R_batch_final"] = r_batch

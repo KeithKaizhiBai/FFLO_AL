@@ -64,6 +64,11 @@ def _write_iteration(
     qedge: bool = False,
     rerun: bool = False,
     eta_offset: float = 0.0,
+    mismatch: bool = False,
+    trusted: bool = True,
+    training_eligible: bool | None = None,
+    q_unresolved: bool = False,
+    delta_unresolved: bool = False,
 ) -> Path:
     points, shape = _toy_grid(cfg)
     iter_dir = run_dir / f"iter{iteration:03d}"
@@ -80,6 +85,10 @@ def _write_iteration(
     selected_idx = np.linspace(0, points.shape[0] - 1, 8, dtype=np.int64)
     selected = points[selected_idx]
     selected_phase = phase_pred[selected_idx]
+    exact_phase = selected_phase.copy()
+    if mismatch and exact_phase.size:
+        exact_phase[:] = PHASE_FFLO
+        selected_phase[:] = PHASE_NORMAL
     pd.DataFrame(
         {
             "selection_rank": np.arange(1, selected.shape[0] + 1),
@@ -93,8 +102,10 @@ def _write_iteration(
         }
     ).to_csv(iter_dir / "selected_points_by_pool.csv", index=False)
 
-    delta, q = _phase_to_exact(selected_phase, cfg.delta_eps, cfg.q_eps)
+    delta, q = _phase_to_exact(exact_phase, cfg.delta_eps, cfg.q_eps)
     n = selected.shape[0]
+    if training_eligible is None:
+        training_eligible = not rerun
     np.savez(
         iter_dir / f"exact_merged_iter{iteration:03d}.npz",
         kT=selected[:, 0],
@@ -105,10 +116,13 @@ def _write_iteration(
         ic_plus=np.zeros(n, dtype=np.float64),
         ic_minus=np.zeros(n, dtype=np.float64),
         q_expanded=np.full(n, int(qedge), dtype=np.int8),
-        q_unresolved=np.zeros(n, dtype=np.int8),
+        q_unresolved=np.full(n, int(q_unresolved), dtype=np.int8),
         q_edge_hit=np.full(n, int(qedge), dtype=np.int8),
         needs_rerun_exact=np.full(n, int(rerun), dtype=np.int8),
-        training_eligible_exact=np.full(n, int(not rerun), dtype=np.int8),
+        rerun_required=np.full(n, int(rerun), dtype=np.int8),
+        trusted_exact=np.full(n, int(trusted), dtype=np.int8),
+        training_eligible_exact=np.full(n, int(training_eligible), dtype=np.int8),
+        delta_unresolved=np.full(n, int(delta_unresolved), dtype=np.int8),
     )
     dataset_path = run_dir / f"dataset_iter{iteration + 1:03d}.npz"
     _write_dataset(dataset_path, points)
@@ -129,6 +143,14 @@ def _stop_config() -> StopConfig:
         rerun_rate_tol=0.01,
         coverage_tol=0.07,
     )
+
+
+def _trusted_stop_config(min_denominator: int = 1, min_fraction: float = 0.0) -> StopConfig:
+    cfg = _stop_config()
+    cfg.stop_surprise_mode = "trusted"
+    cfg.trusted_surprise_min_denominator = int(min_denominator)
+    cfg.trusted_surprise_min_fraction = float(min_fraction)
+    return cfg
 
 
 def test_stable_boundaries_stop_after_patience() -> None:
@@ -202,12 +224,90 @@ def test_bad_boundary_coverage_is_one_main_condition() -> None:
         assert result["stop"], "coverage is one of five main conditions, not a mandatory gate"
 
 
+def test_all_selected_mode_keeps_rerun_mismatch_in_c4() -> None:
+    with TemporaryDirectory() as tmp:
+        run_dir = Path(tmp)
+        cfg = ActiveLearningConfig(n_kt_candidates=9, n_ja_candidates=7)
+        _, shape = _toy_grid(cfg)
+        phase = _stable_phase_map(shape)
+        stop_cfg = _stop_config()
+        dataset = _write_iteration(run_dir, 0, cfg, phase, a0_mean=1.0, mismatch=True, rerun=True)
+        result = evaluate_stop(run_dir, 0, dataset, cfg, stop_cfg)
+        assert result["metrics"]["label_surprise_rate"] == 1.0
+        assert result["metrics"]["label_surprise_all_selected"] == 1.0
+        assert not result["conditions"]["C4_label_surprise_rate"]
+        assert result["surprise_details"]["stop_surprise_mode"] == "all_selected"
+
+
+def test_trusted_mode_excludes_rerun_mismatch_from_c4() -> None:
+    with TemporaryDirectory() as tmp:
+        run_dir = Path(tmp)
+        cfg = ActiveLearningConfig(n_kt_candidates=9, n_ja_candidates=7)
+        _, shape = _toy_grid(cfg)
+        phase = _stable_phase_map(shape)
+        stop_cfg = _trusted_stop_config(min_denominator=1, min_fraction=0.0)
+        dataset = _write_iteration(run_dir, 0, cfg, phase, a0_mean=1.0, mismatch=True, rerun=True)
+        result = evaluate_stop(run_dir, 0, dataset, cfg, stop_cfg)
+        assert result["metrics"]["label_surprise_all_selected"] == 1.0
+        assert result["metrics"]["label_surprise_hard_risk"] == 1.0
+        assert result["metrics"]["label_surprise_trusted"] is None
+        assert not result["conditions"]["C4_label_surprise_rate"]
+        assert not result["metric_availability"]["trusted_surprise_denominator_valid"]
+
+
+def test_trusted_mode_passes_qexpanded_nonrerun_points() -> None:
+    with TemporaryDirectory() as tmp:
+        run_dir = Path(tmp)
+        cfg = ActiveLearningConfig(n_kt_candidates=9, n_ja_candidates=7)
+        _, shape = _toy_grid(cfg)
+        phase = _stable_phase_map(shape)
+        stop_cfg = _trusted_stop_config(min_denominator=1, min_fraction=0.0)
+        dataset = _write_iteration(run_dir, 0, cfg, phase, a0_mean=1.0, qedge=True, rerun=False)
+        result = evaluate_stop(run_dir, 0, dataset, cfg, stop_cfg)
+        assert result["surprise_details"]["trusted"]["n_denominator"] == 8
+        assert result["metrics"]["label_surprise_trusted"] == 0.0
+        assert result["conditions"]["C4_label_surprise_rate"]
+
+
+def test_trusted_denominator_floor_blocks_pass() -> None:
+    with TemporaryDirectory() as tmp:
+        run_dir = Path(tmp)
+        cfg = ActiveLearningConfig(n_kt_candidates=9, n_ja_candidates=7)
+        _, shape = _toy_grid(cfg)
+        phase = _stable_phase_map(shape)
+        stop_cfg = _trusted_stop_config(min_denominator=99, min_fraction=0.0)
+        dataset = _write_iteration(run_dir, 0, cfg, phase, a0_mean=1.0, qedge=False, rerun=False)
+        result = evaluate_stop(run_dir, 0, dataset, cfg, stop_cfg)
+        assert result["metrics"]["label_surprise_trusted"] == 0.0
+        assert not result["metric_availability"]["trusted_surprise_denominator_valid"]
+        assert not result["conditions"]["C4_label_surprise_rate"]
+
+
+def test_prediction_mismatch_does_not_set_rerun_required() -> None:
+    with TemporaryDirectory() as tmp:
+        run_dir = Path(tmp)
+        cfg = ActiveLearningConfig(n_kt_candidates=9, n_ja_candidates=7)
+        _, shape = _toy_grid(cfg)
+        phase = _stable_phase_map(shape)
+        stop_cfg = _trusted_stop_config(min_denominator=1, min_fraction=0.0)
+        dataset = _write_iteration(run_dir, 0, cfg, phase, a0_mean=1.0, mismatch=True, rerun=False)
+        result = evaluate_stop(run_dir, 0, dataset, cfg, stop_cfg)
+        assert result["surprise_details"]["rerun_required_count"] == 0
+        assert result["surprise_details"]["trusted"]["n_denominator"] == 8
+        assert result["metrics"]["label_surprise_trusted"] == 1.0
+
+
 def main() -> None:
     test_stable_boundaries_stop_after_patience()
     test_soft_candidates_do_not_block_convergence_stop()
     test_eta_change_does_not_block_stop()
     test_high_qedge_rate_becomes_cleanup_warning()
     test_bad_boundary_coverage_is_one_main_condition()
+    test_all_selected_mode_keeps_rerun_mismatch_in_c4()
+    test_trusted_mode_excludes_rerun_mismatch_from_c4()
+    test_trusted_mode_passes_qexpanded_nonrerun_points()
+    test_trusted_denominator_floor_blocks_pass()
+    test_prediction_mismatch_does_not_set_rerun_required()
     print("stop-controller checks passed")
 
 

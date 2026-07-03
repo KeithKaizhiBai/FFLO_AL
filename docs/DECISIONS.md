@@ -1,6 +1,6 @@
 # Decisions
 
-Last updated: 2026-05-20
+Last updated: 2026-06-04
 
 ## D1. Use Existing Exact Data as Warm Start
 
@@ -223,6 +223,38 @@ sub-tolerance points unless the study goal changes to resolving a much finer
 normal/SC critical line.
 ```
 
+## D26. Separate Phase Label, Confidence, and Training Eligibility
+
+Decision:
+
+```text
+The robust production oracle must store thermodynamic phase label,
+confidence_state, training_eligible_exact, and rerun_required as separate
+metadata. Stable normal points with Delta_opt=0 and
+positive_delta_gap > positive_delta_gap_tol are trusted normal labels.
+normal_q_not_applicable is not a q-window failure.
+```
+
+Reason:
+
+```text
+The first robust-oracle acquisition comparison rejected many stable normal
+points because the adaptive-box path used free_energy_ambiguity_tol=1e-6 as a
+positive-Delta ambiguity threshold and then made boundary_ambiguous imply
+trusted_exact=false. This removed normal labels from the dataset and broke the
+active-learning closed loop.
+```
+
+Consequence:
+
+```text
+Delta_opt=0 points are classified using positive_delta_gap_tol for training
+eligibility. Boundary-band normal points remain explicitly marked as lower
+confidence but can still enter the dataset as normal-side constraints. Coverage
+unresolved, solver failed, and response reliability remain separate from the
+basic thermodynamic phase label.
+```
+
 ## D13. Hard-Exclude Existing Exact Coordinates During Acquisition
 
 Decision:
@@ -238,6 +270,63 @@ Reason:
 ```text
 The 10-iteration continuation after the boundary-band semantic fix showed that
 most exact records became training-eligible, but many selected candidates were
+
+## D25. Use Robust Adaptive-Box Oracle for New Discovery Reruns
+
+Decision:
+
+```text
+Keep the thermodynamic phase criterion unchanged, but switch production
+discovery reruns from the legacy exact oracle to oracle_mode=robust_al.
+```
+
+Reason:
+
+```text
+Audits showed that high-JA/low-T phase-side errors were mainly caused by
+insufficient q-window coverage and coarse local minima resolution, not by
+acquisition logic. The robust adaptive-box oracle adds deterministic q-window
+expansion plus local q-Delta refinement while preserving per-point
+independence and reproducibility.
+```
+
+Consequence:
+
+```text
+New discovery runs should use robust_al by default and persist detailed
+q-window/refinement metadata. Legacy mode remains available for backward
+compatibility and controlled A/B comparisons.
+```
+
+## D26. Add Configurable Acquisition Profiles for Controlled A/B Runs
+
+Decision:
+
+```text
+Introduce acquisition_profile in active-learning config:
+  full
+  simple_phase
+```
+
+Reason:
+
+```text
+We need a fair discovery-mode comparison where the exact-oracle side is fixed
+to robust_al while acquisition complexity is varied. This requires profile
+switching by configuration, not by maintaining two divergent code copies.
+```
+
+Consequence:
+
+```text
+Profile `full` preserves the existing production formula.
+Profile `simple_phase` keeps phase-boundary terms as the main score and
+removes numerical-risk/response terms from A0_main while preserving diagnostics.
+
+Two standalone HPC package snapshots are generated for reproducible runs:
+  robust_oracle_full_acquisition
+  robust_oracle_simple_phase_acquisition
+```
 already present in the dataset. Repeating exact calls at existing coordinates
 does not improve phase-boundary resolution.
 ```
@@ -639,4 +728,578 @@ Audit outputs must remain separate from active-learning datasets unless the
 user explicitly asks to append them.  Reports must distinguish basic SC
 classification, branch-resolved completeness, topology readiness, and eta
 response validity.
+```
+
+## D27. Keep Local-Refinement Variant Outputs Under Package RUN_ROOT
+
+Decision:
+
+```text
+The local-refinement variant-suite HPC package writes runtime logs, reports,
+comparisons, and the return archive under RUN_ROOT.  If RUN_ROOT is unset and
+the extracted package directory is writable, RUN_ROOT defaults to
+$PACKAGE_ROOT/local_refinement_refactor_variant_suite_run.
+```
+
+Reason:
+
+```text
+The cluster-side current directory may be non-writable, which caused earlier
+mkdir logs and mkdir reports failures.  Runtime outputs should therefore stay
+inside the extracted upload package or an explicitly chosen writable run root.
+```
+
+Consequences:
+
+```text
+The generated package no longer relies on writing outputs to the repository
+root or login directory.  The current runnable fixed-point variants are
+baseline, cluster_only, cluster_optional_k3, cluster_optional_k2, and
+cluster_energy_window.  Branch reuse remains a prototype until production-loop
+integration and reuse/rejection diagnostics are implemented.
+```
+
+## D28. Define GPU Batching and Cache Interfaces Before Production Use
+
+Decision:
+
+```text
+The local-refinement refactor defines pure Stage 7 helper records for
+local-box batch plans, Hamiltonian cache signatures, cache hit/miss
+diagnostics, and profiler events before implementing GPU batching or
+Hamiltonian cache reuse.
+```
+
+Reason:
+
+```text
+GPU batching and Hamiltonian caching can change tensor shapes, execution
+order, memory pressure, and cache validity assumptions.  A future optimization
+must first expose auditable batch dimensions, q/Delta grid shapes, tensor
+construction locations, cache signature inputs, and explicit rejection reasons.
+```
+
+Consequences:
+
+```text
+The Stage 7 helpers are interface contracts only.  They do not change the
+thermodynamic phase criterion, q/Delta refinement policy, local-refinement
+selection, exact-oracle production path, or active-learning workflow.  GPU
+batching and Hamiltonian cache remain disabled until a future fixed-point GPU
+variant passes regression.
+```
+
+## D29. Keep Stage 1 Reference Outputs in a Package-Local Run Directory
+
+Decision:
+
+```text
+The Stage 1 local-refinement reference/instrumentation package defaults
+runtime outputs to $PACKAGE_ROOT/local_refinement_refactor_stage1_run when
+RUN_ROOT is unset and the extracted package root is writable.
+```
+
+Reason:
+
+```text
+Earlier Stage 1 scripts could write logs, reports, preflight JSON, and return
+metadata directly into the extracted package root.  A package-local run
+subdirectory keeps source/package files separate from generated outputs and
+matches the Stage 2-4 variant-suite output policy.
+```
+
+Consequences:
+
+```text
+Users can still set RUN_ROOT explicitly.  If the package root is not writable,
+the scripts still fall back to SCRATCH, TMPDIR, or HOME.  This is only an HPC
+output-location policy change and does not change physical definitions,
+numerical safeguards, or exact-oracle behavior.
+```
+
+## D30. Provide Runbook-Compatible HPC Submit Aliases
+
+Decision:
+
+```text
+The generated Stage 1 and variant-suite HPC packages include runbook-named
+submit aliases:
+
+scripts/submit_local_refinement_fixed_point_regression.sh
+scripts/submit_local_refinement_instrumented_benchmark.sh
+```
+
+Reason:
+
+```text
+The long-form refactor runbook names these generic entry points, while the
+package-specific implementation scripts use stage-specific workflow names.
+Providing thin aliases makes the handoff easier to run and audit without
+duplicating workflow logic or changing the validated Slurm chain.
+```
+
+Consequences:
+
+```text
+The aliases only exec the existing package workflow scripts.  They do not
+introduce one-iteration or intermediate active-learning validation wrappers,
+do not enable branch reuse, adaptive local boxes, GPU batching, or Hamiltonian
+cache production paths, and do not change any physical definition or numerical
+gate.  Runtime outputs still go under package-local RUN_ROOT directories by
+default.
+```
+
+## D31. Inspect Nested HPC Packages in the Upload-Set Verifier
+
+Decision:
+
+```text
+The generated upload-set verifier now opens each nested package archive and
+checks its RUN_MANIFEST, README, runbook-compatible submit aliases, workflow
+targets, and package-local RUN_ROOT suffix in addition to archive hashes,
+sidecars, and metadata.
+```
+
+Reason:
+
+```text
+Earlier HPC handoff failures came from import-path assumptions, non-writable
+logs/reports directories, and confusion between package roots and runtime
+output roots.  A checksum-only upload-set verifier can prove archive integrity
+but cannot prove that the uploaded package still exposes the expected runbook
+entry points or package-local runtime-output policy.
+```
+
+Consequences:
+
+```text
+The handoff check now fails before upload/extraction if a nested package lacks
+scripts/submit_local_refinement_fixed_point_regression.sh, maps an alias to
+the wrong workflow script, omits RUN_ROOT from its manifest, or no longer
+documents the expected package-local run directory.  This remains a packaging
+and audit check only; it does not change exact-oracle physics, feature flags,
+q/Delta safeguards, production branch reuse, adaptive boxes, GPU batching, or
+Hamiltonian cache behavior.
+```
+
+## D32. Enforce RUN_ROOT for Nested Package Shell Outputs
+
+Decision:
+
+```text
+The variant-suite collector writes return-bundle metadata under
+$RUN_ROOT/reports/local_refinement_refactor/variant_regression/return_bundle_metadata,
+and the upload-set verifier now scans nested package shell scripts to ensure
+any logs/reports output path is expressed through RUN_ROOT.
+```
+
+Reason:
+
+```text
+The earlier HPC failures included permission errors from attempts to create
+logs or reports in a non-writable current directory.  Checking only the
+RUN_MANIFEST contract is not enough if a lower-level collector or Slurm helper
+still contains a bare reports/ or logs/ write.
+```
+
+Consequences:
+
+```text
+The handoff verifier now fails before upload if any nested package shell
+script writes logs or reports without RUN_ROOT.  This is a runtime-output
+policy and packaging-gate change only.  It does not change exact-oracle
+physics, numerical thresholds, feature flags, branch reuse, adaptive boxes,
+GPU batching, or Hamiltonian cache behavior.
+```
+
+## D33. Enforce GPU Slurm Node/Runtime Safety in the Upload Set
+
+Decision:
+
+```text
+The upload-set verifier now scans GPU Slurm scripts inside each nested package
+archive and requires every GPU script to exclude gpuh01 and run a real CUDA
+tensor-allocation probe that prints cuda_runtime_probe=pass.
+```
+
+Reason:
+
+```text
+gpuh01 has an older NVIDIA driver than the PyTorch CUDA runtime used by the
+environment, which previously caused CUDA initialization to fail at runtime.
+Checking only Slurm submission structure is not enough; the handoff verifier
+must prove that GPU jobs exclude the known bad node and fail early if CUDA
+cannot initialize on the allocated node.
+```
+
+Consequences:
+
+```text
+The current upload set verifies 7 GPU Slurm scripts across the Stage 1
+reference package and the Stage 2-4 variant-suite package, with zero policy
+violations.  This is an HPC scheduling/runtime safety gate only.  It does not
+change exact-oracle physics, numerical thresholds, feature flags, branch
+reuse, adaptive boxes, GPU batching, or Hamiltonian cache behavior.
+```
+
+## D34. Include Variant-Suite HPC Status Diagnostics in the Package
+
+Decision:
+
+```text
+The variant-suite HPC package includes scripts/check_variant_suite_hpc_status.py
+and documents it in README.md and RUN_MANIFEST.json.
+```
+
+Reason:
+
+```text
+After Slurm jobs disappear from squeue, users still need a package-local way to
+distinguish a successful postprocess return archive from missing postprocess
+output, CUDA runtime failures, old-driver failures, and failed Slurm states.
+Relying only on squeue is insufficient because completed or failed jobs may no
+longer appear there.
+```
+
+Consequences:
+
+```text
+The status checker reads RUN_ROOT logs, jobid files, and the expected return
+archive.  It can optionally query squeue/sacct when available.  This is an HPC
+diagnostic and handoff change only; it does not alter Slurm dependencies,
+exact-oracle calculations, feature flags, numerical thresholds, or the formal
+variant-suite import gate.
+```
+
+## D35. Add a Top-Level Upload-Set Run Helper
+
+Decision:
+
+```text
+The upload-set bundle includes run_required_variant_suite.sh at its top level.
+The helper verifies the upload set, extracts the required variant-suite archive
+from archives/ if needed, and then calls the existing package-local
+scripts/submit_local_refinement_fixed_point_regression.sh alias.
+```
+
+Reason:
+
+```text
+The previous handoff required several manual cluster-side steps: verify the
+upload set, locate the nested required archive, extract it, cd into the package,
+and submit the runbook-named workflow.  Automating only those existing steps
+reduces directory mistakes and stale-package submissions without changing the
+validated nested package workflow.
+```
+
+Consequences:
+
+```text
+The upload-set verifier now checks that the helper is present, documented,
+performs upload-set verification first, extracts the required archive from
+archives/, calls the existing submit alias, and contains no destructive delete
+command.  This is a cluster handoff convenience and audit check only; it does
+not change exact-oracle physics, numerical thresholds, Slurm job logic inside
+the nested package, feature flags, branch reuse, adaptive boxes, GPU batching,
+or Hamiltonian cache behavior.
+```
+
+## D36. Run the Stage 2-4 Variant Gate as a Point-Wise Slurm Array
+
+Decision:
+
+```text
+The Stage 2-4 local-refinement variant-suite package now submits one Slurm
+array over variant x fixed_point_id instead of one long serial job per
+variant.  The package recomputes baseline and all candidate variants from
+scratch, writes one result per point task, aggregates them into the existing
+variant-level CSV/manifest layout, and submits postprocess with afterany so a
+diagnostic return archive is produced even when some point tasks fail.
+```
+
+Reason:
+
+```text
+The previous serial variant-suite design let baseline and cluster_only finish
+in about two hours, but cluster_optional_k3, cluster_optional_k2, and
+cluster_energy_window each timed out after 36 hours without useful pointwise
+checkpoint output.  This made the postprocess job DependencyNeverSatisfied and
+left no return archive.  The failure was a scheduling/checkpointing design
+problem, not a reason to weaken the physics-equivalence gate.
+```
+
+Consequences:
+
+```text
+The complete gate still compares exact-oracle phase labels, q_opt, Delta_opt,
+DeltaF, trusted/training/rerun flags, q/delta unresolved flags, and timing
+metadata against a freshly computed baseline.  The change is limited to HPC
+task granularity, restartability, diagnostics, and return packaging.  It does
+not change physical definitions, numerical thresholds, local-refinement
+feature flags, or the accepted equivalence tolerances.
+```
+
+## D37. Make Mandatory Overflow Rank-and-Cap an Explicit Optimized Variant Policy
+
+Decision:
+
+```text
+Preserve historical `cluster_optional_*` variants and add explicit
+`rank_and_cap_*` variants with `high_risk_overflow_policy = rank_and_cap`.
+Energy-window pruning remains restricted to ordinary non-mandatory basins.
+```
+
+Reason:
+
+```text
+The returned variant-array evidence showed that the historical optimized
+variants over-selected mandatory basins and timed out.  Those configurations
+should remain reproducible as failed evidence.  The corrected policy should
+therefore be opt-in, named, and locally gated before any expensive GPU rerun.
+Energy-window pruning should not remove selected global-best, edge-risk,
+Delta-near-epsilon, or near-degenerate basins because those branches are
+physics-safety guardrails.
+```
+
+Consequences:
+
+```text
+The new policy ranks mandatory basins by risk type, applies per-risk caps, and
+enforces the total target cap before ordinary optional targets are added.
+Ordinary energy-window pruning can reduce only ordinary optional candidates and
+must be reported as ordinary-pruned count, not as a guaranteed runtime
+reduction.  No thermodynamic phase criterion, Delta tolerance, final ambiguity
+tolerance, acquisition logic, or Slurm submission behavior is changed.
+```
+
+## D38. Run Target-Construction Dry-Run as One Slurm Array Task per Fixed Point
+
+Decision:
+
+```text
+The 32 fixed-point target-construction-only gate is packaged as a Slurm array
+over fixed_point_id.  Each task computes the shared coarse/q-expansion
+candidate set once, then applies baseline, cluster_only, rank_and_cap_k3,
+rank_and_cap_k2, and rank_and_cap_energy_window selection policies to that
+same candidate set.
+```
+
+Reason:
+
+```text
+The goal of this gate is to test target construction, not local-box runtime.
+Repeating the coarse scan separately for every variant would waste GPU time
+and obscure whether the new rank-and-cap policy fixes target explosion.
+Running one task per point also keeps the package restartable and makes
+per-point failures easy to inspect.
+```
+
+Consequences:
+
+```text
+The package does not run local refinement boxes and does not run active
+learning.  Slurm scripts and the workflow submitter exclude gpuh01 by default.
+The return archive contains target-construction tables and a gate status JSON;
+full local-box GPU regression remains blocked until this gate passes.
+```
+
+## D39. Prepare Separate Rank-and-Cap K3 Five-Iteration and Full-Loop Packages
+
+Decision:
+
+```text
+Generate two independent active-learning upload packages for rank_and_cap_k3:
+one package for seed plus five acquisition-batch closed-loop validation, and a
+separate package for the full active-learning loop.  The full-loop package is
+uploadable now but its submit script requires CONFIRM_FULL_LOOP=1 so it cannot
+be started accidentally before the five-iteration validation is reviewed.
+```
+
+Reason:
+
+```text
+The one-iteration validation passed, but it cannot establish multi-round
+stability or full-loop convergence.  A five-iteration package checks repeated
+train/select/exact/merge/append behavior under the accepted rank_and_cap_k3
+oracle.  The full-loop package should not depend on the five-iteration output,
+because that would make the full package unusable if the validation archive is
+delayed or if the user wants to upload both packages at the same time.
+```
+
+Consequences:
+
+```text
+Both packages carry complete code snapshots, evidence reports, submit wrappers,
+collection/report scripts, and package manifests.  Both write outputs under
+their own package-local output roots and exclude gpuh01 by default through
+EXCLUDE_NODES.  The five-iteration package disables early stopping to force
+the planned validation length.  The full-loop package leaves the StopController
+enabled but requires explicit confirmation before submission.  No phase
+criterion, Delta tolerance, final ambiguity tolerance, acquisition formula,
+candidate-domain strategy, local-refinement physics path, k2, energy-window,
+branch reuse, Powell, adaptive box, GPU batching, or Hamiltonian cache behavior
+is changed.
+```
+
+## D40. Split StopController Surprise into All-Selected, Trusted, and Hard-Risk Layers
+
+Decision:
+
+```text
+Keep the historical all-selected label-surprise metric as the default
+StopController behavior and add an explicit opt-in `stop_surprise_mode=trusted`
+gate.  Record hard-risk surprise as a numerical-frontier diagnostic rather
+than using it as a direct main-phase convergence veto.
+```
+
+Reason:
+
+```text
+The rankcap_k3 full-loop replay shows that the final all-selected surprise is
+47/256, while the final trusted surprise is 0/137.  The last-five strict
+surprise points are all rerun-required, so the historical selected-batch
+surprise mixes acquisition difficulty and numerical-frontier provisional
+labels.  A trusted gate better tests clean exact-label consistency while
+preserving the all-selected metric for backward-compatible diagnostics.
+```
+
+Consequences:
+
+```text
+`label_surprise_rate` remains an all-selected alias.  New metadata records
+all-selected, trusted, hard-risk, and selected-for-gate surprise rates and
+denominators.  Trusted surprise requires trusted_exact, training_eligible_exact,
+non-rerun, q-resolved, and delta-resolved labels; q_expanded alone does not
+exclude a point.  A trusted denominator floor and denominator fraction guard
+prevent zero-denominator or tiny-denominator false convergence.  The replay
+script exactly reproduces the historical all-selected StopController and gives
+trusted-mode counterfactual stop iteration 17.  No thermodynamic phase
+criterion, Delta tolerance, final ambiguity tolerance, rankcap_k3 local
+refinement, q-window expansion, acquisition behavior, candidate domain,
+surprise tolerance, required_pass_count, patience, or boundary thresholds were
+changed.
+```
+
+## D41. Package a Self-Contained Tail Continuation from the Rankcap K3 Full Loop
+
+Decision:
+
+```text
+Create an independent `rankcap_k3_tail_surprise_continuation_v1` HPC package
+that starts from the downloaded full-loop endpoint `dataset_iter031.npz` and
+continues a small number of acquisition batches with `STOP_SURPRISE_MODE=trusted`.
+The package carries the restart dataset, tail datasets, previous monitor
+predictions, stop/metrics history, run config, selected tail artifacts, and a
+complete runnable code snapshot.
+```
+
+Reason:
+
+```text
+The trusted-surprise short validation from scratch verified the engineering
+path but did not test the late-stage question that motivated the change.  The
+right empirical test is a package-local continuation from the full-loop tail:
+it asks whether additional late active-learning batches reduce all-selected
+surprise, preserve low trusted surprise, or expose boundary coverage as the
+remaining blocker.
+```
+
+Consequences:
+
+```text
+The continuation package writes only under
+`ML_Phase_512_RankCapK3_TailContinuation/`, starts at `START_ITER=31`, defaults
+to five continuation batches, and excludes `gpuh01` by default.  It preserves
+rankcap_k3 settings and trusted-surprise denominator guards.  It does not
+change the thermodynamic phase criterion, Delta refinement trigger tolerance,
+final ambiguity tolerance, acquisition formula, candidate-domain strategy,
+rankcap_k3 local-refinement policy, StopController thresholds, k2,
+energy-window pruning, branch reuse, Powell, adaptive box, GPU batching, or
+Hamiltonian cache behavior.
+```
+
+## D42. Stage V Uses Boundary-Support Acquisition with a Shadow Learned Residual
+
+Decision:
+
+```text
+Stage V cold-start active learning uses
+stagev_acqv2_boundary_support_learned_residual_3d_v1.  The acquisition score is
+split into a transparent physical boundary-support base score A0 and an
+optional learned residual g_theta:
+
+A(x) = A0(x) * exp(lambda_t * g_theta(phi(x))).
+
+lambda_t starts at zero.  The learned residual remains in shadow mode until
+enough logged reward samples exist and validation shows improvement over A0.
+```
+
+Reason:
+
+```text
+Stage IV-A showed that the 3D topology run can find tFFLO, but visual boundary
+roughness and support gaps remain.  Stage V therefore targets boundary support
+directly rather than adding another opaque global acquisition heuristic.  The
+base score explicitly combines normal/SC, uniform/FFLO, P0 topology, Ppi
+topology, and gap/nodal boundary channels, each using margin likelihood,
+uncertainty, and sparse-support factors.  The learned component can improve
+ranking only after it proves useful from online rewards.
+```
+
+Consequences:
+
+```text
+Stage V is a cold-start package: it does not train from Stage III or Stage IV
+datasets/checkpoints.  Stage IV artifacts may be used only for offline
+comparison and reporting.  The exact oracle remains robust_incremental with
+rankcap_k3 and active-loop topology diagnostics; thermodynamic phase criteria,
+topology definitions, StopController thresholds, Delta/q tolerances, and
+Hamiltonian definitions are unchanged.  Candidate logs preserve selected
+metadata, top-K unselected controls, A0 components, propensities, and reward
+model state.  Slurm scripts exclude gpuh01 and gpuh14.
+```
+
+## D43. Stage V-v2 Splits Learned Acquisition into Per-boundary Heads
+
+Decision:
+
+```text
+Create a new cold-start Stage V-v2 package:
+
+run_id = stagev_v2_multihead_boundary_learning_3d_v1
+output_root = ML_Phase_StageV_V2_Multihead
+
+The Stage V-v2 acquisition keeps the transparent boundary-support A0 channels
+but replaces the Stage V-v1 scalar learned residual with independent heads for
+normal/SC, uniform-SC/FFLO, P0 topology, Ppi topology, and gap/nodal support.
+Each head has its own reward normalization, validation metric, lambda_s, and
+fallback to A0_s.
+```
+
+Reason:
+
+```text
+The Stage V-v1 return report showed that the scalar residual learned useful
+rank structure, but the online learning signal was dominated by normal/SC and
+global Sobol proposals while P0/Ppi topology support remained weak.  A single
+scalar reward mixes rare topology rewards with frequent thermodynamic boundary
+rewards.  Per-boundary reward normalization and independent lambdas make that
+failure mode explicit and testable.
+```
+
+Consequences:
+
+```text
+Stage V-v2 remains strict cold-start.  It does not use Stage III, Stage IV, or
+Stage V-v1 data/checkpoints for training initialization or seed coordinates.
+Those artifacts may be used only for offline comparison after the run.
+
+No physical definition changes were made.  The exact oracle, thermodynamic
+phase rule, Hamiltonian, Pfaffian convention, topology labels, q/Delta search,
+rankcap_k3 local refinement, and numerical tolerances are unchanged.
+
+Selection is submitted as a Slurm job, not run as CPU-heavy login-node work.
+All generated Slurm scripts exclude gpuh01 and gpuh14.  Production submission
+requires CONFIRM_STAGEV2_PRODUCTION=1 and refuses to overwrite an existing run
+directory when START_ITER=0.
 ```
