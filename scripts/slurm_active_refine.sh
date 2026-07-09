@@ -13,6 +13,7 @@ set -euo pipefail
 PROJECT_DIR="${PROJECT_DIR:-$PWD}"
 CONDA_ENV="${CONDA_ENV:-}"
 PYTHON_BIN="${PYTHON_BIN:-python}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-ML_Phase}"
 
 cd "${PROJECT_DIR}"
 
@@ -47,6 +48,7 @@ SAMPLING_POWER_END_ITER="${SAMPLING_POWER_END_ITER:-30}"
 SAMPLING_POWER_SCHEDULE="${SAMPLING_POWER_SCHEDULE:-piecewise}"
 SCORE_THRESHOLD_ABS="${SCORE_THRESHOLD_ABS:-0.0}"
 SCORE_THRESHOLD_REL="${SCORE_THRESHOLD_REL:-0.0}"
+ACQUISITION_PROFILE="${ACQUISITION_PROFILE:-full}"
 ACTIVE_POOL_RULE="${ACTIVE_POOL_RULE:-max_threshold}"
 ACTIVE_POOL_QUANTILE="${ACTIVE_POOL_QUANTILE:-0.90}"
 ACTIVE_POOL_QUANTILE_SCHEDULE="${ACTIVE_POOL_QUANTILE_SCHEDULE:-piecewise}"
@@ -80,10 +82,26 @@ W_EXT_MID="${W_EXT_MID:-0.08}"
 W_EXT_END="${W_EXT_END:-0.03}"
 W_EXT_MID_ITER="${W_EXT_MID_ITER:-10}"
 W_EXT_END_ITER="${W_EXT_END_ITER:-30}"
+W_CLS_SIMPLE="${W_CLS_SIMPLE:-1.0}"
+W_NS_SIMPLE="${W_NS_SIMPLE:-1.0}"
+W_UF_SIMPLE="${W_UF_SIMPLE:-0.5}"
+W_GRAD_SIMPLE="${W_GRAD_SIMPLE:-0.2}"
+W_REG_SIMPLE="${W_REG_SIMPLE:-0.1}"
+W_EXT_SIMPLE_SCHEDULE="${W_EXT_SIMPLE_SCHEDULE:-piecewise}"
+W_EXT_SIMPLE_START="${W_EXT_SIMPLE_START:-0.02}"
+W_EXT_SIMPLE_MID="${W_EXT_SIMPLE_MID:-0.01}"
+W_EXT_SIMPLE_END="${W_EXT_SIMPLE_END:-0.0}"
+W_EXT_SIMPLE_MID_ITER="${W_EXT_SIMPLE_MID_ITER:-10}"
+W_EXT_SIMPLE_END_ITER="${W_EXT_SIMPLE_END_ITER:-30}"
+SURPRISE_CLEANUP_QEDGE_PENALTY="${SURPRISE_CLEANUP_QEDGE_PENALTY:-0.85}"
+SURPRISE_CLEANUP_QEDGE_FLOOR="${SURPRISE_CLEANUP_QEDGE_FLOOR:-0.05}"
+SURPRISE_CLEANUP_RESPONSE_WEIGHT="${SURPRISE_CLEANUP_RESPONSE_WEIGHT:-0.25}"
+SURPRISE_CLEANUP_EXPLORE_SCALE="${SURPRISE_CLEANUP_EXPLORE_SCALE:-0.5}"
 RANDOM_SEED="${RANDOM_SEED:-42}"
 FINITE_T_BAND_WIDTH="${FINITE_T_BAND_WIDTH:-}"
 HIDDEN_GROUND_TRUTH="${HIDDEN_GROUND_TRUTH:-}"
-POINTS_PER_ITER="${POINTS_PER_ITER:-64}"
+POINTS_PER_ITER="${POINTS_PER_ITER:-256}"
+ORACLE_MODE="${ORACLE_MODE:-robust_al}"
 WORLD_SIZE="${WORLD_SIZE:-8}"
 N_ENSEMBLE="${N_ENSEMBLE:-5}"
 REG_EPOCHS="${REG_EPOCHS:-240}"
@@ -138,6 +156,7 @@ fi
   --sampling-power-schedule "${SAMPLING_POWER_SCHEDULE}" \
   --score-threshold-abs "${SCORE_THRESHOLD_ABS}" \
   --score-threshold-rel "${SCORE_THRESHOLD_REL}" \
+  --acquisition-profile "${ACQUISITION_PROFILE}" \
   --active-pool-rule "${ACTIVE_POOL_RULE}" \
   --active-pool-quantile "${ACTIVE_POOL_QUANTILE}" \
   --active-pool-quantile-schedule "${ACTIVE_POOL_QUANTILE_SCHEDULE}" \
@@ -171,12 +190,29 @@ fi
   --w-ext-end "${W_EXT_END}" \
   --w-ext-mid-iter "${W_EXT_MID_ITER}" \
   --w-ext-end-iter "${W_EXT_END_ITER}" \
+  --w-cls-simple "${W_CLS_SIMPLE}" \
+  --w-ns-simple "${W_NS_SIMPLE}" \
+  --w-uf-simple "${W_UF_SIMPLE}" \
+  --w-grad-simple "${W_GRAD_SIMPLE}" \
+  --w-reg-simple "${W_REG_SIMPLE}" \
+  --w-ext-simple-schedule "${W_EXT_SIMPLE_SCHEDULE}" \
+  --w-ext-simple-start "${W_EXT_SIMPLE_START}" \
+  --w-ext-simple-mid "${W_EXT_SIMPLE_MID}" \
+  --w-ext-simple-end "${W_EXT_SIMPLE_END}" \
+  --w-ext-simple-mid-iter "${W_EXT_SIMPLE_MID_ITER}" \
+  --w-ext-simple-end-iter "${W_EXT_SIMPLE_END_ITER}" \
+  --surprise-cleanup-qedge-penalty "${SURPRISE_CLEANUP_QEDGE_PENALTY}" \
+  --surprise-cleanup-qedge-floor "${SURPRISE_CLEANUP_QEDGE_FLOOR}" \
+  --surprise-cleanup-response-weight "${SURPRISE_CLEANUP_RESPONSE_WEIGHT}" \
+  --surprise-cleanup-explore-scale "${SURPRISE_CLEANUP_EXPLORE_SCALE}" \
   --random-seed "${RANDOM_SEED}" \
   --start-iteration "${START_ITERATION}" \
   --run-id "${RUN_ID}" \
   --mode hpc \
   --iterations "${ITERATIONS}" \
   --points-per-iter "${POINTS_PER_ITER}" \
+  --oracle-mode "${ORACLE_MODE}" \
+  --output-root "${OUTPUT_ROOT}" \
   --world-size "${WORLD_SIZE}" \
   --partition-strategy round_robin \
   --n-ensemble "${N_ENSEMBLE}" \

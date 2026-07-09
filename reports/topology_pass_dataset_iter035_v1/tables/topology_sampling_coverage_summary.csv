@@ -1,0 +1,2 @@
+trusted_fflo_gapped_points,z2_change_candidate_edges,p0_sign_change_candidate_edges,ppi_sign_change_candidate_edges,delaunay_edge_count,delaunay_triangle_count,large_circumradius_triangles,coverage_hole_threshold_norm,nearest_neighbor_distance_p95_norm,nearest_neighbor_distance_max_norm,next_case,normalization_bounds
+4642,182,182,0,13575,8934,447,0.018550834755909972,0.011762518145388454,0.054962868592079335,Case B,"{'kBT_min': 0.0, 'kBT_max': 0.5553333333333333, 'J_A_min': 0.019875, 'J_A_max': 1.6297500000000005}"

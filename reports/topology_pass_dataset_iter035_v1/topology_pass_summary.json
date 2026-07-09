@@ -1,0 +1,79 @@
+{
+  "run_id": "topology_pass_dataset_iter035_v1",
+  "processed_points": 7434,
+  "total_sc_points": 5567,
+  "trusted_topology_points": 5357,
+  "provisional_topology_points": 210,
+  "backend": "gpu",
+  "nk": 2048,
+  "actual_runtime_seconds": 5.342443000001367,
+  "peak_vram_mb": 16751.14404296875,
+  "parquet_status": "not_written: ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package.",
+  "bulk_gap_min": 2.4406210617638004e-13,
+  "bulk_gap_median": 0.21537100197105546,
+  "bulk_gap_p95": 0.5172021784875322,
+  "pfaffian_margin_min": 9.556335736057853e-05,
+  "pfaffian_margin_median": 0.3404194203967286,
+  "pfaffian_margin_p95": 0.4835101894970807,
+  "counts": [
+    {
+      "thermo_phase": "uniform_SC",
+      "topology_label": "trivial",
+      "count": 715
+    },
+    {
+      "thermo_phase": "uniform_SC",
+      "topology_label": "topological",
+      "count": 0
+    },
+    {
+      "thermo_phase": "uniform_SC",
+      "topology_label": "gapless_SC",
+      "count": 0
+    },
+    {
+      "thermo_phase": "uniform_SC",
+      "topology_label": "topology_unresolved",
+      "count": 0
+    },
+    {
+      "thermo_phase": "FFLO",
+      "topology_label": "trivial",
+      "count": 3127
+    },
+    {
+      "thermo_phase": "FFLO",
+      "topology_label": "topological",
+      "count": 1515
+    },
+    {
+      "thermo_phase": "FFLO",
+      "topology_label": "gapless_SC",
+      "count": 195
+    },
+    {
+      "thermo_phase": "FFLO",
+      "topology_label": "topology_unresolved",
+      "count": 15
+    }
+  ],
+  "diagnostics": {
+    "trusted_fflo_gapped_points": 4642,
+    "z2_change_candidate_edges": 182,
+    "p0_sign_change_candidate_edges": 182,
+    "ppi_sign_change_candidate_edges": 0,
+    "delaunay_edge_count": 13575,
+    "delaunay_triangle_count": 8934,
+    "large_circumradius_triangles": 447,
+    "coverage_hole_threshold_norm": 0.018550834755909972,
+    "nearest_neighbor_distance_p95_norm": 0.011762518145388454,
+    "nearest_neighbor_distance_max_norm": 0.054962868592079335,
+    "next_case": "Case B",
+    "normalization_bounds": {
+      "kBT_min": 0.0,
+      "kBT_max": 0.5553333333333333,
+      "J_A_min": 0.019875,
+      "J_A_max": 1.6297500000000005
+    }
+  }
+}
