@@ -1,0 +1,788 @@
+schema_version: 3
+figure_id: FIG-02-THERMO-STRICT
+figure_type: manuscript
+template: multi_panel_template
+scientific_message: Starting from sparse exact observations, active learning reallocates
+  exact BdG calls and reaches an audited 2D Normal/uniform-SC/FFLO endpoint while
+  preserving the hard-risk layer.
+visual_message: The final exact-sample thermodynamic map dominates; allocation and
+  raw convergence support it, while the cold start remains contextual.
+primary_object:
+  id: final_phase_map
+  asset_type: phase_map
+  scientific_role: audited thermodynamic endpoint
+  visual_role: primary
+primary_visual_object:
+  id: final_phase_map
+  scientific_role: exact-sample thermodynamic phase map
+  expected_rank: 1
+secondary_objects:
+- id: exact_call_allocation
+  asset_type: active_learning_trajectory
+  scientific_role: exact-call allocation
+  visual_role: secondary
+- id: raw_convergence
+  asset_type: convergence_plot
+  scientific_role: raw convergence audit
+  visual_role: secondary
+tertiary_information:
+- id: cold_start
+  scientific_role: initial exact design
+  visual_role: tertiary
+secondary_visual_objects:
+- exact_call_allocation
+- raw_convergence
+tertiary_visual_objects:
+- cold_start
+reading_order:
+- final_phase_map
+- exact_call_allocation
+- raw_convergence
+- cold_start
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    final_phase_map:
+    - final_phase_map
+    exact_call_allocation:
+    - exact_call_allocation
+    raw_convergence:
+    - raw_convergence
+    cold_start:
+    - cold_start
+  scientific_asset_fill_ratio_audits: []
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking:
+  - final_phase_map
+  - exact_call_allocation
+  - raw_convergence
+  - cold_start
+  severity: warning
+forbidden_visual_priorities:
+- equal_weight_dashboard
+- hard_risk_as_fourth_phase
+- cold_start_as_primary
+data_sources:
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter000/selected_points.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_selection_history_sources.json
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/stop_metrics_history.json
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/figure_data/hard_risk_boundary_impact_audit_v2/hard_risk_point_manifest.csv
+assets:
+- id: final_phase_map
+  type: phase_map
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_final_exact_samples.csv
+  schematic: false
+  bbox: final_phase_map
+  features:
+  - consistent_phase_colors
+  - common_axes_for_comparison
+  - boundary_semantics
+- id: exact_call_allocation
+  type: active_learning_trajectory
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_exact_call_allocation.csv
+  schematic: false
+  bbox: exact_call_allocation
+  features:
+  - iteration_or_budget
+  - sampled_points
+  - common_domain
+- id: raw_convergence
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_raw_convergence_metrics.csv
+  schematic: false
+  bbox: raw_convergence
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+- id: cold_start
+  type: exact_sample_data
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_cold_start_exact_calls.csv
+  schematic: false
+  bbox: cold_start
+layout:
+  canvas:
+    viewbox:
+    - 0
+    - 0
+    - 1600
+    - 1100
+    print_mm:
+    - 178.0
+    - 135.0
+  template_profile: phase_map
+  primary_area_fraction_min: 0.42
+  bounding_boxes: geometry_manifest.json
+  alignment_anchors:
+  - shared_2d_domain
+  - shared_iteration_axis
+  declared_overlays:
+  - hard_risk_open_rings_over_exact_phase_samples
+  declared_exceptions: []
+  area_requirements:
+  - id: hero_map_area
+    object_id: final_phase_map
+    reference: canvas
+    minimum_fraction: 0.42
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings:
+    phase: physical
+    exact_calls: selected
+    hard_risk: uncertainty
+  allowed_extra_hex: []
+  contrast_pairs:
+  - id: body_on_white
+    role: body_text
+    foreground: neutral.body
+    background: neutral.white
+text_budget:
+  maximum_words_in_artwork: 105
+  maximum_words_per_panel: 26
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption_or_supplement
+required_elements:
+- sparse_cold_start
+- iteration_resolved_exact_calls
+- three_phase_exact_endpoint
+- separate_hard_risk_layer
+- raw_convergence_metrics
+required_labels:
+- Sparse cold start
+- Exact-call allocation
+- Exact thermodynamic states
+- Numerical histories
+- Normal
+- Uniform SC
+- FFLO
+- hard-risk
+forbidden_elements:
+- interpolated_phase_field
+- smoothed_boundary
+- hard_risk_as_phase
+- default_matplotlib_palette
+forbidden_claims:
+- ML solves the BdG phase diagram
+- all numerical uncertainty is eliminated
+- complete phase discovery
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  require_engine_preflight: true
+  engine_preflight_record: engine_preflight.json
+  strict_palette: true
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+approval:
+  gate: GATE_FIG2_HUMAN_SCIENCE_REVIEW
+  state: HUMAN_WAIT
+strict_data:
+  enabled: true
+  track: STRICT_DATA_FIGURE_TRACK
+  claim_freeze:
+  - CLM-2D-THERMO
+  panels:
+  - panel_id: cold_start
+    claim_ids:
+    - CLM-2D-THERMO
+    scientific_role: sparse random-grid exact cold start
+    visual_priority: tertiary
+    panel_type: EXACT_SAMPLE_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter000/selected_points.csv
+      sha256: eb68f3a2f5a6ddc43a063840097e6eaf51036c2ac136f31cbae0312eeb06a4f0
+      version: selection_iter000
+      row_count: 512
+      fields:
+      - kT
+      - JA
+      units:
+        kT: kBT/t
+        JA: JA/t
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz
+      sha256: 2e9ac68e4d891390c78c772b3d57ef8b55b69a82881adc956fa2fb17c2c76cbe
+      version: stageI_dataset_iter031
+      row_count: 6880
+      fields:
+      - x
+      - y_reg
+      - y_phase
+      - y_eta_sign
+      - y_strong_diode
+      - q_min
+      - q_max
+      - n_q
+      - q_index
+      - q_edge_distance
+      - q_edge_hit
+      - q_refinement_level
+      - q_status
+      - q_expanded
+      - q_unresolved
+      - delta_min
+      - delta_max
+      - n_delta
+      - n_delta_refined
+      - delta_refinement_level
+      - delta_status
+      - delta_boundary_ambiguous
+      - delta_boundary_band_normal
+      - delta_refined
+      - delta_unresolved
+      - free_energy_gap_to_normal
+      - positive_delta_gap
+      - positive_delta_checked
+      - phase_candidate
+      - exact_status_code
+      - trusted_exact
+      - training_eligible_exact
+      - needs_rerun_exact
+      units:
+        x[:,0]: kBT/t
+        x[:,1]: JA/t
+        y_phase: code
+    - &id001
+      path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz
+      sha256: f2d751d0cfae8a3c63da786109903ffd1969a3f90c20a17d92665d8f252e2700
+      version: dataset_iter035
+      row_count: 7434
+      fields:
+      - x
+      - y_reg
+      - y_phase
+      - y_eta_sign
+      - y_strong_diode
+      - q_min
+      - q_max
+      - n_q
+      - q_index
+      - q_edge_distance
+      - q_edge_hit
+      - q_refinement_level
+      - q_status
+      - q_expanded
+      - q_unresolved
+      - delta_min
+      - delta_max
+      - n_delta
+      - n_delta_refined
+      - delta_refinement_level
+      - delta_status
+      - delta_boundary_ambiguous
+      - delta_boundary_band_normal
+      - delta_refined
+      - delta_unresolved
+      - free_energy_gap_to_normal
+      - positive_delta_gap
+      - positive_delta_checked
+      - phase_candidate
+      - exact_status_code
+      - trusted_exact
+      - training_eligible_exact
+      - needs_rerun_exact
+      units:
+        x[:,0]: kBT/t
+        x[:,1]: JA/t
+        y_phase: code
+    source_versions:
+    - selection_iter000
+    - stageI_dataset_iter031
+    - dataset_iter035
+    source_hashes:
+    - eb68f3a2f5a6ddc43a063840097e6eaf51036c2ac136f31cbae0312eeb06a4f0
+    - 2e9ac68e4d891390c78c772b3d57ef8b55b69a82881adc956fa2fb17c2c76cbe
+    - f2d751d0cfae8a3c63da786109903ffd1969a3f90c20a17d92665d8f252e2700
+    source_scripts:
+    - prepare_inputs.py
+    - build_fig2.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+    axis_orientation:
+      x: increasing_right
+      y: increasing_up
+    parameter_ranges:
+      kT:
+      - 0.0
+      - 0.56
+      JA:
+      - 0.0
+      - 2.12
+    input_row_count: 512
+    selected_row_count: 512
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - phase_code
+    label_semantics: frozen exact BdG phase code
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: explicit source fields
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_open_rings_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes: []
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - exact labels immutable
+    - kT >= 0
+    allowed_claims:
+    - audited thermodynamic endpoint
+    - active learning allocates exact calls
+    required_caveats:
+    - hard-risk remains an uncertainty layer
+    forbidden_claims:
+    - all numerical uncertainty eliminated
+    - ML replaces the BdG solver
+    forbidden_operations:
+    - interpolation
+    - smoothing
+    - boundary re-extraction
+    - manual label change
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: cold_start
+    validators:
+    - strict_data_checker
+    - fig2_scientific_validator
+    human_review_items:
+    - panel supports claim without overstatement
+    output_artifacts: []
+  - panel_id: exact_call_allocation
+    claim_ids:
+    - CLM-2D-THERMO
+    scientific_role: iteration-resolved allocation of exact BdG calls
+    visual_priority: secondary
+    panel_type: EXACT_SAMPLE_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_selection_history_sources.json
+      sha256: 22ac562fa2e2d495e169c664d7501fbd7efd2f8523a3d8a65a708959efa2908a
+      version: selection_history_iter000_034
+      row_count: 35
+      fields:
+      - path
+      - sha256
+      - version
+      - row_count
+      - fields
+      - units
+      units:
+        row_count: exact calls
+    source_versions:
+    - selection_history_iter000_034
+    source_hashes:
+    - 22ac562fa2e2d495e169c664d7501fbd7efd2f8523a3d8a65a708959efa2908a
+    source_scripts:
+    - prepare_inputs.py
+    - build_fig2.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+    axis_orientation:
+      x: increasing_right
+      y: increasing_up
+    parameter_ranges:
+      kT:
+      - 0.0
+      - 0.56
+      JA:
+      - 0.0
+      - 2.12
+    input_row_count: 9216
+    selected_row_count: 9216
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - phase_code
+    label_semantics: frozen exact BdG phase code
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: explicit source fields
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_open_rings_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes: []
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - exact labels immutable
+    - kT >= 0
+    allowed_claims:
+    - audited thermodynamic endpoint
+    - active learning allocates exact calls
+    required_caveats:
+    - hard-risk remains an uncertainty layer
+    forbidden_claims:
+    - all numerical uncertainty eliminated
+    - ML replaces the BdG solver
+    forbidden_operations:
+    - interpolation
+    - smoothing
+    - boundary re-extraction
+    - manual label change
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: exact_call_allocation
+    validators:
+    - strict_data_checker
+    - fig2_scientific_validator
+    human_review_items:
+    - panel supports claim without overstatement
+    output_artifacts: []
+  - panel_id: final_phase_map
+    claim_ids:
+    - CLM-2D-THERMO
+    scientific_role: exact-sample thermodynamic phase reconstruction
+    visual_priority: primary
+    panel_type: EXACT_SAMPLE_DATA
+    source_artifacts:
+    - *id001
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/figure_data/hard_risk_boundary_impact_audit_v2/hard_risk_point_manifest.csv
+      sha256: b17bbe1d34bdaab82b52f1477a47cf99ac51743fa9ad2fa61e1a906c3e03cee6
+      version: hard_risk_boundary_impact_audit_v2
+      row_count: 129
+      fields:
+      - point_id
+      - exact_index
+      - kBT
+      - JA
+      - provisional_phase_code
+      - provisional_phase
+      - predicted_phase_code
+      - predicted_phase
+      - current_monitor_phase_code
+      - current_monitor_phase
+      - grid_i
+      - grid_j
+      - grid_index
+      - rerun_required
+      - untrusted_exact
+      - training_ineligible
+      - q_unresolved
+      - delta_unresolved
+      - reason_count
+      - reason_signature
+      - rerun_required_reason
+      - q_expanded
+      - q_edge_hit
+      - delta_boundary_ambiguous
+      - distance_to_normal_sc_boundary
+      - distance_to_uniform_fflo_boundary
+      - distance_to_nearest_boundary
+      - nearest_boundary_type
+      - boundary_near
+      - region
+      - cluster_id
+      - influence_class
+      units:
+        kBT: kBT/t
+        JA: JA/t
+    source_versions:
+    - dataset_iter035
+    - hard_risk_boundary_impact_audit_v2
+    source_hashes:
+    - f2d751d0cfae8a3c63da786109903ffd1969a3f90c20a17d92665d8f252e2700
+    - b17bbe1d34bdaab82b52f1477a47cf99ac51743fa9ad2fa61e1a906c3e03cee6
+    source_scripts:
+    - prepare_inputs.py
+    - build_fig2.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+    axis_orientation:
+      x: increasing_right
+      y: increasing_up
+    parameter_ranges:
+      kT:
+      - 0.0
+      - 0.56
+      JA:
+      - 0.0
+      - 2.12
+    input_row_count: 7434
+    selected_row_count: 7434
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - phase_code
+    label_semantics: frozen exact BdG phase code
+    phase_mapping:
+      normal: 0
+      uniform_SC: 1
+      FFLO: 2
+    topology_mapping: {}
+    trust_mask: explicit source fields
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_open_rings_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes: []
+    expected_counts:
+      normal: 1867
+      uniform_SC: 715
+      FFLO: 4852
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - exact labels immutable
+    - kT >= 0
+    allowed_claims:
+    - audited thermodynamic endpoint
+    - active learning allocates exact calls
+    required_caveats:
+    - hard-risk remains an uncertainty layer
+    forbidden_claims:
+    - all numerical uncertainty eliminated
+    - ML replaces the BdG solver
+    forbidden_operations:
+    - interpolation
+    - smoothing
+    - boundary re-extraction
+    - manual label change
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: final_phase_map
+    validators:
+    - strict_data_checker
+    - fig2_scientific_validator
+    human_review_items:
+    - panel supports claim without overstatement
+    output_artifacts: []
+  - panel_id: raw_convergence
+    claim_ids:
+    - CLM-2D-THERMO
+    scientific_role: raw configured thermodynamic convergence evidence
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/stop_metrics_history.json
+      sha256: b85de65ab6f04e29d458826cd9ed297c98186e02d1e9d083778ce52dfa0f846e
+      version: stop_metrics_iter000_034
+      row_count: 35
+      fields:
+      - iteration
+      - metrics
+      - thresholds
+      - conditions
+      units:
+        iteration: index
+        metrics: raw metric units
+    source_versions:
+    - stop_metrics_iter000_034
+    source_hashes:
+    - b85de65ab6f04e29d458826cd9ed297c98186e02d1e9d083778ce52dfa0f846e
+    source_scripts:
+    - prepare_inputs.py
+    - build_fig2.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+    axis_orientation:
+      x: increasing_right
+      y: increasing_up
+    parameter_ranges:
+      kT:
+      - 0.0
+      - 0.56
+      JA:
+      - 0.0
+      - 2.12
+    input_row_count: 35
+    selected_row_count: 35
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - phase_code
+    label_semantics: frozen exact BdG phase code
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: explicit source fields
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct field extraction from archived stop_metrics_history.json
+        implementation: prepare_inputs.py
+        parameters: {}
+        validator: endpoint_exact_match
+    uncertainty_layer: separate
+    hard_risk_layer: separate_open_rings_not_phase_identity
+    convergence_status:
+      main_metric_representation: raw_physical_metrics
+      raw_trace_visible: true
+      iteration_index:
+      - 0
+      - 34
+    sensitivity_notes: []
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - exact labels immutable
+    - kT >= 0
+    allowed_claims:
+    - audited thermodynamic endpoint
+    - active learning allocates exact calls
+    required_caveats:
+    - hard-risk remains an uncertainty layer
+    forbidden_claims:
+    - all numerical uncertainty eliminated
+    - ML replaces the BdG solver
+    forbidden_operations:
+    - interpolation
+    - smoothing
+    - boundary re-extraction
+    - manual label change
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: raw_convergence
+    validators:
+    - strict_data_checker
+    - fig2_scientific_validator
+    human_review_items:
+    - panel supports claim without overstatement
+    output_artifacts: []
+  output_artifacts:
+  - fig2_strict_data.svg
+  - fig2_strict_data.pdf
+  - fig2_strict_data.png
+  - geometry_manifest.json
+  - asset_manifest.json

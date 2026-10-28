@@ -1,0 +1,11 @@
+level,semantic_field,source_column,v2_status
+level1,Delta_opt,delta_opt,valid
+level1,deltaF_NS,free_energy_gap_to_normal,valid
+level2,abs_q,q_opt,valid_on_SC
+level3,spectral_fingerprint,UNAVAILABLE,unknown
+level3,low_energy_features,UNAVAILABLE,unknown
+level3,log_gap,topology_bulk_gap,optional
+level3,k_gap,topology_k_at_bulk_gap,removed_from_core
+level4,P0,topology_p0,valid_gapped_SC
+level4,Ppi,topology_ppi,valid_gapped_SC
+level4,Pf_margin,topology_pfaffian_margin,valid_gapped_SC

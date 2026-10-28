@@ -1,0 +1,6 @@
+- Main decision uses configured k=8.
+- k=6 sensitivity coverage is 0.006269, slightly above 0.00625.
+- Opposite-Z2 brackets are diagnostics only, not the boundary.
+- The result does not claim all topology refinement is exhausted.
+- The result does not exclude every possible nodal superconducting state.
+- The frozen decision JSON stores the paired CSV hash in an NPZ-labeled field; NPZ/CSV arrays match.

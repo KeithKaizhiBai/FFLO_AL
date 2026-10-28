@@ -1,0 +1,24 @@
+{
+  "node_id": "intro_citation_loop",
+  "purpose": "intro citation loop",
+  "inputs": [
+    "approved_scope",
+    "frozen_results_claims",
+    "background_claims"
+  ],
+  "outputs": [
+    "intro_claim_map",
+    "citation_map",
+    "introduction_candidate"
+  ],
+  "prerequisites": [
+    "discussion_scope_guard",
+    "external_retrieval_approval"
+  ],
+  "forbidden_actions": [
+    "no live retrieval without approval",
+    "no Introduction before Results freeze"
+  ],
+  "gate": "INTRO_CITATION_LOOP_GATE",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

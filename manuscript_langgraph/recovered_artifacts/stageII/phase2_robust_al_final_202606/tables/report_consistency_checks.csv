@@ -1,0 +1,12 @@
+check,expected,actual,status
+dataset_total,7434,7434,pass
+normal_count,1867,1867,pass
+uniform_SC_count,715,715,pass
+FFLO_count,4852,4852,pass
+final_iteration,34,34,pass
+phase_map_change,<0.002,0.001628727653468802,pass
+hard_risk_total,129,129,pass
+rerun_required_count,110,110,pass
+local_box_mean,approx 2.79,2.79296875,pass
+local_box_max,3,3,pass
+figure_sources_exist,all copied/generated,11,pass

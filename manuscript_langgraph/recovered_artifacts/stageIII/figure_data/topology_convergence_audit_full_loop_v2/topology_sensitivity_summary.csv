@@ -1,0 +1,4 @@
+idw_and_knn_k,final_boundary_components,final_topological_region_components,final_total_arc_length,final_coverage_p95,final_bracket_coverage_p95,final_contour_point_count,grid_resolution,support_radius,interpolation_seed
+6,1,1,0.8270030583568582,0.00626854205400971,0.0064777727410674085,716,401,0.045,not_applicable_deterministic_idw
+8,1,1,0.8215038370100758,0.0061854216098562,0.005938431734125027,711,401,0.045,not_applicable_deterministic_idw
+12,2,1,0.8037985961795066,0.005913286221419149,0.004776525466706116,698,401,0.045,not_applicable_deterministic_idw

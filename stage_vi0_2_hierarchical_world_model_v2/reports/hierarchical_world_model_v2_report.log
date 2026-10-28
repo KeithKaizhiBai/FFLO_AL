@@ -1,0 +1,274 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.1)  12 JUL 2026 23:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**hierarchical_world_model_v2_report.tex
+(./hierarchical_world_model_v2_report.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box50
+)
+(./hierarchical_world_model_v2_report.aux)
+\openout1 = `hierarchical_world_model_v2_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(51.21495pt, 511.8651pt, 51.21495pt)
+* v-part:(T,H,B)=(51.21495pt, 692.54008pt, 51.21495pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=511.8651pt
+* \textheight=692.54008pt
+* \oddsidemargin=-21.05504pt
+* \evensidemargin=-21.05504pt
+* \topmargin=-58.05504pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen149
+\scratchbox=\box51
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen150
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+
+[1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../figures/figure_01_spatial_r2.png, id=12, 502.55446pt x 249.60947pt>
+File: ../figures/figure_01_spatial_r2.png Graphic file (type png)
+<use ../figures/figure_01_spatial_r2.png>
+Package pdftex.def Info: ../figures/figure_01_spatial_r2.png  used on input lin
+e 1.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_02_calibration.png, id=14, 502.55446pt x 249.60947pt>
+File: ../figures/figure_02_calibration.png Graphic file (type png)
+<use ../figures/figure_02_calibration.png>
+Package pdftex.def Info: ../figures/figure_02_calibration.png  used on input li
+ne 2.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_03_uncertainty_error.png, id=15, 502.55446pt x 249.60947pt>
+File: ../figures/figure_03_uncertainty_error.png Graphic file (type png)
+<use ../figures/figure_03_uncertainty_error.png>
+Package pdftex.def Info: ../figures/figure_03_uncertainty_error.png  used on in
+put line 3.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_04_risk_coverage.png, id=16, 502.55446pt x 249.60947pt>
+File: ../figures/figure_04_risk_coverage.png Graphic file (type png)
+<use ../figures/figure_04_risk_coverage.png>
+Package pdftex.def Info: ../figures/figure_04_risk_coverage.png  used on input 
+line 4.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_05_cross_run.png, id=17, 502.55446pt x 249.60947pt>
+File: ../figures/figure_05_cross_run.png Graphic file (type png)
+<use ../figures/figure_05_cross_run.png>
+Package pdftex.def Info: ../figures/figure_05_cross_run.png  used on input line
+ 5.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_06_spectral_comparison.png, id=18, 502.55446pt x 249.60947pt
+>
+File: ../figures/figure_06_spectral_comparison.png Graphic file (type png)
+<use ../figures/figure_06_spectral_comparison.png>
+Package pdftex.def Info: ../figures/figure_06_spectral_comparison.png  used on 
+input line 6.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_07_topology_metrics.png, id=19, 502.55446pt x 249.60947pt>
+File: ../figures/figure_07_topology_metrics.png Graphic file (type png)
+<use ../figures/figure_07_topology_metrics.png>
+Package pdftex.def Info: ../figures/figure_07_topology_metrics.png  used on inp
+ut line 7.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_08_probe_levels.png, id=20, 569.26523pt x 430.28445pt>
+File: ../figures/figure_08_probe_levels.png Graphic file (type png)
+<use ../figures/figure_08_probe_levels.png>
+Package pdftex.def Info: ../figures/figure_08_probe_levels.png  used on input l
+ine 8.
+(pdftex.def)             Requested size: 470.91495pt x 355.94763pt.
+<../figures/figure_09_replay_uncertainty.png, id=21, 574.82446pt x 253.50092pt>
+
+File: ../figures/figure_09_replay_uncertainty.png Graphic file (type png)
+<use ../figures/figure_09_replay_uncertainty.png>
+Package pdftex.def Info: ../figures/figure_09_replay_uncertainty.png  used on i
+nput line 9.
+(pdftex.def)             Requested size: 470.91495pt x 207.67868pt.
+<../figures/figure_10_replay_future.png, id=22, 574.26854pt x 253.50092pt>
+File: ../figures/figure_10_replay_future.png Graphic file (type png)
+<use ../figures/figure_10_replay_future.png>
+Package pdftex.def Info: ../figures/figure_10_replay_future.png  used on input 
+line 10.
+(pdftex.def)             Requested size: 470.91495pt x 207.87982pt.
+<../figures/figure_11_phase_reconstruction.png, id=23, 502.55446pt x 249.60947p
+t>
+File: ../figures/figure_11_phase_reconstruction.png Graphic file (type png)
+<use ../figures/figure_11_phase_reconstruction.png>
+Package pdftex.def Info: ../figures/figure_11_phase_reconstruction.png  used on
+ input line 11.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_12_decision.png, id=24, 574.82446pt x 285.74446pt>
+File: ../figures/figure_12_decision.png Graphic file (type png)
+<use ../figures/figure_12_decision.png>
+Package pdftex.def Info: ../figures/figure_12_decision.png  used on input line 
+12.
+(pdftex.def)             Requested size: 470.91495pt x 234.09396pt.
+
+[2 <../figures/figure_01_spatial_r2.png> <../figures/figure_02_calibration.png>
+] [3 <../figures/figure_03_uncertainty_error.png> <../figures/figure_04_risk_co
+verage.png>] [4 <../figures/figure_05_cross_run.png> <../figures/figure_06_spec
+tral_comparison.png>] [5 <../figures/figure_07_topology_metrics.png> <../figure
+s/figure_08_probe_levels.png>] [6 <../figures/figure_09_replay_uncertainty.png>
+ <../figures/figure_10_replay_future.png>] [7 <../figures/figure_11_phase_recon
+struction.png> <../figures/figure_12_decision.png>] [8
+
+
+]
+(./hierarchical_world_model_v2_report.aux) ) 
+Here is how much of TeX's memory you used:
+ 1924 strings out of 478268
+ 33447 string characters out of 5846348
+ 328082 words of memory out of 5000000
+ 20146 multiletter control sequences out of 15000+600000
+ 472899 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,6n,62p,1579b,226s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb>
+Output written on hierarchical_world_model_v2_report.pdf (8 pages, 709181 bytes
+).
+PDF statistics:
+ 86 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+

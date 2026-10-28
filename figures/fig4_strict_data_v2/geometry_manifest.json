@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 1100
+  },
+  "objects": [
+    {
+      "id": "exact_3d_thermodynamic_cloud",
+      "type": "plot",
+      "role": "primary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 70,
+        "y": 140,
+        "width": 990,
+        "height": 830
+      }
+    },
+    {
+      "id": "exact_3d_topology_support",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 1090,
+        "y": 140,
+        "width": 440,
+        "height": 330
+      }
+    },
+    {
+      "id": "fixed_mu_slice_audit",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 1090,
+        "y": 520,
+        "width": 440,
+        "height": 450
+      }
+    }
+  ],
+  "routes": [],
+  "scientific_content_bbox": {
+    "exact_3d_thermodynamic_cloud": {
+      "x": 70,
+      "y": 140,
+      "width": 990,
+      "height": 830
+    }
+  }
+}

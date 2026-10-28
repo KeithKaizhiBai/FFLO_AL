@@ -1,0 +1,8 @@
+not_applicable: physical branch does not exist; never encoded as zero
+unknown: field not computed; masked
+untrusted: computation present but reliability gate fails; masked
+valid: finite value and all level-specific reliability/applicability gates pass
+level1_valid: trusted_exact and training_eligible and not delta_unresolved
+level2_valid: physical_SC and q_status != not_applicable and not q_unresolved
+level3_valid: physical_SC and topology_applicable and spectral_status >= 0
+level4_valid: physical_SC and topology_trusted and spectral_status == gapped

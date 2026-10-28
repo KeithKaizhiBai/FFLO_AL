@@ -1,0 +1,28 @@
+schema_version: 1
+figure_id: SM-FIG-STAGEIV-NUMERICAL-DIAGNOSTICS-V1
+physics_recomputed: false
+source_artifacts:
+  dataset_iteration_summary:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/tables/dataset_iteration_summary.csv
+    sha256: 6be978acb3cb435777cb1e3ce0b045209362366f87acfe33b76e8b8902746072
+    rows: 26
+  convergence_failure_decomposition:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_audit_local/tables/stageiv_3d_convergence_failure_decomposition.csv
+    sha256: 4bad9606ba685521dbe353223f87f8e14cff220f868b20e8eadd64b4b35b83de
+    rows: 11
+canonical_outputs:
+  stageiv_iteration_history.csv:
+    sha256: 845c3f9648c60eab2c6b52002e7d90a3168fc2faa132e7f24bf5af66348bbfe2
+    rows: 26
+  stageiv_last3_raw_diagnostics.csv:
+    sha256: 04fc987092e1590256257c8d1ca70904073696dcdbd00eac51aa061fdbaebf0d
+    rows: 12
+derivation: direct field selection plus explicit parsing of archived component-count
+  string; no physics recomputation
+excluded_from_artwork:
+- threshold
+- pass
+- failure_class
+- threshold_ratio
+threshold_lines_rendered: false
+pass_fail_semantics_rendered: false

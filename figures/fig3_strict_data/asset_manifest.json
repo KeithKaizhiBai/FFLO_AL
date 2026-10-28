@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-03",
+  "physics_recomputed": false,
+  "assets": {
+    "fig3_strict_data.svg": {
+      "sha256": "59fb9962ad4bea0ca3cbe6cf10f12face89ffd4221869bc6dda4580b32f71146",
+      "bytes": 1048410
+    },
+    "fig3_strict_data.pdf": {
+      "sha256": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+      "bytes": 111561
+    },
+    "fig3_strict_data.png": {
+      "sha256": "6d7136ff1eed94e52d49a7dc052e02f419bec177fd54d1b4a703dbcff014cf51",
+      "bytes": 493926
+    },
+    "fig3_contact_sheet.pdf": {
+      "sha256": "3927a1c1dc4e964cab10ec0e394dda9ad22a52ddb0034506914fd0f3976c66f1",
+      "bytes": 1155665
+    },
+    "fig3_contact_sheet.png": {
+      "sha256": "13d3818b746245a025fe23bf6c46eba22ee732b8fcfe6d08a7987e99cddc6a37",
+      "bytes": 696076
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"
+     data-figure-id="ENGINE-SELFTEST-CORRECTED"
+     data-contract="figure_contract.yaml" data-engine-schema="1">
+  <rect width="400" height="240" fill="#FFFFFF"/>
+  <rect x="10" y="20" width="230" height="180" fill="#EAF7F2"/>
+  <rect x="280" y="50" width="100" height="120" fill="#EAF3FB"/>
+  <text x="28" y="48" font-size="7pt" font-family="Arial" fill="#252B36">Corrected validator fixture</text>
+  <text x="298" y="78" font-size="7pt" font-family="Arial" fill="#252B36">support</text>
+</svg>

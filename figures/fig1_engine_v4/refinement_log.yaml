@@ -1,0 +1,64 @@
+schema_version: 1
+figure_id: FIG-01-ENGINE-V4
+date: 2026-08-26
+proposal_gate: {gate: GATE_FIG1_V3_PROPOSAL, state: APPROVED}
+landscape_asset_gate:
+  gate: GATE_COMPACT_THERMODYNAMIC_LANDSCAPE_ASSET
+  state: APPROVED
+  selected_candidate: candidate_A_compact_hero
+physics_recomputed: false
+card_architecture_changed: false
+engine_rules_changed: false
+
+scope:
+  changed:
+    - upper thermodynamic landscape
+    - immediate Normal, Uniform SC, and FFLO-sector labels and leaders
+    - local Delta and q axes
+  frozen:
+    - topology triptych
+    - exact BdG oracle and reliability cards
+    - physical observation card
+    - parameter-space, acquisition, next-calls, and surrogate cards
+    - workflow ribbons and canvas
+
+changes:
+  - id: approved_candidate_a_integration
+    source: landscape_asset_gate/candidate_A_compact_hero
+    action: integrate the approved compact orthographic three-basin terrain without nonuniform scaling
+  - id: scientific_asset_fill_ratio
+    measured_foreground_fill_ratio: 0.6627700835870203
+    declared_content_fill_ratio: 0.662111801242236
+    threshold: 0.65
+    status: pass
+  - id: local_scientific_readability
+    action: retain three distinct representative states and add restrained local leaders and parameter axes
+  - id: frozen_region_regression
+    action: compare PDF-derived v3/v4 pixels for topology plus seven peripheral cards
+    result: 8/8 regions pixel-identical
+
+scientific_caveats:
+  - the analytic surface is a deterministic schematic, not a recomputed BdG result
+  - the three phase markers are representative minima at different parameter points
+  - cFFLO and tFFLO are interpreted only in the separate topology triptych
+  - topology is resolved by gap and Pfaffian evidence, not free-energy depth
+  - machine learning schedules exact calls and does not replace the BdG solver
+
+automated_results:
+  canonical_lint: {status: pass, hard_failures: 0, warnings: 0, human_review_items: 1}
+  fig1_specific_lint: {status: pass}
+  engine_unit_tests: {passed: 24, failed: 0}
+  saliency_proxy:
+    primary_rank: 1
+    topology_rank: 3
+    integrated_mass_topology_rank: 3
+    mean_mass_topology_rank: 4
+    landscape_to_topology_visual_mass_ratio: 2.6982538679230244
+    topology_to_landscape_visual_mass_ratio: 0.3706100496650999
+    enforcement: human_review
+
+automated_gate_policy:
+  hard_failures_must_be_zero: true
+  saliency_is_warning_or_human_review_only: true
+  first_fixation_requires_human_review: true
+  final_gate: {gate: GATE_FIG1_ENGINE_V4_APPROVAL, state: HUMAN_WAIT}

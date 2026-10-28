@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "evidence_first_prl_workflow": "./review_agent/graphs/prl_manuscript_graph.py:graph"
+  },
+  "env": ".env",
+  "python_version": "3.13"
+}

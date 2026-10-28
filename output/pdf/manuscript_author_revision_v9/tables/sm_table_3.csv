@@ -1,0 +1,9 @@
+Component,Definition,Normalization or weight,Role
+phase entropy/margin,$U_{\rm cls}$,0.4/0.6 mixture,classification ambiguity
+regression spread,$U_{\rm reg}$,min--max normalized; 0.6,phase-facing uncertainty
+Normal--SC,$B_{NS}$,competition gated; weight 1,order-parameter boundary
+uniform--FFLO,$B_{UF}$,SC gated; weight 0.9,finite-$q$ boundary
+gradients,$G$,grid derivative; weight 0.5,rapid variation
+numerical risk,$E_q$,weight 0.4,$q$-window risk
+exploration,$E_{\rm ext}$,annealed 0.15/0.08/0.03,domain coverage
+repulsion,$R_{\rm obs}R_{\rm batch}$,length/floor rules,avoid redundant calls

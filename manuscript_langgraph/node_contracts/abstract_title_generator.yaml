@@ -1,0 +1,20 @@
+{
+  "node_id": "abstract_title_generator",
+  "purpose": "abstract title generator",
+  "inputs": [
+    "approved_sections",
+    "frozen_claims"
+  ],
+  "outputs": [
+    "title_candidates",
+    "abstract_candidates"
+  ],
+  "prerequisites": [
+    "intro_citation_loop"
+  ],
+  "forbidden_actions": [
+    "cannot introduce a new claim"
+  ],
+  "gate": "ABSTRACT_TITLE_BOUNDARY",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

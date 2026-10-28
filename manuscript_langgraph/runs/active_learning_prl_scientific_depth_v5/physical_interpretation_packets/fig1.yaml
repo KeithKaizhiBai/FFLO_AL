@@ -1,0 +1,31 @@
+figure_id: Fig1
+direct_visual_observations:
+- The exact BdG oracle connects an external parameter point to a Delta-q landscape and then to topology only after
+  thermodynamic selection.
+- The surrogate/acquisition cycle returns only a next exact microbatch.
+frozen_data_support:
+- MODEL_SPEC.md
+- eta_phase_diagram_cuda.py:bdg_hamiltonian_batch
+- ml_phase/topology_oracle.py
+parameter_dependence:
+- supported_trend: JA cos(k) and spin-orbit sin(k) terms generate momentum-dependent spin structure.
+  strength_of_support: model definition
+permitted_interpretations:
+- Finite-q pairing requires joint Delta and q minimization.
+- A gap closing, not basin depth or q sign, can change the class-D invariant.
+forbidden_inferences:
+- surrogate prediction is a physical label
+- free-energy basin depth determines Z2
+method_role: Establishes the hierarchy exact objective -> thermodynamic state -> spectral topology -> scheduling.
+main_text_candidate_points:
+- compact model
+- argmin relation
+- Pfaffian criterion
+- oracle/scheduler separation
+caption_only_points: []
+supplement_only_points:
+- adaptive q boxes
+- network hyperparameters
+- acquisition weights
+uncertainties_or_missing_evidence:
+- production objective has no separately coded entropy/log-partition term

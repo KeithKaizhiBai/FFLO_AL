@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-01-ENGINE-V3",
+  "status": "pass",
+  "hard_failure_count": 0,
+  "generated_at": "2026-08-25T16:20:16.606276+00:00",
+  "checks": [
+    {
+      "check": "engine_preflight",
+      "status": "pass",
+      "detail": "Versioned Figure Engine preflight exists.",
+      "evidence": null
+    },
+    {
+      "check": "proposal_gate_recorded",
+      "status": "pass",
+      "detail": "The separate v3 proposal gate is explicitly approved.",
+      "evidence": null
+    },
+    {
+      "check": "v1_frozen",
+      "status": "pass",
+      "detail": "Frozen engine-v1 hashes match the benchmark.",
+      "evidence": {
+        "fig1_engine_v1.svg": "180666d303434fb0718063fbbc9afc81ba8d33bb2ae1fbe8bc145841602a880a",
+        "fig1_engine_v1.pdf": "c83b3295b512209f6b5493fd3a5dfc82ac5c6a113e25d010dc12d5b0c5fe62d0",
+        "fig1_engine_v1.png": "a4363435b8f6106ced9263a93a097b9ace8d650a20691e03eeefdc984efea663"
+      }
+    },
+    {
+      "check": "v2_frozen",
+      "status": "pass",
+      "detail": "Frozen engine-v2 files match its regeneration manifest.",
+      "evidence": null
+    },
+    {
+      "check": "primary_card_area",
+      "status": "pass",
+      "detail": "Primary card fraction=0.6025; required >=0.55.",
+      "evidence": null
+    },
+    {
+      "check": "primary_scientific_area",
+      "status": "pass",
+      "detail": "Landscape/central fraction=0.3784; required >=0.35.",
+      "evidence": null
+    },
+    {
+      "check": "declared_scientific_fill",
+      "status": "pass",
+      "detail": "Scientific content/landscape fraction=0.7159; required >=0.65.",
+      "evidence": null
+    },
+    {
+      "check": "measured_real_surface_fill",
+      "status": "pass",
+      "detail": "Measured embedded surface/landscape fraction=0.7169; required >=0.65.",
+      "evidence": null
+    },
+    {
+      "check": "primary_is_scientific_subobject",
+      "status": "pass",
+      "detail": "Primary visual object resolves to the landscape scientific subobject.",
+      "evidence": null
+    },
+    {
+      "check": "topology_subobject_registered",
+      "status": "pass",
+      "detail": "Topology is a separate registered scientific subobject.",
+      "evidence": null
+    },
+    {
+      "check": "workflow_route_count",
+      "status": "pass",
+      "detail": "Found 7 main and 7 secondary workflow ribbons.",
+      "evidence": null
+    },
+    {
+      "check": "required_scientific_labels",
+      "status": "pass",
+      "detail": "All required labels are present.",
+      "evidence": []
+    },
+    {
+      "check": "forbidden_claims_absent",
+      "status": "pass",
+      "detail": "No forbidden/prohibited claim appears in artwork.",
+      "evidence": []
+    },
+    {
+      "check": "topology_scientific_separation",
+      "status": "pass",
+      "detail": "Representative minima, gap/Pfaffian topology, and boundary-state semantics remain separate.",
+      "evidence": null
+    },
+    {
+      "check": "rendered_bbox_audit",
+      "status": "pass",
+      "detail": "Browser-measured registered geometry passes.",
+      "evidence": null
+    },
+    {
+      "check": "exact_print_size",
+      "status": "pass",
+      "detail": "PDF is exactly 178.00 \u00d7 120.15 mm.",
+      "evidence": null
+    },
+    {
+      "check": "print_previews",
+      "status": "pass",
+      "detail": "300-dpi color and grayscale previews exist.",
+      "evidence": null
+    },
+    {
+      "check": "artwork_word_budget",
+      "status": "pass",
+      "detail": "Artwork word count=94; maximum=115.",
+      "evidence": 94
+    },
+    {
+      "check": "no_physics_recomputation",
+      "status": "pass",
+      "detail": "Asset provenance records physics_recomputed=false.",
+      "evidence": null
+    },
+    {
+      "check": "human_gate_held",
+      "status": "pass",
+      "detail": "Automated validation leaves final Figure 1 approval to humans.",
+      "evidence": null
+    }
+  ],
+  "gate": {
+    "gate": "GATE_FIG1_ENGINE_V3_FINAL_APPROVAL",
+    "state": "HUMAN_WAIT"
+  }
+}

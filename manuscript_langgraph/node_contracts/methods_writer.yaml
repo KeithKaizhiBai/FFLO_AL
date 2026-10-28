@@ -1,0 +1,11 @@
+{
+  "node_id": "methods_writer",
+  "purpose": "draft Methods from canonical model and numerical definitions after Results stabilization",
+  "inputs": ["approved_scope", "frozen_results_claims", "MODEL_SPEC.md", "docs/NUMERICS_SPEC.md"],
+  "outputs": ["methods_draft"],
+  "required_topics": ["BdG model", "free energy", "phase labels", "q refinement", "topology", "acquisition", "uncertainty", "convergence"],
+  "prerequisites": ["results_by_figure_writer", "GATE_FIGURE_APPROVAL"],
+  "forbidden_actions": ["change a physical definition", "present development history as Methods"],
+  "gate": "METHODS_WRITER_PREREQUISITES",
+  "failure_behavior": "emit BLOCK when upstream approvals are absent"
+}

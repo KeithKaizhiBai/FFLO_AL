@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "status": "pass",
+  "hard_failure_count": 0,
+  "warning_count": 0,
+  "human_review_count": 1,
+  "primary_visual_object": "final_phase_map",
+  "reading_order": [
+    "final_phase_map",
+    "exact_call_allocation",
+    "raw_convergence",
+    "cold_start"
+  ],
+  "saliency": {
+    "method": "Gaussian-blurred grayscale distance from median outer-border luminance",
+    "gaussian_sigma_px": 7.875,
+    "background_luminance": 255.0,
+    "image_size_px": [
+      2100,
+      1592
+    ],
+    "regions": {
+      "final_phase_map": {
+        "integrated_visual_mass": 50008467.0,
+        "mean_contrast": 35.371419780592866,
+        "detail_density": 22.168886201116134,
+        "sample_count": 1413810
+      },
+      "exact_call_allocation": {
+        "integrated_visual_mass": 8703891.0,
+        "mean_contrast": 37.97210952019475,
+        "detail_density": 21.15201685731487,
+        "sample_count": 229218
+      },
+      "raw_convergence": {
+        "integrated_visual_mass": 5211926.0,
+        "mean_contrast": 14.236811914075304,
+        "detail_density": 19.36234457288958,
+        "sample_count": 366088
+      },
+      "cold_start": {
+        "integrated_visual_mass": 6138427.0,
+        "mean_contrast": 26.779864583060668,
+        "detail_density": 32.387731330000264,
+        "sample_count": 229218
+      }
+    },
+    "ranking": [
+      "final_phase_map",
+      "exact_call_allocation",
+      "cold_start",
+      "raw_convergence"
+    ]
+  },
+  "checks": [
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_scientific_subobject",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary visual object resolves to a registered scientific subobject, never its parent card.",
+      "evidence": {
+        "primary_visual_object": "final_phase_map",
+        "resolved_object": {
+          "id": "final_phase_map",
+          "type": "plot",
+          "role": "primary",
+          "parent": "canvas",
+          "visual_weight_object": true,
+          "bbox": {
+            "x": 520,
+            "y": 115,
+            "width": 1040,
+            "height": 715
+          }
+        }
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_area",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary scientific subobject satisfies its explicit contract area requirement.",
+      "evidence": [
+        {
+          "reference": "canvas",
+          "actual": 0.4225,
+          "minimum": 0.42,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_reading_order",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The declared reading order begins with the primary scientific subobject and all narrative regions resolve.",
+      "evidence": {
+        "reading_order": [
+          "final_phase_map",
+          "exact_call_allocation",
+          "raw_convergence",
+          "cold_start"
+        ],
+        "region_members": {
+          "final_phase_map": [
+            "final_phase_map"
+          ],
+          "exact_call_allocation": [
+            "exact_call_allocation"
+          ],
+          "raw_convergence": [
+            "raw_convergence"
+          ],
+          "cold_start": [
+            "cold_start"
+          ]
+        },
+        "unresolved": {}
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "scientific_asset_fill_ratio",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Declared scientific content fills the asset bbox above its figure-specific minimum.",
+      "evidence": []
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_saliency_rank",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Blurred saliency is a warning-only proxy; it never certifies first fixation or aesthetic quality.",
+      "evidence": {
+        "expected": [
+          "final_phase_map",
+          "exact_call_allocation",
+          "raw_convergence",
+          "cold_start"
+        ],
+        "observed": [
+          "final_phase_map",
+          "exact_call_allocation",
+          "cold_start",
+          "raw_convergence"
+        ]
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_contrast_hierarchy",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Primary mean contrast should not fall below the median declared tertiary-region contrast.",
+      "evidence": {
+        "primary": 35.371419780592866,
+        "tertiary": [
+          26.779864583060668
+        ]
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_equal_weight_regions",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Four or more regions with near-primary mass trigger an equal-weight warning.",
+      "evidence": {
+        "comparable_regions": [],
+        "minimum_for_warning": 4
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_first_fixation_human_review",
+      "severity": "human_review",
+      "passed": false,
+      "detail": "Human review is required to decide whether actual first fixation matches the declared reading order.",
+      "evidence": {
+        "expected_first_fixation": "final_phase_map"
+      }
+    }
+  ],
+  "automatic_aesthetic_approval": false
+}

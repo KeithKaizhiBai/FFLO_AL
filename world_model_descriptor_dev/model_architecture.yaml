@@ -1,0 +1,7 @@
+input_dim: 3
+hidden_layers: [128, 128, 128]
+activation: SiLU
+output_per_field: [mean, clipped_log_variance]
+log_variance_bounds: [-8, 5]
+loss: masked_gaussian_nll
+gradient_clip: 5.0

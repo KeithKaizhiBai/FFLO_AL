@@ -1,0 +1,43 @@
+schema_version: 1
+as_of: 2026-08-27
+gates:
+  GATE_FIG1_SCIENTIFIC_FREEZE:
+    state: approved
+    effect: Fig.1 engine-v4 is immutable during the strict-data workflow.
+  GATE_FIG2_HUMAN_SCIENCE_REVIEW:
+    state: approved
+    effect: Figure 2 is frozen; its registered SVG/PDF/PNG hashes are immutable.
+    inputs:
+      - figures/fig2_strict_data/fig2_strict_data.pdf
+      - figures/fig2_strict_data/fig2_contact_sheet.pdf
+      - figures/fig2_strict_data/fig2_scientific_validation.md
+      - figures/fig2_strict_data/figure_validation_report.md
+  GATE_FIG3_RENDER_AUTHORIZATION:
+    state: approved_and_completed
+  GATE_FIG4_RENDER_AUTHORIZATION:
+    state: approved_and_completed_with_nonclosure_caveat
+  GATE_FIG3_HUMAN_SCIENCE_REVIEW:
+    state: approved
+    effect: Figure 3 is scientifically frozen with all registered topology caveats retained.
+    inputs:
+      - figures/fig3_strict_data/fig3_strict_data.pdf
+      - figures/fig3_strict_data/fig3_contact_sheet.pdf
+      - figures/fig3_strict_data/fig3_scientific_validation.md
+      - figures/fig3_strict_data/figure_validation_report.md
+  GATE_FIG4_HUMAN_SCIENCE_REVIEW:
+    state: approved_with_nonclosure_caveat
+    effect: Figure 4 is scientifically frozen; continuous surfaces remain unauthorized.
+    inputs:
+      - figures/fig4_strict_data/fig4_strict_data.pdf
+      - figures/fig4_strict_data/fig4_contact_sheet.pdf
+      - figures/fig4_strict_data/fig4_scientific_validation.md
+      - figures/fig4_strict_data/figure_validation_report.md
+  GATE_NEW_PHYSICS_CALCULATION:
+    state: forbidden
+  GATE_EXTERNAL_RETRIEVAL_PERMISSION:
+    state: permission_not_granted
+  GATE_FINAL_LATEX_INTEGRATION:
+    state: blocked
+  GATE_FIGURE_APPROVAL:
+    state: approved_with_fig4_nonclosure_caveat
+    effect: Results-by-figure workflow may resume; external Introduction retrieval remains separately blocked.

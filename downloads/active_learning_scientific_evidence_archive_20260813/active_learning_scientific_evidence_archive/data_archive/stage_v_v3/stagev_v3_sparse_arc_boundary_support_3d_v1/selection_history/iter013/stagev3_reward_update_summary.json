@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 1.3201353247903236,
+    "p0": 2.478745763478946,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 13,
+  "lambda_state": {
+    "gap": 0.65,
+    "ns": 0.44999999999999996,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 1856,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.07603328929585444,
+    "rank_correlation_a0_ns": 0.37395153840486484,
+    "rank_correlation_a0_p0": 0.5928535288290412,
+    "rank_correlation_a0_ppi": 0.15276490020289002,
+    "rank_correlation_a0_uf": 0.8511293475255295,
+    "rank_correlation_delta_vs_a0_gap": 0.07603328929585444,
+    "rank_correlation_delta_vs_a0_ns": 0.17826307834991817,
+    "rank_correlation_delta_vs_a0_p0": 0.17108988524861435,
+    "rank_correlation_delta_vs_a0_ppi": 0.5113592193143975,
+    "rank_correlation_delta_vs_a0_uf": -0.08425219955442764,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.552214616754783,
+    "rank_correlation_model_p0": 0.7639434140776555,
+    "rank_correlation_model_ppi": 0.6641241195172876,
+    "rank_correlation_model_uf": 0.7668771479711018,
+    "reward_sample_count": 1856,
+    "reward_sample_count_gap": 1856,
+    "reward_sample_count_ns": 1856,
+    "reward_sample_count_p0": 1856,
+    "reward_sample_count_ppi": 1856,
+    "reward_sample_count_uf": 1856,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

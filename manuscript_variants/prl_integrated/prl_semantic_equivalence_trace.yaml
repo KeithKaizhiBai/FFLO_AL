@@ -1,0 +1,854 @@
+{
+  "schema_version": 1,
+  "authority": "frozen Results, Methods, claim/evidence registries, and project specifications",
+  "status": "PASS",
+  "sentences": [
+    {
+      "new_sentence_id": "ABS-01",
+      "role": "PROBLEM",
+      "source_sentence_ids": [
+        "MODEL_SPEC:project_goal",
+        "METHODS_TEX:oracle"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Resolving finite-momentum superconducting phases across expanding parameter spaces requires both reliable free-energy minimization and controlled use of expensive exact calculations."
+    },
+    {
+      "new_sentence_id": "ABS-02",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "RES-FIG1-001-S01",
+        "RES-FIG1-002-S02"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "We retain an audited Bogoliubov-de Gennes oracle as the sole source of thermodynamic and topological labels, while active learning only schedules the next exact evaluations."
+    },
+    {
+      "new_sentence_id": "ABS-03",
+      "role": "RESULT",
+      "source_sentence_ids": [
+        "RES-FIG2-001-S03",
+        "RES-FIG2-002-S01",
+        "RES-FIG2-002-S02"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-FIG2-STRICT-DATA",
+        "E-PHASEII-HARD-RISK"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "hard-risk remains a numerical layer",
+      "new_sentence": "This separation yields an audited two-dimensional reconstruction of Normal, uniform-superconducting, and FFLO structure while keeping a hard-risk numerical layer explicit."
+    },
+    {
+      "new_sentence_id": "ABS-04",
+      "role": "RESULT",
+      "source_sentence_ids": [
+        "RES-FIG3-001-S01",
+        "RES-FIG3-002-S01",
+        "RES-FIG3-002-S02"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-FIG3-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "k=6 sensitivity retained",
+      "new_sentence": "On trusted gapped FFLO states, full-zone gap and Pfaffian diagnostics resolve connected cFFLO/tFFLO structure that passes the configured k=8 audit with a retained k=6 sensitivity."
+    },
+    {
+      "new_sentence_id": "ABS-05",
+      "role": "RESULT_CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG4-001-S04",
+        "RES-FIG4-002-S02",
+        "RES-FIG4-002-S03"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "strict 3D nonclosure and no complete atlas",
+      "new_sentence": "The same framework exposes thermodynamic and topology-aware structure in (kBT/t, JA/t, mu/t), although the strict three-dimensional topology convergence criteria are not all closed and no complete topology atlas is claimed."
+    },
+    {
+      "new_sentence_id": "INTRO-01",
+      "role": "PROBLEM",
+      "source_sentence_ids": [
+        "MODEL_SPEC:project_goal",
+        "MODEL_SPEC:observables_and_labels"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The computational problem considered here is to map superconducting states when the equilibrium condensate may select both a finite pairing amplitude and a finite center-of-mass momentum."
+    },
+    {
+      "new_sentence_id": "INTRO-02",
+      "role": "PROBLEM",
+      "source_sentence_ids": [
+        "MODEL_SPEC:physical_model",
+        "MODEL_SPEC:topological_labels"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY",
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-STAGEIII-PASS"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "In the present altermagnetic BdG model, thermodynamic competition in (Delta,q) must be resolved together with numerical reliability and, inside the trusted gapped FFLO sector, a Z2 topology diagnosis."
+    },
+    {
+      "new_sentence_id": "INTRO-03",
+      "role": "MOTIVATION",
+      "source_sentence_ids": [
+        "METHODS_TEX:oracle",
+        "METHODS_TEX:convergence_and_3D"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY",
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC",
+        "E-STAGEIV-AUDIT"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Exhaustive sampling becomes increasingly costly when each parameter point requires a free-energy landscape, branch refinement, and spectral checks, especially after the domain is extended beyond two coordinates."
+    },
+    {
+      "new_sentence_id": "INTRO-04",
+      "role": "RISK",
+      "source_sentence_ids": [
+        "RES-FIG1-002-S02",
+        "METHODS_TEX:active_learning"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "A data-driven scheduler can focus exact calls, but it would compromise the physical interpretation if surrogate predictions were promoted to final phase or topology labels."
+    },
+    {
+      "new_sentence_id": "INTRO-05",
+      "role": "APPROACH",
+      "source_sentence_ids": [
+        "RES-FIG1-001-S01",
+        "RES-FIG1-002-S01",
+        "RES-FIG1-002-S02"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "We therefore separate an exact BdG authority from reliability-aware active learning: the oracle determines accepted observations, whereas an ensemble acquisition rule selects only the next micro-batch."
+    },
+    {
+      "new_sentence_id": "INTRO-06",
+      "role": "SUMMARY",
+      "source_sentence_ids": [
+        "RES-FIG2-002-S02",
+        "RES-FIG3-002-S03",
+        "RES-FIG4-002-S04"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO",
+        "CLM-2D-TOPOLOGY",
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG2-STRICT-DATA",
+        "E-FIG3-STRICT-DATA",
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "configured topology pass and strict 3D nonclosure",
+      "new_sentence": "The resulting evidence chain comprises an audited two-dimensional thermodynamic reconstruction, a topology-resolved cFFLO/tFFLO result with an explicit sensitivity test, and a higher-dimensional extension whose strict topology closure remains incomplete."
+    },
+    {
+      "new_sentence_id": "INTRO-07",
+      "role": "ROUTE",
+      "source_sentence_ids": [
+        "section_outline:main_narrative",
+        "claim_registry:destinations"
+      ],
+      "claim_ids": [
+        "CLM-LEARNED-ACQUISITION",
+        "CLM-GROUNDUP-WORLD-MODEL"
+      ],
+      "evidence_ids": [
+        "E-STAGEV-MATCHED",
+        "E-STAGEVI0",
+        "E-STAGEVI0-2"
+      ],
+      "transformation": "reordered",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The main text first defines this division of labor, then follows the thermodynamic, topology-resolved, and three-dimensional results before closing with the limits of learned acquisition and a bounded world-model outlook."
+    },
+    {
+      "new_sentence_id": "BODY-01",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "MODEL_SPEC:physical_model",
+        "METHODS_TEX:oracle"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC"
+      ],
+      "transformation": "method_inserted",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "For external coordinates x, the oracle uses the stated FFLO Nambu basis and block Hamiltonian."
+    },
+    {
+      "new_sentence_id": "BODY-02",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "METHODS_TEX:oracle",
+        "RES-FIG1-001-S01"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "At every exact call it constructs F(Delta,q), refines competing minima, and accepts the lowest reliable state only after comparison with the normal reference."
+    },
+    {
+      "new_sentence_id": "BODY-03",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "MODEL_SPEC:observables_and_labels",
+        "METHODS_TEX:reliability"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The frozen thresholds separate Normal, uniform-SC, and FFLO observations; phase labels remain distinct from numerical states."
+    },
+    {
+      "new_sentence_id": "BODY-04",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "METHODS_TEX:reliability"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC",
+        "E-PHASEII-AUDIT"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Edge minima trigger adaptive q-window expansion and shallow Normal-SC competition triggers local Delta refinement, while unresolved outcomes are withheld from clean physical training labels."
+    },
+    {
+      "new_sentence_id": "BODY-05",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "RES-FIG1-002-S02",
+        "RES-FIG1-002-S03"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Ensemble surrogates rank the next exact micro-batch from accepted observations; they are schedulers rather than physics solvers."
+    },
+    {
+      "new_sentence_id": "BODY-06",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG1-001-S04"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC"
+      ],
+      "transformation": "unchanged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "schematic is not convergence evidence",
+      "new_sentence": "Figure 1 is a schematic hierarchy and is not itself evidence that any convergence gate has closed."
+    },
+    {
+      "new_sentence_id": "BODY-07",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG2-001-S01",
+        "RES-FIG2-001-S02"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO"
+      ],
+      "evidence_ids": [
+        "E-STAGEI-COLDSTART",
+        "E-FIG2-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The two-dimensional loop begins from 512 selected exact calls, with 506 labels retained in the frozen endpoint, and subsequently allocates calls around visible thermodynamic structure."
+    },
+    {
+      "new_sentence_id": "BODY-08",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "METHODS_TEX:active_learning"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The acquisition combines uncertainty, boundary proximity, numerical risk, and soft repulsion, but only returned BdG calculations enter the accepted dataset."
+    },
+    {
+      "new_sentence_id": "BODY-09",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG2-001-S03"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO"
+      ],
+      "evidence_ids": [
+        "E-FIG2-STRICT-DATA"
+      ],
+      "transformation": "unchanged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The endpoint contains 7,434 exact observations: 1,867 Normal, 715 uniform-SC, and 4,852 FFLO labels."
+    },
+    {
+      "new_sentence_id": "BODY-10",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG2-001-S04"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO"
+      ],
+      "evidence_ids": [
+        "E-PHASEII-AUDIT",
+        "E-FIG2-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Its final phase-map change is 0.001629, the two boundary shifts are 0.004167 and 0, and trusted surprise is 0 for 127 trusted calls, satisfying the configured stopping rules."
+    },
+    {
+      "new_sentence_id": "BODY-11",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG2-002-S01"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-PHASEII-HARD-RISK"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "hard-risk is not a phase",
+      "new_sentence": "The separate 129-call hard-risk layer is a numerical frontier rather than a fourth phase or evidence that uncertainty has been eliminated."
+    },
+    {
+      "new_sentence_id": "BODY-12",
+      "role": "INTERPRETATION",
+      "source_sentence_ids": [
+        "RES-FIG2-002-S02"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO"
+      ],
+      "evidence_ids": [
+        "E-FIG2-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "under the configured audit",
+      "new_sentence": "The exact-sample map supports an audited two-dimensional thermodynamic reconstruction under the registered criterion while retaining finite numerical risk."
+    },
+    {
+      "new_sentence_id": "BODY-13",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "METHODS_TEX:topology",
+        "RES-FIG3-001-S03"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-STAGEIII-PASS"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Topology is evaluated only after thermodynamic acceptance and only on trusted gapped FFLO observations."
+    },
+    {
+      "new_sentence_id": "BODY-14",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "METHODS_TEX:topology"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-STAGEIII-PASS"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "A full-zone gap guard and Pfaffians P0 and Ppi determine the Z2 index, assigning cFFLO and tFFLO."
+    },
+    {
+      "new_sentence_id": "BODY-15",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG3-001-S01",
+        "RES-FIG3-001-S02"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-FIG3-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "Within the 4,345-point endpoint, 3,213 trusted gapped FFLO states divide into 2,290 cFFLO and 923 tFFLO observations and form a connected sampled structure."
+    },
+    {
+      "new_sentence_id": "BODY-16",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG3-001-S04"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-FIG3-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "diagnostics only",
+      "new_sentence": "The contour and brackets diagnose a gap-closing transition; neither is an exact boundary, and the closing is not a stable third phase."
+    },
+    {
+      "new_sentence_id": "BODY-17",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG3-002-S01"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-FIG3-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The configured k=8 audit returns Decision A, with coverage p95=0.006185 below 0.00625 and the remaining registered metrics passing."
+    },
+    {
+      "new_sentence_id": "BODY-18",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG3-002-S02",
+        "RES-FIG3-002-S03"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_ids": [
+        "E-FIG3-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "k=6 sensitivity and no exhaustive claim",
+      "new_sentence": "For k=6, coverage p95=0.006269 lies slightly above the same threshold, so the configured pass retains a sensitivity and does not exhaust all refinements or nodal alternatives."
+    },
+    {
+      "new_sentence_id": "BODY-19",
+      "role": "METHOD",
+      "source_sentence_ids": [
+        "METHODS_TEX:convergence_and_3D",
+        "RES-FIG4-001-S01"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-STAGEIV-AUDIT"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "finite mu interval",
+      "new_sentence": "The same oracle-scheduler separation extends the sampled coordinates to three dimensions over the finite mu interval [-0.5,1.5]."
+    },
+    {
+      "new_sentence_id": "BODY-20",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG4-001-S01"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "unchanged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The endpoint contains 7,081 exact observations: 2,350 Normal, 141 uniform-SC, and 4,590 FFLO states."
+    },
+    {
+      "new_sentence_id": "BODY-21",
+      "role": "OBSERVATION_CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG4-001-S02"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "discrete support only",
+      "new_sentence": "Trusted FFLO-only topology support comprises 3,145 cFFLO and 1,445 tFFLO points and remains discrete rather than a fitted surface."
+    },
+    {
+      "new_sentence_id": "BODY-22",
+      "role": "METHOD_OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG4-001-S03",
+        "E-FIG4-STRICT-DATA:selected_slices"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-STAGEIV-MU-SLICE-AUDIT",
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "no slice interpolation",
+      "new_sentence": "Four explicit fixed-mu bins centered at -0.45, 0.15, 0.85, and 1.45, each with half-width 0.025, expose exact slice-to-slice structure without interpolation."
+    },
+    {
+      "new_sentence_id": "BODY-23",
+      "role": "INTERPRETATION",
+      "source_sentence_ids": [
+        "RES-FIG4-001-S04"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "unchanged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "These point clouds and slices demonstrate higher-dimensional exploration that reveals thermodynamic and topology-aware structures across the sampled domain."
+    },
+    {
+      "new_sentence_id": "BODY-24",
+      "role": "OBSERVATION",
+      "source_sentence_ids": [
+        "RES-FIG4-002-S01"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-STAGEIV-AUDIT",
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The final strict audit exceeds the registered map-change, surface-shift, coverage, and surprise thresholds, while component counts vary 3 to 4 to 3."
+    },
+    {
+      "new_sentence_id": "BODY-25",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG4-002-S02",
+        "RES-FIG4-002-S03"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "strict nonclosure, no continuous surface, no complete atlas",
+      "new_sentence": "Thus the strict 3D topology convergence gates are not all closed; visual continuity is not a continuous surface, and the result is not a complete 3D atlas."
+    },
+    {
+      "new_sentence_id": "DISC-01",
+      "role": "SUMMARY",
+      "source_sentence_ids": [
+        "RES-FIG1-002-S01",
+        "RES-FIG1-002-S03"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The combined results establish a reliability-aware active-learning workflow in which exact BdG calculations retain label authority."
+    },
+    {
+      "new_sentence_id": "DISC-02",
+      "role": "INTERPRETATION",
+      "source_sentence_ids": [
+        "RES-FIG2-002-S02",
+        "RES-FIG3-002-S03",
+        "RES-FIG4-001-S04"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO",
+        "CLM-2D-TOPOLOGY",
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG2-STRICT-DATA",
+        "E-FIG3-STRICT-DATA",
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "merged",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The 2D audits show what closes under registered criteria, while the 3D extension demonstrates why selective exact sampling becomes more consequential as the domain grows."
+    },
+    {
+      "new_sentence_id": "DISC-03",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "RES-FIG4-002-S02",
+        "RES-FIG4-002-S03"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_ids": [
+        "E-FIG4-STRICT-DATA"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "strict 3D nonclosure",
+      "new_sentence": "The 3D extension is bounded: discrete support reveals structure, but failed strict criteria prevent a converged-surface or complete-atlas claim."
+    },
+    {
+      "new_sentence_id": "DISC-04",
+      "role": "DISCUSSION_ONLY",
+      "source_sentence_ids": [
+        "DISCUSSION_TEX:stageV-01"
+      ],
+      "claim_ids": [
+        "CLM-LEARNED-ACQUISITION"
+      ],
+      "evidence_ids": [
+        "E-STAGEV-MATCHED"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "The matched Stage-V audit gives no overall winner: V3 has denser support, whereas V4 has lower sequential topology surprise."
+    },
+    {
+      "new_sentence_id": "DISC-05",
+      "role": "DISCUSSION_ONLY",
+      "source_sentence_ids": [
+        "DISCUSSION_TEX:stageV-02"
+      ],
+      "claim_ids": [
+        "CLM-LEARNED-ACQUISITION"
+      ],
+      "evidence_ids": [
+        "E-STAGEV-MATCHED"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "V4 does not lower the offline graph uncertainty, and none of its four candidate nodes has validated local same-identity support."
+    },
+    {
+      "new_sentence_id": "DISC-06",
+      "role": "CAVEAT",
+      "source_sentence_ids": [
+        "DISCUSSION_TEX:stageV-03"
+      ],
+      "claim_ids": [
+        "CLM-LEARNED-ACQUISITION"
+      ],
+      "evidence_ids": [
+        "E-STAGEV-MATCHED"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "no superiority and no new phase",
+      "new_sentence": "Learned acquisition is an exploratory mechanism, not evidence of superiority or autonomous new-phase discovery."
+    },
+    {
+      "new_sentence_id": "DISC-07",
+      "role": "OUTLOOK_ONLY",
+      "source_sentence_ids": [
+        "OUTLOOK_TEX:stageVI-01"
+      ],
+      "claim_ids": [
+        "CLM-GROUNDUP-WORLD-MODEL"
+      ],
+      "evidence_ids": [
+        "E-STAGEVI0",
+        "E-STAGEVI0-2"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "none",
+      "new_sentence": "As a future direction, Stage VI indicates learnability of thermodynamics, q, and conditional Pfaffian quantities."
+    },
+    {
+      "new_sentence_id": "DISC-08",
+      "role": "OUTLOOK_CAVEAT",
+      "source_sentence_ids": [
+        "OUTLOOK_TEX:stageVI-02"
+      ],
+      "claim_ids": [
+        "CLM-GROUNDUP-WORLD-MODEL"
+      ],
+      "evidence_ids": [
+        "E-STAGEVI0",
+        "E-STAGEVI0-2"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "spectral descriptors and calibrated uncertainty missing",
+      "new_sentence": "The frozen export lacks fixed-k spectra, a DOS proxy, and validated spectral moments, and replay uncertainty is not uniformly monotonic."
+    },
+    {
+      "new_sentence_id": "DISC-09",
+      "role": "OUTLOOK_CAVEAT",
+      "source_sentence_ids": [
+        "OUTLOOK_TEX:stageVI-03"
+      ],
+      "claim_ids": [
+        "CLM-GROUNDUP-WORLD-MODEL"
+      ],
+      "evidence_ids": [
+        "E-STAGEVI0",
+        "E-STAGEVI0-2"
+      ],
+      "transformation": "condensed",
+      "semantic_change": "none",
+      "required_caveat_preserved": "production EIG not authorized",
+      "new_sentence": "A physical world model must validate descriptors and uncertainty before production EIG can be authorized."
+    }
+  ],
+  "sentence_count": 46
+}

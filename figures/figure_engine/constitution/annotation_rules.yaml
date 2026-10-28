@@ -1,0 +1,30 @@
+schema_version: 1
+rule_set: annotation_rules
+authority: canonical
+
+required_fields: [id, role, parent, anchor, bbox]
+
+labels:
+  use_actual_data_or_projected_coordinates: true
+  manual_eye_placement_without_registered_anchor: forbidden
+  minimum_label_clearance_px: 10
+  text_to_leader_clearance_px: 5
+  minimum_marker_ring_contrast: 3.0
+
+leaders:
+  may_not_cross_labels: true
+  may_not_cross_other_leaders: true
+  may_not_cross_axis_labels: true
+  may_not_cross_markers_except_own_anchor: true
+  nearest_label_edge_termination: true
+
+scientific_caveats:
+  artwork: shortest_nonmisleading_form
+  caption_or_contract: complete_interpretation
+  provenance: companion_manifest
+
+panel_labels:
+  sequence: lowercase_letters
+  position: upper_left
+  alignment_tolerance_px: 2
+

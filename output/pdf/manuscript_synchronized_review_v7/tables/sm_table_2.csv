@@ -1,0 +1,10 @@
+Item,Value
+ensemble size,5 per task
+hidden layers,"2 $\times$ 64, ReLU"
+validation fraction,"0.15, phase stratified"
+optimizer,Adam
+learning rate / weight decay,$10^{-3}/10^{-5}$
+epochs / batch size,240 / 512
+regression loss,MSE
+classification loss,cross entropy
+uncertainty,member dispersion / averaged probabilities

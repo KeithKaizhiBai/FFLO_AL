@@ -1,0 +1,23 @@
+{
+  "canonical_state_file": "MANUSCRIPT_MASTER_STATE.yaml",
+  "run_id": "active_learning_prl_v1",
+  "current_stop": "INTRO_CITATION_LOOP_GATE",
+  "scope_gate": "approved",
+  "claim_gate": "approved_with_modifications",
+  "figure_gate": "approved_with_fig4_nonclosure_caveat",
+  "results_gate": "approved_with_fig4_editorial_amendment",
+  "results_scientific_freeze": true,
+  "results_review_package": "output/pdf/manuscript_results_review_v1",
+  "downstream_review_package": "output/pdf/manuscript_methods_sm_discussion_review_v1",
+  "target_journal": "undecided",
+  "working_layout": "prl_style_revtex",
+  "external_retrieval_permission": false,
+  "new_physics_permission": false,
+  "production_latex_merge": false,
+  "strict_data_figure_track": {
+    "FIG-01": "SCIENTIFIC_FREEZE",
+    "FIG-02": "SCIENTIFIC_FREEZE",
+    "FIG-03": "SCIENTIFIC_FREEZE",
+    "FIG-04": "SCIENTIFIC_FREEZE_WITH_NONCLOSURE_CAVEAT"
+  }
+}

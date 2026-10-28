@@ -1,0 +1,488 @@
+{
+  "bash_n": [
+    {
+      "path": "scripts/collect_stagev_v4_results.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/inspect_stagev_v4_failed_task.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/monitor_stagev_v4.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/resume_stagev_v4_full_loop.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/run_stagev_v4_smoke.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/slurm_stagev_v4_exact_array.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/slurm_stagev_v4_select.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    },
+    {
+      "path": "scripts/submit_stagev_v4_full_loop.sh",
+      "reason": "wsl_bash_unavailable",
+      "status": "skipped"
+    }
+  ],
+  "cold_start_config": true,
+  "excluded_gpuh01_present": true,
+  "mu_window_unchanged": true,
+  "py_compile_status": "pass",
+  "py_compile_stderr": "",
+  "selection_runs_under_slurm": true,
+  "stagev2_tail_data_absent_from_package": true,
+  "text_encoding": [
+    {
+      "notes": "normalized_lf",
+      "path": "AGENTS.md",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "configs/stagev_v4_production.json",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "configs/stagev_v4_replay.json",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "configs/stagev_v4_smoke.json",
+      "status": "pass"
+    },
+    {
+      "notes": "normalized_lf",
+      "path": "docs/DECISIONS.md",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "docs/hpc_access_gbu_h100.md",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "docs/MODEL_SPEC.md",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "docs/NUMERICS_SPEC.md",
+      "status": "pass"
+    },
+    {
+      "notes": "normalized_lf",
+      "path": "docs/PROJECT_SUMMARY.md",
+      "status": "pass"
+    },
+    {
+      "notes": "normalized_lf",
+      "path": "eta_phase_diagram_cuda.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/__init__.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/acquisition.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/active_refine.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/append_trusted.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/config.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/dataset_builder.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/evaluate.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/exact_oracle.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/extract_phase_boundaries.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/hpc.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/labels.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/models.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/plot_active_learning.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/report_builder.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/stageiv_3d.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/stagev_acqv2.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/stagev_v2.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/stagev_v3.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/stagev_v4.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/stop_controller.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "ml_phase/topology_oracle.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "MODEL_SPEC.md",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "README.md",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "run_manifest.json",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/collect_stagev_v4_results.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/inspect_stagev_v4_failed_task.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/monitor_stagev_v4.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "removed_bom;normalized_lf",
+      "path": "scripts/package_stagev_v4_hpc.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/resume_stagev_v4_full_loop.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/run_stagev_v4_smoke.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/slurm_stagev_v4_exact_array.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/slurm_stagev_v4_select.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/stagev_v4_preflight.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/stagev_v4_select.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/stagev_v4_smoke.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/stagev_v4_update_reward.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/submit_stagev_v4_full_loop.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/stopcontroller_surprise_helpers.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_adaptive_local_box_skeleton.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_backward_compatibility_all_selected.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_basin_clustering.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_branch_reuse.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_energy_window_pruning.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_feature_flag_baseline_equivalence.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_gpu_batching_cache_skeleton.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_hardrisk_frontier_status.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_incremental_q_expansion.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_box_instrumentation.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_goal_run_audit.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_performance_report.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_regression_scaffold.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_runbook_test_matrix.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_stage1_gate.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_stage_report_completeness.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_upload_set.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_variant_suite_package.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_local_refinement_variant_suite_return_check.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_mandatory_branch_keep.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_qexpansion_fallback.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_qgrid_alignment.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_qscan_cache_merge.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_rank_summary_schema.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_report_template_path.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_rerun_independent_of_prediction.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_selective_refinement.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_stagev_acqv2.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_stagev_v2.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_stagev_v3.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_stagev_v4.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_stopcontroller_replay.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_stopcontroller_surprise_mode.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_surprise_masks.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_timing_fields.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_trusted_surprise_denominator.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_twophase_completion_audit.py",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "tests/test_variant_suite_hpc_status_check.py",
+      "status": "pass"
+    },
+    {
+      "notes": "normalized_lf",
+      "path": "tfflo_1d_cuda.py",
+      "status": "pass"
+    }
+  ]
+}

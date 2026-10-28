@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-02-THERMO-STRICT",
+  "physics_recomputed": false,
+  "assets": {
+    "fig2_strict_data.svg": {
+      "sha256": "f3ca32665cc75f8c1d98851f70e1e7713fd7c22c787caaac9237b633b8c8501f",
+      "bytes": 2402148
+    },
+    "fig2_strict_data.pdf": {
+      "sha256": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+      "bytes": 160738
+    },
+    "fig2_strict_data.png": {
+      "sha256": "cfc5a58eb40f1cb3fbbdbd0e4d1467d526e52954a2a48f90a06835fecc471f78",
+      "bytes": 702731
+    },
+    "fig2_low_fidelity.svg": {
+      "sha256": "79046512d97c505aaeda29010cf754b5aaf80ee17a5e953a0d96f4452d36e56d",
+      "bytes": 2401052
+    },
+    "fig2_low_fidelity.png": {
+      "sha256": "acc42f73a535fcb1a9eca0fc6b6efea31eb10e5fe12a19129ea94129df0ab239",
+      "bytes": 648310
+    },
+    "fig2_contact_sheet.pdf": {
+      "sha256": "ebc246fb66acdb1e2433c7c4070f6720589678340ff5c414efafa1281fa74d2b",
+      "bytes": 2131496
+    },
+    "fig2_contact_sheet.png": {
+      "sha256": "a72a31a5b8ee913d75203868a1b1a2fce239afb2cbb72bbc7d5f15ada02f31c2",
+      "bytes": 1237338
+    }
+  }
+}

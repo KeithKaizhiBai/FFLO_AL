@@ -1,0 +1,138 @@
+{
+  "a0_max": 0.3562182876878629,
+  "alpha_p0": 3.0,
+  "alpha_ppi": 3.0,
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 3.0,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "boundary_priorities": {
+    "gap_nodal": 0.0,
+    "normal_sc": 0.0,
+    "p0_topology": 0.0,
+    "ppi_topology": 0.0,
+    "uniform_fflo": 0.0
+  },
+  "boundary_summary": {
+    "gap": {
+      "alpha": 3.0,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 2.7893464411092845e-06
+    },
+    "ns": {
+      "alpha": 3.0,
+      "lambda": 5.093170329928398e-12,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.05776078289809694
+    },
+    "p0": {
+      "alpha": 3.0,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.00028279083998071996
+    },
+    "ppi": {
+      "alpha": 3.0,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5000000000000001,
+      "raw_score_mean": 0.0001010801082068835
+    },
+    "uf": {
+      "alpha": 3.0,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.5000000000000001,
+      "raw_score_mean": 0.005990715091648279
+    }
+  },
+  "candidate_count": 78643,
+  "candidate_source_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "dataset_path": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter067.npz",
+  "dataset_samples": 5183,
+  "device": "cpu",
+  "gap_topology_relevance_mean": 0.11019138331492673,
+  "high_contribution_fraction_p0": 0.25,
+  "high_contribution_fraction_ppi": 0.25,
+  "iteration": 67,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 5.093170329928398e-12,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "lambda_t": 0.0,
+  "mean_contribution_p0": 3.5159200474937053,
+  "mean_contribution_ppi": 3.494032093219908,
+  "mean_selection_probability": 0.006774960170000236,
+  "mode": "acquisition",
+  "partition_strategy": "cost_aware",
+  "requested_candidate_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "requested_micro_batch_size": 64,
+  "run_id": "stagev_v3_sparse_arc_boundary_support_3d_v1",
+  "selected_batch_size": 64,
+  "selection_score": "A_total_v2",
+  "source_correction_by_source": {
+    "component_boundary_guard": 1.0510476784226392,
+    "global_sobol": -0.25954456659312153,
+    "opposite_Z2_bracket_gap": 1.0508569479225198,
+    "p0_zero_surface_sparse_patch": 1.0786963605048285,
+    "ppi_zero_surface_sparse_patch": 2.508789751283712,
+    "topology_surface_normal_jitter": 1.0510476784226392,
+    "topology_surface_tangent_jitter": 1.0510476784226392,
+    "unknown_explicit": -0.15923387947042822
+  },
+  "sparse_proposal_status": "ok",
+  "sparse_surface_samples": 2952,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_schema_version": "stagev_v3_sparse_arc_acq_1",
+  "stagev2_score_max": 0.2976297728435864,
+  "stagev2_tail_data_used_for_training": false,
+  "stagev3_candidate_count": 78643,
+  "stagev3_candidate_source_counts": {
+    "component_boundary_guard": 2621,
+    "global_sobol": 36044,
+    "opposite_Z2_bracket_gap": 2622,
+    "p0_zero_surface_sparse_patch": 2480,
+    "ppi_zero_surface_sparse_patch": 142,
+    "topology_surface_normal_jitter": 2621,
+    "topology_surface_tangent_jitter": 2621,
+    "unknown_explicit": 29492
+  },
+  "stagev3_schema_version": "stagev_v3_sparse_arc_acq_1",
+  "support_counts": {
+    "gap_nodal": 9,
+    "normal_sc": 1223,
+    "p0_topology": 2151,
+    "ppi_topology": 804,
+    "uniform_fflo": 261
+  },
+  "topology_c_topo_available": true,
+  "topology_c_topo_mean": 0.08558384295879208,
+  "topology_channel_suppressed": false,
+  "topology_sparse_component_count": 1,
+  "topology_sparse_coverage_p95": 0.021582055401792765,
+  "topology_sparse_patch_samples": 148,
+  "topology_sparse_surface_samples": 2952,
+  "world_size": 8
+}

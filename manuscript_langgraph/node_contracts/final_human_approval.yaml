@@ -1,0 +1,20 @@
+{
+  "node_id": "final_human_approval",
+  "purpose": "final human approval",
+  "inputs": [
+    "all_audits",
+    "isolated_pdf",
+    "diff_summary"
+  ],
+  "outputs": [
+    "final_decision"
+  ],
+  "prerequisites": [
+    "latex_integration"
+  ],
+  "forbidden_actions": [
+    "never automated"
+  ],
+  "gate": "GATE_FINAL_MANUSCRIPT_APPROVAL",
+  "failure_behavior": "stop at HUMAN_WAIT until a person approves the complete manuscript candidate"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_SCOPE_APPROVAL",
+  "status": "approved_revised_scope",
+  "approved_at": "2026-08-12",
+  "authority": "human_user",
+  "scope_id": "AL_FFLO_PRL_RELIABILITY_AWARE_3D_V2",
+  "supersedes_scope_id": "AL_FFLO_PRL_PHYSICS_FIRST_V1",
+  "narrative": "Reliability-aware active learning enables exploration of thermodynamic, topology-resolved, and higher-dimensional FFLO phase spaces.",
+  "stage_roles": {
+    "I": "proof-of-concept thermodynamic phase discovery",
+    "II": "exact-oracle reliability and numerical validation",
+    "III": "topology-aware phase discovery and convergence",
+    "IV": "main-text higher-dimensional active-learning extension with strict non-convergence caveat",
+    "V": "Discussion-only exploratory learned acquisition",
+    "VI": "Outlook-only ground-up world model and EIG direction"
+  },
+  "figure_line": {
+    "FIG-01": "reliability-aware active-learning framework",
+    "FIG-02": "2D thermodynamic reconstruction",
+    "FIG-03": "topology-aware cFFLO/tFFLO discovery",
+    "FIG-04": "higher-dimensional 3D active-learning extension"
+  },
+  "retained_constraints": [
+    "The 3D topology surface is not formally closed by the strict convergence criteria used for the 2D topology result.",
+    "GATE_FIGURE_APPROVAL remains a separate human decision.",
+    "External Introduction retrieval remains forbidden until Results claims are frozen and permission is explicit.",
+    "Missing raw figure bundles may not be replaced by reconstructed or cross-stage data."
+  ]
+}

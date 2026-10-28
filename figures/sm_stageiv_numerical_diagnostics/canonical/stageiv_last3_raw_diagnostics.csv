@@ -1,0 +1,13 @@
+metric,order,end_iteration,transition,value,source_field
+topology_volume_map_change,1,23,22->23,0.0014122480421106,value
+topology_volume_map_change,2,24,23->24,0.0019225839528326,value
+topology_volume_map_change,3,25,24->25,0.002561475409836,value
+topology_surface_shift_p95,1,23,22->23,0.0055835372535258,value
+topology_surface_shift_p95,2,24,23->24,0.0059066811860211,value
+topology_surface_shift_p95,3,25,24->25,0.0059961957165026,value
+trusted_topology_surprise,1,23,22->23,0.065,value
+trusted_topology_surprise,2,24,23->24,0.1122994652406417,value
+trusted_topology_surprise,3,25,24->25,0.140625,value
+component_count,1,23,iteration_23,3,value parsed from archived semicolon-delimited component history
+component_count,2,24,iteration_24,4,value parsed from archived semicolon-delimited component history
+component_count,3,25,iteration_25,3,value parsed from archived semicolon-delimited component history

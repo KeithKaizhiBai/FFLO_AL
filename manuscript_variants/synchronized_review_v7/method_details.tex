@@ -1,0 +1,60 @@
+\subsection{Stage-specific settings and auxiliary responses}\label{sec:stage-settings}
+The run configurations distinguish initialization from continuation. Stage I uses a 512-location random-grid design, seed 42, on the $241\times321$ temperature--exchange grid. Stage II continues that dataset rather than drawing another independent seed. Stage III starts a separate 512-point scrambled Sobol design, also with seed 42, on the same bounded two-coordinate domain. Its final saved configuration is a resume at iteration 17; the initialization field describes the original run, not 512 additional observations at resume. Stage IV starts 1,024 scrambled Sobol points with seed 20260623 in the three-coordinate domain. The nominal subsequent batch size is 256 in all four stages; actual selected and retained counts need not equal this request.
+
+\begin{table}[tb]\centering
+\caption{Stage-specific training settings extracted from saved run configurations and the corresponding archived model constructors. Optimization batches are distinct from 256-point oracle batches.}\label{tab:networks}
+\begin{tabular}{lccc}\toprule Setting & Stages I--II & Stage III & Stage IV\\\midrule
+Input coordinates & $T,J_A$ & $T,J_A$ & $T,J_A,\mu$\\
+Hidden layers (ReLU) & $64,64$ & $64,64$ & $96,96$\\
+Members per task & 5 & 5 & 5\\
+Epochs (regression/classification) & $240/240$ & $240/240$ & $180/180$\\
+Optimization batch size & 512 & 512 & 512\\
+Learning rate & $10^{-3}$ & $10^{-3}$ & $10^{-3}$\\
+Weight decay & $10^{-5}$ & $10^{-5}$ & $10^{-5}$\\
+Validation fraction & 0.15 & 0.15 & 0.15\\
+Base seed & 42 & 42 & 20260623\\\bottomrule
+\end{tabular}\end{table}
+All stages train separate regression and classification ensembles. The archived Stage-IV adapter overrides the input dimension, hidden width, epoch count, ensemble size, and seed; its optimization batch size, Adam settings, and validation fraction come from the archived constructor, not from the current development defaults. The target vector remains $(\Delta_{\rm opt},q_{\rm opt},\eta,I_c^+,I_c^-)$. No additional learned spectral network is used in the Stage-III/IV acquisition implementation examined here: predicted $\Delta,q$ are passed to analytic Pfaffian expressions to construct scheduling proxies. They do not replace exact spectral labels.
+
+Here $I_c^+\geq0$ and $I_c^-\leq0$ are the signed extrema located on the positive and negative current branches outward from the optimized momentum. The implementation records
+\begin{equation}\eta=\frac{|I_c^+|-|I_c^-|}{|I_c^+|+|I_c^-|},\label{eq:eta}\end{equation}
+with zero returned if both currents vanish (and $-1$ or $+1$ if only the positive or negative branch vanishes). These are auxiliary response targets, not independently validated diode-response claims. In the saved Stage-I/II \texttt{full} profile, response scores are exported but excluded from the main acquisition. Stage III's \texttt{topo\_trivial} profile and Stage IV's explicit three-channel selector likewise use the $\Delta,q$ uncertainty channels rather than $\eta,I_c^\pm$ to schedule calls. The presence of an optional response-weighted cleanup branch in the archived code is not evidence that it was used in these endpoint configurations.
+
+\subsection{Definitions of the two-dimensional acquisition components}\label{sec:acq-definitions}
+The following definitions apply to the saved two-dimensional implementation. Write $\mathcal N[z]=(z-z_{\min})/(z_{\max}-z_{\min})$ over finite values on the candidate array; constant arrays and nonfinite entries map to zero, and the result is clipped to $[0,1]$. Each uncertainty channel is normalized separately. Grid gradients use first-order edge differences and coordinate spacings, not pixel indices:
+\begin{equation}
+G=\tfrac12\mathcal N\!\left[\sqrt{(\partial_{T/t}\hat\Delta)^2+(\partial_{J_A/t}\hat\Delta)^2}\right]
++\tfrac12 P_{SC}\mathcal N\!\left[\sqrt{(\partial_{T/t}|\hat q|)^2+(\partial_{J_A/t}|\hat q|)^2}\right].\label{eq:gradient}
+\end{equation}
+In this equation the temperature coordinate denotes $k_BT/t$. Let $[z]_+=\max(z,0)$, $d_q=\min(|\hat q+1|,|0.5-\hat q|)$, and $\tau=k_BT/t$, $j=J_A/t$. Then
+\begin{align}
+E_q&=P_{SC}\max\{\exp[-d_q/0.02],\mathcal N([j-1.2]_+)\},\label{eq:eq-risk}\\
+E_{\rm ext}&=\max\{\mathcal N([\tau-0.5]_+),\mathcal N([j-1.2]_+)\}\max\{U_{\rm cls},U_{\rm reg}\}.\label{eq:extrapolation}
+\end{align}
+The thresholds above are acquisition parameters, not physical phase criteria. The interior indicator requires $P_{\max}>0.98$ and each of $U_{NS}$, $U_{UF}$, $G$, $E_q$, and $E_{\rm ext}$ below 0.05, with $U_{NS}=4P_NP_{SC}$ and $U_{UF}=4P_{\rm uniform}P_{\rm FFLO}$. Its multiplicative penalty is 0.5 before iteration 10 and 0.1 afterward; all other candidates retain factor one. Thus $A_{\rm pool}=A_0P_{\rm interior}$, not the unpenalized score.
+
+The pool quantile is 0.90, 0.95, and 0.98 before iteration 10, from 10 to 29, and from 30 onward. Among eligible hard-unseen candidates, the threshold is the maximum of this quantile and $0.7Q_{0.95}(A_{\rm pool})$. The target admitted fraction decreases linearly from 0.20 at iteration zero to 0.05 at iteration 30. If exceeded, the quantile increases in steps of 0.005, up to 0.995, subject to the minimum-batch guard; ties and this quantile ceiling mean this is not an unconditional exact cardinality cap. Before iteration 5, quantile relaxation in steps of 0.02 down to 0.70 may fill the configured minimum batch (64); afterward underfilled batches are allowed and no information-free filling is required.
+
+Distances below use coordinates divided by their domain ranges, $(0.56,2.12)$, with $d_{\rm obs}$ the nearest retained-coordinate distance. The repulsion kernel and within-batch update are
+\begin{align}
+K(d;\ell,r)&=r+(1-r)\{1-\exp[-(d/\ell)^2]\},\label{eq:kernel}\\
+R_{\rm obs}(x)&=K(d_{\rm obs}(x);0.02,0.5),\qquad
+R_{\rm batch}(x;\mathcal B)=\prod_{s\in\mathcal B}K(d(x,s);0.03,0.01),\label{eq:repulsion}\\
+p(x\mid\mathcal B)&=\frac{[A_{\rm pool}(x)R_{\rm obs}(x)R_{\rm batch}(x;\mathcal B)]^\gamma}
+{\sum_{z\in\mathcal P\setminus\mathcal B}[A_{\rm pool}(z)R_{\rm obs}(z)R_{\rm batch}(z;\mathcal B)]^\gamma}.\label{eq:batchprob}
+\end{align}
+Here $\mathcal P$ is the eligible active pool and $\gamma=1.5,2.5,4$ on the same iteration intervals. A selected index is removed immediately, and the product is updated after every pick. Existing exact coordinates are excluded using four-decimal coordinate keys; configured recent-selection and normal-boundary-band cooldowns also apply. Repeated requests in historical accounting must not be equated with successful unique returns.
+
+\subsection{Topology-aware and three-dimensional selectors}\label{sec:stage-selectors}
+Stage III replaces the \texttt{full} score by $w_p\mathcal N(A_{\rm phase})+w_sA_s+w_cA_c$, with weights $(0.45,0.45,0.10)$ before iteration 30 and $(0.25,0.65,0.10)$ thereafter. It does not simply add a new spectral head to the old full score. The spectral proxy is the maximum of a Pfaffian-margin score, an opposite-index proximity score, and a gapless-support proximity score. With normalized distances $d_0,d_1,d_g,d_t$ to trivial, topological, gapless, and trusted-topology observations,
+\begin{align}
+A_s&=P_{SC}\max\{e^{-m_P/0.02},e^{-\min(d_0,d_1)/0.06-|d_0-d_1|/0.06},e^{-d_g/0.06}\},\label{eq:toposcore}\\
+A_c&=P_{SC}\{1-e^{-(d_t/0.08)^2}\}.\label{eq:topocoverage}
+\end{align}
+Absent support sets disable their proximity term; absent trusted-topology support gives $A_c=P_{SC}$. The dimensionless margin is $m_P=\min(|P_0|,|P_\pi|)/E_*^2$, with $E_*=\max(1,|t|,|\lambda_y|,|\lambda_z|,|\mu|,|J_A|,|\Delta|)$ in the code's energy units and a $10^{-300}$ denominator floor. Stage III uses the fixed chemical potential; Stage IV uses the candidate chemical potential. These scores guide selection and confer no topological label.
+
+Stage IV constructs a nominal 65,536-point proposal pool: 70\% global scrambled Sobol, 10\% jittered local thermodynamic-bracket midpoints, 15\% jittered topology-bracket midpoints, and 5\% chemical-potential-edge proposals. Missing bracket proposals are backfilled. This is a different proposal strategy from Stage III's diagnostic-only brackets. Coordinates are clipped to the recorded domain and proposal duplicates are removed at eight decimal places. Existing observations are identified at six decimal places. The saved selection tables, not a nominal pool-size assumption, determine actual call counts.
+
+The Stage-IV phase score is $\operatorname{clip}[0.65H+0.35\operatorname{clip}(\bar\sigma/Q_{0.95}(\bar\sigma),0,1),0,1]$, where $\bar\sigma=(\sigma_\Delta+\sigma_q)/2$ and the denominator has a $10^{-12}$ floor. Its spectral score takes the larger of the Pfaffian-margin term and the opposite-index term in Eq.~\eqref{eq:toposcore}, now with distance scale 0.08 and no gapless term. Coverage is $1-\exp[-(d_{\rm obs}/0.04)^2]$, without $P_{SC}$. Distances normalize all three domain ranges $(0.56,2.12,2.0)$.
+
+Channel weights $(0.45,0.40,0.15)$ change to $(0.25,0.60,0.15)$ at iteration 12. The selector allocates integer phase/spectral/coverage quotas from these weights; within each channel it samples the channel score times batch repulsion to power 3. Exhausted channels fall back to the weighted combined score. Batch repulsion uses $\ell=0.045$, floor 0.02, and the same product update as Eq.~\eqref{eq:repulsion}. Thus Stage IV must not be described as the two-dimensional quantile-pool selector applied unchanged in three dimensions.

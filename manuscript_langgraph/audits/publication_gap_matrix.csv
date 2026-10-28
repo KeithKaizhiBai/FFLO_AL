@@ -1,0 +1,12 @@
+gap_id,description,status,blocks_main_claim,supplement_only,discussion_only,optional_improvement,next_action
+GAP-RAW-STAGEII,Stage II final raw dataset and Figure 2 source bundle recovered,closed,true,false,false,false,redraw after GATE_FIGURE_APPROVAL using recovered hashes
+GAP-RAW-STAGEIII,Stage III final raw dataset convergence tables and figure bundle recovered,closed,true,false,false,false,redraw after GATE_FIGURE_APPROVAL and record CSV-hash metadata note
+GAP-RAW-STAGEIV,Stage IV final raw dataset return report tables manifest and figure bundle recovered,closed,true,false,false,false,redraw after GATE_FIGURE_APPROVAL with strict non-convergence caveat
+GAP-MULTISEED,No multi-seed topology-aware benchmark located,open,false,false,false,true,consider only for conditional Figure 4 after explicit authorization
+GAP-MATCHED-BASELINE,No matched-budget random/Sobol baseline located,open,false,false,false,true,prefer for conditional Figure 4 only after explicit authorization
+GAP-HIDDEN-GT,No independent hidden-ground-truth evaluator located,open,false,false,false,true,optional robustness improvement outside the approved central physics claim
+GAP-STAGEIII-KSENS,Tight k-neighbor coverage sensitivity margin,documented,false,true,false,false,report configured and sensitivity values together
+GAP-STAGEIV-CONV,Stage IV 3D topology convergence not passed,documented,false,false,false,false,retain visible supported-with-caveat main-text wording
+GAP-V3V4-SUPERIORITY,V3/V4 superiority not established,documented,false,false,true,false,do not claim superiority
+GAP-SPECTRAL-DESC,Stage VI lacks spectral fingerprint artifacts,documented,false,false,true,false,outlook only
+GAP-STAGEIII-HASH-LABEL,Stage III decision JSON source_dataset names NPZ while source_dataset_sha256 is the archived CSV hash,documented,false,true,false,false,retain frozen JSON and explain that NPZ and CSV arrays match exactly

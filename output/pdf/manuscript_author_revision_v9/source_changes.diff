@@ -1,0 +1,65 @@
+--- v8/authors.tex
++++ v9/authors.tex
+@@ -0,0 +1,3 @@
++\author{Kai-Zhi Bai}
++\email{kzbai@connect.hku.hk}
++\affiliation{Department of Physics, The University of Hong Kong, Pokfulam Road, Hong Kong, China}
+--- v8/authors_sm.tex
++++ v9/authors_sm.tex
+@@ -0,0 +1,2 @@
++\author{Kai-Zhi Bai}
++\affiliation{Department of Physics, The University of Hong Kong, Pokfulam Road, Hong Kong, China}
+--- v8/metadata.tex
++++ v9/metadata.tex
+@@ -1,2 +1,3 @@
+ \newcommand{\ManuscriptTitle}{Reliability-aware active learning for FFLO phase spaces}
+-% Author/affiliation block intentionally absent: not yet confirmed.
++% Author identity explicitly supplied on 2026-10-28; see authors.tex.
++\hypersetup{pdfauthor={Kai-Zhi Bai}}
+--- v8/main_content.tex
++++ v9/main_content.tex
+@@ -1,4 +1,6 @@
+ \begin{document}\title{\ManuscriptTitle}
++\input{authors.tex}
++
+ \begin{abstract}\input{sections/abstract.tex}\end{abstract}\maketitle
+ \input{sections/introduction.tex}
+ \input{sections/results.tex}
+--- v8/supplement.tex
++++ v9/supplement.tex
+@@ -1,4 +1,4 @@
+-\documentclass[aps,prl,reprint,onecolumn,11pt,tightenlines,floatfix]{revtex4-2}
++\documentclass[aps,prl,reprint,onecolumn,11pt,tightenlines,superscriptaddress,floatfix]{revtex4-2}
+ \input{preamble.tex}
+ \externaldocument[main-]{manuscript_double_column}
+ \setcounter{secnumdepth}{3}
+@@ -13,6 +13,10 @@
+ \newenvironment{AnchoredFigure}{\par\addvspace{10pt}\noindent\begin{minipage}{\textwidth}\def\@captype{figure}}{\end{minipage}\par\addvspace{10pt}}
+ \newenvironment{AnchoredTable}{\par\addvspace{8pt}\noindent\begin{minipage}{\textwidth}\def\@captype{table}}{\end{minipage}\par\addvspace{8pt}}
+ \makeatother
+-\begin{document}\raggedbottom\title{Supplemental Material: \ManuscriptTitle}\maketitle\LayoutAudit
++\begin{document}\raggedbottom\title{Supplemental Material: \ManuscriptTitle}
++\input{authors_sm.tex}
++\maketitle
++\begin{center}\small\href{mailto:kzbai@connect.hku.hk}{kzbai@connect.hku.hk}\end{center}
++\LayoutAudit
+ \input{sections/supplement.tex}
+ \end{document}
+--- v8/sections/discussion.tex
++++ v9/sections/discussion.tex
+@@ -7,4 +7,4 @@
+ 
+ The method combines adaptive sampling with direct BdG evaluation while keeping numerical reliability separate from phase identity. The results establish finite thermodynamic and topology-resolved sampled supports; determining continuous boundaries requires additional evidence beyond those observations.
+ 
+-\paragraph{Data availability.} The numerical data and source configurations are preserved in the project archive. No public repository or persistent identifier has been established for this review version.
++\paragraph{Data availability.} The numerical data and source configurations are preserved in the project archive. The associated project repository is \url{https://github.com/KeithKaizhiBai/FFLO_AL}. Its README records the available code, data and manuscript artifacts and their limitations; no archival DOI is claimed.
+--- v8/sections/supplement.tex
++++ v9/sections/supplement.tex
+@@ -210,6 +210,6 @@
+ 
+ The retained datasets, selection tables, and numerical histories underlie the main figures. In particular, main-text Fig.~\ref{main-fig:thermo} uses the Stage-II retained-coordinate dataset, Fig.~\ref{main-fig:topology} uses the reliable gapped FFLO subset and support-restricted reconstruction, and Fig.~\ref{main-fig:3d} uses the Stage-IV point cloud with the bin convention in Sec.~\ref{sec:3d}. Table~\ref{tab:counts} separates requests, unique requested locations, and retained observations. Total executed evaluations, including failed attempts and repeat work, cannot be inferred from these three counters alone; no complete executed-attempt ledger is claimed here.
+ 
+-The accompanying document-source package contains a separate \path{build.py} that regenerates the double-column main text, single-column review text, and this Supplement from a clean temporary directory. This script only builds documents from unchanged figure assets. Input hashes identify the source versions because the local export contains no Git repository metadata. Neither the archived scientific package nor these manuscript sources have a confirmed public repository URL or persistent identifier; public access and long-term deposition remain to be arranged by the authors.
++The accompanying document-source package contains a separate \path{build.py} that regenerates the double-column main text, single-column review text, and this Supplement from a clean temporary directory. This script only builds documents from unchanged figure assets. Input hashes identify the source versions because the local export contains no Git repository metadata. The associated project repository is \url{https://github.com/KeithKaizhiBai/FFLO_AL}; its README identifies available artifacts and reproduction limitations. Repository commits do not retroactively establish the missing historical executable bindings, and no archival DOI is claimed.
+ 
+ Saved run configurations establish the stage-specific parameter choices, while the export provides shared and stage-specific source snapshots. A per-run commit or executable hash linking every Stage-I/II invocation to the shared source snapshot is not available in this package. Accordingly, the method descriptions document the recovered implementation and recorded configurations; they are not a demonstrated end-to-end rerun or a complete executed-attempt ledger.

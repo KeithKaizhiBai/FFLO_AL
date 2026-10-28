@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "warning_only",
+  "method": "Gaussian-blurred grayscale distance from white within declared narrative regions",
+  "interpretation": "A diagnostic proxy only; it cannot certify first fixation or aesthetic quality.",
+  "ranking_by_mean_visual_mass": [
+    "exact_bdg_oracle_and_reliability",
+    "thermodynamic_landscape",
+    "topology_resolution",
+    "active_learning_cycle"
+  ],
+  "region_visual_mass": {
+    "thermodynamic_landscape": {
+      "integrated_visual_mass": 11228514.0,
+      "mean_visual_mass": 26.86825871599148
+    },
+    "topology_resolution": {
+      "integrated_visual_mass": 9744493.0,
+      "mean_visual_mass": 23.44816110651241
+    },
+    "exact_bdg_oracle_and_reliability": {
+      "integrated_visual_mass": 7143442.0,
+      "mean_visual_mass": 36.29797764227642
+    },
+    "active_learning_cycle": {
+      "integrated_visual_mass": 48586688.0,
+      "mean_visual_mass": 20.500885239537887
+    }
+  },
+  "human_review_required": true
+}

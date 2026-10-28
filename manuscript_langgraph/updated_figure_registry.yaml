@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "figures": [
+    {
+      "figure_id": "FIG-01-PIPELINE",
+      "scientific_role": "Define the reliability-aware active-learning framework, including the BdG problem, exact-oracle hierarchy, and scheduler loop that enables 2D and 3D exploration.",
+      "source_datasets": [],
+      "panels": ["model and parameter space", "oracle and label hierarchy", "closed AL loop"],
+      "claims_supported": ["CLM-ORACLE-RELIABILITY"],
+      "required_caveats": ["schematic is not numerical evidence", "ML does not replace exact labels"],
+      "caption_contract": "Define the workflow, explicitly separate thermodynamic, spectral, and topology labels, and identify oracle reliability as the enabling foundation for higher-dimensional exploration.",
+      "prohibited_claims": ["mathematically exact oracle", "ML solver"],
+      "redraw_requirements": ["LaTeX formulas", "dimensionless axes where shown", "provenance footer"],
+      "candidate_paths": ["figures/fig1_engine_v4/fig1_engine_v4.pdf", "figures/fig1_engine_v4/fig1_engine_v4.png", "figures/fig1_engine_v4/fig1_engine_v4.svg"],
+      "validation_path": "figures/fig1_engine_v4/figure_validation_report.md",
+      "status": "SCIENTIFIC_FREEZE"
+    },
+    {
+      "figure_id": "FIG-02-THERMO",
+      "scientific_role": "Show 2D thermodynamic discovery and publication-boundary convergence.",
+      "source_datasets": ["manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz"],
+      "panels": ["phase map", "selected points", "boundary convergence", "hard-risk layer"],
+      "claims_supported": ["CLM-2D-THERMO"],
+      "required_caveats": ["hard-risk provisional points remain visible"],
+      "caption_contract": "Report exact sample counts and configured convergence thresholds.",
+      "prohibited_claims": ["all uncertainty eliminated"],
+      "redraw_requirements": ["redraw from the recovered endpoint and retained Phase II figure data", "record source SHA-256 and parameters"],
+      "candidate_paths": ["figures/fig2_strict_data/fig2_strict_data.pdf", "figures/fig2_strict_data/fig2_strict_data.png", "figures/fig2_strict_data/fig2_strict_data.svg"],
+      "validation_path": "figures/fig2_strict_data/figure_validation_report.md",
+      "status": "SCIENTIFIC_FREEZE"
+    },
+    {
+      "figure_id": "FIG-03-STAGEIII-TOPOLOGY",
+      "scientific_role": "Show the cold-start cFFLO/tFFLO result and formal topology convergence audit.",
+      "source_datasets": ["manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz", "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2/tables"],
+      "panels": ["final hierarchy map", "final contour/support", "four convergence metrics", "decision and sensitivity"],
+      "claims_supported": ["CLM-2D-TOPOLOGY"],
+      "required_caveats": ["k=6 coverage p95=0.006269 slightly exceeds threshold", "raw Delaunay edges are support only"],
+      "caption_contract": "State Decision A, sample counts, thresholds, configured pass, and sensitivity caveat.",
+      "prohibited_claims": ["all refinements exhausted", "Delaunay edges are the final boundary"],
+      "redraw_requirements": ["redraw from the recovered final dataset and convergence tables", "record the decision-JSON CSV-hash labeling discrepancy in provenance notes"],
+      "candidate_paths": ["figures/fig3_strict_data/fig3_strict_data.pdf", "figures/fig3_strict_data/fig3_strict_data.png", "figures/fig3_strict_data/fig3_strict_data.svg"],
+      "validation_path": "figures/fig3_strict_data/figure_validation_report.md",
+      "status": "SCIENTIFIC_FREEZE"
+    },
+    {
+      "figure_id": "FIG-04-STAGEIV-3D-EXTENSION",
+      "scientific_role": "Demonstrate extension of reliability-aware active learning from low-dimensional phase reconstruction to higher-dimensional parameter exploration.",
+      "source_datasets": ["manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz", "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/tables"],
+      "panels": ["three-dimensional sampled thermodynamic structure", "topology-aware cFFLO/tFFLO support", "support-restricted mu slices or JA-kBT comparison view", "explicit convergence limitations"],
+      "claims_supported": ["CLM-3D-EXTENSION"],
+      "required_caveats": ["the 3D topology surface is not formally closed by the strict convergence criteria used for the 2D topology result", "mu-domain and hidden-slice limitations remain visible", "diagnostic surfaces are not exact boundaries"],
+      "caption_contract": "Use the phrases higher-dimensional exploration and 3D extension; state that thermodynamic and topology-aware structures are revealed; display the strict non-convergence caveat in the figure and caption.",
+      "prohibited_claims": ["complete 3D phase diagram", "fully converged 3D topology atlas", "complete chemical-potential phase diagram", "converged topology surface"],
+      "redraw_requirements": ["redraw from the recovered Stage IV endpoint, return-report tables, and source figures", "use only reproducible source scripts", "retain support-restricted slice and projection warnings"],
+      "candidate_paths": ["figures/fig4_strict_data/fig4_strict_data.pdf", "figures/fig4_strict_data/fig4_strict_data.png", "figures/fig4_strict_data/fig4_strict_data.svg"],
+      "validation_path": "figures/fig4_strict_data/figure_validation_report.md",
+      "status": "SCIENTIFIC_FREEZE_WITH_NONCLOSURE_CAVEAT"
+    }
+  ]
+}

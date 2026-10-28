@@ -1,0 +1,10 @@
+{
+  "workflow_status": "HUMAN_WAIT",
+  "current_gate": "GATE_SYNCHRONIZED_MANUSCRIPT_AUTHOR_REVIEW",
+  "gate_status": "HUMAN_WAIT",
+  "revised_manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_synchronized_review_v7/manuscript_double_column.pdf",
+  "single_column_manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_synchronized_review_v7/manuscript_single_column_review.pdf",
+  "revised_supplement_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_synchronized_review_v7/supplement.pdf",
+  "physics_changed": false,
+  "protected_inputs_unchanged": true
+}

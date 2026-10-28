@@ -1,0 +1,22 @@
+{
+  "main_decision": "Decision C - descriptor schema still incomplete",
+  "selected_device": "cpu",
+  "mps_available": false,
+  "v3_reproduced": true,
+  "v4_reproduced": true,
+  "thermodynamic_model_reliable": true,
+  "deltaF_UF_available": false,
+  "hierarchical_topology_nll_improved_both_runs": false,
+  "probe_uncertainty_monotonic_all_levels": false,
+  "safe_for_future_EIG_pilot": false,
+  "forbidden_state_transfer_confirmed": true,
+  "main_limiting_factor": "deltaF_UF absent and level-wise uncertainty/replay gates not uniformly passed",
+  "recommended_next_action": "extend exact-output schema for branch energy and repeat hierarchical calibration; do not run EIG",
+  "wall_time_sec": 47.76834512499045,
+  "peak_rss_mb": 546.984375,
+  "spatial_sc_auroc_mean": 0.9785797297954559,
+  "spatial_level1_r2_median": 0.44068095088005066,
+  "spatial_level2_r2_median": 0.7969133150000001,
+  "spatial_level3_r2_median": 0.050639959,
+  "spatial_level4_r2_median": 0.91236765
+}

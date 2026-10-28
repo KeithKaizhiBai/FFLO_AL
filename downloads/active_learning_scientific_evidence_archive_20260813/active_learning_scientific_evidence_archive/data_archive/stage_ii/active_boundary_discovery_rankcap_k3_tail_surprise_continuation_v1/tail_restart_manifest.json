@@ -1,0 +1,16 @@
+{
+  "copied_files_count": 152,
+  "final_source_convergence_pass": false,
+  "final_source_label_surprise_all_selected": 0.18359375,
+  "final_source_label_surprise_trusted": "not_available_in_original_all_selected_history",
+  "final_source_stop_reason": "max_iterations",
+  "package_output_root": "ML_Phase_512_RankCapK3_TailContinuation",
+  "package_run_id": "active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1",
+  "previous_monitor": "ML_Phase_512_RankCapK3_TailContinuation/active_runs/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/iter030/monitor_predictions_iter030.npz",
+  "restart_dataset": "ML_Phase_512_RankCapK3_TailContinuation/active_runs/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/dataset_iter031.npz",
+  "source_output_root": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\rankcap_k3_full_loop\\ML_Phase_512_RankCapK3_FullLoop",
+  "source_run_dir": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\rankcap_k3_full_loop\\ML_Phase_512_RankCapK3_FullLoop\\active_runs\\active_boundary_discovery_rankcap_k3_full_loop_v1",
+  "source_run_id": "active_boundary_discovery_rankcap_k3_full_loop_v1",
+  "start_iter": 31,
+  "tail_first_iter": 26
+}

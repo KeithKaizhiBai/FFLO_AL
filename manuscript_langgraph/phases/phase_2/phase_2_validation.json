@@ -1,0 +1,10 @@
+{
+  "phase": 2,
+  "status": "pass",
+  "claim_gate": "approved_with_modifications",
+  "claim_count": 6,
+  "main_figure_contract_count": 4,
+  "stage_v_results_position": false,
+  "stage_vi_results_position": false,
+  "new_physics_calculation": false
+}

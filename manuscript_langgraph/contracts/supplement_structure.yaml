@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sections": [
+    {"id": "S1", "title": "Physical model and notation", "sources": ["MODEL_SPEC.md"], "forbidden": ["new physical definitions"]},
+    {"id": "S2", "title": "Exact BdG oracle and reliability hierarchy", "sources": ["docs/NUMERICS_SPEC.md", "E-PHASEII-AUDIT", "E-STAGEIII-PASS"], "required_topics": ["adaptive q window", "local q-Delta refinement", "K3 and full-BZ gap logic", "phase and topology label hierarchy"]},
+    {"id": "S3", "title": "Active-learning loop and acquisition", "sources": ["docs/NUMERICS_SPEC.md"], "required_topics": ["scheduler role", "uncertainty", "deduplication", "convergence monitoring"]},
+    {"id": "S4", "title": "Numerical and convergence audits", "sources": ["E-PHASEII-AUDIT", "E-STAGEIII-CONVERGENCE"], "required_topics": ["thresholds", "sensitivity", "known limits"]},
+    {"id": "S5", "title": "Additional maps and limitations", "sources": ["E-STAGEIV-AUDIT", "E-STAGEV-MATCHED"], "required_topics": ["3D non-closure diagnostics and hidden-slice limitation", "V3/V4 non-superiority"]},
+    {"id": "S6", "title": "AI-assisted research workflow", "sources": ["project decision records"], "required_topics": ["supporting workflow only", "human scientific authority"]},
+    {"id": "S7", "title": "LangGraph software architecture and reproducibility", "sources": ["manuscript_langgraph/graph_design.md", "manuscript_langgraph/decision_log.md"], "required_topics": ["evidence contracts", "human gates", "artifact provenance"]}
+  ],
+  "generation_rule": "Supplement text may be drafted only after scope, claim, and figure approval. Every quantitative statement must cite a registered evidence_id or canonical specification.",
+  "prohibitions": ["development chronology as scientific evidence", "unsupported efficiency claims", "promotion of caveated 3D exploration to a complete or converged topology atlas"]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "approval_gate": "GATE_CLAIM_APPROVAL",
+  "approval_status": "approved_with_modifications",
+  "approved_at": "2026-08-13",
+  "approval_authority": "explicit_human_user_instruction",
+  "approval_record": "manuscript_langgraph/audits/claim_approval_record_20260813.yaml",
+  "scope_id": "AL_FFLO_PRL_RELIABILITY_AWARE_3D_V2",
+  "allowed_statuses": ["frozen_supported", "supported_with_caveat", "provisional", "discussion_only", "future_work"],
+  "claims": [
+    {
+      "claim_id": "CLM-2D-THERMO",
+      "statement": "The audited two-dimensional active-learning endpoint reconstructs the normal, uniform-SC, and FFLO phase diagram under the frozen BdG thermodynamic criterion.",
+      "evidence_ids": ["E-STAGEI-COLDSTART", "E-PHASEII-AUDIT", "E-PHASEII-HARD-RISK"],
+      "scientific_status": "frozen_supported",
+      "allowed_language": ["publication-boundary audit passed", "main thermodynamic boundaries converged under the configured audit"],
+      "forbidden_language": ["all numerical uncertainty eliminated", "ML replaced the BdG solver"],
+      "limitations": ["hard-risk points remain an uncertainty layer"],
+      "destination": "main_text",
+      "human_approval_state": "approved"
+    },
+    {
+      "claim_id": "CLM-ORACLE-RELIABILITY",
+      "statement": "Adaptive q-window expansion, Delta refinement, basin-level refinement, reliability flags, and spectral checks form an auditable exact-oracle hierarchy without changing the thermodynamic phase definition.",
+      "evidence_ids": ["E-NUMERICS-SPEC", "E-PHASEII-AUDIT", "E-STAGEIII-PASS"],
+      "scientific_status": "supported_with_caveat",
+      "allowed_language": ["numerically audited", "reliability states remain explicit", "enabling component for scalable active learning", "foundation for the three-dimensional extension"],
+      "forbidden_language": ["mathematically exact", "free of finite-resolution effects"],
+      "limitations": ["finite resolution remains", "unresolved is not a physical phase"],
+      "destination": "main_text_and_supplement",
+      "human_approval_state": "approved"
+    },
+    {
+      "claim_id": "CLM-2D-TOPOLOGY",
+      "statement": "A strict cold-start topology-aware loop reconstructs a connected cFFLO/tFFLO boundary and passes the configured offline convergence audit.",
+      "evidence_ids": ["E-STAGEIII-PASS", "E-STAGEIII-CONVERGENCE"],
+      "scientific_status": "supported_with_caveat",
+      "allowed_language": ["Decision A under the configured audit", "connected cFFLO/tFFLO structure", "no new exact calculation required by that audit"],
+      "forbidden_language": ["all possible topology refinements exhausted", "raw Delaunay edges are the boundary", "all nodal phases excluded"],
+      "limitations": ["final samples=4345; trusted FFLO=3213; cFFLO=2290; tFFLO=923", "k=8 Decision A with coverage p95=0.006185 below 0.00625", "k=6 sensitivity coverage p95=0.006269 is slightly above threshold", "local opposite-Z2 brackets are support diagnostics, not the final physical boundary", "archived decision JSON associates the CSV hash with an NPZ-labeled source field; the underlying NPZ/CSV arrays agree"],
+      "destination": "main_text",
+      "human_approval_state": "approved"
+    },
+    {
+      "claim_id": "CLM-3D-EXTENSION",
+      "statement": "The cold-start framework extends to the three-dimensional (kBT/t, J_A/t, mu/t) parameter space and reveals thermodynamic and topology-aware structures, including tFFLO support; the strict formal 3D topology convergence gates were not all closed.",
+      "evidence_ids": ["E-STAGEIV-AUDIT", "E-STAGEIV-MU-SLICE-AUDIT", "E-STAGEIV-CURVE-FIX"],
+      "scientific_status": "supported_with_caveat",
+      "scientific_role": "Demonstration that active learning scales from low-dimensional phase reconstruction to higher-dimensional parameter exploration.",
+      "allowed_language": ["higher-dimensional exploration", "three-dimensional extension", "3D extension", "reveals thermodynamic and topology-aware structures", "active-learning-enabled parameter-space exploration"],
+      "forbidden_language": ["complete 3D phase diagram", "fully converged 3D topology atlas", "complete three-dimensional phase diagram", "converged topology surface"],
+      "limitations": ["the strict formal 3D topology convergence gates were not all closed", "the result is a higher-dimensional exploration/demonstration, not a complete converged 3D topology atlas", "topology surprise and coverage fail", "chemical-potential domain and hidden-slice limitations"],
+      "destination": "main_text_candidate_figure_4",
+      "human_approval_state": "approved"
+    },
+    {
+      "claim_id": "CLM-LEARNED-ACQUISITION",
+      "statement": "Stage V provides an exploratory study of learned-acquisition mechanisms, while matched audits do not establish superiority over the production acquisition strategy.",
+      "evidence_ids": ["E-STAGEV-MATCHED"],
+      "scientific_status": "discussion_only",
+      "decision_detail": "negative comparative result: neither V3 nor V4 is established as superior",
+      "allowed_language": ["exploratory learned-acquisition studies", "operational prototype", "trade-off", "superiority not established", "motivates future adaptive discovery policies"],
+      "forbidden_language": ["V4 is best", "learned acquisition is superior", "learned acquisition is publication-ready"],
+      "limitations": ["coverage and surprise gates remained open", "V4 candidates were not validated as new phases"],
+      "destination": "discussion",
+      "human_approval_state": "approved"
+    },
+    {
+      "claim_id": "CLM-GROUNDUP-WORLD-MODEL",
+      "statement": "Hierarchical world-model studies clarify useful physical masking and descriptor requirements, while EIG-ready uncertainty and the required spectral state representation remain unvalidated.",
+      "evidence_ids": ["E-STAGEVI0", "E-STAGEVI0-2"],
+      "scientific_status": "future_work",
+      "decision_detail": "not established: EIG remains unauthorized",
+      "allowed_language": ["future direction toward learned physical world models", "descriptor-development result", "Decision C/D", "EIG not authorized"],
+      "forbidden_language": ["validated world model", "validated EIG acquisition", "ready for production EIG"],
+      "limitations": ["spectral artifacts missing", "replay uncertainty non-monotonic"],
+      "destination": "outlook",
+      "human_approval_state": "approved"
+    }
+  ]
+}

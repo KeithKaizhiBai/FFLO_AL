@@ -1,0 +1,81 @@
+schema_version: 1
+rule_set: enforcement_registry
+authority: canonical
+
+levels:
+  builder_hard: rejected before an engine-native builder writes artwork
+  lint_hard: detected after registered geometry or SVG exists; build returns nonzero
+  contract_hard: rejected by contract/preflight validation
+  contract_plus_lint: declared before drawing and checked against output evidence
+  figure_specific_hard: enforced by a named figure-specific audit in addition to generic lint
+  lint_warning: detected and reported after generation without failing the build
+  human_review: scientifically or perceptually meaningful but not honestly reducible to a generic numeric test
+
+rules:
+  contract_loaded_and_hashed: {level: contract_plus_lint, implementation: builders.figure_build.preflight_and_validators.figure_lint.engine_preflight_exact_hash_match}
+  conflicting_canonical_rules: {level: contract_hard, implementation: builders.rule_loader._validate_cross_file}
+  required_contract_fields: {level: contract_hard, implementation: builders.contract_loader.validate_contract}
+  primary_area_fraction: {level: lint_hard, implementation: validators.bbox_checker.primary_visual_area}
+  scientific_subobject_area: {level: contract_plus_lint, implementation: validators.bbox_checker.declared_area_requirements}
+  independent_card_gap: {level: lint_hard, implementation: validators.bbox_checker.independent_card_gutters}
+  registered_containment: {level: lint_hard, implementation: validators.bbox_checker.parent_containment}
+  canvas_clipping: {level: lint_hard, implementation: validators.bbox_checker.canvas_clipping}
+  minimum_font_size: {level: builder_hard, implementation: builders.svg_builder.SVGBuilder.text}
+  minimum_font_size_postflight: {level: lint_hard, implementation: validators.font_checker.minimum_font_size}
+  normal_width_font: {level: lint_hard, implementation: validators.font_checker.normal_width_fonts}
+  no_nonuniform_text_scale: {level: lint_hard, implementation: validators.font_checker.nonuniform_text_scaling}
+  no_skew_text: {level: lint_hard, implementation: validators.font_checker.skewed_text}
+  measured_text_bbox: {level: builder_hard, implementation: builders.svg_builder.SVGBuilder.text}
+  text_text_overlap: {level: lint_hard, implementation: validators.text_collision_checker.text_text_overlap}
+  text_border_clearance: {level: lint_hard, implementation: validators.text_collision_checker.text_border_clearance}
+  text_plot_clearance: {level: lint_hard, implementation: validators.text_collision_checker.text_plot_clearance}
+  label_leader_clearance: {level: lint_hard, implementation: validators.text_collision_checker.leader_text_clearance}
+  leader_leader_crossing: {level: lint_hard, implementation: validators.text_collision_checker.leader_leader_crossing}
+  semantic_palette: {level: builder_hard, implementation: builders.svg_builder.SVGBuilder.text}
+  approved_output_palette: {level: lint_hard, implementation: validators.color_checker.approved_palette}
+  registered_contrast: {level: contract_plus_lint, implementation: validators.color_checker.minimum_contrast}
+  required_scientific_labels: {level: contract_plus_lint, implementation: validators.scientific_checker.required_labels}
+  prohibited_scientific_claims: {level: contract_plus_lint, implementation: validators.scientific_checker.prohibited_claims}
+  declared_asset_semantics: {level: contract_hard, implementation: validators.asset_checker.declared_asset_semantics}
+  asset_required_features: {level: contract_plus_lint, implementation: validators.asset_checker.required_scientific_features}
+  no_schematic_quantitative_evidence: {level: contract_plus_lint, implementation: validators.asset_checker.schematic_not_quantitative_evidence}
+  workflow_source_target: {level: lint_hard, implementation: validators.route_checker.workflow_source_target}
+  tapered_workflow_profile: {level: lint_hard, implementation: validators.route_checker.workflow_profile}
+  workflow_card_crossing: {level: lint_hard, implementation: validators.route_checker.workflow_card_crossing}
+  annotation_maximum_length: {level: lint_hard, implementation: validators.route_checker.annotation_length}
+  editable_svg: {level: lint_hard, implementation: validators.svg_checker.editable_text}
+  no_nonuniform_svg_scale: {level: lint_hard, implementation: validators.svg_checker.svg_nonuniform_scaling}
+  raster_exception_declared: {level: contract_plus_lint, implementation: validators.svg_checker.raster_policy}
+  engine_svg_metadata: {level: lint_hard, implementation: validators.svg_checker.engine_metadata}
+  fig1_branch_semantics: {level: figure_specific_hard, implementation: refinement_v5.fig1_v5_layout_lint.json}
+  visual_narrative_contract: {level: contract_hard, implementation: builders.contract_loader.validate_visual_narrative_contract}
+  narrative_primary_scientific_subobject: {level: lint_hard, implementation: validators.visual_narrative_checker.primary_scientific_subobject}
+  narrative_primary_area: {level: contract_plus_lint, implementation: validators.visual_narrative_checker.primary_area}
+  narrative_reading_order: {level: contract_plus_lint, implementation: validators.visual_narrative_checker.reading_order}
+  narrative_scientific_asset_fill_ratio: {level: figure_specific_hard, implementation: validators.visual_narrative_checker.scientific_asset_fill_ratio}
+  narrative_saliency_rank: {level: lint_warning, implementation: validators.visual_narrative_checker.blurred_region_saliency}
+  narrative_contrast_hierarchy: {level: lint_warning, implementation: validators.visual_narrative_checker.region_contrast_hierarchy}
+  narrative_equal_weight_regions: {level: lint_warning, implementation: validators.visual_narrative_checker.equal_weight_proxy}
+  strict_data_panel_router: {level: contract_hard, implementation: builders.panel_router.route_panel}
+  strict_data_source_provenance: {level: contract_plus_lint, implementation: validators.strict_data_checker.source_provenance}
+  strict_data_row_reconciliation: {level: contract_plus_lint, implementation: validators.strict_data_checker.row_reconciliation}
+  strict_data_transformation_authorization: {level: contract_hard, implementation: builders.panel_router.validate_panel_contract}
+  strict_data_phase_mapping: {level: contract_hard, implementation: builders.panel_router.validate_panel_contract}
+  strict_data_topology_semantics: {level: contract_hard, implementation: builders.panel_router.validate_panel_contract}
+  strict_data_3d_nonclosure: {level: contract_hard, implementation: builders.panel_router.validate_panel_contract}
+  strict_data_output_manifest: {level: lint_hard, implementation: validators.strict_data_checker.output_manifest_complete}
+
+human_review_only:
+  - primary_object_is_first_perceptual_fixation
+  - composition_is_visually_coherent
+  - low_saturation_background_is_aesthetically_balanced
+  - topology_cartoon_is_not_visually_misread_despite_correct_labels
+  - three_dimensional_lighting_preserves_physical_readability
+  - caveat_is_prominent_enough_for_scientific_interpretation
+  - declared_visual_argument_is_scientifically_persuasive
+  - observed_first_fixation_matches_declared_reading_order
+
+policy:
+  human_review_rules_must_be_named: true
+  human_review_must_not_be_reported_as_automatic_pass: true
+  every_lint_hard_rule_requires_a_negative_self_test_when_practical: true

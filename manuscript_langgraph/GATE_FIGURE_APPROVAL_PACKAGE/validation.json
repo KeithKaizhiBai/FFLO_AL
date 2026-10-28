@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-08-13",
+  "status": "pass_pending_human_approval",
+  "approval_package_pdf": {
+    "path": "manuscript_langgraph/GATE_FIGURE_APPROVAL_PACKAGE/figure_approval_package.pdf",
+    "sha256": "fe58a1e75be8bc913730b326b757ed1f115ad865f86752dbe06fce087faf2993",
+    "pages": 6,
+    "rendered_pages_inspected": 6
+  },
+  "candidate_pdf_sha256": {
+    "FIG-01-PIPELINE": "010bb1703e557c497d4ace762e491ca32ba5b71760d42b34d58f71560225e002",
+    "FIG-02-THERMO": "4cd330a5e617f44fd8ce4b74ad1f742a4d5f6a5770d32deb5aeb49eb8769c473",
+    "FIG-03-STAGEIII-TOPOLOGY": "47ee16de18537a567bd19a888c20705ff4c0d4eb2f030a995e93ec5fd4729447",
+    "FIG-04-STAGEIV-3D-EXTENSION": "af5cb318ea23c063df4ebebf7cae57a53c414a8ded78d40ddc6c6a4055c14cb1",
+    "SUPP-FIG-S1-SUPPORT-AUDITS": "3bc7e40dd1e3775134e089b4aadf92456e6beec2ebe0f0fb3dcfd8080013ee24"
+  },
+  "required_per_figure_files": {
+    "figure_contract": true,
+    "source_provenance": true,
+    "caption_candidate": true,
+    "results_candidate": true,
+    "paragraph_metadata": true,
+    "caveat_list": true,
+    "old_vs_new_comparison": true,
+    "validation_report": true
+  },
+  "paragraph_metadata_records": 4,
+  "unsupported_sentence_flags": 0,
+  "langgraph_stop": "GATE_FIGURE_APPROVAL",
+  "figure_auto_approved": false,
+  "external_retrieval": false,
+  "new_physics_calculation": false
+}

@@ -1,0 +1,32 @@
+project:
+  name: "BdG FFLO topology-aware active learning"
+archive:
+  purpose: "scientific evidence for independent manuscript writing, figure regeneration, data audit, and result verification"
+  created_at_utc: "2026-08-12T04:47:52.788114+00:00"
+  source_root: "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO"
+  git_commit: "8405b03639043bbc5dc43e154ed7f7465e77cc75"
+  scope:
+    - exact-oracle and active-learning computational history
+    - frozen/final datasets
+    - convergence and reliability audits
+    - figure source data and plotting scripts
+  excluded_scope:
+    - manuscript LangGraph and claim registry
+    - AI writing workflow and shared prompt handoff
+    - QAHE3D-related material
+    - caches, debug logs, candidate pools, and redundant checkpoints
+summary:
+  source_file_count: 63383
+  archived_source_file_count: 2385
+  archived_source_bytes: 278165113
+  category_counts:
+    A: {files: 879, bytes: 226975147}
+    B: {files: 5101, bytes: 286631001}
+    C: {files: 52087, bytes: 15073767246}
+    D: {files: 5316, bytes: 49161487451}
+integrity:
+  copied_file_hash_check: pass
+  algorithm: sha256
+  checksum_file: checksums_sha256.txt
+missing_or_unavailable_artifacts:
+  - "finite_T_phase_diagram.m"

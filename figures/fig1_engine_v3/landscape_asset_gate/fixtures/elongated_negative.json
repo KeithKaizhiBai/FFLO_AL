@@ -1,0 +1,19 @@
+{
+  "candidate_id": "elongated_negative",
+  "projected_surface_aspect_ratio": 4.0,
+  "projected_surface_height_width_ratio": 0.15,
+  "foreground_fill_fraction": 0.40,
+  "internal_whitespace_fraction": 0.52,
+  "dominant_minima_projected_triangle_fraction": 0.015,
+  "vertical_relief_fraction": 0.10,
+  "labels": [
+    {"id": "normal", "bbox": {"x": 10, "y": 10, "width": 80, "height": 36}, "marker": [40, 54], "leader_length_px": 44},
+    {"id": "uniform", "bbox": {"x": 70, "y": 10, "width": 100, "height": 36}, "marker": [100, 54], "leader_length_px": 44},
+    {"id": "fflo", "bbox": {"x": 150, "y": 10, "width": 90, "height": 36}, "marker": [180, 54], "leader_length_px": 44}
+  ],
+  "nonuniform_transform": true,
+  "delta_axis_projected_length_fraction": 0.10,
+  "q_axis_projected_length_fraction": 0.04,
+  "projected_axis_angle_deg": 8.0,
+  "prohibited_text_found": ["topology determined by free-energy depth"]
+}

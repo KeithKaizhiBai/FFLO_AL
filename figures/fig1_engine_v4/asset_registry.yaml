@@ -1,0 +1,53 @@
+schema_version: 1
+figure_id: FIG-01-ENGINE-V4
+policy:
+  physics_recomputed: false
+  card_architecture_changed: false
+  core_engine_rules_changed: false
+  refined_assets_are_schematic: true
+  selected_landscape_candidate: candidate_A_compact_hero
+
+assets:
+  central:
+    source: asset_versions/thermodynamic_landscape_v4/asset.svg
+    role: primary
+    adaptation: approved_candidate_A_compact_surface_with_vector_local_labels_and_frozen_topology
+  bdg:
+    source: ../fig1_engine_v2/asset_versions/bdg_oracle_v2/asset.svg
+    role: secondary
+    adaptation: frozen_v2_free_energy_dominant_oracle
+  observation:
+    source: ../fig1_engine_v2/asset_versions/physical_observation_v2/asset.svg
+    role: secondary
+    adaptation: frozen_v2_aligned_physical_readout
+  parameter:
+    source: ../fig1_framework_v3/refinement_v5/assets/parameter/asset.svg
+    role: tertiary
+    adaptation: nested_editable_svg_unchanged
+  surrogate:
+    source: ../fig1_framework_v3/refinement_v5/assets/surrogate/asset.svg
+    role: tertiary
+    adaptation: nested_editable_svg_unchanged
+  acquisition:
+    source: ../fig1_framework_v3/refinement_v5/assets/acquisition/asset.svg
+    role: tertiary
+    adaptation: nested_editable_svg_unchanged
+  next_calls:
+    source: ../fig1_framework_v3/refinement_v5/assets/next_calls/asset.svg
+    role: tertiary
+    adaptation: nested_editable_svg_unchanged
+  reliability:
+    source: engine_native_reliability_card
+    role: tertiary
+    adaptation: unchanged_from_engine_v2
+  workflow_arrows:
+    source: engine_native_canonical_profiles
+    role: tertiary
+    adaptation: canonical_main_ribbon_plus_secondary_flow_layer
+
+assembly:
+  builder: build_fig1_engine_v4.py
+  engine_entry: figures.figure_engine.builders.figure_build.preflight
+  svg_builder: figures.figure_engine.builders.svg_builder.SVGBuilder.from_context
+  main_arrow_profile: constitution/arrow_rules.yaml#profiles.main_workflow
+  inner_flow_profile: constitution/arrow_rules.yaml#profiles.secondary_workflow

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "status": "fail",
+  "hard_failure_count": 2,
+  "warning_count": 1,
+  "human_review_count": 1,
+  "primary_visual_object": "primary_card",
+  "reading_order": [
+    "primary_card",
+    "supporting_evidence"
+  ],
+  "saliency": {},
+  "checks": [
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_scientific_subobject",
+      "severity": "hard_fail",
+      "passed": false,
+      "detail": "The primary visual object resolves to a registered scientific subobject, never its parent card.",
+      "evidence": {
+        "primary_visual_object": "primary_card",
+        "resolved_object": {
+          "id": "primary_card",
+          "type": "card",
+          "role": "primary",
+          "parent": "canvas",
+          "bbox": {
+            "x": 10,
+            "y": 20,
+            "width": 100,
+            "height": 100
+          },
+          "independent": true,
+          "visual_weight_object": true
+        }
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_area",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary scientific subobject satisfies its explicit contract area requirement.",
+      "evidence": [
+        {
+          "reference": "canvas",
+          "actual": 0.10416666666666667,
+          "minimum": 0.1,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_reading_order",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The declared reading order begins with the primary scientific subobject and all narrative regions resolve.",
+      "evidence": {
+        "reading_order": [
+          "primary_card",
+          "supporting_evidence"
+        ],
+        "region_members": {
+          "supporting_evidence": [
+            "secondary_card"
+          ],
+          "primary_card": [
+            "primary_card"
+          ]
+        },
+        "unresolved": {}
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "scientific_asset_fill_ratio",
+      "severity": "hard_fail",
+      "passed": false,
+      "detail": "Declared scientific content fills the asset bbox above its figure-specific minimum.",
+      "evidence": [
+        {
+          "id": "synthetic_surface_fill",
+          "object_id": "tiny_landscape",
+          "ratio": 0.0625,
+          "minimum": 0.65,
+          "contained": true,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_saliency_evidence",
+      "severity": "warning",
+      "passed": false,
+      "detail": "No final PNG was supplied; saliency remains unevaluated and cannot be reported as an automatic pass.",
+      "evidence": {}
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_first_fixation_human_review",
+      "severity": "human_review",
+      "passed": false,
+      "detail": "Human review is required to decide whether actual first fixation matches the declared reading order.",
+      "evidence": {
+        "expected_first_fixation": "primary_card"
+      }
+    }
+  ],
+  "automatic_aesthetic_approval": false
+}

@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "check": "exists_ml_phase/topology_oracle.py",
+      "detail": "ml_phase/topology_oracle.py",
+      "status": "pass"
+    },
+    {
+      "check": "exists_ml_phase/active_refine.py",
+      "detail": "ml_phase/active_refine.py",
+      "status": "pass"
+    },
+    {
+      "check": "exists_scripts/run_topology_pass_dataset_iter035.py",
+      "detail": "scripts/run_topology_pass_dataset_iter035.py",
+      "status": "pass"
+    },
+    {
+      "check": "exists_scripts/preflight_topo_trivial_full_loop.py",
+      "detail": "scripts/preflight_topo_trivial_full_loop.py",
+      "status": "pass"
+    },
+    {
+      "check": "exists_scripts/submit_topo_trivial_full_loop.sh",
+      "detail": "scripts/submit_topo_trivial_full_loop.sh",
+      "status": "pass"
+    },
+    {
+      "check": "exists_scripts/submit_topo_trivial_smoke.sh",
+      "detail": "scripts/submit_topo_trivial_smoke.sh",
+      "status": "pass"
+    },
+    {
+      "check": "exists_scripts/status_topo_trivial_full_loop.sh",
+      "detail": "scripts/status_topo_trivial_full_loop.sh",
+      "status": "pass"
+    },
+    {
+      "check": "exists_scripts/collect_topo_trivial_full_loop.sh",
+      "detail": "scripts/collect_topo_trivial_full_loop.sh",
+      "status": "pass"
+    },
+    {
+      "check": "exists_topology_reference/topology_pass_summary.json",
+      "detail": "topology_reference/topology_pass_summary.json",
+      "status": "pass"
+    },
+    {
+      "check": "exists_configs/topo_trivial_full_loop_config.json",
+      "detail": "configs/topo_trivial_full_loop_config.json",
+      "status": "pass"
+    },
+    {
+      "check": "exists_RUN_MANIFEST.json",
+      "detail": "RUN_MANIFEST.json",
+      "status": "pass"
+    },
+    {
+      "check": "sobol_scrambled_supported",
+      "detail": "active_refine.py",
+      "status": "pass"
+    },
+    {
+      "check": "topology_aware_acquisition_supported",
+      "detail": "required before production submission",
+      "status": "pass"
+    },
+    {
+      "check": "submit_requires_confirm",
+      "detail": "submit guard",
+      "status": "pass"
+    },
+    {
+      "check": "submit_uses_topo_trivial_profile",
+      "detail": "topology profile",
+      "status": "pass"
+    },
+    {
+      "check": "submit_enables_topology_exact",
+      "detail": "topology exact fields",
+      "status": "pass"
+    },
+    {
+      "check": "submit_excludes_gpuh01",
+      "detail": "gpuh01",
+      "status": "pass"
+    },
+    {
+      "check": "shell_scripts_ascii_lf_no_bom",
+      "detail": "",
+      "status": "pass"
+    },
+    {
+      "check": "py_compile_critical_files",
+      "detail": "",
+      "status": "pass"
+    },
+    {
+      "check": "bash_syntax",
+      "detail": "only Windows WSL launcher found locally; no installed Linux distribution for bash -n",
+      "status": "warn"
+    }
+  ],
+  "production_submission_status": "ready",
+  "status": "pass"
+}

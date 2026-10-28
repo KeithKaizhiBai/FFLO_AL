@@ -1,0 +1,14 @@
+{
+  "input_dataset": "ML_Phase_512_RankCapK3_FullLoop/active_runs/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter030.npz",
+  "trusted_exact": "ML_Phase_512_RankCapK3_FullLoop/active_runs/active_boundary_discovery_rankcap_k3_full_loop_v1/iter030/exact_trusted_iter030.npz",
+  "output_npz": "ML_Phase_512_RankCapK3_FullLoop/active_runs/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz",
+  "output_csv": "ML_Phase_512_RankCapK3_FullLoop/active_runs/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.csv",
+  "exact_points": 163,
+  "clean_trusted_points": 137,
+  "boundary_band_points_appended": 26,
+  "training_eligible_points_appended": 163,
+  "trusted_points_appended": 163,
+  "input_samples": 6720,
+  "output_samples": 6880,
+  "new_unique_samples_added": 160
+}

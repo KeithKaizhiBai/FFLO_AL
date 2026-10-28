@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "id": "observation-row-1",
+      "text": "Phase FFLO",
+      "bbox": {
+        "x": 1314,
+        "y": 579,
+        "width": 250,
+        "height": 24
+      }
+    },
+    {
+      "id": "observation-row-2",
+      "text": "Order $\\Delta, q$",
+      "bbox": {
+        "x": 1314,
+        "y": 614,
+        "width": 250,
+        "height": 24
+      }
+    },
+    {
+      "id": "observation-row-3",
+      "text": "Energy $F^*$",
+      "bbox": {
+        "x": 1314,
+        "y": 649,
+        "width": 250,
+        "height": 24
+      }
+    },
+    {
+      "id": "observation-row-4",
+      "text": "Spectrum $E_g$",
+      "bbox": {
+        "x": 1314,
+        "y": 684,
+        "width": 250,
+        "height": 24
+      }
+    },
+    {
+      "id": "observation-row-5",
+      "text": "Topology $\\nu$",
+      "bbox": {
+        "x": 1314,
+        "y": 719,
+        "width": 250,
+        "height": 24
+      }
+    },
+    {
+      "id": "observation-row-6",
+      "text": "Uncertainty $\\sigma_{\\rm num}$",
+      "bbox": {
+        "x": 1314,
+        "y": 754,
+        "width": 250,
+        "height": 24
+      }
+    }
+  ],
+  "visual_language": "aligned_physical_quantity_readout"
+}

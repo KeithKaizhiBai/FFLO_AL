@@ -1,0 +1,20 @@
+schema_version: 1
+figure_id: FIG-01-PIPELINE-V5-ENGINE
+artwork_policy: read_only_no_regeneration
+expected_status: fail
+expected_hard_failures:
+  - text_border_clearance
+expected_failure_evidence:
+  text_border_clearance:
+    object_id: reliability-row-1
+    parent_id: reliability
+    observed_clearance_px: 3.25
+    required_clearance_px: 4.0
+allowed_warnings:
+  - engine_metadata
+  - preferred_math_font
+gate: GATE_FIG1_V5_APPROVAL
+gate_state: HUMAN_WAIT
+resolution_policy: >-
+  Do not change the approved v5 artwork during framework health checking.
+  Resolve only in a separately authorized Figure 1 refinement/regeneration.

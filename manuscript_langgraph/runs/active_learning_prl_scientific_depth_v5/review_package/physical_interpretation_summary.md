@@ -1,0 +1,6 @@
+# Physical interpretation summary
+
+- **FIG1**: The exact BdG oracle connects an external parameter point to a Delta-q landscape and then to topology only after thermodynamic selection.; The surrogate/acquisition cycle returns only a next exact microbatch.
+- **FIG2**: Normal support lies above a descending curved envelope in the kBT-JA plane.; FFLO occupies most superconducting support below that envelope.; Uniform SC is a narrow strip close to JA=0.; Exact calls accumulate along both the outer Normal-superconducting structure and the narrow uniform-SC/FFLO edge.
+- **FIG3**: Within trusted gapped FFLO support, cFFLO occupies lower JA and extends to higher temperature.; tFFLO appears predominantly at higher JA and lower temperature.; The two supports meet along a curved gap-closing region.
+- **FIG4**: At mu/t=-0.45 and 0.15, trusted cFFLO occupies lower JA while sampled tFFLO is concentrated at higher JA and lower temperature.; At mu/t=0.85, uniform-SC support broadens in JA and trusted tFFLO spans a wider part of the sampled slice.; At mu/t=1.45, sampled superconducting support is restricted to low JA and moderate-to-low temperature, and no trusted tFFLO point occurs in the narrow slice.

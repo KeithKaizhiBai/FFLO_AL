@@ -1,0 +1,14 @@
+run_id: topology_convergence_audit_full_loop_v2
+source_run_id: active_phase_topology_from_scratch_full_loop_v2
+grid_n: 401
+audit_k: 8
+sensitivity_k: [6, 8, 12]
+support_radius: 0.045
+segment_support_radius: 0.045
+bracket_edge_max: 0.03
+map_change_tol: 0.002
+boundary_shift_tol: 0.004166666666666667
+coverage_tol: 0.00625
+topology_surprise_tol: 0.02
+surrogate: deterministic_knn_inverse_distance_interpolation_for_P0_and_Ppi
+uses_new_exact_calculation: false

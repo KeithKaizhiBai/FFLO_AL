@@ -1,0 +1,618 @@
+Reliability-aware active learning for FFLO phase spaces
+Finite-momentum superconducting phase diagrams require repeated minimization over pairing
+amplitude and momentum, followed by spectral tests wherever topology is meaningful. We combine
+an exact Bogoliubov–de Gennes oracle with active learning that schedules, but never replaces,
+these calculations. The method reconstructs the two-dimensional Normal, uniform-superconducting,
+and FFLO regions with a sparse allocation of exact calculations. Restricting topology to reliable
+gapped FFLO states reveals connected conventional and topological FFLO support separated by a
+numerically reconstructed gap-closing region. Extending this hierarchy to(kBT/t,J A/t,µ/t) exposes
+systematic thermodynamic and topology-aware structure across a finite sampled domain. The latter
+evidence is reported as discrete support and narrow-µbins, not as a converged continuous topological
+surface or complete three-dimensional atlas.
+INTRODUCTION
+Superconductivity with nonzero center-of-mass pairing
+momentum provides a route beyond a spatially uniform
+condensate. Fulde and Ferrell and, independently, Larkin
+and Ovchinnikov established the finite-momentum pairing
+and spatially modulated mechanisms now grouped under
+the FFLO setting [1, 2]. Subsequent reviews have de-
+veloped the thermodynamic, material, and ultracold-gas
+consequences of Fermi-surface mismatch and competing
+pairing momenta [3–5]. The central phase-selection prob-
+lem is therefore intrinsically thermodynamic: competing
+minima must be compared over both pairing amplitude
+and momentum.
+The search for FFLO structure spans several physical
+platforms. Heavy-fermion and organic superconductors
+have displayed field-induced phases and spectroscopic,
+calorimetric, or magnetic signatures discussed in rela-
+tion to FFLO order [6–10]; these representative studies
+motivate the problem without implying that every identifi-
+cation is universal or uncontested. Population-imbalanced
+ultracold Fermi gases provide a complementary tunable
+setting for pairing under mismatch, phase separation, and
+finite-momentum phases [11–15].
+Altermagnets add a distinct route to this competition.
+Their compensated magnetic order can nevertheless gener-
+ate symmetry-structured momentum-dependent spin split-
+ting [16–19]. Model studies have connected this splitting
+to zero-field finite-momentum or other unconventional
+pairing states [20–22], and neighboring altermagnetic con-
+structions have been proposed for topological supercon-
+ductivity and Majorana modes [23, 24]. These precedents
+motivate an altermagnetic finite-q problem but do not de-
+termine the phase structure of the one-dimensional model
+studied here.
+Topology adds a second, logically separate require-
+ment. Finite-momentum pairing can coexist with topo-
+logical superfluidity in spin-orbit-coupled models [25–27].
+More generally, bulk symmetries and invariants organize
+topological superconducting phases [28–32]. Majorana-
+platform studies connect those bulk distinctions to
+boundary physics [33–36]. In a gapped one-dimensional
+Bogoliubov–de Gennes (BdG) system in symmetry class
+D, the relevantZ2 distinction can be expressed through a
+Pfaffian invariant [37, 38]; its use is meaningful only after
+bulk-gap applicability is established. A topology-resolved
+FFLO map must therefore identify a reliable thermody-
+namic minimum before classifying trusted gapped FFLO
+states.
+This hierarchy is computationally demanding because
+every accepted parameter point requires minimization of
+F(∆,q ), comparison with the normal reference, adaptive
+checks of shallow or edge minima, and, where applicable,
+full-zone spectral and Pfaffian diagnostics. Active learn-
+ing and Bayesian experimental design formalize the selec-
+tion of informative sequential evaluations [39–41]; phase-
+diagram applications demonstrate boundary-focused sam-
+pling [42–44], while adaptive sampling has also reduced
+expensive electronic-structure, atomistic, and chemical
+search budgets [45–50]. For a physical phase diagram,
+however, an acquisition model should decide where to cal-
+culate next, not replace the exact calculation that defines
+the phase.
+Here we combine an exact BdG oracle with active learn-
+ing to resolve the thermodynamic and topology-aware
+structure of an altermagnetic finite-momentum supercon-
+ductor. The oracle supplies every physical label, while
+the surrogate redirects subsequent evaluations toward
+uncertain or rapidly varying regions. This strategy re-
+constructs the two-dimensional thermodynamic phases
+from a sparse subset of the prescribed candidate locations,
+resolves connected cFFLO and tFFLO support within
+the reliable gapped FFLO sector, and exposes systematic
+structure across a finite three-dimensional domain. The
+three-dimensional evidence remains a discrete point cloud
+and narrow-µbins rather than a converged continuous
+topological surface.
+The detailed model, algorithms, counting conventions,
+and numerical diagnostics are provided in the Supplemen-
+tal Material [51].
+RESUL TS
+Model and physical hierarchy.—We useλy/t =λz/t =
+0.6 and U/t = 1 .6; the two-dimensional results fix
+µ/t= 0.55. The single-particle sector ish(k) =t coskσ0+
+2
+Physical state space generated by the BdG oracleT h e r m o d y n a m i c   l a n d s c a p e     F q ( Δ , )
+T o p o l o g y   r e s o l u t i o n     (   i n v a r i a n t ) ℤ 2
+c F F L O     ( ) ν = 0 gap-closing transition t F F L O     ( ) ν = 1
+( − 1 ) = s g n [ ( 0 ) ( ) ] ν P P π− π 0 π
+−1
+0
+1
+E g > 0
+− π 0 π
+−1
+0
+1 E g → 0
+− π 0 π
+−1
+0
+1
+E g > 0
+red: in-gap boundary state
+NormalΔ = 0
+Uniform SCΔ > 0 , = 0 q
+FFLO sectorΔ > 0 , | | > 0 q
+Δ
+q
+Parameter spacex T J μ = ( , , , … ) A
+T
+J A
+μ
+Next exact calls
+selected micro-batch
+Acquisition
+A x f σ x d F ( ) = [ ( ) , , Δ ] b o u n d a r y
+uncertaintydisagreement
+boundary relevance
+Exact BdG oracle
+H k B d G ( )
+f u l l   m i n i m i z a t i o n   i n   ( Δ , ) q
+E k n ( ) F q ( Δ , )Δ q
+Physical observation
+Phase FFLO
+Order Δ , q
+Energy F *
+Spectrum E g
+Topology ν
+Uncertainty σ n u m
+Surrogate scheduler
+( ̂ ) y x σ x ( )
+Reliability gate
+optimization convergence
+spectral/topological trust
+numerical reliability
+FIG. 1. Physical hierarchy and adaptive scheduling. Schematic illustration, not computed phase data: the altermagnetic
+and spin-orbit BdG model generates a normal-referencedFimpl(∆,q ) landscape. Its reliable minimum determines Normal,
+uniform-SC, or FFLO order; only a gapped FFLO minimum proceeds to the Pfaffian test. The surrogate cycle proposes
+subsequent exact calls and does not determine either label.
+λy sinkσy + [λz sink +JA cosk]σz. The odd-in-k spin-
+orbit fields and the altermagneticJA cosk splitting pro-
+duce a momentum-dependent spin texture, while pairing
+connects states shifted by±q/2 in the Nambu Hamilto-
+nian. A finite-momentum state therefore cannot be found
+by optimizing the order-parameter amplitude alone: for
+every external coordinatex the exact oracle determines
+(∆ opt,q opt) = arg min
+∆,q
+Fimpl(∆,q ), (1)
+whereFimpl is the normal-referenced occupation-weighted
+spectral objective used by the implemented numerical cal-
+culation. Its reliable minimum gives Normal order when
+the optimum is unpaired, uniform superconductivity when
+∆ opt > 0 and qopt is zero within resolution, and FFLO
+order when both the amplitude and finite momentum are
+resolved.
+Topology is a second, logically separate test. It is
+evaluated only for a thermodynamically accepted, numer-
+ically reliable FFLO minimum whose full Brillouin-zone
+spectrum is gapped. Under that applicability condition,
+(− 1)ν= sgn[P (0)P (π)] (2)
+distinguishes cFFLO (ν= 0) from tFFLO (ν= 1); a
+change of index requires a bulk gap closing and reopening,
+not a change in basin depth or the sign ofq. Figure 1
+summarizes this hierarchy. Regression and classification
+ensembles see accepted exact observations and rank the
+next microbatch, but every physical label remains an
+output of the BdG objective and spectral tests.
+Two-dimensional thermodynamic organization.—The
+exact observations in Fig. 2 organize into a curved outer
+envelope separating superconducting support below from
+Normal support above. At low temperature the super-
+conducting sector reaches comparatively largeJA/t; as
+temperature rises, the largest sampled splitting that still
+supports pairing moves downward. Most of the paired re-
+gion is finite-q FFLO. Uniform superconductivity instead
+forms a narrow strip close toJA = 0, so the sampled state
+changes rapidly from zero- to finite-momentum pairing
+once the altermagnetic splitting is introduced. This thin
+3
+0.0 0.2 0.4
+kBT/t
+0.0
+0.5
+1.0
+1.5
+2.0
+JA/t
+512 selected; 506 retained
+a Sparse cold start
+0.0 0.2 0.4
+kBT/t
+0.0
+0.5
+1.0
+1.5
+2.0
+JA/t
+iteration 1  ->  34
+bExact-call allocation
+0.0 0.1 0.2 0.3 0.4 0.5
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+kBT/t
+Normal
+Uniform SC
+FFLO
+hard-risk (separate layer)
+c Exact thermodynamic states
+0 17 34
+iteration
+0.00
+0.01
+phase-map change
+0 17 34
+iteration
+0.01
+0.02
+Normal-SC shift
+0 17 34
+iteration
+0.0
+0.2
+0.4
+Uniform-FFLO shift
+0 17 34
+iteration
+0.0
+0.1
+trusted surprise
+Reliability-aware active learning reconstructs the 2D thermodynamic structure
+Exact BdG samples; no interpolation, smoothing, or fitted boundary
+7434 samples: 1867 Normal / 715 uniform SC / 4852 FFLO
+d Numerical histories
+FIG. 2. T wo-dimensional thermodynamic reconstruction. (a) Sparse exact initialization. (b) Exact-call allocation
+across Stage I and its Stage-II continuation; darker red denotes later iterations (1–34), not a phase or probability.(c) The
+7,434-coordinate Stage-II endpoint, which contains the 6,880-coordinate Stage-I endpoint plus 554 additional exact coordinates;
+open symbols denote numerically flagged evaluations, not a phase.(d) Numerical histories; dashed lines are the saved operational
+references described in the Supplemental Material, not physical scales. The location-count comparison uses Stage I, not the
+Stage-II continuation.
+inner structure and the descending outer envelope are pre-
+cisely the regions where small changes of the optimized
+minimum can change a label, motivating concentrated
+exact minimization rather than a smooth surrogate bound-
+ary.
+The search begins with a sparse random design over the
+full (kBT/t,J A/t) domain. Subsequent calls accumulate
+along both thermodynamic structures while a continuing
+exploration channel samples their interiors and the re-
+maining domain. In the primary Stage-I discovery, 6,880
+unique exact coordinates are retained from 77,361 pre-
+scribed candidate locations, corresponding to an 8.89%
+location fraction and an 11.24-fold reduction relative to
+evaluating every grid location. The Stage-II reliability
+continuation adds exact evaluations without changing any
+shared phase label and supplies the 7,434-coordinate end-
+point shown in panel (c). The efficiency ratio is therefore
+a Stage-I location count, not a wall-time acceleration or
+a comparison with matched random sampling. Selected
+requests and retained coordinates are distinguished in
+Supplemental Material, Table S5; neither is a complete
+execution ledger.
+Topology-resolved FFLO structure.—Thermodynamic
+FFLO order alone does not specify the bulk topological
+sector. Applying the full-zone gap guard and Pfaffian
+invariant resolves the trusted FFLO observations into two
+gapped supports (Fig. 3). The cFFLO sector occupies
+lowerJA/t and extends to higher temperature, whereas
+the sampled tFFLO sector is shifted toward stronger
+altermagnetic splitting and lower temperature. Their
+4
+0.0 0.1 0.2 0.3 0.4 0.5
+kBT/t
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+JA/t
+3213 trusted FFLO: 2290 cFFLO / 923 tFFLO
+non-FFLO / untrusted topology
+cFFLO: gapped ν = 0
+tFFLO: reopened gap ν = 1
+a Trusted exact topology map
+archived k=8 derived contour
+not a stable third phase
+b Gap-closing transition diagnostic
+0.00
+0.02
+map change
+0.00
+0.02
+0.04
+boundary p95 shift
+1 9 18
+iteration
+0.01
+0.02
+0.03
+coverage p95
+1 9 18
+iteration
+0.00
+0.05
+trusted surprise
+6 8 12
+0.0058
+0.0060
+0.0062
+0.0064
+coverage p95
+0.006269
+0.006185
+0.005913
+d k sensitivity
+Topology-aware exact sampling resolves the cFFLO/tFFLO structure
+Trusted gapped FFLO labels; archived k=8 audit; k=6 sensitivity retained
+c  Raw configured convergence
+FIG. 3. Bulk topology inside the thermodynamic FFLO sector. (a) Trusted gapped FFLO observations resolved into
+cFFLO and tFFLO by the full-zone gap and Pfaffian invariant.(b) A support-restricted contour and local opposite-Z2 brackets
+locate a gap-closing region but not an exact boundary.(c,d) Numerical histories and neighborhood sensitivity (Supplemental
+Material, Sec. S9).
+meeting region follows a curved locus where the bulk
+gap closes before reopening with the opposite Pfaffian
+product. Thus the topology-resolved map adds a bulk-
+state distinction that neither the position of theFimpl
+minimum nor the sign ofqopt can provide.
+The exact labels are discrete, so the plotted transition
+line is a support-restricted reconstruction rather than an
+independently calculated phase boundary. Nearby obser-
+vations with oppositeZ2 indices bracket the transition
+region, and changing the reconstruction neighborhood
+produces a finite displacement of the guide. We therefore
+use the contour to organize the sampled close-and-reopen
+structure, not to claim an exact line or a stable third
+phase. The retained sensitivity also leaves open narrow
+nodal alternatives that the present sampling does not
+exhaust. This separation between exact bulk labels and a
+derived visual guide is carried into the higher-dimensional
+extension.
+Chemical-potential-dependent higher-dimensional
+structure.— The four narrow-µbins of exact observations
+in Fig. 4 show that the two-dimensional organization
+does not remain rigid as the third coordinate changes.
+At µ/t= − 0.45 and 0.15, sampled cFFLO support lies
+mainly at lower JA/t, while tFFLO is concentrated
+toward higher splitting and lower temperature; in the
+latter cut the trusted tFFLO support is especially
+confined to low temperature. Atµ/t= 0.85, uniform-SC
+support extends over a broaderJA/t range and trusted
+tFFLO spans a wider part of the sampled slice. By
+µ/t= 1.45, the observed paired support is restricted to
+low splitting and moderate-to-low temperature, and the
+narrow slice contains no trusted tFFLO observation. This
+last statement is about sampled support, not proof that
+tFFLO is absent elsewhere near that chemical potential.
+The three-dimensional point cloud establishes the finite
+sampled domain and displays how exact thermodynamic
+and topology labels populate it; the narrow slices pro-
+vide readable local cross-sections without imposing con-
+tinuity between them. Selective evaluation is especially
+useful in this enlarged candidate space because it can
+retain direct BdG evaluation while directing calls toward
+changing structures. Nevertheless, nonuniform sampling
+5
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+kBT/t 0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+JA/t
+−0.50
+−0.25
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+μ/t
+7081 exact samples: 2350 / 141 / 4590
+Normal
+Uniform SC
+FFLO
+a Exact 3D thermodynamic observations
+0.0 0.1 0.2 0.3 0.4 0.5 0.0
+0.5
+1.0
+1.5
+2.0
+−0.5
+0.0
+0.5
+1.0
+1.5
+cFFLO ν = 0 (3145)
+tFFLO ν = 1 (1445)
+b Trusted FFLO topology support
+0
+1
+2
+μ/t = −0.45 ± 0.025
+n = 272
+0
+1
+2
+μ/t = 0.15 ± 0.025
+n = 154
+0.0 0.2 0.4
+0
+1
+2
+μ/t = 0.85 ± 0.025
+n = 223
+0.0 0.2 0.4
+0
+1
+2
+μ/t = 1.45 ± 0.025
+n = 142
+Reliability-aware active learning extends higher-dimensional exploration
+Finite-domain exact observations and fixed-μ slices; no continuous topology surface is inferred
+c  Exact fixed-μ slices
+FIG. 4. Finite-domain three-dimensional exploration. (a) Exact thermodynamic observations in(kBT/t,J A/t,µ/t). (b)
+Discrete trusted FFLO topology support.(c) Four narrow-µbins (centers −0.45, 0.15, 0.85, 1.45, half-width 0.025) without
+interpolation; see Supplemental Material, Sec. S10. Slice populations reflect adaptive sampling and are not phase-volume
+estimates; the four cuts do not define a continuous topological surface.
+prevents phase counts from being interpreted as ther-
+modynamic volumes, and four cuts cannot determine a
+continuous boundary or topology surface. Figure 4 there-
+fore demonstrates scalable higher-dimensional exploration
+and chemical-potential-dependent reorganization, not a
+complete three-dimensional atlas or a fully resolved new
+mechanism.
+DISCUSSION
+The physical result is a hierarchy of structure rather
+than a single phase map. The two-dimensional exact data
+show a narrow uniform-SC strip, an extended finite-q
+region, and a curved Normal–superconducting envelope;
+the spectral analysis then resolves the FFLO sector into
+gapped conventional and topological bulk supports. Vary-
+ing chemical potential reorganizes the coordinate support
+of those states and can remove trusted tFFLO observa-
+tions from an individual sampled slice. Topology therefore
+supplies information that a thermodynamic FFLO label
+alone cannot encode.
+Methodologically, reliability-aware active learning dif-
+fers from a black-box phase classifier because physical
+labels are obtained from the BdG calculation at every
+layer. Numericalreliabilityisstoredseparatelyfromphase
+identity, topology is masked outside reliable gapped FFLO
+states, and uncertainty affects where the next calculation
+is performed rather than what phase is declared. This or-
+ganization makes the expensive minimization and spectral
+tests selectively deployable without turning the surrogate
+into a physics solver.
+The location-count economy does not establish wall-
+time acceleration, because no matched exhaustive timing
+baseline was established, and it does not establish bound-
+ary enrichment, because boundary membership was not
+recorded for the complete candidate set. The stopping set-
+tings diagnose a particular numerical workflow rather than
+universal physical scales. Likewise, the three-dimensional
+evidence is discrete and nonuniformly sampled, so it sup-
+ports higher-dimensional exploration but neither phase
+volumes nor a closed continuous atlas.
+6
+The method combines adaptive sampling with direct
+BdG evaluation while keeping numerical reliability sep-
+arate from phase identity. The results establish finite
+thermodynamic and topology-resolved sampled supports;
+determining continuous boundaries requires additional
+evidence beyond those observations.
+Data availability. The numerical data and source con-
+figurations are preserved in the project archive. No public
+repository or persistent identifier has been established for
+this review version.
+[1] P. Fulde and R. A. Ferrell, Physical Review135, A550
+(1964).
+[2] A. I. Larkin and Y. N. Ovchinnikov, Soviet Physics JETP
+20, 762 (1965).
+[3] R. Casalbuoni and G. Nardulli, Reviews of Modern
+Physics 76, 263 (2004).
+[4] Y. Matsuda and H. Shimahara, Journal of the Physical
+Society of Japan76, 051005 (2007).
+[5] J. J. Kinnunen, J. E. Baarsma, J.-P. Martikainen, and
+P. Törmä, Reports on Progress in Physics81, 046401
+(2018).
+[6] H. A. Radovan, N. A. Fortune, T. P. Murphy, S. T. Han-
+nahs, E. C. Palm, S. W. Tozer, and D. Hall, Nature425,
+51 (2003).
+[7] A. Bianchi, R. Movshovich, C. Capan, P. G. Pagliuso, and
+J. L. Sarrao, Physical Review Letters91, 187004 (2003).
+[8] M. Kenzelmann, T. Strässle, C. Niedermayer, M. Sigrist,
+B. Padmanabhan, M. Zolliker, A. D. Bianchi,
+R. Movshovich, E. D. Bauer, J. L. Sarrao, and J. D.
+Thompson, Science 321, 1652 (2008).
+[9] R. Lortz, Y. Wang, A. Demuer, P. H. M. Böttger,
+B. Bergk, G. Zwicknagl, Y. Nakazawa, and J. Wosnitza,
+Physical Review Letters99, 187002 (2007).
+[10] H. Mayaffre, S. Krämer, M. Horvatić, C. Berthier,
+K. Miyagawa, K. Kanoda, and V. F. Mitrović, Nature
+Physics 10, 928 (2014).
+[11] Y. an Liao, A. S. C. Rittner, T. Paprotta, W. Li, G. B.
+Partridge, R. G. Hulet, S. K. Baur, and E. J. Mueller,
+Nature 467, 567 (2010).
+[12] M. W. Zwierlein, A. Schirotzek, C. H. Schunck, and
+W. Ketterle, Science311, 492 (2006).
+[13] G. B. Partridge, W. Li, R. I. Kamar, Y. an Liao, and
+R. G. Hulet, Science311, 503 (2006).
+[14] D. E. Sheehy and L. Radzihovsky, Annals of Physics322,
+1790 (2007).
+[15] L. Radzihovsky and D. E. Sheehy, Reports on Progress
+in Physics 73, 076501 (2010).
+[16] L. Šmejkal, J. Sinova, and T. Jungwirth, Physical Review
+X 12, 040501 (2022).
+[17] L. Šmejkal, J. Sinova, and T. Jungwirth, Physical Review
+X 12, 031042 (2022).
+[18] I. Mazin, Physical Review X12, 040002 (2022).
+[19] L. Šmejkal, R. González-Hernández, T. Jungwirth, and
+J. Sinova, Science Advances6, eaaz8809 (2020).
+[20] D. Chakraborty and A. M. Black-Schaffer, Physical Re-
+view B 110, L060508 (2024).
+[21] S. Hong, M. J. Park, and K.-M. Kim, Physical Review B
+111, 054501 (2025).
+[22] A. Bose, S. Vadnais, and A. Paramekanti, Physical Review
+B 110, 205120 (2024).
+[23] D.Zhu, Z.-Y.Zhuang, Z.Wu,andZ.Yan,PhysicalReview
+B 108, 184505 (2023).
+[24] S. A. A. Ghorashi, T. L. Hughes, and J. Cano, Physical
+Review Letters 133, 106601 (2024).
+[25] W. Zhang and W. Yi, Nature Communications4, 2711
+(2013).
+[26] C. Qu, Z. Zheng, M. Gong, Y. Xu, L. Mao, X. Zou,
+G. Guo, and C. Zhang, Nature Communications4, 2710
+(2013).
+[27] Y. Cao, S.-H. Zou, X.-J. Liu, S. Yi, G.-L. Long, and
+H. Hu, Physical Review Letters113, 115302 (2014).
+[28] N. Read and D. Green, Physical Review B61, 10267
+(2000).
+[29] M. Sato and Y. Ando, Reports on Progress in Physics80,
+076501 (2017).
+[30] X.-L. Qi and S.-C. Zhang, Reviews of Modern Physics83,
+1057 (2011).
+[31] A. P. Schnyder, S. Ryu, A. Furusaki, and A. W. W.
+Ludwig, Physical Review B78, 195125 (2008).
+[32] S. Ryu, A. P. Schnyder, A. Furusaki, and A. W. W.
+Ludwig, New Journal of Physics12, 065010 (2010).
+[33] R. M. Lutchyn, J. D. Sau, and S. D. Sarma, Physical
+Review Letters 105, 077001 (2010).
+[34] Y. Oreg, G. Refael, and F. von Oppen, Physical Review
+Letters 105, 177002 (2010).
+[35] J. Alicea, Reports on Progress in Physics 75, 076501
+(2012).
+[36] C. Beenakker, Annual Review of Condensed Matter
+Physics 4, 113 (2013).
+[37] A. Y. Kitaev, Physics-Uspekhi44, 131 (2001).
+[38] J. C. Budich and E. Ardonne, Physical Review B88,
+075419 (2013).
+[39] D. Cohn, L. Atlas, and R. Ladner, Machine Learning15,
+201 (1994).
+[40] D. J. C. MacKay, Neural Computation4, 590 (1992).
+[41] B. Shahriari, K. Swersky, Z. Wang, R. P. Adams, and
+N. de Freitas, Proceedings of the IEEE104, 148 (2016).
+[42] K. Terayama, R. Tamura, Y. Nose, H. Hiramatsu,
+H. Hosono, Y. Okuno, and K. Tsuda, Physical Review
+Materials 3, 033802 (2019).
+[43] C. Dai, I. R. Bruss, and S. C. Glotzer, The Journal of
+Physical Chemistry B124, 1275 (2020).
+[44] T. Lookman, P. V. Balachandran, D. Xue, and R. Yuan,
+npj Computational Materials5, 21 (2019).
+[45] K. Tran and Z. W. Ulissi, Nature Catalysis1, 696 (2018).
+[46] E. V. Podryabinkin and A. V. Shapeev, Computational
+Materials Science 140, 171 (2017).
+[47] R. Jinnouchi, F. Karsai, and G. Kresse, Physical Review
+B 100, 014105 (2019).
+[48] J. Vandermause, S. B. Torrisi, S. Batzner, Y. Xie, L. Sun,
+A. M. Kolpak, and B. Kozinsky, npj Computational Ma-
+terials 6, 20 (2020).
+[49] R. Batra, L. Song, and R. Ramprasad, Nature Reviews
+Materials 6, 655 (2021).
+[50] F. Noé, S. Olsson, J. Köhler, and H. Wu, Science365,
+eaaw1147 (2019).
+[51] See Supplemental Material at [URL will be inserted by
+publisher] for the model, stage-specific algorithms, numer-
+ical diagnostics, and selection accounting.

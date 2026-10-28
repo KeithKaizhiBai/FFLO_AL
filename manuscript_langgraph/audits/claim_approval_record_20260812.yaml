@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_CLAIM_APPROVAL",
+  "status": "approved",
+  "approved_at": "2026-08-12",
+  "authority": "human_user",
+  "scope_id": "AL_FFLO_PRL_RELIABILITY_AWARE_3D_V2",
+  "claim_decisions": {
+    "CLM-2D-THERMO": {"decision": "approved_no_change", "scientific_status": "frozen_supported", "destination": "main_text"},
+    "CLM-ORACLE-RELIABILITY": {"decision": "approved_with_emphasis", "scientific_status": "supported_with_caveat", "destination": "main_text_and_supplement", "emphasis": "enabling component for scalable active learning and the 3D extension"},
+    "CLM-2D-TOPOLOGY": {"decision": "approved_no_change", "scientific_status": "supported_with_caveat", "destination": "main_text", "required_caveats": ["k=8 audit pass", "k=6 sensitivity deviation", "brackets are diagnostics only"]},
+    "CLM-3D-EXTENSION": {"decision": "approved_modified", "scientific_status": "supported_with_caveat", "destination": "main_text_candidate_figure_4", "required_caveat": "the 3D topology surface is not formally closed by the strict convergence criteria used for the 2D topology result"},
+    "CLM-LEARNED-ACQUISITION": {"decision": "approved_with_emphasis", "scientific_status": "discussion_only", "destination": "discussion", "emphasis": "exploratory studies motivating future adaptive discovery policies; no superiority claim"},
+    "CLM-GROUNDUP-WORLD-MODEL": {"decision": "approved_with_emphasis", "scientific_status": "future_work", "destination": "outlook", "emphasis": "future learned physical world models; no validated EIG acquisition"}
+  },
+  "not_approved_by_this_gate": [
+    "GATE_FIGURE_APPROVAL",
+    "final Figure 2, Figure 3, or Figure 4 reproduction",
+    "external Introduction retrieval",
+    "new exact calculations",
+    "GATE_FINAL_MANUSCRIPT_APPROVAL"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "journal_profile": "PRL",
+  "principles": [
+    "lead with the physical result",
+    "use compact motivation and minimal historical review",
+    "distinguish exact evidence from diagnostic interpretation",
+    "put technical convergence detail in the Supplement without hiding central caveats",
+    "derive title and abstract only from frozen manuscript claims"
+  ],
+  "required_checks": ["length", "claim density", "figure readability", "citation placement", "notation consistency"],
+  "source_role": "adapted editorial guidance; never scientific evidence"
+}

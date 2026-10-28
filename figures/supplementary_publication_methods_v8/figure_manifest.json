@@ -1,0 +1,25 @@
+{
+  "figures": [
+    {
+      "key": "S2_surrogate_architecture",
+      "native_mm": [
+        164,
+        75
+      ],
+      "fonts_unchanged": true,
+      "sha256": "37242164a0ebcd40d8adcdcba341da2ff10a1c581c0f5c871071f90d37bf8b9b",
+      "approval": "HUMAN_WAIT"
+    },
+    {
+      "key": "S3_acquisition_decomposition",
+      "native_mm": [
+        164,
+        75
+      ],
+      "fonts_unchanged": true,
+      "sha256": "81c8939c8b3b523f8f6740fd49fddf3a0c882f21ecf2797f0a5d056d180b9491",
+      "approval": "HUMAN_WAIT"
+    }
+  ],
+  "physics_recomputed": false
+}

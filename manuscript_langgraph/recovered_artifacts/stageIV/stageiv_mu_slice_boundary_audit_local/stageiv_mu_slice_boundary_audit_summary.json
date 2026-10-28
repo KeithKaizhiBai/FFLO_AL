@@ -1,0 +1,37 @@
+{
+  "FFLO_count": 4590,
+  "anomaly_bins": [
+    "0.50_0.83",
+    "0.83_1.17",
+    "1.17_1.50"
+  ],
+  "anomaly_correlates_with_hard_risk": "partial",
+  "baseline_reproduced": true,
+  "broad_bin_projection_artifact": "partial",
+  "candidate_count_generated_for_traceability": 24,
+  "caveats": [
+    "No exact calculation was run.",
+    "Candidate points are report-only recommendations.",
+    "Smooth curves remain diagnostic only.",
+    "Single-band corridor is not a topology label."
+  ],
+  "dataset_sha256": "7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842",
+  "final_classification": "Class A - broad-bin projection artifact",
+  "gapless_SC_count": 0,
+  "lower_mu_edge_related": true,
+  "need_new_exact_calculation": false,
+  "normal_count": 2350,
+  "numerical_reliability_concern": true,
+  "real_thermodynamic_feature": false,
+  "recommended_next_action": "curve_extraction_fix_only",
+  "recommended_tail_candidate_count": 0,
+  "sample_count": 7081,
+  "sampling_support_limited": false,
+  "single_band_corridor_related": "partial",
+  "smooth_fit_artifact": "medium",
+  "thermodynamic_margin_supported": "partial",
+  "topological_count": 1466,
+  "trivial_count": 3265,
+  "uniform_SC_count": 141,
+  "unresolved_count": 0
+}

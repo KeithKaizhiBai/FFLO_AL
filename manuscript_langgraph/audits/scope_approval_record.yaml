@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_SCOPE_APPROVAL",
+  "status": "approved",
+  "approved_at": "2026-08-08",
+  "authority": "human_user",
+  "scope_id": "AL_FFLO_PRL_PHYSICS_FIRST_V1",
+  "approved_scope": {
+    "main_narrative": [
+      "Stage I — 2D thermodynamic active-learning discovery",
+      "Stage II — numerically audited exact oracle and thermodynamic closure",
+      "Stage III — audited cFFLO/tFFLO topology result"
+    ],
+    "conditional": "Stage IV only as an explicitly non-converged 3D extension",
+    "discussion": "Stage V learned-acquisition experiments",
+    "outlook": "Stage VI ground-up world-model / EIG direction"
+  },
+  "retained_constraints": [
+    "Do not pass GATE_CLAIM_APPROVAL automatically.",
+    "Do not pass GATE_FIGURE_APPROVAL automatically.",
+    "Expand the Results-by-figure workflow to Figures 1–3 only after both approvals.",
+    "Prefer a matched multi-seed Figure 4; otherwise use an explicitly caveated Stage IV demonstration; omit Figure 4 if neither branch is authorized.",
+    "Do not run external Introduction retrieval until Results claims are frozen and retrieval permission is explicit.",
+    "Recover missing artifacts only from existing exported or archived files; do not recompute physics."
+  ]
+}

@@ -1,0 +1,13 @@
+public_language:
+- paragraph_with_full_phase_counts_and_four_thresholds
+- caption_with_all_operational_cutoffs
+- discussion_with_stage_v_metric_dump
+supplement_completeness:
+- five_member_ensemble_without_architecture
+- acquisition_components_without_formula
+- candidate_pool_without_size
+- stopping_threshold_without_definition
+- private_canonical_spec_dependency
+- algorithm_without_return_status_handling
+- missing_seed_policy
+- missing_training_hyperparameters

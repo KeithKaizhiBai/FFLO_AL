@@ -1,0 +1,56 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 3.0,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 91,
+  "lambda_state": {
+    "gap": 0.0,
+    "ns": 0.0,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 6784,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": 0.7062262623331523,
+    "rank_correlation_a0_ns": 0.7703367684297066,
+    "rank_correlation_a0_p0": 0.319805626066177,
+    "rank_correlation_a0_ppi": 0.10110439888292266,
+    "rank_correlation_a0_uf": 0.759971523180459,
+    "rank_correlation_delta_vs_a0_gap": -0.7062262623331523,
+    "rank_correlation_delta_vs_a0_ns": -0.02593815559106616,
+    "rank_correlation_delta_vs_a0_p0": 0.3325523832490841,
+    "rank_correlation_delta_vs_a0_ppi": 0.6065084567946887,
+    "rank_correlation_delta_vs_a0_uf": -0.2338193284671929,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.7443986128386404,
+    "rank_correlation_model_p0": 0.6523580093152611,
+    "rank_correlation_model_ppi": 0.7076128556776113,
+    "rank_correlation_model_uf": 0.5261521947132661,
+    "reward_sample_count": 6784,
+    "reward_sample_count_gap": 6784,
+    "reward_sample_count_ns": 6784,
+    "reward_sample_count_p0": 6784,
+    "reward_sample_count_ppi": 6784,
+    "reward_sample_count_uf": 6784,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

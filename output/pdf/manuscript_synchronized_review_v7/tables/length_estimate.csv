@@ -1,0 +1,11 @@
+component,equivalent_words,method
+body_and_section_headings,1621,TeXcount; abstract/title/authors/bibliography excluded
+captions,209,TeXcount caption text
+inline_math_allowance,36,one token per inline math expression; approximate
+displayed_equations,32,2 single-column rows x 16
+figure_1,444.9999999108146,double-column figure: 600/aspect + 40
+figure_2,444.4943820315575,double-column figure: 600/aspect + 40
+figure_3,444.4943820315575,double-column figure: 600/aspect + 40
+figure_4,444.4943820315575,double-column figure: 600/aspect + 40
+main_tables,0,none
+total_estimate,3676.483146005487,"estimate, not publisher certification"

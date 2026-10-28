@@ -1,0 +1,15 @@
+schema_version: 1
+template_id: schematic_template
+layout:
+  primary_area_fraction_min: 0.50
+  surrounding_workflow_allowed: true
+  connected_system_preferred: true
+  independent_cards_require_gutters: true
+connectors:
+  main: main_workflow
+  secondary: secondary_workflow
+  annotation: annotation_leader
+scientific:
+  schematic_state_must_be_declared: true
+  numerical_evidence_forbidden_without_data_source: true
+

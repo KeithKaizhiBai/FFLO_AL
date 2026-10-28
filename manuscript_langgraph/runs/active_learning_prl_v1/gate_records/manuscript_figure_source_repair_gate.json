@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_MANUSCRIPT_FIGURE_SOURCE_REPAIR",
+  "status": "PASS",
+  "decision": "approved_and_applied",
+  "evaluated_at": "2026-08-28",
+  "staged_figures": {
+    "FIG-01-PIPELINE": {
+      "source": "figures/fig1_engine_v4/fig1_engine_v4.pdf",
+      "staged": "output/pdf/manuscript_methods_sm_discussion_review_v1/figures/Fig1_candidate.pdf",
+      "sha256": "5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715"
+    },
+    "FIG-02-THERMO": {
+      "source": "figures/fig2_strict_data/fig2_strict_data.pdf",
+      "staged": "output/pdf/manuscript_methods_sm_discussion_review_v1/figures/Fig2_candidate.pdf",
+      "sha256": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec"
+    },
+    "FIG-03-STAGEIII-TOPOLOGY": {
+      "source": "figures/fig3_strict_data/fig3_strict_data.pdf",
+      "staged": "output/pdf/manuscript_methods_sm_discussion_review_v1/figures/Fig3_candidate.pdf",
+      "sha256": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8"
+    },
+    "FIG-04-STAGEIV-3D-EXTENSION": {
+      "source": "figures/fig4_strict_data/fig4_strict_data.pdf",
+      "staged": "output/pdf/manuscript_methods_sm_discussion_review_v1/figures/Fig4_candidate.pdf",
+      "sha256": "3eb78a0c3c479e5c7837ccb5e175b35349b06ad4b942383d8f569d0e60cb5ccb"
+    }
+  },
+  "results_pdf": {
+    "path": "output/pdf/manuscript_results_review_v1/results_review_packet.pdf",
+    "sha256": "9fff79d2ed33fdc4f178eae4f85c0cf610f8d5a2c35897a45339d9565401d280"
+  },
+  "main_pdf": {
+    "path": "output/pdf/manuscript_methods_sm_discussion_review_v1/manuscript_intermediate_review.pdf",
+    "sha256": "e120e3bce2bb914233e54a2ea7f6cf340f63a0b60254d1ef184034f6610ba75d"
+  },
+  "supplement_pdf": {
+    "path": "output/pdf/manuscript_methods_sm_discussion_review_v1/supplement_review.pdf",
+    "sha256": "3045066f68b99cd5bab9fc6966fc397e145eca8820a8a50e216be87a250a1eb6"
+  },
+  "external_retrieval_executed": false,
+  "physics_recomputed": false
+}

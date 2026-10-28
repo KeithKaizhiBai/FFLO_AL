@@ -24,6 +24,7 @@ class FlatDataset:
 
 
 OPTIONAL_RECORD_DEFAULTS: Dict[str, float | int] = {
+    "mu": 0.55,
     "q_min": np.nan,
     "q_max": np.nan,
     "n_q": 0,
@@ -52,6 +53,24 @@ OPTIONAL_RECORD_DEFAULTS: Dict[str, float | int] = {
     "trusted_exact": 1,
     "training_eligible_exact": 1,
     "needs_rerun_exact": 0,
+    "topology_enabled": 0,
+    "topology_applicable": 0,
+    "topology_pending": 1,
+    "topology_label_code": -1,
+    "topology_z2": -1,
+    "topology_spectral_status_code": -1,
+    "topology_trusted": 0,
+    "topology_p0": np.nan,
+    "topology_ppi": np.nan,
+    "topology_pf_product": np.nan,
+    "topology_pfaffian_margin": np.nan,
+    "topology_bulk_gap": np.nan,
+    "topology_k_at_bulk_gap": np.nan,
+    "topology_gap_tol": np.nan,
+    "topology_gap_nk": 0,
+    "topology_gap_backend_code": -1,
+    "topology_runtime_sec": np.nan,
+    "topology_error_code": 0,
 }
 
 
@@ -117,6 +136,7 @@ def _flatten_grid(npz_data: Dict[str, np.ndarray], cfg: ActiveLearningConfig) ->
     records = {
             "kT": x[:, 0],
             "JA": x[:, 1],
+            "mu": x[:, 2] if x.shape[1] >= 3 else np.full(x.shape[0], OPTIONAL_RECORD_DEFAULTS["mu"], dtype=np.float64),
             "delta_opt": y_reg[:, 0],
             "q_opt": y_reg[:, 1],
             "eta": y_reg[:, 2],
@@ -197,6 +217,7 @@ def load_flat_dataset(npz_path: Path) -> FlatDataset:
     records = {
             "kT": x[:, 0],
             "JA": x[:, 1],
+            "mu": x[:, 2] if x.shape[1] >= 3 else np.full(x.shape[0], OPTIONAL_RECORD_DEFAULTS["mu"], dtype=np.float64),
             "delta_opt": y_reg[:, 0],
             "q_opt": y_reg[:, 1],
             "eta": y_reg[:, 2],

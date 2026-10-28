@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "active_learning_prl_v1",
+  "graph_id": "evidence_first_prl_workflow",
+  "graph_entrypoint": "review_agent/graphs/prl_manuscript_graph.py:graph",
+  "runtime": "langgraph",
+  "checkpoint_backend": "langgraph.checkpoint.sqlite.SqliteSaver",
+  "checkpoint_path": "manuscript_langgraph/runs/active_learning_prl_v1/checkpoints/manuscript.sqlite",
+  "thread_id": "active_learning_prl_v1",
+  "target_journal": "undecided",
+  "working_layout": "prl_style_revtex",
+  "run_id_note": "historical provenance identifier; does not select PRL as the target journal",
+  "stop_after_node": "intro_citation_loop",
+  "expected_gate": "INTRO_CITATION_LOOP_GATE",
+  "results_package_path": "output/pdf/manuscript_results_review_v1",
+  "downstream_package_path": "output/pdf/manuscript_methods_sm_discussion_review_v1",
+  "external_retrieval_permission": false,
+  "new_physics_permission": false
+}

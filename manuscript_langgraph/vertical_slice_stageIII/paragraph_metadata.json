@@ -1,0 +1,38 @@
+[
+  {
+    "paragraph_id": "RES-STAGEIII-001",
+    "observation": "Analytic and numerical Pfaffian signs agree in 104/104 non-boundary cases, and the reported CPU/GPU bulk-gap difference is 7.77e-16 at N_k=2048.",
+    "interpretation": "Topology is assigned only after the thermodynamic and full-Brillouin-zone spectral reliability checks pass.",
+    "evidence_source": ["E-MODEL-SPEC", "E-NUMERICS-SPEC", "E-STAGEIII-PASS"],
+    "figure_reference": ["FIG-03-STAGEIII-TOPOLOGY:a"],
+    "claims_used": ["CLM-ORACLE-RELIABILITY", "CLM-2D-TOPOLOGY"],
+    "evidence_used": ["E-MODEL-SPEC", "E-NUMERICS-SPEC", "E-STAGEIII-PASS"],
+    "figure_panels_cited": ["FIG-03-STAGEIII-TOPOLOGY:a"],
+    "caveats": ["topology applies only to trusted gapped SC", "unresolved is not nodal"],
+    "unsupported_sentence_flags": []
+  },
+  {
+    "paragraph_id": "RES-STAGEIII-002",
+    "observation": "The final run contains 4345 unique samples, including 3213 trusted gapped FFLO points, and passes the configured map-change, shift, coverage, surprise, and component gates.",
+    "interpretation": "Under the configured audit, the connected cFFLO/tFFLO reconstruction supports Decision A without requesting an additional exact calculation.",
+    "evidence_source": ["E-STAGEIII-CONVERGENCE"],
+    "figure_reference": ["FIG-03-STAGEIII-TOPOLOGY:b", "FIG-03-STAGEIII-TOPOLOGY:c", "FIG-03-STAGEIII-TOPOLOGY:d"],
+    "claims_used": ["CLM-2D-TOPOLOGY"],
+    "evidence_used": ["E-STAGEIII-CONVERGENCE"],
+    "figure_panels_cited": ["FIG-03-STAGEIII-TOPOLOGY:b", "FIG-03-STAGEIII-TOPOLOGY:c", "FIG-03-STAGEIII-TOPOLOGY:d"],
+    "caveats": ["configured audit only", "recovered source bundle awaits manuscript redraw", "decision JSON source hash is the paired CSV hash"],
+    "unsupported_sentence_flags": []
+  },
+  {
+    "paragraph_id": "RES-STAGEIII-003",
+    "observation": "Changing the local-neighbor parameter from k=8 to k=6 raises coverage p95 from 0.006185 to 0.006269, slightly above the 0.00625 threshold, while the map and component structure remain stable.",
+    "interpretation": "The configured pass is supported but has a tight coverage sensitivity margin; local opposite-Z2 brackets remain support diagnostics rather than the final contour.",
+    "evidence_source": ["E-STAGEIII-CONVERGENCE"],
+    "figure_reference": ["FIG-03-STAGEIII-TOPOLOGY:b", "FIG-03-STAGEIII-TOPOLOGY:d"],
+    "claims_used": ["CLM-2D-TOPOLOGY"],
+    "evidence_used": ["E-STAGEIII-CONVERGENCE"],
+    "figure_panels_cited": ["FIG-03-STAGEIII-TOPOLOGY:b", "FIG-03-STAGEIII-TOPOLOGY:d"],
+    "caveats": ["k=6 sensitivity slightly exceeds nominal coverage threshold", "brackets are support diagnostics"],
+    "unsupported_sentence_flags": []
+  }
+]

@@ -1,0 +1,91 @@
+schema_version: 1
+rule_set: asset_rules
+authority: canonical
+
+all_assets:
+  require_id: true
+  require_role: true
+  require_type: true
+  require_source_or_schematic_generator: true
+  require_bbox: true
+  require_contract_entry: true
+  validate_independently_before_assembly: true
+  record_parameters_and_commit_hash_when_available: true
+
+vector_policy:
+  preferred_for: [text, axes, lines, markers, boundaries, annotations, schematics]
+  embedded_raster_allowed_for:
+    - dense_3d_surface
+    - dense_heatmap_when_vector_size_is_excessive
+  raster_requirements:
+    minimum_effective_dpi: 300
+    preferred_effective_dpi: 600
+    programmatic_only_for_scientific_assets: true
+    no_ai_generated_quantitative_evidence: true
+
+landscape_3d:
+  required: [surface_shading, semantic_colormap, lighting, minima_markers, minimal_axes]
+  forbidden: [wireframe_only, tiny_decorative_surface, topology_from_depth]
+
+phase_map:
+  required: [consistent_phase_colors, common_axes_for_comparison, boundary_semantics]
+  rules:
+    uncertainty_separate_from_phase_identity: true
+    sampling_points_distinct_from_boundaries: true
+    phase_background_consistent_across_trajectory_snapshots: true
+  forbidden: [rainbow_phase_identity, boundary_inferred_from_visual_smoothing_only]
+
+convergence_plot:
+  required: [raw_metric, units_or_definition, iteration_or_budget_axis]
+  threshold_line_requires_declared_source: true
+  threshold_line_requires_declared_scientific_or_numerical_basis: true
+  diagnostic_only_mode:
+    threshold_line: forbidden
+    pass_fail_label: forbidden
+    required_caption_semantics: numerical_diagnostic_not_physical_convergence_criterion
+  forbidden: [normalized_ratio_without_raw_metric, unsupported_threshold_line, unsupported_pass_fail_label]
+
+active_learning_trajectory:
+  required: [iteration_or_budget, sampled_points, common_domain]
+  forbidden: [changing_background_between_comparable_snapshots, duplicate_points_as_new_calls]
+
+topology_map:
+  required: [trusted_support_definition, bulk_gap_applicability, invariant_definition]
+  cfflo: gapped_bulk_nu_0
+  transition: bulk_gap_closing
+  tfflo: reopened_gapped_bulk_nu_1
+  boundary_states_must_be_visually_separate_from_bulk: true
+  forbidden:
+    - topological_phase_equals_nodal_bulk
+    - diagnostic_brackets_as_physical_boundaries
+    - unsupported_global_boundary
+
+topology_schematic:
+  required: [cfflo_gapped_nu0, transition_gap_closing, tfflo_reopened_gapped_nu1, boundary_state_separate]
+  forbidden: [tfflo_as_nodal_bulk, boundary_state_as_bulk_band]
+
+landscape_3d_and_topology:
+  required: [surface_shading, semantic_colormap, lighting, minima_markers, minimal_axes, cfflo_gapped_nu0, transition_gap_closing, tfflo_reopened_gapped_nu1, boundary_state_separate]
+  forbidden: [topology_from_depth, tfflo_as_nodal_bulk]
+
+boundary_extraction:
+  required: [support_definition, sampling_points_distinct_from_boundary]
+  support_must_be_visible_or_declared: true
+  sampling_points_distinct_from_boundary_line: true
+  forbidden: [raw_delaunay_edge_as_physical_boundary, bracket_midpoint_as_exact_truth]
+
+slice_atlas:
+  required: [shared_axes, shared_color_scale, fixed_slice_parameter_labels]
+  overview_and_slices_must_be_linked: true
+  forbidden: [independent_auto_scaling_without_disclosure, duplicated_3d_clouds]
+
+high_dimensional_visualization:
+  required: [projection_or_slice_definition, topology_nonclosure_caveat_when_applicable]
+  require_explicit_projection_or_slice_definition: true
+  topology_nonclosure_caveat_when_applicable: true
+  forbidden: [complete_atlas_claim_without_convergence, visual_density_as_coverage_proof]
+
+workflow_schematic:
+  prefer_connected_systems: true
+  physical_solver_must_not_be_replaced_by_ml: true
+  primary_physical_object_must_dominate: true

@@ -1,0 +1,14 @@
+{
+  "final_dataset": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\\ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1\\dataset_iter025.npz",
+  "final_dataset_sha256": "7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842",
+  "output_dir": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\\ML_Phase_StageIV_Topology3D\\reports\\stageiv_3d_return_report_local",
+  "package_root": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624",
+  "pdf_status": {
+    "pdf_built": true,
+    "pdf_requested": true,
+    "pdflatex": "C:\\texlive\\2023\\bin\\windows\\pdflatex.EXE",
+    "returncode": 0
+  },
+  "run_dir": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\\ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "sample_count": 7081
+}

@@ -1,0 +1,116 @@
+schema_version: 1
+figure_id: FIG-04-STAGEIV-3D-STRICT-V2
+physics_recomputed: false
+render_authorized: true
+continuous_surface_authorized: false
+sources:
+  dataset_iter025:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz
+    sha256: 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+    version: dataset_iter025
+    row_count: 7081
+    fields:
+    - x
+    - y_reg
+    - y_phase
+    - y_eta_sign
+    - y_strong_diode
+    - mu
+    - q_min
+    - q_max
+    - n_q
+    - q_index
+    - q_edge_distance
+    - q_edge_hit
+    - q_refinement_level
+    - q_status
+    - q_expanded
+    - q_unresolved
+    - delta_min
+    - delta_max
+    - n_delta
+    - n_delta_refined
+    - delta_refinement_level
+    - delta_status
+    - delta_boundary_ambiguous
+    - delta_boundary_band_normal
+    - delta_refined
+    - delta_unresolved
+    - free_energy_gap_to_normal
+    - positive_delta_gap
+    - positive_delta_checked
+    - phase_candidate
+    - exact_status_code
+    - trusted_exact
+    - training_eligible_exact
+    - needs_rerun_exact
+    - topology_enabled
+    - topology_applicable
+    - topology_pending
+    - topology_label_code
+    - topology_z2
+    - topology_spectral_status_code
+    - topology_trusted
+    - topology_p0
+    - topology_ppi
+    - topology_pf_product
+    - topology_pfaffian_margin
+    - topology_bulk_gap
+    - topology_k_at_bulk_gap
+    - topology_gap_tol
+    - topology_gap_nk
+    - topology_gap_backend_code
+    - topology_runtime_sec
+    - topology_error_code
+    units:
+      x[:,0]: kBT/t
+      x[:,1]: JA/t
+      x[:,2]: mu/t
+      topology_z2: Z2 code
+  stageiv_narrow_mu_slice_metrics:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/figure_data/stageiv_mu_slice_boundary_audit_local/stageiv_narrow_mu_slice_metrics.csv
+    sha256: b04df1392a6464e945f5c9467d00b5457933d00b6a8e161fd11752f826f807e7
+    version: stageiv_narrow_mu_slice_metrics
+    row_count: 20
+    fields:
+    - mu_center
+    - slice_half_width
+    - exact_points
+    - normal_count
+    - uniform_SC_count
+    - FFLO_count
+    - trusted_count
+    - normal_sc_bracket_count
+    - low_support_warning
+    - support_status
+    units:
+      mu_center: mu/t
+      slice_half_width: mu/t
+invariants:
+  total: 7081
+  phase_counts:
+    normal: 2350
+    uniform_SC: 141
+    FFLO: 4590
+  topology_counts:
+    cFFLO: 3265
+    tFFLO: 1466
+  diagnostic_surface_status: blocked_from_main_artwork_without_explicit_authorization
+  topology_counts_all_applicable_SC:
+    trivial: 3265
+    topological: 1466
+  topology_counts_trusted_FFLO_only:
+    cFFLO: 3145
+    tFFLO: 1445
+  evidence_scope: finite domain; discrete exact observations; no inferred continuous
+    topology surface
+render_authority: User-authorized Fig.4(d) removal on 2026-08-31
+canonical_outputs:
+  fig4_exact_3d_samples.csv:
+    sha256: 079222624941f1130fd1718fe9228b08a8638c9c6fc13577b6b0a98a3cf045d4
+    rows: 7081
+  fig4_selected_fixed_mu_slices.csv:
+    sha256: 9d349d7ff3a431a3a8e25e937f3d0521cdac5642a38ada818921a6560d262e62
+    rows: 4
+thresholds_used_for_rendering: false
+pass_fail_labels_used_for_rendering: false

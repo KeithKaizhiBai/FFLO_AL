@@ -1,0 +1,5 @@
+figure_id,scientific_role,evidence_ids,status,main_caveat
+FIG-01-PIPELINE,define reliability-aware oracle labels and AL loop enabling 2D-to-3D exploration,E-MODEL-SPEC;E-NUMERICS-SPEC;E-PHASEII-AUDIT,ready_for_redraw_pending_figure_approval,schematic is explanatory not numerical evidence
+FIG-02-THERMO,show 2D thermodynamic discovery and convergence,E-PHASEII-AUDIT,evidence_recovered_pending_figure_approval_and_redraw,hard-risk layer must remain visible
+FIG-03-STAGEIII-TOPOLOGY,show cFFLO/tFFLO result and convergence,E-STAGEIII-PASS;E-STAGEIII-CONVERGENCE,evidence_recovered_pending_figure_approval_and_redraw,k=6 sensitivity slightly misses coverage threshold; preserve CSV-hash metadata note
+FIG-04-STAGEIV-3D-EXTENSION,show caveated higher-dimensional 3D extension,E-STAGEIV-AUDIT,main_text_candidate_evidence_recovered_pending_figure_approval_and_redraw,strict 3D topology convergence not closed; diagnostic surfaces are not exact boundaries

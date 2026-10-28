@@ -1,0 +1,42 @@
+schema_version: 1
+rule_set: color_rules
+authority: canonical
+
+principles:
+  semantic_colors_only: true
+  stable_across_figures: true
+  low_saturation_backgrounds: true
+  stronger_accents_for_primary_information: true
+  uncertainty_separate_from_phase_identity: true
+
+required_levels: [dark, base, highlight, tint]
+
+semantic_categories:
+  exact_computation: exact
+  physical_information: physical
+  learning: learning
+  decision: decision
+  selected_exact_calls: selected
+  uncertainty: uncertainty
+  topology_cfflo: topology_cfflo
+  topology_transition: topology_transition
+  topology_tfflo: topology_tfflo
+  boundary_state: boundary_state
+
+forbidden:
+  - random_rainbow
+  - default_matplotlib_cycle
+  - high_saturation_everywhere
+  - same_color_for_phase_and_uncertainty
+  - red_as_decorative_warning_banner
+
+contrast:
+  body_text_on_background_min_ratio: 4.5
+  large_text_on_background_min_ratio: 3.0
+  key_line_against_background_min_ratio: 3.0
+  grayscale_distinguishability_required: true
+
+local_overrides:
+  allowed_only_if_semantic_alias_declared: true
+  every_extra_color_requires_role_and_reason: true
+

@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "minimum_reference_count": 45,
+  "target_reference_count": 50,
+  "maximum_reference_count": 55,
+  "paragraph_count": 6,
+  "citation_command_count": 14,
+  "unique_citation_count": 50,
+  "bibliography_entry_count": 50,
+  "missing_bibliography_definitions": [],
+  "claim_matrix_sources_not_cited": [],
+  "unused_bibliography_entries": [],
+  "unsupported_novelty_claim_detected": false,
+  "external_sources_used_as_project_result_evidence": false,
+  "stage_iii_k6_caveat_required_downstream": true,
+  "stage_iv_nonclosure_required_downstream": true
+}

@@ -1,0 +1,90 @@
+schema_version: 1
+rule_set: strict_data_rules
+authority: canonical
+
+track_id: STRICT_DATA_FIGURE_TRACK
+
+panel_types:
+  EXACT_SAMPLE_DATA:
+    additional_gates: []
+  DERIVED_NUMERICAL_DATA:
+    additional_gates: [GATE_TRANSFORMATION_AUTHORIZATION]
+  DERIVED_BOUNDARY_GEOMETRY:
+    additional_gates: [GATE_TRANSFORMATION_AUTHORIZATION, GATE_SCIENTIFIC_INVARIANTS]
+  INTERPOLATED_FIELD:
+    additional_gates: [GATE_TRANSFORMATION_AUTHORIZATION, GATE_SCIENTIFIC_INVARIANTS]
+    default_authorized: false
+  SCHEMATIC_ANNOTATION:
+    additional_gates: []
+    quantitative_claim: false
+  HYBRID_DATA_SCHEMATIC:
+    additional_gates: [GATE_DATA_SEMANTICS]
+
+gates:
+  - GATE_DATA_SCOPE_FREEZE
+  - GATE_SOURCE_PROVENANCE
+  - GATE_DATA_SEMANTICS
+  - GATE_TRANSFORMATION_AUTHORIZATION
+  - GATE_REPRODUCIBLE_RECONSTRUCTION
+  - GATE_SCIENTIFIC_INVARIANTS
+  - GATE_VISUAL_NARRATIVE
+  - GATE_STYLE_AND_LAYOUT
+  - GATE_EXPORT_INTEGRITY
+  - GATE_HUMAN_SCIENCE_REVIEW
+  - GATE_HUMAN_VISUAL_REVIEW
+  - GATE_FIGURE_FREEZE
+
+transformation_defaults:
+  interpolation: {enabled: false, authorized: false}
+  smoothing: {enabled: false, authorized: false}
+  boundary_extraction: {enabled: false, authorized: false}
+  aggregation: {enabled: false, authorized: false}
+  normalization: {enabled: false, authorized: false}
+
+phase_mapping: {normal: 0, uniform_SC: 1, FFLO: 2}
+hard_risk_is_phase: false
+
+topology:
+  trusted_subset_required: true
+  cFFLO_nu: 0
+  tFFLO_nu: 1
+  gap_closing_is_stable_phase: false
+  k6_sensitivity_required: true
+
+convergence:
+  raw_metric_in_main_text: false
+  raw_metric_in_supplement: preferred
+  normalized_gate_ratio_as_only_main_metric: forbidden
+  smoothing_default: forbidden
+  threshold_line_requires_declared_scientific_or_numerical_basis: true
+  operational_threshold_without_declared_basis:
+    allowed_as_physical_convergence_claim: false
+    allowed_as_pass_fail_visual: false
+    presentation: supplement_only_raw_diagnostic_without_threshold_line
+
+high_dimensional:
+  evidence_scope_caveat_required: true
+  evidence_scope_examples:
+    - finite sampled domain
+    - discrete exact support
+    - no inferred continuous surface
+  forbidden_claims:
+    - complete 3D phase diagram
+    - fully converged 3D topology surface
+    - complete 3D topology atlas
+    - exhaustive 3D phase discovery
+
+source_policy:
+  archive_read_only: true
+  source_hash_required: true
+  source_version_required: true
+  row_count_required: true
+  fields_required: true
+  units_required: true
+  missing_values_may_not_become_phase: true
+
+human_review_only:
+  - exact_sample_density_is_visually_truthful
+  - caveat_prominence_is_sufficient
+  - data_and_schematic_layers_cannot_be_misread
+  - panel_supports_claim_without_overstatement

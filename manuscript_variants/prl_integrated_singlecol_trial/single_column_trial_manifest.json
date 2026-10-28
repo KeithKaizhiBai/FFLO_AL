@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "trial_id": "PRL_INTEGRATED_SINGLE_COLUMN_FIG2_TO_FIG4_V1",
+  "source_candidate_pdf": "output/pdf/manuscript_prl_integrated_v1/manuscript_prl_integrated_candidate.pdf",
+  "source_candidate_sha256": "5846a2b4ec76a25e4824a012aa45f8451a92ccf1d743e5c97b61576b452af222",
+  "trial_pdf": "output/pdf/manuscript_prl_integrated_singlecol_trial_v1/manuscript_prl_integrated_singlecol_trial.pdf",
+  "trial_pdf_sha256": "7cbcd6ba4d8fd629d0116c45edb0ede44f765f79f402c704b5273c32ac9877c1",
+  "layout": {
+    "fig1": "double_column",
+    "fig2": "single_column",
+    "fig3": "single_column",
+    "fig4": "single_column"
+  },
+  "revtex_column_width_pt": 246.0,
+  "revtex_text_width_pt": 510.0,
+  "compiled_page_count": 4,
+  "anchor_pages": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 3
+  },
+  "figure_pages": {
+    "1": 2,
+    "2": 3,
+    "3": 3,
+    "4": 4
+  },
+  "placement_status": "PASS",
+  "scale_audit": [
+    {
+      "figure_id": "FIG-02-THERMO",
+      "native_width_pt": 504.567,
+      "placed_width_pt": 246.0,
+      "scale_factor": 0.4875,
+      "projected_minimum_internal_text_pt_from_registered_7pt": 3.41,
+      "automatic_readability_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "figure_id": "FIG-03-STAGEIII-TOPOLOGY",
+      "native_width_pt": 504.567,
+      "placed_width_pt": 246.0,
+      "scale_factor": 0.4875,
+      "projected_minimum_internal_text_pt_from_registered_7pt": 3.41,
+      "automatic_readability_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "figure_id": "FIG-04-STAGEIV-3D-EXTENSION",
+      "native_width_pt": 504.567,
+      "placed_width_pt": 246.0,
+      "scale_factor": 0.4875,
+      "projected_minimum_internal_text_pt_from_registered_7pt": 3.41,
+      "automatic_readability_status": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "frozen_figure_hashes": {
+    "FIG-01-PIPELINE": "5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715",
+    "FIG-02-THERMO": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "FIG-03-STAGEIII-TOPOLOGY": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "FIG-04-STAGEIV-3D-EXTENSION": "3eb78a0c3c479e5c7837ccb5e175b35349b06ad4b942383d8f569d0e60cb5ccb"
+  },
+  "frozen_figures_modified": false,
+  "captions_modified": false,
+  "scientific_text_modified": false,
+  "original_candidate_modified": false,
+  "overfull_box_count": 0,
+  "underfull_box_count": 0,
+  "codex_visual_review": "PASS_AS_LAYOUT_PROOF_FAIL_AS_FINAL_DIRECT_SCALE",
+  "human_visual_review": "PENDING",
+  "gate_effect": "none"
+}

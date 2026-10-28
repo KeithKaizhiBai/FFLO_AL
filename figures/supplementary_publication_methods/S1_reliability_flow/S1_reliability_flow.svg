@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1152pt" height="720pt" viewBox="0 0 1152 720" version="1.1" data-figure-id="SM-FIG-RELIABILITY-FLOW-V1" data-contract="figure_contract.yaml" data-engine-schema="3">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-08-31T21:19:31.769360</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720  L 1152 720  L 1152 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 115.75296 318.5568  L 296.20224 318.5568  Q 314.44992 318.5568 314.44992 307.9296  L 314.44992 196.9344  Q 314.44992 186.3072 296.20224 186.3072  L 115.75296 186.3072  Q 97.50528 186.3072 97.50528 196.9344  L 97.50528 307.9296  Q 97.50528 318.5568 115.75296 318.5568  z " clip-path="url(#p9a99a9a79e)" style="fill: #f5f3ef; stroke: #12604e; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 379.33056 318.5568  L 559.77984 318.5568  Q 578.02752 318.5568 578.02752 307.9296  L 578.02752 196.9344  Q 578.02752 186.3072 559.77984 186.3072  L 379.33056 186.3072  Q 361.08288 186.3072 361.08288 196.9344  L 361.08288 307.9296  Q 361.08288 318.5568 379.33056 318.5568  z " clip-path="url(#p9a99a9a79e)" style="fill: #fbfdfc; stroke: #b73742; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_4">
+    <path d="M 642.90816 318.5568  L 803.08224 318.5568  Q 821.32992 318.5568 821.32992 307.9296  L 821.32992 196.9344  Q 821.32992 186.3072 803.08224 186.3072  L 642.90816 186.3072  Q 624.66048 186.3072 624.66048 196.9344  L 624.66048 307.9296  Q 624.66048 318.5568 642.90816 318.5568  z " clip-path="url(#p9a99a9a79e)" style="fill: #d9dee6; stroke: #81739b; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_5">
+    <path d="M 886.21056 265.4208  L 1036.24704 265.4208  Q 1054.49472 265.4208 1054.49472 254.7936  L 1054.49472 167.4144  Q 1054.49472 156.7872 1036.24704 156.7872  L 886.21056 156.7872  Q 867.96288 156.7872 867.96288 167.4144  L 867.96288 254.7936  Q 867.96288 265.4208 886.21056 265.4208  z " clip-path="url(#p9a99a9a79e)" style="fill: #fbfdfc; stroke: #12604e; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_6">
+    <path d="M 886.21056 424.8288  L 1036.24704 424.8288  Q 1054.49472 424.8288 1054.49472 414.2016  L 1054.49472 326.8224  Q 1054.49472 316.1952 1036.24704 316.1952  L 886.21056 316.1952  Q 867.96288 316.1952 867.96288 326.8224  L 867.96288 414.2016  Q 867.96288 424.8288 886.21056 424.8288  z " clip-path="url(#p9a99a9a79e)" style="fill: #f5f3ef; stroke: #7b46b3; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_7">
+    <path d="M 642.90816 537.0048  L 803.08224 537.0048  Q 821.32992 537.0048 821.32992 526.3776  L 821.32992 438.9984  Q 821.32992 428.3712 803.08224 428.3712  L 642.90816 428.3712  Q 624.66048 428.3712 624.66048 438.9984  L 624.66048 526.3776  Q 624.66048 537.0048 642.90816 537.0048  z " clip-path="url(#p9a99a9a79e)" style="fill: #fbfdfc; stroke: #2e966f; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_8">
+    <path d="M 886.21056 548.8128  L 1036.24704 548.8128  Q 1054.49472 548.8128 1054.49472 538.1856  L 1054.49472 450.8064  Q 1054.49472 440.1792 1036.24704 440.1792  L 886.21056 440.1792  Q 867.96288 440.1792 867.96288 450.8064  L 867.96288 538.1856  Q 867.96288 548.8128 886.21056 548.8128  z " clip-path="url(#p9a99a9a79e)" style="fill: #fbfdfc; stroke: #843ead; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(154.5776 249.654188)">Exact BdG evaluation</text>
+    
+    <g style="fill: #252b36" transform="translate(157.3276 260.267625)">
+     <text>
+      <tspan x="0" y="-0.84375" style="font-style: italic; font-size: 10px; font-family: 'STIXGeneral'; fill: #252b36">F</tspan>
+      <tspan x="20.60394" y="-0.84375" style="font-style: italic; font-size: 10px; font-family: 'STIXGeneral'; fill: #252b36">q</tspan>
+      <tspan x="6.109985" y="-0.84375" style="font-size: 10px; font-family: 'STIXGeneral'; fill: #252b36">(</tspan>
+      <tspan x="9.439972" y="-0.84375" style="font-size: 10px; font-family: 'STIXGeneral'; fill: #252b36">Δ</tspan>
+      <tspan x="16.659958" y="-0.84375" style="font-size: 10px; font-family: 'STIXGeneral'; fill: #252b36">,</tspan>
+      <tspan x="25.603925" y="-0.84375" style="font-size: 10px; font-family: 'STIXGeneral'; fill: #252b36">)</tspan>
+      <tspan x="28.933911" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="31.712231" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">a</tspan>
+      <tspan x="37.273755" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">n</tspan>
+      <tspan x="43.382153" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">d</tspan>
+      <tspan x="49.490552" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="52.268872" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">s</tspan>
+      <tspan x="57.830396" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">p</tspan>
+      <tspan x="63.938794" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">e</tspan>
+      <tspan x="69.500317" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">c</tspan>
+      <tspan x="75.061841" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">t</tspan>
+      <tspan x="78.391919" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">r</tspan>
+      <tspan x="82.283521" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">u</tspan>
+      <tspan x="88.391919" y="-0.84375" style="font-weight: 700; font-size: 10px; font-family: 'Arial'; fill: #252b36">m</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(436.788872 249.925641)">Adaptive checks</text>
+    
+    <g style="fill: #252b36" transform="translate(417.2652 259.490391)">
+     <text>
+      <tspan x="0" y="-0.5625" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">q</tspan>
+      <tspan x="4.5" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="7.000488" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">w</tspan>
+      <tspan x="13.5" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">i</tspan>
+      <tspan x="15.499512" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">n</tspan>
+      <tspan x="20.504883" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">d</tspan>
+      <tspan x="25.510254" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">o</tspan>
+      <tspan x="30.515625" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">w</tspan>
+      <tspan x="37.015137" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="39.515625" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">a</tspan>
+      <tspan x="44.520996" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">n</tspan>
+      <tspan x="49.526367" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">d</tspan>
+      <tspan x="54.531738" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="57.032227" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">n</tspan>
+      <tspan x="62.037598" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">e</tspan>
+      <tspan x="67.042969" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">a</tspan>
+      <tspan x="72.04834" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">r</tspan>
+      <tspan x="75.04541" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">-</tspan>
+      <tspan x="78.04248" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">z</tspan>
+      <tspan x="82.54248" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">e</tspan>
+      <tspan x="87.547852" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">r</tspan>
+      <tspan x="90.544922" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">o</tspan>
+      <tspan x="95.550293" y="-0.5625" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="98.050781" y="-0.5625" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">Δ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(689.486372 249.999047)">Numerical status</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(674.973169 259.518234)">reliable / delicate / rerun</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(932.468878 208.683703)">Reliable label</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(920.226769 218.190234)">Normal / SC / FFLO</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(930.964191 368.026313)">Flagged record</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(933.963019 377.650969)">kept separate</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(680.968716 480.135234)">Topology applicable?</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(679.473169 489.898266)">reliable gapped FFLO</text>
+   </g>
+   <g id="text_7">
+    
+    <g style="fill: #252b36" transform="translate(937.1988 491.9445)">
+     <text>
+      <tspan x="0" y="-0.921875" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">ν</tspan>
+      <tspan x="30.497607" y="-0.921875" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">ν</tspan>
+      <tspan x="5.529596" y="-0.921875" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">=</tspan>
+      <tspan x="12.994189" y="-0.921875" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">0</tspan>
+      <tspan x="36.027203" y="-0.921875" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">=</tspan>
+      <tspan x="43.491797" y="-0.921875" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">1</tspan>
+      <tspan x="17.494189" y="-0.921875" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="19.994678" y="-0.921875" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">o</tspan>
+      <tspan x="25.000049" y="-0.921875" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">r</tspan>
+      <tspan x="27.997119" y="-0.921875" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+     </text>
+    </g>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(916.034034 501.595312)">from gap and Pfaffians</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 307.287394 252.432  Q 337.769616 252.432 366.574787 252.432  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 362.574787 250.432  L 366.574787 252.432  L 362.574787 254.432  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_10">
+    <path d="M 570.864994 252.432  Q 601.347216 252.432 630.152387 252.432  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 626.152387 250.432  L 630.152387 252.432  L 626.152387 254.432  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_11">
+    <path d="M 813.907519 233.14166  Q 844.647257 222.911715 873.795747 213.211325  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 869.368867 212.576713  L 873.795747 213.211325  L 870.631929 216.372062  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_12">
+    <path d="M 812.051578 274.226963  Q 844.646946 320.328773 876.274138 365.061226  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 875.597956 360.640504  L 876.274138 365.061226  L 872.331852 362.949739  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_13">
+    <path d="M 728.064 316.470256  Q 728.064 373.463077 728.064 428.778846  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 730.064 424.778846  L 728.064 428.778846  L 726.064 424.778846  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_14">
+    <path d="M 814.098094 483.508881  Q 844.648613 488.592368 873.544826 493.400586  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 869.927356 490.771154  L 873.544826 493.400586  L 869.270799 494.716903  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #252b36" x="576" y="110.736" transform="rotate(-0 576 110.736)">Exact-oracle reliability-state flow</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #252b36" x="576" y="612.576" transform="rotate(-0 576 612.576)">Phase identity and numerical reliability are stored separately; only reliable gapped FFLO states enter topology.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9a99a9a79e">
+   <rect x="69.12" y="57.6" width="1013.76" height="590.4" />
+  </clipPath>
+ </defs>
+</svg>

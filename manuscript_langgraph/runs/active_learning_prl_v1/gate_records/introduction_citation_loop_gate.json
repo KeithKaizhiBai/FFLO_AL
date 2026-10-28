@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "gate_id": "INTRO_CITATION_LOOP_GATE",
+  "status": "HUMAN_WAIT",
+  "evidence": [],
+  "findings": [
+    "Results are frozen; Introduction retrieval still requires explicit external-retrieval approval",
+    "claim needs, citation requirements, bibliography audit, and retrieval plan were prepared without external access",
+    "intermediate main-text and Supplemental Material review PDFs were compiled"
+  ],
+  "next_action": "approve external retrieval separately after Results stabilization",
+  "decision": "permission_not_granted",
+  "external_retrieval_executed": false
+}

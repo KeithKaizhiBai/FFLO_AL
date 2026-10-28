@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "control_errors": [],
+  "negative_cases": [
+    {
+      "id": "wrong_phase_count",
+      "expected": "wrong_phase_count",
+      "errors": [
+        "wrong_phase_count"
+      ],
+      "detected": true
+    },
+    {
+      "id": "phase_color_swap",
+      "expected": "phase_color_swap",
+      "errors": [
+        "phase_color_swap"
+      ],
+      "detected": true
+    },
+    {
+      "id": "hard_risk_as_fourth_phase",
+      "expected": "hard_risk_as_fourth_phase",
+      "errors": [
+        "hard_risk_as_fourth_phase",
+        "phase_mapping_invalid"
+      ],
+      "detected": true
+    },
+    {
+      "id": "missing_units",
+      "expected": "missing_units",
+      "errors": [
+        "missing_units"
+      ],
+      "detected": true
+    },
+    {
+      "id": "unauthorized_interpolation",
+      "expected": "unauthorized_interpolation",
+      "errors": [
+        "unauthorized_interpolation"
+      ],
+      "detected": true
+    },
+    {
+      "id": "unauthorized_smoothing",
+      "expected": "unauthorized_smoothing",
+      "errors": [
+        "unauthorized_smoothing"
+      ],
+      "detected": true
+    },
+    {
+      "id": "missing_trusted_topology_mask",
+      "expected": "missing_trusted_topology_mask",
+      "errors": [
+        "missing_trusted_topology_mask"
+      ],
+      "detected": true
+    },
+    {
+      "id": "missing_k6_sensitivity",
+      "expected": "missing_k6_sensitivity",
+      "errors": [
+        "missing_k6_sensitivity"
+      ],
+      "detected": true
+    },
+    {
+      "id": "gap_closing_labeled_as_phase",
+      "expected": "gap_closing_labeled_as_phase",
+      "errors": [
+        "gap_closing_labeled_as_phase"
+      ],
+      "detected": true
+    },
+    {
+      "id": "normalized_gate_ratio_used_as_main_convergence",
+      "expected": "normalized_gate_ratio_used_as_main_convergence",
+      "errors": [
+        "normalized_gate_ratio_used_as_main_convergence"
+      ],
+      "detected": true
+    },
+    {
+      "id": "3d_complete_atlas_claim",
+      "expected": "3d_complete_atlas_claim",
+      "errors": [
+        "3d_complete_atlas_claim"
+      ],
+      "detected": true
+    },
+    {
+      "id": "3d_missing_evidence_scope_caveat",
+      "expected": "3d_missing_evidence_scope_caveat",
+      "errors": [
+        "3d_missing_evidence_scope_caveat"
+      ],
+      "detected": true
+    },
+    {
+      "id": "unsupported_threshold_line_in_diagnostic_mode",
+      "expected": "unsupported_threshold_line_in_diagnostic_mode",
+      "errors": [
+        "unsupported_threshold_line_in_diagnostic_mode"
+      ],
+      "detected": true
+    },
+    {
+      "id": "unsupported_pass_fail_label_in_diagnostic_mode",
+      "expected": "unsupported_pass_fail_label_in_diagnostic_mode",
+      "errors": [
+        "unsupported_pass_fail_label_in_diagnostic_mode"
+      ],
+      "detected": true
+    },
+    {
+      "id": "exact_and_interpolated_layers_indistinguishable",
+      "expected": "exact_and_interpolated_layers_indistinguishable",
+      "errors": [
+        "exact_and_interpolated_layers_indistinguishable"
+      ],
+      "detected": true
+    }
+  ]
+}

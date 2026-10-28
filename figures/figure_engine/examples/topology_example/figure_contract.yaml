@@ -1,0 +1,36 @@
+schema_version: 1
+figure_id: EXAMPLE-TOPOLOGY
+figure_type: manuscript
+template: multi_panel_template
+scientific_message: Trusted bulk gaps and Pfaffian signs resolve topology with support-limited boundaries and convergence audits.
+primary_object: {id: topology_map, asset_type: topology_map, scientific_role: cfflo_tfflo_resolution, visual_role: primary}
+secondary_objects:
+  - {id: boundary_support, asset_type: boundary_extraction, scientific_role: diagnostic_support, visual_role: secondary}
+  - {id: convergence, asset_type: convergence_plot, scientific_role: topology_audit, visual_role: secondary}
+tertiary_information: [{id: sensitivity, scientific_role: neighbor_sensitivity, visual_role: tertiary}]
+data_sources: [frozen_topology_dataset.npz, topology_audit.csv]
+assets:
+  - {id: topology_map, type: topology_map, source: frozen_topology_dataset.npz, schematic: false, bbox: required, features: [trusted_support_definition, bulk_gap_applicability, invariant_definition]}
+  - {id: boundary_support, type: boundary_extraction, source: topology_audit.csv, schematic: false, bbox: required, features: [support_definition, sampling_points_distinct_from_boundary]}
+  - {id: convergence, type: convergence_plot, source: topology_audit.csv, schematic: false, bbox: required, features: [raw_metric, units_or_definition, iteration_or_budget_axis]}
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1100], print_mm: [178.0, 122.4]}
+  template_profile: topology
+  bounding_boxes: {}
+  alignment_anchors: [trusted_topology_axes, sensitivity_axis]
+  declared_overlays: [support_band]
+  declared_exceptions: []
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {cfflo: topology_cfflo, transition: topology_transition, tfflo: topology_tfflo, boundary: boundary_state}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+text_budget: {maximum_words_in_artwork: 100, maximum_words_per_panel: 24, minimum_font_size_pt: 7.0, move_excess_to: caption_or_supplement}
+required_elements: [bulk_gap_applicability, Pfaffian_invariant, support_only_boundary]
+required_labels: [cFFLO, tFFLO]
+forbidden_elements: [global_unsupported_boundary, raw_Delaunay_boundary]
+forbidden_claims: [topological phase equals nodal bulk]
+validation_requirements: {hard_fail: true, require_geometry_manifest: true, require_editable_svg: true, require_pdf: true, require_png_preview: true, require_grayscale_review: true, require_engine_preflight: true}
+provenance: {physics_recomputed: false, parameters_recorded: true, commit_hash_when_available: true}
+approval: {gate: EXAMPLE_GATE, state: HUMAN_WAIT}

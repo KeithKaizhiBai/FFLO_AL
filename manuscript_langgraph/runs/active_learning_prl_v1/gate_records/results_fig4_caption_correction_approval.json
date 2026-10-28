@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_RESULTS_FIG4_CAPTION_CORRECTION",
+  "decision": "approved_and_applied",
+  "approved_at": "2026-08-27",
+  "approval_authority": "explicit_user_instruction_in_active_task",
+  "scope": "Fig. 4 panel-C slice count/centers and Results-review approved-artwork binding",
+  "changes": [
+    "Results RES-FIG4-001: four explicit bins -> three explicit bins",
+    "Figure 4 caption panel c: centers [-0.45,0.15,0.85,1.45] -> [-0.35,0.55,1.25]",
+    "Results review packet: earlier four-slice strict-data prototype -> approved final three-slice Fig4_candidate.pdf"
+  ],
+  "unchanged": [
+    "Figure 4 artwork",
+    "frozen data",
+    "physics",
+    "counts",
+    "convergence metrics",
+    "scientific claim"
+  ],
+  "corrected_artifacts": {
+    "results_candidate.tex": "c912d2af2cd464e5dd920fc6bd0f2093ed968e499bd1e4f78dbd2b06e59bbbcd",
+    "results_candidate.md": "b40ea82c082ce5940642474d24aaa2b9afe5a3063f2e635fc3e17e940392c8ff",
+    "figure_captions_candidate.tex": "9437b710ada078ea7bac1d8ee72925d6d261ea36719a71642643d1343a1fb8ca",
+    "results_sentence_evidence_trace.yaml": "978a017275d332749da3e9185f268d57ac79ae590d9c88406fa81b4674d91b6f",
+    "figure_caption_evidence_trace.yaml": "2b6880763b0d639a9d30db01d30452dda89a0244bfc33648b7b8a7bc6ebc18ad",
+    "paragraph_metadata.json": "8e393db6f844bcacd346f908a0e3659c6c3d4bf9e3e7343ed49e71e07a3c3e7f",
+    "results_review_packet.tex": "5e330a4c97070c8bd00fd6089aedeb429907381c105f0427ab6dee374d8c11c4",
+    "results_review_packet.pdf": "e2370aca772f1baae0d5be7e9d470e252604ad3372addfeb5e16a3aa2833529e"
+  },
+  "external_retrieval_permission": false,
+  "new_physics_permission": false
+}

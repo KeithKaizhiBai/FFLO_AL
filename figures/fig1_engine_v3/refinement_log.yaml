@@ -1,0 +1,33 @@
+schema_version: 1
+figure_id: FIG-01-ENGINE-V3
+date: 2026-08-26
+proposal_gate: {gate: GATE_FIG1_V3_PROPOSAL, state: APPROVED}
+physics_recomputed: false
+card_architecture_changed: false
+engine_rules_changed: false
+
+changes:
+  - id: primary_scientific_surface_fill
+    source: frozen schematic free-energy generator used by prior Fig.1 assets
+    action: tightly crop the real 3D surface render and place it in the declared scientific-content bbox
+    before_engine_v1_fill_ratio: 0.2029499656872554
+    after_v3_measured_fill_ratio: 0.7168780588365871
+    threshold: 0.65
+  - id: primary_scientific_subobject
+    action: register thermodynamic_landscape independently from its parent central card
+  - id: topology_second_layer
+    action: preserve separate cFFLO, isolated closing, and reopened tFFLO triptych below the landscape
+  - id: frozen_inputs
+    action: retain v2 BdG/observation and v5 peripheral assets without modification
+
+scientific_caveats:
+  - phase markers are representative minima at different parameter points
+  - topology is resolved by gap and Pfaffian evidence, not free-energy depth
+  - red tFFLO branches are in-gap boundary states, not gapless bulk bands
+  - machine learning schedules exact calls and does not replace the BdG solver
+
+automated_gate_policy:
+  hard_failures_must_be_zero: true
+  saliency_is_warning_only: true
+  first_fixation_requires_human_review: true
+  final_gate: {gate: GATE_FIG1_ENGINE_V3_FINAL_APPROVAL, state: HUMAN_WAIT}

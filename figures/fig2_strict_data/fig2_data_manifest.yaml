@@ -1,0 +1,209 @@
+schema_version: 1
+figure_id: FIG-02-THERMO-STRICT
+archive_read_only: true
+physics_recomputed: false
+transformations:
+  interpolation: false
+  smoothing: false
+  boundary_extraction: false
+  gridding: false
+  resampling: false
+  aggregation: false
+sources:
+  endpoint:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz
+    sha256: f2d751d0cfae8a3c63da786109903ffd1969a3f90c20a17d92665d8f252e2700
+    version: dataset_iter035
+    row_count: 7434
+    fields:
+    - x
+    - y_reg
+    - y_phase
+    - y_eta_sign
+    - y_strong_diode
+    - q_min
+    - q_max
+    - n_q
+    - q_index
+    - q_edge_distance
+    - q_edge_hit
+    - q_refinement_level
+    - q_status
+    - q_expanded
+    - q_unresolved
+    - delta_min
+    - delta_max
+    - n_delta
+    - n_delta_refined
+    - delta_refinement_level
+    - delta_status
+    - delta_boundary_ambiguous
+    - delta_boundary_band_normal
+    - delta_refined
+    - delta_unresolved
+    - free_energy_gap_to_normal
+    - positive_delta_gap
+    - positive_delta_checked
+    - phase_candidate
+    - exact_status_code
+    - trusted_exact
+    - training_eligible_exact
+    - needs_rerun_exact
+    units:
+      x[:,0]: kBT/t
+      x[:,1]: JA/t
+      y_phase: code
+  cold_start:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter000/selected_points.csv
+    sha256: eb68f3a2f5a6ddc43a063840097e6eaf51036c2ac136f31cbae0312eeb06a4f0
+    version: selection_iter000
+    row_count: 512
+    fields:
+    - kT
+    - JA
+    units:
+      kT: kBT/t
+      JA: JA/t
+  cold_start_labels:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz
+    sha256: 2e9ac68e4d891390c78c772b3d57ef8b55b69a82881adc956fa2fb17c2c76cbe
+    version: stageI_dataset_iter031
+    row_count: 6880
+    fields:
+    - x
+    - y_reg
+    - y_phase
+    - y_eta_sign
+    - y_strong_diode
+    - q_min
+    - q_max
+    - n_q
+    - q_index
+    - q_edge_distance
+    - q_edge_hit
+    - q_refinement_level
+    - q_status
+    - q_expanded
+    - q_unresolved
+    - delta_min
+    - delta_max
+    - n_delta
+    - n_delta_refined
+    - delta_refinement_level
+    - delta_status
+    - delta_boundary_ambiguous
+    - delta_boundary_band_normal
+    - delta_refined
+    - delta_unresolved
+    - free_energy_gap_to_normal
+    - positive_delta_gap
+    - positive_delta_checked
+    - phase_candidate
+    - exact_status_code
+    - trusted_exact
+    - training_eligible_exact
+    - needs_rerun_exact
+    units:
+      x[:,0]: kBT/t
+      x[:,1]: JA/t
+      y_phase: code
+  selection_history_index:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_selection_history_sources.json
+    sha256: 22ac562fa2e2d495e169c664d7501fbd7efd2f8523a3d8a65a708959efa2908a
+    version: selection_history_iter000_034
+    row_count: 35
+    fields:
+    - path
+    - sha256
+    - version
+    - row_count
+    - fields
+    - units
+    units:
+      row_count: exact calls
+  stop_metrics:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/stop_metrics_history.json
+    sha256: b85de65ab6f04e29d458826cd9ed297c98186e02d1e9d083778ce52dfa0f846e
+    version: stop_metrics_iter000_034
+    row_count: 35
+    fields:
+    - iteration
+    - metrics
+    - thresholds
+    - conditions
+    units:
+      iteration: index
+      metrics: raw metric units
+  hard_risk:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/figure_data/hard_risk_boundary_impact_audit_v2/hard_risk_point_manifest.csv
+    sha256: b17bbe1d34bdaab82b52f1477a47cf99ac51743fa9ad2fa61e1a906c3e03cee6
+    version: hard_risk_boundary_impact_audit_v2
+    row_count: 129
+    fields:
+    - point_id
+    - exact_index
+    - kBT
+    - JA
+    - provisional_phase_code
+    - provisional_phase
+    - predicted_phase_code
+    - predicted_phase
+    - current_monitor_phase_code
+    - current_monitor_phase
+    - grid_i
+    - grid_j
+    - grid_index
+    - rerun_required
+    - untrusted_exact
+    - training_ineligible
+    - q_unresolved
+    - delta_unresolved
+    - reason_count
+    - reason_signature
+    - rerun_required_reason
+    - q_expanded
+    - q_edge_hit
+    - delta_boundary_ambiguous
+    - distance_to_normal_sc_boundary
+    - distance_to_uniform_fflo_boundary
+    - distance_to_nearest_boundary
+    - nearest_boundary_type
+    - boundary_near
+    - region
+    - cluster_id
+    - influence_class
+    units:
+      kBT: kBT/t
+      JA: JA/t
+canonical_outputs:
+  fig2_final_exact_samples.csv:
+    sha256: d78c37edf0f003419826f0bd78ec4e36be7202d3f5e1e65ad9942132e525d91a
+    rows: 7434
+  fig2_cold_start_exact_calls.csv:
+    sha256: 0da6d450ce9e04902152231d6d50646b506316ca1f26e5f9160d4f94ce4b12e8
+    rows: 512
+  fig2_exact_call_allocation.csv:
+    sha256: ac549a87bf24a5053eaeadac6a73146c8d0c46817cb63046e13fb591b7c3109a
+    rows: 9216
+  fig2_raw_convergence_metrics.csv:
+    sha256: f78a43f906c55c79466179655effff630ec5da1b7b6155c762dabcb027ec37c4
+    rows: 35
+  fig2_hard_risk_points.csv:
+    sha256: d15b9c06412ab1609efa8dd66f24ab0243aa5472f45b76cff28857d78f5dc6af
+    rows: 129
+  fig2_phase_counts.csv:
+    sha256: 14df0335c4cd9772cd681a437fb499613d08d717ec38825cc5a1d41bf707abd9
+    rows: 3
+invariants:
+  total: 7434
+  phase_counts:
+    normal: 1867
+    uniform_SC: 715
+    FFLO: 4852
+  cold_start_selected: 512
+  cold_start_exact_labels: 506
+  cold_start_in_endpoint: 506
+  iterations: 35
+  selection_calls_total: 9216
+  hard_risk: 129
+  hard_risk_retained_in_endpoint: 19

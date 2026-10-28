@@ -1,0 +1,28 @@
+schema_version: 1
+figure_id: FIG-03-STAGEIII-TOPOLOGY-STRICT
+gate: GATE_FIG3_HUMAN_SCIENCE_REVIEW
+decision: approved
+freeze_state: SCIENTIFIC_FREEZE
+approved_by: user
+approved_on: 2026-08-27
+mutation_allowed: false
+physics_recomputed: false
+required_caveats:
+  - k=6 coverage p95 0.006269 slightly exceeds the 0.00625 threshold
+  - gap closing is a transition diagnostic, not a stable third phase
+  - brackets are diagnostics only
+artifacts:
+  fig3_strict_data.svg: {sha256: 59fb9962ad4bea0ca3cbe6cf10f12face89ffd4221869bc6dda4580b32f71146}
+  fig3_strict_data.pdf: {sha256: 752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8}
+  fig3_strict_data.png: {sha256: 6d7136ff1eed94e52d49a7dc052e02f419bec177fd54d1b4a703dbcff014cf51}
+  fig3_contact_sheet.pdf: {sha256: 3927a1c1dc4e964cab10ec0e394dda9ad22a52ddb0034506914fd0f3976c66f1}
+  fig3_contact_sheet.png: {sha256: 13d3818b746245a025fe23bf6c46eba22ee732b8fcfe6d08a7987e99cddc6a37}
+  fig3_panel_contract.yaml: {sha256: 3eb488b28906f309ab06ea8d3d4555b4ca2d7df70efd5fac0ca3b00e59584a31}
+  fig3_data_manifest.yaml: {sha256: 96e90dd83ec0fddb1d038b83c699e749d40426082b51cb270ab7bae708ded1a4}
+  figure_validation_report.json: {sha256: 3696d5cd29ba6bb39593608287d28fba30095fbcc3b29e4d9e1c7eda5bcfbffa}
+  fig3_specific_validation.json: {sha256: a5ed5e4c078de567b997aa449509013b4c64d439bb07738c2d211546855533e1}
+  fig3_render_determinism.json: {sha256: 8ff7ac8e3956da47adb4cf15e35c474b9bc0b23b37e8f26ab9cb0e024b889ed0}
+validation:
+  generic: pass_with_zero_hard_failures
+  specific: 6/6
+  human_science_review: approved

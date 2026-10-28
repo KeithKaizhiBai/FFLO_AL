@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "word_budget": {
+    "baseline": {
+      "abstract": 133,
+      "introduction": 472,
+      "results": 675,
+      "discussion": 194,
+      "total": 1477
+    },
+    "revision": {
+      "abstract": 133,
+      "introduction": 473,
+      "results": 1122,
+      "discussion": 302,
+      "total": 2030
+    },
+    "added_total_words": 553,
+    "soft_target": [
+      500,
+      750
+    ],
+    "status": "PASS"
+  },
+  "results_depth": {
+    "Fig1": true,
+    "Fig2": true,
+    "Fig3": true,
+    "Fig4": true
+  },
+  "unsupported_hits": {
+    "continuous_surface_claim": false,
+    "sample_density_probability": false,
+    "q_sign_topology": false,
+    "basin_depth_topology": false,
+    "wall_time_speedup": false,
+    "random_superiority": false,
+    "exhaustive_3d": false
+  },
+  "method_kernel": {
+    "compact_model": true,
+    "Delta_q_minimization": true,
+    "normal_reference": true,
+    "phase_definitions": true,
+    "topology_applicability": true,
+    "Pfaffian_relation": true,
+    "oracle_scheduler_separation": true
+  },
+  "discussion": {
+    "physical_contribution": true,
+    "methodological_contribution": true,
+    "efficiency_evidence": true,
+    "limitations": true,
+    "general_significance": true,
+    "outlook": true
+  },
+  "consistency": {
+    "free_energy_symbol": true,
+    "stage_I_efficiency": true,
+    "stage_II_figure_count": true,
+    "trusted_count_stage_labels": true,
+    "topology_applicability": true,
+    "slice_centers": true,
+    "no_continuous_surface": true
+  },
+  "figures_unchanged": true,
+  "parent_unchanged": true
+}

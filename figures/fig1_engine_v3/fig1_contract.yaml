@@ -1,0 +1,232 @@
+schema_version: 2
+figure_id: FIG-01-ENGINE-V3
+figure_type: manuscript
+template: schematic_template
+
+scientific_message: >-
+  The audited exact BdG oracle generates thermodynamic and topology-resolved
+  FFLO physical states, while reliability-aware active learning schedules the
+  next exact calls without replacing the physics solver.
+
+visual_message: >-
+  The reader first encounters the free-energy terrain, then the trusted
+  topology audit, then the exact oracle and reliability, and only then active
+  learning as the surrounding exploration instrument.
+
+primary_object:
+  id: central
+  asset_type: landscape_3d_and_topology
+  scientific_role: thermodynamic_and_topology_resolved_physical_state_space
+  visual_role: primary
+
+primary_visual_object:
+  id: thermodynamic_landscape
+  scientific_role: representative_bdg_free_energy_state_space
+  expected_rank: 1
+
+secondary_objects:
+  - {id: bdg, asset_type: workflow_schematic, scientific_role: exact_physical_evidence_source, visual_role: secondary}
+  - {id: observation, asset_type: scientific_observation_list, scientific_role: audited_oracle_outputs, visual_role: secondary}
+
+tertiary_information:
+  - {id: parameter, scientific_role: explored_parameter_domain, visual_role: tertiary}
+  - {id: reliability, scientific_role: numerical_and_topological_trust_gate, visual_role: tertiary}
+  - {id: surrogate, scientific_role: predictive_scheduler, visual_role: tertiary}
+  - {id: acquisition, scientific_role: candidate_ranking, visual_role: tertiary}
+  - {id: next_calls, scientific_role: selected_exact_micro_batch, visual_role: tertiary}
+
+secondary_visual_objects: [topology_resolution]
+tertiary_visual_objects:
+  - exact_bdg_oracle_and_reliability
+  - physical_observation
+  - active_learning_cycle
+
+reading_order:
+  - thermodynamic_landscape
+  - topology_resolution
+  - exact_bdg_oracle_and_reliability
+  - active_learning_cycle
+
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    topology_resolution: [topology_resolution]
+    exact_bdg_oracle_and_reliability: [bdg, reliability]
+    physical_observation: [observation]
+    active_learning_cycle: [parameter, surrogate, acquisition, next_calls]
+  scientific_asset_fill_ratio_audits:
+    - id: fig1_thermodynamic_surface_fill
+      object_id: thermodynamic_landscape
+      content_bbox_field: scientific_content_bbox
+      minimum: 0.65
+      severity: hard_fail
+
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking:
+    - thermodynamic_landscape
+    - topology_resolution
+    - exact_bdg_oracle_and_reliability
+    - active_learning_cycle
+  severity: warning
+
+forbidden_visual_priorities:
+  - workflow_before_physics
+  - topology_before_thermodynamic_landscape
+  - machine_learning_card_as_first_fixation
+
+data_sources:
+  - ../../MODEL_SPEC.md
+  - ../../docs/NUMERICS_SPEC.md
+  - ../../docs/DECISIONS.md
+  - ../fig1_engine_v2/regeneration_manifest.json
+  - ../fig1_engine_v3_proposal/fig1_contract.yaml
+  - asset_registry.yaml
+
+assets:
+  - id: central
+    type: landscape_3d_and_topology
+    source: asset_versions/thermodynamic_landscape_v3/asset.svg
+    schematic: true
+    allow_embedded_raster: true
+    bbox: central
+    features: [surface_shading, semantic_colormap, lighting, minima_markers, minimal_axes, cfflo_gapped_nu0, transition_gap_closing, tfflo_reopened_gapped_nu1, boundary_state_separate]
+  - {id: bdg, type: workflow_schematic, source: ../fig1_engine_v2/asset_versions/bdg_oracle_v2/asset.svg, schematic: true, bbox: bdg}
+  - {id: observation, type: scientific_observation_list, source: ../fig1_engine_v2/asset_versions/physical_observation_v2/asset.svg, schematic: true, bbox: observation}
+  - {id: reliability, type: workflow_gate, source: engine_native_reliability_card, schematic: true, bbox: reliability}
+  - {id: parameter, type: parameter_domain, source: ../fig1_framework_v3/refinement_v5/assets/parameter/asset.svg, schematic: true, bbox: parameter}
+  - {id: surrogate, type: workflow_schematic, source: ../fig1_framework_v3/refinement_v5/assets/surrogate/asset.svg, schematic: true, bbox: surrogate}
+  - {id: acquisition, type: workflow_schematic, source: ../fig1_framework_v3/refinement_v5/assets/acquisition/asset.svg, schematic: true, bbox: acquisition}
+  - {id: next_calls, type: workflow_schematic, source: ../fig1_framework_v3/refinement_v5/assets/next_calls/asset.svg, schematic: true, bbox: next_calls}
+
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1080], print_mm: [178.0, 120.15]}
+  template_profile: schematic
+  primary_area_fraction_min: 0.55
+  bounding_boxes: layout.yaml
+  alignment_anchors: [central_card, shared_right_column, surrounding_cycle]
+  declared_overlays: [tightly_cropped_3d_surface_under_vector_annotations, canonical_secondary_flow_layer_over_main_ribbon]
+  declared_exceptions: []
+  area_requirements:
+    - {id: narrative_primary_landscape_area, object_id: thermodynamic_landscape, reference: central, minimum_fraction: 0.35}
+
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings:
+    exact_oracle: exact
+    physical_state_space: physical
+    surrogate: learning
+    acquisition: decision
+    selected_calls: selected
+    cfflo: topology_cfflo
+    transition: topology_transition
+    tfflo: topology_tfflo
+    boundary_state: boundary_state
+  allowed_extra_hex:
+    - "#17634F"
+    - "#1F426F"
+    - "#23757D"
+    - "#247D82"
+    - "#268C70"
+    - "#3AA484"
+    - "#3F9A7A"
+    - "#46515E"
+    - "#527D83"
+    - "#59317A"
+    - "#626A76"
+    - "#6E7782"
+    - "#76508C"
+    - "#7E8994"
+    - "#87919C"
+    - "#8F202B"
+    - "#9CA2AC"
+    - "#AEB6C0"
+    - "#C83243"
+    - "#D2763C"
+    - "#D7B858"
+    - "#D9DEE6"
+    - "#DFF2EA"
+    - "#EB7882"
+    - "#F2FAF7"
+    - "#F7F2EC"
+    - "#F8F3FB"
+    - "#FAFCFB"
+    - "#FBFDFC"
+    - "#FFF4E5"
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+    - {id: physical_text_on_panel, role: body_text, foreground: physical.dark, background: neutral.panel}
+    - {id: topology_text_on_white, role: body_text, foreground: topology_tfflo.dark, background: neutral.white}
+
+text_budget:
+  maximum_words_in_artwork: 115
+  maximum_words_per_panel: 28
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption_or_supplement
+
+required_elements:
+  - dominant_thermodynamic_landscape
+  - topology_as_second_physical_layer
+  - exact_BdG_oracle
+  - surrogate_as_scheduler
+  - tapered_directional_workflow_ribbons
+
+required_labels:
+  - Physical state space generated by the BdG oracle
+  - Thermodynamic landscape
+  - Topology resolution
+  - Exact BdG oracle
+  - cFFLO
+  - tFFLO
+  - gap-closing transition
+  - Surrogate scheduler
+
+forbidden_elements:
+  - equal_weight_dashboard
+  - tiny_landscape
+  - workflow_as_primary_object
+  - condensed_fonts
+  - nonuniform_text_scaling
+  - provenance_or_validation_text_in_artwork
+
+forbidden_claims:
+  - ML replaces the solver
+  - topology determined by free-energy depth
+  - cFFLO and tFFLO are simultaneous minima at one parameter point
+  - red branches are gapless bulk bands
+  - complete 3D phase diagram
+
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  require_engine_preflight: true
+  engine_preflight_record: engine_preflight.json
+  strict_palette: false
+  required_outputs: [validation_report.json, validation_report.md, visual_narrative_report.json, visual_narrative_report.md]
+  prohibited_text:
+    - Representative thermodynamic minima across parameter space
+    - Topology of trusted gapped FFLO states
+    - expensive exact calculation
+
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+  source_figure_preserved: true
+  source_candidate: ../fig1_engine_v2
+  proposal_gate: {gate: GATE_FIG1_V3_PROPOSAL, state: APPROVED, date: 2026-08-26}
+
+approval:
+  gate: GATE_FIG1_ENGINE_V3_FINAL_APPROVAL
+  state: HUMAN_WAIT
+
+outputs:
+  svg: fig1_engine_v3.svg
+  pdf: fig1_engine_v3.pdf
+  png: fig1_engine_v3.png
+  geometry: geometry_manifest.json
+  asset_manifest: asset_manifest.json

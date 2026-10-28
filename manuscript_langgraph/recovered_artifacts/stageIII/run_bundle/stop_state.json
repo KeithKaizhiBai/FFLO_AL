@@ -1,0 +1,7 @@
+{
+  "last_iteration": 17,
+  "patience_counter": 4,
+  "stop": true,
+  "stop_reason": "converged_main_phase_boundaries",
+  "selected_A0_baseline": 0.3347564989854197
+}

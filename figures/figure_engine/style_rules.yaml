@@ -1,0 +1,7 @@
+schema_version: 1
+deprecated: true
+canonical:
+  arrows: constitution/arrow_rules.yaml
+  colors: constitution/color_rules.yaml
+  svg: styles/svg_style.yaml
+message: Do not load this compatibility pointer as a rule source.

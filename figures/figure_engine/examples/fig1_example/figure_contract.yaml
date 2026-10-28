@@ -1,0 +1,37 @@
+schema_version: 1
+figure_id: EXAMPLE-FIG1-SCHEMATIC
+figure_type: manuscript
+template: schematic_template
+scientific_message: A physical state manifold is explored by reliability-aware active learning around an exact oracle.
+primary_object: {id: physical_state_space, asset_type: landscape_3d, scientific_role: thermodynamic_and_topology_resolved_states, visual_role: primary}
+secondary_objects:
+  - {id: exact_oracle, asset_type: workflow_schematic, scientific_role: physical_evidence_source, visual_role: secondary}
+  - {id: topology_triptych, asset_type: topology_schematic, scientific_role: topology_resolution, visual_role: secondary}
+tertiary_information:
+  - {id: scheduler_cycle, scientific_role: computational_scheduling, visual_role: tertiary}
+data_sources: [MODEL_SPEC.md, docs/NUMERICS_SPEC.md]
+assets:
+  - {id: physical_state_space, type: landscape_3d, source: schematic_generator, schematic: true, bbox: required, features: [surface_shading, semantic_colormap, lighting, minima_markers, minimal_axes]}
+  - {id: exact_oracle, type: workflow_schematic, source: schematic_generator, schematic: true, bbox: required}
+  - {id: topology_triptych, type: topology_schematic, source: schematic_generator, schematic: true, bbox: required, features: [cfflo_gapped_nu0, transition_gap_closing, tfflo_reopened_gapped_nu1, boundary_state_separate]}
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1080], print_mm: [178.0, 120.15]}
+  template_profile: schematic
+  bounding_boxes: {}
+  alignment_anchors: [canvas_center, central_card]
+  declared_overlays: [dense_3d_surface_under_vector_annotations]
+  declared_exceptions: []
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {oracle: exact, physical: physical, scheduler: learning, decision: decision}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+text_budget: {maximum_words_in_artwork: 115, maximum_words_per_panel: 28, minimum_font_size_pt: 7.0, move_excess_to: caption}
+required_elements: [exact_oracle, physical_state_space, topology_resolution]
+required_labels: [Exact BdG oracle, cFFLO, tFFLO]
+forbidden_elements: [dashboard_equal_weight, provenance_in_artwork]
+forbidden_claims: [ML replaces the solver, topology determined by free-energy depth]
+validation_requirements: {hard_fail: true, require_geometry_manifest: true, require_editable_svg: true, require_pdf: true, require_png_preview: true, require_grayscale_review: true, require_engine_preflight: true}
+provenance: {physics_recomputed: false, parameters_recorded: true, commit_hash_when_available: true}
+approval: {gate: EXAMPLE_GATE, state: HUMAN_WAIT}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "figure_id": "ENGINE-SELFTEST-INVALID",
+  "canvas": {"x": 0, "y": 0, "width": 400, "height": 240},
+  "objects": [
+    {"id": "primary_card", "type": "card", "role": "primary", "parent": "canvas", "bbox": {"x": 10, "y": 20, "width": 100, "height": 100}, "independent": true, "visual_weight_object": true},
+    {"id": "secondary_card", "type": "card", "role": "secondary", "parent": "canvas", "bbox": {"x": 90, "y": 20, "width": 200, "height": 160}, "independent": true, "visual_weight_object": true},
+    {"id": "obstacle_card", "type": "card", "role": "tertiary", "parent": "canvas", "bbox": {"x": 155, "y": 185, "width": 50, "height": 35}, "independent": false, "visual_weight_object": false},
+    {"id": "bad_plot", "type": "plot", "role": "secondary", "parent": "primary_card", "bbox": {"x": 11, "y": 30, "width": 80, "height": 60}},
+    {"id": "tiny_landscape", "type": "plot", "role": "primary_scientific_subobject", "parent": "primary_card", "bbox": {"x": 95, "y": 95, "width": 8, "height": 8}, "scientific_content_bbox": {"x": 98, "y": 98, "width": 2, "height": 2}},
+    {"id": "bad_text_1", "type": "text", "role": "body", "parent": "primary_card", "bbox": {"x": 12, "y": 30, "width": 80, "height": 20}, "font_family": "Arial Narrow", "font_stretch": "condensed", "font_size_pt": 5.0, "transform": {"scale_x": 0.75, "scale_y": 1.0}},
+    {"id": "bad_text_2", "type": "text", "role": "body", "parent": "primary_card", "bbox": {"x": 12, "y": 30, "width": 80, "height": 20}, "font_family": "Arial Narrow", "font_stretch": "condensed", "font_size_pt": 5.0, "transform": {"scale_x": 1.0, "scale_y": 1.0}}
+  ],
+  "routes": [
+    {"id": "bad_workflow", "type": "main_workflow", "source": "primary_card", "target": "secondary_card", "widths_px": {"tail": 1, "mid": 1, "near_head": 1}, "opacities": {"tail": 0.5, "mid": 0.5, "head": 0.5}, "samples": [{"center": [105, 190]}, {"center": [170, 200]}, {"center": [250, 170]}]},
+    {"id": "leader_1", "type": "annotation_leader", "start": [20, 200], "end": [140, 100], "length": 156.2},
+    {"id": "leader_2", "type": "annotation_leader", "start": [20, 100], "end": [140, 200], "length": 156.2}
+  ]
+}

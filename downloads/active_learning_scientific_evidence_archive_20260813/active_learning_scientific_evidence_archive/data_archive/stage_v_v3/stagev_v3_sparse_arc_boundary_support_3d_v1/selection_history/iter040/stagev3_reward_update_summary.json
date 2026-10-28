@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 2.9854518788187256,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 40,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.000341796875,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 3584,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.026777196949541605,
+    "rank_correlation_a0_ns": 0.2799099152427543,
+    "rank_correlation_a0_p0": 0.5034049631030941,
+    "rank_correlation_a0_ppi": 0.039422661434104694,
+    "rank_correlation_a0_uf": 0.8606411202680233,
+    "rank_correlation_delta_vs_a0_gap": 0.026777196949541605,
+    "rank_correlation_delta_vs_a0_ns": -0.05703908670068153,
+    "rank_correlation_delta_vs_a0_p0": 0.2717040998236273,
+    "rank_correlation_delta_vs_a0_ppi": 0.6803168657039609,
+    "rank_correlation_delta_vs_a0_uf": -0.13861429076373133,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.2228708285420728,
+    "rank_correlation_model_p0": 0.7751090629267214,
+    "rank_correlation_model_ppi": 0.7197395271380655,
+    "rank_correlation_model_uf": 0.722026829504292,
+    "reward_sample_count": 3584,
+    "reward_sample_count_gap": 3584,
+    "reward_sample_count_ns": 3584,
+    "reward_sample_count_p0": 3584,
+    "reward_sample_count_ppi": 3584,
+    "reward_sample_count_uf": 3584,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

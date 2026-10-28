@@ -1,0 +1,21 @@
+{
+  "node_id": "prl_length_claim_gate",
+  "purpose": "prl length claim gate",
+  "inputs": [
+    "assembled_draft",
+    "journal_style_contract"
+  ],
+  "outputs": [
+    "word_count",
+    "claim_density",
+    "length_gate"
+  ],
+  "prerequisites": [
+    "citation_audit"
+  ],
+  "forbidden_actions": [
+    "must not delete caveats solely to fit length"
+  ],
+  "gate": "PRL_LENGTH_CLAIM_GATE",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

@@ -1,0 +1,19 @@
+{
+  "candidate_id": "compact_control",
+  "projected_surface_aspect_ratio": 1.72,
+  "projected_surface_height_width_ratio": 0.58,
+  "foreground_fill_fraction": 0.74,
+  "internal_whitespace_fraction": 0.22,
+  "dominant_minima_projected_triangle_fraction": 0.12,
+  "vertical_relief_fraction": 0.34,
+  "labels": [
+    {"id": "normal", "bbox": {"x": 12, "y": 70, "width": 82, "height": 38}, "marker": [100, 82], "leader_length_px": 24},
+    {"id": "uniform", "bbox": {"x": 180, "y": 8, "width": 112, "height": 38}, "marker": [235, 68], "leader_length_px": 26},
+    {"id": "fflo", "bbox": {"x": 360, "y": 120, "width": 100, "height": 38}, "marker": [340, 102], "leader_length_px": 27}
+  ],
+  "nonuniform_transform": false,
+  "delta_axis_projected_length_fraction": 0.34,
+  "q_axis_projected_length_fraction": 0.29,
+  "projected_axis_angle_deg": 58.0,
+  "prohibited_text_found": []
+}

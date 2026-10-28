@@ -1,0 +1,8 @@
+per_level: independent_MLP_deep_ensemble
+smoke_members: 2
+full_members: 5
+hidden: [128, 128, 128]
+activation: SiLU
+regression_loss: masked_heteroscedastic_Gaussian_NLL
+classification_loss: BCE
+state_transfer_to_production: forbidden

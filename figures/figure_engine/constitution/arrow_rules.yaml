@@ -1,0 +1,43 @@
+schema_version: 1
+rule_set: arrow_rules
+authority: canonical
+
+principle: connectors_encode_information_flow_not_decoration
+
+profiles:
+  main_workflow:
+    geometry: sampled_tapered_ribbon
+    curve: cubic_bezier
+    widths_px: {tail: 6, mid: 17, near_head: 23}
+    opacities: {tail: 0.24, mid: 0.58, head: 0.84}
+    minimum_samples: 48
+    semantic_gradient_required: true
+  secondary_workflow:
+    geometry: tapered_ribbon
+    widths_px: {tail: 4, mid: 10, near_head: 14}
+    opacities: {tail: 0.18, mid: 0.40, head: 0.62}
+    semantic_gradient_required: true
+  annotation_leader:
+    geometry: line_or_gentle_curve
+    width_px: [1.0, 1.2]
+    opacity: [0.65, 0.90]
+    arrowhead: false
+    preferred_length_px: [20, 38]
+    hard_maximum_length_px: 48
+  correspondence:
+    geometry: dotted_or_dashed_curve
+    opacity_max: 0.25
+    arrowhead: false
+
+hard_rules:
+  arrow_must_have_source_target_roles: true
+  card_text_crossing: forbidden
+  unrelated_plot_crossing: forbidden
+  route_interior_through_card: forbidden
+  constant_width_main_workflow: forbidden
+  decorative_arrow: forbidden
+
+direction:
+  must_be_visually_decodable: true
+  width_and_opacity_increase_toward_target: true
+

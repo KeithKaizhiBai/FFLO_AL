@@ -1,0 +1,34 @@
+figure_id: Fig4
+direct_visual_observations:
+- At mu/t=-0.45 and 0.15, trusted cFFLO occupies lower JA while sampled tFFLO is concentrated at higher JA and lower
+  temperature.
+- At mu/t=0.85, uniform-SC support broadens in JA and trusted tFFLO spans a wider part of the sampled slice.
+- At mu/t=1.45, sampled superconducting support is restricted to low JA and moderate-to-low temperature, and no
+  trusted tFFLO point occurs in the narrow slice.
+frozen_data_support:
+- fig4_exact_3d_samples.csv
+- fig4_selected_fixed_mu_slices.csv
+- fig4_data_manifest.yaml
+parameter_dependence:
+- supported_trend: Chemical potential reorganizes the relative coordinate support of uniform SC, cFFLO, and tFFLO
+    across the four registered slices.
+  strength_of_support: descriptive exact support; nonuniform sampling
+permitted_interpretations:
+- The third coordinate reveals changes hidden in a single two-dimensional cut.
+- The result establishes scalable higher-dimensional exploration rather than a closed mechanism.
+forbidden_inferences:
+- four slices define a continuous surface
+- absence of sampled tFFLO proves global phase absence
+- sample fractions are thermodynamic volumes
+method_role: Demonstrates selective exact evaluation in a larger candidate space.
+main_text_candidate_points:
+- slice-to-slice reorganization
+- point-cloud versus slice evidence roles
+- nonclosure
+caption_only_points: []
+supplement_only_points:
+- slice counts and coordinate ranges
+- raw Stage-IV diagnostic histories
+uncertainties_or_missing_evidence:
+- Nonuniform active-learning density prevents interpreting counts as phase volume.
+- Four slices do not establish exhaustive 3D evolution.

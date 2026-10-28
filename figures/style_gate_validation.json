@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "gate": "GATE_FIGURE_STYLE_APPROVAL",
+  "gate_status": "pending_human_approval",
+  "automated_validation_passed": true,
+  "checks_passed": 80,
+  "checks_total": 80,
+  "checks": [
+    {
+      "name": "fig1_framework:figure_contract.yaml:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/figure_contract.yaml"
+    },
+    {
+      "name": "fig1_framework:data_manifest.json:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/data_manifest.json"
+    },
+    {
+      "name": "fig1_framework:regeneration.log:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/regeneration.log"
+    },
+    {
+      "name": "fig1_framework:build_mockup.py:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/build_mockup.py"
+    },
+    {
+      "name": "fig1_framework:contract_fields",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig1_framework:no_quantitative_data",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig1_framework:no_physics_recompute",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig1_framework:no_manual_scientific_edits",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.svg:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/fig1_visual_mockup.svg"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.svg:editable_text",
+      "passed": true,
+      "detail": "text_nodes=25"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.svg:no_artwork_metadata",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.svg:no_red_warning",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.svg:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/fig1_vector_prototype.svg"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.svg:editable_text",
+      "passed": true,
+      "detail": "text_nodes=32"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.svg:no_artwork_metadata",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.svg:no_red_warning",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig1_framework:fig1_master.svg:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/fig1_master.svg"
+    },
+    {
+      "name": "fig1_framework:fig1_master.svg:editable_text",
+      "passed": true,
+      "detail": "text_nodes=67"
+    },
+    {
+      "name": "fig1_framework:fig1_master.svg:no_artwork_metadata",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig1_framework:fig1_master.svg:no_red_warning",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig1_framework:required_hierarchy_text",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.png:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/fig1_visual_mockup.png"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.png:resolution",
+      "passed": true,
+      "detail": "2160x1365"
+    },
+    {
+      "name": "fig1_framework:fig1_visual_mockup.png:white_background",
+      "passed": true,
+      "detail": "corner_rgb=(255, 255, 255)"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.png:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/fig1_vector_prototype.png"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.png:resolution",
+      "passed": true,
+      "detail": "2160x1365"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.png:white_background",
+      "passed": true,
+      "detail": "corner_rgb=(255, 255, 255)"
+    },
+    {
+      "name": "fig1_framework:fig1_preview.png:present",
+      "passed": true,
+      "detail": "figures/fig1_framework/fig1_preview.png"
+    },
+    {
+      "name": "fig1_framework:fig1_preview.png:resolution",
+      "passed": true,
+      "detail": "2158x1333"
+    },
+    {
+      "name": "fig1_framework:fig1_preview.png:white_background",
+      "passed": true,
+      "detail": "corner_rgb=(255, 255, 255)"
+    },
+    {
+      "name": "fig1_framework:fig1_vector_prototype.pdf:one_page",
+      "passed": true,
+      "detail": "pages=1"
+    },
+    {
+      "name": "fig1_framework:fig1_master.pdf:one_page",
+      "passed": true,
+      "detail": "pages=1"
+    },
+    {
+      "name": "fig2_thermodynamic:figure_contract.yaml:present",
+      "passed": true,
+      "detail": "figures/fig2_thermodynamic/figure_contract.yaml"
+    },
+    {
+      "name": "fig2_thermodynamic:data_manifest.json:present",
+      "passed": true,
+      "detail": "figures/fig2_thermodynamic/data_manifest.json"
+    },
+    {
+      "name": "fig2_thermodynamic:regeneration.log:present",
+      "passed": true,
+      "detail": "figures/fig2_thermodynamic/regeneration.log"
+    },
+    {
+      "name": "fig2_thermodynamic:build_mockup.py:present",
+      "passed": true,
+      "detail": "figures/fig2_thermodynamic/build_mockup.py"
+    },
+    {
+      "name": "fig2_thermodynamic:contract_fields",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig2_thermodynamic:no_quantitative_data",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig2_thermodynamic:no_physics_recompute",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig2_thermodynamic:no_manual_scientific_edits",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.svg:present",
+      "passed": true,
+      "detail": "figures/fig2_thermodynamic/fig2_visual_mockup.svg"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.svg:editable_text",
+      "passed": true,
+      "detail": "text_nodes=37"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.svg:no_artwork_metadata",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.svg:no_red_warning",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig2_thermodynamic:required_hierarchy_text",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.png:present",
+      "passed": true,
+      "detail": "figures/fig2_thermodynamic/fig2_visual_mockup.png"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.png:resolution",
+      "passed": true,
+      "detail": "2160x1395"
+    },
+    {
+      "name": "fig2_thermodynamic:fig2_visual_mockup.png:white_background",
+      "passed": true,
+      "detail": "corner_rgb=(255, 255, 255)"
+    },
+    {
+      "name": "fig3_topology:figure_contract.yaml:present",
+      "passed": true,
+      "detail": "figures/fig3_topology/figure_contract.yaml"
+    },
+    {
+      "name": "fig3_topology:data_manifest.json:present",
+      "passed": true,
+      "detail": "figures/fig3_topology/data_manifest.json"
+    },
+    {
+      "name": "fig3_topology:regeneration.log:present",
+      "passed": true,
+      "detail": "figures/fig3_topology/regeneration.log"
+    },
+    {
+      "name": "fig3_topology:build_mockup.py:present",
+      "passed": true,
+      "detail": "figures/fig3_topology/build_mockup.py"
+    },
+    {
+      "name": "fig3_topology:contract_fields",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig3_topology:no_quantitative_data",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig3_topology:no_physics_recompute",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig3_topology:no_manual_scientific_edits",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.svg:present",
+      "passed": true,
+      "detail": "figures/fig3_topology/fig3_visual_mockup.svg"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.svg:editable_text",
+      "passed": true,
+      "detail": "text_nodes=35"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.svg:no_artwork_metadata",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.svg:no_red_warning",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig3_topology:required_hierarchy_text",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.png:present",
+      "passed": true,
+      "detail": "figures/fig3_topology/fig3_visual_mockup.png"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.png:resolution",
+      "passed": true,
+      "detail": "2160x1395"
+    },
+    {
+      "name": "fig3_topology:fig3_visual_mockup.png:white_background",
+      "passed": true,
+      "detail": "corner_rgb=(255, 255, 255)"
+    },
+    {
+      "name": "fig4_3d_extension:figure_contract.yaml:present",
+      "passed": true,
+      "detail": "figures/fig4_3d_extension/figure_contract.yaml"
+    },
+    {
+      "name": "fig4_3d_extension:data_manifest.json:present",
+      "passed": true,
+      "detail": "figures/fig4_3d_extension/data_manifest.json"
+    },
+    {
+      "name": "fig4_3d_extension:regeneration.log:present",
+      "passed": true,
+      "detail": "figures/fig4_3d_extension/regeneration.log"
+    },
+    {
+      "name": "fig4_3d_extension:build_mockup.py:present",
+      "passed": true,
+      "detail": "figures/fig4_3d_extension/build_mockup.py"
+    },
+    {
+      "name": "fig4_3d_extension:contract_fields",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig4_3d_extension:no_quantitative_data",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig4_3d_extension:no_physics_recompute",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig4_3d_extension:no_manual_scientific_edits",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.svg:present",
+      "passed": true,
+      "detail": "figures/fig4_3d_extension/fig4_visual_mockup.svg"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.svg:editable_text",
+      "passed": true,
+      "detail": "text_nodes=32"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.svg:no_artwork_metadata",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.svg:no_red_warning",
+      "passed": true,
+      "detail": "found=[]"
+    },
+    {
+      "name": "fig4_3d_extension:required_hierarchy_text",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.png:present",
+      "passed": true,
+      "detail": "figures/fig4_3d_extension/fig4_visual_mockup.png"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.png:resolution",
+      "passed": true,
+      "detail": "2160x1425"
+    },
+    {
+      "name": "fig4_3d_extension:fig4_visual_mockup.png:white_background",
+      "passed": true,
+      "detail": "corner_rgb=(255, 255, 255)"
+    }
+  ],
+  "scientific_scope_changed": false,
+  "quantitative_figures_rebuilt": false
+}

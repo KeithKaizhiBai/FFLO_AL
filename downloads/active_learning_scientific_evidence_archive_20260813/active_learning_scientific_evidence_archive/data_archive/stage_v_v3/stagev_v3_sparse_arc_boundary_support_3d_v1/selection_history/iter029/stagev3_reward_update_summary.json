@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 2.22358841231053,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 29,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.7,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 2880,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.04679499124366039,
+    "rank_correlation_a0_ns": 0.3016588734141653,
+    "rank_correlation_a0_p0": 0.5278171894042741,
+    "rank_correlation_a0_ppi": 0.06795860434395838,
+    "rank_correlation_a0_uf": 0.8616310186765191,
+    "rank_correlation_delta_vs_a0_gap": 0.04679499124366039,
+    "rank_correlation_delta_vs_a0_ns": 0.0006664837538426505,
+    "rank_correlation_delta_vs_a0_p0": 0.2627619267611603,
+    "rank_correlation_delta_vs_a0_ppi": 0.6533994696943678,
+    "rank_correlation_delta_vs_a0_uf": -0.1073027003928897,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.30232535716800796,
+    "rank_correlation_model_p0": 0.7905791161654344,
+    "rank_correlation_model_ppi": 0.7213580740383262,
+    "rank_correlation_model_uf": 0.7543283182836295,
+    "reward_sample_count": 2880,
+    "reward_sample_count_gap": 2880,
+    "reward_sample_count_ns": 2880,
+    "reward_sample_count_p0": 2880,
+    "reward_sample_count_ppi": 2880,
+    "reward_sample_count_uf": 2880,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

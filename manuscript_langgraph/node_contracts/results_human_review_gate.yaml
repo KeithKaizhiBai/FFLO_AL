@@ -1,0 +1,10 @@
+{
+  "node_id": "results_human_review_gate",
+  "purpose": "prevent Methods and all downstream prose from running until Results and captions receive explicit scientific approval",
+  "inputs": ["results_candidate", "caption_candidate", "sentence_trace", "automated_audits", "human_decision"],
+  "outputs": ["GATE_RESULTS_HUMAN_REVIEW", "results_claims_frozen"],
+  "prerequisites": ["GATE_FIGURE_APPROVAL", "results_by_figure_writer"],
+  "forbidden_actions": ["auto-approve Results", "freeze claims from automated audits", "enter Methods while HUMAN_WAIT"],
+  "gate": "GATE_RESULTS_HUMAN_REVIEW",
+  "failure_behavior": "HUMAN_WAIT for a structurally valid package; BLOCK for missing or unsupported content"
+}

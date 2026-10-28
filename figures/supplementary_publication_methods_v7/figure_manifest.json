@@ -1,0 +1,33 @@
+{
+  "physics_recomputed": false,
+  "figures": [
+    {
+      "key": "S1_reliability_flow",
+      "sha256": "e8d8868ba194cf4f79dbf6137928bf10a90609b51173b75844c8b1061aa18e63",
+      "native_width_mm": 164,
+      "min_base_font_pt": 8,
+      "status": "HUMAN_WAIT"
+    },
+    {
+      "key": "S2_surrogate_architecture",
+      "sha256": "456fb779ba5706cfe0df1f0b8df12c7a084c2baf3ab31b1d56c36ce8c84daa64",
+      "native_width_mm": 164,
+      "min_base_font_pt": 8,
+      "status": "HUMAN_WAIT"
+    },
+    {
+      "key": "S3_acquisition_decomposition",
+      "sha256": "ed62c60de0aa2148a2f3c4569da9453fd829faa5572cff0b071805c744c890bb",
+      "native_width_mm": 164,
+      "min_base_font_pt": 8,
+      "status": "HUMAN_WAIT"
+    },
+    {
+      "key": "S4_sampling_efficiency",
+      "sha256": "e2519043d7bfe5b952ee76e3c547bdd5eeebafa32bec546883fb56434901a6bb",
+      "native_width_mm": 164,
+      "min_base_font_pt": 8,
+      "status": "HUMAN_WAIT"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+semantic_name,v3_source_column,v4_source_column,unit,applicability,trust_condition,fixed_transform,missing_value_behavior
+delta,delta_opt,delta_opt,dimensionless,all exact,trusted_exact plus field-specific reliability,identity,masked; never imputed as physical zero
+abs_q,q_opt,q_opt,dimensionless,q_status != not_applicable,trusted_exact plus field-specific reliability,abs(q)/pi,masked; never imputed as physical zero
+deltaf,free_energy_gap_to_normal,free_energy_gap_to_normal,dimensionless,all exact,trusted_exact plus field-specific reliability,identity,masked; never imputed as physical zero
+log_gap,topology_bulk_gap,topology_bulk_gap,dimensionless,topology_trusted,trusted_exact plus field-specific reliability,"log(max(Eg,0)+1e-8)",masked; never imputed as physical zero
+k_gap,topology_k_at_bulk_gap,topology_k_at_bulk_gap,dimensionless,topology_trusted,trusted_exact plus field-specific reliability,k_gap/pi,masked; never imputed as physical zero
+p0,topology_p0,topology_p0,dimensionless,topology_trusted,trusted_exact plus field-specific reliability,sign(P0)*log1p(abs(P0)),masked; never imputed as physical zero
+ppi,topology_ppi,topology_ppi,dimensionless,topology_trusted,trusted_exact plus field-specific reliability,sign(Ppi)*log1p(abs(Ppi)),masked; never imputed as physical zero
+pf_margin,topology_pfaffian_margin,topology_pfaffian_margin,dimensionless,topology_trusted,trusted_exact plus field-specific reliability,"log(max(margin,0)+1e-12)",masked; never imputed as physical zero

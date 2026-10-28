@@ -1,0 +1,14 @@
+{
+  "input_dataset": "ML_Phase_512_TopoTrivial_FullLoop/active_runs/active_phase_topology_from_scratch_full_loop_v2/dataset_iter017.npz",
+  "trusted_exact": "ML_Phase_512_TopoTrivial_FullLoop/active_runs/active_phase_topology_from_scratch_full_loop_v2/iter017/exact_trusted_iter017.npz",
+  "output_npz": "ML_Phase_512_TopoTrivial_FullLoop/active_runs/active_phase_topology_from_scratch_full_loop_v2/dataset_iter018.npz",
+  "output_csv": "ML_Phase_512_TopoTrivial_FullLoop/active_runs/active_phase_topology_from_scratch_full_loop_v2/dataset_iter018.csv",
+  "exact_points": 214,
+  "clean_trusted_points": 200,
+  "boundary_band_points_appended": 14,
+  "training_eligible_points_appended": 214,
+  "trusted_points_appended": 214,
+  "input_samples": 4131,
+  "output_samples": 4345,
+  "new_unique_samples_added": 214
+}

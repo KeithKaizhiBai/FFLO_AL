@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "figure_id": "SM-FIG-STAGEIV-NUMERICAL-DIAGNOSTICS-V1",
+  "status": "pass",
+  "physics_recomputed": false,
+  "threshold_lines_rendered": false,
+  "pass_fail_semantics_rendered": false,
+  "checks": [
+    {
+      "name": "canonical_diagnostics_rows",
+      "passed": true,
+      "detail": "rows=12"
+    },
+    {
+      "name": "threshold_fields_excluded",
+      "passed": true,
+      "detail": "['metric', 'order', 'end_iteration', 'transition', 'value', 'source_field']"
+    },
+    {
+      "name": "threshold_word_absent",
+      "passed": true,
+      "detail": "no threshold text in SVG"
+    },
+    {
+      "name": "pass_fail_labels_absent",
+      "passed": true,
+      "detail": "no PASS/FAIL text labels in SVG"
+    },
+    {
+      "name": "diagnostic_semantics_visible",
+      "passed": true,
+      "detail": "diagnostic-only qualifier is printed"
+    },
+    {
+      "name": "no_physics_recompute",
+      "passed": true,
+      "detail": "only archived tables and transparent field selection used"
+    }
+  ]
+}

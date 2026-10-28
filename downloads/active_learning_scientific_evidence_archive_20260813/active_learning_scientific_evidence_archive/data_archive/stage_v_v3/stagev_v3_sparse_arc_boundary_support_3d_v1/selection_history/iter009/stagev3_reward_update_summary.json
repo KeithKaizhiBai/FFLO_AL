@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 1.1178993759238738,
+    "p0": 1.9455788284678766,
+    "ppi": 3.0,
+    "uf": 2.5285019793150934
+  },
+  "iteration": 9,
+  "lambda_state": {
+    "gap": 0.44999999999999996,
+    "ns": 0.25,
+    "p0": 0.5499999999999999,
+    "ppi": 0.5499999999999999,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 1600,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.13760677252265907,
+    "rank_correlation_a0_ns": 0.45141850651797155,
+    "rank_correlation_a0_p0": 0.628500503285603,
+    "rank_correlation_a0_ppi": 0.10570610166323569,
+    "rank_correlation_a0_uf": 0.8433273511812974,
+    "rank_correlation_delta_vs_a0_gap": 0.13760677252265907,
+    "rank_correlation_delta_vs_a0_ns": 0.08154848918694901,
+    "rank_correlation_delta_vs_a0_p0": 0.1470704785544995,
+    "rank_correlation_delta_vs_a0_ppi": 0.5778813572069826,
+    "rank_correlation_delta_vs_a0_uf": -0.09315404095599411,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.5329669957049206,
+    "rank_correlation_model_p0": 0.7755709818401025,
+    "rank_correlation_model_ppi": 0.6835874588702183,
+    "rank_correlation_model_uf": 0.7501733102253033,
+    "reward_sample_count": 1600,
+    "reward_sample_count_gap": 1600,
+    "reward_sample_count_ns": 1600,
+    "reward_sample_count_p0": 1600,
+    "reward_sample_count_ppi": 1600,
+    "reward_sample_count_uf": 1600,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

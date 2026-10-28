@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 3.0,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 52,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 8.344650268554687e-08,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "trained",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 4352,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.002234457058991152,
+    "rank_correlation_a0_ns": 0.29671662667346027,
+    "rank_correlation_a0_p0": 0.45854644468922007,
+    "rank_correlation_a0_ppi": 0.010934049626836284,
+    "rank_correlation_a0_uf": 0.8541533492359582,
+    "rank_correlation_delta_vs_a0_gap": 0.6563505433225971,
+    "rank_correlation_delta_vs_a0_ns": -0.09809788993639293,
+    "rank_correlation_delta_vs_a0_p0": 0.30088650900165664,
+    "rank_correlation_delta_vs_a0_ppi": 0.6999627301148297,
+    "rank_correlation_delta_vs_a0_uf": -0.16653306026943682,
+    "rank_correlation_model_gap": 0.654116086263606,
+    "rank_correlation_model_ns": 0.19861873673706734,
+    "rank_correlation_model_p0": 0.7594329536908767,
+    "rank_correlation_model_ppi": 0.710896779741666,
+    "rank_correlation_model_uf": 0.6876202889665214,
+    "reward_sample_count": 4352,
+    "reward_sample_count_gap": 4352,
+    "reward_sample_count_ns": 4352,
+    "reward_sample_count_p0": 4352,
+    "reward_sample_count_ppi": 4352,
+    "reward_sample_count_uf": 4352,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

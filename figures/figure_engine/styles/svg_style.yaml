@@ -1,0 +1,33 @@
+schema_version: 1
+svg_style_id: al_fflo_svg_v1
+
+canvas:
+  background: "#FFFFFF"
+  text_rendering: geometricPrecision
+  shape_rendering: geometricPrecision
+
+stroke:
+  axis_pt: 0.7
+  data_primary_pt: 1.4
+  data_secondary_pt: 0.9
+  card_border_pt: 1.2
+  annotation_pt: 1.05
+  linecap: round
+  linejoin: round
+
+card:
+  corner_radius_px: 16
+  heavy_shadow: false
+  background: semantic_tint_or_white
+
+text:
+  dominant_baseline: alphabetic
+  preserve_editable_text: true
+  horizontal_scale: 1.0
+  vertical_scale: 1.0
+
+metadata:
+  require_figure_id: true
+  require_contract_path: true
+  require_rule_set_version: true
+

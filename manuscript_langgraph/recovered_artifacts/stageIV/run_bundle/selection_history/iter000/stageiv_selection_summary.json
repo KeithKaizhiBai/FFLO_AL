@@ -1,0 +1,10 @@
+{
+  "mode": "seed",
+  "run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "iteration": 0,
+  "selected_batch_size": 1024,
+  "initial_seed_size": 1024,
+  "world_size": 8,
+  "partition_strategy": "cost_aware",
+  "cold_start": true
+}

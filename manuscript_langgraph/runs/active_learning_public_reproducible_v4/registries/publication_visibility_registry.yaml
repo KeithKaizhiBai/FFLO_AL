@@ -1,0 +1,38 @@
+default_profile: PUBLIC_PHYSICS_NARRATIVE_AND_REPRODUCIBLE_METHODS_V1
+items:
+- evidence: 2D thermodynamic structure
+  reader_role: physical_result
+  publication_visibility:
+  - main_text
+  narrative_priority: primary
+  public_language_required: true
+  numerical_detail_policy: headline
+- evidence: 8.89 percent exact-location fraction
+  reader_role: efficiency
+  publication_visibility:
+  - main_text
+  - supplement
+  narrative_priority: primary
+  public_language_required: true
+  numerical_detail_policy: headline
+- evidence: phase breakdown counts
+  reader_role: numerical_reproducibility
+  publication_visibility:
+  - supplement
+  narrative_priority: supporting
+  public_language_required: true
+  numerical_detail_policy: table_only
+- evidence: operational thresholds
+  reader_role: operational_diagnostic
+  publication_visibility:
+  - supplement
+  narrative_priority: archival
+  public_language_required: true
+  numerical_detail_policy: table_only
+- evidence: registry and gate state
+  reader_role: internal_governance
+  publication_visibility:
+  - trace_only
+  narrative_priority: archival
+  public_language_required: false
+  numerical_detail_policy: trace_only

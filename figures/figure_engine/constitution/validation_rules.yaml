@@ -1,0 +1,70 @@
+schema_version: 1
+rule_set: validation_rules
+authority: canonical
+
+severity:
+  hard_fail: build_returns_nonzero
+  warning: report_and_continue
+  info: record_only
+
+hard_checks:
+  contract:
+    - required_fields_present
+    - data_sources_declared
+    - scientific_roles_declared
+    - forbidden_claims_declared
+  geometry:
+    - no_forbidden_object_overlap
+    - no_text_text_overlap
+    - text_border_clearance
+    - text_plot_clearance
+    - leader_leader_crossing
+    - no_clipping
+    - independent_card_gutters
+    - registered_containment
+    - declared_scientific_subobject_area
+  arrows:
+    - registered_source_and_target
+    - tapered_profile_tokens
+    - no_unrelated_card_crossing
+    - annotation_length_limit
+  typography:
+    - minimum_font_size
+    - no_condensed_fonts
+    - no_nonuniform_text_scaling
+    - no_skewed_text
+  color:
+    - semantic_palette_mapping
+    - no_forbidden_random_palette
+    - minimum_contrast_for_registered_pairs
+  scientific:
+    - required_labels_present
+    - prohibited_claims_absent
+    - declared_asset_semantics_present
+  output:
+    - editable_svg_present
+    - pdf_present_when_required
+    - png_preview_present_when_required
+    - validation_reports_present
+
+warning_checks:
+  - legacy_math_font_fallback
+  - uniform_renderer_text_transform
+  - unregistered_nonsemantic_neutral_color
+  - effective_raster_dpi_below_preferred_but_above_minimum
+
+required_outputs:
+  - figure_validation_report.json
+  - figure_validation_report.md
+
+review_checks:
+  - render_pdf_to_png
+  - inspect_178mm_print
+  - inspect_grayscale
+  - inspect_blurred_saliency_for_complex_compositions
+  - inspect_debug_overlays_when_geometry_is_dense
+
+exit_codes:
+  pass: 0
+  hard_failure: 1
+  invalid_input_or_contract: 2

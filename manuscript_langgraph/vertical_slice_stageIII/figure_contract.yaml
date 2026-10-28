@@ -1,0 +1,15 @@
+{
+  "figure_id": "FIG-03-STAGEIII-TOPOLOGY",
+  "scientific_role": "Demonstrate topology-aware cold-start discovery and configured convergence of the 2D cFFLO/tFFLO boundary.",
+  "panels": [
+    {"panel": "a", "content": "final normal/uniform-SC/cFFLO/tFFLO exact-point map", "source": "manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz", "status": "source_recovered_pending_redraw"},
+    {"panel": "b", "content": "support-restricted P0=0 topology contour and local brackets", "source": "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2/tables", "status": "source_recovered_pending_redraw"},
+    {"panel": "c", "content": "map change and boundary shift p95 over iteration", "source": "E-STAGEIII-CONVERGENCE", "status": "source_recovered_pending_redraw"},
+    {"panel": "d", "content": "coverage p95, trusted surprise, component stability, and decision", "source": "E-STAGEIII-CONVERGENCE", "status": "source_recovered_pending_redraw"}
+  ],
+  "claims_supported": ["CLM-2D-TOPOLOGY"],
+  "caption_contract": "State sample counts, configured gates, Decision A, k-sensitivity caveat, and that brackets are support diagnostics.",
+  "prohibited_claims": ["raw Delaunay edges define the final boundary", "all topology refinements exhausted"],
+  "approval_gate": "GATE_FIGURE_APPROVAL",
+  "approval_status": "pending_human_approval"
+}

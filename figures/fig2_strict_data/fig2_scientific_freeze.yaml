@@ -1,0 +1,44 @@
+schema_version: 1
+figure_id: FIG-02-THERMO-STRICT
+gate: GATE_FIG2_HUMAN_SCIENCE_REVIEW
+decision: approved
+freeze_state: SCIENTIFIC_FREEZE
+approved_by: user
+approved_on: '2026-08-27'
+mutation_allowed: false
+physics_recomputed: false
+artifacts:
+  fig2_strict_data.svg:
+    sha256: f3ca32665cc75f8c1d98851f70e1e7713fd7c22c787caaac9237b633b8c8501f
+    bytes: 2402148
+  fig2_strict_data.pdf:
+    sha256: 77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec
+    bytes: 160738
+  fig2_strict_data.png:
+    sha256: cfc5a58eb40f1cb3fbbdbd0e4d1467d526e52954a2a48f90a06835fecc471f78
+    bytes: 702731
+  fig2_contact_sheet.pdf:
+    sha256: ebc246fb66acdb1e2433c7c4070f6720589678340ff5c414efafa1281fa74d2b
+    bytes: 2131496
+  fig2_contact_sheet.png:
+    sha256: a72a31a5b8ee913d75203868a1b1a2fce239afb2cbb72bbc7d5f15ada02f31c2
+    bytes: 1237338
+  fig2_panel_contract.yaml:
+    sha256: 6fb7c3ad02ad79795f0cd1cc0d2a55f5705348f4e7edc487815047c23fe053fa
+    bytes: 22597
+  fig2_data_manifest.yaml:
+    sha256: 8916f98f34744ce9d33917508820765a1927afad7dc4549f733fba4e74447a18
+    bytes: 5963
+  figure_validation_report.json:
+    sha256: 0ea4fa640233b3846e2dc58984883f3a1f579c73c06787ad73ccdaeafb00d81f
+    bytes: 21617
+  fig2_specific_validation.json:
+    sha256: 01544bf466807559a5160fdab5ebe37152ede7622e35bc89f3528731f83ef1ae
+    bytes: 4018
+  fig2_render_determinism.json:
+    sha256: ba7abdc4b85e29c25a942fbd304f03b8ead09db66a3387b69f9cd3e9687afe57
+    bytes: 262
+validation:
+  generic: pass
+  specific: pass
+  human_science_review: approved

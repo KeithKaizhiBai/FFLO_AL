@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1152pt" height="720pt" viewBox="0 0 1152 720" version="1.1" data-figure-id="SM-FIG-SURROGATE-ARCHITECTURE-V1" data-contract="figure_contract.yaml" data-engine-schema="3">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-08-31T21:19:32.659445</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720  L 1152 720  L 1152 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 115.75296 389.4048  L 255.65184 389.4048  Q 273.89952 389.4048 273.89952 378.7776  L 273.89952 244.1664  Q 273.89952 233.5392 255.65184 233.5392  L 115.75296 233.5392  Q 97.50528 233.5392 97.50528 244.1664  L 97.50528 378.7776  Q 97.50528 389.4048 115.75296 389.4048  z " clip-path="url(#p08f2ebbeeb)" style="fill: #fbfdfc; stroke: #12604e; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_3">
+    <path d="M 348.91776 330.3648  L 590.19264 330.3648  Q 608.44032 330.3648 608.44032 319.7376  L 608.44032 196.9344  Q 608.44032 186.3072 590.19264 186.3072  L 348.91776 186.3072  Q 330.67008 186.3072 330.67008 196.9344  L 330.67008 319.7376  Q 330.67008 330.3648 348.91776 330.3648  z " clip-path="url(#p08f2ebbeeb)" style="fill: #d9dee6; stroke: #2e966f; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_4">
+    <path d="M 348.91776 507.4848  L 590.19264 507.4848  Q 608.44032 507.4848 608.44032 496.8576  L 608.44032 374.0544  Q 608.44032 363.4272 590.19264 363.4272  L 348.91776 363.4272  Q 330.67008 363.4272 330.67008 374.0544  L 330.67008 496.8576  Q 330.67008 507.4848 348.91776 507.4848  z " clip-path="url(#p08f2ebbeeb)" style="fill: #d9dee6; stroke: #2e966f; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_5">
+    <path d="M 693.59616 330.3648  L 863.90784 330.3648  Q 882.15552 330.3648 882.15552 319.7376  L 882.15552 196.9344  Q 882.15552 186.3072 863.90784 186.3072  L 693.59616 186.3072  Q 675.34848 186.3072 675.34848 196.9344  L 675.34848 319.7376  Q 675.34848 330.3648 693.59616 330.3648  z " clip-path="url(#p08f2ebbeeb)" style="fill: #fbfdfc; stroke: #b73742; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_6">
+    <path d="M 693.59616 507.4848  L 863.90784 507.4848  Q 882.15552 507.4848 882.15552 496.8576  L 882.15552 374.0544  Q 882.15552 363.4272 863.90784 363.4272  L 693.59616 363.4272  Q 675.34848 363.4272 675.34848 374.0544  L 675.34848 496.8576  Q 675.34848 507.4848 693.59616 507.4848  z " clip-path="url(#p08f2ebbeeb)" style="fill: #fbfdfc; stroke: #b73742; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="patch_7">
+    <path d="M 947.03616 424.8288  L 1046.38464 424.8288  Q 1064.63232 424.8288 1064.63232 414.2016  L 1064.63232 279.5904  Q 1064.63232 268.9632 1046.38464 268.9632  L 947.03616 268.9632  Q 928.78848 268.9632 928.78848 279.5904  L 928.78848 414.2016  Q 928.78848 424.8288 947.03616 424.8288  z " clip-path="url(#p08f2ebbeeb)" style="fill: #f5f3ef; stroke: #7b46b3; stroke-width: 1.2; stroke-linejoin: miter" />
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(172.205916 304.119703)">Inputs</text>
+    
+    <g style="fill: #252b36" transform="translate(167.4324 313.626234)">
+     <text>
+      <tspan x="0" y="-0.859375" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">k</tspan>
+      <tspan x="8.242172" y="-0.859375" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">T</tspan>
+      <tspan x="15.748169" y="-0.859375" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">t</tspan>
+      <tspan x="23.251144" y="-0.859375" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">J</tspan>
+      <tspan x="33.995316" y="-0.859375" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">t</tspan>
+      <tspan x="3.996002" y="0.33125" style="font-style: italic; font-size: 6.3px; font-family: 'STIXGeneral'; fill: #252b36">B</tspan>
+      <tspan x="27.247147" y="0.33125" style="font-style: italic; font-size: 6.3px; font-family: 'STIXGeneral'; fill: #252b36">A</tspan>
+      <tspan x="13.24617" y="-0.859375" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">/</tspan>
+      <tspan x="31.493317" y="-0.859375" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">/</tspan>
+      <tspan x="18.250168" y="-0.859375" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">,</tspan>
+      <tspan x="20.750656" y="-0.859375" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+     </text>
+    </g>
+    
+    <g style="fill: #252b36" transform="translate(156.3174 323.286328)">
+     <text>
+      <tspan x="0" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">(</tspan>
+      <tspan x="2.99707" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">a</tspan>
+      <tspan x="8.002441" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">n</tspan>
+      <tspan x="13.5" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">d</tspan>
+      <tspan x="18.997559" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="31.236038" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="33.736526" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">i</tspan>
+      <tspan x="36.237015" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">n</tspan>
+      <tspan x="41.734573" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="44.235062" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">3</tspan>
+      <tspan x="49.240433" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">D</tspan>
+      <tspan x="55.739944" y="-0.453125" style="font-weight: 700; font-size: 9px; font-family: 'Arial'; fill: #252b36">)</tspan>
+      <tspan x="21.498047" y="-0.453125" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">μ</tspan>
+      <tspan x="28.734039" y="-0.453125" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">t</tspan>
+      <tspan x="26.23204" y="-0.453125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">/</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(426.034575 251.090719)">Regression ensemble</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(428.278247 260.715375)">5 independent MLPs</text>
+    
+    <g style="fill: #252b36" transform="translate(443.9052 270.234563)">
+     <text>
+      <tspan x="0" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">2</tspan>
+      <tspan x="5.005371" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="13.265854" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="15.766342" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">6</tspan>
+      <tspan x="20.771713" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">4</tspan>
+      <tspan x="25.777084" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="28.277573" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">R</tspan>
+      <tspan x="34.777084" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">e</tspan>
+      <tspan x="39.782455" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">L</tspan>
+      <tspan x="44.787827" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">U</tspan>
+      <tspan x="7.505859" y="-0.53125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">×</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(430.291997 428.263453)">Classifier ensemble</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(428.278247 437.782641)">5 independent MLPs</text>
+    
+    <g style="fill: #252b36" transform="translate(443.9052 447.301828)">
+     <text>
+      <tspan x="0" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">2</tspan>
+      <tspan x="5.005371" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="13.265854" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="15.766342" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">6</tspan>
+      <tspan x="20.771713" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">4</tspan>
+      <tspan x="25.777084" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36"> </tspan>
+      <tspan x="28.277573" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">R</tspan>
+      <tspan x="34.777084" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">e</tspan>
+      <tspan x="39.782455" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">L</tspan>
+      <tspan x="44.787827" y="-0.53125" style="font-size: 9px; font-family: 'Arial'; fill: #252b36">U</tspan>
+      <tspan x="7.505859" y="-0.53125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">×</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(742.231687 250.647047)">Observable heads</text>
+    
+    <g style="fill: #252b36" transform="translate(753.507 260.427797)">
+     <text>
+      <tspan x="0" y="-0.379687" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">Δ</tspan>
+      <tspan x="6.498001" y="-0.379687" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">,</tspan>
+      <tspan x="14.547601" y="-0.379687" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">,</tspan>
+      <tspan x="22.363193" y="-0.379687" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">,</tspan>
+      <tspan x="36.397535" y="-0.379687" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">,</tspan>
+      <tspan x="10.047601" y="-0.379687" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">q</tspan>
+      <tspan x="18.097202" y="-0.379687" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">η</tspan>
+      <tspan x="25.912793" y="-0.379687" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">I</tspan>
+      <tspan x="39.947135" y="-0.379687" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #252b36">I</tspan>
+      <tspan x="30.775445" y="-3.554688" style="font-size: 6.3px; font-family: 'STIXGeneral'; fill: #252b36">+</tspan>
+      <tspan x="44.809787" y="-3.554688" style="font-size: 6.3px; font-family: 'STIXGeneral'; fill: #252b36">−</tspan>
+      <tspan x="28.909787" y="2.001563" style="font-style: italic; font-size: 6.3px; font-family: 'STIXGeneral'; fill: #252b36">c</tspan>
+      <tspan x="42.944129" y="2.001563" style="font-style: italic; font-size: 6.3px; font-family: 'STIXGeneral'; fill: #252b36">c</tspan>
+     </text>
+    </g>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(743.73075 270.678234)">mean and spread</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(740.730516 428.210719)">Phase probabilities</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(722.744578 437.729906)">Normal / uniform SC / FFLO</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(739.982391 447.249094)">entropy and margin</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(972.212822 339.663375)">Acquisition</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(964.953759 349.169906)">scheduler only</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #252b36" transform="translate(963.442744 358.794563)">next exact calls</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 265.914675 308.733148  Q 302.284553 284.904162 337.25165 261.994256  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 332.809758 262.513477  L 337.25165 261.994256  L 335.001892 265.859303  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_9">
+    <path d="M 264.662325 327.329811  Q 302.285168 379.368509 338.925439 430.048145  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 338.202643 425.634805  L 338.925439 430.048145  L 334.96109 427.978378  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_10">
+    <path d="M 601.273153 258.336  Q 641.894435 258.336 680.838667 258.336  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 676.838667 256.336  L 680.838667 258.336  L 676.838667 260.336  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_11">
+    <path d="M 601.273153 435.456  Q 641.894435 435.456 680.838667 435.456  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 676.838667 433.456  L 680.838667 435.456  L 676.838667 437.456  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_12">
+    <path d="M 873.678459 261.711233  Q 905.471342 290.807398 936.027064 318.77134  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 934.426517 314.595427  L 936.027064 318.77134  L 931.726005 317.546229  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="patch_13">
+    <path d="M 873.678459 432.080767  Q 905.471342 402.984602 936.027064 375.02066  " style="fill: none; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+    <path d="M 931.726005 376.245771  L 936.027064 375.02066  L 934.426517 379.196573  z " style="fill: #87919c; stroke: #87919c; stroke-width: 1.5; stroke-linecap: round" />
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #252b36" x="576" y="110.736" transform="rotate(-0 576 110.736)">Surrogate architecture used by the production scheduler</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #252b36" x="576" y="606.672" transform="rotate(-0 576 606.672)">Separate models are retrained from accepted exact data; ensemble dispersion supplies uncertainty but never a physical label.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p08f2ebbeeb">
+   <rect x="69.12" y="57.6" width="1013.76" height="590.4" />
+  </clipPath>
+ </defs>
+</svg>

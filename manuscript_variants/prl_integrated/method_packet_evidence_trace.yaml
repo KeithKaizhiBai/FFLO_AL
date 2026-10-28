@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "packets": [
+    {
+      "packet_id": "METHOD_PACKET_MODEL",
+      "source_sentences": [
+        "MODEL_SPEC:physical_model",
+        "METHODS_TEX:oracle"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "first_required_at": "ANCHOR-FIG1"
+    },
+    {
+      "packet_id": "METHOD_PACKET_THERMODYNAMIC_LABELS",
+      "source_sentences": [
+        "MODEL_SPEC:observables_and_labels",
+        "METHODS_TEX:oracle"
+      ],
+      "evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY",
+        "CLM-2D-THERMO"
+      ],
+      "first_required_at": "ANCHOR-FIG1"
+    },
+    {
+      "packet_id": "METHOD_PACKET_RELIABILITY",
+      "source_sentences": [
+        "METHODS_TEX:reliability",
+        "RES-FIG1-002-S01"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC",
+        "E-PHASEII-AUDIT"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "first_required_at": "ANCHOR-FIG1"
+    },
+    {
+      "packet_id": "METHOD_PACKET_ACTIVE_LEARNING",
+      "source_sentences": [
+        "METHODS_TEX:active_learning",
+        "RES-FIG1-002-S02"
+      ],
+      "evidence_ids": [
+        "E-NUMERICS-SPEC",
+        "E-FIG2-STRICT-DATA"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY",
+        "CLM-2D-THERMO"
+      ],
+      "first_required_at": "ANCHOR-FIG1"
+    },
+    {
+      "packet_id": "METHOD_PACKET_TOPOLOGY",
+      "source_sentences": [
+        "METHODS_TEX:topology",
+        "RES-FIG3-001-S03"
+      ],
+      "evidence_ids": [
+        "E-STAGEIII-PASS",
+        "E-FIG3-STRICT-DATA"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "first_required_at": "ANCHOR-FIG3"
+    },
+    {
+      "packet_id": "METHOD_PACKET_CONVERGENCE",
+      "source_sentences": [
+        "METHODS_TEX:convergence",
+        "RES-FIG2-001-S04",
+        "RES-FIG3-002-S01"
+      ],
+      "evidence_ids": [
+        "E-PHASEII-AUDIT",
+        "E-STAGEIII-CONVERGENCE"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO",
+        "CLM-2D-TOPOLOGY"
+      ],
+      "first_required_at": "ANCHOR-FIG2"
+    },
+    {
+      "packet_id": "METHOD_PACKET_3D",
+      "source_sentences": [
+        "METHODS_TEX:convergence_and_3D",
+        "RES-FIG4-001-S03",
+        "RES-FIG4-002-S02"
+      ],
+      "evidence_ids": [
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT",
+        "E-FIG4-STRICT-DATA"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "first_required_at": "ANCHOR-FIG4"
+    }
+  ]
+}

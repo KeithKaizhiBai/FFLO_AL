@@ -1,0 +1,49 @@
+{
+  "endpoint_coordinate_order_matches": true,
+  "endpoint_phase_labels_match": true,
+  "R12_extra_rows": 141,
+  "R12_identity_checked": "endpoint only; not full history",
+  "R01_bin_counts": [
+    {
+      "mu_center": -0.45,
+      "half_width": 0.025,
+      "all_retained": 272,
+      "FFLO": 176,
+      "trusted_gapped_FFLO": 176,
+      "cFFLO": 121,
+      "tFFLO": 55,
+      "outside_displayed_topology_subset": 96
+    },
+    {
+      "mu_center": 0.15,
+      "half_width": 0.025,
+      "all_retained": 154,
+      "FFLO": 97,
+      "trusted_gapped_FFLO": 97,
+      "cFFLO": 70,
+      "tFFLO": 27,
+      "outside_displayed_topology_subset": 57
+    },
+    {
+      "mu_center": 0.85,
+      "half_width": 0.025,
+      "all_retained": 223,
+      "FFLO": 148,
+      "trusted_gapped_FFLO": 148,
+      "cFFLO": 75,
+      "tFFLO": 73,
+      "outside_displayed_topology_subset": 75
+    },
+    {
+      "mu_center": 1.45,
+      "half_width": 0.025,
+      "all_retained": 142,
+      "FFLO": 35,
+      "trusted_gapped_FFLO": 35,
+      "cFFLO": 35,
+      "tFFLO": 0,
+      "outside_displayed_topology_subset": 107
+    }
+  ],
+  "new_physics": false
+}

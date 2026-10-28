@@ -1,0 +1,27 @@
+{
+  "project_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO",
+  "stageiv_scope_gate_passed": true,
+  "run_id": "active_learning_manuscript_stageiv_revision_v3",
+  "parent_run_id": "active_learning_prl_integrated_cited_v2",
+  "publication_profile_id": "INTEGRATED_CITED_STAGEIV_SCOPE_REVISION_V3",
+  "workflow_status": "stageiv_revision_audit_passed",
+  "next_action": "human review of revised Figure 4, SM diagnostics, manuscript, and Supplement",
+  "variant_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_variants/integrated_cited_stageiv_revision_v3",
+  "variant_output_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_integrated_cited_stageiv_revision_v3",
+  "revision_sources_ready": true,
+  "revised_manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_integrated_cited_stageiv_revision_v3/manuscript_candidate.pdf",
+  "revised_supplement_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_integrated_cited_stageiv_revision_v3/supplement_candidate.pdf",
+  "revision_compiled": true,
+  "revision_audit_passed": true,
+  "gate": {
+    "gate_id": "GATE_STAGEIV_SCOPE_REVISION_HUMAN_REVIEW",
+    "status": "HUMAN_WAIT",
+    "items": [
+      "Figure 4 v2",
+      "Stage-IV SM diagnostics",
+      "main-text wording",
+      "Supplement wording"
+    ],
+    "automatic_approval": false
+  }
+}

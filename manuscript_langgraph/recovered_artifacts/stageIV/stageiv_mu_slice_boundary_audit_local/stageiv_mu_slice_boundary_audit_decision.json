@@ -1,0 +1,28 @@
+{
+  "anomaly_bins": [
+    "0.50_0.83",
+    "0.83_1.17",
+    "1.17_1.50"
+  ],
+  "anomaly_correlates_with_hard_risk": "partial",
+  "baseline_reproduced": true,
+  "broad_bin_projection_artifact": "partial",
+  "candidate_count_generated_for_traceability": 24,
+  "caveats": [
+    "No exact calculation was run.",
+    "Candidate points are report-only recommendations.",
+    "Smooth curves remain diagnostic only.",
+    "Single-band corridor is not a topology label."
+  ],
+  "final_classification": "Class A - broad-bin projection artifact",
+  "lower_mu_edge_related": true,
+  "need_new_exact_calculation": false,
+  "numerical_reliability_concern": true,
+  "real_thermodynamic_feature": false,
+  "recommended_next_action": "curve_extraction_fix_only",
+  "recommended_tail_candidate_count": 0,
+  "sampling_support_limited": false,
+  "single_band_corridor_related": "partial",
+  "smooth_fit_artifact": "medium",
+  "thermodynamic_margin_supported": "partial"
+}

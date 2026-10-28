@@ -1,0 +1,19 @@
+{
+  "node_id": "figure_evidence_contract",
+  "purpose": "figure evidence contract",
+  "inputs": [
+    "figure_registry",
+    "evidence_registry"
+  ],
+  "outputs": [
+    "validated_figure_contracts"
+  ],
+  "prerequisites": [
+    "claim_freeze"
+  ],
+  "forbidden_actions": [
+    "no panel without a registered source"
+  ],
+  "gate": "FIGURE_EVIDENCE_CONTRACT",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

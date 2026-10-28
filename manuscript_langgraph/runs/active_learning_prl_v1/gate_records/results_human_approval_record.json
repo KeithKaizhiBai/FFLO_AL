@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_RESULTS_HUMAN_REVIEW",
+  "decision": "approved",
+  "approved_at": "2026-08-27",
+  "approval_authority": "explicit_user_instruction_in_active_task",
+  "scope": "Results text and Figure 1-4 captions",
+  "results_scientific_freeze": true,
+  "external_retrieval_permission": false,
+  "new_physics_permission": false,
+  "frozen_artifacts": {
+    "results_candidate.tex": "c912d2af2cd464e5dd920fc6bd0f2093ed968e499bd1e4f78dbd2b06e59bbbcd",
+    "results_candidate.md": "b40ea82c082ce5940642474d24aaa2b9afe5a3063f2e635fc3e17e940392c8ff",
+    "figure_captions_candidate.tex": "9437b710ada078ea7bac1d8ee72925d6d261ea36719a71642643d1343a1fb8ca",
+    "results_sentence_evidence_trace.yaml": "978a017275d332749da3e9185f268d57ac79ae590d9c88406fa81b4674d91b6f",
+    "figure_caption_evidence_trace.yaml": "2b6880763b0d639a9d30db01d30452dda89a0244bfc33648b7b8a7bc6ebc18ad",
+    "results_review_packet.tex": "5e330a4c97070c8bd00fd6089aedeb429907381c105f0427ab6dee374d8c11c4",
+    "results_review_packet.pdf": "e2370aca772f1baae0d5be7e9d470e252604ad3372addfeb5e16a3aa2833529e"
+  },
+  "amendment": "manuscript_langgraph/runs/active_learning_prl_v1/gate_records/results_fig4_caption_correction_approval.json"
+}

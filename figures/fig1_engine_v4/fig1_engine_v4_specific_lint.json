@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-01-ENGINE-V4",
+  "status": "pass",
+  "hard_failure_count": 0,
+  "generated_at": "2026-08-26T09:17:29.157233+00:00",
+  "checks": [
+    {
+      "check": "engine_preflight",
+      "status": "pass",
+      "detail": "Versioned Figure Engine preflight exists.",
+      "evidence": null
+    },
+    {
+      "check": "proposal_gate_recorded",
+      "status": "pass",
+      "detail": "The separate v3 proposal gate is explicitly approved.",
+      "evidence": null
+    },
+    {
+      "check": "landscape_asset_gate_recorded",
+      "status": "pass",
+      "detail": "Candidate A is explicitly selected by the human landscape-asset gate.",
+      "evidence": null
+    },
+    {
+      "check": "v1_frozen",
+      "status": "pass",
+      "detail": "Frozen engine-v1 hashes match the benchmark.",
+      "evidence": {
+        "fig1_engine_v1.svg": "180666d303434fb0718063fbbc9afc81ba8d33bb2ae1fbe8bc145841602a880a",
+        "fig1_engine_v1.pdf": "c83b3295b512209f6b5493fd3a5dfc82ac5c6a113e25d010dc12d5b0c5fe62d0",
+        "fig1_engine_v1.png": "a4363435b8f6106ced9263a93a097b9ace8d650a20691e03eeefdc984efea663"
+      }
+    },
+    {
+      "check": "v2_frozen",
+      "status": "pass",
+      "detail": "Frozen engine-v2 files match its regeneration manifest.",
+      "evidence": null
+    },
+    {
+      "check": "v3_frozen",
+      "status": "pass",
+      "detail": "Frozen engine-v3 SVG/PDF hashes remain unchanged.",
+      "evidence": {
+        "fig1_engine_v3.svg": "e7bcef3f2912e56719aa4b3c56b4b6b82f23b0f66430b7ddcbd35045ee90857e",
+        "fig1_engine_v3.pdf": "b1138f2b314443ff874092d4639a0e14c9d370dbd2b9ae7a0bbdf89bd907cda1"
+      }
+    },
+    {
+      "check": "topology_and_peripheral_regions_frozen",
+      "status": "pass",
+      "detail": "Topology and all seven peripheral cards are pixel-identical to frozen v3.",
+      "evidence": {
+        "topology_resolution": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "parameter": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "next_calls": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "acquisition": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "bdg": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "reliability": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "observation": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        },
+        "surrogate": {
+          "mean_absolute_channel_difference": 0.0,
+          "maximum_channel_difference": 0,
+          "difference_bbox": null,
+          "identical": true
+        }
+      }
+    },
+    {
+      "check": "primary_card_area",
+      "status": "pass",
+      "detail": "Primary card fraction=0.6025; required >=0.55.",
+      "evidence": null
+    },
+    {
+      "check": "primary_scientific_area",
+      "status": "pass",
+      "detail": "Landscape/central fraction=0.3784; required >=0.35.",
+      "evidence": null
+    },
+    {
+      "check": "declared_scientific_fill",
+      "status": "pass",
+      "detail": "Scientific content/landscape fraction=0.6621; required >=0.65.",
+      "evidence": null
+    },
+    {
+      "check": "measured_real_surface_fill",
+      "status": "pass",
+      "detail": "Measured embedded surface/landscape fraction=0.6628; required >=0.65.",
+      "evidence": null
+    },
+    {
+      "check": "primary_is_scientific_subobject",
+      "status": "pass",
+      "detail": "Primary visual object resolves to the landscape scientific subobject.",
+      "evidence": null
+    },
+    {
+      "check": "topology_subobject_registered",
+      "status": "pass",
+      "detail": "Topology is a separate registered scientific subobject.",
+      "evidence": null
+    },
+    {
+      "check": "workflow_route_count",
+      "status": "pass",
+      "detail": "Found 7 main and 7 secondary workflow ribbons.",
+      "evidence": null
+    },
+    {
+      "check": "required_scientific_labels",
+      "status": "pass",
+      "detail": "All required labels are present.",
+      "evidence": []
+    },
+    {
+      "check": "forbidden_claims_absent",
+      "status": "pass",
+      "detail": "No forbidden/prohibited claim appears in artwork.",
+      "evidence": []
+    },
+    {
+      "check": "topology_scientific_separation",
+      "status": "pass",
+      "detail": "Representative minima, gap/Pfaffian topology, and boundary-state semantics remain separate.",
+      "evidence": null
+    },
+    {
+      "check": "rendered_bbox_audit",
+      "status": "pass",
+      "detail": "Browser-measured registered geometry passes.",
+      "evidence": null
+    },
+    {
+      "check": "exact_print_size",
+      "status": "pass",
+      "detail": "PDF is exactly 178.00 \u00d7 120.15 mm.",
+      "evidence": null
+    },
+    {
+      "check": "print_previews",
+      "status": "pass",
+      "detail": "300-dpi color and grayscale previews exist.",
+      "evidence": null
+    },
+    {
+      "check": "artwork_word_budget",
+      "status": "pass",
+      "detail": "Artwork word count=91; maximum=115.",
+      "evidence": 91
+    },
+    {
+      "check": "no_physics_recomputation",
+      "status": "pass",
+      "detail": "Asset provenance records physics_recomputed=false.",
+      "evidence": null
+    },
+    {
+      "check": "human_gate_held",
+      "status": "pass",
+      "detail": "Automated validation leaves final Figure 1 approval to humans.",
+      "evidence": null
+    }
+  ],
+  "gate": {
+    "gate": "GATE_FIG1_ENGINE_V4_APPROVAL",
+    "state": "HUMAN_WAIT"
+  }
+}

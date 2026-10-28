@@ -1,0 +1,32 @@
+schema_version: 1
+review_id: required
+figure_id: required
+reviewer: required
+date: required
+
+ratings:
+  scale: [fail, weak, adequate, strong]
+  required_dimensions:
+    - first_fixation_is_physical_state_space
+    - thermodynamic_depth
+    - basin_separation
+    - cfflo_tfflo_branch_distinction
+    - topology_transition_separation
+    - oracle_free_energy_hierarchy
+    - physical_observation_language
+    - information_flow_quality
+    - grayscale_legibility
+    - print_legibility
+
+required_questions:
+  - Does the landscape read as a physical state space rather than an embedded plot?
+  - Are cFFLO and tFFLO distinct representative branches rather than simultaneous minima?
+  - Is tFFLO visibly gapped in the bulk with separate boundary-state branches?
+  - Does the BdG card make free-energy generation the dominant output?
+  - Does the observation card read as measured physical quantities rather than a checklist?
+  - Do arrows communicate directed information transfer without becoming the first visual mass?
+
+decision:
+  allowed: [approve, approve_with_edits, reject]
+  automatic_approval_forbidden: true
+  gate: GATE_FIG1_ASSET_REFINEMENT_APPROVAL

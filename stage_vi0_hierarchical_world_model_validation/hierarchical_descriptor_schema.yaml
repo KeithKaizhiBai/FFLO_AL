@@ -1,0 +1,18 @@
+schema_version: 1
+x: [kBT_over_t, JA_over_t, mu_over_t]
+level1:
+  classification: p_SC
+  continuous: [Delta_opt_over_t, deltaF_NS_over_t]
+  target_semantics: SC derived from positive Delta and deltaF_NS < -1e-6
+level2:
+  conditioning: trusted physical SC
+  continuous: [abs_q_over_pi]
+  unavailable: [deltaF_UF]
+level3:
+  conditioning: trusted SC and spectral output available
+  continuous: [log_gap, k_gap_over_pi]
+level4:
+  conditioning: trusted SC, trusted gapped spectrum
+  continuous: [signed_log_P0, signed_log_Ppi, log_Pfaffian_margin]
+  evaluation_only: [Z2]
+forbidden_training_fields: [phase_label, topology_label, proposal_source, action_family, reward, iteration, graph_node_id, candidate_node_id]

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "parent_run_id": "active_learning_prl_scientific_depth_v5",
+  "parent_gate": "GATE_EXPANDED_PUBLIC_MANUSCRIPT_HUMAN_REVIEW",
+  "parent_hashes": {
+    "manuscript_langgraph/runs/active_learning_prl_scientific_depth_v5/final_state.json": "598d3d11d4180eae546e48f6c50f34abbe72563c98b4a5d05cdc6ceb172298b0",
+    "manuscript_variants/scientific_depth_v5/sections/abstract.tex": "7b1c022dcb5cb18790db02f19b65182c661711fb6bb9ded9b000dd32d402a596",
+    "manuscript_variants/scientific_depth_v5/sections/introduction.tex": "98acc26683568ce812af8f1807680c20ff009fe19ad04b258e9216a019f24327",
+    "manuscript_variants/scientific_depth_v5/sections/discussion.tex": "e4f3f6bca0c6af0e4c9569a83f5d03e3461acdb283c57b010d9e398888b18aa1",
+    "manuscript_variants/scientific_depth_v5/references.bib": "53f9711531da24c6008cb9efca67ec5111636b44b6a1665ff258bdd280710f93"
+  },
+  "frozen_figure_hashes": {
+    "Fig1": "b1138f2b314443ff874092d4639a0e14c9d370dbd2b9ae7a0bbdf89bd907cda1",
+    "Fig2": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "Fig3": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "Fig4": "b1f8f4d812ea913e7005789d60e46dc2529e8ccfc9c2b5eb47c9d8df54cc76f9"
+  }
+}

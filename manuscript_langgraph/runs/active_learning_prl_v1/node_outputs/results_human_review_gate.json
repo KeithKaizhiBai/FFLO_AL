@@ -1,0 +1,286 @@
+{
+  "active_figure_id": "FIG-01-04-MAIN-TEXT-CONTRACTS",
+  "results_package_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1",
+  "paragraph_metadata": [
+    {
+      "paragraph_id": "RES-FIG1-001",
+      "observation": "Method/caveat paragraph grounded in registered sources.",
+      "interpretation": "No standalone interpretation in this paragraph.",
+      "evidence_source": [
+        "E-FIG3-STRICT-DATA",
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_reference": [
+        "1"
+      ],
+      "claims_used": [
+        "CLM-2D-TOPOLOGY",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-FIG3-STRICT-DATA",
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_panels_cited": [
+        "1-all",
+        "1-central",
+        "1-cycle",
+        "1-oracle",
+        "1-topology"
+      ],
+      "caveats": [
+        "schematic is not numerical evidence"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG1-002",
+      "observation": "Optimization convergence, spectral/topological trust, and numerical reliability remain explicit gates on every accepted physical observation.",
+      "interpretation": "This separation makes the reliability hierarchy an enabling component for scalable parameter-space exploration without replacing the physical solver.",
+      "evidence_source": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC",
+        "E-PHASEII-AUDIT",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_reference": [
+        "1"
+      ],
+      "claims_used": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC",
+        "E-PHASEII-AUDIT",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_panels_cited": [
+        "1-acquisition",
+        "1-all",
+        "1-next-calls",
+        "1-observation",
+        "1-reliability",
+        "1-surrogate"
+      ],
+      "caveats": [],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG2-001",
+      "observation": "The two-dimensional reconstruction begins from 512 selected exact calls, of which 506 have retained frozen labels in the endpoint (Fig.~2a). Subsequent exact calls accumulate preferentially around the visible Normal/superconducting and uniform-SC/FFLO structures rather than remaining uniformly distributed over $(k_BT/t,J_A/t)$ (Fig.~2b). The audited endpoint contains 7,434 exact observations: 1,867 Normal, 715 uniform-SC, and 4,852 FFLO labels (Fig.~2c). At the frozen endpoint, the raw phase-map change is 0.001629, the Normal--SC and uniform-SC--FFLO shifts are 0.004167 and 0, respectively, and trusted surprise is 0 for 127 trusted calls; these quantities satisfy their configured stopping rules (Fig.~2d).",
+      "interpretation": "No standalone interpretation in this paragraph.",
+      "evidence_source": [
+        "E-FIG2-STRICT-DATA",
+        "E-PHASEII-AUDIT",
+        "E-STAGEI-COLDSTART"
+      ],
+      "figure_reference": [
+        "2a",
+        "2b",
+        "2c",
+        "2d"
+      ],
+      "claims_used": [
+        "CLM-2D-THERMO",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-FIG2-STRICT-DATA",
+        "E-PHASEII-AUDIT",
+        "E-STAGEI-COLDSTART"
+      ],
+      "figure_panels_cited": [
+        "2a",
+        "2b",
+        "2c",
+        "2d"
+      ],
+      "caveats": [],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG2-002",
+      "observation": "Method/caveat paragraph grounded in registered sources.",
+      "interpretation": "The exact-sample map therefore supports an audited reconstruction of the two-dimensional thermodynamic structure under the registered criterion, while preserving the finite numerical frontier.",
+      "evidence_source": [
+        "E-FIG2-STRICT-DATA",
+        "E-PHASEII-AUDIT",
+        "E-PHASEII-HARD-RISK"
+      ],
+      "figure_reference": [
+        "2a",
+        "2b",
+        "2c",
+        "2d"
+      ],
+      "claims_used": [
+        "CLM-2D-THERMO",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-FIG2-STRICT-DATA",
+        "E-PHASEII-AUDIT",
+        "E-PHASEII-HARD-RISK"
+      ],
+      "figure_panels_cited": [
+        "2a",
+        "2b",
+        "2c",
+        "2d"
+      ],
+      "caveats": [
+        "hard-risk remains explicit and is not a phase",
+        "under the configured audit"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG3-001",
+      "observation": "Topology is evaluated on the trusted gapped FFLO subset of the 4,345-point endpoint, yielding 3,213 eligible states separated into 2,290 cFFLO and 923 tFFLO observations (Fig.~3a). These exact labels form a connected cFFLO/tFFLO structure in the sampled $(k_BT/t,J_A/t)$ domain, with the archived $k=8$ contour marking a gap-closing transition diagnostic (Fig.~3b).",
+      "interpretation": "No standalone interpretation in this paragraph.",
+      "evidence_source": [
+        "E-FIG3-STRICT-DATA",
+        "E-STAGEIII-CONVERGENCE",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_reference": [
+        "3a",
+        "3b"
+      ],
+      "claims_used": [
+        "CLM-2D-TOPOLOGY",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-FIG3-STRICT-DATA",
+        "E-STAGEIII-CONVERGENCE",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_panels_cited": [
+        "3a",
+        "3b"
+      ],
+      "caveats": [
+        "brackets and contour are diagnostics only"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG3-002",
+      "observation": "The configured $k=8$ audit returns Decision A, with final coverage $p_{95}=0.006185$ below the registered threshold 0.00625 and the remaining raw convergence metrics satisfying their gates (Fig.~3c,d). For the $k=6$ sensitivity setting, however, coverage $p_{95}=0.006269$ lies slightly above the same threshold (Fig.~3d).",
+      "interpretation": "Thus the topology-aware reconstruction passes its registered $k=8$ audit while retaining a small neighborhood-size sensitivity, rather than establishing that all possible topology refinements or nodal alternatives are exhausted.",
+      "evidence_source": [
+        "E-FIG3-STRICT-DATA",
+        "E-STAGEIII-CONVERGENCE"
+      ],
+      "figure_reference": [
+        "3c",
+        "3d"
+      ],
+      "claims_used": [
+        "CLM-2D-TOPOLOGY"
+      ],
+      "evidence_used": [
+        "E-FIG3-STRICT-DATA",
+        "E-STAGEIII-CONVERGENCE"
+      ],
+      "figure_panels_cited": [
+        "3c",
+        "3d"
+      ],
+      "caveats": [
+        "k=6 sensitivity deviation must remain visible",
+        "configured pass with k sensitivity"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG4-001",
+      "observation": "Extending the sampled coordinates to $(k_BT/t,J_A/t,\\mu/t)$ produces 7,081 exact observations over the finite interval $\\mu/t\\in[-0.5,1.5]$: 2,350 Normal, 141 uniform-SC, and 4,590 FFLO states (Fig.~4a). Within the trusted FFLO-only subset, 3,145 cFFLO and 1,445 tFFLO observations provide discrete topology support rather than a fitted topology surface (Fig.~4b). Four explicit narrow fixed-$\\mu$ bins selected from the 20-row slice audit expose slice-to-slice changes in the exact thermodynamic samples without interpolating between slices (Fig.~4c).",
+      "interpretation": "Together, these point clouds and fixed-$\\mu$ slices demonstrate active-learning-enabled higher-dimensional exploration that reveals thermodynamic and topology-aware structures across the sampled domain.",
+      "evidence_source": [
+        "E-FIG4-STRICT-DATA",
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT"
+      ],
+      "figure_reference": [
+        "4a",
+        "4b",
+        "4c"
+      ],
+      "claims_used": [
+        "CLM-3D-EXTENSION",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-FIG4-STRICT-DATA",
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT"
+      ],
+      "figure_panels_cited": [
+        "4a",
+        "4b",
+        "4c"
+      ],
+      "caveats": [
+        "FFLO-only counts; discrete point support"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG4-002",
+      "observation": "The last strict audit transition nevertheless has topology-volume map change $0.002561>0.002$, surface-shift $p_{95}=0.005996>0.004167$, coverage $p_{95}=0.015318>0.00625$, trusted surprise $0.140625>0.02$, and component counts $3\\rightarrow4\\rightarrow3$ (Fig.~4d).",
+      "interpretation": "No standalone interpretation in this paragraph.",
+      "evidence_source": [
+        "E-FIG2-STRICT-DATA",
+        "E-FIG3-STRICT-DATA",
+        "E-FIG4-STRICT-DATA",
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT"
+      ],
+      "figure_reference": [
+        "2",
+        "3",
+        "4",
+        "4a",
+        "4b",
+        "4c",
+        "4d"
+      ],
+      "claims_used": [
+        "CLM-2D-THERMO",
+        "CLM-2D-TOPOLOGY",
+        "CLM-3D-EXTENSION"
+      ],
+      "evidence_used": [
+        "E-FIG2-STRICT-DATA",
+        "E-FIG3-STRICT-DATA",
+        "E-FIG4-STRICT-DATA",
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT"
+      ],
+      "figure_panels_cited": [
+        "2-all",
+        "3-all",
+        "4-all",
+        "4a",
+        "4b",
+        "4c",
+        "4d"
+      ],
+      "caveats": [
+        "strict 3D topology nonclosure",
+        "no continuous-surface or complete-atlas implication"
+      ],
+      "unsupported_sentence_flags": []
+    }
+  ],
+  "results_claims_frozen": false,
+  "workflow_status": "awaiting_results_human_review",
+  "next_action": "human reviews Results, captions, and central caveats"
+}

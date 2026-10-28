@@ -1,0 +1,41 @@
+{
+  "physics_recomputed": false,
+  "figures": [
+    {
+      "key": "S1_reliability_flow",
+      "figure_id": "SM-FIG-RELIABILITY-FLOW-V1",
+      "pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S1_reliability_flow/S1_reliability_flow.pdf",
+      "png": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S1_reliability_flow/S1_reliability_flow.png",
+      "svg": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S1_reliability_flow/S1_reliability_flow.svg",
+      "sha256": "9186d1ba51605ad4e55daa878d28bbd83fa6d70513a267cee134225a59f483f9",
+      "lint": "pass"
+    },
+    {
+      "key": "S2_surrogate_architecture",
+      "figure_id": "SM-FIG-SURROGATE-ARCHITECTURE-V1",
+      "pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S2_surrogate_architecture/S2_surrogate_architecture.pdf",
+      "png": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S2_surrogate_architecture/S2_surrogate_architecture.png",
+      "svg": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S2_surrogate_architecture/S2_surrogate_architecture.svg",
+      "sha256": "43fb760182bb391cab4c30d7cec32ac86bba33b7d63ffd0b7ba9d9f019e17f46",
+      "lint": "pass"
+    },
+    {
+      "key": "S3_acquisition_decomposition",
+      "figure_id": "SM-FIG-ACQUISITION-DECOMPOSITION-V1",
+      "pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S3_acquisition_decomposition/S3_acquisition_decomposition.pdf",
+      "png": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S3_acquisition_decomposition/S3_acquisition_decomposition.png",
+      "svg": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S3_acquisition_decomposition/S3_acquisition_decomposition.svg",
+      "sha256": "7a166c6d8d68600a1989a8159edb4aaca10a90a3f43b70a0c628f5f87c572b0b",
+      "lint": "pass"
+    },
+    {
+      "key": "S4_sampling_efficiency",
+      "figure_id": "SM-FIG-SAMPLING-EFFICIENCY-V1",
+      "pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S4_sampling_efficiency/S4_sampling_efficiency.pdf",
+      "png": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S4_sampling_efficiency/S4_sampling_efficiency.png",
+      "svg": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/supplementary_publication_methods/S4_sampling_efficiency/S4_sampling_efficiency.svg",
+      "sha256": "9faae752bf89726d163251dd9d3193a444956ff83ec2e55a37c056ec7bff9700",
+      "lint": "pass"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+reason,count
+rerun_required,110
+untrusted_exact,129
+training_ineligible,110
+q_unresolved,0
+delta_unresolved,0
+hard_risk_total,129
+multi_reason_overlap,110
+rerun_required_only,0
+non_rerun_hard_risk,19

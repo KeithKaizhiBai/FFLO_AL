@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "run_id": "active_learning_prl_integrated_v1",
+  "parent_run_id": "active_learning_prl_v1",
+  "publication_profile": "PRL_INTEGRATED_MAIN_TEXT",
+  "scientific_content_authority": "inherited_from_frozen_intermediate_review",
+  "parent_intermediate_pdf": "output/pdf/manuscript_methods_sm_discussion_review_v1/manuscript_intermediate_review.pdf",
+  "parent_intermediate_pdf_sha256": "e120e3bce2bb914233e54a2ea7f6cf340f63a0b60254d1ef184034f6610ba75d",
+  "publication_form": "new_candidate",
+  "human_approval": "pending",
+  "old_intermediate_review_overwritten": false
+}

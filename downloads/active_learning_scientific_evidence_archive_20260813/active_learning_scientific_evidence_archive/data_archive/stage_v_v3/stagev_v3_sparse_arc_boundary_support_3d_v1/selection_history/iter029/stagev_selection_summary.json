@@ -1,0 +1,138 @@
+{
+  "a0_max": 0.5485791970822361,
+  "alpha_p0": 3.0,
+  "alpha_ppi": 3.0,
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 2.179426628735844,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "boundary_priorities": {
+    "gap_nodal": 0.0,
+    "normal_sc": 0.0,
+    "p0_topology": 0.0,
+    "ppi_topology": 0.0,
+    "uniform_fflo": 0.0
+  },
+  "boundary_summary": {
+    "gap": {
+      "alpha": 3.0,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 2.165195351412704e-06
+    },
+    "ns": {
+      "alpha": 2.179426628735844,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.04983055161141543
+    },
+    "p0": {
+      "alpha": 3.0,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.0005014247297764696
+    },
+    "ppi": {
+      "alpha": 3.0,
+      "lambda": 0.7,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.00019143673462793332
+    },
+    "uf": {
+      "alpha": 3.0,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.49999999999999983,
+      "raw_score_mean": 0.0038461257133960507
+    }
+  },
+  "candidate_count": 78643,
+  "candidate_source_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "dataset_path": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter029.npz",
+  "dataset_samples": 2794,
+  "device": "cpu",
+  "gap_topology_relevance_mean": 0.12441319559956268,
+  "high_contribution_fraction_p0": 0.25,
+  "high_contribution_fraction_ppi": 0.25,
+  "iteration": 29,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.7,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "lambda_t": 0.0,
+  "mean_contribution_p0": 3.5999648724600086,
+  "mean_contribution_ppi": 3.5573703459983217,
+  "mean_selection_probability": 0.006578603963265792,
+  "mode": "acquisition",
+  "partition_strategy": "cost_aware",
+  "requested_candidate_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "requested_micro_batch_size": 64,
+  "run_id": "stagev_v3_sparse_arc_boundary_support_3d_v1",
+  "selected_batch_size": 64,
+  "selection_score": "A_total_v2",
+  "source_correction_by_source": {
+    "component_boundary_guard": 1.0500482218592653,
+    "global_sobol": -0.2605440231564955,
+    "opposite_Z2_bracket_gap": 1.0498574913591459,
+    "p0_zero_surface_sparse_patch": 1.0897358450519392,
+    "ppi_zero_surface_sparse_patch": 2.334051369491431,
+    "topology_surface_normal_jitter": 1.0500482218592653,
+    "topology_surface_tangent_jitter": 1.0500482218592653,
+    "unknown_explicit": -0.1602333360338022
+  },
+  "sparse_proposal_status": "ok",
+  "sparse_surface_samples": 1731,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_schema_version": "stagev_v3_sparse_arc_acq_1",
+  "stagev2_score_max": 0.5094295310837644,
+  "stagev2_tail_data_used_for_training": false,
+  "stagev3_candidate_count": 78643,
+  "stagev3_candidate_source_counts": {
+    "component_boundary_guard": 2621,
+    "global_sobol": 36044,
+    "opposite_Z2_bracket_gap": 2622,
+    "p0_zero_surface_sparse_patch": 2421,
+    "ppi_zero_surface_sparse_patch": 201,
+    "topology_surface_normal_jitter": 2621,
+    "topology_surface_tangent_jitter": 2621,
+    "unknown_explicit": 29492
+  },
+  "stagev3_schema_version": "stagev_v3_sparse_arc_acq_1",
+  "support_counts": {
+    "gap_nodal": 0,
+    "normal_sc": 718,
+    "p0_topology": 1329,
+    "ppi_topology": 409,
+    "uniform_fflo": 125
+  },
+  "topology_c_topo_available": true,
+  "topology_c_topo_mean": 0.10542298914650465,
+  "topology_channel_suppressed": false,
+  "topology_sparse_component_count": 2,
+  "topology_sparse_coverage_p95": 0.028001879697851957,
+  "topology_sparse_patch_samples": 87,
+  "topology_sparse_surface_samples": 1731,
+  "world_size": 8
+}

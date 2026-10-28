@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "new_candidate_pdf": "output/pdf/manuscript_prl_integrated_v1/manuscript_prl_integrated_candidate.pdf",
+  "old_intermediate_review_pdf": "output/pdf/manuscript_methods_sm_discussion_review_v1/manuscript_intermediate_review.pdf",
+  "candidate_sha256": "5846a2b4ec76a25e4824a012aa45f8451a92ccf1d743e5c97b61576b452af222",
+  "old_intermediate_sha256": "e120e3bce2bb914233e54a2ea7f6cf340f63a0b60254d1ef184034f6610ba75d",
+  "figure_pages": {
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 6
+  },
+  "anchor_pages": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 5
+  },
+  "length_status": "OVERLENGTH_CANDIDATE",
+  "citation_gap_count": 5,
+  "compile_overfull_count": 0,
+  "gate": "GATE_PRL_INTEGRATED_MANUSCRIPT_HUMAN_REVIEW",
+  "gate_status": "HUMAN_WAIT"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-02-THERMO-STRICT",
+  "physics_recomputed": false,
+  "assets": {
+    "fig2_strict_data.svg": {
+      "sha256": "60241a3ac087f3ecf77f968174eeb71d41d44cd5314562e059067790f90431ed",
+      "bytes": 2369700
+    },
+    "fig2_strict_data.pdf": {
+      "sha256": "b6d8c3d2618c746335e8798bd053aef719748e383166a86d56846582f928d851",
+      "bytes": 155426
+    },
+    "fig2_strict_data.png": {
+      "sha256": "cb80eb3f2459e9123d6fe052980f38d1c44343587de68f43cf364c09b780e75c",
+      "bytes": 733801
+    },
+    "fig2_low_fidelity.svg": {
+      "sha256": "2e9d2c4469b73c7b1f0609fbdad1fff957ecb621d8b873a4b1c16041ebb895ff",
+      "bytes": 2368632
+    },
+    "fig2_low_fidelity.png": {
+      "sha256": "4453cdf46903947a216fb183291c31571784cb24a282e35abe265b00395ad34d",
+      "bytes": 692756
+    },
+    "fig2_strict_data_grayscale.png": {
+      "sha256": "4e0a97ded4007706ae3a2be9cf9f3730d64bf44a3e248e94f49958401e030618",
+      "bytes": 316132
+    }
+  }
+}

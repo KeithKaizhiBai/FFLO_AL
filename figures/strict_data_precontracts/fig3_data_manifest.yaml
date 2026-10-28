@@ -1,0 +1,186 @@
+schema_version: 1
+figure_id: FIG-03-STAGEIII-TOPOLOGY-STRICT
+physics_recomputed: false
+render_authorized: false
+sources:
+  dataset_iter018:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz
+    sha256: 6583230495ad9e3eb45b0cff034d5525fa443bd43b1b31a754defeaabdfb5ab4
+    version: dataset_iter018
+    row_count: 4345
+    fields:
+    - x
+    - y_reg
+    - y_phase
+    - y_eta_sign
+    - y_strong_diode
+    - q_min
+    - q_max
+    - n_q
+    - q_index
+    - q_edge_distance
+    - q_edge_hit
+    - q_refinement_level
+    - q_status
+    - q_expanded
+    - q_unresolved
+    - delta_min
+    - delta_max
+    - n_delta
+    - n_delta_refined
+    - delta_refinement_level
+    - delta_status
+    - delta_boundary_ambiguous
+    - delta_boundary_band_normal
+    - delta_refined
+    - delta_unresolved
+    - free_energy_gap_to_normal
+    - positive_delta_gap
+    - positive_delta_checked
+    - phase_candidate
+    - exact_status_code
+    - trusted_exact
+    - training_eligible_exact
+    - needs_rerun_exact
+    - topology_enabled
+    - topology_applicable
+    - topology_pending
+    - topology_label_code
+    - topology_z2
+    - topology_spectral_status_code
+    - topology_trusted
+    - topology_p0
+    - topology_ppi
+    - topology_pf_product
+    - topology_pfaffian_margin
+    - topology_bulk_gap
+    - topology_k_at_bulk_gap
+    - topology_gap_tol
+    - topology_gap_nk
+    - topology_gap_backend_code
+    - topology_runtime_sec
+    - topology_error_code
+    units:
+      x[:,0]: kBT/t
+      x[:,1]: JA/t
+      topology_z2: Z2 code
+      topology_bulk_gap: t
+  topology_boundary_points_v2:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_points_by_iteration.csv
+    sha256: b3158db8a395a0f6bd07d372914023c00cf7fcb5e52e18f51e35ab1eb244dd3a
+    version: topology_boundary_points_v2
+    row_count: 11200
+    fields:
+    - iteration
+    - component_id
+    - contour_kind
+    - sample_id
+    - kT
+    - JA
+    - x_norm
+    - y_norm
+    - component_arc_length_norm
+    - component_support_fraction
+    units:
+      kT: kBT/t
+      JA: JA/t
+      x_norm: normalized
+      y_norm: normalized
+  topology_map_change_v2:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_convergence_metrics_by_iteration.csv
+    sha256: 4f51c08cbaffce743f16456d9094e581c5d169d5e268318c37295cc5b3610863
+    version: topology_map_change_v2
+    row_count: 18
+    fields:
+    - transition_from_iteration
+    - transition_to_iteration
+    - valid_common_points
+    - valid_common_fraction_of_audit_mask
+    - newly_valid_fraction
+    - no_longer_valid_fraction
+    - changed_grid_count
+    - topology_map_change
+    - map_change_pass
+    units:
+      topology_map_change: fraction
+  topology_boundary_shift_v2:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_shift_by_iteration.csv
+    sha256: 22975fd79647ec0de0a5da5b9f131daac1256170d2c8cc846721bd94fb8c8636
+    version: topology_boundary_shift_v2
+    row_count: 18
+    fields:
+    - transition_from_iteration
+    - transition_to_iteration
+    - status
+    - directed_curr_to_prev_median
+    - directed_prev_to_curr_median
+    - symmetric_median
+    - symmetric_p90
+    - symmetric_p95
+    - symmetric_hausdorff
+    units:
+      symmetric_p95: normalized distance
+  topology_boundary_coverage_v2:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_coverage.csv
+    sha256: da4662db3fa2790dc7b7a5d7c5a1f88e99537ebc6e7701c204c305d9d47fe079
+    version: topology_boundary_coverage_v2
+    row_count: 19
+    fields:
+    - iteration
+    - coverage_status
+    - coverage_median
+    - coverage_p90
+    - coverage_p95
+    - coverage_max
+    - bracket_coverage_p95
+    - bracket_coverage_median
+    - bracket_coverage_max
+    units:
+      coverage_p95: normalized distance
+  topology_surprise_v2:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_surprise_by_iteration.csv
+    sha256: a8c4e82892128fd7b3e361cea46b499147c8835af7194fb5249f4480e98e0963
+    version: topology_surprise_v2
+    row_count: 18
+    fields:
+    - iteration
+    - new_rows
+    - trusted_denominator
+    - trusted_n_surprise
+    - trusted_topology_surprise
+    - trusted_status
+    - all_selected_denominator
+    - all_selected_n_surprise
+    - all_selected_topology_surprise
+    - hard_risk_denominator
+    - hard_risk_n_surprise
+    - hard_risk_topology_surprise
+    - reliable_prediction_fraction_new
+    units:
+      trusted_topology_surprise: fraction
+  topology_sensitivity_v2:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_sensitivity_summary.csv
+    sha256: 63da32831b77c4577e0019cab94442d184d718834fe580b9f0638515c970bbce
+    version: topology_sensitivity_v2
+    row_count: 3
+    fields:
+    - idw_and_knn_k
+    - final_boundary_components
+    - final_topological_region_components
+    - final_total_arc_length
+    - final_coverage_p95
+    - final_bracket_coverage_p95
+    - final_contour_point_count
+    - grid_resolution
+    - support_radius
+    - interpolation_seed
+    units:
+      final_coverage_p95: normalized distance
+invariants:
+  total: 4345
+  trusted_FFLO: 3213
+  cFFLO: 2290
+  tFFLO: 923
+  k8_coverage_p95: 0.006185
+  k6_coverage_p95: 0.006269
+  decision: A

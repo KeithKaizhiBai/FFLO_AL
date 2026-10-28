@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "run_id": "active_learning_public_reproducible_v4",
+  "parent_run_id": "active_learning_manuscript_stageiv_revision_v3",
+  "required_paths": {
+    "parent_main": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_variants/integrated_cited_stageiv_revision_v3/main.tex",
+    "parent_supplement": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_variants/integrated_cited_stageiv_revision_v3/sections/supplement.tex",
+    "claim_registry": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/claim_registry.yaml",
+    "evidence_registry": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/evidence_registry.yaml",
+    "figure_registry": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/figure_registry.yaml",
+    "exact_oracle": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/exact_oracle.py",
+    "free_energy": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/eta_phase_diagram_cuda.py",
+    "active_driver": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/active_refine.py",
+    "models": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/models.py",
+    "acquisition": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/acquisition.py",
+    "stop_controller": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/stop_controller.py",
+    "topology": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/topology_oracle.py",
+    "stage1_config": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json",
+    "stage1_endpoint": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz"
+  },
+  "frozen_figure_hashes_before": {
+    "Fig1": "b1138f2b314443ff874092d4639a0e14c9d370dbd2b9ae7a0bbdf89bd907cda1",
+    "Fig2": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "Fig3": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "Fig4": "b1f8f4d812ea913e7005789d60e46dc2529e8ccfc9c2b5eb47c9d8df54cc76f9"
+  },
+  "git_worktree_available": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-01-ENGINE-V4",
+  "contract": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_engine_v4/fig1_contract.yaml",
+  "rule_hashes": {
+    "principles": "2392d3688b0aab686731a73f4578b0bf69e5f9913a4f71305e4d451ef5b97d30",
+    "visual_narrative": "e450dcfe2acb35f1d0b099aefc9fe10f814c86ef8dceeb06a220dc4e939b99ff",
+    "typography": "57d0935ebb8d999e87031d465e127795f0fdd60567e287cc2b6a97469b703fde",
+    "layout": "c01343ad2499e0e297d7f77e38a7418a6d4a1d6b3959a32a125d0bdfecb8efbc",
+    "spacing": "dd3ce1607cdb78b49fea5322c64eee2e25f0181ac9bb230954dd7d8e4d9b36bf",
+    "color": "e645a493410217480d72f45d6935bb5f47fdbffc45b961b267eeeadba5ca2c78",
+    "arrow": "2e129ec90aae972cd28dd535116abe41fcb6d5f0b851eef0e985548d30ff49e0",
+    "annotation": "b86f4a0726e864d932e524e7ebaef4a31b3301a6d2df878fce2f324e670f40e3",
+    "asset": "396a600e8c4c798a6bfb21f19b394bfe2dd8acbb496d7a6c6d6a7aeff2d1cd38",
+    "validation": "9b9416de08e8beaee0efd04930a54e24b4d0508e548c307b22e603bd52305eff",
+    "enforcement": "d9b992c5e9de483caa39dec68260575c6b6c55771f371493b9c85846d48d5a1f",
+    "palette": "a98212532e4537716cf4807baef1ffd65c404419bd17301449abe56b19ac69f6",
+    "fonts": "bee477289d58a97fdcdf1969b0cf9f67568a086862bd2453b16e9c51911a7b14",
+    "svg_style": "fa278e57ad4f04d9aeca7b769bb2b2b1fa858accdeb836b33bf858c64f0778bb"
+  },
+  "gate": {
+    "gate": "GATE_FIG1_ENGINE_V4_APPROVAL",
+    "state": "HUMAN_WAIT"
+  }
+}

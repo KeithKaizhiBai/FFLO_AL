@@ -1,0 +1,14 @@
+{
+  "input_dataset": "ML_Phase_StageIV_Topology3D/active_runs/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter024.npz",
+  "trusted_exact": "ML_Phase_StageIV_Topology3D/active_runs/active_phase_topology_3d_t_ja_mu_from_scratch_v1/iter024/exact_trusted_iter024.npz",
+  "output_npz": "ML_Phase_StageIV_Topology3D/active_runs/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.npz",
+  "output_csv": "ML_Phase_StageIV_Topology3D/active_runs/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.csv",
+  "exact_points": 252,
+  "clean_trusted_points": 244,
+  "boundary_band_points_appended": 8,
+  "training_eligible_points_appended": 252,
+  "trusted_points_appended": 252,
+  "input_samples": 6829,
+  "output_samples": 7081,
+  "new_unique_samples_added": 252
+}

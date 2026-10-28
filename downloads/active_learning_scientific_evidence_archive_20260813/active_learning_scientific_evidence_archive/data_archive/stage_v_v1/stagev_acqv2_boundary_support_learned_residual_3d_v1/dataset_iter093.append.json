@@ -1,0 +1,14 @@
+{
+  "input_dataset": "ML_Phase_StageV_AcqV2/active_runs/stagev_acqv2_boundary_support_learned_residual_3d_v1/dataset_iter092.npz",
+  "trusted_exact": "ML_Phase_StageV_AcqV2/active_runs/stagev_acqv2_boundary_support_learned_residual_3d_v1/iter092/exact_trusted_iter092.npz",
+  "output_npz": "ML_Phase_StageV_AcqV2/active_runs/stagev_acqv2_boundary_support_learned_residual_3d_v1/dataset_iter093.npz",
+  "output_csv": "ML_Phase_StageV_AcqV2/active_runs/stagev_acqv2_boundary_support_learned_residual_3d_v1/dataset_iter093.csv",
+  "exact_points": 63,
+  "clean_trusted_points": 61,
+  "boundary_band_points_appended": 2,
+  "training_eligible_points_appended": 63,
+  "trusted_points_appended": 63,
+  "input_samples": 6829,
+  "output_samples": 6892,
+  "new_unique_samples_added": 63
+}

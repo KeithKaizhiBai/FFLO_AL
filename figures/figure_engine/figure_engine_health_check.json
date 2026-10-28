@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-31",
+  "status": "pass_with_known_fig1_failure",
+  "rules_loaded": 15,
+  "rule_hashes_recorded": 15,
+  "enforced_rules_registered": 52,
+  "human_review_rules_named": 8,
+  "contracts_validated": [
+    "EXAMPLE-FIG1-SCHEMATIC",
+    "EXAMPLE-HIGH-DIMENSIONAL",
+    "EXAMPLE-PHASE-MAP",
+    "EXAMPLE-TOPOLOGY",
+    "FIG-01-PIPELINE-V5-ENGINE",
+    "FIG-01-ENGINE-V3-PROPOSAL"
+  ],
+  "unit_tests": {
+    "count": 28,
+    "status": "pass"
+  },
+  "validator_negative_control": {
+    "schema_version": 1,
+    "status": "pass",
+    "invalid_fixture_status": "fail",
+    "detected_expected_failures": [
+      "annotation_length",
+      "approved_palette",
+      "declared_area_requirements",
+      "independent_card_gutters",
+      "leader_leader_crossing",
+      "minimum_font_size",
+      "narrative_primary_scientific_subobject",
+      "nonuniform_text_scaling",
+      "normal_width_fonts",
+      "primary_visual_area",
+      "prohibited_claims",
+      "scientific_asset_fill_ratio",
+      "text_border_clearance",
+      "text_plot_clearance",
+      "text_text_overlap",
+      "workflow_card_crossing",
+      "workflow_profile"
+    ],
+    "missing_expected_failures": [],
+    "additional_detected_failures": [],
+    "corrected_fixture_status": "pass",
+    "unexpected_corrected_failures": []
+  },
+  "strict_data_negative_control": {
+    "schema_version": 1,
+    "status": "pass",
+    "control_errors": [],
+    "negative_cases": [
+      {
+        "id": "wrong_phase_count",
+        "expected": "wrong_phase_count",
+        "errors": [
+          "wrong_phase_count"
+        ],
+        "detected": true
+      },
+      {
+        "id": "phase_color_swap",
+        "expected": "phase_color_swap",
+        "errors": [
+          "phase_color_swap"
+        ],
+        "detected": true
+      },
+      {
+        "id": "hard_risk_as_fourth_phase",
+        "expected": "hard_risk_as_fourth_phase",
+        "errors": [
+          "hard_risk_as_fourth_phase",
+          "phase_mapping_invalid"
+        ],
+        "detected": true
+      },
+      {
+        "id": "missing_units",
+        "expected": "missing_units",
+        "errors": [
+          "missing_units"
+        ],
+        "detected": true
+      },
+      {
+        "id": "unauthorized_interpolation",
+        "expected": "unauthorized_interpolation",
+        "errors": [
+          "unauthorized_interpolation"
+        ],
+        "detected": true
+      },
+      {
+        "id": "unauthorized_smoothing",
+        "expected": "unauthorized_smoothing",
+        "errors": [
+          "unauthorized_smoothing"
+        ],
+        "detected": true
+      },
+      {
+        "id": "missing_trusted_topology_mask",
+        "expected": "missing_trusted_topology_mask",
+        "errors": [
+          "missing_trusted_topology_mask"
+        ],
+        "detected": true
+      },
+      {
+        "id": "missing_k6_sensitivity",
+        "expected": "missing_k6_sensitivity",
+        "errors": [
+          "missing_k6_sensitivity"
+        ],
+        "detected": true
+      },
+      {
+        "id": "gap_closing_labeled_as_phase",
+        "expected": "gap_closing_labeled_as_phase",
+        "errors": [
+          "gap_closing_labeled_as_phase"
+        ],
+        "detected": true
+      },
+      {
+        "id": "normalized_gate_ratio_used_as_main_convergence",
+        "expected": "normalized_gate_ratio_used_as_main_convergence",
+        "errors": [
+          "normalized_gate_ratio_used_as_main_convergence"
+        ],
+        "detected": true
+      },
+      {
+        "id": "3d_complete_atlas_claim",
+        "expected": "3d_complete_atlas_claim",
+        "errors": [
+          "3d_complete_atlas_claim"
+        ],
+        "detected": true
+      },
+      {
+        "id": "3d_missing_evidence_scope_caveat",
+        "expected": "3d_missing_evidence_scope_caveat",
+        "errors": [
+          "3d_missing_evidence_scope_caveat"
+        ],
+        "detected": true
+      },
+      {
+        "id": "unsupported_threshold_line_in_diagnostic_mode",
+        "expected": "unsupported_threshold_line_in_diagnostic_mode",
+        "errors": [
+          "unsupported_threshold_line_in_diagnostic_mode"
+        ],
+        "detected": true
+      },
+      {
+        "id": "unsupported_pass_fail_label_in_diagnostic_mode",
+        "expected": "unsupported_pass_fail_label_in_diagnostic_mode",
+        "errors": [
+          "unsupported_pass_fail_label_in_diagnostic_mode"
+        ],
+        "detected": true
+      },
+      {
+        "id": "exact_and_interpolated_layers_indistinguishable",
+        "expected": "exact_and_interpolated_layers_indistinguishable",
+        "errors": [
+          "exact_and_interpolated_layers_indistinguishable"
+        ],
+        "detected": true
+      }
+    ]
+  },
+  "fig1_scientific_asset_fill_audit": {
+    "schema_version": 1,
+    "figure_id": "FIG-01-ENGINE-V1",
+    "artwork_modified": false,
+    "asset": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_framework_v3/refinement_v5/assets/central/asset.svg",
+    "method": "largest embedded scientific raster area mapped into the master landscape bbox",
+    "surface_image_size_asset_units": [
+      78.84,
+      40.32
+    ],
+    "surface_area_master_px2": 31964.619595742726,
+    "landscape_bbox_area_master_px2": 157500.0,
+    "fill_ratio": 0.2029499656872554,
+    "minimum": 0.65,
+    "audit_status": "fail",
+    "expected_failure_detected": true,
+    "interpretation": "The declared landscape bbox is large, but the actual rendered free-energy surface fills only a minority of it."
+  },
+  "fig1_regression": {
+    "status": "fail",
+    "hard_failures": [
+      "text_border_clearance"
+    ],
+    "expected_hard_failures": [
+      "text_border_clearance"
+    ],
+    "matches_regression_expectation": true,
+    "gate": {
+      "gate": "GATE_FIG1_V5_APPROVAL",
+      "state": "HUMAN_WAIT"
+    }
+  },
+  "artwork_regenerated": false,
+  "artwork_hashes_match_frozen_v5": true,
+  "artwork_hashes": {
+    "fig1_master_manuscript_v5.svg": {
+      "actual": "8c4caf61b30c206fda98f5f5c5f76adba5cdc314b5cfc2a6cb33585fc8f623d5",
+      "expected": "8c4caf61b30c206fda98f5f5c5f76adba5cdc314b5cfc2a6cb33585fc8f623d5",
+      "matches": true
+    },
+    "fig1_master_manuscript_v5.pdf": {
+      "actual": "bdd5b14f37e3b2f6d7452e46f362bb41a1e5d793f0c15a08e8639c04a090ff86",
+      "expected": "bdd5b14f37e3b2f6d7452e46f362bb41a1e5d793f0c15a08e8639c04a090ff86",
+      "matches": true
+    },
+    "fig1_master_manuscript_v5.png": {
+      "actual": "558f5d21e6bcb99ebcf5342f1621f80daeddfe8ce6ac5cf4178fd329396555c6",
+      "expected": "558f5d21e6bcb99ebcf5342f1621f80daeddfe8ce6ac5cf4178fd329396555c6",
+      "matches": true
+    }
+  },
+  "fig1_engine_v1_artwork_regenerated": false,
+  "fig1_engine_v1_hashes_match_frozen_benchmark": true,
+  "fig1_engine_v1_hashes": {
+    "fig1_engine_v1.svg": {
+      "actual": "180666d303434fb0718063fbbc9afc81ba8d33bb2ae1fbe8bc145841602a880a",
+      "expected": "180666d303434fb0718063fbbc9afc81ba8d33bb2ae1fbe8bc145841602a880a",
+      "matches": true
+    },
+    "fig1_engine_v1.pdf": {
+      "actual": "c83b3295b512209f6b5493fd3a5dfc82ac5c6a113e25d010dc12d5b0c5fe62d0",
+      "expected": "c83b3295b512209f6b5493fd3a5dfc82ac5c6a113e25d010dc12d5b0c5fe62d0",
+      "matches": true
+    },
+    "fig1_engine_v1.png": {
+      "actual": "a4363435b8f6106ced9263a93a097b9ace8d650a20691e03eeefdc984efea663",
+      "expected": "a4363435b8f6106ced9263a93a097b9ace8d650a20691e03eeefdc984efea663",
+      "matches": true
+    }
+  }
+}

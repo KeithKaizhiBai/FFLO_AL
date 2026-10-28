@@ -1,0 +1,20 @@
+{
+  "workflow_status": "HUMAN_WAIT",
+  "current_gate": "GATE_READER_REVISION_SCIENCE_CHOICES",
+  "gate_status": "HUMAN_WAIT",
+  "revised_manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_reader_revision_v8/manuscript_double_column.pdf",
+  "single_column_manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_reader_revision_v8/manuscript_single_column_review.pdf",
+  "revised_supplement_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_reader_revision_v8/supplement.pdf",
+  "physics_changed": false,
+  "protected_inputs_unchanged": true,
+  "free_energy_passage_unchanged": true,
+  "author_dependent_items": [
+    "R01",
+    "R02",
+    "R03 Ansatz/basis",
+    "R11",
+    "R12",
+    "R13"
+  ],
+  "method_validation": "A revised; B scoped source match; C not reproduced"
+}

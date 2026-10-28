@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "source_page_pt": [
+    504.95999,
+    341.03998
+  ],
+  "target_page_mm": [
+    178.0,
+    120.15
+  ],
+  "target_page_pt": [
+    504.56692913385825,
+    340.5826771653544
+  ],
+  "actual_page_pt": [
+    504.566929,
+    340.582677
+  ],
+  "maximum_absolute_error_pt": 1.6535443592147203e-07,
+  "vector_content_preserved": true
+}

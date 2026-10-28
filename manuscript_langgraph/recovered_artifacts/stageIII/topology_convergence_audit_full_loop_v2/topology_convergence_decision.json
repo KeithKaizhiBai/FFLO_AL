@@ -1,0 +1,57 @@
+{
+  "run_id": "topology_convergence_audit_full_loop_v2",
+  "source_run_id": "active_phase_topology_from_scratch_full_loop_v2",
+  "final_iteration": 18,
+  "topology_main_converged": true,
+  "decision_class": "Decision A",
+  "limiting_factor": "none",
+  "topology_map_change_last3": [
+    0.0004709998654286099,
+    0.0009083110460715547,
+    0.0004877720590708783
+  ],
+  "topology_boundary_shift_p95_last3": [
+    0.0008148330596732811,
+    0.002624510467144085,
+    0.000871245354543369
+  ],
+  "topology_boundary_coverage_p95_final": 0.0061854216098562,
+  "trusted_topology_surprise_last3": [
+    0.011904761904761904,
+    0.017142857142857144,
+    0.012578616352201259
+  ],
+  "boundary_component_count_last3": [
+    1,
+    1,
+    1
+  ],
+  "topological_region_component_count_last3": [
+    1,
+    1,
+    1
+  ],
+  "final_direct_support_fraction": 1.0,
+  "need_new_exact_calculation": false,
+  "recommended_next_action": "freeze_topology_boundary_result_for_offline_report",
+  "caveats": [
+    "online topology labels are audited offline here but still derive from the cold-start full-loop dataset",
+    "absence of finite-area gapless_SC is not treated as a failure",
+    "strict Hausdorff distance is diagnostic only; p95 shift is the main gate",
+    "Delaunay or kNN opposite-label edges are used only as support/bracket diagnostics, not as the final contour",
+    "sensitivity coverage margin is tight: k=6 is slightly above the nominal coverage threshold, while main k=8 and k=12 are below"
+  ],
+  "sensitivity_final_coverage_p95_by_k": {
+    "6": 0.00626854205400971,
+    "8": 0.0061854216098562,
+    "12": 0.005913286221419149
+  },
+  "sensitivity_final_bracket_coverage_p95_by_k": {
+    "6": 0.0064777727410674085,
+    "8": 0.005938431734125027,
+    "12": 0.004776525466706116
+  },
+  "source_dataset": "active_phase_topology_from_scratch_full_loop_v1_hpc\\ML_Phase_512_TopoTrivial_FullLoop\\active_runs\\active_phase_topology_from_scratch_full_loop_v2\\dataset_iter018.npz",
+  "source_dataset_csv": "active_phase_topology_from_scratch_full_loop_v1_hpc\\ML_Phase_512_TopoTrivial_FullLoop\\active_runs\\active_phase_topology_from_scratch_full_loop_v2\\dataset_iter018.csv",
+  "source_dataset_sha256": "13ca5b5f1bebd9df403a27d5079f6e44b11135010f6a8caa6d7324abb0ebefc3"
+}

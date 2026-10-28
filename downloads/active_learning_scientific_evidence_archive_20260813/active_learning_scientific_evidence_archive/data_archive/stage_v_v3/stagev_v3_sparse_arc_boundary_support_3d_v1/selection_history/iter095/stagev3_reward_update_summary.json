@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 3.0,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 95,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 9.486769009248163e-21,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "trained",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 7104,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": 0.05860611965580242,
+    "rank_correlation_a0_ns": 0.29858447188827664,
+    "rank_correlation_a0_p0": 0.4112801587770724,
+    "rank_correlation_a0_ppi": -0.05132578621150652,
+    "rank_correlation_a0_uf": 0.8483047671187636,
+    "rank_correlation_delta_vs_a0_gap": 0.4963724418011002,
+    "rank_correlation_delta_vs_a0_ns": -0.08555909511300566,
+    "rank_correlation_delta_vs_a0_p0": 0.2957484078060704,
+    "rank_correlation_delta_vs_a0_ppi": 0.7286996887463321,
+    "rank_correlation_delta_vs_a0_uf": -0.22349439770378265,
+    "rank_correlation_model_gap": 0.5549785614569026,
+    "rank_correlation_model_ns": 0.21302537677527097,
+    "rank_correlation_model_p0": 0.7070285665831428,
+    "rank_correlation_model_ppi": 0.6773739025348255,
+    "rank_correlation_model_uf": 0.6248103694149809,
+    "reward_sample_count": 7104,
+    "reward_sample_count_gap": 7104,
+    "reward_sample_count_ns": 7104,
+    "reward_sample_count_p0": 7104,
+    "reward_sample_count_ppi": 7104,
+    "reward_sample_count_uf": 7104,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

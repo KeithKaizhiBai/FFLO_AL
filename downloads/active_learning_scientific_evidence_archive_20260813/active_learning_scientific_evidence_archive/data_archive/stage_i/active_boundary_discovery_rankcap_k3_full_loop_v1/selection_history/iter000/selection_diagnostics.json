@@ -1,0 +1,17 @@
+{
+  "run_mode": "discovery",
+  "candidate_domain_mode": "full",
+  "selection_policy": "random_initial_seed",
+  "selection_mode": "random_grid",
+  "midpoint_selection": "disabled",
+  "finite_t_band_width": null,
+  "candidate_pool_total": 77361,
+  "candidate_pool_available": 77361,
+  "initial_seed_size": 512,
+  "selected_points": 512,
+  "selected_by_pool": {
+    "random_seed": 512
+  },
+  "uses_warm_start_training_data": false,
+  "uses_prior_finite_t_candidate_mask": false
+}

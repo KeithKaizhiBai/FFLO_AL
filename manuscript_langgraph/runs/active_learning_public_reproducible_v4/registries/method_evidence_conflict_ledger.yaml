@@ -1,0 +1,8 @@
+conflicts:
+- conflict_id: MTH-CONFLICT-01
+  topic: production oracle name
+  code_or_config: run config names robust_incremental; oracle dispatch maps robust_incremental
+    to adaptive_box implementation
+  existing_prose: occasionally calls the same path robust_al
+  resolution: report both public role and exact alias; do not imply different physics
+  status: resolved_by_explicit_alias

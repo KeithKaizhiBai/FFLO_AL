@@ -1,0 +1,6 @@
+exact_trusted: trusted_exact == 1
+q_applicable: q_status != 0 and q_unresolved == 0
+spectral_trusted: topology_trusted == 1
+valid_field_mask: finite transformed value
+normal_q: not_applicable
+missing_behavior: masked_not_zero_filled

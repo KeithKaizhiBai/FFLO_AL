@@ -1,0 +1,20 @@
+{
+  "node_id": "publication_readiness_gate",
+  "purpose": "publication readiness gate",
+  "inputs": [
+    "artifact_manifest_path",
+    "publication_gap_matrix"
+  ],
+  "outputs": [
+    "readiness_status",
+    "blocking_gaps"
+  ],
+  "prerequisites": [
+    "artifact_provenance_audit"
+  ],
+  "forbidden_actions": [
+    "must not invent missing evidence"
+  ],
+  "gate": "PUBLICATION_READINESS_GATE",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

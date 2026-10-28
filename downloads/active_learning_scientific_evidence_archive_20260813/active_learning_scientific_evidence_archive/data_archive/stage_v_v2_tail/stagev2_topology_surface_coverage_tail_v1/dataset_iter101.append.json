@@ -1,0 +1,14 @@
+{
+  "input_dataset": "/public_hw/home/sci_bfu/bkz/Fu_FFLO/stagev2_topology_surface_coverage_tail_v1_hpc/ML_Phase_StageV_V2_TopologyCoverageTail/active_runs/stagev2_topology_surface_coverage_tail_v1/dataset_iter100.npz",
+  "trusted_exact": "/public_hw/home/sci_bfu/bkz/Fu_FFLO/stagev2_topology_surface_coverage_tail_v1_hpc/ML_Phase_StageV_V2_TopologyCoverageTail/active_runs/stagev2_topology_surface_coverage_tail_v1/iter100/exact_trusted_iter100.npz",
+  "output_npz": "/public_hw/home/sci_bfu/bkz/Fu_FFLO/stagev2_topology_surface_coverage_tail_v1_hpc/ML_Phase_StageV_V2_TopologyCoverageTail/active_runs/stagev2_topology_surface_coverage_tail_v1/dataset_iter101.npz",
+  "output_csv": "/public_hw/home/sci_bfu/bkz/Fu_FFLO/stagev2_topology_surface_coverage_tail_v1_hpc/ML_Phase_StageV_V2_TopologyCoverageTail/active_runs/stagev2_topology_surface_coverage_tail_v1/dataset_iter101.csv",
+  "exact_points": 64,
+  "clean_trusted_points": 64,
+  "boundary_band_points_appended": 0,
+  "training_eligible_points_appended": 64,
+  "trusted_points_appended": 64,
+  "input_samples": 7259,
+  "output_samples": 7323,
+  "new_unique_samples_added": 64
+}

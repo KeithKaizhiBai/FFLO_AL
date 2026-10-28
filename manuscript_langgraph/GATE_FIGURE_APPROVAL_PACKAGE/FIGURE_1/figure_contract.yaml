@@ -1,0 +1,13 @@
+{
+  "figure_id": "FIG-01-PIPELINE",
+  "claim_ids": ["CLM-ORACLE-RELIABILITY"],
+  "scientific_role": "Define the BdG problem, auditable exact-oracle hierarchy, and active-learning scheduler loop.",
+  "panels": {
+    "A": "parameter space and expensive BdG evaluation",
+    "B": "free-energy minimization and frozen thermodynamic labels",
+    "C": "trusted spectral/Pfaffian topology hierarchy",
+    "D": "closed active-learning loop"
+  },
+  "required_caveats": ["schematic, not numerical evidence", "ML schedules exact BdG calls and does not replace the solver", "unresolved is a numerical status, not a phase"],
+  "prohibited": ["mathematically exact", "ML solver", "Stage V learned acquisition", "Stage VI world model"]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "gate_id": "GATE_INTRODUCTION_RETRIEVAL",
+  "status": "PASS",
+  "decision": "approved_by_user_expand_to_approximately_50_references_2026-08-28",
+  "scope": [
+    "retrieval",
+    "claim_verification",
+    "BibTeX",
+    "Introduction rewrite",
+    "citation audit"
+  ],
+  "new_physics_authorized": false,
+  "frozen_results_or_figures_edit_authorized": false
+}

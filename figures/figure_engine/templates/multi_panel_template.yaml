@@ -1,0 +1,15 @@
+schema_version: 1
+template_id: multi_panel_template
+layout:
+  panel_labels: [a, b, c, d, e, f]
+  shared_gutter_px: 24
+  minimum_gutter_px: 20
+  aligned_panel_titles: true
+  direct_comparison_requires_shared_axes: true
+  primary_panel_must_be_largest: true
+  permitted_grids: ["1x2", "1x3", "2x2", "2x3", "dominant_plus_column", "dominant_plus_row"]
+annotations:
+  panel_label_position: upper_left
+  repeated_legends_forbidden: true
+  shared_legend_preferred: true
+

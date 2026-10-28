@@ -1,0 +1,23 @@
+{
+  "node_id": "discussion_scope_guard",
+  "purpose": "discussion scope guard",
+  "inputs": [
+    "approved_scope",
+    "claim_registry",
+    "results_draft"
+  ],
+  "outputs": [
+    "discussion_draft",
+    "scope_findings"
+  ],
+  "prerequisites": [
+    "supplement_builder"
+  ],
+  "forbidden_actions": [
+    "Stage IV cannot be called converged",
+    "Stage V cannot be called superior",
+    "Stage VI cannot be called EIG-ready"
+  ],
+  "gate": "DISCUSSION_SCOPE_GUARD",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

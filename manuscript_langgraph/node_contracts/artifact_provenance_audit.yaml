@@ -1,0 +1,18 @@
+{
+  "node_id": "artifact_provenance_audit",
+  "purpose": "artifact provenance audit",
+  "inputs": [
+    "project_root"
+  ],
+  "outputs": [
+    "artifact_manifest_path",
+    "audit_findings"
+  ],
+  "prerequisites": [],
+  "forbidden_actions": [
+    "must not modify artifacts",
+    "must hash present files"
+  ],
+  "gate": "ARTIFACT_PROVENANCE_AUDIT",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

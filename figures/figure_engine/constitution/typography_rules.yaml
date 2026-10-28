@@ -1,0 +1,76 @@
+schema_version: 1
+rule_set: typography_rules
+authority: canonical
+
+font_stack:
+  sans_preferred: [Arial, Helvetica, DejaVu Sans]
+  math_preferred: [STIX Two Math, STIXGeneral]
+  legacy_math_fallback: [Times, DejaVu Serif]
+  normal_width_only: true
+
+forbidden:
+  families_matching: [condensed, narrow, compressed]
+  non_uniform_scaling: true
+  skewed_text: true
+  manual_letter_spacing_hacks: true
+  text_as_uneditable_raster_without_exception: true
+
+transforms:
+  new_output:
+    placement_translate: allowed
+    uniform_scale_from_renderer: allowed_with_manifest
+    rotation: allowed_only_if_contract_declares
+    non_uniform_scale: forbidden
+    skew: forbidden
+  legacy_audit:
+    renderer_placement_transform: warning
+    non_uniform_scale: hard_fail
+
+minimum_print_size_pt:
+  journal_width_178mm:
+    figure_title: 10.0
+    panel_title: 8.0
+    section_heading: 8.0
+    body: 7.0
+    annotation: 7.0
+    axis_label: 7.0
+    tick_label: 6.5
+    formula: 7.0
+  presentation:
+    figure_title: 20.0
+    panel_title: 16.0
+    body: 13.0
+    annotation: 12.0
+
+text_geometry:
+  every_text_object_requires_bbox: true
+  every_text_object_requires_measured_width_height: true
+  every_text_object_requires_role: true
+  every_text_object_requires_parent: true
+  required_padding_px:
+    left: 8
+    right: 8
+    top: 6
+    bottom: 6
+  hard_rules:
+    text_text_overlap: forbidden
+    text_plot_overlap: forbidden_unless_declared_overlay
+    text_border_clearance_px: 4
+    label_leader_clearance_px: 5
+    label_label_clearance_px: 10
+
+overcrowding_resolution_order:
+  - remove_redundant_text
+  - move_detail_to_caption_or_supplement
+  - restructure_layout
+  - enlarge_panel
+  - rewrap_at_semantic_boundary
+  - shrink_font_without_crossing_minimum
+
+line_and_alignment:
+  line_spacing_em: [1.15, 1.35]
+  default_horizontal_alignment: left
+  default_vertical_alignment: baseline
+  panel_labels: upper_left
+  decimal_alignment_for_numeric_tables: true
+

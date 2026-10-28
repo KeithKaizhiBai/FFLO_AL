@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-04-STAGEIV-3D-STRICT-V2",
+  "status": "pass",
+  "physics_recomputed": false,
+  "threshold_lines_rendered": false,
+  "pass_fail_semantics_rendered": false,
+  "checks": [
+    {
+      "name": "endpoint_rows",
+      "passed": true,
+      "detail": "rows=7081"
+    },
+    {
+      "name": "phase_counts",
+      "passed": true,
+      "detail": "{'FFLO': 4590, 'normal': 2350, 'uniform_SC': 141}"
+    },
+    {
+      "name": "trusted_fflo_topology_counts",
+      "passed": true,
+      "detail": "{'cFFLO': 3145, 'not_trusted_FFLO': 2491, 'tFFLO': 1445}"
+    },
+    {
+      "name": "panel_d_absent",
+      "passed": true,
+      "detail": "no panel-d or threshold-closure wording in SVG"
+    },
+    {
+      "name": "three_panel_contract",
+      "passed": true,
+      "detail": "panels a-c only"
+    },
+    {
+      "name": "no_physics_recompute",
+      "passed": true,
+      "detail": "frozen canonical tables copied byte-for-byte"
+    }
+  ]
+}

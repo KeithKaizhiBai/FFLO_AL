@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "pdf_pages": 6,
+  "bibliography_items": 12,
+  "expected_bibliography_items": 12,
+  "undefined_citations": false,
+  "overfull_boxes": 0,
+  "fonts_embedded_subset_unicode": true,
+  "references_visible_in_extracted_text": true,
+  "references_after_figure_4": true,
+  "canonical_figure_hashes": "PASS",
+  "stage_iii_and_iv_caveats": "PASS",
+  "original_integrated_candidate_modified": false,
+  "external_retrieval_executed": true,
+  "new_physics_executed": false
+}

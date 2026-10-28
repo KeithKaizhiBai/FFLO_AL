@@ -1,0 +1,48 @@
+schema_version: 1
+as_of: 2026-08-27
+track: STRICT_DATA_FIGURE_TRACK
+physics_recomputed: false
+artifacts:
+  FIG-01-PIPELINE:
+    status: SCIENTIFIC_FREEZE
+    primary_artifact: figures/fig1_engine_v4/fig1_engine_v4.pdf
+    sha256: 5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715
+    mutation_allowed: false
+  FIG-02-THERMO:
+    status: SCIENTIFIC_FREEZE
+    source_manifest: figures/fig2_strict_data/fig2_data_manifest.yaml
+    source_manifest_sha256: 8916f98f34744ce9d33917508820765a1927afad7dc4549f733fba4e74447a18
+    contract: figures/fig2_strict_data/fig2_panel_contract.yaml
+    validation: figures/fig2_strict_data/figure_validation_report.json
+    primary_artifact: figures/fig2_strict_data/fig2_strict_data.pdf
+    freeze_manifest: figures/fig2_strict_data/fig2_scientific_freeze.yaml
+    freeze_manifest_sha256: 2144c14a593f7f227cc529e04262c273a4a39047649638534f0bb8112fd1054d
+    mutation_allowed: false
+    caveat: exact-sample-only hero; no inferred boundary geometry
+  FIG-03-STAGEIII-TOPOLOGY:
+    status: SCIENTIFIC_FREEZE
+    source_manifest: figures/fig3_strict_data/fig3_data_manifest.yaml
+    source_manifest_sha256: 96e90dd83ec0fddb1d038b83c699e749d40426082b51cb270ab7bae708ded1a4
+    contract: figures/fig3_strict_data/fig3_panel_contract.yaml
+    contract_sha256: 3eb488b28906f309ab06ea8d3d4555b4ca2d7df70efd5fac0ca3b00e59584a31
+    validation: figures/fig3_strict_data/figure_validation_report.json
+    primary_artifact: figures/fig3_strict_data/fig3_strict_data.pdf
+    primary_artifact_sha256: 752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8
+    freeze_manifest: figures/fig3_strict_data/fig3_scientific_freeze.yaml
+    freeze_manifest_sha256: 0cd1264efcb69ec4bf3f4ca9bdb6ca5cc62e3b8d0bc0ac8e49cddc9292a0ee49
+    mutation_allowed: false
+    artwork_rendered: true
+  FIG-04-STAGEIV-3D-EXTENSION:
+    status: SCIENTIFIC_FREEZE_WITH_NONCLOSURE_CAVEAT
+    source_manifest: figures/fig4_strict_data/fig4_data_manifest.yaml
+    source_manifest_sha256: f8df563c837c218720eb4a325694b0b21f3d75b6e0abe26bb99f2361c01bca31
+    contract: figures/fig4_strict_data/fig4_panel_contract.yaml
+    contract_sha256: f775903fd78a076cc30964d8bc0b61c4d9aa22be750e5807a0eec6b52f58394d
+    validation: figures/fig4_strict_data/figure_validation_report.json
+    primary_artifact: figures/fig4_strict_data/fig4_strict_data.pdf
+    primary_artifact_sha256: 3eb78a0c3c479e5c7837ccb5e175b35349b06ad4b942383d8f569d0e60cb5ccb
+    freeze_manifest: figures/fig4_strict_data/fig4_scientific_freeze.yaml
+    freeze_manifest_sha256: 8a1e365a1cfaf0b9ed892715c093245fec0d7caa2d631afdd1c623786e215776
+    mutation_allowed: false
+    artwork_rendered: true
+    continuous_surface_authorized: false

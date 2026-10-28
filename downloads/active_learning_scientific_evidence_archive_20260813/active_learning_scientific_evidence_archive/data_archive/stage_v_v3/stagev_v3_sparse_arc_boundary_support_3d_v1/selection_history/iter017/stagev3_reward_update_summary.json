@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 1.5475815121291945,
+    "p0": 2.9829325224919123,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 17,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.65,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 2112,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.04336987752816893,
+    "rank_correlation_a0_ns": 0.37185412761742653,
+    "rank_correlation_a0_p0": 0.5751029461551105,
+    "rank_correlation_a0_ppi": 0.10779384744848865,
+    "rank_correlation_a0_uf": 0.8626599922739203,
+    "rank_correlation_delta_vs_a0_gap": 0.04336987752816893,
+    "rank_correlation_delta_vs_a0_ns": 0.06100528341530409,
+    "rank_correlation_delta_vs_a0_p0": 0.20053419842878695,
+    "rank_correlation_delta_vs_a0_ppi": 0.5652630209914068,
+    "rank_correlation_delta_vs_a0_uf": -0.07590830280495708,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.4328594110327306,
+    "rank_correlation_model_p0": 0.7756371445838974,
+    "rank_correlation_model_ppi": 0.6730568684398954,
+    "rank_correlation_model_uf": 0.7867516894689632,
+    "reward_sample_count": 2112,
+    "reward_sample_count_gap": 2112,
+    "reward_sample_count_ns": 2112,
+    "reward_sample_count_p0": 2112,
+    "reward_sample_count_ppi": 2112,
+    "reward_sample_count_uf": 2112,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

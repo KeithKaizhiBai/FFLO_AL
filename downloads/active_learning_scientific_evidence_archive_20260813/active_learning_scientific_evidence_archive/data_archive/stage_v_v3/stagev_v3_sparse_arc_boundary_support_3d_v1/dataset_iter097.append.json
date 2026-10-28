@@ -1,0 +1,14 @@
+{
+  "input_dataset": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter096.npz",
+  "trusted_exact": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/iter096/exact_trusted_iter096.npz",
+  "output_npz": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter097.npz",
+  "output_csv": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter097.csv",
+  "exact_points": 63,
+  "clean_trusted_points": 58,
+  "boundary_band_points_appended": 5,
+  "training_eligible_points_appended": 63,
+  "trusted_points_appended": 63,
+  "input_samples": 7006,
+  "output_samples": 7069,
+  "new_unique_samples_added": 63
+}

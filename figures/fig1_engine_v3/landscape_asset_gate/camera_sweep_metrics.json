@@ -1,0 +1,814 @@
+[
+  {
+    "camera_id": "camera_1",
+    "metrics": {
+      "candidate_id": "camera_1",
+      "camera": {
+        "elevation_deg": 27,
+        "azimuth_deg": -58,
+        "projection": "orthographic",
+        "box_aspect": [
+          1.45,
+          1.0,
+          0.82
+        ]
+      },
+      "projected_surface_bbox_px": {
+        "x": 218,
+        "y": 123,
+        "width": 372,
+        "height": 151
+      },
+      "projected_surface_aspect_ratio": 2.4635761589403975,
+      "projected_surface_height_width_ratio": 0.40591397849462363,
+      "foreground_fill_fraction": 0.6724702698853521,
+      "internal_whitespace_fraction": 0.3275297301146479,
+      "dominant_minima_projected_triangle_fraction": 0.09418852492143605,
+      "vertical_relief_fraction": 0.41409971749071633,
+      "labels": [
+        {
+          "id": "normal",
+          "bbox": {
+            "x": 169.6425368206025,
+            "y": 167.24982276179725,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            243.6425368206025,
+            209.24982276179725
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "uniform",
+          "bbox": {
+            "x": 386.18493878054875,
+            "y": 194.50434629448267,
+            "width": 112,
+            "height": 40
+          },
+          "marker": [
+            435.18493878054875,
+            250.50434629448267
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "fflo",
+          "bbox": {
+            "x": 535.6643016647831,
+            "y": 219.4864982361343,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            547.6643016647831,
+            219.4864982361343
+          ],
+          "leader_length_px": 27.0
+        }
+      ],
+      "nonuniform_transform": false,
+      "delta_axis_projected_length_fraction": 0.43859777722988547,
+      "q_axis_projected_length_fraction": 0.16553595070427957,
+      "projected_axis_angle_deg": 51.83761105169391,
+      "prohibited_text_found": [],
+      "minima_projected_px": {
+        "normal": [
+          243.6425368206025,
+          209.24982276179725
+        ],
+        "uniform": [
+          435.18493878054875,
+          250.50434629448267
+        ],
+        "fflo": [
+          547.6643016647831,
+          219.4864982361343
+        ]
+      },
+      "minima_coordinates": {
+        "normal": {
+          "Delta": 0.07,
+          "q": -0.23
+        },
+        "uniform": {
+          "Delta": 0.58,
+          "q": 0.0
+        },
+        "fflo": {
+          "Delta": 0.74,
+          "q": 0.64
+        }
+      },
+      "surface_alpha_threshold": 8,
+      "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+      "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area"
+    },
+    "validation": {
+      "candidate_id": "camera_1",
+      "status": "fail",
+      "hard_checks": {
+        "projected_surface_aspect_ratio": false,
+        "projected_surface_height_width_ratio": true,
+        "foreground_fill_fraction": true,
+        "internal_whitespace_fraction": false,
+        "dominant_minima_projected_triangle_fraction": true,
+        "vertical_relief_fraction": true,
+        "phase_labels_do_not_overlap": true,
+        "phase_labels_remain_local": true,
+        "leader_hard_maximum": true,
+        "no_nonuniform_transform": true,
+        "both_parameter_directions_visible": false,
+        "prohibited_text_absent": true
+      },
+      "hard_failures": [
+        "projected_surface_aspect_ratio",
+        "internal_whitespace_fraction",
+        "both_parameter_directions_visible"
+      ],
+      "warnings": [
+        "aspect_in_preferred_range",
+        "fill_preferred",
+        "whitespace_preferred"
+      ],
+      "label_overlap_pairs": [],
+      "longest_leader_px": 27.0,
+      "human_review_required": true
+    }
+  },
+  {
+    "camera_id": "camera_2",
+    "metrics": {
+      "candidate_id": "camera_2",
+      "camera": {
+        "elevation_deg": 30,
+        "azimuth_deg": -50,
+        "projection": "orthographic",
+        "box_aspect": [
+          1.4,
+          1.0,
+          0.86
+        ]
+      },
+      "projected_surface_bbox_px": {
+        "x": 229,
+        "y": 112,
+        "width": 351,
+        "height": 171
+      },
+      "projected_surface_aspect_ratio": 2.0526315789473686,
+      "projected_surface_height_width_ratio": 0.48717948717948717,
+      "foreground_fill_fraction": 0.6838606487729295,
+      "internal_whitespace_fraction": 0.3161393512270705,
+      "dominant_minima_projected_triangle_fraction": 0.0949814761921909,
+      "vertical_relief_fraction": 0.37652642244407225,
+      "labels": [
+        {
+          "id": "normal",
+          "bbox": {
+            "x": 181.95356977717512,
+            "y": 155.00128870968678,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            255.95356977717512,
+            197.00128870968678
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "uniform",
+          "bbox": {
+            "x": 383.0051894221131,
+            "y": 197.06432912762978,
+            "width": 112,
+            "height": 40
+          },
+          "marker": [
+            432.0051894221131,
+            253.06432912762978
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "fflo",
+          "bbox": {
+            "x": 539.4262566364789,
+            "y": 226.3297937875828,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            551.4262566364789,
+            226.3297937875828
+          ],
+          "leader_length_px": 27.0
+        }
+      ],
+      "nonuniform_transform": false,
+      "delta_axis_projected_length_fraction": 0.427239175013868,
+      "q_axis_projected_length_fraction": 0.2024421140914411,
+      "projected_axis_angle_deg": 53.55020930344878,
+      "prohibited_text_found": [],
+      "minima_projected_px": {
+        "normal": [
+          255.95356977717512,
+          197.00128870968678
+        ],
+        "uniform": [
+          432.0051894221131,
+          253.06432912762978
+        ],
+        "fflo": [
+          551.4262566364789,
+          226.3297937875828
+        ]
+      },
+      "minima_coordinates": {
+        "normal": {
+          "Delta": 0.07,
+          "q": -0.23
+        },
+        "uniform": {
+          "Delta": 0.58,
+          "q": 0.0
+        },
+        "fflo": {
+          "Delta": 0.74,
+          "q": 0.64
+        }
+      },
+      "surface_alpha_threshold": 8,
+      "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+      "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area"
+    },
+    "validation": {
+      "candidate_id": "camera_2",
+      "status": "fail",
+      "hard_checks": {
+        "projected_surface_aspect_ratio": true,
+        "projected_surface_height_width_ratio": true,
+        "foreground_fill_fraction": true,
+        "internal_whitespace_fraction": false,
+        "dominant_minima_projected_triangle_fraction": true,
+        "vertical_relief_fraction": true,
+        "phase_labels_do_not_overlap": true,
+        "phase_labels_remain_local": true,
+        "leader_hard_maximum": true,
+        "no_nonuniform_transform": true,
+        "both_parameter_directions_visible": true,
+        "prohibited_text_absent": true
+      },
+      "hard_failures": [
+        "internal_whitespace_fraction"
+      ],
+      "warnings": [
+        "aspect_in_preferred_range",
+        "whitespace_preferred"
+      ],
+      "label_overlap_pairs": [],
+      "longest_leader_px": 27.0,
+      "human_review_required": true
+    }
+  },
+  {
+    "camera_id": "camera_3",
+    "metrics": {
+      "candidate_id": "camera_3",
+      "camera": {
+        "elevation_deg": 33,
+        "azimuth_deg": -44,
+        "projection": "orthographic",
+        "box_aspect": [
+          1.35,
+          1.0,
+          0.82
+        ]
+      },
+      "projected_surface_bbox_px": {
+        "x": 234,
+        "y": 103,
+        "width": 341,
+        "height": 192
+      },
+      "projected_surface_aspect_ratio": 1.7760416666666667,
+      "projected_surface_height_width_ratio": 0.5630498533724341,
+      "foreground_fill_fraction": 0.7029569892473119,
+      "internal_whitespace_fraction": 0.29704301075268813,
+      "dominant_minima_projected_triangle_fraction": 0.09492894930965837,
+      "vertical_relief_fraction": 0.3185858772313536,
+      "labels": [
+        {
+          "id": "normal",
+          "bbox": {
+            "x": 190.71052441413042,
+            "y": 144.11087464124898,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            264.7105244141304,
+            186.11087464124898
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "uniform",
+          "bbox": {
+            "x": 380.6436505119319,
+            "y": 198.67464541599253,
+            "width": 112,
+            "height": 40
+          },
+          "marker": [
+            429.6436505119319,
+            254.67464541599253
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "fflo",
+          "bbox": {
+            "x": 543.2948698336439,
+            "y": 231.54251283881297,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            555.2948698336439,
+            231.54251283881297
+          ],
+          "leader_length_px": 27.0
+        }
+      ],
+      "nonuniform_transform": false,
+      "delta_axis_projected_length_fraction": 0.41886186969475675,
+      "q_axis_projected_length_fraction": 0.23287946591052588,
+      "projected_axis_angle_deg": 57.16478070194692,
+      "prohibited_text_found": [],
+      "minima_projected_px": {
+        "normal": [
+          264.7105244141304,
+          186.11087464124898
+        ],
+        "uniform": [
+          429.6436505119319,
+          254.67464541599253
+        ],
+        "fflo": [
+          555.2948698336439,
+          231.54251283881297
+        ]
+      },
+      "minima_coordinates": {
+        "normal": {
+          "Delta": 0.07,
+          "q": -0.23
+        },
+        "uniform": {
+          "Delta": 0.58,
+          "q": 0.0
+        },
+        "fflo": {
+          "Delta": 0.74,
+          "q": 0.64
+        }
+      },
+      "surface_alpha_threshold": 8,
+      "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+      "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area"
+    },
+    "validation": {
+      "candidate_id": "camera_3",
+      "status": "pass",
+      "hard_checks": {
+        "projected_surface_aspect_ratio": true,
+        "projected_surface_height_width_ratio": true,
+        "foreground_fill_fraction": true,
+        "internal_whitespace_fraction": true,
+        "dominant_minima_projected_triangle_fraction": true,
+        "vertical_relief_fraction": true,
+        "phase_labels_do_not_overlap": true,
+        "phase_labels_remain_local": true,
+        "leader_hard_maximum": true,
+        "no_nonuniform_transform": true,
+        "both_parameter_directions_visible": true,
+        "prohibited_text_absent": true
+      },
+      "hard_failures": [],
+      "warnings": [
+        "whitespace_preferred"
+      ],
+      "label_overlap_pairs": [],
+      "longest_leader_px": 27.0,
+      "human_review_required": true
+    }
+  },
+  {
+    "camera_id": "camera_4",
+    "metrics": {
+      "candidate_id": "camera_4",
+      "camera": {
+        "elevation_deg": 29,
+        "azimuth_deg": -54,
+        "projection": "orthographic",
+        "box_aspect": [
+          1.42,
+          1.0,
+          0.9
+        ]
+      },
+      "projected_surface_bbox_px": {
+        "x": 227,
+        "y": 115,
+        "width": 355,
+        "height": 162
+      },
+      "projected_surface_aspect_ratio": 2.191358024691358,
+      "projected_surface_height_width_ratio": 0.4563380281690141,
+      "foreground_fill_fraction": 0.6769257520431229,
+      "internal_whitespace_fraction": 0.3230742479568771,
+      "dominant_minima_projected_triangle_fraction": 0.09529684333561779,
+      "vertical_relief_fraction": 0.4130393612584629,
+      "labels": [
+        {
+          "id": "normal",
+          "bbox": {
+            "x": 177.83410503628093,
+            "y": 161.27179305678226,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            251.83410503628093,
+            203.27179305678226
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "uniform",
+          "bbox": {
+            "x": 384.2594080900371,
+            "y": 196.28096076880567,
+            "width": 112,
+            "height": 40
+          },
+          "marker": [
+            433.2594080900371,
+            252.28096076880567
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "fflo",
+          "bbox": {
+            "x": 535.8930222772697,
+            "y": 222.8311276562647,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            547.8930222772697,
+            222.8311276562647
+          ],
+          "leader_length_px": 27.0
+        }
+      ],
+      "nonuniform_transform": false,
+      "delta_axis_projected_length_fraction": 0.4349955781911054,
+      "q_axis_projected_length_fraction": 0.1858687208407766,
+      "projected_axis_angle_deg": 53.11855393689804,
+      "prohibited_text_found": [],
+      "minima_projected_px": {
+        "normal": [
+          251.83410503628093,
+          203.27179305678226
+        ],
+        "uniform": [
+          433.2594080900371,
+          252.28096076880567
+        ],
+        "fflo": [
+          547.8930222772697,
+          222.8311276562647
+        ]
+      },
+      "minima_coordinates": {
+        "normal": {
+          "Delta": 0.07,
+          "q": -0.23
+        },
+        "uniform": {
+          "Delta": 0.58,
+          "q": 0.0
+        },
+        "fflo": {
+          "Delta": 0.74,
+          "q": 0.64
+        }
+      },
+      "surface_alpha_threshold": 8,
+      "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+      "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area"
+    },
+    "validation": {
+      "candidate_id": "camera_4",
+      "status": "fail",
+      "hard_checks": {
+        "projected_surface_aspect_ratio": false,
+        "projected_surface_height_width_ratio": true,
+        "foreground_fill_fraction": true,
+        "internal_whitespace_fraction": false,
+        "dominant_minima_projected_triangle_fraction": true,
+        "vertical_relief_fraction": true,
+        "phase_labels_do_not_overlap": true,
+        "phase_labels_remain_local": true,
+        "leader_hard_maximum": true,
+        "no_nonuniform_transform": true,
+        "both_parameter_directions_visible": true,
+        "prohibited_text_absent": true
+      },
+      "hard_failures": [
+        "projected_surface_aspect_ratio",
+        "internal_whitespace_fraction"
+      ],
+      "warnings": [
+        "aspect_in_preferred_range",
+        "fill_preferred",
+        "whitespace_preferred"
+      ],
+      "label_overlap_pairs": [],
+      "longest_leader_px": 27.0,
+      "human_review_required": true
+    }
+  },
+  {
+    "camera_id": "camera_5",
+    "metrics": {
+      "candidate_id": "camera_5",
+      "camera": {
+        "elevation_deg": 32,
+        "azimuth_deg": -42,
+        "projection": "orthographic",
+        "box_aspect": [
+          1.34,
+          1.0,
+          0.78
+        ]
+      },
+      "projected_surface_bbox_px": {
+        "x": 234,
+        "y": 105,
+        "width": 341,
+        "height": 190
+      },
+      "projected_surface_aspect_ratio": 1.7947368421052632,
+      "projected_surface_height_width_ratio": 0.5571847507331378,
+      "foreground_fill_fraction": 0.705479240623553,
+      "internal_whitespace_fraction": 0.29452075937644695,
+      "dominant_minima_projected_triangle_fraction": 0.09500530622544667,
+      "vertical_relief_fraction": 0.3137665050427807,
+      "labels": [
+        {
+          "id": "normal",
+          "bbox": {
+            "x": 192.8611161712402,
+            "y": 142.601149555397,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            266.8611161712402,
+            184.601149555397
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "uniform",
+          "bbox": {
+            "x": 379.9829152889887,
+            "y": 198.58470125732185,
+            "width": 112,
+            "height": 40
+          },
+          "marker": [
+            428.9829152889887,
+            254.58470125732185
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "fflo",
+          "bbox": {
+            "x": 545.2107095664396,
+            "y": 234.00171285962958,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            557.2107095664396,
+            234.00171285962958
+          ],
+          "leader_length_px": 27.0
+        }
+      ],
+      "nonuniform_transform": false,
+      "delta_axis_projected_length_fraction": 0.41012395503787336,
+      "q_axis_projected_length_fraction": 0.23905685194303541,
+      "projected_axis_angle_deg": 55.98604324076763,
+      "prohibited_text_found": [],
+      "minima_projected_px": {
+        "normal": [
+          266.8611161712402,
+          184.601149555397
+        ],
+        "uniform": [
+          428.9829152889887,
+          254.58470125732185
+        ],
+        "fflo": [
+          557.2107095664396,
+          234.00171285962958
+        ]
+      },
+      "minima_coordinates": {
+        "normal": {
+          "Delta": 0.07,
+          "q": -0.23
+        },
+        "uniform": {
+          "Delta": 0.58,
+          "q": 0.0
+        },
+        "fflo": {
+          "Delta": 0.74,
+          "q": 0.64
+        }
+      },
+      "surface_alpha_threshold": 8,
+      "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+      "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area"
+    },
+    "validation": {
+      "candidate_id": "camera_5",
+      "status": "pass",
+      "hard_checks": {
+        "projected_surface_aspect_ratio": true,
+        "projected_surface_height_width_ratio": true,
+        "foreground_fill_fraction": true,
+        "internal_whitespace_fraction": true,
+        "dominant_minima_projected_triangle_fraction": true,
+        "vertical_relief_fraction": true,
+        "phase_labels_do_not_overlap": true,
+        "phase_labels_remain_local": true,
+        "leader_hard_maximum": true,
+        "no_nonuniform_transform": true,
+        "both_parameter_directions_visible": true,
+        "prohibited_text_absent": true
+      },
+      "hard_failures": [],
+      "warnings": [
+        "whitespace_preferred"
+      ],
+      "label_overlap_pairs": [],
+      "longest_leader_px": 27.0,
+      "human_review_required": true
+    }
+  },
+  {
+    "camera_id": "camera_6",
+    "metrics": {
+      "candidate_id": "camera_6",
+      "camera": {
+        "elevation_deg": 34,
+        "azimuth_deg": -40,
+        "projection": "orthographic",
+        "box_aspect": [
+          1.3,
+          1.0,
+          0.74
+        ]
+      },
+      "projected_surface_bbox_px": {
+        "x": 234,
+        "y": 100,
+        "width": 341,
+        "height": 202
+      },
+      "projected_surface_aspect_ratio": 1.688118811881188,
+      "projected_surface_height_width_ratio": 0.592375366568915,
+      "foreground_fill_fraction": 0.7179524404053309,
+      "internal_whitespace_fraction": 0.2820475595946691,
+      "dominant_minima_projected_triangle_fraction": 0.0948806431559245,
+      "vertical_relief_fraction": 0.28066149796963524,
+      "labels": [
+        {
+          "id": "normal",
+          "bbox": {
+            "x": 195.9712551138079,
+            "y": 137.8393891450628,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            269.9712551138079,
+            179.8393891450628
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "uniform",
+          "bbox": {
+            "x": 379.0721329102809,
+            "y": 199.16002349473615,
+            "width": 112,
+            "height": 40
+          },
+          "marker": [
+            428.0721329102809,
+            255.16002349473615
+          ],
+          "leader_length_px": 27.0
+        },
+        {
+          "id": "fflo",
+          "bbox": {
+            "x": 547.4461992108031,
+            "y": 235.07184335844437,
+            "width": 88,
+            "height": 40
+          },
+          "marker": [
+            559.4461992108031,
+            235.07184335844437
+          ],
+          "leader_length_px": 27.0
+        }
+      ],
+      "nonuniform_transform": false,
+      "delta_axis_projected_length_fraction": 0.4058931503521691,
+      "q_axis_projected_length_fraction": 0.25190373128543386,
+      "projected_axis_angle_deg": 58.81712922094433,
+      "prohibited_text_found": [],
+      "minima_projected_px": {
+        "normal": [
+          269.9712551138079,
+          179.8393891450628
+        ],
+        "uniform": [
+          428.0721329102809,
+          255.16002349473615
+        ],
+        "fflo": [
+          559.4461992108031,
+          235.07184335844437
+        ]
+      },
+      "minima_coordinates": {
+        "normal": {
+          "Delta": 0.07,
+          "q": -0.23
+        },
+        "uniform": {
+          "Delta": 0.58,
+          "q": 0.0
+        },
+        "fflo": {
+          "Delta": 0.74,
+          "q": 0.64
+        }
+      },
+      "surface_alpha_threshold": 8,
+      "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+      "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area"
+    },
+    "validation": {
+      "candidate_id": "camera_6",
+      "status": "pass",
+      "hard_checks": {
+        "projected_surface_aspect_ratio": true,
+        "projected_surface_height_width_ratio": true,
+        "foreground_fill_fraction": true,
+        "internal_whitespace_fraction": true,
+        "dominant_minima_projected_triangle_fraction": true,
+        "vertical_relief_fraction": true,
+        "phase_labels_do_not_overlap": true,
+        "phase_labels_remain_local": true,
+        "leader_hard_maximum": true,
+        "no_nonuniform_transform": true,
+        "both_parameter_directions_visible": true,
+        "prohibited_text_absent": true
+      },
+      "hard_failures": [],
+      "warnings": [
+        "whitespace_preferred"
+      ],
+      "label_overlap_pairs": [],
+      "longest_leader_px": 27.0,
+      "human_review_required": true
+    }
+  }
+]

@@ -1,0 +1,5 @@
+schema_version: 1
+inputs: [kBT_over_t, JA_over_t, mu_over_t]
+core_continuous_outputs: [delta, abs_q, deltaf, log_gap, k_gap, p0, ppi, pf_margin]
+forbidden_targets: [phase_label, topology_label, proposal_source, action_family, reward, iteration, graph_node_id]
+optional_outputs: []

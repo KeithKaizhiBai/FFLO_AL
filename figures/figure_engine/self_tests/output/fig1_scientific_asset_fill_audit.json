@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-01-ENGINE-V1",
+  "artwork_modified": false,
+  "asset": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_framework_v3/refinement_v5/assets/central/asset.svg",
+  "method": "largest embedded scientific raster area mapped into the master landscape bbox",
+  "surface_image_size_asset_units": [
+    78.84,
+    40.32
+  ],
+  "surface_area_master_px2": 31964.619595742726,
+  "landscape_bbox_area_master_px2": 157500.0,
+  "fill_ratio": 0.2029499656872554,
+  "minimum": 0.65,
+  "audit_status": "fail",
+  "expected_failure_detected": true,
+  "interpretation": "The declared landscape bbox is large, but the actual rendered free-energy surface fills only a minority of it."
+}

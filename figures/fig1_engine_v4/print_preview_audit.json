@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "dpi": 300,
+  "pixel_size": [
+    2103,
+    1420
+  ],
+  "color_preview": "fig1_engine_v4.png",
+  "grayscale_preview": "fig1_engine_v4_grayscale.png"
+}

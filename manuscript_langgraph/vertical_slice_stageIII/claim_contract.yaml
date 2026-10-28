@@ -1,0 +1,32 @@
+{
+  "claim_id": "CLM-2D-TOPOLOGY",
+  "statement": "A strict cold-start two-dimensional topology-aware loop recovered a connected cFFLO/tFFLO boundary that passed the configured offline convergence audit.",
+  "scientific_status": "supported_with_caveat",
+  "evidence_ids": ["E-STAGEIII-PASS", "E-STAGEIII-CONVERGENCE"],
+  "allowed_numbers": {
+    "final_unique_samples": 4345,
+    "trusted_gapped_FFLO": 3213,
+    "cFFLO": 2290,
+    "tFFLO": 923,
+    "topology_map_change_last3": [0.000471, 0.000908, 0.000488],
+    "boundary_shift_p95_last3": [0.000815, 0.002625, 0.000871],
+    "coverage_p95": 0.006185,
+    "coverage_threshold": 0.00625,
+    "trusted_surprise_last3": [0.0119, 0.0171, 0.0126],
+    "surprise_threshold": 0.02,
+    "k6_coverage_p95": 0.006269,
+    "k12_coverage_p95": 0.005913
+  },
+  "required_caveats": [
+    "k=6 sensitivity coverage p95 is slightly above the nominal threshold",
+    "raw final dataset and convergence figure bundle are recovered; manuscript redraw remains pending",
+    "the frozen decision JSON labels the CSV hash as an NPZ source hash; NPZ and CSV arrays agree",
+    "local opposite-Z2 brackets are support diagnostics rather than the final boundary"
+  ],
+  "forbidden_wording": [
+    "all possible topology refinement is exhausted",
+    "Delaunay edges are the topology boundary",
+    "all nodal superconductivity is excluded"
+  ],
+  "human_gate": "GATE_FIGURE_APPROVAL"
+}

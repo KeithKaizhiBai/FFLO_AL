@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_MANUSCRIPT_FIGURE_SOURCE_REPAIR",
+  "decision": "approved_and_applied",
+  "approved_at": "2026-08-28",
+  "approval_authority": "explicit_user_instruction_in_active_task",
+  "scope": "Bind manuscript Figures 1--4 to the previously approved Figure Engine / strict-data scientific freezes and rewrite source-dependent text.",
+  "authoritative_sources": {
+    "FIG-01-PIPELINE": "figures/fig1_engine_v4/fig1_engine_v4.pdf",
+    "FIG-02-THERMO": "figures/fig2_strict_data/fig2_strict_data.pdf",
+    "FIG-03-STAGEIII-TOPOLOGY": "figures/fig3_strict_data/fig3_strict_data.pdf",
+    "FIG-04-STAGEIV-3D-EXTENSION": "figures/fig4_strict_data/fig4_strict_data.pdf"
+  },
+  "required_text_repair": [
+    "Restore Figure 4 panel C to four explicit fixed-mu bins.",
+    "Restore centers [-0.45, 0.15, 0.85, 1.45] with half-width 0.025.",
+    "Retain the strict three-dimensional topology nonclosure caveat."
+  ],
+  "unchanged": [
+    "physical model and parameter conventions",
+    "frozen datasets and numerical results",
+    "Figure Engine artwork",
+    "Introduction external-retrieval permission",
+    "journal target remains undecided"
+  ],
+  "supersedes": "GATE_RESULTS_FIG4_CAPTION_CORRECTION",
+  "external_retrieval_permission": false,
+  "new_physics_permission": false
+}

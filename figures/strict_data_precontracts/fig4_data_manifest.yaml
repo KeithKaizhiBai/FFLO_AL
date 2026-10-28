@@ -1,0 +1,157 @@
+schema_version: 1
+figure_id: FIG-04-STAGEIV-3D-STRICT
+physics_recomputed: false
+render_authorized: false
+continuous_surface_authorized: false
+sources:
+  dataset_iter025:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz
+    sha256: 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+    version: dataset_iter025
+    row_count: 7081
+    fields:
+    - x
+    - y_reg
+    - y_phase
+    - y_eta_sign
+    - y_strong_diode
+    - mu
+    - q_min
+    - q_max
+    - n_q
+    - q_index
+    - q_edge_distance
+    - q_edge_hit
+    - q_refinement_level
+    - q_status
+    - q_expanded
+    - q_unresolved
+    - delta_min
+    - delta_max
+    - n_delta
+    - n_delta_refined
+    - delta_refinement_level
+    - delta_status
+    - delta_boundary_ambiguous
+    - delta_boundary_band_normal
+    - delta_refined
+    - delta_unresolved
+    - free_energy_gap_to_normal
+    - positive_delta_gap
+    - positive_delta_checked
+    - phase_candidate
+    - exact_status_code
+    - trusted_exact
+    - training_eligible_exact
+    - needs_rerun_exact
+    - topology_enabled
+    - topology_applicable
+    - topology_pending
+    - topology_label_code
+    - topology_z2
+    - topology_spectral_status_code
+    - topology_trusted
+    - topology_p0
+    - topology_ppi
+    - topology_pf_product
+    - topology_pfaffian_margin
+    - topology_bulk_gap
+    - topology_k_at_bulk_gap
+    - topology_gap_tol
+    - topology_gap_nk
+    - topology_gap_backend_code
+    - topology_runtime_sec
+    - topology_error_code
+    units:
+      x[:,0]: kBT/t
+      x[:,1]: JA/t
+      x[:,2]: mu/t
+      topology_z2: Z2 code
+  stageiv_return_key_metrics:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/tables/return_report_key_metrics.csv
+    sha256: 5e79f4049c394ce7b8918723b8681373a305a70c997227146ab70ca93675761f
+    version: stageiv_return_key_metrics
+    row_count: 22
+    fields:
+    - metric
+    - value
+    units:
+      value: mixed native units
+  stageiv_narrow_mu_slice_metrics:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/figure_data/stageiv_mu_slice_boundary_audit_local/stageiv_narrow_mu_slice_metrics.csv
+    sha256: b04df1392a6464e945f5c9467d00b5457933d00b6a8e161fd11752f826f807e7
+    version: stageiv_narrow_mu_slice_metrics
+    row_count: 20
+    fields:
+    - mu_center
+    - slice_half_width
+    - exact_points
+    - normal_count
+    - uniform_SC_count
+    - FFLO_count
+    - trusted_count
+    - normal_sc_bracket_count
+    - low_support_warning
+    - support_status
+    units:
+      mu_center: mu/t
+      slice_half_width: mu/t
+  stageiv_convergence_failure_decomposition:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_audit_local/tables/stageiv_3d_convergence_failure_decomposition.csv
+    sha256: 4bad9606ba685521dbe353223f87f8e14cff220f868b20e8eadd64b4b35b83de
+    version: stageiv_convergence_failure_decomposition
+    row_count: 11
+    fields:
+    - metric
+    - iteration_or_transition
+    - value
+    - threshold
+    - pass
+    - failure_class
+    - threshold_ratio
+    - denominator
+    - n_surprise
+    units:
+      value: native units
+      threshold: native units
+  stageiv_diagnostic_surface_registry:
+    path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/tables/boundary_surface_diagnostics.csv
+    sha256: 562bf6f1e41da5bada42996577863b040a3494542414e0c06416b286cba4f75f
+    version: stageiv_diagnostic_surface_registry
+    row_count: 7
+    fields:
+    - surface
+    - subset_points
+    - positive_points
+    - negative_points
+    - edge_threshold_normalized
+    - raw_crossing_point_count
+    - fit_point_count
+    - status
+    - smooth_method
+    - formal_use
+    - smooth_grid_n_t
+    - smooth_grid_n_mu
+    - smooth_valid_grid_points
+    - smooth_support_radius_normalized
+    - smooth_status
+    - jakt_smooth_grid_n_t
+    - jakt_smooth_grid_n_mu
+    - jakt_smooth_valid_grid_points
+    - jakt_smooth_support_radius_normalized
+    - jakt_smooth_status
+    units:
+      edge_threshold_normalized: normalized distance
+invariants:
+  total: 7081
+  phase_counts:
+    normal: 2350
+    uniform_SC: 141
+    FFLO: 4590
+  topology_counts:
+    cFFLO: 3265
+    tFFLO: 1466
+  strict_3d_convergence: not_converged
+  topology_surface_coverage_p95: 0.015317527016765012
+  coverage_threshold: 0.00625
+  diagnostic_surface_status: blocked_from_main_artwork_without_explicit_authorization

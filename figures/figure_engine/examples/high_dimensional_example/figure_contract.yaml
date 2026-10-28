@@ -1,0 +1,36 @@
+schema_version: 1
+figure_id: EXAMPLE-HIGH-DIMENSIONAL
+figure_type: manuscript
+template: multi_panel_template
+scientific_message: A higher-dimensional overview is interpreted through matched slices and explicit convergence evidence.
+primary_object: {id: slice_atlas, asset_type: slice_atlas, scientific_role: matched_parameter_slices, visual_role: primary}
+secondary_objects:
+  - {id: overview_3d, asset_type: high_dimensional_visualization, scientific_role: domain_overview, visual_role: secondary}
+  - {id: scaling, asset_type: convergence_plot, scientific_role: active_learning_scaling, visual_role: secondary}
+tertiary_information: [{id: nonclosure, scientific_role: convergence_caveat, visual_role: tertiary}]
+data_sources: [frozen_3d_dataset.npz]
+assets:
+  - {id: slice_atlas, type: slice_atlas, source: frozen_3d_dataset.npz, schematic: false, bbox: required, features: [shared_axes, shared_color_scale, fixed_slice_parameter_labels]}
+  - {id: overview_3d, type: high_dimensional_visualization, source: frozen_3d_dataset.npz, schematic: false, bbox: required, features: [projection_or_slice_definition, topology_nonclosure_caveat_when_applicable]}
+  - {id: scaling, type: convergence_plot, source: convergence_table.csv, schematic: false, bbox: required, features: [raw_metric, units_or_definition, iteration_or_budget_axis]}
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1100], print_mm: [178.0, 122.4]}
+  template_profile: high_dimensional
+  bounding_boxes: {}
+  alignment_anchors: [overview_to_slice_parameter, shared_slice_axes, shared_color_scale]
+  declared_overlays: []
+  declared_exceptions: []
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {phase: physical, topology: topology_tfflo, uncertainty: uncertainty}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+text_budget: {maximum_words_in_artwork: 100, maximum_words_per_panel: 24, minimum_font_size_pt: 7.0, move_excess_to: caption_or_supplement}
+required_elements: [overview_projection_definition, fixed_slice_parameters, shared_scale]
+required_labels: [3D extension, slice atlas]
+forbidden_elements: [duplicated_3d_clouds, independent_slice_autoscaling]
+forbidden_claims: [complete 3D phase diagram, fully converged 3D topology atlas]
+validation_requirements: {hard_fail: true, require_geometry_manifest: true, require_editable_svg: true, require_pdf: true, require_png_preview: true, require_grayscale_review: true, require_engine_preflight: true}
+provenance: {physics_recomputed: false, parameters_recorded: true, commit_hash_when_available: true}
+approval: {gate: EXAMPLE_GATE, state: HUMAN_WAIT}

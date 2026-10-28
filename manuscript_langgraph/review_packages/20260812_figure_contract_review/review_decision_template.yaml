@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "review_date": null,
+  "reviewer": null,
+  "GATE_CLAIM_APPROVAL": {
+    "status": "approved",
+    "approval_record": "manuscript_langgraph/audits/claim_approval_record_20260812.yaml"
+  },
+  "GATE_FIGURE_APPROVAL": {
+    "status": "pending_human_approval",
+    "approved_contracts": [],
+    "requested_edits": [],
+    "note": "Frozen source bundles are recovered; contract approval authorizes the evidence-locked redraw workflow, not automatic scientific acceptance of rendered panels."
+  },
+  "INTRO_CITATION_LOOP_GATE": {
+    "status": "permission_not_granted"
+  }
+}

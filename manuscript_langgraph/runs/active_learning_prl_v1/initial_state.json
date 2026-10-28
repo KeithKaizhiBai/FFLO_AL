@@ -1,0 +1,24 @@
+{
+  "run_id": "active_learning_prl_v1",
+  "project_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO",
+  "manuscript_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph",
+  "artifact_manifest_path": "manuscript_langgraph/audits/manuscript_artifact_manifest.csv",
+  "claim_registry_path": "manuscript_langgraph/registries/claim_registry.yaml",
+  "evidence_registry_path": "manuscript_langgraph/registries/evidence_registry.yaml",
+  "figure_registry_path": "manuscript_langgraph/registries/figure_registry.yaml",
+  "figure_approval_package_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/GATE_FIGURE_APPROVAL_PACKAGE",
+  "checkpoint_path": "manuscript_langgraph/runs/active_learning_prl_v1/checkpoints/manuscript.sqlite",
+  "scope_approved": true,
+  "claim_approved": true,
+  "figure_approved": false,
+  "external_retrieval_approved": false,
+  "final_manuscript_approved": false,
+  "new_physics_permission": false,
+  "figure_candidate_paths": [
+    "manuscript_figures/final/Fig1_candidate.pdf",
+    "manuscript_figures/final/Fig2_candidate.pdf",
+    "manuscript_figures/final/Fig3_candidate.pdf",
+    "manuscript_figures/final/Fig4_candidate.pdf"
+  ],
+  "gate_results": []
+}

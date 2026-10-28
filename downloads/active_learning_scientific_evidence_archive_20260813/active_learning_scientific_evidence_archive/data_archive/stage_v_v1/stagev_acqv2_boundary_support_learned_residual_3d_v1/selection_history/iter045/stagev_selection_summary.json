@@ -1,0 +1,48 @@
+{
+  "a0_max": 0.1913175008277058,
+  "boundary_priorities": {
+    "gap_nodal": 0.0,
+    "normal_sc": 0.0,
+    "p0_topology": 0.0,
+    "ppi_topology": 0.0,
+    "uniform_fflo": 0.0
+  },
+  "candidate_count": 65536,
+  "candidate_source_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "dataset_path": "ML_Phase_StageV_AcqV2/active_runs/stagev_acqv2_boundary_support_learned_residual_3d_v1/dataset_iter045.npz",
+  "dataset_samples": 3831,
+  "device": "cpu",
+  "iteration": 45,
+  "lambda_t": 0.7,
+  "mean_selection_probability": 0.0006993369477027154,
+  "mode": "acquisition",
+  "partition_strategy": "cost_aware",
+  "requested_candidate_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "requested_micro_batch_size": 64,
+  "run_id": "stagev_acqv2_boundary_support_learned_residual_3d_v1",
+  "selected_batch_size": 64,
+  "stageiv_data_used_for_training": false,
+  "support_counts": {
+    "gap_nodal": 0,
+    "normal_sc": 402,
+    "p0_topology": 235,
+    "ppi_topology": 72,
+    "uniform_fflo": 508
+  },
+  "world_size": 8
+}

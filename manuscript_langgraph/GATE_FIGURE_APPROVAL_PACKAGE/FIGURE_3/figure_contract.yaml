@@ -1,0 +1,14 @@
+{
+  "figure_id": "FIG-03-STAGEIII-TOPOLOGY",
+  "claim_ids": ["CLM-2D-TOPOLOGY", "CLM-ORACLE-RELIABILITY"],
+  "scientific_role": "Central topology result: trusted cFFLO/tFFLO structure and configured convergence audit.",
+  "panels": {
+    "A": "Pfaffian and full-Brillouin-zone spectral trust hierarchy",
+    "B": "final exact normal/uniform-SC/cFFLO/tFFLO hierarchy with support-restricted contour",
+    "C": "audited contour support and local bracket-distance diagnostic",
+    "D": "map-change, p95 shift, coverage, surprise, component and k-sensitivity audit"
+  },
+  "required_facts": {"samples": 4345, "trusted_fflo": 3213, "cfflo": 2290, "tfflo": 923, "decision": "A", "k_main": 8, "coverage_p95": 0.0061854216098562, "coverage_threshold": 0.00625, "k6_coverage_p95": 0.00626854205400971},
+  "required_caveats": ["k=6 sensitivity is slightly above the nominal threshold", "opposite-Z2 brackets are support diagnostics only", "all possible nodal superconductivity is not excluded"],
+  "prohibited": ["Delaunay edges are the physical boundary", "all topology refinement is exhausted", "all nodal superconductivity is excluded"]
+}

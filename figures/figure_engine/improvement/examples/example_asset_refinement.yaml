@@ -1,0 +1,11 @@
+asset: example_asset
+previous_version: figX_engine_v1
+problem: concise_visual_failure_description
+scientific_goal: scientific_meaning_that_must_be_preserved
+visual_goal: intended_perceptual_improvement
+change: exact_asset_level_change
+validation_result:
+  engine_lint: pass_or_fail
+  figure_specific_lint: pass_or_fail
+  visual_review: pending_or_decision
+human_review_needed: true

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "profile_id": "PRL_INTEGRATED_MAIN_TEXT",
+  "body_text_words_including_introduction_and_discussion": 882,
+  "abstract_words": 126,
+  "figure_caption_words": 499,
+  "displayed_equations": 1,
+  "single_column_figures": 0,
+  "double_column_figures": 4,
+  "tables": 0,
+  "internal_word_equivalent_estimate": 1997,
+  "compiled_page_count": 6,
+  "content_complete_page_count": 6,
+  "estimated_letter_length_status": "OVERLENGTH_CANDIDATE",
+  "largest_length_drivers": [
+    "four full-width figures",
+    "frozen captions",
+    "integrated body text"
+  ],
+  "note": "The word-equivalent is an internal planning estimate, not an official APS length ruling."
+}

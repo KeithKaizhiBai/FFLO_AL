@@ -1,0 +1,6 @@
+ensemble_members: 5
+seeds: 3
+max_epochs: 150
+probe_cloud: 50000
+checkpoint_grid: [1024, 1500, 2000, 3000, 4000, 5000, 6000, 7168]
+chunked_inference: true

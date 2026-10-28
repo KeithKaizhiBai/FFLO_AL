@@ -1,0 +1,45 @@
+schema_version: 1
+profile_id: PUBLIC_PHYSICS_NARRATIVE_WITH_SCIENTIFIC_DEPTH
+inherits: PUBLIC_PHYSICS_NARRATIVE_AND_REPRODUCIBLE_METHODS_V1
+physical_interpretation_packet_node:
+  figures:
+  - Fig1
+  - Fig2
+  - Fig3
+  - Fig4
+  unsupported_inference_policy: reject
+results_scientific_depth_gate:
+  required:
+  - scientific_question
+  - observable_structure
+  - parameter_dependence
+  - physical_interpretation
+  - method_role
+  - scope_or_limitation
+  - transition_to_next_result
+minimum_main_text_method_kernel_gate:
+  required:
+  - compact_model
+  - Delta_q_minimization
+  - normal_reference
+  - phase_definitions
+  - topology_applicability
+  - Pfaffian_relation
+  - oracle_scheduler_separation
+discussion_synthesis_gate:
+  required:
+  - physical_contribution
+  - methodological_contribution
+  - efficiency_evidence
+  - limitations
+  - general_significance
+  - outlook
+float_interleaving_gate:
+  preferred_reference_distance_pages: 1
+  four_consecutive_figure_pages: strong_warning
+  figure_before_first_discussion: fail
+  fragile_hacks_forbidden: true
+supplement_preservation_gate:
+  no_unnecessary_rewrite: true
+  method_detail_preserved: true
+  main_supplement_consistency: true

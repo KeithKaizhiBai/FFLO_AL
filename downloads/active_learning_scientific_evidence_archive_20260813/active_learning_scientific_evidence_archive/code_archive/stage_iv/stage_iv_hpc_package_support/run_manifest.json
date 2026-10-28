@@ -1,0 +1,425 @@
+{
+  "archive_path": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\hpc_packages\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624.tar.gz",
+  "archive_sha256": "4799ecfca7ab16c8a340d731dfb74cf0ea44502b2c4582b59523e65df00fcbf4",
+  "bash_n_results": [
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/build_stageiv_3d_all_postrun_reports.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/build_stageiv_3d_convergence_audit.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/build_stageiv_3d_hidden_slice_audit.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/build_stageiv_3d_postrun_summary.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/check_stageiv_3d_hpc_status.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/check_stageiv_3d_return_bundle.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/check_stageiv_3d_submit_ready.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/collect_stageiv_3d_results.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/inspect_stageiv_3d_checkpoint.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/inspect_stageiv_failed_task.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/monitor_stageiv_3d_run.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/recover_stageiv_failed_exact_iter.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/resume_stageiv_3d_full_loop.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/run_stageiv_3d_preflight.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/slurm_stageiv_exact_array.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "notes": "local Windows bash maps to WSL without an installed distro",
+      "path": "scripts/submit_stageiv_3d_full_loop.sh",
+      "returncode": 1,
+      "status": "skipped_local_bash_unavailable",
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "created_at_utc": "2026-06-24T04:02:38.868550+00:00",
+  "generated_data_dir_check": {
+    "ml_phase_active_runs_exists": false,
+    "ml_phase_datasets_exists": false,
+    "ml_phase_figures_exists": false,
+    "ml_phase_reports_exists": false
+  },
+  "git": {
+    "git_commit": "19c3ff17c2c73fce1b48f35acd7eb36f93f149da",
+    "git_diff_stat": " Active_Learning_Phase_Boundary_Refinement_Plan.md  |  961 --\n Full_reconstruct_plan.md                           | 1274 ---\n ML_Guidance.md                                     |  438 -\n Phase_boundary_sharp_plan.md                       |  561 --\n QDELTA_REFINEMENT_EXECUTION_PLAN.md                |  345 -\n QDELTA_TARGET_LOGIC_CODE_REWRITE_PLAN.md           |  469 -\n RUN_ORDER_GBU_HPC.md                               |  321 -\n docs/DECISIONS.md                                  |  579 +-\n docs/NUMERICS_SPEC.md                              |  116 +\n docs/PROJECT_SUMMARY.md                            | 9870 +++++++++++++++++++-\n fflo_transition.ipynb                              | 2735 ------\n finite_T_phase_diagram.m                           |   19 -\n hpc_active_loop.sh                                 |  119 +-\n hpc_run_readme.md                                  |  156 -\n ml_phase/acquisition.py                            |  215 +-\n ml_phase/active_refine.py                          |  215 +-\n ml_phase/config.py                                 |   64 +-\n ml_phase/dataset_builder.py                        |   21 +\n ml_phase/exact_oracle.py                           | 3055 +++++-\n ml_phase/hpc.py                                    |   46 +-\n ml_phase/report_builder.py                         |  142 +-\n ml_phase/stop_controller.py                        |  270 +-\n ml_phase/topology_oracle.py                        |   60 +-\n report_active_learning_r0015_note/README.md        |   28 -\n .../decision_log.md                                |   60 -\n .../figures/exact_eta_revised_boundaries.pdf       |  Bin 69517 -> 0 bytes\n .../point0021_nq12800_response_pathology.png       |  Bin 119666 -> 0 bytes\n .../point0025_nq12800_response_pathology.png       |  Bin 117849 -> 0 bytes\n .../figures/qdensity_eta_vs_nq.png                 |  Bin 117833 -> 0 bytes\n .../figures/qdensity_qic_shift_vs_nq.png           |  Bin 141857 -> 0 bytes\n .../qwindow_positive_eta_qextrema_shift.png        |  Bin 83348 -> 0 bytes\n .../figures/qwindow_two_level_eta_stability.png    |  Bin 96576 -> 0 bytes\n .../figures/selection_focus_curve.png              |  Bin 99466 -> 0 bytes\n .../numerical_reliability_audit.md                 |  212 -\n .../numerical_reliability_audit.pdf                |  Bin 921316 -> 0 bytes\n .../numerical_reliability_audit.tex                |  323 -\n .../tables/qdensity_summary_by_point.csv           |    7 -\n .../tables/response_pathology_summary.csv          |    5 -\n .../phase_qwindow_delta_refinement_config.json     |   56 -\n .../decision_log.md                                |   41 -\n .../input_points/clean_control_points.csv          |   21 -\n .../input_points/combined_phase_audit_points.csv   |  346 -\n .../input_points/delta_sensitive_points.csv        |   97 -\n .../input_points/qwindow_sensitive_points.csv      |  343 -\n .../phase_qwindow_delta_refinement.md              |   29 -\n .../phase_qwindow_delta_refinement.pdf             |  Bin 55426 -> 0 bytes\n .../phase_qwindow_delta_refinement.tex             |   37 -\n report_phase_qwindow_delta_refinement_v1/readme.md |   84 -\n .../reports/phase_qwindow_delta_refinement.md      |   29 -\n .../scripts/collect_phase_audit_results.sh         |   14 -\n .../phase_qwindow_delta_refinement_audit.py        | 1053 ---\n .../scripts/submit_delta_refinement_array.sh       |   25 -\n .../scripts/submit_phase_qwindow_array.sh          |   25 -\n scripts/dev_check_stop_controller.py               |  106 +-\n scripts/recover_active_iter.sh                     |    6 +\n scripts/slurm_active_refine.sh                     |   38 +-\n scripts/slurm_exact_oracle_array.sh                |  123 +-\n 57 files changed, 14932 insertions(+), 10227 deletions(-)\n",
+    "git_status_short": " D Active_Learning_Phase_Boundary_Refinement_Plan.md\n D Full_reconstruct_plan.md\n D ML_Guidance.md\n D Phase_boundary_sharp_plan.md\n D QDELTA_REFINEMENT_EXECUTION_PLAN.md\n D QDELTA_TARGET_LOGIC_CODE_REWRITE_PLAN.md\n D RUN_ORDER_GBU_HPC.md\n M docs/DECISIONS.md\n M docs/NUMERICS_SPEC.md\n M docs/PROJECT_SUMMARY.md\n D fflo_transition.ipynb\n D finite_T_phase_diagram.m\n M hpc_active_loop.sh\n D hpc_run_readme.md\n M ml_phase/acquisition.py\n M ml_phase/active_refine.py\n M ml_phase/config.py\n M ml_phase/dataset_builder.py\n M ml_phase/exact_oracle.py\n M ml_phase/hpc.py\n M ml_phase/report_builder.py\n M ml_phase/stop_controller.py\n M ml_phase/topology_oracle.py\n D report_active_learning_r0015_note/README.md\n D report_numerical_reliability_audit_20260523/decision_log.md\n D report_numerical_reliability_audit_20260523/figures/exact_eta_revised_boundaries.pdf\n D report_numerical_reliability_audit_20260523/figures/point0021_nq12800_response_pathology.png\n D report_numerical_reliability_audit_20260523/figures/point0025_nq12800_response_pathology.png\n D report_numerical_reliability_audit_20260523/figures/qdensity_eta_vs_nq.png\n D report_numerical_reliability_audit_20260523/figures/qdensity_qic_shift_vs_nq.png\n D report_numerical_reliability_audit_20260523/figures/qwindow_positive_eta_qextrema_shift.png\n D report_numerical_reliability_audit_20260523/figures/qwindow_two_level_eta_stability.png\n D report_numerical_reliability_audit_20260523/figures/selection_focus_curve.png\n D report_numerical_reliability_audit_20260523/numerical_reliability_audit.md\n D report_numerical_reliability_audit_20260523/numerical_reliability_audit.pdf\n D report_numerical_reliability_audit_20260523/numerical_reliability_audit.tex\n D report_numerical_reliability_audit_20260523/tables/qdensity_summary_by_point.csv\n D report_numerical_reliability_audit_20260523/tables/response_pathology_summary.csv\n D report_phase_qwindow_delta_refinement_v1/config/phase_qwindow_delta_refinement_config.json\n D report_phase_qwindow_delta_refinement_v1/decision_log.md\n D report_phase_qwindow_delta_refinement_v1/input_points/clean_control_points.csv\n D report_phase_qwindow_delta_refinement_v1/input_points/combined_phase_audit_points.csv\n D report_phase_qwindow_delta_refinement_v1/input_points/delta_sensitive_points.csv\n D report_phase_qwindow_delta_refinement_v1/input_points/qwindow_sensitive_points.csv\n D report_phase_qwindow_delta_refinement_v1/phase_qwindow_delta_refinement.md\n D report_phase_qwindow_delta_refinement_v1/phase_qwindow_delta_refinement.pdf\n D report_phase_qwindow_delta_refinement_v1/phase_qwindow_delta_refinement.tex\n D report_phase_qwindow_delta_refinement_v1/readme.md\n D report_phase_qwindow_delta_refinement_v1/reports/phase_qwindow_delta_refinement.md\n D report_phase_qwindow_delta_refinement_v1/scripts/collect_phase_audit_results.sh\n D report_phase_qwindow_delta_refinement_v1/scripts/phase_qwindow_delta_refinement_audit.py\n D report_phase_qwindow_delta_refinement_v1/scripts/submit_delta_refinement_array.sh\n D report_phase_qwindow_delta_refinement_v1/scripts/submit_phase_qwindow_array.sh\n M scripts/dev_check_stop_controller.py\n M scripts/recover_active_iter.sh\n M scripts/slurm_active_refine.sh\n M scripts/slurm_exact_oracle_array.sh\n?? active_phase_topology_from_scratch_full_loop_v1_hpc/\n?? docs/GOAL_CHECKPOINT.md\n?? docs/LOCAL_REFINEMENT_REFACTOR_CALL_GRAPH.md\n?? docs/LOCAL_REFINEMENT_REFACTOR_DECISION_LOG.md\n?? docs/LOCAL_REFINEMENT_REFACTOR_MASTER_PLAN.md\n?? docs/LOCAL_REFINEMENT_REFACTOR_STATUS.md\n?? docs/PHASE2_FINAL_AUDIT_DECISION_LOG.md\n?? docs/PHASE2_FINAL_AUDIT_PLAN.md\n?? docs/PHASE2_FINAL_REPORT_STATUS.md\n?? docs/QWINDOW_INCREMENTAL_CALL_GRAPH.md\n?? docs/QWINDOW_INCREMENTAL_DECISION_LOG.md\n?? docs/QWINDOW_INCREMENTAL_REFACTOR_PLAN.md\n?? docs/StageIII_TopoTrivial_Classification.md\n?? docs/StageIV_MultiDim_Phase_Diagram.md\n?? docs/TRUSTED_SURPRISE_STOPCONTROLLER_DECISION_LOG.md\n?? docs/TRUSTED_SURPRISE_STOPCONTROLLER_PLAN.md\n?? docs/Topo_Trivial_FullLoop_Build.md\n?? docs/gbu_hpc_usage_summary.md\n?? docs/report_qa/20260603_local_refinement_stage1_cuda_node_exclusion.md\n?? docs/report_qa/20260603_local_refinement_stage1_downloaded_package_check.md\n?? docs/report_qa/20260603_local_refinement_stage1_hpc_handoff.md\n?? docs/report_qa/20260603_local_refinement_stage1_import_path_fix.md\n?? docs/report_qa/20260604_local_refinement_gpu_slurm_policy.md\n?? docs/report_qa/20260605_stage_visual_report_structure.md\n?? docs/report_qa/20260607_variant_array_suite_validation.md\n?? docs/report_qa/20260608_basin_level_risk_refactor.md\n?? docs/report_qa/20260608_ordinary_policy_refactor.md\n?? docs/report_qa/20260608_rank_and_cap_refactor.md\n?? docs/report_qa/20260608_target_construction_dryrun_return.md\n?? docs/report_qa/20260608_target_construction_hpc_package.md\n?? docs/report_qa/20260608_target_logic_audit.md\n?? docs/report_qa/20260608_variant_array_return_report.md\n?? docs/report_qa/20260609_free_energy_flow_and_system_diagrams.md\n?? docs/report_qa/20260609_rankcap_acceptance_pipeline.md\n?? docs/report_qa/20260609_rankcap_acceptance_return.md\n?? docs/report_qa/20260609_rankcap_k3_one_iter_validation_package.md\n?? docs/report_qa/20260609_rankcap_k3_one_iter_validation_return.md\n?? docs/report_qa/20260610_rankcap_k3_5iter_validation_recheck.md\n?? docs/report_qa/20260617_phase_boundary_stability_audit.md\n?? docs/report_qa/20260617_rankcap_k3_full_loop_convergence.md\n?? docs/report_qa/20260617_rankcap_k3_full_loop_enhanced_report.md\n?? docs/report_qa/20260617_rankcap_k3_full_loop_nonconvergence_analysis.md\n?? docs/report_qa/20260617_rankcap_k3_last5_stop_audit.md\n?? docs/report_qa/20260617_second_stage_discussion_report.md\n?? docs/report_qa/20260618_surprise_cleanup_strategy.md\n?? docs/report_qa/20260618_surprise_review_recheck.md\n?? docs/report_qa/20260618_trusted_surprise_counterfactual.md\n?? docs/report_qa/20260618_trusted_surprise_stopcontroller.md\n?? docs/report_qa/20260619_tail_surprise_continuation_package.md\n?? docs/report_qa/20260619_tail_surprise_continuation_return.md\n?? docs/report_qa/20260620_hard_risk_boundary_impact_audit.md\n?? docs/report_qa/20260620_phase2_final_audit_and_report.md\n?? docs/report_qa/20260620_phase2_latex_report_build.md\n?? docs/report_qa/20260620_phase2_report_consolidation.md\n?? docs/report_qa/20260620_topo_trivial_full_loop_hpc_package.md\n?? docs/report_qa/20260623_stageiv_3d_hpc_package.md\n?? docs/report_qa/20260623_topo_trivial_full_loop_return.md\n?? docs/report_qa/20260623_topology_convergence_audit_full_loop_v2.md\n?? docs/report_qa/20260624_stageiv_3d_repackage_identity_guard.md\n?? hpc_packages/\n?? hpc_phase_qwindow_delta_refinement_20260525/\n?? local_refinement_rankcap_acceptance_upload/\n?? local_refinement_refactor_hpc_upload_set/\n?? local_refinement_refactor_stage01_instrumentation/\n?? local_refinement_target_construction_dryrun/\n?? ml_phase/stageiv_3d.py\n?? package_hpc_upload.ps1\n?? project_history/\n?? rankcap_k3_5iter_validation/\n?? rankcap_k3_full_loop/\n?? rankcap_k3_one_iter_validation/\n?? rankcap_k3_tail_surprise_continuation_results/\n?? report/\n?? reports/README.md\n?? reports/_phase2_supporting_reports/\n?? reports/stageiv_3d_acq_smoke_config.json\n?? reports/stageiv_3d_convergence_audit_smoke/\n?? reports/stageiv_3d_convergence_audit_smoke_pdf/\n?? reports/stageiv_3d_external_dependency_audit/\n?? reports/stageiv_3d_goal_status/\n?? reports/stageiv_3d_hidden_slice_audit_smoke_missing_ref/\n?? reports/stageiv_3d_hidden_slice_audit_smoke_self_ref/\n?? reports/stageiv_3d_hpc_handoff/\n?? reports/stageiv_3d_postrun_bundle_smoke/\n?? reports/stageiv_3d_preflight_local/\n?? reports/stageiv_3d_readiness_audit/\n?? reports/stageiv_3d_return_check_missing_smoke/\n?? reports/stageiv_3d_return_check_package_tar_smoke/\n?? reports/stageiv_3d_status_checker_smoke/\n?? reports/stageiv_3d_traceability_audit/\n?? reports/topo_trivial_full_loop_package/\n?? reports/topology_pass_dataset_iter035_v1/pdf_render_check/\n?? scripts/aggregate_local_refinement_target_construction_dryrun.py\n?? scripts/aggregate_local_refinement_variant_array_suite.py\n?? scripts/audit_local_refinement_refactor_goal_run.py\n?? scripts/audit_local_refinement_runbook_tests.py\n?? scripts/audit_local_refinement_stage_reports.py\n?? scripts/audit_stageiv_3d_external_dependency.py\n?? scripts/audit_stageiv_3d_goal_status.py\n?? scripts/audit_stageiv_3d_traceability.py\n?? scripts/audit_twophase_optimization_completion.py\n?? scripts/build_hard_risk_boundary_impact_audit.py\n?? scripts/build_local_refinement_performance_report.py\n?? scripts/build_local_refinement_regression_points.py\n?? scripts/build_local_refinement_target_construction_dryrun_report.py\n?? scripts/build_local_refinement_variant_array_return_report.py\n?? scripts/build_phase2_final_audit_and_report.py\n?? scripts/build_phase2_latex_reports.py\n?? scripts/build_phase_boundary_stability_audit.py\n?? scripts/build_qwindow_incremental_performance_report.py\n?? scripts/build_rankcap_k3_full_loop_enhanced_report.py\n?? scripts/build_rankcap_k3_last5_stop_audit.py\n?? scripts/build_second_stage_discussion_report.py\n?? scripts/build_stageiv_3d_hpc_handoff.py\n?? scripts/build_surprise_decomposition_audit.py\n?? scripts/build_surprise_review_recheck.py\n?? scripts/build_tail_surprise_continuation_return_report.py\n?? scripts/build_topo_trivial_full_loop_return_report.py\n?? scripts/build_topology_convergence_audit.py\n?? scripts/build_trusted_surprise_counterfactual.py\n?? scripts/check_acquisition_profiles.py\n?? scripts/check_local_refinement_variant_suite_return.py\n?? scripts/check_robust_oracle_label_closure.py\n?? scripts/check_target_construction_dryrun_hpc_status.py\n?? scripts/check_variant_suite_hpc_status.py\n?? scripts/collect_local_refinement_performance_report.sh\n?? scripts/collect_local_refinement_stage1_outputs.py\n?? scripts/collect_rankcap_acceptance_report.sh\n?? scripts/compare_acquisition_profiles.py\n?? scripts/compare_incremental_qexpansion_regression.py\n?? scripts/compare_local_refinement_variants.py\n?? scripts/debug_local_refinement_target_construction.py\n?? scripts/export_active_run_report_md.py\n?? scripts/import_local_refinement_stage1_results.py\n?? scripts/import_local_refinement_variant_suite_results.py\n?? scripts/numerical_audit_qdensity.py\n?? scripts/organize_root_artifacts_20260603.ps1\n?? scripts/package_acquisition_profile_hpc.py\n?? scripts/package_local_refinement_refactor_hpc.py\n?? scripts/package_local_refinement_target_construction_dryrun_hpc.py\n?? scripts/package_local_refinement_upload_set.py\n?? scripts/package_local_refinement_variant_suite_hpc.py\n?? scripts/package_stageiv_topology_3d_hpc.py\n?? scripts/package_stopcontroller_trusted_surprise_hpc.py\n?? scripts/package_tail_surprise_continuation_hpc.py\n?? scripts/package_topo_trivial_full_loop_hpc.py\n?? scripts/preflight_local_refinement_stage1_hpc.py\n?? scripts/recheck_rankcap_k3_5iter_validation.py\n?? scripts/replay_stopcontroller_surprise_modes.py\n?? scripts/response_curve_pathology_audit.py\n?? scripts/robust_oracle_smoke_check.py\n?? scripts/run_local_refinement_fixed_point_regression.py\n?? scripts/run_local_refinement_rankcap_acceptance.py\n?? scripts/run_local_refinement_target_construction_point.py\n?? scripts/run_local_refinement_variant_point.py\n?? scripts/run_qwindow_incremental_benchmark.py\n?? scripts/run_rankcap_k3_active_loop_package.py\n?? scripts/run_rankcap_k3_one_iter_validation.py\n?? scripts/stageiv_3d_convergence_audit.py\n?? scripts/stageiv_3d_hidden_slice_audit.py\n?? scripts/stageiv_3d_hpc_status.py\n?? scripts/stageiv_3d_postrun_bundle.py\n?? scripts/stageiv_3d_postrun_report.py\n?? scripts/stageiv_3d_preflight.py\n?? scripts/stageiv_3d_return_check.py\n?? scripts/stageiv_3d_select.py\n?? scripts/stageiv_3d_submit_check.py\n?? scripts/submit_rankcap_acceptance_regression.sh\n?? scripts/submit_rankcap_k3_5iter_validation.sh\n?? scripts/submit_rankcap_k3_full_loop.sh\n?? scripts/submit_rankcap_k3_one_iter_validation.sh\n?? scripts/validate_local_refinement_hpc_package.py\n?? scripts/verify_local_refinement_goal_run_report.py\n?? scripts/verify_local_refinement_stage1_gate.py\n?? stopcontroller_trusted_surprise_v1/\n?? tests/\n",
+    "working_tree_has_changes": true
+  },
+  "identity_guard": {
+    "expected_config_json": "configs/stageiv_3d_production.json",
+    "expected_output_root": "ML_Phase_StageIV_Topology3D",
+    "expected_run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+    "script_rows": [
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/build_stageiv_3d_all_postrun_reports.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/build_stageiv_3d_convergence_audit.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/build_stageiv_3d_hidden_slice_audit.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/build_stageiv_3d_postrun_summary.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/check_stageiv_3d_hpc_status.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/check_stageiv_3d_return_bundle.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/check_stageiv_3d_submit_ready.sh",
+        "removed_assignments": "OUTPUT_ROOT,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/collect_stageiv_3d_results.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/inspect_stageiv_3d_checkpoint.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID"
+      },
+      {
+        "identity_guard_inserted": false,
+        "path": "scripts/inspect_stageiv_failed_task.sh",
+        "removed_assignments": ""
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/monitor_stageiv_3d_run.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/recover_stageiv_failed_exact_iter.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID"
+      },
+      {
+        "identity_guard_inserted": false,
+        "path": "scripts/resume_stageiv_3d_full_loop.sh",
+        "removed_assignments": ""
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/run_stageiv_3d_preflight.sh",
+        "removed_assignments": "OUTPUT_ROOT,CONFIG_JSON"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/slurm_stageiv_exact_array.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID"
+      },
+      {
+        "identity_guard_inserted": true,
+        "path": "scripts/submit_stageiv_3d_full_loop.sh",
+        "removed_assignments": "OUTPUT_ROOT,RUN_ID,CONFIG_JSON"
+      }
+    ]
+  },
+  "output_root": "ML_Phase_StageIV_Topology3D",
+  "package_name": "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624",
+  "package_preflight_returncode": 0,
+  "package_preflight_stderr": "",
+  "package_preflight_stdout": "Wrote Stage IV preflight outputs under reports\\stageiv_3d_preflight_package\n",
+  "package_return_check_smoke_returncode": 0,
+  "package_return_check_smoke_stderr": "",
+  "package_return_check_smoke_stdout": "{\n  \"created_at_utc\": \"2026-06-24T04:02:37.410500+00:00\",\n  \"return_check_status\": \"return_path_missing\",\n  \"return_next_action\": \"download_or_extract_stageiv_results\",\n  \"return_path\": \"ML_Phase_StageIV_Topology3D\",\n  \"return_path_type\": \"missing\",\n  \"run_id\": \"active_phase_topology_3d_t_ja_mu_from_scratch_v1\"\n}\n",
+  "package_status_smoke_returncode": 0,
+  "package_status_smoke_stderr": "",
+  "package_status_smoke_stdout": "{\n  \"created_at_utc\": \"2026-06-24T04:02:28.840307+00:00\",\n  \"expected_dataset_iterations\": 25,\n  \"expected_exact_iterations\": 25,\n  \"expected_world_size\": 8,\n  \"hpc_commands\": {},\n  \"hpc_job_id\": null,\n  \"hpc_status\": \"run_dir_missing\",\n  \"incomplete_shard_iterations\": [],\n  \"latest_dataset_iteration\": null,\n  \"latest_iteration_dir\": null,\n  \"missing_dataset_iterations\": [\n    1,\n    2,\n    3,\n    4,\n    5,\n    6,\n    7,\n    8,\n    9,\n    10,\n    11,\n    12,\n    13,\n    14,\n    15,\n    16,\n    17,\n    18,\n    19,\n    20,\n    21,\n    22,\n    23,\n    24,\n    25\n  ],\n  \"missing_merge_iterations\": [],\n  \"missing_trusted_iterations\": [],\n  \"next_action\": \"check_upload_path_or_submit_stageiv_full_loop\",\n  \"output_root\": \"reports\\\\stageiv_3d_status_smoke_output\",\n  \"postrun_bundle_decision_exists\": false,\n  \"postrun_bundle_decision_path\": \"reports\\\\stageiv_3d_status_smoke_output\\\\reports\\\\stageiv_3d_postrun_bundle\\\\stageiv_3d_postrun_bundle_decision.json\",\n  \"result_archive_exists\": false,\n  \"result_archive_path\": \"reports\\\\stageiv_3d_status_smoke_output\\\\stageiv_3d_topology_full_loop_results.tar.gz\",\n  \"result_archive_size_bytes\": null,\n  \"run_dir\": \"reports\\\\stageiv_3d_status_smoke_output\\\\active_runs\\\\active_phase_topology_3d_t_ja_mu_from_scratch_v1\",\n  \"run_dir_exists\": false,\n  \"run_id\": \"active_phase_topology_3d_t_ja_mu_from_scratch_v1\"\n}\n",
+  "package_submit_check_returncode": 0,
+  "package_submit_check_stderr": "",
+  "package_submit_check_stdout": "{\n  \"checked_at_utc\": \"2026-06-24T04:02:27.954588+00:00\",\n  \"config_path\": \"D:\\\\PhD Study\\\\4th\\\\SC_GBU\\\\Fu_FFLO\\\\hpc_packages\\\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\\\\configs\\\\stageiv_3d_production.json\",\n  \"failed_check_count\": 0,\n  \"output_root\": \"ML_Phase_StageIV_Topology3D\",\n  \"package_root\": \"D:\\\\PhD Study\\\\4th\\\\SC_GBU\\\\Fu_FFLO\\\\hpc_packages\\\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\",\n  \"python_bin_for_compile\": \"python\",\n  \"python_executable\": \"C:\\\\Python314\\\\python.exe\",\n  \"root_sha256_manifest\": \"missing\",\n  \"run_id\": \"active_phase_topology_3d_t_ja_mu_from_scratch_v1\",\n  \"submit_ready_status\": \"pass\",\n  \"torch_cuda_probe\": {\n    \"cuda_available\": true,\n    \"device_count\": 1,\n    \"torch_cuda_version\": \"12.6\",\n    \"torch_version\": \"2.10.0+cu126\"\n  },\n  \"warning_check_count\": 17\n}\n",
+  "package_validation_status": "pass",
+  "py_compile_returncode": 0,
+  "py_compile_stderr": "",
+  "py_compile_stdout": "",
+  "run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "shell_normalization": [
+    {
+      "notes": "",
+      "path": "scripts/build_stageiv_3d_all_postrun_reports.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/build_stageiv_3d_convergence_audit.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/build_stageiv_3d_hidden_slice_audit.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/build_stageiv_3d_postrun_summary.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/check_stageiv_3d_hpc_status.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/check_stageiv_3d_return_bundle.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/check_stageiv_3d_submit_ready.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/collect_stageiv_3d_results.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/inspect_stageiv_3d_checkpoint.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/inspect_stageiv_failed_task.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/monitor_stageiv_3d_run.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/recover_stageiv_failed_exact_iter.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/resume_stageiv_3d_full_loop.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/run_stageiv_3d_preflight.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/slurm_stageiv_exact_array.sh",
+      "status": "pass"
+    },
+    {
+      "notes": "",
+      "path": "scripts/submit_stageiv_3d_full_loop.sh",
+      "status": "pass"
+    }
+  ],
+  "stageiv_config": {
+    "batch_repulsion_floor": 0.02,
+    "batch_repulsion_length": 0.045,
+    "batch_size": 256,
+    "bracket_jitter_scale": 0.018,
+    "bracket_max_distance": 0.2,
+    "bracket_neighbor_k": 8,
+    "candidate_pool_size": 65536,
+    "cls_epochs": 180,
+    "coverage_weight_early": 0.15,
+    "coverage_weight_late": 0.15,
+    "global_candidate_fraction": 0.7,
+    "guard_mu_max": 2.0,
+    "guard_mu_min": -1.0,
+    "hidden_dim": 96,
+    "initial_seed_size": 1024,
+    "ja_max": 2.12,
+    "ja_min": 0.0,
+    "kt_max": 0.56,
+    "kt_min": 0.0,
+    "lambda_ry": 0.6,
+    "lambda_rz": 0.6,
+    "max_acquisition_batches": 24,
+    "model_ensemble": 5,
+    "mu_edge_candidate_fraction": 0.05,
+    "mu_edge_guard_width": 0.04,
+    "mu_max": 1.5,
+    "mu_min": -0.5,
+    "mu_reference": 0.55,
+    "observation_repulsion_length": 0.04,
+    "output_root": "ML_Phase_StageIV_Topology3D",
+    "random_seed": 20260623,
+    "reg_epochs": 180,
+    "run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+    "selection_power": 3.0,
+    "t": 1.0,
+    "thermodynamic_bracket_candidate_fraction": 0.1,
+    "thermodynamic_stability_switch_iter": 12,
+    "topo_pf_margin_scale": 0.02,
+    "topology_bracket_candidate_fraction": 0.15,
+    "topology_phase_weight_early": 0.45,
+    "topology_phase_weight_late": 0.25,
+    "topology_spectral_weight_early": 0.4,
+    "topology_spectral_weight_late": 0.6,
+    "u": 1.6
+  },
+  "stale_2d_marker_scan": [],
+  "tar_listing_sample": [
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/AGENTS.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ENVIRONMENT_STAGEIV_3D_HPC.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/HPC_COMMANDS_STAGEIV_3D.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/MODEL_SPEC.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/README.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/README_STAGEIV_3D_HPC.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/RUN_MANIFEST.json",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/configs",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/configs/stageiv_3d_production.json",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/configs/stageiv_3d_smoke.json",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/docs",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/docs/DECISIONS.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/docs/MODEL_SPEC.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/docs/NUMERICS_SPEC.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/docs/PROJECT_SUMMARY.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/docs/StageIV_MultiDim_Phase_Diagram.md",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/eta_phase_diagram_cuda.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/__init__.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/acquisition.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/active_refine.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/append_trusted.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/config.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/dataset_builder.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/evaluate.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/exact_oracle.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/extract_phase_boundaries.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/hpc.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/hpc_jobs",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/labels.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/models",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/models.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/plot_active_learning.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/report_builder.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/stageiv_3d.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/stop_controller.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ml_phase/topology_oracle.py",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/reports",
+    "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/reports/stageiv_3d_preflight_package"
+  ],
+  "tar_member_count": 90
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-02-THERMO-STRICT",
+  "contract": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/fig2_panel_contract.yaml",
+  "rule_hashes": {
+    "principles": "2392d3688b0aab686731a73f4578b0bf69e5f9913a4f71305e4d451ef5b97d30",
+    "visual_narrative": "e450dcfe2acb35f1d0b099aefc9fe10f814c86ef8dceeb06a220dc4e939b99ff",
+    "typography": "57d0935ebb8d999e87031d465e127795f0fdd60567e287cc2b6a97469b703fde",
+    "layout": "19f5e97d49aad915f89e8f1b4c1f579e62f68c33bd1aff4188f98d3296ca9870",
+    "spacing": "dd3ce1607cdb78b49fea5322c64eee2e25f0181ac9bb230954dd7d8e4d9b36bf",
+    "color": "e645a493410217480d72f45d6935bb5f47fdbffc45b961b267eeeadba5ca2c78",
+    "arrow": "2e129ec90aae972cd28dd535116abe41fcb6d5f0b851eef0e985548d30ff49e0",
+    "annotation": "b86f4a0726e864d932e524e7ebaef4a31b3301a6d2df878fce2f324e670f40e3",
+    "asset": "b32ded0953dee9e510fb6e17151d1e179cabd6465c1129fd11fff13c38d32598",
+    "validation": "9b9416de08e8beaee0efd04930a54e24b4d0508e548c307b22e603bd52305eff",
+    "strict_data": "83aba26f63024c4f5beb44cf88c6f14d3fd38be50127fb9901d9746d076b49c7",
+    "enforcement": "85dc539382cc55f599af2a58e8baa8893455f7141fe7d9ca355d9b5be99171ad",
+    "palette": "718f99d49bd754cba8bd3f161a9ccd9d2e18a856ee112ca67afecb5f9a05cb69",
+    "fonts": "bee477289d58a97fdcdf1969b0cf9f67568a086862bd2453b16e9c51911a7b14",
+    "svg_style": "fa278e57ad4f04d9aeca7b769bb2b2b1fa858accdeb836b33bf858c64f0778bb"
+  },
+  "gate": {
+    "gate": "GATE_FIG2_HUMAN_SCIENCE_REVIEW",
+    "state": "HUMAN_WAIT"
+  }
+}

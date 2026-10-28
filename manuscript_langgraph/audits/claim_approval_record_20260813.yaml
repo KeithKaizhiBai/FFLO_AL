@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_CLAIM_APPROVAL",
+  "status": "approved_with_modifications",
+  "approved_at": "2026-08-13",
+  "authority": "explicit human instruction in the scientific-archive manuscript continuation prompt",
+  "scope_id": "AL_FFLO_PRL_RELIABILITY_AWARE_3D_V2",
+  "claims": ["CLM-2D-THERMO", "CLM-ORACLE-RELIABILITY", "CLM-2D-TOPOLOGY", "CLM-3D-EXTENSION", "CLM-LEARNED-ACQUISITION", "CLM-GROUNDUP-WORLD-MODEL"],
+  "human_gates_retained": ["GATE_FIGURE_APPROVAL", "GATE_EXTERNAL_RETRIEVAL_PERMISSION", "GATE_NEW_PHYSICS_CALCULATION", "GATE_FINAL_MANUSCRIPT_APPROVAL"]
+}

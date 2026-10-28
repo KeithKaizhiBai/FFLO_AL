@@ -1,0 +1,13 @@
+{
+  "rules": [
+    "every panel has a scientific role and registered source",
+    "all axes use dimensionless LaTeX notation",
+    "report-only boundaries are visibly labeled diagnostic",
+    "unresolved and nodal states use distinct encodings",
+    "hard-risk points remain visible",
+    "captions state status thresholds and central caveats",
+    "store PDF PNG and provenance metadata for final figures"
+  ],
+  "palette": {"normal": "light_gray", "uniform_SC": "blue", "cFFLO": "teal", "tFFLO": "magenta", "unresolved": "dark_gray"},
+  "source_role": "adapted style guidance; never scientific evidence"
+}

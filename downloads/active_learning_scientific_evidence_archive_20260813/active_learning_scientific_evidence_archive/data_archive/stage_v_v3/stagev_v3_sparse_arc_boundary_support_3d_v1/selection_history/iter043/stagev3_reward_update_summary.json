@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 3.0,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 43,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 4.2724609375e-05,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 3776,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.010362100902520783,
+    "rank_correlation_a0_ns": 0.28009763117542835,
+    "rank_correlation_a0_p0": 0.49032126063292275,
+    "rank_correlation_a0_ppi": 0.03564592406092361,
+    "rank_correlation_a0_uf": 0.8566361268723881,
+    "rank_correlation_delta_vs_a0_gap": 0.010362100902520783,
+    "rank_correlation_delta_vs_a0_ns": -0.07189659392324027,
+    "rank_correlation_delta_vs_a0_p0": 0.28318940796865383,
+    "rank_correlation_delta_vs_a0_ppi": 0.6824307713952533,
+    "rank_correlation_delta_vs_a0_uf": -0.14328744671922167,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.20820103725218808,
+    "rank_correlation_model_p0": 0.7735106686015766,
+    "rank_correlation_model_ppi": 0.7180766954561769,
+    "rank_correlation_model_uf": 0.7133486801531664,
+    "reward_sample_count": 3776,
+    "reward_sample_count_gap": 3776,
+    "reward_sample_count_ns": 3776,
+    "reward_sample_count_p0": 3776,
+    "reward_sample_count_ppi": 3776,
+    "reward_sample_count_uf": 3776,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

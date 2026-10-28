@@ -1,0 +1,20 @@
+{
+  "node_id": "citation_audit",
+  "purpose": "citation audit",
+  "inputs": [
+    "claim_citation_map",
+    "bibliography",
+    "section_drafts"
+  ],
+  "outputs": [
+    "citation_audit_report"
+  ],
+  "prerequisites": [
+    "cross_section_consistency_audit"
+  ],
+  "forbidden_actions": [
+    "unverified references cannot be inserted"
+  ],
+  "gate": "CITATION_AUDIT",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

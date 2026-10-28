@@ -1,0 +1,188 @@
+{
+  "central_card": {
+    "x": 325,
+    "y": 150,
+    "width": 925,
+    "height": 690
+  },
+  "markers": {
+    "normal": [
+      569.0020806824971,
+      345.86074162695155
+    ],
+    "uniform": [
+      826.800779245923,
+      452.9916334624883
+    ],
+    "fflo_sector": [
+      1023.1998991827925,
+      416.8476763106453
+    ]
+  },
+  "label_boxes": {
+    "normal": {
+      "x": 480.7520806824971,
+      "y": 318.86074162695155,
+      "width": 84.5,
+      "height": 42,
+      "anchor": [
+        523.0020806824971,
+        318.86074162695155
+      ],
+      "marker": [
+        569.0020806824971,
+        345.86074162695155
+      ]
+    },
+    "uniform": {
+      "x": 754.425779245923,
+      "y": 387.9916334624883,
+      "width": 134.75,
+      "height": 42,
+      "anchor": [
+        821.800779245923,
+        387.9916334624883
+      ],
+      "marker": [
+        826.800779245923,
+        452.9916334624883
+      ]
+    },
+    "fflo_sector": {
+      "x": 1000.8248991827925,
+      "y": 435.8476763106453,
+      "width": 144.75,
+      "height": 42,
+      "anchor": [
+        1073.1998991827925,
+        435.8476763106453
+      ],
+      "marker": [
+        1023.1998991827925,
+        416.8476763106453
+      ]
+    }
+  },
+  "leaders": [
+    {
+      "id": "normal",
+      "start": [
+        569.0020806824971,
+        345.86074162695155
+      ],
+      "end": [
+        545.7168545193429,
+        332.1933262703175
+      ],
+      "length": 27.0
+    },
+    {
+      "id": "uniform",
+      "start": [
+        826.800779245923,
+        452.9916334624883
+      ],
+      "end": [
+        824.729973776035,
+        426.0711623539456
+      ],
+      "length": 26.999999999999996
+    },
+    {
+      "id": "fflo_sector",
+      "start": [
+        1023.1998991827925,
+        416.8476763106453
+      ],
+      "end": [
+        1048.4390558586779,
+        426.4385558474817
+      ],
+      "length": 26.999999999999968
+    }
+  ],
+  "landscape_bbox": {
+    "x": 385,
+    "y": 216,
+    "width": 805,
+    "height": 300,
+    "parent": "central",
+    "scientific_content_bbox": {
+      "x": 521,
+      "y": 216,
+      "width": 533,
+      "height": 300
+    }
+  },
+  "scientific_content_bbox": {
+    "x": 521,
+    "y": 216,
+    "width": 533,
+    "height": 300
+  },
+  "topology_bbox": {
+    "x": 351,
+    "y": 535,
+    "width": 873,
+    "height": 275,
+    "parent": "central"
+  },
+  "surface_render": {
+    "full_render_px": [
+      805,
+      480
+    ],
+    "alpha_bbox_px": [
+      234,
+      103,
+      575,
+      295
+    ],
+    "tight_surface_px": [
+      341,
+      192
+    ],
+    "tight_surface_aspect": 1.7760416666666667,
+    "embedded_content_bbox_local": {
+      "x": 196,
+      "y": 66,
+      "width": 533,
+      "height": 300
+    },
+    "camera": {
+      "id": "camera_3",
+      "elevation_deg": 33,
+      "azimuth_deg": -44,
+      "projection": "orthographic",
+      "box_aspect": [
+        1.35,
+        1.0,
+        0.82
+      ]
+    },
+    "approved_candidate": "candidate_A_compact_hero",
+    "nonuniform_transform": false,
+    "analytic_surface_is_schematic": true
+  },
+  "selected_landscape_candidate": "candidate_A_compact_hero",
+  "landscape_gate": {
+    "gate": "GATE_COMPACT_THERMODYNAMIC_LANDSCAPE_ASSET",
+    "state": "APPROVED"
+  },
+  "parameter_axes_local": {
+    "origin": [
+      128.0,
+      302.0
+    ],
+    "delta_end": [
+      181.0,
+      332.0
+    ],
+    "q_end": [
+      168.0,
+      267.0
+    ]
+  },
+  "topology_curve_generator": "unchanged v4/v3 base.bulk_bands",
+  "topology_resolved_separately": true
+}

@@ -1,0 +1,4 @@
+- Frozen `run_config` records `initialization=random_grid`; it is not scrambled Sobol.
+- Hard-risk points remain an explicit uncertainty layer.
+- Rendered boundaries are support-restricted guides from exact labels.
+- The claim does not state that all numerical uncertainty is eliminated.

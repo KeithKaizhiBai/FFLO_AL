@@ -1,0 +1,33 @@
+figure,source_text_run_pt,main_placed_pt,text,interpretation
+1,5.037947668577549,5.07336444068765,numerical reliability,text-run diagnostic; subscripts/transforms require visual review
+1,5.037947668577549,5.07336444068765,optimization convergence,text-run diagnostic; subscripts/transforms require visual review
+1,5.037947668577549,5.07336444068765,spectral/topological trust,text-run diagnostic; subscripts/transforms require visual review
+1,5.247862310954658,5.28475478300067,Reliability gate,text-run diagnostic; subscripts/transforms require visual review
+1,6.994650690917247,7.043823085274396,red: in-gap boundary state,text-run diagnostic; subscripts/transforms require visual review
+1,6.994650690917247,7.043823085274396,−1,text-run diagnostic; subscripts/transforms require visual review
+1,6.994650690917247,7.043823085274396,−1,text-run diagnostic; subscripts/transforms require visual review
+1,6.994650690917247,7.043823085274396,−1,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.0,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.0,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.0,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.0,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.0,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.00,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.1,text-run diagnostic; subscripts/transforms require visual review
+2,6.8,6.8554200000000005,0.2,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.00,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.00,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.00,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.005913,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.006185,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.006269,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.01,text-run diagnostic; subscripts/transforms require visual review
+3,5.8,5.840774000000001,0.02,text-run diagnostic; subscripts/transforms require visual review
+4,4.8,4.833744,(1445),text-run diagnostic; subscripts/transforms require visual review
+4,4.8,4.833744,(3145),text-run diagnostic; subscripts/transforms require visual review
+4,4.8,4.833744,= 0,text-run diagnostic; subscripts/transforms require visual review
+4,4.8,4.833744,= 1,text-run diagnostic; subscripts/transforms require visual review
+4,4.8,4.833744,cFFLO,text-run diagnostic; subscripts/transforms require visual review
+4,4.8,4.833744,tFFLO,text-run diagnostic; subscripts/transforms require visual review
+4,5.2,5.236556000000001,0.0,text-run diagnostic; subscripts/transforms require visual review
+4,5.2,5.236556000000001,0.0,text-run diagnostic; subscripts/transforms require visual review

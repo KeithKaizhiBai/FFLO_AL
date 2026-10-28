@@ -1,0 +1,11 @@
+{
+  "cold_start": true,
+  "initial_seed_size": 1024,
+  "iteration": 0,
+  "mode": "seed",
+  "partition_strategy": "cost_aware",
+  "run_id": "stagev_acqv2_boundary_support_learned_residual_3d_v1",
+  "selected_batch_size": 1024,
+  "stageiv_data_used_for_training": false,
+  "world_size": 8
+}

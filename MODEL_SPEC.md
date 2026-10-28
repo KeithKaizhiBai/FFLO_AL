@@ -143,10 +143,13 @@ ETA_STRONG = 0.5
 BOUNDARY_MARGIN = 0.08
 ```
 
-Topological labels such as trivial FFLO, topological FFLO, and edge-mode
-presence are a second milestone unless a robust invariant is already exposed by
-the existing solver. They should not block the phase-boundary active-learning
-workflow.
+Topological labels are assigned only after the thermodynamic state is accepted
+and the spectral result is applicable.  In the audited topology runs, a
+full-Brillouin-zone bulk-gap guard and the Pfaffian invariant distinguish
+trusted gapped trivial FFLO (cFFLO) from trusted gapped topological FFLO
+(tFFLO).  Gapless or unresolved results remain explicit reliability states;
+they are not promoted to additional thermodynamic phases.  Topology therefore
+augments, but never overwrites, the thermodynamic phase label.
 
 ## 4. Exact High-Performance Phase-Diagram Pipeline
 

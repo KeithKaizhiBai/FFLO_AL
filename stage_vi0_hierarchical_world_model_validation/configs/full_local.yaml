@@ -1,0 +1,4 @@
+ensemble_members: 5
+epochs: 120
+probe_cloud: 50000
+chunked_inference: true

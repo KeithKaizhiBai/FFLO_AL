@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "evidence": [
+    {
+      "evidence_id": "E-MODEL-SPEC",
+      "run_id": "canonical_model",
+      "dataset": null,
+      "report": "MODEL_SPEC.md",
+      "table_or_figure_source": null,
+      "metric": "Hamiltonian, labels, thresholds, AL-as-scheduler rule",
+      "provenance": "canonical project specification",
+      "scientific_status": "authoritative_definition",
+      "limitations": [],
+      "claims_supported": ["CLM-ORACLE-RELIABILITY"]
+    },
+    {
+      "evidence_id": "E-NUMERICS-SPEC",
+      "run_id": "canonical_numerics",
+      "dataset": null,
+      "report": "docs/NUMERICS_SPEC.md",
+      "table_or_figure_source": null,
+      "metric": "q/Delta safeguards, trust flags, topology hierarchy",
+      "provenance": "canonical numerical specification",
+      "scientific_status": "authoritative_definition",
+      "limitations": [],
+      "claims_supported": ["CLM-ORACLE-RELIABILITY"]
+    },
+    {
+      "evidence_id": "E-ARCHIVE-INTEGRITY",
+      "run_id": "scientific_evidence_archive_20260813",
+      "dataset": "active_learning_scientific_evidence_archive.zip",
+      "report": "manuscript_langgraph/audits/mac_archive_intake_report.md",
+      "table_or_figure_source": "manuscript_langgraph/audits/manuscript_input_manifest.csv",
+      "metric": "2397 ZIP members; 2396/2396 internal file checksums verified",
+      "provenance": "archive SHA-256 8f3402bb7dce090eac3504adff3cf3cfd55ab24564a309c6042d94bf3311027d; Windows source commit 8405b03639043bbc5dc43e154ed7f7465e77cc75",
+      "scientific_status": "provenance_validation",
+      "limitations": ["archive intentionally omits redundant cumulative NPZ checkpoints"],
+      "claims_supported": []
+    },
+    {
+      "evidence_id": "E-STAGEI-COLDSTART",
+      "run_id": "active_boundary_discovery_rankcap_k3_full_loop_v1",
+      "dataset": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz",
+      "report": "docs/StageI_V_Report.md",
+      "table_or_figure_source": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history",
+      "metric": "initial_seed_size=512; initialization=random_grid; final Stage I sample count=6880",
+      "provenance": "frozen evidence archive; dataset SHA-256 2e9ac68e4d891390c78c772b3d57ef8b55b69a82881adc956fa2fb17c2c76cbe",
+      "scientific_status": "supporting_history",
+      "limitations": ["initial design is random_grid, not scrambled Sobol", "Stage II is the authoritative thermodynamic closure endpoint"],
+      "claims_supported": ["CLM-2D-THERMO"]
+    },
+    {
+      "evidence_id": "E-PHASEII-AUDIT",
+      "run_id": "phase2_robust_al_final_202606",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz",
+      "report": "manuscript_langgraph/recovered_artifacts/stageII/phase2_robust_al_final_202606/phase2_robust_al_final_report.md",
+      "table_or_figure_source": "manuscript_langgraph/recovered_artifacts/stageII/phase2_robust_al_final_202606",
+      "metric": "phase_map_change=0.0016287; boundary_coverage_p95=0.0046875; trusted surprise=0/127",
+      "provenance": "frozen evidence archive; endpoint SHA-256 f2d751d0cfae8a3c63da786109903ffd1969a3f90c20a17d92665d8f252e2700; matches the Stage II reproduction manifest",
+      "scientific_status": "frozen_supported",
+      "limitations": ["hard-risk points remain an explicit uncertainty layer"],
+      "claims_supported": ["CLM-2D-THERMO", "CLM-ORACLE-RELIABILITY"]
+    },
+    {
+      "evidence_id": "E-PHASEII-HARD-RISK",
+      "run_id": "hard_risk_boundary_impact_audit_v2",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz",
+      "report": "manuscript_langgraph/recovered_artifacts/stageII/phase2_robust_al_final_202606/appendices/hard_risk_audit_summary.md",
+      "table_or_figure_source": "manuscript_langgraph/recovered_artifacts/stageII/figure_data/hard_risk_boundary_impact_audit_v2",
+      "metric": "129 hard-risk points; publication boundary audit pass; targeted rerun count=0",
+      "provenance": "frozen derived audit tables retained in the scientific evidence archive",
+      "scientific_status": "frozen_supported_with_uncertainty_layer",
+      "limitations": ["hard-risk points remain visible and are not relabeled as fully resolved"],
+      "claims_supported": ["CLM-2D-THERMO", "CLM-ORACLE-RELIABILITY"]
+    },
+    {
+      "evidence_id": "E-STAGEIII-PASS",
+      "run_id": "topology_pass_dataset_iter035_v1",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageIII/topology_pass_dataset_iter035_v1/dataset_iter035_topology_ground_v1.npz",
+      "report": "docs/report_qa/20260620_stageiii_topology_pass_dataset_iter035.md",
+      "table_or_figure_source": "manuscript_langgraph/recovered_artifacts/stageIII/topology_pass_dataset_iter035_v1",
+      "metric": "Pfaffian sign agreement 104/104; CPU/GPU gap difference 7.77e-16; 5357/5567 trusted topology points",
+      "provenance": "offline topology-pass Q&A",
+      "scientific_status": "supporting_validation",
+      "limitations": ["pilot coverage inherited from thermodynamic AL", "not the final topology-boundary convergence run"],
+      "claims_supported": ["CLM-ORACLE-RELIABILITY", "CLM-2D-TOPOLOGY"]
+    },
+    {
+      "evidence_id": "E-STAGEIII-CONVERGENCE",
+      "run_id": "topology_convergence_audit_full_loop_v2",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz",
+      "report": "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2/topology_convergence_audit_report.md",
+      "table_or_figure_source": "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2",
+      "metric": "Decision A; map change <=0.000908; coverage p95=0.006185; surprise <=0.0171; one component",
+      "provenance": "frozen evidence archive; NPZ SHA-256 6583230495ad9e3eb45b0cff034d5525fa443bd43b1b31a754defeaabdfb5ab4; all NPZ arrays match the archived CSV used by the convergence audit",
+      "scientific_status": "frozen_supported_with_caveat",
+      "limitations": ["k=6 sensitivity coverage p95=0.006269", "decision JSON labels source_dataset as NPZ while its recorded SHA-256 is the matching CSV hash; the per-iteration provenance table correctly identifies the CSV", "intermediate cumulative NPZ checkpoints were excluded, but derived convergence tables and original figures are retained"],
+      "claims_supported": ["CLM-2D-TOPOLOGY"]
+    },
+    {
+      "evidence_id": "E-STAGEIV-AUDIT",
+      "run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz",
+      "report": "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/stageiv_3d_return_report.md",
+      "table_or_figure_source": "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local",
+      "metric": "data-complete returned run with 2350 normal, 141 uniform-SC, 4590 FFLO, 3265 trivial, and 1466 topological points; audit Decision D because hidden-slice reference is absent; strict 3D topology convergence not passed",
+      "provenance": "frozen evidence archive; endpoint SHA-256 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842; matches the Stage IV reproduction manifest",
+      "scientific_status": "supported_higher_dimensional_exploration_with_nonconvergence_caveat",
+      "limitations": ["hidden Stage III slice reference absent", "trusted topology surprise above gate", "surface coverage and component stability fail", "lower-mu domain edge contact", "strict 3D topology convergence not passed"],
+      "claims_supported": ["CLM-3D-EXTENSION"]
+    },
+    {
+      "evidence_id": "E-STAGEIV-MU-SLICE-AUDIT",
+      "run_id": "stageiv_mu_slice_boundary_audit_local",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz",
+      "report": "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_mu_slice_boundary_audit_local/stageiv_mu_slice_boundary_audit_report.md",
+      "table_or_figure_source": "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_mu_slice_boundary_audit_local/tables",
+      "metric": "20 narrow fixed-mu slices; local normal/SC bracket support present; broad-bin artifact classified as partial",
+      "provenance": "report-only audit of the frozen Stage IV endpoint",
+      "scientific_status": "supporting_figure_validation_with_caveat",
+      "limitations": ["smooth curves are diagnostic only", "wide bins are projection diagnostics"],
+      "claims_supported": ["CLM-3D-EXTENSION"]
+    },
+    {
+      "evidence_id": "E-STAGEIV-CURVE-FIX",
+      "run_id": "stageiv_curve_extraction_fix_local",
+      "dataset": "manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz",
+      "report": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/reports_archive/stage_iv/stageiv_curve_extraction_fix_local/stageiv_curve_extraction_fix_report.md",
+      "table_or_figure_source": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/reports_archive/stage_iv/stageiv_curve_extraction_fix_local/tables",
+      "metric": "144/1080 unsupported old smooth-curve segments removed; unsupported arc fraction=0.133333; convergence status unchanged",
+      "provenance": "frozen report-only derived artifact; summary SHA-256 f9ec365069fd198d0a7bd53c77962836e896900fb3e6e9714114ff811eb7ede6",
+      "scientific_status": "support_restricted_figure_source_with_caveat",
+      "limitations": ["no label change", "no exact calculation", "support-restricted curves remain diagnostics", "strict 3D convergence remains not passed"],
+      "claims_supported": ["CLM-3D-EXTENSION"]
+    },
+    {
+      "evidence_id": "E-STAGEV-MATCHED",
+      "run_id": "stagev_v3_v4_matched_offline_audit",
+      "dataset": "frozen V3/V4 downloads",
+      "report": "output/pdf/stagev_v3_v4_matched_audit/stagev_v3_v4_matched_audit_report.md",
+      "table_or_figure_source": "output/pdf/stagev_v3_v4_matched_audit/tables",
+      "metric": "V3 coverage p95=0.0189256; V4=0.0210322; V3 surprise=0.118925; V4=0.092456",
+      "provenance": "matched offline audit",
+      "scientific_status": "negative_comparative_result",
+      "limitations": ["neither run passes publication gates", "four V4 candidates unvalidated"],
+      "claims_supported": ["CLM-LEARNED-ACQUISITION"]
+    },
+    {
+      "evidence_id": "E-STAGEVI0",
+      "run_id": "stage_vi0_hierarchical_world_model_validation",
+      "dataset": "frozen V3/V4 only",
+      "report": "output/pdf/stage_vi0_hierarchical_world_model_validation/hierarchical_world_model_validation_report.md",
+      "table_or_figure_source": "output/pdf/stage_vi0_hierarchical_world_model_validation/tables",
+      "metric": "Decision C",
+      "provenance": "frozen offline validation",
+      "scientific_status": "incomplete_method_validation",
+      "limitations": ["uncertainty non-monotonic", "spectral level weak"],
+      "claims_supported": ["CLM-GROUNDUP-WORLD-MODEL"]
+    },
+    {
+      "evidence_id": "E-STAGEVI0-2",
+      "run_id": "stage_vi0_2_hierarchical_world_model_v2",
+      "dataset": "frozen V3/V4 only",
+      "report": "output/pdf/stage_vi0_2_hierarchical_world_model_v2/hierarchical_world_model_v2_report.md",
+      "table_or_figure_source": "output/pdf/stage_vi0_2_hierarchical_world_model_v2/tables",
+      "metric": "Decision D; spectral fingerprint unavailable",
+      "provenance": "frozen offline validation",
+      "scientific_status": "blocked_missing_artifact",
+      "limitations": ["log-gap-only ablation is not spectral redesign"],
+      "claims_supported": ["CLM-GROUNDUP-WORLD-MODEL"]
+    }
+  ]
+}

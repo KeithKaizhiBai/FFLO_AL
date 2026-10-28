@@ -1,0 +1,19 @@
+schema_version: 1
+benchmarks:
+  fig1_engine_v1:
+    directory: ../../fig1_engine
+    gate: {id: GATE_FIG1_ENGINE_V1_APPROVAL, state: HUMAN_WAIT}
+    physics_recomputed: false
+    sha256:
+      fig1_engine_v1.svg: 180666d303434fb0718063fbbc9afc81ba8d33bb2ae1fbe8bc145841602a880a
+      fig1_engine_v1.pdf: c83b3295b512209f6b5493fd3a5dfc82ac5c6a113e25d010dc12d5b0c5fe62d0
+      fig1_engine_v1.png: a4363435b8f6106ced9263a93a097b9ace8d650a20691e03eeefdc984efea663
+    validation:
+      generic: 45/45_pass
+      figure_specific: 13/13_pass
+      unit_tests: 18/18_pass
+    known_visual_limitations:
+      - landscape_reads_as_embedded_plot
+      - oracle_free_energy_not_dominant_enough
+      - observation_reads_as_checklist
+      - arrows_read_as_engineered_connectors

@@ -1,0 +1,24 @@
+{
+  "gate_id": "GATE_EXPANDED_PUBLIC_MANUSCRIPT_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "run_id": "active_learning_prl_scientific_depth_v5",
+  "parent_run_id": "active_learning_public_reproducible_v4",
+  "resume_command": "python3 manuscript_langgraph/scripts/run_scientific_depth_revision.py --resume-after-human-review",
+  "scientific_freeze": false,
+  "publication_freeze": false,
+  "submission_ready": false,
+  "workflow_status": "human_review_wait",
+  "selected_layout": "A",
+  "manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_scientific_depth_v5/manuscript_scientific_depth_candidate.pdf",
+  "fallback_layout_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_scientific_depth_v5/manuscript_scientific_depth_fallback.pdf",
+  "supplement_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_scientific_depth_v5/supplement_scientific_depth_candidate.pdf",
+  "review_package_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_scientific_depth_v5/compiled_scientific_depth_review_package.pdf",
+  "main_word_counts": {
+    "abstract": 133,
+    "introduction": 473,
+    "results": 1122,
+    "discussion": 302,
+    "total": 2030
+  },
+  "main_words_added": 553
+}

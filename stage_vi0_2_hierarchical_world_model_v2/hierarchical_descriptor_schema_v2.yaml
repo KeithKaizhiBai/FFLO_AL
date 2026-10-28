@@ -1,0 +1,12 @@
+schema_version: 2
+x: [kBT_over_t, JA_over_t, mu_over_t]
+level1: {classification: p_SC, continuous: [Delta_opt, deltaF_NS]}
+level2: {conditioning: trusted_SC, continuous: [abs_q], removed_mandatory: [deltaF_UF]}
+level3:
+  conditioning: trusted_SC_and_spectral_available
+  spectral_fingerprint: {status: unavailable_in_frozen_V3_V4}
+  low_energy_features: {status: unavailable_in_frozen_V3_V4}
+  optional_continuous: [log_gap]
+  removed_mandatory: [k_gap]
+level4: {conditioning: trusted_gapped_SC, continuous: [P0, Ppi, Pf_margin], evaluation_only: [Z2]}
+forbidden_training_fields: [phase_label, topology_label, proposal_source, action_family, reward, iteration, graph_node_id]

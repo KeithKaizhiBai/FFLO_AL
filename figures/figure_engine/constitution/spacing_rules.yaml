@@ -1,0 +1,34 @@
+schema_version: 1
+rule_set: spacing_rules
+authority: canonical
+
+base_unit_px: 8
+rhythm_px:
+  micro: 4
+  small: 8
+  normal: 16
+  card_minimum: 20
+  card_preferred: 24
+  card_relaxed: 32
+  section: 40
+
+internal_padding_px:
+  hard_minimum: 14
+  preferred: 24
+  compact_annotation: 8
+
+clearance_px:
+  independent_cards_minimum: 20
+  text_to_border_minimum: 4
+  text_to_plot_minimum: 6
+  label_to_label_minimum: 10
+  label_to_leader_minimum: 5
+  route_to_card_text_minimum: 6
+  route_endpoint_outside_card: [4, 8]
+
+rules:
+  snap_preferred_to_base_unit: true
+  repeated_gutters_must_match_within_px: 2
+  exceptions_require_contract_justification: true
+  no_negative_gap_for_independent_objects: true
+

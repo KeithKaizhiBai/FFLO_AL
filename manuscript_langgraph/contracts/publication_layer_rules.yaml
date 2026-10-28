@@ -1,0 +1,69 @@
+schema_version: 1
+profile_id: PUBLIC_PHYSICS_NARRATIVE_AND_REPRODUCIBLE_METHODS_V1
+publication_visibility_router:
+  roles:
+  - physical_result
+  - physical_interpretation
+  - method_definition
+  - efficiency
+  - physical_limitation
+  - numerical_reproducibility
+  - operational_diagnostic
+  - internal_governance
+  defaults:
+    physical_result:
+    - main_text
+    physical_interpretation:
+    - main_text
+    efficiency:
+    - main_text
+    - supplement
+    physical_limitation:
+    - main_text
+    - caption
+    method_definition:
+    - concise_main
+    - supplement
+    numerical_reproducibility:
+    - supplement
+    operational_diagnostic:
+    - supplement
+    internal_governance:
+    - trace_only
+public_narrative_adapter:
+  warning_terms:
+  - frozen endpoint
+  - registered criterion
+  - registered threshold
+  - registered gate
+  - configured audit
+  - Decision A
+  - gate closed
+  - gate passed
+  - artifact
+  - claim registry
+  - evidence registry
+  - human gate
+  - production configuration
+  - archived contour
+  - hard-risk layer
+  semantic_translation_required: true
+main_text_information_budget_gate:
+  headline_counts_per_result: 1
+  unexplained_numbers_soft_warning: 3
+  operational_thresholds: supplement_by_default
+  threshold_comparisons: prohibited_unless_physically_interpretable
+efficiency_evidence_node:
+  record_and_coordinate_counts_separate: true
+  wall_time_speedup_requires_matched_baseline: true
+method_evidence_ingestion:
+  authority_order:
+  - source_code
+  - config
+  - run_manifest
+  - validated_report
+  - existing_prose
+  conflict_policy: record_not_merge
+supplement_reproducibility_gate:
+  critical_missing_item_status: BLOCKED
+  private_spec_dependency_forbidden: true

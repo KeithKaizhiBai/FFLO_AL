@@ -1,0 +1,43 @@
+{
+  "status": "PASS_WITH_HUMAN_READABILITY_CAVEAT",
+  "figure_modes": {
+    "1": "figure*",
+    "2": "figure",
+    "3": "figure",
+    "4": "figure"
+  },
+  "selected_layout": "barrier",
+  "compiled_metrics": {
+    "page_count": 6,
+    "reference_pages": [
+      2,
+      4,
+      4,
+      4
+    ],
+    "figure_pages": [
+      3,
+      4,
+      4,
+      5
+    ],
+    "page_distances": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "max_consecutive_figure_pages": 3,
+    "all_figures_after_first_discussion": true,
+    "float_warnings": 0,
+    "overfull_boxes": 0,
+    "undefined_references": 0,
+    "pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/tmp/pdfs/scientific_depth_single_column_v6/barrier/barrier.pdf"
+  },
+  "scientific_text_changed": false,
+  "captions_changed": false,
+  "references_changed": false,
+  "supplement_changed": false,
+  "frozen_figures_changed": false,
+  "direct_scale_warning": true
+}

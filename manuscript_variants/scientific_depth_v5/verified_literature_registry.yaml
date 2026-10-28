@@ -1,0 +1,919 @@
+{
+  "schema_version": 2,
+  "retrieval_date": "2026-08-28",
+  "target_reference_count": 50,
+  "source_count": 50,
+  "source_policy": "tiered: core claims require primary/authoritative support; contextual survey references may enter with verified Crossref DOI metadata",
+  "verification_tier_counts": {
+    "T1_bibliographic_crosscheck": 1,
+    "T1_core_claim_authority": 11,
+    "T2_crossref_doi_metadata": 38
+  },
+  "forbidden": [
+    "search-snippet-only metadata",
+    "uncited bibliography padding",
+    "external evidence for project Results"
+  ],
+  "sources": [
+    {
+      "key": "LarkinOvchinnikov1965",
+      "topic": "fflo_foundations",
+      "authors": "A. I. Larkin and Yu. N. Ovchinnikov",
+      "title": "Nonuniform State of Superconductors",
+      "journal": "Soviet Physics JETP",
+      "volume": "20",
+      "pages": "762--769",
+      "year": 1965,
+      "doi": "",
+      "official_url": "https://jetp.ras.ru/",
+      "source_type": "primary",
+      "verification_tier": "T1_bibliographic_crosscheck",
+      "supports": [
+        "foundational finite-momentum and spatially modulated superconductivity"
+      ],
+      "verification": "bibliographic metadata cross-checked against the authoritative FFLO review and publisher reference lists"
+    },
+    {
+      "key": "FuldeFerrell1964",
+      "topic": "fflo_foundations",
+      "authors": "Peter Fulde and Richard A. Ferrell",
+      "title": "Superconductivity in a Strong Spin-Exchange Field",
+      "journal": "Physical Review",
+      "volume": "135",
+      "pages": "A550--A563",
+      "year": 1964,
+      "doi": "10.1103/physrev.135.a550",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRev.135.A550",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "fflo foundations"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "CasalbuoniNardulli2004",
+      "topic": "fflo_reviews",
+      "authors": "Roberto Casalbuoni and Giuseppe Nardulli",
+      "title": "Inhomogeneous superconductivity in condensed matter and QCD",
+      "journal": "Reviews of Modern Physics",
+      "volume": "76",
+      "pages": "263--320",
+      "year": 2004,
+      "doi": "10.1103/revmodphys.76.263",
+      "official_url": "https://link.aps.org/doi/10.1103/RevModPhys.76.263",
+      "source_type": "authoritative_review",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "fflo reviews"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "MatsudaShimahara2007",
+      "topic": "fflo_reviews",
+      "authors": "Yuji Matsuda and Hiroshi Shimahara",
+      "title": "Fulde–Ferrell–Larkin–Ovchinnikov State in Heavy Fermion Superconductors",
+      "journal": "Journal of the Physical Society of Japan",
+      "volume": "76",
+      "pages": "051005",
+      "year": 2007,
+      "doi": "10.1143/jpsj.76.051005",
+      "official_url": "https://journals.jps.jp/doi/10.1143/JPSJ.76.051005",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo reviews"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "KinnunenEtAl2018",
+      "topic": "fflo_reviews",
+      "authors": "Jami J Kinnunen and Jildou E Baarsma and Jani-Petri Martikainen and Päivi Törmä",
+      "title": "The Fulde–Ferrell–Larkin–Ovchinnikov state for ultracold fermions in lattice and harmonic potentials: a review",
+      "journal": "Reports on Progress in Physics",
+      "volume": "81",
+      "pages": "046401",
+      "year": 2018,
+      "doi": "10.1088/1361-6633/aaa4ad",
+      "official_url": "https://iopscience.iop.org/article/10.1088/1361-6633/aaa4ad",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo reviews"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "RadovanEtAl2003",
+      "topic": "fflo_experiments",
+      "authors": "H. A. Radovan and N. A. Fortune and T. P. Murphy and S. T. Hannahs and E. C. Palm and S. W. Tozer and D. Hall",
+      "title": "Magnetic enhancement of superconductivity from electron spin domains",
+      "journal": "Nature",
+      "volume": "425",
+      "pages": "51--55",
+      "year": 2003,
+      "doi": "10.1038/nature01842",
+      "official_url": "https://www.nature.com/articles/nature01842",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo experiments"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "BianchiEtAl2003",
+      "topic": "fflo_experiments",
+      "authors": "A. Bianchi and R. Movshovich and C. Capan and P. G. Pagliuso and J. L. Sarrao",
+      "title": "Possible Fulde-Ferrell-Larkin-Ovchinnikov Superconducting State in CeCoIn5",
+      "journal": "Physical Review Letters",
+      "volume": "91",
+      "pages": "187004",
+      "year": 2003,
+      "doi": "10.1103/physrevlett.91.187004",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevLett.91.187004",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo experiments"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "KenzelmannEtAl2008",
+      "topic": "fflo_experiments",
+      "authors": "M. Kenzelmann and Th. Strässle and C. Niedermayer and M. Sigrist and B. Padmanabhan and M. Zolliker and A. D. Bianchi and R. Movshovich and E. D. Bauer and J. L. Sarrao and J. D. Thompson",
+      "title": "Coupled Superconducting and Magnetic Order in CeCoIn5",
+      "journal": "Science",
+      "volume": "321",
+      "pages": "1652--1654",
+      "year": 2008,
+      "doi": "10.1126/science.1161818",
+      "official_url": "https://www.science.org/doi/10.1126/science.1161818",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo experiments"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "LortzEtAl2007",
+      "topic": "fflo_experiments",
+      "authors": "R. Lortz and Y. Wang and A. Demuer and P. H. M. Böttger and B. Bergk and G. Zwicknagl and Y. Nakazawa and J. Wosnitza",
+      "title": "Calorimetric Evidence for a Fulde-Ferrell-Larkin-Ovchinnikov Superconducting State in the Layered Organic Superconductorκ−(BEDT−TTF)2Cu(NCS)2",
+      "journal": "Physical Review Letters",
+      "volume": "99",
+      "pages": "187002",
+      "year": 2007,
+      "doi": "10.1103/physrevlett.99.187002",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevLett.99.187002",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo experiments"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "MayaffreEtAl2014",
+      "topic": "fflo_experiments",
+      "authors": "H. Mayaffre and S. Krämer and M. Horvatić and C. Berthier and K. Miyagawa and K. Kanoda and V. F. Mitrović",
+      "title": "Evidence of Andreev bound states as a hallmark of the FFLO phase in κ-(BEDT-TTF)2Cu(NCS)2",
+      "journal": "Nature Physics",
+      "volume": "10",
+      "pages": "928--932",
+      "year": 2014,
+      "doi": "10.1038/nphys3121",
+      "official_url": "https://www.nature.com/articles/nphys3121",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "fflo experiments"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "LiaoEtAl2010",
+      "topic": "imbalanced_fermi_gases",
+      "authors": "Yean-an Liao and Ann Sophie C. Rittner and Tobias Paprotta and Wenhui Li and Guthrie B. Partridge and Randall G. Hulet and Stefan K. Baur and Erich J. Mueller",
+      "title": "Spin-imbalance in a one-dimensional Fermi gas",
+      "journal": "Nature",
+      "volume": "467",
+      "pages": "567--569",
+      "year": 2010,
+      "doi": "10.1038/nature09393",
+      "official_url": "https://www.nature.com/articles/nature09393",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "imbalanced fermi gases"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "ZwierleinEtAl2006",
+      "topic": "imbalanced_fermi_gases",
+      "authors": "Martin W. Zwierlein and André Schirotzek and Christian H. Schunck and Wolfgang Ketterle",
+      "title": "Fermionic Superfluidity with Imbalanced Spin Populations",
+      "journal": "Science",
+      "volume": "311",
+      "pages": "492--496",
+      "year": 2006,
+      "doi": "10.1126/science.1122318",
+      "official_url": "https://www.science.org/doi/10.1126/science.1122318",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "imbalanced fermi gases"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "PartridgeEtAl2006",
+      "topic": "imbalanced_fermi_gases",
+      "authors": "Guthrie B. Partridge and Wenhui Li and Ramsey I. Kamar and Yean-an Liao and Randall G. Hulet",
+      "title": "Pairing and Phase Separation in a Polarized Fermi Gas",
+      "journal": "Science",
+      "volume": "311",
+      "pages": "503--505",
+      "year": 2006,
+      "doi": "10.1126/science.1122876",
+      "official_url": "https://www.science.org/doi/10.1126/science.1122876",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "imbalanced fermi gases"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "SheehyRadzihovsky2007",
+      "topic": "imbalanced_fermi_gases",
+      "authors": "Daniel E. Sheehy and Leo Radzihovsky",
+      "title": "BEC–BCS crossover, phase transitions and phase separation in polarized resonantly-paired superfluids",
+      "journal": "Annals of Physics",
+      "volume": "322",
+      "pages": "1790--1924",
+      "year": 2007,
+      "doi": "10.1016/j.aop.2006.09.009",
+      "official_url": "https://linkinghub.elsevier.com/retrieve/pii/S0003491606002041",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "imbalanced fermi gases"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "RadzihovskySheehy2010",
+      "topic": "imbalanced_fermi_gases",
+      "authors": "Leo Radzihovsky and Daniel E Sheehy",
+      "title": "Imbalanced Feshbach-resonant Fermi gases",
+      "journal": "Reports on Progress in Physics",
+      "volume": "73",
+      "pages": "076501",
+      "year": 2010,
+      "doi": "10.1088/0034-4885/73/7/076501",
+      "official_url": "https://iopscience.iop.org/article/10.1088/0034-4885/73/7/076501",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "imbalanced fermi gases"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "SmejkalSinovaJungwirth2022",
+      "topic": "altermagnetism",
+      "authors": "Libor Šmejkal and Jairo Sinova and Tomas Jungwirth",
+      "title": "Emerging Research Landscape of Altermagnetism",
+      "journal": "Physical Review X",
+      "volume": "12",
+      "pages": "040501",
+      "year": 2022,
+      "doi": "10.1103/physrevx.12.040501",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevX.12.040501",
+      "source_type": "authoritative_perspective",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "altermagnetism"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "SmejkalEtAl2022",
+      "topic": "altermagnetism",
+      "authors": "Libor Šmejkal and Jairo Sinova and Tomas Jungwirth",
+      "title": "Beyond Conventional Ferromagnetism and Antiferromagnetism: A Phase with Nonrelativistic Spin and Crystal Rotation Symmetry",
+      "journal": "Physical Review X",
+      "volume": "12",
+      "pages": "031042",
+      "year": 2022,
+      "doi": "10.1103/physrevx.12.031042",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevX.12.031042",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "altermagnetism"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "Mazin2022",
+      "topic": "altermagnetism",
+      "authors": "Igor Mazin",
+      "title": "Editorial: Altermagnetism—A New Punch Line of Fundamental Magnetism",
+      "journal": "Physical Review X",
+      "volume": "12",
+      "pages": "040002",
+      "year": 2022,
+      "doi": "10.1103/physrevx.12.040002",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevX.12.040002",
+      "source_type": "authoritative_perspective",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "altermagnetism"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "SmejkalEtAl2020",
+      "topic": "altermagnetism",
+      "authors": "Libor Šmejkal and Rafael González-Hernández and T. Jungwirth and J. Sinova",
+      "title": "Crystal time-reversal symmetry breaking and spontaneous Hall effect in collinear antiferromagnets",
+      "journal": "Science Advances",
+      "volume": "6",
+      "pages": "eaaz8809",
+      "year": 2020,
+      "doi": "10.1126/sciadv.aaz8809",
+      "official_url": "https://www.science.org/doi/10.1126/sciadv.aaz8809",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "altermagnetism"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "ChakrabortyBlackSchaffer2024",
+      "topic": "altermagnetic_superconductivity",
+      "authors": "Debmalya Chakraborty and Annica M. Black-Schaffer",
+      "title": "Zero-field finite-momentum and field-induced superconductivity in altermagnets",
+      "journal": "Physical Review B",
+      "volume": "110",
+      "pages": "L060508",
+      "year": 2024,
+      "doi": "10.1103/physrevb.110.l060508",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.110.L060508",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "altermagnetic superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "HongParkKim2025",
+      "topic": "altermagnetic_superconductivity",
+      "authors": "SeungBeom Hong and Moon Jip Park and Kyoung-Min Kim",
+      "title": "Unconventional p-wave and Finite-Momentum Superconductivity Induced by Altermagnetism through the Formation of Bogoliubov Fermi Surface",
+      "journal": "Physical Review B",
+      "volume": "111",
+      "pages": "054501",
+      "year": 2025,
+      "doi": "10.1103/physrevb.111.054501",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.111.054501",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "altermagnetic superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "ZhuEtAl2023",
+      "topic": "altermagnetic_topological_superconductivity",
+      "authors": "Di Zhu and Zheng-Yang Zhuang and Zhigang Wu and Zhongbo Yan",
+      "title": "Topological superconductivity in two-dimensional altermagnetic metals",
+      "journal": "Physical Review B",
+      "volume": "108",
+      "pages": "184505",
+      "year": 2023,
+      "doi": "10.1103/physrevb.108.184505",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.108.184505",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "altermagnetic topological superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "GhorashiHughesCano2024",
+      "topic": "altermagnetic_topological_superconductivity",
+      "authors": "Sayed Ali Akbar Ghorashi and Taylor L. Hughes and Jennifer Cano",
+      "title": "Altermagnetic Routes to Majorana Modes in Zero Net Magnetization",
+      "journal": "Physical Review Letters",
+      "volume": "133",
+      "pages": "106601",
+      "year": 2024,
+      "doi": "10.1103/physrevlett.133.106601",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevLett.133.106601",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "altermagnetic topological superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "BoseVadnaisParamekanti2024",
+      "topic": "altermagnetic_superconductivity",
+      "authors": "Anjishnu Bose and Samuel Vadnais and Arun Paramekanti",
+      "title": "Altermagnetism and Superconductivity in a Multiorbital t-J Model",
+      "journal": "Physical Review B",
+      "volume": "110",
+      "pages": "205120",
+      "year": 2024,
+      "doi": "10.1103/physrevb.110.205120",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.110.205120",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "altermagnetic superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "ZhangYi2013",
+      "topic": "finite_momentum_topology",
+      "authors": "Wei Zhang and Wei Yi",
+      "title": "Topological Fulde–Ferrell–Larkin–Ovchinnikov states in spin–orbit-coupled Fermi gases",
+      "journal": "Nature Communications",
+      "volume": "4",
+      "pages": "2711",
+      "year": 2013,
+      "doi": "10.1038/ncomms3711",
+      "official_url": "https://www.nature.com/articles/ncomms3711",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "finite momentum topology"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "QuEtAl2013",
+      "topic": "finite_momentum_topology",
+      "authors": "Chunlei Qu and Zhen Zheng and Ming Gong and Yong Xu and Li Mao and Xubo Zou and Guangcan Guo and Chuanwei Zhang",
+      "title": "Topological superfluids with finite-momentum pairing and Majorana fermions",
+      "journal": "Nature Communications",
+      "volume": "4",
+      "pages": "2710",
+      "year": 2013,
+      "doi": "10.1038/ncomms3710",
+      "official_url": "https://www.nature.com/articles/ncomms3710",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "finite momentum topology"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "CaoEtAl2014",
+      "topic": "finite_momentum_topology",
+      "authors": "Ye Cao and Shu-Hao Zou and Xia-Ji Liu and Su Yi and Gui-Lu Long and Hui Hu",
+      "title": "Gapless Topological Fulde-Ferrell Superfluidity in Spin-Orbit Coupled Fermi Gases",
+      "journal": "Physical Review Letters",
+      "volume": "113",
+      "pages": "115302",
+      "year": 2014,
+      "doi": "10.1103/physrevlett.113.115302",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevLett.113.115302",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "finite momentum topology"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "Kitaev2001",
+      "topic": "class_d_topology",
+      "authors": "A Yu Kitaev",
+      "title": "Unpaired Majorana fermions in quantum wires",
+      "journal": "Physics-Uspekhi",
+      "volume": "44",
+      "pages": "131--136",
+      "year": 2001,
+      "doi": "10.1070/1063-7869/44/10s/s29",
+      "official_url": "https://www.mathnet.ru/eng/ufn5648",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "class d topology"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "BudichArdonne2013",
+      "topic": "class_d_topology",
+      "authors": "Jan Carl Budich and Eddy Ardonne",
+      "title": "Equivalent topological invariants for one-dimensional Majorana wires in symmetry class D",
+      "journal": "Physical Review B",
+      "volume": "88",
+      "pages": "075419",
+      "year": 2013,
+      "doi": "10.1103/physrevb.88.075419",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.88.075419",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "class d topology"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "ReadGreen2000",
+      "topic": "topological_superconductivity",
+      "authors": "N. Read and Dmitry Green",
+      "title": "Paired states of fermions in two dimensions with breaking of parity and time-reversal symmetries and the fractional quantum Hall effect",
+      "journal": "Physical Review B",
+      "volume": "61",
+      "pages": "10267--10297",
+      "year": 2000,
+      "doi": "10.1103/physrevb.61.10267",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.61.10267",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "LutchynSauDasSarma2010",
+      "topic": "majorana_platforms",
+      "authors": "Roman M. Lutchyn and Jay D. Sau and S. Das Sarma",
+      "title": "Majorana Fermions and a Topological Phase Transition in Semiconductor-Superconductor Heterostructures",
+      "journal": "Physical Review Letters",
+      "volume": "105",
+      "pages": "077001",
+      "year": 2010,
+      "doi": "10.1103/physrevlett.105.077001",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevLett.105.077001",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "majorana platforms"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "OregRefaelVonOppen2010",
+      "topic": "majorana_platforms",
+      "authors": "Yuval Oreg and Gil Refael and Felix von Oppen",
+      "title": "Helical Liquids and Majorana Bound States in Quantum Wires",
+      "journal": "Physical Review Letters",
+      "volume": "105",
+      "pages": "177002",
+      "year": 2010,
+      "doi": "10.1103/physrevlett.105.177002",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevLett.105.177002",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "majorana platforms"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "Alicea2012",
+      "topic": "topological_superconductivity",
+      "authors": "Jason Alicea",
+      "title": "New directions in the pursuit of Majorana fermions in solid state systems",
+      "journal": "Reports on Progress in Physics",
+      "volume": "75",
+      "pages": "076501",
+      "year": 2012,
+      "doi": "10.1088/0034-4885/75/7/076501",
+      "official_url": "https://iopscience.iop.org/article/10.1088/0034-4885/75/7/076501",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "Beenakker2013",
+      "topic": "topological_superconductivity",
+      "authors": "C.W.J. Beenakker",
+      "title": "Search for Majorana Fermions in Superconductors",
+      "journal": "Annual Review of Condensed Matter Physics",
+      "volume": "4",
+      "pages": "113--136",
+      "year": 2013,
+      "doi": "10.1146/annurev-conmatphys-030212-184337",
+      "official_url": "https://www.annualreviews.org/doi/10.1146/annurev-conmatphys-030212-184337",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "SatoAndo2017",
+      "topic": "topological_superconductivity",
+      "authors": "Masatoshi Sato and Yoichi Ando",
+      "title": "Topological superconductors: a review",
+      "journal": "Reports on Progress in Physics",
+      "volume": "80",
+      "pages": "076501",
+      "year": 2017,
+      "doi": "10.1088/1361-6633/aa6ac7",
+      "official_url": "https://iopscience.iop.org/article/10.1088/1361-6633/aa6ac7",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological superconductivity"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "QiZhang2011",
+      "topic": "topological_phases",
+      "authors": "Xiao-Liang Qi and Shou-Cheng Zhang",
+      "title": "Topological insulators and superconductors",
+      "journal": "Reviews of Modern Physics",
+      "volume": "83",
+      "pages": "1057--1110",
+      "year": 2011,
+      "doi": "10.1103/revmodphys.83.1057",
+      "official_url": "https://link.aps.org/doi/10.1103/RevModPhys.83.1057",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological phases"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "SchnyderEtAl2008",
+      "topic": "topological_classification",
+      "authors": "Andreas P. Schnyder and Shinsei Ryu and Akira Furusaki and Andreas W. W. Ludwig",
+      "title": "Classification of topological insulators and superconductors in three spatial dimensions",
+      "journal": "Physical Review B",
+      "volume": "78",
+      "pages": "195125",
+      "year": 2008,
+      "doi": "10.1103/physrevb.78.195125",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.78.195125",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological classification"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "RyuEtAl2010",
+      "topic": "topological_classification",
+      "authors": "Shinsei Ryu and Andreas P Schnyder and Akira Furusaki and Andreas W W Ludwig",
+      "title": "Topological insulators and superconductors: tenfold way and dimensional hierarchy",
+      "journal": "New Journal of Physics",
+      "volume": "12",
+      "pages": "065010",
+      "year": 2010,
+      "doi": "10.1088/1367-2630/12/6/065010",
+      "official_url": "https://iopscience.iop.org/article/10.1088/1367-2630/12/6/065010",
+      "source_type": "primary",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "topological classification"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "TerayamaEtAl2019",
+      "topic": "active_learning_phase_diagrams",
+      "authors": "Kei Terayama and Ryo Tamura and Yoshitaro Nose and Hidenori Hiramatsu and Hideo Hosono and Yasushi Okuno and Koji Tsuda",
+      "title": "Efficient construction method for phase diagrams using uncertainty sampling",
+      "journal": "Physical Review Materials",
+      "volume": "3",
+      "pages": "033802",
+      "year": 2019,
+      "doi": "10.1103/physrevmaterials.3.033802",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevMaterials.3.033802",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "active learning phase diagrams"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "DaiBrussGlotzer2020",
+      "topic": "active_learning_phase_diagrams",
+      "authors": "Chengyu Dai and Isaac R. Bruss and Sharon C. Glotzer",
+      "title": "Efficient Phase Diagram Sampling by Active Learning",
+      "journal": "The Journal of Physical Chemistry B",
+      "volume": "124",
+      "pages": "1275--1284",
+      "year": 2020,
+      "doi": "10.1021/acs.jpcb.9b09202",
+      "official_url": "https://pubs.acs.org/doi/10.1021/acs.jpcb.9b09202",
+      "source_type": "primary",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "active learning phase diagrams"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "LookmanEtAl2019",
+      "topic": "active_learning_materials",
+      "authors": "Turab Lookman and Prasanna V. Balachandran and Dezhen Xue and Ruihao Yuan",
+      "title": "Active learning in materials science with emphasis on adaptive sampling using uncertainties for targeted design",
+      "journal": "npj Computational Materials",
+      "volume": "5",
+      "pages": "21",
+      "year": 2019,
+      "doi": "10.1038/s41524-019-0153-8",
+      "official_url": "https://www.nature.com/articles/s41524-019-0153-8",
+      "source_type": "authoritative_review",
+      "verification_tier": "T1_core_claim_authority",
+      "supports": [
+        "active learning materials"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "CohnAtlasLadner1994",
+      "topic": "active_learning_foundations",
+      "authors": "David Cohn and Les Atlas and Richard Ladner",
+      "title": "Improving generalization with active learning",
+      "journal": "Machine Learning",
+      "volume": "15",
+      "pages": "201--221",
+      "year": 1994,
+      "doi": "10.1007/bf00993277",
+      "official_url": "http://link.springer.com/10.1007/BF00993277",
+      "source_type": "primary_methods",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "active learning foundations"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "MacKay1992",
+      "topic": "active_learning_foundations",
+      "authors": "David J. C. MacKay",
+      "title": "Information-Based Objective Functions for Active Data Selection",
+      "journal": "Neural Computation",
+      "volume": "4",
+      "pages": "590--604",
+      "year": 1992,
+      "doi": "10.1162/neco.1992.4.4.590",
+      "official_url": "https://direct.mit.edu/neco/article/4/4/590-604/5648",
+      "source_type": "primary_methods",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "active learning foundations"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "ShahriariEtAl2016",
+      "topic": "bayesian_optimization",
+      "authors": "Bobak Shahriari and Kevin Swersky and Ziyu Wang and Ryan P. Adams and Nando de Freitas",
+      "title": "Taking the Human Out of the Loop: A Review of Bayesian Optimization",
+      "journal": "Proceedings of the IEEE",
+      "volume": "104",
+      "pages": "148--175",
+      "year": 2016,
+      "doi": "10.1109/jproc.2015.2494218",
+      "official_url": "https://ieeexplore.ieee.org/document/7352306/",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "bayesian optimization"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "TranUlissi2018",
+      "topic": "active_learning_chemistry",
+      "authors": "Kevin Tran and Zachary W. Ulissi",
+      "title": "Active learning across intermetallics to guide discovery of electrocatalysts for CO2 reduction and H2 evolution",
+      "journal": "Nature Catalysis",
+      "volume": "1",
+      "pages": "696--703",
+      "year": 2018,
+      "doi": "10.1038/s41929-018-0142-1",
+      "official_url": "https://www.nature.com/articles/s41929-018-0142-1",
+      "source_type": "primary_methods",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "active learning chemistry"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "PodryabinkinShapeev2017",
+      "topic": "active_learning_potentials",
+      "authors": "Evgeny V. Podryabinkin and Alexander V. Shapeev",
+      "title": "Active learning of linearly parametrized interatomic potentials",
+      "journal": "Computational Materials Science",
+      "volume": "140",
+      "pages": "171--180",
+      "year": 2017,
+      "doi": "10.1016/j.commatsci.2017.08.031",
+      "official_url": "https://linkinghub.elsevier.com/retrieve/pii/S0927025617304536",
+      "source_type": "primary_methods",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "active learning potentials"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "JinnouchiEtAl2019",
+      "topic": "active_learning_potentials",
+      "authors": "Ryosuke Jinnouchi and Ferenc Karsai and Georg Kresse",
+      "title": "On-the-fly machine learning force field generation: Application to melting points",
+      "journal": "Physical Review B",
+      "volume": "100",
+      "pages": "014105",
+      "year": 2019,
+      "doi": "10.1103/physrevb.100.014105",
+      "official_url": "https://link.aps.org/doi/10.1103/PhysRevB.100.014105",
+      "source_type": "primary_methods",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "active learning potentials"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "VandermauseEtAl2020",
+      "topic": "active_learning_potentials",
+      "authors": "Jonathan Vandermause and Steven B. Torrisi and Simon Batzner and Yu Xie and Lixin Sun and Alexie M. Kolpak and Boris Kozinsky",
+      "title": "On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events",
+      "journal": "npj Computational Materials",
+      "volume": "6",
+      "pages": "20",
+      "year": 2020,
+      "doi": "10.1038/s41524-020-0283-z",
+      "official_url": "https://www.nature.com/articles/s41524-020-0283-z",
+      "source_type": "primary_methods",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "active learning potentials"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "BatraEtAl2021",
+      "topic": "materials_machine_learning",
+      "authors": "Rohit Batra and Le Song and Rampi Ramprasad",
+      "title": "Emerging materials intelligence ecosystems propelled by machine learning",
+      "journal": "Nature Reviews Materials",
+      "volume": "6",
+      "pages": "655--678",
+      "year": 2021,
+      "doi": "10.1038/s41578-020-00255-y",
+      "official_url": "https://www.nature.com/articles/s41578-020-00255-y",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "materials machine learning"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    },
+    {
+      "key": "NoeEtAl2019",
+      "topic": "physics_machine_learning",
+      "authors": "Frank Noé and Simon Olsson and Jonas Köhler and Hao Wu",
+      "title": "Boltzmann generators: Sampling equilibrium states of many-body systems with deep learning",
+      "journal": "Science",
+      "volume": "365",
+      "pages": "eaaw1147",
+      "year": 2019,
+      "doi": "10.1126/science.aaw1147",
+      "official_url": "https://www.science.org/doi/10.1126/science.aaw1147",
+      "source_type": "authoritative_review",
+      "verification_tier": "T2_crossref_doi_metadata",
+      "supports": [
+        "physics machine learning"
+      ],
+      "verification": "Crossref DOI record and publisher-linked bibliographic metadata verified; contextual citation only unless separately designated as a core claim authority"
+    }
+  ]
+}

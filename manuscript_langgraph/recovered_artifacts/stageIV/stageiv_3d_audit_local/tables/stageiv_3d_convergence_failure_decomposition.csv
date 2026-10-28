@@ -1,0 +1,12 @@
+metric,iteration_or_transition,value,threshold,pass,failure_class,threshold_ratio,denominator,n_surprise
+topology_volume_map_change,22->23,0.0014122480421106,0.002,True,,,,
+topology_volume_map_change,23->24,0.0019225839528326,0.002,True,,,,
+topology_volume_map_change,24->25,0.002561475409836,0.002,False,map_change,,,
+topology_surface_shift_p95,22->23,0.0055835372535258,0.004167,False,surface_shift,,,
+topology_surface_shift_p95,23->24,0.0059066811860211,0.004167,False,surface_shift,,,
+topology_surface_shift_p95,24->25,0.0059961957165026,0.004167,False,surface_shift,,,
+topology_surface_coverage_p95,25,0.015317527016765,0.00625,False,coverage,2.4508043226823997,,
+trusted_topology_surprise,22->23,0.065,0.02,False,trusted_surprise,,200,13
+trusted_topology_surprise,23->24,0.1122994652406417,0.02,False,trusted_surprise,,187,21
+trusted_topology_surprise,24->25,0.140625,0.02,False,trusted_surprise,,192,27
+component_stability,last3,3;4;3,constant component count,False,component_instability,,,

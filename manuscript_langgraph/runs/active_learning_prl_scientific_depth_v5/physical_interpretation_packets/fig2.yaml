@@ -1,0 +1,37 @@
+figure_id: Fig2
+direct_visual_observations:
+- Normal support lies above a descending curved envelope in the kBT-JA plane.
+- FFLO occupies most superconducting support below that envelope.
+- Uniform SC is a narrow strip close to JA=0.
+- Exact calls accumulate along both the outer Normal-superconducting structure and the narrow uniform-SC/FFLO edge.
+frozen_data_support:
+- fig2_final_exact_samples.csv
+- fig2_exact_call_allocation.csv
+- fig2_data_manifest.yaml
+parameter_dependence:
+- supported_trend: The largest JA supporting superconductivity decreases as temperature rises.
+  strength_of_support: direct exact-sample support
+- supported_trend: Uniform SC remains confined to the near-zero-JA strip across the sampled temperature interval.
+  strength_of_support: direct exact labels
+permitted_interpretations:
+- Altermagnetic splitting rapidly converts the sampled superconducting support from uniform to finite-q order.
+- Selective calls track narrow or rapidly varying phase structure while exploration retains domain coverage.
+forbidden_inferences:
+- monotonic field law beyond sampled support
+- sample density is phase probability
+- 11.24x is wall-time speedup
+method_role: Shows how exact-call economy coexists with a reliability-refined thermodynamic endpoint.
+main_text_candidate_points:
+- curved outer boundary
+- near-zero-JA uniform strip
+- 8.89% Stage-I economy
+- Stage-II count clarification
+caption_only_points:
+- Fig. 2 panel c uses 7,434 Stage-II points, 554 beyond Stage I.
+supplement_only_points:
+- phase counts
+- selected/returned/trusted accounting
+- operational thresholds
+uncertainties_or_missing_evidence:
+- No matched random or exhaustive wall-time comparator.
+- No candidate-wide boundary-enrichment denominator.

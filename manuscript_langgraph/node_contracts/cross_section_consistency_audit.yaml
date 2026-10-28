@@ -1,0 +1,19 @@
+{
+  "node_id": "cross_section_consistency_audit",
+  "purpose": "cross section consistency audit",
+  "inputs": [
+    "all_section_drafts",
+    "claim_registry"
+  ],
+  "outputs": [
+    "consistency_report"
+  ],
+  "prerequisites": [
+    "abstract_title_generator"
+  ],
+  "forbidden_actions": [
+    "must compare numbers terminology and scope"
+  ],
+  "gate": "CROSS_SECTION_CONSISTENCY_AUDIT",
+  "failure_behavior": "emit an explicit BLOCK, RECHECK, or HUMAN_WAIT record; never fabricate an artifact"
+}

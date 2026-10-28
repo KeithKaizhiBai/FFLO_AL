@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "archive_root": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_learning_scientific_evidence_archive",
+  "source_file_count": 63383,
+  "archived_source_file_count": 2385,
+  "archived_source_bytes": 278165113,
+  "missing_explicit_artifacts": [
+    "finite_T_phase_diagram.m"
+  ],
+  "zip_path": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_learning_scientific_evidence_archive.zip",
+  "zip_sha256": "recorded in the adjacent .zip.sha256 sidecar"
+}

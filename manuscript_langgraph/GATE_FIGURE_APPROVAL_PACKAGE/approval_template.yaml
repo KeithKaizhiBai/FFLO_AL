@@ -1,0 +1,19 @@
+{
+  "gate_id": "GATE_FIGURE_APPROVAL",
+  "status": "approved_with_fig4_nonclosure_caveat",
+  "allowed_decisions": ["approve", "approve_with_edits", "reject_and_redraw", "evidence_missing"],
+  "decision": "approve_with_edits",
+  "per_figure": {
+    "FIG-01-PIPELINE": "approve",
+    "FIG-02-THERMO": "approve",
+    "FIG-03-STAGEIII-TOPOLOGY": "approve",
+    "FIG-04-STAGEIV-3D-EXTENSION": "approve_with_nonclosure_caveat"
+  },
+  "required_review": [
+    "scientific claim alignment",
+    "source and provenance mapping",
+    "caption caveats",
+    "Results observation/interpretation separation",
+    "Figure 4 strict non-convergence visibility"
+  ]
+}

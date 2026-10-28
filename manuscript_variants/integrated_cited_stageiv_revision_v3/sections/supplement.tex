@@ -1,0 +1,113 @@
+\section*{Supplemental Material}
+\setcounter{section}{0}\renewcommand{\thesection}{S\arabic{section}}
+
+\section{Physical model and notation}
+The Hamiltonian, Nambu convention, and parameter definitions are identical to
+those in the main text and the canonical model specification.  The matrix
+convention is row $=J_A$ and column $=k_BT$ for two-dimensional arrays.  No
+thermodynamic phase definition is changed by the active-learning or topology
+layers.
+
+\section{Exact BdG oracle and reliability hierarchy}
+At fixed external parameters, the oracle scans the configured $q$ and
+$\Delta$ domains, refines candidate basins, and compares the best
+superconducting free energy with the normal reference.  A $q$-edge optimum is
+not accepted until its window is expanded or it is explicitly marked
+unresolved.  Near the Normal--SC boundary, the strictly positive-$\Delta$ gap
+$\min_{\Delta\geq\Delta_\epsilon}F(\Delta,q)-F(0,q)$ distinguishes trusted
+normal points from a finite-resolution boundary band.  Reliability fields are
+stored independently of phase labels.
+
+For topology, the analytic Pfaffians in the project convention are
+\begin{align}
+P_0&=(\mu-t\cos(q/2))^2+\Delta^2
+-(\lambda_y\sin(q/2))^2-(J_A\cos(q/2)+\lambda_z\sin(q/2))^2,\\
+P_\pi&=(\mu+t\cos(q/2))^2+\Delta^2
+-(\lambda_y\sin(q/2))^2-(J_A\cos(q/2)+\lambda_z\sin(q/2))^2.
+\end{align}
+Away from the Pfaffian tolerance, $P_0P_\pi<0$ gives $\nu=1$ and
+$P_0P_\pi>0$ gives $\nu=0$.  The invariant is accepted only together with a
+full-Brillouin-zone gap exceeding its scale-aware tolerance and trusted
+thermodynamics.  Direct analytic/numeric Pfaffian comparison agreed for
+104/104 validation points, and the CPU/GPU bulk-gap discrepancy was
+$7.77\times10^{-16}$ in the archived validation.
+
+\section{Active-learning loop and acquisition}
+Each restartable iteration trains five-member regression/classification
+ensembles, scores a fixed candidate domain, excludes existing coordinates,
+applies soft observation and batch repulsion, evaluates the selected microbatch
+with the exact oracle, and appends only accepted records.  The two-dimensional
+production configuration used a 512-call random-grid cold start, batches up to
+256 points, and a 15\% validation split.  The acquisition score combines
+classification entropy/margin, phase-facing regression uncertainty,
+Normal--SC and uniform-SC--FFLO proximity, gated $q$-edge risk, and conservative
+extrapolation.  Response observables are retained as diagnostics and do not
+replace thermodynamic boundary targets.
+
+\section{Thermodynamic convergence and hard-risk audit}
+The Stage-II endpoint contains 7,434 observations.  Its final phase-map change
+is 0.0016287, boundary coverage $p_{95}$ is 0.0046875, and trusted surprise is
+0/127.  The 129-call hard-risk layer contains 110 rerun-required and 19 other
+untrusted or training-ineligible records.  Counterfactual boundary-impact tests
+found no cluster requiring a targeted rerun under the adopted publication
+tolerance; the layer remains visible and is not declared eliminated.
+
+\section{Topology convergence and sensitivity}
+The formal Stage-III audit uses trusted gapped FFLO points, deterministic
+$k$-nearest-neighbor inverse-distance interpolation of $P_0$ and $P_\pi$ on a
+$401\times401$ monitor grid, and support radius 0.045 in normalized
+coordinates.  With $k=8$, the final coverage is $p_{95}=0.006185$ below the
+0.00625 threshold; the last-three map changes, boundary shifts, and trusted
+surprises pass their registered thresholds and retain one principal component.
+The $k=6$ sensitivity coverage $0.006269$ is slightly above threshold, whereas
+$k=12$ gives $0.005913$ and two significant components.  Local opposite-label
+brackets are support diagnostics, not exact boundaries.
+
+\section{Stage-IV finite-domain diagnostics}
+The three-dimensional run samples $(k_BT/t,J_A/t,\mu/t)$ over the finite interval
+$\mu/t\in[-0.5,1.5]$ and returns 7,081 unique exact observations.  The main-text
+figure reports the exact thermodynamic cloud, trusted FFLO topology support,
+and four explicit fixed-$\mu$ bins.  These are discrete observations; no
+continuous topology surface is fitted or inferred.
+
+Figure~\ref{fig:s-stageiv-diagnostics} records archived numerical histories.
+The map-change fraction measures changes between successive proxy label maps;
+the proxy-surface displacement is a normalized bidirectional $p_{95}$ distance;
+and trusted surprise is the fraction of new trusted labels that differ from the
+previous proxy prediction.  These quantities test stability of a particular
+sampling and reconstruction procedure.  They are not thermodynamic observables
+or universal physical scales.  We therefore show their raw values without a
+cutoff line and do not convert them into a physical convergence declaration.
+The archive additionally records one final proxy-coverage value, 0.015318, and
+component counts $3\to4\to3$ over the last three iterations; neither supplies a
+standalone physical closure criterion.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.96\textwidth]{\detokenize{/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_integrated_cited_stageiv_revision_v3/figures/SuppFig_StageIV_diagnostics.pdf}}
+\caption{\textbf{Archived Stage-IV numerical stability diagnostics.}
+\textbf{(a)} Total exact, trusted-exact, and trusted-topology counts.
+\textbf{(b)} Thermodynamic-label fractions and \textbf{(c)} applicable-SC
+topology-label fractions versus iteration.  \textbf{(d)--(f)} Last-three raw
+histories of topology-map change, proxy-surface $p_{95}$ displacement, and
+trusted-topology surprise.  No threshold line is drawn and no panel is used as
+a physical convergence criterion.}
+\label{fig:s-stageiv-diagnostics}
+\end{figure*}
+
+\section{Exploratory acquisition and world-model limitations}
+The matched V3/V4 analysis is an offline comparison of frozen runs.  The two
+methods trade support density against sequential surprise, and V4 does not
+improve the shared graph-uncertainty metric or validate any of four candidate
+nodes.  The Stage-VI hierarchy improves field masking but lacks the spectral
+artifacts required for a physical spectral descriptor.  These negative and
+incomplete results constrain the Discussion and Outlook; they are not promoted
+to Methods claims.
+
+\section{AI-assisted workflow and reproducibility}
+The manuscript pipeline uses a versioned claim/evidence registry, figure
+contracts, artifact hashes, machine-readable paragraph traces, and explicit
+human gates.  AI-assisted tools organize, check, and render registered
+evidence.  They do not authorize new physical claims, alter frozen data, or
+replace human scientific approval.  This review package is generated by the
+same checkpointed LangGraph thread that produced the approved Results package.

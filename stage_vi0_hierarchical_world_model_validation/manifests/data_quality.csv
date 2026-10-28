@@ -1,0 +1,11 @@
+run,check,value,status
+V3,rows,7069,pass
+V3,trusted_exact,6715,pass
+V3,physical_SC,3817,pass
+V3,spectral_trusted,3817,pass
+V3,deltaF_UF_available,0,missing
+V4,rows,7080,pass
+V4,trusted_exact,6727,pass
+V4,physical_SC,3835,pass
+V4,spectral_trusted,3835,pass
+V4,deltaF_UF_available,0,missing

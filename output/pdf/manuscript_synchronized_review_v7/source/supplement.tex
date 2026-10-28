@@ -1,0 +1,14 @@
+\documentclass[aps,prl,reprint,onecolumn,11pt,tightenlines,floatfix]{revtex4-2}
+\input{preamble.tex}
+\externaldocument[main-]{manuscript_double_column}
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\makeatletter\def\p@subsection{}\makeatother
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\newcounter{algorithm}\renewcommand{\thealgorithm}{S\arabic{algorithm}}
+\begin{document}\title{Supplemental Material: \ManuscriptTitle}\maketitle\LayoutAudit
+\input{sections/supplement.tex}
+\end{document}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "pdf_pages": 7,
+  "bibliography_items": 50,
+  "expected_bibliography_items": 50,
+  "undefined_citations": false,
+  "overfull_boxes": 0,
+  "fonts_embedded_subset_unicode": true,
+  "references_visible_in_extracted_text": true,
+  "references_after_figure_4": true,
+  "page_character_counts": [
+    4551,
+    2961,
+    2306,
+    1327,
+    1609,
+    4568,
+    1758
+  ],
+  "substantive_content_on_every_page": true,
+  "canonical_figure_hashes": "PASS",
+  "stage_iii_and_iv_caveats": "PASS",
+  "original_integrated_candidate_modified": false,
+  "external_retrieval_executed": true,
+  "new_physics_executed": false
+}

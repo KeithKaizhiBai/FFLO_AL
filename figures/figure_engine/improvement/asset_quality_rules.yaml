@@ -1,0 +1,46 @@
+schema_version: 1
+authority: refinement_tracking_only
+does_not_override:
+  - constitution
+  - contract_schema
+  - validators
+  - typography_rules
+  - layout_rules
+
+purpose: >-
+  Record visual-quality targets for compliant scientific assets without
+  weakening or replacing the canonical Figure Engine rules.
+
+quality_dimensions:
+  scientific_readability:
+    required:
+      - physical_object_before_workflow
+      - schematic_status_unambiguous
+      - topology_not_inferred_from_free_energy
+      - representative_branches_not_simultaneous_minima
+  physical_depth:
+    required:
+      - smooth_nonmetallic_illumination
+      - visually_distinct_valleys_and_ridges
+      - visible_minima_markers
+      - readable_delta_q_axes
+    forbidden:
+      - glossy_material_effect
+      - rainbow_colormap
+      - tiny_decorative_surface
+  hierarchy:
+    primary: [thermodynamic_landscape, topology_resolution]
+    secondary: [exact_bdg_oracle, physical_observation]
+    tertiary: [surrogate, acquisition, reliability, parameter_space, next_exact_calls]
+  information_flow:
+    required:
+      - semantic_color_transition
+      - tapered_direction
+      - destination_emphasis
+      - source_and_target_roles
+    forbidden: [decorative_connector, constant_width_main_arrow]
+
+review_policy:
+  automated_checks_are_necessary_not_sufficient: true
+  human_review_required: true
+  conflicting_engine_rule_action: create_engine_change_proposal_and_stop

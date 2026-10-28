@@ -1,0 +1,14 @@
+{
+  "input_dataset": "ML_Phase_StageV_V2_Multihead/active_runs/stagev_v2_multihead_boundary_learning_3d_v1/dataset_iter096.npz",
+  "trusted_exact": "ML_Phase_StageV_V2_Multihead/active_runs/stagev_v2_multihead_boundary_learning_3d_v1/iter096/exact_trusted_iter096.npz",
+  "output_npz": "ML_Phase_StageV_V2_Multihead/active_runs/stagev_v2_multihead_boundary_learning_3d_v1/dataset_iter097.npz",
+  "output_csv": "ML_Phase_StageV_V2_Multihead/active_runs/stagev_v2_multihead_boundary_learning_3d_v1/dataset_iter097.csv",
+  "exact_points": 62,
+  "clean_trusted_points": 61,
+  "boundary_band_points_appended": 1,
+  "training_eligible_points_appended": 62,
+  "trusted_points_appended": 62,
+  "input_samples": 7005,
+  "output_samples": 7067,
+  "new_unique_samples_added": 62
+}

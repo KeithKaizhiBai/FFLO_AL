@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 2.0509721973274595,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 25,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.7,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 2624,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.06370740328672518,
+    "rank_correlation_a0_ns": 0.3128169512956841,
+    "rank_correlation_a0_p0": 0.5349997226789585,
+    "rank_correlation_a0_ppi": 0.06372403223542333,
+    "rank_correlation_a0_uf": 0.8620736467206187,
+    "rank_correlation_delta_vs_a0_gap": 0.06370740328672518,
+    "rank_correlation_delta_vs_a0_ns": 0.01931521457625579,
+    "rank_correlation_delta_vs_a0_p0": 0.2522172313120393,
+    "rank_correlation_delta_vs_a0_ppi": 0.6459451326744067,
+    "rank_correlation_delta_vs_a0_uf": -0.0959150749789891,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.3321321658719399,
+    "rank_correlation_model_p0": 0.7872169539909978,
+    "rank_correlation_model_ppi": 0.70966916490983,
+    "rank_correlation_model_uf": 0.7661585717416296,
+    "reward_sample_count": 2624,
+    "reward_sample_count_gap": 2624,
+    "reward_sample_count_ns": 2624,
+    "reward_sample_count_p0": 2624,
+    "reward_sample_count_ppi": 2624,
+    "reward_sample_count_uf": 2624,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

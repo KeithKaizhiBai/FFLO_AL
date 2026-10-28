@@ -1,0 +1,12 @@
+{
+  "phase": 6,
+  "status": "pass",
+  "artifact_manifest_rows": 65,
+  "artifact_manifest_present": 65,
+  "artifact_manifest_missing": 0,
+  "current_stop": "GATE_FIGURE_APPROVAL",
+  "production_latex_merge": false,
+  "external_introduction_retrieval": false,
+  "new_physics_calculation": false,
+  "frozen_archive_modified": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-08-28",
+  "gates": {
+    "GATE_SCOPE_APPROVAL": "approved",
+    "GATE_CLAIM_APPROVAL": "approved_with_modifications",
+    "GATE_FIGURE_APPROVAL": "approved_with_fig4_nonclosure_caveat",
+    "GATE_FIG2_HUMAN_SCIENCE_REVIEW": "approved",
+    "GATE_FIG3_RENDER_AUTHORIZATION": "approved_and_completed",
+    "GATE_FIG4_RENDER_AUTHORIZATION": "approved_and_completed_with_nonclosure_caveat",
+    "GATE_FIG3_HUMAN_SCIENCE_REVIEW": "approved",
+    "GATE_FIG4_HUMAN_SCIENCE_REVIEW": "approved_with_nonclosure_caveat",
+    "GATE_RESULTS_HUMAN_REVIEW": "approved_with_fig4_editorial_amendment",
+    "GATE_RESULTS_FIG4_CAPTION_CORRECTION": "superseded_by_framework_figure_source_repair",
+    "GATE_MANUSCRIPT_FIGURE_SOURCE_REPAIR": "approved_and_applied",
+    "INTRO_CITATION_LOOP_GATE": "permission_not_granted",
+    "GATE_FINAL_MANUSCRIPT_APPROVAL": "pending_human_approval"
+  },
+  "current_stop": "INTRO_CITATION_LOOP_GATE",
+  "figure_workflow": {
+    "FIG-01": "SCIENTIFIC_FREEZE",
+    "FIG-02": "SCIENTIFIC_FREEZE",
+    "FIG-03": "SCIENTIFIC_FREEZE",
+    "FIG-04": "SCIENTIFIC_FREEZE_WITH_NONCLOSURE_CAVEAT"
+  },
+  "external_introduction_retrieval": "forbidden_until_separate_retrieval_permission_is_granted"
+}

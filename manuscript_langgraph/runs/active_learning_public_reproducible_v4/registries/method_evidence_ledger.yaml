@@ -1,0 +1,105 @@
+methods:
+- method_id: MTH-PHYS-01
+  scientific_role: physical model
+  source_file: MODEL_SPEC.md
+  source_lines_or_symbols: Sec. 2
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: t=1; lambda_y=lambda_z=0.6; mu=0.55; U=1.6
+  implementation_status: complete
+  main_text_summary: t=1
+  supplement_detail: t=1; lambda_y=lambda_z=0.6; mu=0.55; U=1.6
+  uncertainty: none identified
+- method_id: MTH-FREE-01
+  scientific_role: free-energy implementation
+  source_file: eta_phase_diagram_cuda.py
+  source_lines_or_symbols: EtaPhaseConfig; compute_omega_min_q_batch
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: normal-referenced discrete BdG free energy; N_k=800; Delta and q scans
+  implementation_status: complete
+  main_text_summary: normal-referenced discrete BdG free energy
+  supplement_detail: normal-referenced discrete BdG free energy; N_k=800; Delta and
+    q scans
+  uncertainty: none identified
+- method_id: MTH-ORACLE-01
+  scientific_role: exact-oracle loop
+  source_file: ml_phase/exact_oracle.py
+  source_lines_or_symbols: _confirm_one_point_robust; evaluate_points
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: adaptive q expansion, local basin refinement, near-zero-Delta check,
+    separate statuses
+  implementation_status: complete
+  main_text_summary: adaptive q expansion, local basin refinement, near-zero-Delta
+    check, separate statuses
+  supplement_detail: adaptive q expansion, local basin refinement, near-zero-Delta
+    check, separate statuses
+  uncertainty: none identified
+- method_id: MTH-AL-01
+  scientific_role: active-learning driver
+  source_file: ml_phase/active_refine.py
+  source_lines_or_symbols: run_active_refinement
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: random-grid cold start, retrain, score, repelled microbatch, HPC shards,
+    append
+  implementation_status: complete
+  main_text_summary: random-grid cold start, retrain, score, repelled microbatch,
+    HPC shards, append
+  supplement_detail: random-grid cold start, retrain, score, repelled microbatch,
+    HPC shards, append
+  uncertainty: none identified
+- method_id: MTH-MODEL-01
+  scientific_role: surrogate architecture
+  source_file: ml_phase/models.py
+  source_lines_or_symbols: _MLP; TorchEnsembleRegressor; TorchEnsembleClassifier
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: separate 5-member MLP ensembles; 2x64 ReLU; Adam; MSE/CE
+  implementation_status: complete
+  main_text_summary: separate 5-member MLP ensembles
+  supplement_detail: separate 5-member MLP ensembles; 2x64 ReLU; Adam; MSE/CE
+  uncertainty: none identified
+- method_id: MTH-ACQ-01
+  scientific_role: acquisition
+  source_file: ml_phase/acquisition.py
+  source_lines_or_symbols: compute_acquisition_scores; select_acquisition_batch
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: full production score plus active-pool, observation-repulsion, batch-repulsion,
+    stochastic selection
+  implementation_status: complete
+  main_text_summary: full production score plus active-pool, observation-repulsion,
+    batch-repulsion, stochastic selection
+  supplement_detail: full production score plus active-pool, observation-repulsion,
+    batch-repulsion, stochastic selection
+  uncertainty: none identified
+- method_id: MTH-STOP-01
+  scientific_role: operational stopping
+  source_file: ml_phase/stop_controller.py
+  source_lines_or_symbols: StopConfig; evaluate_stop
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: map change, boundary displacement, surprise, coverage; operational
+    only
+  implementation_status: complete
+  main_text_summary: map change, boundary displacement, surprise, coverage
+  supplement_detail: map change, boundary displacement, surprise, coverage; operational
+    only
+  uncertainty: none identified
+- method_id: MTH-TOPO-01
+  scientific_role: topology
+  source_file: ml_phase/topology_oracle.py
+  source_lines_or_symbols: TopologyPfaffianOracle; BulkGapOracle
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: full-zone gap and analytic/numeric Pfaffians; topology only where
+    applicable
+  implementation_status: complete
+  main_text_summary: full-zone gap and analytic/numeric Pfaffians
+  supplement_detail: full-zone gap and analytic/numeric Pfaffians; topology only where
+    applicable
+  uncertainty: none identified
+- method_id: MTH-ENV-01
+  scientific_role: software environment
+  source_file: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  source_lines_or_symbols: python; torch
+  config_source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+  actual_value: Python 3.10.20; torch 2.11.0+cu130; CUDA H100 workflow
+  implementation_status: complete_with_export_limit
+  main_text_summary: Python 3.10.20
+  supplement_detail: Python 3.10.20; torch 2.11.0+cu130; CUDA H100 workflow
+  uncertainty: no Git commit in export

@@ -1,0 +1,4 @@
+- Figure 1 is a vector schematic, not numerical evidence.
+- Finite-resolution effects remain.
+- Unresolved is a numerical status, not a phase.
+- The surrogate schedules exact calls and is not a BdG replacement.

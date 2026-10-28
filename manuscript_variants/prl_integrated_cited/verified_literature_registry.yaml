@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "retrieval_date": "2026-08-28",
+  "source_count": 12,
+  "source_policy": "primary literature and authoritative reviews/perspectives; official publisher or journal pages preferred",
+  "sources": [
+    {
+      "key": "FuldeFerrell1964",
+      "topic": "FFLO_foundation",
+      "authors": "Peter Fulde and Richard A. Ferrell",
+      "title": "Superconductivity in a Strong Spin-Exchange Field",
+      "journal": "Physical Review",
+      "volume": "135",
+      "pages": "A550--A563",
+      "year": 1964,
+      "doi": "10.1103/PhysRev.135.A550",
+      "official_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.135.A550",
+      "source_type": "primary",
+      "supports": [
+        "finite center-of-mass pairing under spin/exchange splitting"
+      ],
+      "verification": "official APS abstract and metadata verified"
+    },
+    {
+      "key": "LarkinOvchinnikov1965",
+      "topic": "FFLO_foundation",
+      "authors": "A. I. Larkin and Yu. N. Ovchinnikov",
+      "title": "Nonuniform State of Superconductors",
+      "journal": "Soviet Physics JETP",
+      "volume": "20",
+      "pages": "762--769",
+      "year": 1965,
+      "doi": "",
+      "official_url": "https://jetp.ras.ru/",
+      "source_type": "primary",
+      "supports": [
+        "spatially modulated finite-momentum superconducting state"
+      ],
+      "verification": "bibliographic metadata cross-verified against the RMP review and Nature Communications reference list"
+    },
+    {
+      "key": "CasalbuoniNardulli2004",
+      "topic": "FFLO_review",
+      "authors": "Roberto Casalbuoni and Giuseppe Nardulli",
+      "title": "Inhomogeneous Superconductivity in Condensed Matter and QCD",
+      "journal": "Reviews of Modern Physics",
+      "volume": "76",
+      "pages": "263--320",
+      "year": 2004,
+      "doi": "10.1103/RevModPhys.76.263",
+      "official_url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.76.263",
+      "source_type": "authoritative_review",
+      "supports": [
+        "Fermi-surface mismatch can favor nonzero-momentum inhomogeneous pairing"
+      ],
+      "verification": "APS/CERN metadata and abstract verified"
+    },
+    {
+      "key": "SmejkalSinovaJungwirth2022",
+      "topic": "altermagnetism",
+      "authors": "Libor Smejkal and Jairo Sinova and Tomas Jungwirth",
+      "title": "Emerging Research Landscape of Altermagnetism",
+      "journal": "Physical Review X",
+      "volume": "12",
+      "pages": "040501",
+      "year": 2022,
+      "doi": "10.1103/PhysRevX.12.040501",
+      "official_url": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.12.040501",
+      "source_type": "authoritative_perspective",
+      "supports": [
+        "compensated magnetic order with momentum-space spin splitting"
+      ],
+      "verification": "official APS full metadata and article text verified"
+    },
+    {
+      "key": "ChakrabortyBlackSchaffer2024",
+      "topic": "altermagnetic_finite_momentum_pairing",
+      "authors": "Debmalya Chakraborty and Annica M. Black-Schaffer",
+      "title": "Zero-field Finite-Momentum and Field-Induced Superconductivity in Altermagnets",
+      "journal": "Physical Review B",
+      "volume": "110",
+      "pages": "L060508",
+      "year": 2024,
+      "doi": "10.1103/PhysRevB.110.L060508",
+      "official_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L060508",
+      "source_type": "primary",
+      "supports": [
+        "altermagnetic spin splitting can stabilize zero-field finite-momentum superconductivity in a model setting"
+      ],
+      "verification": "official APS article PDF, abstract, model scope, and conclusions verified"
+    },
+    {
+      "key": "HongParkKim2025",
+      "topic": "altermagnetic_unconventional_pairing",
+      "authors": "SeungBeom Hong and Moon Jip Park and Kyoung-Min Kim",
+      "title": "Unconventional p-wave and Finite-Momentum Superconductivity Induced by Altermagnetism through the Formation of Bogoliubov Fermi Surface",
+      "journal": "Physical Review B",
+      "volume": "111",
+      "pages": "054501",
+      "year": 2025,
+      "doi": "10.1103/PhysRevB.111.054501",
+      "official_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.054501",
+      "source_type": "primary",
+      "supports": [
+        "model evidence for altermagnetism-facilitated unconventional and finite-momentum pairing"
+      ],
+      "verification": "official APS abstract, methods scope, and publication metadata verified"
+    },
+    {
+      "key": "Kitaev2001",
+      "topic": "one_dimensional_topology",
+      "authors": "Alexei Y. Kitaev",
+      "title": "Unpaired Majorana Fermions in Quantum Wires",
+      "journal": "Physics-Uspekhi",
+      "volume": "44",
+      "pages": "131--136",
+      "year": 2001,
+      "doi": "10.1070/1063-7869/44/10S/S29",
+      "official_url": "https://ufn.ru/en/articles/2001/13/ac/",
+      "source_type": "primary",
+      "supports": [
+        "gapped one-dimensional topological superconductors and a bulk criterion for Majorana boundary states"
+      ],
+      "verification": "official journal metadata, abstract, and DOI verified"
+    },
+    {
+      "key": "BudichArdonne2013",
+      "topic": "pfaffian_topology",
+      "authors": "Jan Carl Budich and Eddy Ardonne",
+      "title": "Equivalent Topological Invariants for One-Dimensional Majorana Wires in Symmetry Class D",
+      "journal": "Physical Review B",
+      "volume": "88",
+      "pages": "075419",
+      "year": 2013,
+      "doi": "10.1103/PhysRevB.88.075419",
+      "official_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.075419",
+      "source_type": "primary",
+      "supports": [
+        "Z2/Pfaffian invariant for gapped one-dimensional class-D BdG systems"
+      ],
+      "verification": "official APS abstract and metadata verified"
+    },
+    {
+      "key": "ZhangYi2013",
+      "topic": "topological_finite_momentum_pairing",
+      "authors": "Wei Zhang and Wei Yi",
+      "title": "Topological Fulde-Ferrell-Larkin-Ovchinnikov States in Spin-Orbit-Coupled Fermi Gases",
+      "journal": "Nature Communications",
+      "volume": "4",
+      "pages": "2711",
+      "year": 2013,
+      "doi": "10.1038/ncomms3711",
+      "official_url": "https://www.nature.com/articles/ncomms3711",
+      "source_type": "primary",
+      "supports": [
+        "finite-momentum pairing and topological superfluidity can coexist in a spin-orbit-coupled model"
+      ],
+      "verification": "publisher abstract, article metadata, and stated model scope verified"
+    },
+    {
+      "key": "TerayamaEtAl2019",
+      "topic": "active_learning_phase_diagrams",
+      "authors": "Kei Terayama and Ryo Tamura and Yoshitaro Nose and Hidenori Hiramatsu and Hideo Hosono and Yasushi Okuno and Koji Tsuda",
+      "title": "Efficient Construction Method for Phase Diagrams Using Uncertainty Sampling",
+      "journal": "Physical Review Materials",
+      "volume": "3",
+      "pages": "033802",
+      "year": 2019,
+      "doi": "10.1103/PhysRevMaterials.3.033802",
+      "official_url": "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.3.033802",
+      "source_type": "primary",
+      "supports": [
+        "uncertainty sampling can concentrate evaluations near phase boundaries"
+      ],
+      "verification": "official APS abstract, methods summary, and metadata verified"
+    },
+    {
+      "key": "DaiBrussGlotzer2020",
+      "topic": "active_learning_phase_diagrams",
+      "authors": "Chengyu Dai and Isaac R. Bruss and Sharon C. Glotzer",
+      "title": "Efficient Phase Diagram Sampling by Active Learning",
+      "journal": "The Journal of Physical Chemistry B",
+      "volume": "124",
+      "pages": "1275--1284",
+      "year": 2020,
+      "doi": "10.1021/acs.jpcb.9b09202",
+      "official_url": "https://pubs.acs.org/doi/10.1021/acs.jpcb.9b09202",
+      "source_type": "primary",
+      "supports": [
+        "Gaussian-process active learning can select informative phase-diagram state points and support batch evaluation"
+      ],
+      "verification": "official ACS abstract, author list, pages, and DOI verified"
+    },
+    {
+      "key": "LookmanEtAl2019",
+      "topic": "active_learning_materials",
+      "authors": "Turab Lookman and Prasanna V. Balachandran and Dezhen Xue and Ruihao Yuan",
+      "title": "Active Learning in Materials Science with Emphasis on Adaptive Sampling Using Uncertainties for Targeted Design",
+      "journal": "npj Computational Materials",
+      "volume": "5",
+      "pages": "21",
+      "year": 2019,
+      "doi": "10.1038/s41524-019-0153-8",
+      "official_url": "https://www.nature.com/articles/s41524-019-0153-8",
+      "source_type": "authoritative_review",
+      "supports": [
+        "active learning is an adaptive decision process for choosing informative experiments or calculations"
+      ],
+      "verification": "publisher abstract, review scope, metadata, and DOI verified"
+    }
+  ]
+}

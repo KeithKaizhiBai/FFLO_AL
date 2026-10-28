@@ -1,0 +1,13 @@
+{
+  "figure_id": "FIG-04-STAGEIV-3D-EXTENSION",
+  "claim_ids": ["CLM-3D-EXTENSION", "CLM-ORACLE-RELIABILITY"],
+  "scientific_role": "Demonstrate active-learning-enabled higher-dimensional exploration in (kBT/t, JA/t, mu/t), not formal 3D topology closure.",
+  "panels": {
+    "A": "three-dimensional exact thermodynamic point cloud",
+    "B": "trusted three-dimensional cFFLO/tFFLO support",
+    "C": "narrow fixed-mu exact-label slices with local support markers and support-restricted normal/SC guides",
+    "D": "acquisition-channel history and explicit failed strict topology convergence ratios"
+  },
+  "required_caveats": ["strict formal 3D topology convergence gates were not all closed", "not a complete converged 3D topology atlas", "wide-mu smooth projections are excluded", "local support guides are diagnostics, not exact physical boundaries"],
+  "prohibited": ["complete 3D phase diagram", "fully converged 3D topology surface", "exhaustive 3D phase discovery", "surface shift=0 implies convergence"]
+}

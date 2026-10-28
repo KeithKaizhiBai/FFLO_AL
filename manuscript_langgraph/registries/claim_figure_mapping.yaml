@@ -1,0 +1,21 @@
+schema_version: 1
+as_of: 2026-08-27
+mappings:
+  CLM-ORACLE-RELIABILITY:
+    figures: [FIG-01-PIPELINE, FIG-02-THERMO]
+    status: approved_claim_fig1_fig2_frozen
+  CLM-2D-THERMO:
+    figures: [FIG-02-THERMO]
+    status: SCIENTIFIC_FREEZE
+  CLM-2D-TOPOLOGY:
+    figures: [FIG-03-STAGEIII-TOPOLOGY]
+    status: SCIENTIFIC_FREEZE
+  CLM-3D-EXTENSION:
+    figures: [FIG-04-STAGEIV-3D-EXTENSION]
+    status: SCIENTIFIC_FREEZE_WITH_NONCLOSURE_CAVEAT
+  CLM-LEARNED-ACQUISITION:
+    figures: []
+    status: discussion_only
+  CLM-GROUNDUP-WORLD-MODEL:
+    figures: []
+    status: outlook_only

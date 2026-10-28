@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "read_only": true,
+  "physics_recomputed": false,
+  "labels_changed": false,
+  "boundary_reconstruction": false,
+  "sources": [
+    {
+      "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/canonical/fig2_final_exact_samples.csv",
+      "sha256": "d78c37edf0f003419826f0bd78ec4e36be7202d3f5e1e65ad9942132e525d91a"
+    },
+    {
+      "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig3_strict_data/canonical/fig3_exact_topology_samples.csv",
+      "sha256": "33eabf0a5ee3f8b3cff38b49abe83ac98463bb91185e6c04aea1b9acc4dfbe9b"
+    },
+    {
+      "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data/canonical/fig4_exact_3d_samples.csv",
+      "sha256": "079222624941f1130fd1718fe9228b08a8638c9c6fc13577b6b0a98a3cf045d4"
+    }
+  ],
+  "selection_rules": {
+    "fig2": "group frozen exact rows by declared phase and fixed kBT bins; report observed JA support and quantiles",
+    "fig3": "select topology_name in {cFFLO,tFFLO}; report exact observed coordinate support and quantiles",
+    "fig4": "select abs(mu-mu_center)<=0.025 at four registered centers; group frozen exact rows by phase and trusted FFLO topology"
+  },
+  "computation_script": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/scripts/build_scientific_depth_descriptive_stats.py",
+  "claim_scope": "descriptive support only; not phase probability, fitted boundary, continuous surface, or causal mechanism",
+  "outputs": [
+    "fig2_exact_support_by_temperature.csv",
+    "fig3_topology_exact_support.csv",
+    "fig4_fixed_mu_exact_support.csv"
+  ]
+}

@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\title{cFFLO/tFFLO Topology-Boundary Convergence Audit}
+\author{Report-only offline audit}
+\date{\today}
+\begin{document}
+\sloppy
+\maketitle
+
+\section{Executive Summary}
+Source run: \texttt{\detokenize{active_phase_topology_from_scratch_full_loop_v2}}.  Audit run: \texttt{\detokenize{topology_convergence_audit_full_loop_v2}}.
+The formal decision is \texttt{\detokenize{Decision A}}; topology main
+convergence is \texttt{\detokenize{True}}; limiting
+factor is \texttt{\detokenize{none}}; need new exact calculation
+is \texttt{\detokenize{False}}.
+
+\section{Method}
+For every cumulative iteration, the same deterministic KNN inverse-distance
+surrogate interpolates $P_0$ and $P_\pi$ from trusted gapped FFLO exact points.
+The fixed grid has 401$\times$401 points, and the fixed audit mask is
+the final trusted FFLO support intersected with a normalized support radius
+0.045.  The final cFFLO/tFFLO contour is formed from validated
+$P_0=0$ and $P_\pi=0$ segments with local exact opposite-Z2 support.
+
+\section{Final Three Transition Metrics}
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+Transition to iteration & Map change & Boundary p95 shift & Trusted surprise \\
+\midrule
+16 & 0.000471 & 0.0008148 & 0.0119 \\
+17 & 0.0009083 & 0.002625 & 0.01714 \\
+18 & 0.0004878 & 0.0008712 & 0.01258 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Final exact-point coverage p95 is 0.006185 against the
+threshold 0.00625.  Final direct/bracket support fraction is
+1.0000.
+
+Sensitivity: final coverage p95 by k is k=6: 0.006269; k=8: 0.006185; k=12: 0.005913.  The k=6 case is a
+tight coverage-margin caveat; the main k=8 audit and k=12 are below the
+nominal coverage threshold.
+
+\section{Figures}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig01_final_map_contour.png}\caption{Final thermodynamic map, trusted cFFLO/tFFLO samples, and audited final contour.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig02_final5_contour_overlay.png}\caption{Overlay of audited cFFLO/tFFLO contours from the final five cumulative iterations.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig03_topology_map_change.png}\caption{Topology-map change on the fixed audit grid and mask.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig04_boundary_shift.png}\caption{Symmetric topology-boundary shift metrics.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig05_boundary_coverage.png}\caption{Topology-boundary coverage by exact trusted FFLO points and opposite-Z2 brackets.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig06_topology_surprise.png}\caption{Trusted, all-selected, and hard-risk topology surprise.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig07_component_stability.png}\caption{Boundary and topological-region connected-component diagnostics.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig08_final_support_map.png}\caption{Final contour direct-support and opposite-Z2 bracket map.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig09_pfaffian_gap_along_contour.png}\caption{Pfaffian-margin and bulk-gap diagnostics sampled along the final contour normal direction.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=0.95\linewidth]{figures/fig10_decision_summary.png}\caption{Convergence decision summary panel.}\end{figure}
+
+\section{Do-Not-Claim List}
+\begin{itemize}
+\item Do not treat raw long Delaunay opposite-label edges as the final topology boundary.
+\item Do not call missing boundary shift zero.
+\item Do not treat the absence of a finite-area gapless-SC region as failure.
+\item Do not merge this cold-start run with \texttt{dataset\_iter035}.
+\item Do not claim publication-grade topology closure if the decision is not Decision A.
+\end{itemize}
+
+\section{Next Action}
+\texttt{\detokenize{freeze_topology_boundary_result_for_offline_report}}.
+
+\end{document}

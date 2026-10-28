@@ -1,0 +1,24 @@
+schema_version: 1
+font_style_id: al_fflo_fonts_v1
+
+sans:
+  preferred: Arial
+  fallback: [Helvetica, DejaVu Sans]
+  stretch: normal
+
+math:
+  preferred: STIX Two Math
+  fallback: [STIXGeneral, DejaVu Serif]
+
+matplotlib:
+  svg_fonttype: none
+  pdf_fonttype: 42
+  ps_fonttype: 42
+  mathtext_fontset: stix
+
+weights:
+  regular: 400
+  medium: 500
+  semibold: 600
+  bold: 700
+

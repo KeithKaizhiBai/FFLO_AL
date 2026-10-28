@@ -1,0 +1,24 @@
+candidate_grid_definition: full Cartesian 241 x 321 grid over kBT/t=[0.0,0.56] and
+  JA/t=[0.0,2.12]
+candidate_grid_size: 77361
+unique_exact_coordinates: 6880
+selected_call_records: 8192
+unique_selected_coordinates: 7305
+accepted_label_records: 6880
+training_eligible_records: 6880
+trusted_exact_records: 6104
+sampling_fraction: 0.08893370044337585
+exact_call_reduction_factor: 11.244331395348837
+boundary_band_definition: null
+selected_boundary_fraction: null
+candidate_boundary_fraction: null
+boundary_enrichment_factor: null
+boundary_enrichment_blocker: complete per-iteration candidate-pool boundary labels/predictions
+  are absent from the frozen export
+quality_preservation_indicator: late map and boundary changes are documented separately;
+  no uniform/random matched-budget comparator
+wall_time_evidence_available: true
+wall_time_speedup_authorized: false
+wall_time_limitation: per-iteration oracle timing exists, but no matched full-grid
+  end-to-end baseline supports a speedup ratio
+cost_weighted_evidence_available: false

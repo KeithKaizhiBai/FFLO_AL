@@ -1,0 +1,12 @@
+must_fail:
+- longer_results_created_only_by_more_counts
+- longer_results_created_only_by_thresholds
+- generic_systematic_structure_without_description
+- physical_trend_without_frozen_evidence
+- q_sign_used_as_topology_explanation
+- free_energy_formula_not_matching_code
+- 6880_and_7434_used_as_same_quantity
+- exact_location_reduction_called_wall_time_speedup
+- four_figures_stacked_after_all_results
+- discussion_only_repeats_figures
+- main_text_missing_pfaffian_applicability

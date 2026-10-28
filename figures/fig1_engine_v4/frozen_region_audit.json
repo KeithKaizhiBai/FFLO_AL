@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "source": "frozen fig1_engine_v3 300-dpi PDF render",
+  "candidate": "fig1_engine_v4 300-dpi PDF render",
+  "regions": {
+    "topology_resolution": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "parameter": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "next_calls": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "acquisition": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "bdg": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "reliability": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "observation": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    },
+    "surrogate": {
+      "mean_absolute_channel_difference": 0.0,
+      "maximum_channel_difference": 0,
+      "difference_bbox": null,
+      "identical": true
+    }
+  },
+  "interpretation": "Topology and every peripheral card are pixel-identical; only the landscape-local central region changed."
+}

@@ -1,0 +1,7 @@
+stage,topic,status,main_text,supplement,discussion_outlook,reason
+I,2D thermodynamic discovery,supported_history,yes,yes,no,proof-of-concept thermodynamic discovery; frozen endpoint and selection history recovered
+II,exact-oracle reliability and 2D thermodynamic convergence,frozen_supported,yes,yes,no,enabling reliability framework and Decision A publication-boundary audit
+III,2D cFFLO/tFFLO topology convergence,frozen_supported_with_caveat,yes,yes,no,Decision A with tight k-sensitivity margin; endpoint and convergence bundle recovered
+IV,3D extension,supported_with_caveat,yes,yes,no,main-text higher-dimensional exploration; strict 3D topology convergence and hidden-slice validation did not pass
+V,learned acquisition,not_established,no,conditional,yes,V3/V4 matched audit does not establish superiority
+VI,ground-up world model,not_established,no,no,yes,Decision C/D and EIG not authorized

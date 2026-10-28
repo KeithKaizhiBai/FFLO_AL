@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "parent_run_id": "active_learning_prl_integrated_cited_v2",
+  "variant_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_variants/integrated_cited_stageiv_revision_v3",
+  "title": "Reliability-aware active learning for FFLO phase spaces",
+  "external_retrieval_executed": false,
+  "fig4_panel_d_removed": true
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "asset": "thermodynamic_landscape_v4_candidate_A_integration",
+  "status": "pass",
+  "physics_recomputed": false,
+  "scientific_role": "schematic BdG free-energy basins and separately audited topology resolution",
+  "missing_labels": [],
+  "embedded_surface_master_bbox_px": [
+    533.1146065688869,
+    300.23370812591537
+  ],
+  "measured_surface_fill_ratio": 0.6627700835870203,
+  "declared_content_fill_ratio": 0.662111801242236,
+  "minimum_fill_ratio": 0.65,
+  "checks": {
+    "required_labels": true,
+    "real_surface_fill_ratio": true,
+    "declared_scientific_content_fill_ratio": true,
+    "representative_not_simultaneous": true,
+    "topology_not_from_depth": true,
+    "tfflo_gapped_bulk_with_boundary_state": true,
+    "surface_is_tightly_cropped": true,
+    "candidate_A_gate_passed": true,
+    "one_parent_fflo_sector": true,
+    "no_nonuniform_transform": true
+  },
+  "human_review_needed": true,
+  "approved_candidate": {
+    "id": "candidate_A_compact_hero",
+    "gate": "GATE_COMPACT_THERMODYNAMIC_LANDSCAPE_ASSET",
+    "state": "APPROVED",
+    "source_svg_sha256": "a5b681dade73bafe4691c9c0921993b957649c9f966c625309fad4680ae90c46"
+  }
+}

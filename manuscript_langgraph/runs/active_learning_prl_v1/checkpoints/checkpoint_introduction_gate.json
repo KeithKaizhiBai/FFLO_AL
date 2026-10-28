@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "thread_id": "active_learning_prl_v1",
+  "checkpoint_backend": "SQLiteSaver",
+  "checkpoint_database": "manuscript_langgraph/runs/active_learning_prl_v1/checkpoints/manuscript.sqlite",
+  "snapshot_config": {
+    "configurable": {
+      "thread_id": "active_learning_prl_v1",
+      "checkpoint_ns": "",
+      "checkpoint_id": "1f1a217b-d309-6304-8050-3254fb10d32e"
+    }
+  },
+  "snapshot_next": [],
+  "values": {
+    "project_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO",
+    "manuscript_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph",
+    "artifact_manifest_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/manuscript_artifact_manifest.csv",
+    "scope_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/manuscript_scope.yaml",
+    "readiness_report_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/publication_readiness_report.md",
+    "claim_registry_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/claim_registry.yaml",
+    "evidence_registry_path": "manuscript_langgraph/registries/evidence_registry.yaml",
+    "figure_registry_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/figure_registry.yaml",
+    "figure_approval_package_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/GATE_FIGURE_APPROVAL_PACKAGE",
+    "checkpoint_path": "manuscript_langgraph/runs/active_learning_prl_v1/checkpoints/manuscript.sqlite",
+    "run_id": "active_learning_prl_v1",
+    "supplement_contract_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/contracts/supplement_structure.yaml",
+    "artifact_audit_complete": true,
+    "scope_approved": true,
+    "claim_approved": true,
+    "figure_approved": true,
+    "results_human_approved": true,
+    "results_correction_approved": true,
+    "final_manuscript_approved": false,
+    "claims_frozen": true,
+    "figure_contracts_approved": true,
+    "results_claims_frozen": true,
+    "external_retrieval_approved": false,
+    "active_figure_id": "FIG-01-04-MAIN-TEXT-CONTRACTS",
+    "paragraph_metadata": [
+      {
+        "paragraph_id": "RES-FIG1-001",
+        "observation": "Method/caveat paragraph grounded in registered sources.",
+        "interpretation": "No standalone interpretation in this paragraph.",
+        "evidence_source": [
+          "E-FIG3-STRICT-DATA",
+          "E-MODEL-SPEC",
+          "E-NUMERICS-SPEC",
+          "E-STAGEIII-PASS"
+        ],
+        "figure_reference": [
+          "1"
+        ],
+        "claims_used": [
+          "CLM-2D-TOPOLOGY",
+          "CLM-ORACLE-RELIABILITY"
+        ],
+        "evidence_used": [
+          "E-FIG3-STRICT-DATA",
+          "E-MODEL-SPEC",
+          "E-NUMERICS-SPEC",
+          "E-STAGEIII-PASS"
+        ],
+        "figure_panels_cited": [
+          "1-all",
+          "1-central",
+          "1-cycle",
+          "1-oracle",
+          "1-topology"
+        ],
+        "caveats": [
+          "schematic is not numerical evidence"
+        ],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG1-002",
+        "observation": "Optimization convergence, spectral/topological trust, and numerical reliability remain explicit gates on every accepted physical observation.",
+        "interpretation": "This separation makes the reliability hierarchy an enabling component for scalable parameter-space exploration without replacing the physical solver.",
+        "evidence_source": [
+          "E-MODEL-SPEC",
+          "E-NUMERICS-SPEC",
+          "E-PHASEII-AUDIT",
+          "E-STAGEIII-PASS"
+        ],
+        "figure_reference": [
+          "1"
+        ],
+        "claims_used": [
+          "CLM-ORACLE-RELIABILITY"
+        ],
+        "evidence_used": [
+          "E-MODEL-SPEC",
+          "E-NUMERICS-SPEC",
+          "E-PHASEII-AUDIT",
+          "E-STAGEIII-PASS"
+        ],
+        "figure_panels_cited": [
+          "1-acquisition",
+          "1-all",
+          "1-next-calls",
+          "1-observation",
+          "1-reliability",
+          "1-surrogate"
+        ],
+        "caveats": [],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG2-001",
+        "observation": "The two-dimensional reconstruction begins from 512 selected exact calls, of which 506 have retained frozen labels in the endpoint (Fig.~2a). Subsequent exact calls accumulate preferentially around the visible Normal/superconducting and uniform-SC/FFLO structures rather than remaining uniformly distributed over $(k_BT/t,J_A/t)$ (Fig.~2b). The audited endpoint contains 7,434 exact observations: 1,867 Normal, 715 uniform-SC, and 4,852 FFLO labels (Fig.~2c). At the frozen endpoint, the raw phase-map change is 0.001629, the Normal--SC and uniform-SC--FFLO shifts are 0.004167 and 0, respectively, and trusted surprise is 0 for 127 trusted calls; these quantities satisfy their configured stopping rules (Fig.~2d).",
+        "interpretation": "No standalone interpretation in this paragraph.",
+        "evidence_source": [
+          "E-FIG2-STRICT-DATA",
+          "E-PHASEII-AUDIT",
+          "E-STAGEI-COLDSTART"
+        ],
+        "figure_reference": [
+          "2a",
+          "2b",
+          "2c",
+          "2d"
+        ],
+        "claims_used": [
+          "CLM-2D-THERMO",
+          "CLM-ORACLE-RELIABILITY"
+        ],
+        "evidence_used": [
+          "E-FIG2-STRICT-DATA",
+          "E-PHASEII-AUDIT",
+          "E-STAGEI-COLDSTART"
+        ],
+        "figure_panels_cited": [
+          "2a",
+          "2b",
+          "2c",
+          "2d"
+        ],
+        "caveats": [],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG2-002",
+        "observation": "Method/caveat paragraph grounded in registered sources.",
+        "interpretation": "The exact-sample map therefore supports an audited reconstruction of the two-dimensional thermodynamic structure under the registered criterion, while preserving the finite numerical frontier.",
+        "evidence_source": [
+          "E-FIG2-STRICT-DATA",
+          "E-PHASEII-AUDIT",
+          "E-PHASEII-HARD-RISK"
+        ],
+        "figure_reference": [
+          "2a",
+          "2b",
+          "2c",
+          "2d"
+        ],
+        "claims_used": [
+          "CLM-2D-THERMO",
+          "CLM-ORACLE-RELIABILITY"
+        ],
+        "evidence_used": [
+          "E-FIG2-STRICT-DATA",
+          "E-PHASEII-AUDIT",
+          "E-PHASEII-HARD-RISK"
+        ],
+        "figure_panels_cited": [
+          "2a",
+          "2b",
+          "2c",
+          "2d"
+        ],
+        "caveats": [
+          "hard-risk remains explicit and is not a phase",
+          "under the configured audit"
+        ],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG3-001",
+        "observation": "Topology is evaluated on the trusted gapped FFLO subset of the 4,345-point endpoint, yielding 3,213 eligible states separated into 2,290 cFFLO and 923 tFFLO observations (Fig.~3a). These exact labels form a connected cFFLO/tFFLO structure in the sampled $(k_BT/t,J_A/t)$ domain, with the archived $k=8$ contour marking a gap-closing transition diagnostic (Fig.~3b).",
+        "interpretation": "No standalone interpretation in this paragraph.",
+        "evidence_source": [
+          "E-FIG3-STRICT-DATA",
+          "E-STAGEIII-CONVERGENCE",
+          "E-STAGEIII-PASS"
+        ],
+        "figure_reference": [
+          "3a",
+          "3b"
+        ],
+        "claims_used": [
+          "CLM-2D-TOPOLOGY",
+          "CLM-ORACLE-RELIABILITY"
+        ],
+        "evidence_used": [
+          "E-FIG3-STRICT-DATA",
+          "E-STAGEIII-CONVERGENCE",
+          "E-STAGEIII-PASS"
+        ],
+        "figure_panels_cited": [
+          "3a",
+          "3b"
+        ],
+        "caveats": [
+          "brackets and contour are diagnostics only"
+        ],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG3-002",
+        "observation": "The configured $k=8$ audit returns Decision A, with final coverage $p_{95}=0.006185$ below the registered threshold 0.00625 and the remaining raw convergence metrics satisfying their gates (Fig.~3c,d). For the $k=6$ sensitivity setting, however, coverage $p_{95}=0.006269$ lies slightly above the same threshold (Fig.~3d).",
+        "interpretation": "Thus the topology-aware reconstruction passes its registered $k=8$ audit while retaining a small neighborhood-size sensitivity, rather than establishing that all possible topology refinements or nodal alternatives are exhausted.",
+        "evidence_source": [
+          "E-FIG3-STRICT-DATA",
+          "E-STAGEIII-CONVERGENCE"
+        ],
+        "figure_reference": [
+          "3c",
+          "3d"
+        ],
+        "claims_used": [
+          "CLM-2D-TOPOLOGY"
+        ],
+        "evidence_used": [
+          "E-FIG3-STRICT-DATA",
+          "E-STAGEIII-CONVERGENCE"
+        ],
+        "figure_panels_cited": [
+          "3c",
+          "3d"
+        ],
+        "caveats": [
+          "k=6 sensitivity deviation must remain visible",
+          "configured pass with k sensitivity"
+        ],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG4-001",
+        "observation": "Extending the sampled coordinates to $(k_BT/t,J_A/t,\\mu/t)$ produces 7,081 exact observations over the finite interval $\\mu/t\\in[-0.5,1.5]$: 2,350 Normal, 141 uniform-SC, and 4,590 FFLO states (Fig.~4a). Within the trusted FFLO-only subset, 3,145 cFFLO and 1,445 tFFLO observations provide discrete topology support rather than a fitted topology surface (Fig.~4b). Four explicit narrow fixed-$\\mu$ bins selected from the 20-row slice audit expose slice-to-slice changes in the exact thermodynamic samples without interpolating between slices (Fig.~4c).",
+        "interpretation": "Together, these point clouds and fixed-$\\mu$ slices demonstrate active-learning-enabled higher-dimensional exploration that reveals thermodynamic and topology-aware structures across the sampled domain.",
+        "evidence_source": [
+          "E-FIG4-STRICT-DATA",
+          "E-STAGEIV-AUDIT",
+          "E-STAGEIV-MU-SLICE-AUDIT"
+        ],
+        "figure_reference": [
+          "4a",
+          "4b",
+          "4c"
+        ],
+        "claims_used": [
+          "CLM-3D-EXTENSION",
+          "CLM-ORACLE-RELIABILITY"
+        ],
+        "evidence_used": [
+          "E-FIG4-STRICT-DATA",
+          "E-STAGEIV-AUDIT",
+          "E-STAGEIV-MU-SLICE-AUDIT"
+        ],
+        "figure_panels_cited": [
+          "4a",
+          "4b",
+          "4c"
+        ],
+        "caveats": [
+          "FFLO-only counts; discrete point support"
+        ],
+        "unsupported_sentence_flags": []
+      },
+      {
+        "paragraph_id": "RES-FIG4-002",
+        "observation": "The last strict audit transition nevertheless has topology-volume map change $0.002561>0.002$, surface-shift $p_{95}=0.005996>0.004167$, coverage $p_{95}=0.015318>0.00625$, trusted surprise $0.140625>0.02$, and component counts $3\\rightarrow4\\rightarrow3$ (Fig.~4d).",
+        "interpretation": "No standalone interpretation in this paragraph.",
+        "evidence_source": [
+          "E-FIG2-STRICT-DATA",
+          "E-FIG3-STRICT-DATA",
+          "E-FIG4-STRICT-DATA",
+          "E-STAGEIV-AUDIT",
+          "E-STAGEIV-MU-SLICE-AUDIT"
+        ],
+        "figure_reference": [
+          "2",
+          "3",
+          "4",
+          "4a",
+          "4b",
+          "4c",
+          "4d"
+        ],
+        "claims_used": [
+          "CLM-2D-THERMO",
+          "CLM-2D-TOPOLOGY",
+          "CLM-3D-EXTENSION"
+        ],
+        "evidence_used": [
+          "E-FIG2-STRICT-DATA",
+          "E-FIG3-STRICT-DATA",
+          "E-FIG4-STRICT-DATA",
+          "E-STAGEIV-AUDIT",
+          "E-STAGEIV-MU-SLICE-AUDIT"
+        ],
+        "figure_panels_cited": [
+          "2-all",
+          "3-all",
+          "4-all",
+          "4a",
+          "4b",
+          "4c",
+          "4d"
+        ],
+        "caveats": [
+          "strict 3D topology nonclosure",
+          "no continuous-surface or complete-atlas implication"
+        ],
+        "unsupported_sentence_flags": []
+      }
+    ],
+    "section_drafts": {
+      "results": "# Results candidate\n\n> Human-review candidate. Not scientifically frozen.\n\n## Exact physical oracle and reliability-aware exploration\n\n**[RES-FIG1-001]**\n\nFor each parameter point $x=(k_BT/t,J_A/t,\\mu/t,\\ldots)$, the exact BdG oracle constructs the spectrum and minimizes $F(\\Delta,q)$, while active learning controls only which point is evaluated next (Fig.~1). The frozen thermodynamic criterion assigns Normal states at $\\Delta=0$, uniform superconductivity at $\\Delta>0$ and $q=0$, and the FFLO sector at $\\Delta>0$ and $|q|>0$. Within trusted gapped FFLO states, the full-Brillouin-zone spectral guard and Pfaffian invariant distinguish gapped cFFLO ($\\nu=0$) from a reopened gapped tFFLO bulk ($\\nu=1$) across a bulk-gap closing; the red crossing branch denotes an in-gap boundary state, not a gapless tFFLO bulk. Figure~1 is a schematic hierarchy rather than evidence that any phase map or convergence gate has already closed.\n\n**[RES-FIG1-002]**\n\nOptimization convergence, spectral/topological trust, and numerical reliability remain explicit gates on every accepted physical observation. The surrogate and acquisition modules act on these accepted observations to rank a next exact micro-batch, but they do not assign the final thermodynamic or topological labels. This separation makes the reliability hierarchy an enabling component for scalable parameter-space exploration without replacing the physical solver.\n\n## Two-dimensional thermodynamic reconstruction\n\n**[RES-FIG2-001]**\n\nThe two-dimensional reconstruction begins from 512 selected exact calls, of which 506 have retained frozen labels in the endpoint (Fig.~2a). Subsequent exact calls accumulate preferentially around the visible Normal/superconducting and uniform-SC/FFLO structures rather than remaining uniformly distributed over $(k_BT/t,J_A/t)$ (Fig.~2b). The audited endpoint contains 7,434 exact observations: 1,867 Normal, 715 uniform-SC, and 4,852 FFLO labels (Fig.~2c). At the frozen endpoint, the raw phase-map change is 0.001629, the Normal--SC and uniform-SC--FFLO shifts are 0.004167 and 0, respectively, and trusted surprise is 0 for 127 trusted calls; these quantities satisfy their configured stopping rules (Fig.~2d).\n\n**[RES-FIG2-002]**\n\nThe 129 hard-risk calls remain a separate numerical-reliability layer, including 19 coordinate matches retained in the trusted endpoint, and are not interpreted as a fourth phase or as eliminated uncertainty. The exact-sample map therefore supports an audited reconstruction of the two-dimensional thermodynamic structure under the registered criterion, while preserving the finite numerical frontier.\n\n## Topology-resolved FFLO structure\n\n**[RES-FIG3-001]**\n\nTopology is evaluated on the trusted gapped FFLO subset of the 4,345-point endpoint, yielding 3,213 eligible states separated into 2,290 cFFLO and 923 tFFLO observations (Fig.~3a). These exact labels form a connected cFFLO/tFFLO structure in the sampled $(k_BT/t,J_A/t)$ domain, with the archived $k=8$ contour marking a gap-closing transition diagnostic (Fig.~3b). The topology authority is the full-Brillouin-zone gap/Pfaffian evidence, not the free-energy depth, the sign of $q$, or the plotted contour. Local opposite-$\\mathbb{Z}_2$ brackets and the derived contour are supporting diagnostics only; neither is identified with an exact physical boundary, and the gap closing is not a stable third phase.\n\n**[RES-FIG3-002]**\n\nThe configured $k=8$ audit returns Decision A, with final coverage $p_{95}=0.006185$ below the registered threshold 0.00625 and the remaining raw convergence metrics satisfying their gates (Fig.~3c,d). For the $k=6$ sensitivity setting, however, coverage $p_{95}=0.006269$ lies slightly above the same threshold (Fig.~3d). Thus the topology-aware reconstruction passes its registered $k=8$ audit while retaining a small neighborhood-size sensitivity, rather than establishing that all possible topology refinements or nodal alternatives are exhausted.\n\n## Higher-dimensional exploration\n\n**[RES-FIG4-001]**\n\nExtending the sampled coordinates to $(k_BT/t,J_A/t,\\mu/t)$ produces 7,081 exact observations over the finite interval $\\mu/t\\in[-0.5,1.5]$: 2,350 Normal, 141 uniform-SC, and 4,590 FFLO states (Fig.~4a). Within the trusted FFLO-only subset, 3,145 cFFLO and 1,445 tFFLO observations provide discrete topology support rather than a fitted topology surface (Fig.~4b). Four explicit narrow fixed-$\\mu$ bins selected from the 20-row slice audit expose slice-to-slice changes in the exact thermodynamic samples without interpolating between slices (Fig.~4c). Together, these point clouds and fixed-$\\mu$ slices demonstrate active-learning-enabled higher-dimensional exploration that reveals thermodynamic and topology-aware structures across the sampled domain.\n\n**[RES-FIG4-002]**\n\nThe last strict audit transition nevertheless has topology-volume map change $0.002561>0.002$, surface-shift $p_{95}=0.005996>0.004167$, coverage $p_{95}=0.015318>0.00625$, trusted surprise $0.140625>0.02$, and component counts $3\\rightarrow4\\rightarrow3$ (Fig.~4d). Accordingly, the strict three-dimensional topology convergence gates used here are not all closed. Visual continuity among the sampled slices is therefore not evidence for a continuous topology surface, and the finite-domain result does not establish an exhaustive three-dimensional phase atlas. The audited two-dimensional closure and the explicitly nonclosed three-dimensional extension therefore set distinct evidentiary limits for the present Results.\n",
+      "methods": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/methods_candidate.tex",
+      "supplement": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/supplement_candidate.tex",
+      "discussion": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/discussion_candidate.tex",
+      "outlook": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/outlook_candidate.tex"
+    },
+    "gate_results": [
+      {
+        "gate_id": "ARTIFACT_PROVENANCE_AUDIT",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/manuscript_artifact_manifest.csv"
+        ],
+        "findings": [
+          "manifest_rows=65",
+          "missing_rows=0"
+        ],
+        "next_action": "build or review the artifact manifest"
+      },
+      {
+        "gate_id": "PUBLICATION_READINESS_GATE",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/publication_gap_matrix.csv"
+        ],
+        "findings": [
+          "no blocking gap recorded"
+        ],
+        "next_action": "close blockers or narrow the approved scope"
+      },
+      {
+        "gate_id": "GATE_SCOPE_APPROVAL",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/manuscript_scope.yaml"
+        ],
+        "findings": [
+          "approved physics-first scope is machine-readable"
+        ],
+        "next_action": "review claim_registry.yaml"
+      },
+      {
+        "gate_id": "GATE_CLAIM_APPROVAL",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/claim_registry.yaml"
+        ],
+        "findings": [
+          "claim registry schema is valid"
+        ],
+        "next_action": "human reviews claim_registry.yaml"
+      },
+      {
+        "gate_id": "FIGURE_EVIDENCE_CONTRACT",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/figure_registry.yaml",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/figure_redesign_request.yaml"
+        ],
+        "findings": [
+          "figure registry and redesign requests are present"
+        ],
+        "next_action": "generate the Stage III approval package and review source gaps"
+      },
+      {
+        "gate_id": "GATE_FIGURE_APPROVAL",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/paragraph_metadata.json"
+        ],
+        "findings": [
+          "Figures 1-4 captions and Results candidates are evidence-traceable"
+        ],
+        "next_action": "human reviews the Figures 1-4 approval package"
+      },
+      {
+        "gate_id": "GATE_RESULTS_HUMAN_REVIEW",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_candidate.tex",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_candidate.md",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/figure_captions_candidate.tex",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_sentence_evidence_trace.yaml",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/figure_caption_evidence_trace.yaml",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_claim_evidence_audit.md",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_observation_interpretation_audit.md",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_forbidden_claim_audit.md",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_numerical_consistency_audit.md",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/manuscript_conflict_ledger.yaml",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/changed_files_manifest.yaml",
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_review_packet.pdf"
+        ],
+        "findings": [
+          "Results, captions, traces, and automated audits are ready for scientific review"
+        ],
+        "next_action": "explicit human approval is required before Methods"
+      },
+      {
+        "gate_id": "METHODS_WRITER_PREREQUISITES",
+        "status": "PASS",
+        "evidence": [],
+        "findings": [
+          "Methods are downstream of approved scope, claims, and figure-traced Results"
+        ],
+        "next_action": "approve scope, claims, and the vertical slice before drafting Methods"
+      },
+      {
+        "gate_id": "SUPPLEMENT_BUILDER_PREREQUISITES",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/contracts/supplement_structure.yaml"
+        ],
+        "findings": [
+          "S1-S7 structure is present"
+        ],
+        "next_action": "populate only evidence-linked Supplement sections after approvals"
+      },
+      {
+        "gate_id": "DISCUSSION_SCOPE_GUARD",
+        "status": "PASS",
+        "evidence": [],
+        "findings": [
+          "Stage IV is main-text supported-with-caveat; Stage V is Discussion-only; Stage VI is future work"
+        ],
+        "next_action": "retain claim destinations from the registry"
+      },
+      {
+        "gate_id": "GATE_RESULTS_FIG4_CAPTION_CORRECTION",
+        "status": "PASS",
+        "evidence": [
+          "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/fig4_caption_consistency_correction_proposal.md"
+        ],
+        "findings": [
+          "Figure 4 panel-C artwork and text agree"
+        ],
+        "next_action": "continue"
+      },
+      {
+        "gate_id": "INTRO_CITATION_LOOP_GATE",
+        "status": "HUMAN_WAIT",
+        "evidence": [],
+        "findings": [
+          "Results are frozen; Introduction retrieval still requires explicit external-retrieval approval",
+          "claim needs, citation requirements, bibliography audit, and retrieval plan were prepared without external access",
+          "intermediate main-text and Supplemental Material review PDFs were compiled"
+        ],
+        "next_action": "approve external retrieval separately after Results stabilization"
+      }
+    ],
+    "audit_findings": [
+      "manifest_rows=65",
+      "missing_rows=0"
+    ],
+    "next_action": "human authorizes external Introduction retrieval",
+    "workflow_status": "awaiting_introduction_retrieval_permission",
+    "results_package_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1",
+    "downstream_package_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1",
+    "methods_draft_complete": true,
+    "supplement_draft_complete": true,
+    "discussion_draft_complete": true,
+    "outlook_draft_complete": true,
+    "introduction_prerequisites_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1",
+    "results_correction_proposal_path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/fig4_caption_consistency_correction_proposal.md",
+    "metadata": {
+      "compile_results_review_pdf": true,
+      "compile_downstream_review_pdfs": true,
+      "new_physics_permission": false,
+      "external_retrieval_approved": false
+    }
+  },
+  "current_gate": "INTRO_CITATION_LOOP_GATE",
+  "resume_semantics": "After explicit external Introduction-retrieval approval, update this same thread as results_figure_consistency_gate with external_retrieval_approved=true and invoke with input=None."
+}

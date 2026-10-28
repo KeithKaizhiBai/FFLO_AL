@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 1.9952679145311079,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 24,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.7,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 2560,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.05779996802739931,
+    "rank_correlation_a0_ns": 0.3150627392134091,
+    "rank_correlation_a0_p0": 0.5396957369414648,
+    "rank_correlation_a0_ppi": 0.06230644195920953,
+    "rank_correlation_a0_uf": 0.863937434430292,
+    "rank_correlation_delta_vs_a0_gap": 0.05779996802739931,
+    "rank_correlation_delta_vs_a0_ns": 0.03582165170103779,
+    "rank_correlation_delta_vs_a0_p0": 0.2459762408103635,
+    "rank_correlation_delta_vs_a0_ppi": 0.642420864026265,
+    "rank_correlation_delta_vs_a0_uf": -0.08687156305769972,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.3508843909144469,
+    "rank_correlation_model_p0": 0.7856719777518283,
+    "rank_correlation_model_ppi": 0.7047273059854745,
+    "rank_correlation_model_uf": 0.7770658713725923,
+    "reward_sample_count": 2560,
+    "reward_sample_count_gap": 2560,
+    "reward_sample_count_ns": 2560,
+    "reward_sample_count_p0": 2560,
+    "reward_sample_count_ppi": 2560,
+    "reward_sample_count_uf": 2560,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-01-ENGINE-V3",
+  "physics_recomputed": false,
+  "card_architecture_changed": false,
+  "source_assets": [
+    {
+      "id": "central",
+      "role": "primary",
+      "adaptation": "tightly_cropped_surface_with_vector_phase_and_topology_annotations",
+      "source": "asset_versions/thermodynamic_landscape_v3/asset.svg",
+      "bbox": {
+        "x": 325,
+        "y": 150,
+        "width": 925,
+        "height": 690
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_engine_v3/asset_versions/thermodynamic_landscape_v3/asset.svg",
+      "source_sha256": "bb999873d85168243243e907a2ab7d33b0fa85e6b72bc19faf81685e5a6eae13"
+    },
+    {
+      "id": "bdg",
+      "role": "secondary",
+      "adaptation": "frozen_v2_free_energy_dominant_oracle",
+      "source": "../fig1_engine_v2/asset_versions/bdg_oracle_v2/asset.svg",
+      "bbox": {
+        "x": 1278,
+        "y": 150,
+        "width": 312,
+        "height": 215
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_engine_v2/asset_versions/bdg_oracle_v2/asset.svg",
+      "source_sha256": "a95cf03a7653157ac208706b867313caea42d5ee1dbdfe17834971ed781df835"
+    },
+    {
+      "id": "observation",
+      "role": "secondary",
+      "adaptation": "frozen_v2_aligned_physical_readout",
+      "source": "../fig1_engine_v2/asset_versions/physical_observation_v2/asset.svg",
+      "bbox": {
+        "x": 1278,
+        "y": 535,
+        "width": 312,
+        "height": 270
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_engine_v2/asset_versions/physical_observation_v2/asset.svg",
+      "source_sha256": "d2e693f0b1c30bfd67b5a8a4e63888c6631269e8f3c80c16f644020165a1cffc"
+    },
+    {
+      "id": "parameter",
+      "role": "tertiary",
+      "adaptation": "nested_editable_svg_unchanged",
+      "source": "../fig1_framework_v3/refinement_v5/assets/parameter/asset.svg",
+      "bbox": {
+        "x": 555,
+        "y": 18,
+        "width": 410,
+        "height": 112
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_framework_v3/refinement_v5/assets/parameter/asset.svg",
+      "source_sha256": "76a9b196c0a23efed73a2f728d3c564b1b051cf16e5349490828908ba7fb767c"
+    },
+    {
+      "id": "surrogate",
+      "role": "tertiary",
+      "adaptation": "nested_editable_svg_unchanged",
+      "source": "../fig1_framework_v3/refinement_v5/assets/surrogate/asset.svg",
+      "bbox": {
+        "x": 585,
+        "y": 870,
+        "width": 430,
+        "height": 150
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_framework_v3/refinement_v5/assets/surrogate/asset.svg",
+      "source_sha256": "310d766210ad9f355a178aac36f8b7fcb03a0a99b3fc618aa6490dba6b445a08"
+    },
+    {
+      "id": "acquisition",
+      "role": "tertiary",
+      "adaptation": "nested_editable_svg_unchanged",
+      "source": "../fig1_framework_v3/refinement_v5/assets/acquisition/asset.svg",
+      "bbox": {
+        "x": 22,
+        "y": 590,
+        "width": 278,
+        "height": 235
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_framework_v3/refinement_v5/assets/acquisition/asset.svg",
+      "source_sha256": "3b1f8bc8cb74c377d7fd6579b00f40ab4f70929918da0f4c78f1a74160efa215"
+    },
+    {
+      "id": "next_calls",
+      "role": "tertiary",
+      "adaptation": "nested_editable_svg_unchanged",
+      "source": "../fig1_framework_v3/refinement_v5/assets/next_calls/asset.svg",
+      "bbox": {
+        "x": 22,
+        "y": 225,
+        "width": 278,
+        "height": 192
+      },
+      "source_resolved": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig1_framework_v3/refinement_v5/assets/next_calls/asset.svg",
+      "source_sha256": "7ed5c3d1d930c41c02bcbcee286033a6080b6a251c80a048fa78cbb9a487f293"
+    },
+    {
+      "id": "reliability",
+      "role": "tertiary",
+      "adaptation": "unchanged_from_engine_v2",
+      "source": "engine_native_reliability_card",
+      "bbox": {
+        "x": 1278,
+        "y": 385,
+        "width": 312,
+        "height": 130
+      },
+      "governed_by": [
+        "constitution/arrow_rules.yaml",
+        "styles/palette.yaml",
+        "constitution/typography_rules.yaml",
+        "layout.yaml"
+      ]
+    },
+    {
+      "id": "workflow_arrows",
+      "role": "tertiary",
+      "adaptation": "canonical_main_ribbon_plus_secondary_flow_layer",
+      "source": "engine_native_canonical_profiles",
+      "governed_by": [
+        "constitution/arrow_rules.yaml",
+        "styles/palette.yaml",
+        "constitution/typography_rules.yaml",
+        "layout.yaml"
+      ]
+    }
+  ],
+  "contract_sha256": "f572d7af25a683869c0e819ab36990a30778ed4b392376e016810b7b0194d6b9",
+  "layout_sha256": "aaeda13d0b25564b1331acaf59a7a6d5f113e1c54ddab9030eb01c7e59df4530",
+  "rule_hashes": {
+    "principles": "2392d3688b0aab686731a73f4578b0bf69e5f9913a4f71305e4d451ef5b97d30",
+    "visual_narrative": "e450dcfe2acb35f1d0b099aefc9fe10f814c86ef8dceeb06a220dc4e939b99ff",
+    "typography": "57d0935ebb8d999e87031d465e127795f0fdd60567e287cc2b6a97469b703fde",
+    "layout": "c01343ad2499e0e297d7f77e38a7418a6d4a1d6b3959a32a125d0bdfecb8efbc",
+    "spacing": "dd3ce1607cdb78b49fea5322c64eee2e25f0181ac9bb230954dd7d8e4d9b36bf",
+    "color": "e645a493410217480d72f45d6935bb5f47fdbffc45b961b267eeeadba5ca2c78",
+    "arrow": "2e129ec90aae972cd28dd535116abe41fcb6d5f0b851eef0e985548d30ff49e0",
+    "annotation": "b86f4a0726e864d932e524e7ebaef4a31b3301a6d2df878fce2f324e670f40e3",
+    "asset": "396a600e8c4c798a6bfb21f19b394bfe2dd8acbb496d7a6c6d6a7aeff2d1cd38",
+    "validation": "9b9416de08e8beaee0efd04930a54e24b4d0508e548c307b22e603bd52305eff",
+    "enforcement": "d9b992c5e9de483caa39dec68260575c6b6c55771f371493b9c85846d48d5a1f",
+    "palette": "a98212532e4537716cf4807baef1ffd65c404419bd17301449abe56b19ac69f6",
+    "fonts": "bee477289d58a97fdcdf1969b0cf9f67568a086862bd2453b16e9c51911a7b14",
+    "svg_style": "fa278e57ad4f04d9aeca7b769bb2b2b1fa858accdeb836b33bf858c64f0778bb"
+  },
+  "generated_at": "2026-08-25T16:18:56.376757+00:00"
+}

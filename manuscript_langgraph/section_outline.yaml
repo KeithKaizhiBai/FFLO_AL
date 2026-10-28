@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "story": "Reliability-aware active learning enables efficient reconstruction of thermodynamic, topology-resolved, and higher-dimensional FFLO phase structures using an audited BdG oracle.",
+  "generation_order": ["Results", "Methods", "Supplement", "Discussion", "Introduction", "Abstract", "LaTeX"],
+  "current_stop": "READY_TO_RESUME_RESULTS_BY_FIGURE_WORKFLOW",
+  "sections": [
+    {
+      "section_id": "RESULTS-1",
+      "title": "Reliability-aware active-learning framework",
+      "primary_claims": ["CLM-ORACLE-RELIABILITY"],
+      "evidence_ids": ["E-MODEL-SPEC", "E-NUMERICS-SPEC", "E-STAGEIII-PASS"],
+      "figures": ["FIG-01-PIPELINE"],
+      "allowed_wording": ["auditable exact-oracle hierarchy", "ML schedules exact BdG calls"],
+      "caveats": ["finite-resolution effects remain", "unresolved is not a physical phase"],
+      "prohibited": ["mathematically exact", "ML replaces BdG"]
+    },
+    {
+      "section_id": "RESULTS-2",
+      "title": "Two-dimensional thermodynamic reconstruction",
+      "primary_claims": ["CLM-2D-THERMO"],
+      "evidence_ids": ["E-STAGEI-COLDSTART", "E-PHASEII-AUDIT", "E-PHASEII-HARD-RISK"],
+      "figures": ["FIG-02-THERMO"],
+      "allowed_wording": ["configured thermodynamic closure", "boundary-focused sampling"],
+      "caveats": ["hard-risk uncertainty layer remains"],
+      "prohibited": ["all numerical uncertainty eliminated"]
+    },
+    {
+      "section_id": "RESULTS-3",
+      "title": "Topology-aware cFFLO/tFFLO discovery",
+      "primary_claims": ["CLM-2D-TOPOLOGY"],
+      "evidence_ids": ["E-STAGEIII-PASS", "E-STAGEIII-CONVERGENCE"],
+      "figures": ["FIG-03-STAGEIII-TOPOLOGY"],
+      "allowed_wording": ["Decision A at configured k=8", "support-restricted topology contour"],
+      "caveats": ["k=6 coverage sensitivity is slightly above threshold", "brackets are support diagnostics"],
+      "prohibited": ["Delaunay edges are the physical boundary", "all topology refinement exhausted"]
+    },
+    {
+      "section_id": "RESULTS-4",
+      "title": "Three-dimensional active-learning exploration",
+      "primary_claims": ["CLM-3D-EXTENSION"],
+      "evidence_ids": ["E-STAGEIV-AUDIT", "E-STAGEIV-MU-SLICE-AUDIT", "E-STAGEIV-CURVE-FIX"],
+      "figures": ["FIG-04-STAGEIV-3D-EXTENSION"],
+      "allowed_wording": ["higher-dimensional exploration", "three-dimensional extension", "active-learning-enabled parameter-space exploration"],
+      "caveats": ["strict formal 3D topology gates were not all closed", "not a complete converged 3D topology atlas"],
+      "prohibited": ["complete 3D phase diagram", "fully converged 3D topology surface"]
+    },
+    {
+      "section_id": "DISCUSSION",
+      "title": "Scope, limitations, and adaptive discovery",
+      "primary_claims": ["CLM-LEARNED-ACQUISITION"],
+      "evidence_ids": ["E-STAGEV-MATCHED"],
+      "figures": [],
+      "allowed_wording": ["exploratory learned acquisition", "superiority not established"],
+      "caveats": ["coverage and surprise gates remained open"],
+      "prohibited": ["learned acquisition superiority"]
+    },
+    {
+      "section_id": "OUTLOOK",
+      "title": "Toward learned physical world models",
+      "primary_claims": ["CLM-GROUNDUP-WORLD-MODEL"],
+      "evidence_ids": ["E-STAGEVI0", "E-STAGEVI0-2"],
+      "figures": [],
+      "allowed_wording": ["future direction", "spectral state representation remains unvalidated"],
+      "caveats": ["EIG-ready uncertainty is not validated"],
+      "prohibited": ["validated EIG", "production-ready world model"]
+    }
+  ]
+}

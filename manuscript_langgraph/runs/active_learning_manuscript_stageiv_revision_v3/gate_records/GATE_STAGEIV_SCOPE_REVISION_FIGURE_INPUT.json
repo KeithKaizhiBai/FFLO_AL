@@ -1,0 +1,18 @@
+{
+  "gate_id": "GATE_STAGEIV_SCOPE_REVISION_FIGURE_INPUT",
+  "status": "PASS",
+  "figure_engine_reports": [
+    "FIG-04-STAGEIV-3D-STRICT-V2",
+    "FIG-04-STAGEIV-3D-STRICT-V2",
+    "SM-FIG-STAGEIV-NUMERICAL-DIAGNOSTICS-V1",
+    "SM-FIG-STAGEIV-NUMERICAL-DIAGNOSTICS-V1"
+  ],
+  "threshold_based_physical_convergence_claim_authorized": false,
+  "panel_d_authorized": false,
+  "main_figure_panels": [
+    "a",
+    "b",
+    "c"
+  ],
+  "supplement_mode": "raw_numerical_diagnostics_without_threshold_lines"
+}

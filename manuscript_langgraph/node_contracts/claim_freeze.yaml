@@ -1,0 +1,19 @@
+{
+  "node_id": "claim_freeze",
+  "purpose": "claim freeze",
+  "inputs": [
+    "approved_scope",
+    "claim_registry"
+  ],
+  "outputs": [
+    "frozen_claim_ids"
+  ],
+  "prerequisites": [
+    "publication_readiness_gate"
+  ],
+  "forbidden_actions": [
+    "claim status changes require human approval"
+  ],
+  "gates": ["GATE_SCOPE_APPROVAL", "GATE_CLAIM_APPROVAL"],
+  "failure_behavior": "stop at the first unresolved human gate; never promote a claim automatically"
+}

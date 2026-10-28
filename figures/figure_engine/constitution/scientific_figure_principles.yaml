@@ -1,0 +1,75 @@
+schema_version: 1
+rule_set: scientific_figure_principles
+authority: canonical
+
+mission:
+  statement: >-
+    Produce publication-quality scientific figures whose visual hierarchy is
+    determined by the scientific claim and whose evidence remains traceable to
+    declared data or clearly marked schematic generators.
+  priorities:
+    - physical_meaning
+    - evidential_clarity
+    - print_readability
+    - reproducibility
+    - visual_consistency
+
+required_questions:
+  - what_is_the_primary_scientific_object
+  - what_is_the_supporting_evidence
+  - what_is_auxiliary_information
+
+hierarchy:
+  roles: [primary, secondary, tertiary]
+  primary:
+    requirement: largest_visual_weight
+    examples: [phase_map, topology_map, thermodynamic_landscape, slice_atlas]
+  secondary:
+    requirement: supports_primary_claim_without_competing
+    examples: [convergence_plot, exact_oracle, boundary_support, physical_observation]
+  tertiary:
+    requirement: visually_subordinate_or_moved_to_caption_or_supplement
+    examples: [metadata, audit_notes, provenance, method_detail, workflow_scheduler]
+  no_equal_weight_default: true
+
+physics_first:
+  enabled: true
+  rule: scientific_result_precedes_computational_procedure
+  forbidden_patterns:
+    - workflow_larger_than_physical_result
+    - machine_learning_presented_as_physics_solver
+    - audit_metadata_dominates_artwork
+
+evidence:
+  data_backed_assets:
+    require_declared_sources: true
+    require_reproducibility_metadata: true
+  schematic_assets:
+    require_schematic_label_in_contract: true
+    may_not_be_used_as_quantitative_evidence: true
+  physical_definitions:
+    source_of_truth:
+      - MODEL_SPEC.md
+      - docs/NUMERICS_SPEC.md
+      - docs/DECISIONS.md
+
+governance:
+  contract_before_drawing: true
+  validate_before_delivery: true
+  automated_pass_is_not_human_approval: true
+  preserve_previous_versions: true
+  no_silent_physics_change: true
+  no_silent_visual_heuristic_as_physics_criterion: true
+
+artwork_exclusions:
+  must_not_dominate:
+    - legends
+    - technical_notes
+    - provenance
+    - validation_text
+    - archive_metadata
+  preferred_locations:
+    provenance: regeneration_manifest
+    limitations: caption_or_supplement
+    validation: companion_report
+

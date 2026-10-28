@@ -1,0 +1,13 @@
+{
+  "phase": 5,
+  "status": "pass",
+  "graph_id": "evidence_first_prl_workflow",
+  "runtime": "langgraph",
+  "node_count": 15,
+  "checkpoint_backend": "SQLiteSaver",
+  "results_paragraphs_traced": 4,
+  "current_stop": "GATE_FIGURE_APPROVAL",
+  "figure_gate_status": "HUMAN_WAIT",
+  "figure_auto_approved": false,
+  "external_retrieval": false
+}

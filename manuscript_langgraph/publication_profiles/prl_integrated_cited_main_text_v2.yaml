@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "profile_id": "PRL_INTEGRATED_CITED_MAIN_TEXT_V2",
+  "variant_id": "PRL_INTEGRATED_CITED_MAIN_TEXT_V2",
+  "run_id": "active_learning_prl_integrated_cited_v2",
+  "parent_run_id": "active_learning_prl_integrated_cited_v1",
+  "scientific_content_authority": "active_learning_prl_integrated_v1",
+  "literature_retrieval_authorized": true,
+  "literature_scope": [
+    "finite-momentum_FFLO_pairing_and_platforms",
+    "altermagnetism_and_superconductivity",
+    "finite-q_and_one-dimensional_topological_superconductivity",
+    "active_learning_and_scientific_machine_learning_context"
+  ],
+  "citation_policy": {
+    "target_reference_count": 50,
+    "admissible_reference_count_range": [45, 55],
+    "tiered_admission": true,
+    "strong_claims_require_primary_or_authoritative_support": true,
+    "contextual_sources_may_use_verified_crossref_doi_metadata": true,
+    "project_results_use_internal_frozen_evidence": true,
+    "search_snippet_citations_forbidden": true,
+    "uncited_bibliography_padding_forbidden": true,
+    "unsupported_novelty_claims_forbidden": true,
+    "doi_and_official_url_required_when_available": true
+  },
+  "standalone_methods_section": false,
+  "standalone_results_section": false,
+  "standalone_outlook_section": false,
+  "caption_source": "frozen_approved_captions",
+  "frozen_figures_modified": false,
+  "frozen_results_modified": false,
+  "target_journal": "undecided",
+  "working_layout": "PRL-style REVTeX",
+  "human_approval": "pending"
+}

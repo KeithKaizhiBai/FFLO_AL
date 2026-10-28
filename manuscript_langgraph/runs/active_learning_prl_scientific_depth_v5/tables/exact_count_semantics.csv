@@ -1,0 +1,3 @@
+stage,selected_call_records,unique_selected_coordinates,unique_exact_endpoint_coordinates,training_eligible_records,trusted_exact_records,selected_without_endpoint_record
+I,8192,7305,6880,6880,6104,425
+II,9216,7885,7434,7434,6598,451

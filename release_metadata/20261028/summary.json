@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-28",
+  "mode": "apply",
+  "status": "local_copy_complete_not_committed_or_uploaded",
+  "source_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO",
+  "checkout": "/private/tmp/fflo_github_upload_20261028",
+  "selected_files": 3672,
+  "selected_bytes": 323364046,
+  "copy_files": 2,
+  "copy_bytes": 671756,
+  "groups": {
+    "root_source": {
+      "files": 9,
+      "bytes": 166752
+    },
+    "documentation": {
+      "files": 150,
+      "bytes": 1444343
+    },
+    "historical_archive_manifest": {
+      "files": 8,
+      "bytes": 19518917
+    },
+    "historical_scientific_code": {
+      "files": 514,
+      "bytes": 9658021
+    },
+    "scientific_data": {
+      "files": 1061,
+      "bytes": 68789904
+    },
+    "stage_v_endpoint": {
+      "files": 6,
+      "bytes": 11832836
+    },
+    "figure_builders": {
+      "files": 17,
+      "bytes": 156375
+    },
+    "figure_engine_and_assets": {
+      "files": 482,
+      "bytes": 59714404
+    },
+    "program": {
+      "files": 197,
+      "bytes": 3552892
+    },
+    "manuscript_workflow": {
+      "files": 222,
+      "bytes": 23473819
+    },
+    "recovered_evidence": {
+      "files": 277,
+      "bytes": 35672956
+    },
+    "manuscript_runs": {
+      "files": 126,
+      "bytes": 261171
+    },
+    "manuscript_variants": {
+      "files": 132,
+      "bytes": 665906
+    },
+    "current_manuscript": {
+      "files": 60,
+      "bytes": 13812333
+    },
+    "immutable_parent_output": {
+      "files": 232,
+      "bytes": 63760665
+    },
+    "exploratory_world_model": {
+      "files": 179,
+      "bytes": 10882752
+    }
+  },
+  "skipped_counts": {
+    "cache_or_build_directory": 33,
+    "outside_suffix_allowlist": 156,
+    "duplicate_archive": 8,
+    "macos_metadata": 7,
+    "cluster_access_document": 3,
+    "cache_or_checkpoint": 1,
+    "large_stage_v_history": 2
+  },
+  "missing_allowlist_roots": [],
+  "secret_scan": "no_obvious_pattern_hits_not_a_security_guarantee",
+  "deletions": 0,
+  "git_actions": false,
+  "network_actions": false,
+  "physics_runs": false,
+  "limitations": [
+    "Stage V supplemental downloads include endpoints and compact histories only; intermediate cumulative CSVs are not included by this allowlist. Stage VI sequential replay therefore is not fully reproducible from this update alone.",
+    "Stage V learned acquisition and Stage VI world-model code are exploratory, not evidence of learned-acquisition superiority or validated EIG.",
+    "Historical archive status manifests may predate the separate V4/VI exports. Current endpoint inclusions do not rewrite those historical records.",
+    "Some Figure Engine contracts retain absolute historical paths. Upload does not establish cross-machine engine regeneration or per-run executable binding.",
+    "Existing checkout files outside this allowlist are not deleted or scanned by this script. The final staged Git diff needs a separate review.",
+    "v7/v8 parent output trees deliberately retain all non-sensitive files, including small source ZIPs and generated files, to preserve exact parent hash guards."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-03",
+  "status": "pass",
+  "physics_recomputed": false,
+  "checks_passed": 6,
+  "checks_total": 6,
+  "checks": [
+    {
+      "name": "endpoint_hash",
+      "passed": true,
+      "detail": "dataset_iter018.npz"
+    },
+    {
+      "name": "trusted_FFLO_count",
+      "passed": true,
+      "detail": "expected 3213"
+    },
+    {
+      "name": "topology_counts",
+      "passed": true,
+      "detail": "expected 2290/923"
+    },
+    {
+      "name": "final_boundary_rows",
+      "passed": true,
+      "detail": "iteration 18 archived geometry"
+    },
+    {
+      "name": "k8_pass_k6_caveat",
+      "passed": true,
+      "detail": "k=8 below and k=6 above threshold"
+    },
+    {
+      "name": "no_physics_recompute",
+      "passed": true,
+      "detail": "direct frozen fields and archived audit tables only"
+    }
+  ]
+}

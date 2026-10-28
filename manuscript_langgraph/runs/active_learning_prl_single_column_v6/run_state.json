@@ -1,0 +1,12 @@
+{
+  "gate_id": "GATE_SINGLE_COLUMN_FIGURE_PLACEMENT_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "run_id": "active_learning_prl_single_column_v6",
+  "parent_run_id": "active_learning_prl_scientific_depth_v5",
+  "selected_layout": "barrier",
+  "manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_scientific_depth_single_column_v6/manuscript_single_column_candidate.pdf",
+  "review_package_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_scientific_depth_single_column_v6/single_column_placement_review.pdf",
+  "scientific_freeze": false,
+  "publication_freeze": false,
+  "submission_ready": false
+}

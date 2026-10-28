@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 2.527839837432282,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 34,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.021875,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 3200,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.0377685758995216,
+    "rank_correlation_a0_ns": 0.2903581549595113,
+    "rank_correlation_a0_p0": 0.5114367963177717,
+    "rank_correlation_a0_ppi": 0.06857526639343557,
+    "rank_correlation_a0_uf": 0.8607208197469344,
+    "rank_correlation_delta_vs_a0_gap": 0.0377685758995216,
+    "rank_correlation_delta_vs_a0_ns": -0.03695378034793023,
+    "rank_correlation_delta_vs_a0_p0": 0.2802268553941605,
+    "rank_correlation_delta_vs_a0_ppi": 0.6566729316217724,
+    "rank_correlation_delta_vs_a0_uf": -0.13135723414194156,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.25340437461158105,
+    "rank_correlation_model_p0": 0.7916636517119322,
+    "rank_correlation_model_ppi": 0.725248198015208,
+    "rank_correlation_model_uf": 0.7293635856049928,
+    "reward_sample_count": 3200,
+    "reward_sample_count_gap": 3200,
+    "reward_sample_count_ns": 3200,
+    "reward_sample_count_p0": 3200,
+    "reward_sample_count_ppi": 3200,
+    "reward_sample_count_uf": 3200,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

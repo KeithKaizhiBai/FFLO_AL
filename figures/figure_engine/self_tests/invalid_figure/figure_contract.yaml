@@ -1,0 +1,59 @@
+schema_version: 2
+figure_id: ENGINE-SELFTEST-INVALID
+figure_type: manuscript
+template: schematic_template
+scientific_message: Synthetic fixture proving that hard figure-engine constraints reject known failure modes.
+visual_message: Synthetic physical subobject must dominate its supporting workflow.
+primary_object: {id: primary_card, asset_type: workflow_schematic, scientific_role: synthetic_primary, visual_role: primary}
+primary_visual_object: {id: primary_card, scientific_role: synthetic_scientific_subobject, expected_rank: 1}
+secondary_objects:
+  - {id: secondary_card, asset_type: workflow_schematic, scientific_role: synthetic_support, visual_role: secondary}
+tertiary_information: []
+secondary_visual_objects: [supporting_evidence]
+tertiary_visual_objects: []
+reading_order: [primary_card, supporting_evidence]
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    supporting_evidence: [secondary_card]
+  scientific_asset_fill_ratio_audits:
+    - {id: synthetic_surface_fill, object_id: tiny_landscape, content_bbox_field: scientific_content_bbox, minimum: 0.65, severity: hard_fail}
+saliency_expectation: {method: blurred_region_visual_mass, expected_ranking: [primary_card, supporting_evidence], severity: warning}
+forbidden_visual_priorities: [workflow_before_physics]
+data_sources: [synthetic_validator_fixture_only]
+assets:
+  - {id: primary_card, type: workflow_schematic, source: invalid_figure.svg, schematic: true, bbox: primary_card}
+  - {id: secondary_card, type: workflow_schematic, source: invalid_figure.svg, schematic: true, bbox: secondary_card}
+layout:
+  canvas: {viewbox: [0, 0, 400, 240], print_mm: [178.0, 106.8]}
+  template_profile: schematic
+  primary_area_fraction_min: 0.55
+  bounding_boxes: invalid_geometry.json
+  alignment_anchors: [synthetic_canvas]
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements:
+    - {id: tiny_primary_scientific_object, object_id: tiny_landscape, reference: primary_card, minimum_fraction: 0.30}
+    - {id: narrative_primary_area, object_id: primary_card, reference: canvas, minimum_fraction: 0.10}
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {primary: physical, support: learning}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+text_budget: {maximum_words_in_artwork: 30, maximum_words_per_panel: 15, minimum_font_size_pt: 7.0, move_excess_to: caption}
+required_elements: [synthetic_primary]
+required_labels: [Invalid validator fixture]
+forbidden_elements: [text_overlap, condensed_font, card_overlap, constant_width_main_arrow]
+forbidden_claims: [ML replaces the solver]
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: false
+  require_png_preview: false
+  require_grayscale_review: false
+  require_engine_preflight: false
+  strict_palette: true
+provenance: {physics_recomputed: false, parameters_recorded: true, commit_hash_when_available: false}
+approval: {gate: ENGINE_SELFTEST, state: HUMAN_WAIT}

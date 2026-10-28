@@ -1,0 +1,4 @@
+ensemble: 5
+epochs: 120
+probe: 50000
+blocked_by_artifact_gate: true

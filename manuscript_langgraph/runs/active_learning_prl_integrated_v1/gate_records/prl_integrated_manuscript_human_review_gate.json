@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_PRL_INTEGRATED_MANUSCRIPT_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "decision": "pending_human_review",
+  "candidate_pdf": "output/pdf/manuscript_prl_integrated_v1/manuscript_prl_integrated_candidate.pdf",
+  "candidate_sha256": "5846a2b4ec76a25e4824a012aa45f8451a92ccf1d743e5c97b61576b452af222",
+  "scientific_freeze": false,
+  "publication_freeze": false,
+  "final_manuscript_approved": false,
+  "external_retrieval_executed": false,
+  "physics_recomputed": false
+}

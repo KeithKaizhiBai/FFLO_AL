@@ -29,6 +29,9 @@ class StopConfig:
     coverage_tol: float | None = None
     allow_missing_boundary: bool = False
     required_pass_count: int = 4
+    stop_surprise_mode: str = "all_selected"
+    trusted_surprise_min_denominator: int = 64
+    trusted_surprise_min_fraction: float = 0.25
 
 
 def dense_grid_spacing_norm(cfg: ActiveLearningConfig) -> float:
@@ -194,34 +197,185 @@ def boundary_shift(
     }
 
 
-def label_surprise_rate(iter_dir: Path, iteration: int, cfg: ActiveLearningConfig) -> tuple[float | None, bool]:
+def _bool_from_exact(data: dict[str, np.ndarray], key: str, n: int, default: bool) -> np.ndarray:
+    if key not in data:
+        return np.full(n, bool(default), dtype=bool)
+    arr = np.asarray(data[key])
+    if arr.ndim == 0:
+        return np.full(n, bool(arr.item()), dtype=bool)
+    if arr.shape[0] != n:
+        return np.full(n, bool(default), dtype=bool)
+    return arr.astype(bool)
+
+
+def _exact_phase_rows(iter_dir: Path, iteration: int, cfg: ActiveLearningConfig) -> pd.DataFrame | None:
     selected_path = iter_dir / "selected_points_by_pool.csv"
     exact_path = iter_dir / f"exact_merged_iter{iteration:03d}.npz"
     if not selected_path.exists() or not exact_path.exists():
-        return None, False
+        return None
     selected = pd.read_csv(selected_path)
     if selected.empty or "predicted_phase_before_exact" not in selected:
-        return None, False
+        return None
     with np.load(exact_path, allow_pickle=False) as z:
         if "kT" not in z.files or "JA" not in z.files or "delta_opt" not in z.files or "q_opt" not in z.files:
-            return None, False
-        exact_phase = phase_label(z["delta_opt"], z["q_opt"], cfg.delta_eps, cfg.q_eps)
-        exact_keys = {
-            (round(float(k), 10), round(float(j), 10)): int(p)
-            for k, j, p in zip(z["kT"], z["JA"], exact_phase, strict=False)
+            return None
+        data = {k: z[k].copy() for k in z.files}
+    n = int(np.asarray(data["kT"]).shape[0])
+    if n <= 0:
+        return None
+    exact_phase = phase_label(data["delta_opt"], data["q_opt"], cfg.delta_eps, cfg.q_eps)
+    exact_rows: dict[tuple[float, float], dict[str, Any]] = {}
+    trusted_exact = _bool_from_exact(data, "trusted_exact", n, True)
+    training_eligible = _bool_from_exact(data, "training_eligible_exact", n, True)
+    rerun_required = _bool_from_exact(
+        data,
+        "rerun_required",
+        n,
+        False,
+    ) | _bool_from_exact(data, "needs_rerun_exact", n, False)
+    q_unresolved = _bool_from_exact(data, "q_unresolved", n, False)
+    delta_unresolved = _bool_from_exact(data, "delta_unresolved", n, False)
+    q_expanded = _bool_from_exact(data, "q_expanded", n, False)
+    for idx, (k, j, p) in enumerate(zip(data["kT"], data["JA"], exact_phase, strict=False)):
+        exact_rows[(round(float(k), 10), round(float(j), 10))] = {
+            "exact_phase": int(p),
+            "trusted_exact": bool(trusted_exact[idx]),
+            "training_eligible_exact": bool(training_eligible[idx]),
+            "rerun_required": bool(rerun_required[idx]),
+            "q_unresolved": bool(q_unresolved[idx]),
+            "delta_unresolved": bool(delta_unresolved[idx]),
+            "q_expanded": bool(q_expanded[idx]),
         }
-    mismatches = 0
-    matched = 0
+
+    rows: list[dict[str, Any]] = []
     for _, row in selected.iterrows():
         key = (round(float(row["kT"]), 10), round(float(row["JA"]), 10))
-        if key not in exact_keys:
+        exact = exact_rows.get(key)
+        if exact is None:
             continue
         pred = int(row["predicted_phase_before_exact"])
-        mismatches += int(pred != exact_keys[key])
-        matched += 1
-    if matched == 0:
-        return None, False
-    return float(mismatches / matched), True
+        out = {
+            "kT": float(row["kT"]),
+            "JA": float(row["JA"]),
+            "predicted_phase": pred,
+            **exact,
+        }
+        out["surprise"] = bool(pred != int(exact["exact_phase"]))
+        rows.append(out)
+    if not rows:
+        return None
+    return pd.DataFrame(rows)
+
+
+def _rate_from_mask(rows: pd.DataFrame, mask: np.ndarray) -> dict[str, Any]:
+    mask = np.asarray(mask, dtype=bool)
+    n_total = int(rows.shape[0])
+    n_den = int(np.sum(mask))
+    n_surprise = int(np.sum(rows.loc[mask, "surprise"].to_numpy(dtype=bool))) if n_den else 0
+    rate = float(n_surprise / n_den) if n_den else None
+    return {
+        "rate": rate,
+        "available": bool(n_den > 0),
+        "n_denominator": n_den,
+        "n_surprise": n_surprise,
+        "denominator_fraction_selected": float(n_den / n_total) if n_total else None,
+    }
+
+
+def label_surprise_metrics(
+    iter_dir: Path,
+    iteration: int,
+    cfg: ActiveLearningConfig,
+    stop_cfg: StopConfig | None = None,
+) -> dict[str, Any]:
+    rows = _exact_phase_rows(iter_dir, iteration, cfg)
+    if rows is None or rows.empty:
+        empty_metric = {
+            "rate": None,
+            "available": False,
+            "n_denominator": 0,
+            "n_surprise": 0,
+            "denominator_fraction_selected": None,
+        }
+        return {
+            "selected_count_matched": 0,
+            "all_selected": dict(empty_metric),
+            "trusted": dict(empty_metric),
+            "hard_risk": dict(empty_metric),
+            "trusted_surprise_denominator_valid": False,
+            "trusted_surprise_min_denominator": int(
+                stop_cfg.trusted_surprise_min_denominator if stop_cfg is not None else 0
+            ),
+            "trusted_surprise_min_fraction": float(
+                stop_cfg.trusted_surprise_min_fraction if stop_cfg is not None else 0.0
+            ),
+            "trusted_fraction_selected": None,
+            "hard_risk_fraction_selected": None,
+            "q_unresolved_count": 0,
+            "delta_unresolved_count": 0,
+            "rerun_required_count": 0,
+            "numerical_frontier_status": "insufficient_data",
+        }
+
+    trusted_mask = (
+        rows["trusted_exact"].to_numpy(dtype=bool)
+        & rows["training_eligible_exact"].to_numpy(dtype=bool)
+        & ~rows["rerun_required"].to_numpy(dtype=bool)
+        & ~rows["q_unresolved"].to_numpy(dtype=bool)
+        & ~rows["delta_unresolved"].to_numpy(dtype=bool)
+    )
+    hard_risk_mask = (
+        rows["rerun_required"].to_numpy(dtype=bool)
+        | ~rows["trusted_exact"].to_numpy(dtype=bool)
+        | ~rows["training_eligible_exact"].to_numpy(dtype=bool)
+        | rows["q_unresolved"].to_numpy(dtype=bool)
+        | rows["delta_unresolved"].to_numpy(dtype=bool)
+    )
+    all_mask = np.ones(rows.shape[0], dtype=bool)
+    all_metric = _rate_from_mask(rows, all_mask)
+    trusted_metric = _rate_from_mask(rows, trusted_mask)
+    hard_metric = _rate_from_mask(rows, hard_risk_mask)
+
+    min_den = int(stop_cfg.trusted_surprise_min_denominator) if stop_cfg is not None else 0
+    min_frac = float(stop_cfg.trusted_surprise_min_fraction) if stop_cfg is not None else 0.0
+    trusted_denominator_valid = bool(
+        trusted_metric["available"]
+        and int(trusted_metric["n_denominator"]) >= min_den
+        and (
+            trusted_metric["denominator_fraction_selected"] is not None
+            and float(trusted_metric["denominator_fraction_selected"]) >= min_frac
+        )
+    )
+    q_unresolved_count = int(np.sum(rows["q_unresolved"].to_numpy(dtype=bool)))
+    delta_unresolved_count = int(np.sum(rows["delta_unresolved"].to_numpy(dtype=bool)))
+    rerun_required_count = int(np.sum(rows["rerun_required"].to_numpy(dtype=bool)))
+    if q_unresolved_count > 0 or delta_unresolved_count > 0:
+        frontier_status = "unresolved"
+    elif int(hard_metric["n_denominator"]) > 0:
+        frontier_status = "active"
+    else:
+        frontier_status = "closed"
+    return {
+        "selected_count_matched": int(rows.shape[0]),
+        "all_selected": all_metric,
+        "trusted": trusted_metric,
+        "hard_risk": hard_metric,
+        "trusted_surprise_denominator_valid": trusted_denominator_valid,
+        "trusted_surprise_min_denominator": min_den,
+        "trusted_surprise_min_fraction": min_frac,
+        "trusted_fraction_selected": trusted_metric["denominator_fraction_selected"],
+        "hard_risk_fraction_selected": hard_metric["denominator_fraction_selected"],
+        "q_unresolved_count": q_unresolved_count,
+        "delta_unresolved_count": delta_unresolved_count,
+        "rerun_required_count": rerun_required_count,
+        "numerical_frontier_status": frontier_status,
+    }
+
+
+def label_surprise_rate(iter_dir: Path, iteration: int, cfg: ActiveLearningConfig) -> tuple[float | None, bool]:
+    metrics = label_surprise_metrics(iter_dir, iteration, cfg)
+    all_metric = metrics["all_selected"]
+    return all_metric["rate"], bool(all_metric["available"])
 
 
 def selected_a0_mean(iter_dir: Path) -> tuple[float | None, bool]:
@@ -353,7 +507,23 @@ def evaluate_stop(
     map_change, map_available = phase_map_change(current_monitor, previous_monitor)
     shift_normal = boundary_shift(current_monitor, previous_monitor, "normal_sc", cfg)
     shift_fflo = boundary_shift(current_monitor, previous_monitor, "uniform_fflo", cfg)
-    surprise, surprise_available = label_surprise_rate(iter_dir, iteration, cfg)
+    surprise_layers = label_surprise_metrics(iter_dir, iteration, cfg, stop_cfg)
+    all_surprise = surprise_layers["all_selected"]
+    trusted_surprise = surprise_layers["trusted"]
+    hard_risk_surprise = surprise_layers["hard_risk"]
+    stop_surprise_mode = str(stop_cfg.stop_surprise_mode)
+    if stop_surprise_mode == "all_selected":
+        surprise = all_surprise["rate"]
+        surprise_available = bool(all_surprise["available"])
+        surprise_denominator_valid = surprise_available
+        surprise_condition_name = "label_surprise_all_selected"
+    elif stop_surprise_mode == "trusted":
+        surprise = trusted_surprise["rate"]
+        surprise_available = bool(trusted_surprise["available"])
+        surprise_denominator_valid = bool(surprise_layers["trusted_surprise_denominator_valid"])
+        surprise_condition_name = "label_surprise_trusted"
+    else:
+        raise ValueError("stop_surprise_mode must be 'all_selected' or 'trusted'.")
     a0_mean, a0_available = selected_a0_mean(iter_dir)
     baseline = _selected_a0_baseline(history, a0_mean, stop_cfg)
     if a0_mean is not None and baseline is not None and baseline > 0.0:
@@ -371,7 +541,7 @@ def evaluate_stop(
     c1 = _condition(map_change, map_available, stop_cfg.map_tol)
     c2 = _condition(shift_normal["value"], bool(shift_normal["available"]), boundary_shift_tol, stop_cfg.allow_missing_boundary)
     c3 = _condition(shift_fflo["value"], bool(shift_fflo["available"]), boundary_shift_tol, stop_cfg.allow_missing_boundary)
-    c4 = _condition(surprise, surprise_available, stop_cfg.surprise_tol)
+    c4 = bool(surprise_denominator_valid and _condition(surprise, surprise_available, stop_cfg.surprise_tol))
     q_ok = _condition(rates["q_edge_trigger_rate"], bool(rates["q_edge_available"]), stop_cfg.qedge_rate_tol)
     rerun_ok = _condition(rates["rerun_required_rate"], bool(rates["rerun_available"]), stop_cfg.rerun_rate_tol)
     c5 = _condition(coverage, coverage_available, coverage_tol, stop_cfg.allow_missing_boundary)
@@ -427,7 +597,11 @@ def evaluate_stop(
         "phase_map_change": map_change,
         "boundary_shift_normal_sc": shift_normal["value"],
         "boundary_shift_uniform_fflo": shift_fflo["value"],
-        "label_surprise_rate": surprise,
+        "label_surprise_rate": all_surprise["rate"],
+        "label_surprise_all_selected": all_surprise["rate"],
+        "label_surprise_trusted": trusted_surprise["rate"],
+        "label_surprise_hard_risk": hard_risk_surprise["rate"],
+        "label_surprise_selected_for_gate": surprise,
         "selected_A0_mean": a0_mean,
         "selected_A0_baseline": baseline,
         "selected_A0_ratio": a0_ratio,
@@ -439,7 +613,12 @@ def evaluate_stop(
         "phase_map_change": map_available,
         "boundary_shift_normal_sc": bool(shift_normal["available"]),
         "boundary_shift_uniform_fflo": bool(shift_fflo["available"]),
-        "label_surprise_rate": surprise_available,
+        "label_surprise_rate": bool(all_surprise["available"]),
+        "label_surprise_all_selected": bool(all_surprise["available"]),
+        "label_surprise_trusted": bool(trusted_surprise["available"]),
+        "label_surprise_hard_risk": bool(hard_risk_surprise["available"]),
+        "label_surprise_selected_for_gate": bool(surprise_available),
+        "trusted_surprise_denominator_valid": bool(surprise_layers["trusted_surprise_denominator_valid"]),
         "selected_A0_ratio": a0_ratio_available,
         "q_edge_trigger_rate": bool(rates["q_edge_available"]),
         "rerun_required_rate": bool(rates["rerun_available"]),
@@ -457,6 +636,22 @@ def evaluate_stop(
             "uniform_fflo": shift_fflo,
             "coverage_boundary_counts": coverage_counts,
         },
+        "surprise_details": {
+            "stop_surprise_mode": stop_surprise_mode,
+            "selected_gate_metric": surprise_condition_name,
+            "all_selected": all_surprise,
+            "trusted": trusted_surprise,
+            "hard_risk": hard_risk_surprise,
+            "selected_count_matched": int(surprise_layers["selected_count_matched"]),
+            "trusted_surprise_denominator_valid": bool(surprise_layers["trusted_surprise_denominator_valid"]),
+            "trusted_surprise_min_denominator": int(surprise_layers["trusted_surprise_min_denominator"]),
+            "trusted_surprise_min_fraction": float(surprise_layers["trusted_surprise_min_fraction"]),
+            "trusted_fraction_selected": surprise_layers["trusted_fraction_selected"],
+            "hard_risk_fraction_selected": surprise_layers["hard_risk_fraction_selected"],
+            "rerun_required_count": int(surprise_layers["rerun_required_count"]),
+            "q_unresolved_count": int(surprise_layers["q_unresolved_count"]),
+            "delta_unresolved_count": int(surprise_layers["delta_unresolved_count"]),
+        },
         "conditions": conditions,
         "diagnostic_conditions": diagnostic_conditions,
         "passed_condition_count": passed,
@@ -464,17 +659,32 @@ def evaluate_stop(
         "mandatory_gates": [],
         "mandatory_gates_pass": True,
         "convergence_pass": convergence_pass,
+        "main_phase_convergence_pass": convergence_pass,
         "patience_counter": patience_counter,
         "patience": int(stop_cfg.patience),
         "hard_stop": hard_stop,
         "stop": stop,
         "stop_reason": stop_reason,
+        "main_phase_converged": bool(convergence_stop),
+        "numerical_frontier_status": str(surprise_layers["numerical_frontier_status"]),
+        "publication_ready": bool(convergence_stop and c5 and surprise_layers["numerical_frontier_status"] == "closed"),
+        "publication_ready_reason": (
+            ""
+            if bool(convergence_stop and c5 and surprise_layers["numerical_frontier_status"] == "closed")
+            else (
+                "hard_risk_boundary_impact_not_audited"
+                if surprise_layers["numerical_frontier_status"] != "closed"
+                else "main_phase_or_boundary_coverage_not_converged"
+            )
+        ),
         "numerical_cleanup_warning": numerical_cleanup_warning,
         "numerical_cleanup_list": str(iter_dir / "rerun_points.csv") if numerical_cleanup_warning else "",
         "thresholds": {
             "map_tol": float(stop_cfg.map_tol),
             "boundary_shift_tol": boundary_shift_tol,
             "surprise_tol": float(stop_cfg.surprise_tol),
+            "trusted_surprise_min_denominator": int(stop_cfg.trusted_surprise_min_denominator),
+            "trusted_surprise_min_fraction": float(stop_cfg.trusted_surprise_min_fraction),
             "selected_A0_ratio_tol": float(stop_cfg.selected_a0_ratio_tol),
             "qedge_rate_tol": float(stop_cfg.qedge_rate_tol),
             "rerun_rate_tol": float(stop_cfg.rerun_rate_tol),
@@ -513,7 +723,7 @@ def print_stop_summary(result: dict[str, Any]) -> None:
         ("C1_phase_map_change", "phase_map_change"),
         ("C2_boundary_shift_normal_sc", "boundary_shift_normal_sc"),
         ("C3_boundary_shift_uniform_fflo", "boundary_shift_uniform_fflo"),
-        ("C4_label_surprise_rate", "label_surprise_rate"),
+        ("C4_label_surprise_rate", "label_surprise_selected_for_gate"),
         ("C5_selected_A0_ratio", "selected_A0_ratio"),
         ("C6_qedge_and_rerun_rates", "q_edge_trigger_rate"),
         ("C7_boundary_coverage_p95", "boundary_coverage_p95"),
@@ -529,9 +739,19 @@ def print_stop_summary(result: dict[str, Any]) -> None:
             }
             available = availability.get("q_edge_trigger_rate") and availability.get("rerun_required_rate")
         print(f"[stop] {condition_key}: value={value}, available={available}, pass={passed}")
+    surprise_details = result.get("surprise_details", {})
+    if surprise_details:
+        print(
+            "[stop] surprise mode="
+            f"{surprise_details.get('stop_surprise_mode')}; "
+            f"all_selected={metrics.get('label_surprise_all_selected')}; "
+            f"trusted={metrics.get('label_surprise_trusted')}; "
+            f"hard_risk={metrics.get('label_surprise_hard_risk')}; "
+            f"trusted_denominator_valid={surprise_details.get('trusted_surprise_denominator_valid')}"
+        )
     print(
         "[stop] convergence_pass="
-        f"{result['passed_condition_count']}/7 >= {result['required_pass_count']}, "
+        f"{result['passed_condition_count']}/5 >= {result['required_pass_count']}, "
         f"mandatory_gates={result['mandatory_gates_pass']}: {result['convergence_pass']}; "
         f"patience={result['patience_counter']}/{result['patience']}; stop={result['stop']}; "
         f"reason={result['stop_reason'] or 'none'}"
@@ -557,6 +777,9 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--rerun-rate-tol", type=float, default=0.01)
     p.add_argument("--coverage-tol", type=float, default=None)
     p.add_argument("--allow-missing-boundary", action="store_true")
+    p.add_argument("--stop-surprise-mode", choices=["all_selected", "trusted"], default="all_selected")
+    p.add_argument("--trusted-surprise-min-denominator", type=int, default=64)
+    p.add_argument("--trusted-surprise-min-fraction", type=float, default=0.25)
     return p.parse_args()
 
 
@@ -578,6 +801,9 @@ def main() -> None:
         rerun_rate_tol=args.rerun_rate_tol,
         coverage_tol=args.coverage_tol if args.coverage_tol is not None else base.coverage_tol,
         allow_missing_boundary=bool(args.allow_missing_boundary),
+        stop_surprise_mode=str(args.stop_surprise_mode),
+        trusted_surprise_min_denominator=int(args.trusted_surprise_min_denominator),
+        trusted_surprise_min_fraction=float(args.trusted_surprise_min_fraction),
     )
     result = evaluate_stop(
         run_dir=args.run_dir,

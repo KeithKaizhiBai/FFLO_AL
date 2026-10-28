@@ -1,0 +1,136 @@
+schema_version: 2
+figure_id: SM-FIG-SAMPLING-EFFICIENCY-V7
+figure_type: supplement
+template: multi_panel_template
+scientific_message: The frozen two-dimensional run evaluates 6,880 of 77,361 candidate
+  locations exactly.
+visual_message: The frozen two-dimensional run evaluates 6,880 of 77,361 candidate
+  locations exactly.
+primary_object:
+  id: scientific_content
+  asset_type: method_diagram
+  scientific_role: The frozen two-dimensional run evaluates 6,880 of 77,361 candidate
+    locations exactly.
+  visual_role: primary
+primary_visual_object:
+  id: scientific_content
+  scientific_role: The frozen two-dimensional run evaluates 6,880 of 77,361 candidate
+    locations exactly.
+  expected_rank: 1
+secondary_objects:
+- id: interpretation
+  asset_type: annotation
+  scientific_role: public interpretation
+  visual_role: secondary
+tertiary_information: []
+secondary_visual_objects:
+- interpretation
+tertiary_visual_objects: []
+reading_order:
+- scientific_content
+- interpretation
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    scientific_content:
+    - scientific_content
+    interpretation:
+    - interpretation
+  scientific_asset_fill_ratio_audits: []
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking:
+  - scientific_content
+  - interpretation
+  severity: warning
+forbidden_visual_priorities:
+- decorative_machine_learning
+data_sources:
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_iv/active_phase_topology_3d_t_ja_mu_from_scratch_v1/run_config.json
+assets:
+- id: scientific_content
+  type: method_diagram
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.csv
+  schematic: false
+  bbox: scientific_content
+- id: interpretation
+  type: annotation
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.csv
+  schematic: true
+  bbox: interpretation
+layout:
+  canvas:
+    viewbox:
+    - 0
+    - 0
+    - 1600
+    - 1000
+    print_mm:
+    - 164
+    - 103
+  template_profile: supplement_diagnostics
+  primary_area_fraction_min: 0.45
+  bounding_boxes: geometry_manifest.json
+  alignment_anchors:
+  - main_flow
+  - interpretation_footer
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements:
+  - id: primary_area
+    object_id: scientific_content
+    reference: canvas
+    minimum_fraction: 0.45
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings:
+    diagnostic: selected
+    physical: physical
+    topology: topology_tfflo
+  allowed_extra_hex: []
+  contrast_pairs:
+  - id: body_on_white
+    role: body_text
+    foreground: neutral.body
+    background: neutral.white
+text_budget:
+  maximum_words_in_artwork: 180
+  maximum_words_per_panel: 180
+  minimum_font_size_pt: 8.0
+  move_excess_to: caption
+required_elements:
+- scientific_content
+- interpretation
+required_labels:
+- Candidate universe
+- Final exact dataset
+forbidden_elements:
+- unregistered_color
+- text_overlap
+forbidden_claims:
+- ML-generated physical label
+- wall-time speedup
+- autonomous physics solver
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  require_engine_preflight: true
+  engine_preflight_record: engine_preflight.json
+  strict_palette: true
+  prohibited_text:
+  - PASS
+  - FAIL
+  - submission ready
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+approval:
+  gate: GATE_PUBLIC_SUPPLEMENT_METHOD_FIGURES_HUMAN_REVIEW
+  state: HUMAN_WAIT

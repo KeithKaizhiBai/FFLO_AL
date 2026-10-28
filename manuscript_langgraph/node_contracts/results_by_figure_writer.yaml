@@ -1,0 +1,11 @@
+{
+  "node_id": "results_by_figure_writer",
+  "purpose": "build an evidence-traceable caption and Results vertical slice, then expand through the registered Figures 1-4 only after figure approval",
+  "inputs": ["figure_contract", "frozen_claims", "registered_evidence"],
+  "outputs": ["caption", "results_paragraphs", "paragraph_metadata", "sentence_evidence_trace", "automated_audits", "review_packet"],
+  "required_paragraph_fields": ["observation", "interpretation", "evidence_source", "figure_reference", "caveats"],
+  "prerequisites": ["figure_evidence_contract", "GATE_CLAIM_APPROVAL"],
+  "forbidden_actions": ["mix unsupported interpretation into observation", "omit uncertainty", "silently soften an unsupported sentence"],
+  "gate": "GATE_RESULTS_HUMAN_REVIEW",
+  "failure_behavior": "after GATE_FIGURE_APPROVAL, generate the evidence-traced review package and stop at HUMAN_WAIT or BLOCK; never fabricate a figure or source"
+}

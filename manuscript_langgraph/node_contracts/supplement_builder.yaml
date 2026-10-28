@@ -1,0 +1,10 @@
+{
+  "node_id": "supplement_builder",
+  "purpose": "assemble the S1-S7 Supplement structure from approved evidence contracts",
+  "inputs": ["contracts/supplement_structure.yaml", "frozen_claims", "approved_results"],
+  "outputs": ["supplement_draft", "supplement_trace"],
+  "prerequisites": ["methods_writer", "GATE_FIGURE_APPROVAL"],
+  "forbidden_actions": ["promote provisional claims", "insert unregistered quantitative statements"],
+  "gate": "SUPPLEMENT_BUILDER_PREREQUISITES",
+  "failure_behavior": "emit BLOCK when the Supplement contract or approvals are absent"
+}

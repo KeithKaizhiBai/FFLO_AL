@@ -114,3 +114,20 @@ The Markdown report must preserve the scientific definitions, assumptions,
 main numerical results, and caveats from the PDF. The decision log should be
 short and should state what was concluded, what remains unresolved, and what
 the next calculation should check.
+
+## Shared prompt folder policy
+
+This project uses `shared_prompts/` as a cross-device prompt handoff area for
+Mac, iPhone, Windows Codex, and future Codex sessions.
+
+- Codex should check `shared_prompts/active/CURRENT_TASK_PROMPT.md` when the
+  user says "use the shared prompt", "continue from prompt", "read active
+  prompt", or similar.
+- Codex should inspect `shared_prompts/inbox/` for newly added prompts when
+  asked.
+- Codex should not overwrite archived prompts unless explicitly instructed.
+- Codex should update `shared_prompts/handoff/PROJECT_HANDOFF.md` after major
+  milestones.
+- Codex should update `shared_prompts/handoff/NEXT_ACTIONS.md` with concrete
+  next steps.
+- Codex should keep prompt documents readable, structured, and timestamped.

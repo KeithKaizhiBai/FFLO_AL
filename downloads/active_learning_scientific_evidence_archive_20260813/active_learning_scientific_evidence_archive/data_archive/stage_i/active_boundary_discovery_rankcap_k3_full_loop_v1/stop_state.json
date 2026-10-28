@@ -1,0 +1,7 @@
+{
+  "last_iteration": 30,
+  "patience_counter": 0,
+  "stop": true,
+  "stop_reason": "max_iterations",
+  "selected_A0_baseline": 0.9998615904885458
+}

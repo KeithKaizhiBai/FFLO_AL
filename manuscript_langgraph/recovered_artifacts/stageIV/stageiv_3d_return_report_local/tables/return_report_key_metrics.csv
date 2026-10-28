@@ -1,0 +1,23 @@
+metric,value
+run_id,active_phase_topology_3d_t_ja_mu_from_scratch_v1
+final_dataset,D:\PhD Study\4th\SC_GBU\Fu_FFLO\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\ML_Phase_StageIV_Topology3D\active_runs\active_phase_topology_3d_t_ja_mu_from_scratch_v1\dataset_iter025.npz
+final_dataset_sha256,7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+sample_count,7081
+normal_count,2350
+uniform_SC_count,141
+FFLO_count,4590
+trivial_count,3265
+topological_count,1466
+gapless_SC_count,0
+topology_unresolved_count,0
+trusted_exact_count,6767
+topology_trusted_count,4731
+rerun_required_count,0
+q_unresolved_count,0
+delta_unresolved_count,0
+postrun_bundle_status,hidden_slice_reference_missing
+stageiv_convergence_status,not_converged
+decision_class,Decision D
+mu_domain_complete,False
+mu_range_limited,True
+hidden_slice_status,inconclusive

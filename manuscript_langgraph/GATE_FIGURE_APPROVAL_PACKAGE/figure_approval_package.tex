@@ -1,0 +1,112 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.62in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\definecolor{caveat}{HTML}{A12626}
+\begin{document}
+\begin{center}
+{\Large\bfseries FFLO Active Learning --- Figure Approval Package}\\[4pt]
+{\small Run \texttt{active\_learning\_prl\_v1} \quad 2026-08-13}
+\end{center}
+
+\textbf{Current gate:} \texttt{GATE\_FIGURE\_APPROVAL = pending\_human\_approval}.\\
+\textbf{Claim state:} approved with modifications.\\
+\textbf{External retrieval:} not authorized. \textbf{New physics:} not authorized or run.
+
+The candidate story is: an audited BdG oracle enables reliability-aware active
+learning of two-dimensional thermodynamics, topology-resolved cFFLO/tFFLO
+structure, and a caveated three-dimensional extension. Figures have not been
+merged into production manuscript \LaTeX.
+
+\begin{tabular}{@{}p{0.16\linewidth}p{0.71\linewidth}@{}}
+\toprule
+Figure 1 & Audited oracle, trust hierarchy, and scheduler loop.\\
+Figure 2 & 512-point random-grid cold start to 7,434-point thermodynamic endpoint.\\
+Figure 3 & 4,345-point topology endpoint; configured $k=8$ Decision A; $k=6$ caveat.\\
+Figure 4 & 7,081-point higher-dimensional exploration; strict 3D closure not passed.\\
+\bottomrule
+\end{tabular}
+
+\textbf{Allowed decisions:} approve; approve with edits; reject and redraw;
+evidence missing.
+
+\textcolor{caveat}{\bfseries Mandatory check: Figure 4 is a main-text scaling
+demonstration, not a complete converged 3D topology atlas.}
+
+\vfill
+Full contracts, provenance tables, candidate prose, paragraph metadata,
+caveats, and validation reports are stored beside this PDF.
+\newpage
+
+\section*{Figure 1 --- Reliability-aware active-learning framework}
+\begin{center}
+\includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{figures/Fig1_candidate.pdf}
+\end{center}
+\textbf{Caption candidate.} The surrogate schedules high-value exact BdG calls;
+it does not replace the solver. Thermodynamic and topology labels remain tied
+to the audited reliability hierarchy. The panel is schematic.
+
+\textbf{Review caveats.} Finite-resolution effects remain; unresolved is a
+numerical status rather than a phase.
+\newpage
+
+\section*{Figure 2 --- Two-dimensional thermodynamic reconstruction}
+\begin{center}
+\includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{figures/Fig2_candidate.pdf}
+\end{center}
+\textbf{Caption candidate.} A 512-point frozen random-grid design grows to the
+7,434-point authoritative endpoint. Support-restricted rendering shows normal,
+uniform-SC, and FFLO structure; 129 hard-risk markers remain explicit.
+
+\textbf{Review caveats.} The initialization is \texttt{random\_grid}, not
+scrambled Sobol. Hard-risk evidence is not converted into a confident boundary.
+\newpage
+
+\section*{Figure 3 --- Topology-aware cFFLO/tFFLO discovery}
+\begin{center}
+\includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{figures/Fig3_candidate.pdf}
+\end{center}
+\textbf{Caption candidate.} The 4,345-point endpoint contains 3,213 trusted
+FFLO labels (2,290 cFFLO; 923 tFFLO). The configured $k=8$ audit gives
+Decision A, with coverage $0.006185<0.00625$.
+
+\textbf{Review caveats.} The $k=6$ sensitivity value $0.006269$ is slightly
+above threshold. Opposite-$Z_2$ brackets diagnose support and are not the
+physical boundary.
+\newpage
+
+\section*{Figure 4 --- Higher-dimensional active-learning exploration}
+\begin{center}
+\includegraphics[width=\textwidth,height=0.70\textheight,keepaspectratio]{figures/Fig4_candidate.pdf}
+\end{center}
+\textbf{Caption candidate.} The 7,081-point three-dimensional endpoint reveals
+thermodynamic and topology-aware support, including trusted tFFLO points and
+narrow fixed-$\mu$ structure.
+
+\textcolor{caveat}{\bfseries Review caveat.} The final strict ratios are 1.28,
+1.44, 2.45, and 7.03. This is higher-dimensional exploration; the strict 3D
+topology surface is not formally closed.
+\newpage
+
+\section*{Approval record}
+For each figure, choose exactly one: approve; approve with edits; reject and
+redraw; evidence missing.
+
+\begin{tabular}{@{}p{0.18\linewidth}p{0.70\linewidth}@{}}
+\toprule
+Figure 1 & Decision / edits: \hrulefill\\[18pt]
+Figure 2 & Decision / edits: \hrulefill\\[18pt]
+Figure 3 & Decision / edits: \hrulefill\\[18pt]
+Figure 4 & Decision / edits: \hrulefill\\[18pt]
+\bottomrule
+\end{tabular}
+
+\vfill
+Approval does not authorize external Introduction retrieval or new physical
+calculations. Those remain separate gates.
+\end{document}

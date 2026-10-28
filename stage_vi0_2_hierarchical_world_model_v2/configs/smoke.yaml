@@ -1,0 +1,3 @@
+ensemble: 2
+epochs: 30
+probe: 10000

@@ -1,0 +1,19 @@
+{
+  "component_min_size": 24,
+  "config": "configs\\stageiv_3d_production.json",
+  "decision_class": "Decision D",
+  "evaluated_iterations": [],
+  "grid_n": 201,
+  "hidden_slice_passed": false,
+  "hidden_slice_status": "inconclusive",
+  "knn_k": 8,
+  "mu_reference": 0.55,
+  "need_new_exact_calculation": false,
+  "reason": "reference_dataset_missing",
+  "recommended_next_action": "provide_stageiii_frozen_reference_dataset_after_stageiv_return",
+  "reference_dataset": null,
+  "run_dir": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "run_id": "stageiv_3d_hidden_slice_audit",
+  "source_run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "support_radius": 0.075
+}

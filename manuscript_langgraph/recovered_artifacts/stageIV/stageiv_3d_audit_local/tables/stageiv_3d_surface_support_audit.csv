@@ -1,0 +1,9 @@
+source,surface,iteration,status,coverage_median,coverage_p90,coverage_p95,coverage_max,n_surface_points,formal_metric,raw_crossing_point_count,fit_point_count,smooth_method,smooth_status,notes
+convergence_surface_coverage,normal_sc,25,ok,0.0172920786304046,0.0293611504642607,0.0337802596717936,0.0489615410972593,1722,True,,,,,
+convergence_surface_coverage,uniform_fflo,25,ok,0.0183692841557218,0.0330860814760378,0.0363245068538452,0.047769209962019,683,True,,,,,
+convergence_surface_coverage,topology,25,ok,0.0092875811679849,0.0137759159186379,0.015317527016765,0.0299265198550055,2954,True,,,,,
+smoothed_visual_diagnostics,thermodynamic_normal_sc,final,ok,,,,,,False,4916,4916,rbf_thin_plate_spline_J_of_T_mu,ok,diagnostic visualization only; not used as formal convergence contour
+smoothed_visual_diagnostics,thermodynamic_uniform_sc_fflo,final,ok,,,,,,False,1119,1119,rbf_thin_plate_spline_J_of_T_mu,ok,diagnostic visualization only; not used as formal convergence contour
+smoothed_visual_diagnostics,topology_view_normal_sc,final,ok,,,,,,False,4916,4916,rbf_thin_plate_spline_J_of_T_mu,ok,diagnostic visualization only; not used as formal convergence contour
+smoothed_visual_diagnostics,topology_view_uniform_sc_fflo,final,ok,,,,,,False,1119,1119,rbf_thin_plate_spline_J_of_T_mu,ok,diagnostic visualization only; not used as formal convergence contour
+smoothed_visual_diagnostics,topology_cfflo_tfflo,final,ok,,,,,,False,5269,5269,rbf_thin_plate_spline_J_of_T_mu,ok,diagnostic visualization only; not used as formal convergence contour

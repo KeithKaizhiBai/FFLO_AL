@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "profile_id": "PRL_INTEGRATED_MAIN_TEXT",
+  "variant_id": "PRL_INTEGRATED_MAIN_TEXT",
+  "run_id": "active_learning_prl_integrated_v1",
+  "parent_run_id": "active_learning_prl_v1",
+  "latex_class": "revtex4-2",
+  "class_options": ["aps", "prl", "reprint", "superscriptaddress", "floatfix"],
+  "narrative_structure": [
+    "provisional_abstract",
+    "provisional_introduction",
+    "integrated_results_methods",
+    "discussion_with_bounded_outlook"
+  ],
+  "standalone_methods_section": false,
+  "standalone_results_section": false,
+  "standalone_outlook_section": false,
+  "figures_at_end": false,
+  "inline_figures": true,
+  "caption_source": "frozen_approved_captions",
+  "supplement_separate": true,
+  "scientific_claim_source": "frozen_registries_and_intermediate_review",
+  "scientific_content_authority": "active_learning_prl_v1",
+  "publication_form": "new_candidate",
+  "human_approval": "pending",
+  "allow_new_scientific_calculation": false,
+  "external_retrieval_authorized": false,
+  "title_authority": "current_candidate",
+  "target_journal": "undecided",
+  "working_layout": "PRL-style REVTeX"
+}

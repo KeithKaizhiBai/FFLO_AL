@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "negative_status": "fail",
+  "negative_expected_failures": [
+    "both_parameter_directions_visible",
+    "dominant_minima_projected_triangle_fraction",
+    "foreground_fill_fraction",
+    "internal_whitespace_fraction",
+    "no_nonuniform_transform",
+    "phase_labels_do_not_overlap",
+    "prohibited_text_absent",
+    "projected_surface_aspect_ratio",
+    "projected_surface_height_width_ratio",
+    "vertical_relief_fraction"
+  ],
+  "negative_detected_failures": [
+    "both_parameter_directions_visible",
+    "dominant_minima_projected_triangle_fraction",
+    "foreground_fill_fraction",
+    "internal_whitespace_fraction",
+    "no_nonuniform_transform",
+    "phase_labels_do_not_overlap",
+    "prohibited_text_absent",
+    "projected_surface_aspect_ratio",
+    "projected_surface_height_width_ratio",
+    "vertical_relief_fraction"
+  ],
+  "control_status": "pass"
+}

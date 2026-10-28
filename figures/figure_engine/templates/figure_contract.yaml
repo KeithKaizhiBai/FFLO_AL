@@ -1,0 +1,66 @@
+schema_version: 1
+figure_id: REQUIRED
+figure_type: manuscript
+template: manuscript_figure_template
+
+scientific_message: REQUIRED
+
+primary_object:
+  id: REQUIRED
+  asset_type: REQUIRED
+  scientific_role: REQUIRED
+  visual_role: primary
+
+secondary_objects: []
+tertiary_information: []
+
+data_sources: []
+
+assets: []
+
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1080], print_mm: [178.0, 120.15]}
+  template_profile: multi_panel
+  bounding_boxes: {}
+  alignment_anchors: []
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements: []
+
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+
+text_budget:
+  maximum_words_in_artwork: 120
+  maximum_words_per_panel: 35
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption_or_supplement
+
+required_elements: []
+required_labels: []
+forbidden_elements: []
+forbidden_claims: []
+
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  required_outputs:
+    - figure_validation_report.json
+    - figure_validation_report.md
+
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+
+approval:
+  gate: REQUIRED
+  state: HUMAN_WAIT

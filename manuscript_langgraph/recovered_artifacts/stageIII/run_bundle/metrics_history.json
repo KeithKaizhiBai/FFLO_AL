@@ -1,0 +1,291 @@
+[
+  {
+    "delta_rmse": 0.03813459189104458,
+    "q_rmse": 0.40139518998063495,
+    "eta_rmse": 0.03306563368485613,
+    "ic_plus_rmse": 0.0029071464104958294,
+    "ic_minus_rmse": 0.00344911154034333,
+    "phase_accuracy": 0.9842829076620825,
+    "boundary_f1": NaN,
+    "n_exact_calls": 509.0,
+    "estimated_reduction": 151.98624754420433,
+    "topology_context": {
+      "trivial_count": 134,
+      "topological_count": 43,
+      "gapless_count": 0,
+      "trusted_topology_count": 177
+    }
+  },
+  {
+    "delta_rmse": 0.024562041819284234,
+    "q_rmse": 0.4675938939505758,
+    "eta_rmse": 0.057067553678748134,
+    "ic_plus_rmse": 0.002288358948101727,
+    "ic_minus_rmse": 0.0029072592441069466,
+    "phase_accuracy": 0.9801324503311258,
+    "boundary_f1": NaN,
+    "n_exact_calls": 755.0,
+    "estimated_reduction": 102.46490066225165,
+    "topology_context": {
+      "trivial_count": 283,
+      "topological_count": 98,
+      "gapless_count": 0,
+      "trusted_topology_count": 381
+    }
+  },
+  {
+    "delta_rmse": 0.02424656522788123,
+    "q_rmse": 0.522735660687036,
+    "eta_rmse": 0.05699836917758449,
+    "ic_plus_rmse": 0.001970870759406532,
+    "ic_minus_rmse": 0.002598052358669349,
+    "phase_accuracy": 0.9779338014042126,
+    "boundary_f1": NaN,
+    "n_exact_calls": 997.0,
+    "estimated_reduction": 77.5937813440321,
+    "topology_context": {
+      "trivial_count": 422,
+      "topological_count": 160,
+      "gapless_count": 0,
+      "trusted_topology_count": 582
+    }
+  },
+  {
+    "delta_rmse": 0.027084585221468237,
+    "q_rmse": 0.5724693679839464,
+    "eta_rmse": 0.07032747055382685,
+    "ic_plus_rmse": 0.00214696144053581,
+    "ic_minus_rmse": 0.0027483549910322213,
+    "phase_accuracy": 0.9683441558441559,
+    "boundary_f1": NaN,
+    "n_exact_calls": 1232.0,
+    "estimated_reduction": 62.79301948051948,
+    "topology_context": {
+      "trivial_count": 559,
+      "topological_count": 219,
+      "gapless_count": 0,
+      "trusted_topology_count": 778
+    }
+  },
+  {
+    "delta_rmse": 0.019940832632214602,
+    "q_rmse": 0.5311584210541023,
+    "eta_rmse": 0.06716650601928129,
+    "ic_plus_rmse": 0.0018821780656358834,
+    "ic_minus_rmse": 0.0022821717598457093,
+    "phase_accuracy": 0.9891525423728813,
+    "boundary_f1": NaN,
+    "n_exact_calls": 1475.0,
+    "estimated_reduction": 52.448135593220336,
+    "topology_context": {
+      "trivial_count": 696,
+      "topological_count": 278,
+      "gapless_count": 0,
+      "trusted_topology_count": 974
+    }
+  },
+  {
+    "delta_rmse": 0.01965569060853751,
+    "q_rmse": 0.531599429759686,
+    "eta_rmse": 0.06605641105119182,
+    "ic_plus_rmse": 0.0018947018241588294,
+    "ic_minus_rmse": 0.0021961312732959263,
+    "phase_accuracy": 0.9929824561403509,
+    "boundary_f1": NaN,
+    "n_exact_calls": 1710.0,
+    "estimated_reduction": 45.24035087719298,
+    "topology_context": {
+      "trivial_count": 843,
+      "topological_count": 341,
+      "gapless_count": 0,
+      "trusted_topology_count": 1184
+    }
+  },
+  {
+    "delta_rmse": 0.019262254651585126,
+    "q_rmse": 0.5245729315123485,
+    "eta_rmse": 0.06895823515823706,
+    "ic_plus_rmse": 0.0018467839208541699,
+    "ic_minus_rmse": 0.0020519181737614248,
+    "phase_accuracy": 0.9938271604938271,
+    "boundary_f1": NaN,
+    "n_exact_calls": 1944.0,
+    "estimated_reduction": 39.79475308641975,
+    "topology_context": {
+      "trivial_count": 984,
+      "topological_count": 406,
+      "gapless_count": 0,
+      "trusted_topology_count": 1390
+    }
+  },
+  {
+    "delta_rmse": 0.018245641905660737,
+    "q_rmse": 0.5080666076376209,
+    "eta_rmse": 0.07061090568691561,
+    "ic_plus_rmse": 0.0018476364771391437,
+    "ic_minus_rmse": 0.001980150387319904,
+    "phase_accuracy": 0.9958639705882353,
+    "boundary_f1": NaN,
+    "n_exact_calls": 2176.0,
+    "estimated_reduction": 35.551930147058826,
+    "topology_context": {
+      "trivial_count": 1141,
+      "topological_count": 457,
+      "gapless_count": 0,
+      "trusted_topology_count": 1598
+    }
+  },
+  {
+    "delta_rmse": 0.017986526036779082,
+    "q_rmse": 0.5068657474437888,
+    "eta_rmse": 0.06963795148655322,
+    "ic_plus_rmse": 0.0018547484062022492,
+    "ic_minus_rmse": 0.0019546149122565333,
+    "phase_accuracy": 0.9908523908523909,
+    "boundary_f1": NaN,
+    "n_exact_calls": 2405.0,
+    "estimated_reduction": 32.16673596673596,
+    "topology_context": {
+      "trivial_count": 1304,
+      "topological_count": 506,
+      "gapless_count": 0,
+      "trusted_topology_count": 1810
+    }
+  },
+  {
+    "delta_rmse": 0.017259970070683268,
+    "q_rmse": 0.49695838592228386,
+    "eta_rmse": 0.06782897015767599,
+    "ic_plus_rmse": 0.0018380360444947633,
+    "ic_minus_rmse": 0.001835866859805909,
+    "phase_accuracy": 0.9946969696969697,
+    "boundary_f1": NaN,
+    "n_exact_calls": 2640.0,
+    "estimated_reduction": 29.303409090909092,
+    "topology_context": {
+      "trivial_count": 1463,
+      "topological_count": 555,
+      "gapless_count": 0,
+      "trusted_topology_count": 2018
+    }
+  },
+  {
+    "delta_rmse": 0.017159524739028428,
+    "q_rmse": 0.491286813808143,
+    "eta_rmse": 0.0690714046865891,
+    "ic_plus_rmse": 0.0017413410625224627,
+    "ic_minus_rmse": 0.001725196196266383,
+    "phase_accuracy": 0.991234221598878,
+    "boundary_f1": NaN,
+    "n_exact_calls": 2852.0,
+    "estimated_reduction": 27.125175315568022,
+    "topology_context": {
+      "trivial_count": 1620,
+      "topological_count": 595,
+      "gapless_count": 0,
+      "trusted_topology_count": 2215
+    }
+  },
+  {
+    "delta_rmse": 0.017856469468803628,
+    "q_rmse": 0.5135751408538978,
+    "eta_rmse": 0.07120818249744634,
+    "ic_plus_rmse": 0.001727689778030811,
+    "ic_minus_rmse": 0.0016760974541708458,
+    "phase_accuracy": 0.9925130208333334,
+    "boundary_f1": NaN,
+    "n_exact_calls": 3072.0,
+    "estimated_reduction": 25.1826171875,
+    "topology_context": {
+      "trivial_count": 1770,
+      "topological_count": 646,
+      "gapless_count": 0,
+      "trusted_topology_count": 2416
+    }
+  },
+  {
+    "delta_rmse": 0.015966890746138777,
+    "q_rmse": 0.4822511246986294,
+    "eta_rmse": 0.07438623489530721,
+    "ic_plus_rmse": 0.0017237320320057624,
+    "ic_minus_rmse": 0.0017303995809766475,
+    "phase_accuracy": 0.9899482180932074,
+    "boundary_f1": NaN,
+    "n_exact_calls": 3283.0,
+    "estimated_reduction": 23.56411818458727,
+    "topology_context": {
+      "trivial_count": 1912,
+      "topological_count": 700,
+      "gapless_count": 0,
+      "trusted_topology_count": 2612
+    }
+  },
+  {
+    "delta_rmse": 0.015246187877860173,
+    "q_rmse": 0.4851445610545113,
+    "eta_rmse": 0.07464390696658825,
+    "ic_plus_rmse": 0.0016472569425790887,
+    "ic_minus_rmse": 0.0016551362489054945,
+    "phase_accuracy": 0.9968508445462353,
+    "boundary_f1": NaN,
+    "n_exact_calls": 3493.0,
+    "estimated_reduction": 22.147437732608072,
+    "topology_context": {
+      "trivial_count": 2062,
+      "topological_count": 741,
+      "gapless_count": 0,
+      "trusted_topology_count": 2803
+    }
+  },
+  {
+    "delta_rmse": 0.015580015592981047,
+    "q_rmse": 0.4820742191152363,
+    "eta_rmse": 0.0739625510190831,
+    "ic_plus_rmse": 0.0016615719967724648,
+    "ic_minus_rmse": 0.0016360742797468754,
+    "phase_accuracy": 0.9970358393963891,
+    "boundary_f1": NaN,
+    "n_exact_calls": 3711.0,
+    "estimated_reduction": 20.8464025869038,
+    "topology_context": {
+      "trivial_count": 2215,
+      "topological_count": 789,
+      "gapless_count": 0,
+      "trusted_topology_count": 3004
+    }
+  },
+  {
+    "delta_rmse": 0.014630151193184525,
+    "q_rmse": 0.4760534937837015,
+    "eta_rmse": 0.07336132613650632,
+    "ic_plus_rmse": 0.0016149038777111381,
+    "ic_minus_rmse": 0.0015430789069220815,
+    "phase_accuracy": 0.9946483180428135,
+    "boundary_f1": NaN,
+    "n_exact_calls": 3924.0,
+    "estimated_reduction": 19.714831804281346,
+    "topology_context": {
+      "trivial_count": 2368,
+      "topological_count": 831,
+      "gapless_count": 0,
+      "trusted_topology_count": 3199
+    }
+  },
+  {
+    "delta_rmse": 0.014473995263104573,
+    "q_rmse": 0.4713106699443327,
+    "eta_rmse": 0.07333111580197413,
+    "ic_plus_rmse": 0.0015836776844040396,
+    "ic_minus_rmse": 0.0014874776252943658,
+    "phase_accuracy": 0.9985475671750181,
+    "boundary_f1": NaN,
+    "n_exact_calls": 4131.0,
+    "estimated_reduction": 18.726942628903412,
+    "topology_context": {
+      "trivial_count": 2524,
+      "topological_count": 876,
+      "gapless_count": 0,
+      "trusted_topology_count": 3400
+    }
+  }
+]

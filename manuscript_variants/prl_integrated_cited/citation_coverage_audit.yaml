@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "paragraph_count": 5,
+  "citation_command_count": 6,
+  "unique_citation_count": 12,
+  "bibliography_entry_count": 12,
+  "missing_bibliography_definitions": [],
+  "claim_matrix_sources_not_cited": [],
+  "unused_bibliography_entries": [],
+  "unsupported_novelty_claim_detected": false,
+  "external_sources_used_as_project_result_evidence": false,
+  "stage_iii_k6_caveat_required_downstream": true,
+  "stage_iv_nonclosure_required_downstream": true
+}

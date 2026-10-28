@@ -1,0 +1,12 @@
+{
+  "generation_order": ["evidence", "claims", "results", "methods", "discussion", "introduction", "abstract_title", "audits", "latex"],
+  "rules": [
+    "write observations before interpretations",
+    "attach claim and evidence ids to every Results paragraph",
+    "use frozen_supported wording exactly within its allowed range",
+    "keep supported-with-caveat and negative results within their registered language and destinations",
+    "present Stage IV as higher-dimensional exploration while stating that strict 3D topology convergence was not closed",
+    "do not call active-learning predictions exact labels",
+    "do not convert missing artifacts into inferred numerical results"
+  ]
+}

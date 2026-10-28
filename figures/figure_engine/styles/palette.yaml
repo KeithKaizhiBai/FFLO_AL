@@ -1,0 +1,111 @@
+schema_version: 1
+palette_id: al_fflo_manuscript_v1
+authority: canonical
+
+families:
+  exact:
+    dark: "#B95712"
+    base: "#F28A18"
+    highlight: "#FFB45A"
+    tint: "#FFF4E5"
+  physical:
+    dark: "#12604E"
+    base: "#268C70"
+    highlight: "#65BFA1"
+    tint: "#EAF7F2"
+  learning:
+    dark: "#1D4E80"
+    base: "#2E7FC1"
+    highlight: "#75AFE0"
+    tint: "#EAF3FB"
+  decision:
+    dark: "#4D2878"
+    base: "#7B46B3"
+    highlight: "#AE82D7"
+    tint: "#F3ECFA"
+  selected:
+    dark: "#7E202A"
+    base: "#B73742"
+    highlight: "#E16E76"
+    tint: "#FBEAEC"
+  uncertainty:
+    dark: "#5A4B73"
+    base: "#81739B"
+    highlight: "#B7AFC8"
+    tint: "#F2EFF6"
+  topology_cfflo:
+    dark: "#176A52"
+    base: "#2E966F"
+    highlight: "#70C3A0"
+    tint: "#F2FAF7"
+  topology_transition:
+    dark: "#6C7078"
+    base: "#9CA2AC"
+    highlight: "#DF6840"
+    tint: "#F7F2EC"
+  topology_tfflo:
+    dark: "#552378"
+    base: "#843EAD"
+    highlight: "#BC88D7"
+    tint: "#F8F3FB"
+  boundary_state:
+    dark: "#8F202B"
+    base: "#D13E4C"
+    highlight: "#EC7881"
+    tint: "#FBEAEC"
+
+neutral:
+  title: "#17213C"
+  body: "#252B36"
+  secondary: "#626A76"
+  axis: "#87919C"
+  cool_light: "#D9DEE6"
+  warm_light: "#F5F3EF"
+  panel: "#FBFDFC"
+  white: "#FFFFFF"
+
+continuous:
+  selected_iteration:
+    - "#81212B"
+    - "#85232D"
+    - "#88242E"
+    - "#8C2630"
+    - "#8F2731"
+    - "#932833"
+    - "#962A34"
+    - "#9A2B36"
+    - "#9D2C37"
+    - "#A02E38"
+    - "#A42F3A"
+    - "#A8313C"
+    - "#AB323D"
+    - "#AE333E"
+    - "#B23540"
+    - "#B53641"
+    - "#B83943"
+    - "#BB3C47"
+    - "#BD3F4A"
+    - "#C0434D"
+    - "#C24650"
+    - "#C54953"
+    - "#C84D57"
+    - "#CA505A"
+    - "#CD535D"
+    - "#CF5760"
+    - "#D25A63"
+    - "#D45E67"
+    - "#D76169"
+    - "#D9646D"
+    - "#DC6870"
+    - "#DF6B73"
+  thermodynamic:
+    - "#294D89"
+    - "#3E9D9A"
+    - "#78BE83"
+    - "#F0C55C"
+    - "#C95732"
+  uncertainty:
+    - "#F2EFF6"
+    - "#B7AFC8"
+    - "#81739B"
+    - "#5A4B73"

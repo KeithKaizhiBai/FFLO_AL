@@ -1,0 +1,17 @@
+{
+  "hardware_detected": true,
+  "model": "MacBook Air Mac14,2",
+  "chip": "Apple M2",
+  "cpu_cores": 8,
+  "ram_gb": 16,
+  "macos": "15.7.7",
+  "python": "3.12.13 (main, Mar  3 2026, 15:35:03) [Clang 21.1.4 ]",
+  "torch": "2.13.0",
+  "mps_available": false,
+  "mps_built": true,
+  "disk_free_gb": 64.52115249633789,
+  "selected_device": "cpu",
+  "mps_stable": false,
+  "fallback_reason": "MPS unavailable",
+  "peak_rss_mb": 560.796875
+}

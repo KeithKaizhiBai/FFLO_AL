@@ -1,0 +1,11 @@
+{
+  "active_run": "active_learning_prl_v1",
+  "run_directory": "manuscript_langgraph/runs/active_learning_prl_v1",
+  "graph_id": "evidence_first_prl_workflow",
+  "human_stop": "INTRO_CITATION_LOOP_GATE",
+  "resume_requires": "explicit external Introduction-retrieval permission",
+  "target_journal": "undecided",
+  "working_layout": "prl_style_revtex",
+  "external_retrieval_permission": false,
+  "new_physics_permission": false
+}

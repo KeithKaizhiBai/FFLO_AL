@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 1000
+  },
+  "objects": [
+    {
+      "id": "scientific_content",
+      "type": "plot",
+      "role": "primary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 80,
+        "y": 90,
+        "width": 1440,
+        "height": 720
+      }
+    },
+    {
+      "id": "interpretation",
+      "type": "annotation",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 180,
+        "y": 850,
+        "width": 1240,
+        "height": 80
+      }
+    },
+    {
+      "id": "text-0",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 78.08,
+        "y": 58.399999999999956,
+        "width": 1093.6455284552846,
+        "height": 36.16828478964402
+      },
+      "font_size_pt": 11.0,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 78.08,
+        "y": 158.53980582524267,
+        "width": 303.9739837398374,
+        "height": 31.50773954751554
+      },
+      "font_size_pt": 9.5,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-2",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 1245.44,
+        "y": 301.52846231964656,
+        "width": 109.03414634146343,
+        "height": 32.143075360706646
+      },
+      "font_size_pt": 10.0,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-3",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 78.08,
+        "y": 408.13980582524255,
+        "width": 297.3658536585366,
+        "height": 31.50773954751554
+      },
+      "font_size_pt": 9.5,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-4",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 1245.44,
+        "y": 551.1284623196466,
+        "width": 89.20975609756098,
+        "height": 32.1430753607066
+      },
+      "font_size_pt": 10.0,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-5",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 78.08,
+        "y": 736.1838187702266,
+        "width": 862.3609756097561,
+        "height": 29.59223300970874
+      },
+      "font_size_pt": 9.0,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-6",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 78.08,
+        "y": 822.5838187702266,
+        "width": 837.5804878048781,
+        "height": 29.59223300970874
+      },
+      "font_size_pt": 9.0,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    },
+    {
+      "id": "text-7",
+      "type": "text",
+      "role": "body",
+      "parent": "canvas",
+      "bbox": {
+        "x": 78.08,
+        "y": 908.9838187702265,
+        "width": 1062.2569105691057,
+        "height": 29.59223300970874
+      },
+      "font_size_pt": 9.0,
+      "font_family": "DejaVu Sans",
+      "allow_overlap_with": [
+        "scientific_content"
+      ]
+    }
+  ],
+  "routes": []
+}

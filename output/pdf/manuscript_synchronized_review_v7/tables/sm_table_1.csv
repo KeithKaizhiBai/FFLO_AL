@@ -1,0 +1,10 @@
+Quantity,Value,Role
+$t$,1,energy unit
+"$\lambda_y,\lambda_z$","0.6, 0.6",spin--orbit couplings
+$\mu$,0.55,2D chemical potential
+$U$,1.6,pairing interaction
+$\omega_D$,10,momentum mask cutoff
+$N_k$,800,Brillouin-zone grid
+coarse $\Delta$ grid,"$[0,0.6]$, 400 points",thermodynamic scan
+initial $q$ grid,"$[-1,0.5]$, 400 points",momentum scan
+"$\Delta_\epsilon,q_\epsilon$","$10^{-3},10^{-2}$",phase assignment

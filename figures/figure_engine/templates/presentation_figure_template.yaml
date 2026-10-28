@@ -1,0 +1,18 @@
+schema_version: 1
+template_id: presentation_figure_template
+medium: presentation
+canvas:
+  aspect_ratio: "16:9"
+  background: "#FFFFFF"
+hierarchy:
+  title_allowed: true
+  subtitle_allowed: true
+  legend_allowed_if_subordinate: true
+spacing_profile: presentation
+typography_profile: presentation
+output:
+  required: [svg, pdf, png, validation_json, validation_md]
+  png_dpi: 200
+review:
+  required: [projector_contrast, distance_readability]
+

@@ -1,0 +1,10 @@
+level,semantic_field,source_column
+level1,Delta_opt_over_t,delta_opt
+level1,deltaF_NS_over_t,free_energy_gap_to_normal
+level2,abs_q_over_pi,q_opt
+level2,deltaF_UF,UNAVAILABLE
+level3,log_gap,topology_bulk_gap
+level3,k_gap_over_pi,topology_k_at_bulk_gap
+level4,signed_log_P0,topology_p0
+level4,signed_log_Ppi,topology_ppi
+level4,log_Pfaffian_margin,topology_pfaffian_margin

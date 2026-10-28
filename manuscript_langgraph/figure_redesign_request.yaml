@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reproducibility_rule": "Every final panel must be generated from registered source data by a versioned script; manual post-editing of scientific content is forbidden.",
+  "requests": [
+    {
+      "figure_id": "FIG-01-PIPELINE",
+      "current_problem": "No publication-style source tree exists for the framework schematic.",
+      "purpose": "Explain the physical model, exact-oracle hierarchy, and closed active-learning loop without treating the surrogate as the solver.",
+      "redesign": "Create a vector schematic with LaTeX formulas, distinct thermodynamic/spectral/topology label paths, and a provenance footer.",
+      "source_data": ["MODEL_SPEC.md", "docs/NUMERICS_SPEC.md"],
+      "status": "ready_for_reproducible_redraw"
+    },
+    {
+      "figure_id": "FIG-02-THERMO",
+      "current_problem": "The frozen Stage II endpoint, report tables, figure data, and original generated assets are recovered; a unified manuscript panel has not yet been approved or redrawn.",
+      "purpose": "Show thermodynamic reconstruction, exact sample placement, boundary convergence, and the hard-risk layer.",
+      "redesign": "Regenerate all panels from the recovered arrays and retained audit tables with recorded thresholds, sample counts, and source hashes.",
+      "source_data": ["manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz", "manuscript_langgraph/recovered_artifacts/stageII/phase2_robust_al_final_202606"],
+      "status": "evidence_recovered_pending_figure_approval"
+    },
+    {
+      "figure_id": "FIG-03-STAGEIII-TOPOLOGY",
+      "current_problem": "The final Stage III dataset, convergence CSVs, report, and original figures are recovered; the decision JSON's source-dataset hash field names the NPZ but contains the matching CSV hash.",
+      "purpose": "Show the cFFLO/tFFLO hierarchy and the four-part convergence audit, including sensitivity.",
+      "redesign": "Regenerate the map and support-restricted contour from recovered data, and show nominal plus k-neighbor sensitivity metrics in the same figure; retain the metadata note without altering the frozen decision JSON.",
+      "source_data": ["manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz", "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2/tables"],
+      "status": "evidence_recovered_pending_figure_approval"
+    },
+    {
+      "figure_id": "FIG-04-STAGEIV-3D-EXTENSION",
+      "current_problem": "The Stage IV dataset_iter025, return-report tables, and figure bundle are recovered; formal 3D topology convergence was not passed and the final manuscript panel remains unapproved.",
+      "purpose": "Demonstrate extension of reliability-aware active learning from 2D phase reconstruction to higher-dimensional parameter exploration.",
+      "redesign": "Redraw the sampled 3D thermodynamic/topology structure from the recovered bundle with support-restricted slices and a visible strict non-convergence banner. Do not fit or imply a complete topology atlas.",
+      "source_data": ["manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz", "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local"],
+      "status": "main_text_candidate_evidence_recovered_pending_figure_approval"
+    }
+  ]
+}

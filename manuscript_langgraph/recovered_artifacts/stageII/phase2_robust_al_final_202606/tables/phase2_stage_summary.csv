@@ -1,0 +1,11 @@
+stage,objective,main_result,evidence
+Initial exact grid,Reference phase structure,Coarse exact map available; active learning need is boundary refinement,project_history/reports/report_active_learning_r0015_note
+Acquisition development,Avoid deep-normal oversampling while retaining discovery,Full acquisition retained for FFLO/uniform-SC coverage; simple-phase not used for final discovery,reports/_phase2_supporting_reports/acquisition_profile_smoke
+Robust exact oracle,Separate phase labels from numerical reliability,"Trusted, training-eligible, rerun-required, q/Delta unresolved layers recorded",reports/_phase2_supporting_reports/robust_oracle_label_closure_validation
+Incremental q-window,Reduce repeated q-window work,Incremental strip computation retained with fallback and reliability audit,project_history/reports/_supporting_reports/report_phase_qwindow_delta_refinement_v1
+Local-refinement audit,Find why optimized variants timed out,Mandatory overflow produced approximately 85 boxes in failed variants,reports/_phase2_supporting_reports/local_refinement_target_logic_audit
+RankCapK3,Bound selected refinement targets,Fixed-point acceptance passed; selected targets <= 3 with physics-equivalent labels,reports/_phase2_supporting_reports/local_refinement_rankcap_acceptance
+One- and five-iteration validation,Check real AL behavior before full run,RankCapK3 remained stable and reduced local boxes in active-loop context,reports/_phase2_supporting_reports/rankcap_k3_one_iter_validation; rankcap_k3_5iter_validation
+Full loop,Run production discovery with optimized oracle,30 acquisition batches completed; main phase nearly stable but all-selected surprise remained high,reports/_phase2_supporting_reports/rankcap_k3_full_loop
+Trusted-surprise tail,Use trusted labels as formal main-phase surprise gate,Stopped at iter034; trusted surprise 0/127; dataset_iter035 frozen,reports/_phase2_supporting_reports/rankcap_k3_tail_surprise_continuation_return
+Hard-risk publication audit,Test whether hard-risk frontier can move main boundaries,Decision A; targeted rerun count 0; publication boundary audit pass,reports/_phase2_supporting_reports/hard_risk_boundary_impact_audit_v2

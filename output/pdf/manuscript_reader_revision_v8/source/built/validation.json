@@ -1,0 +1,289 @@
+{
+  "manuscript_double_column": {
+    "textwidth_pt": 510.0,
+    "columnwidth_pt": 246.0,
+    "actual_single_column": false,
+    "pages": 6,
+    "source_fingerprint": "ee2a8554ec7fc170c0ae996b45788e105b578d4379a8fbe820159ae545dc5724",
+    "embedded_forms": [
+      {
+        "page": 2,
+        "name": "/Im1",
+        "bbox": [
+          0.0,
+          0.0,
+          504.566929,
+          340.582677
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          396.948
+        ],
+        "rendered_width_mm": 179.25133995244582,
+        "rendered_height_mm": 120.9946544412566
+      },
+      {
+        "page": 3,
+        "name": "/Im2",
+        "bbox": [
+          0.0,
+          0.0,
+          504.0,
+          382.32
+        ],
+        "matrix": [
+          1.00815,
+          0.0,
+          0.0,
+          1.00815,
+          54.0,
+          354.491
+        ],
+        "rendered_width_mm": 179.24907,
+        "rendered_height_mm": 135.9732231
+      },
+      {
+        "page": 4,
+        "name": "/Im3",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          397.376
+        ],
+        "rendered_width_mm": 179.25133999862933,
+        "rendered_height_mm": 120.84360000179029
+      },
+      {
+        "page": 5,
+        "name": "/Im4",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          397.376
+        ],
+        "rendered_width_mm": 179.25133999862933,
+        "rendered_height_mm": 120.84360000179029
+      }
+    ]
+  },
+  "manuscript_single_column_review": {
+    "textwidth_pt": 468.0,
+    "columnwidth_pt": 468.0,
+    "actual_single_column": true,
+    "pages": 8,
+    "source_fingerprint": "ee2a8554ec7fc170c0ae996b45788e105b578d4379a8fbe820159ae545dc5724",
+    "embedded_forms": [
+      {
+        "page": 2,
+        "name": "/Im1",
+        "bbox": [
+          0.0,
+          0.0,
+          504.566929,
+          340.582677
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.273
+        ],
+        "rendered_width_mm": 164.48801995636242,
+        "rendered_height_mm": 111.02941344609472
+      },
+      {
+        "page": 4,
+        "name": "/Im2",
+        "bbox": [
+          0.0,
+          0.0,
+          504.0,
+          382.32
+        ],
+        "matrix": [
+          0.92513,
+          0.0,
+          0.0,
+          0.92513,
+          72.0,
+          366.307
+        ],
+        "rendered_width_mm": 164.488114,
+        "rendered_height_mm": 124.77598361999998
+      },
+      {
+        "page": 5,
+        "name": "/Im3",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.666
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 110.89080000164283
+      },
+      {
+        "page": 6,
+        "name": "/Im4",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.666
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 110.89080000164283
+      }
+    ]
+  },
+  "supplement": {
+    "textwidth_pt": 468.0,
+    "columnwidth_pt": 468.0,
+    "actual_single_column": true,
+    "pages": 15,
+    "source_fingerprint": "ee2a8554ec7fc170c0ae996b45788e105b578d4379a8fbe820159ae545dc5724",
+    "embedded_forms": [
+      {
+        "page": 4,
+        "name": "/Im1",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          291.96850394
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          427.155
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 103.30900000105869
+      },
+      {
+        "page": 5,
+        "name": "/Im2",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          212.5984252
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          154.544
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 75.22500000111444
+      },
+      {
+        "page": 7,
+        "name": "/Im3",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          212.5984252
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          506.763
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 75.22500000111444
+      },
+      {
+        "page": 11,
+        "name": "/Im4",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          291.96850394
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          241.34
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 103.30900000105869
+      },
+      {
+        "page": 14,
+        "name": "/Im5",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          425.19685039
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          327.082
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 138.61349999879354
+      }
+    ]
+  }
+}

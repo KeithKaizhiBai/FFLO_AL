@@ -1,0 +1,11 @@
+{
+  "phase": 3,
+  "status": "pass",
+  "main_figures_generated": 4,
+  "supplementary_candidates_generated": 1,
+  "formats": ["pdf", "svg", "png"],
+  "manual_pixel_editing": false,
+  "unsupported_interpolation": false,
+  "new_physics_calculation": false,
+  "external_retrieval": false
+}

@@ -1,0 +1,20 @@
+schema_version: 1
+template_id: manuscript_figure_template
+medium: journal
+canvas:
+  print_width_mm: 178.0
+  background: "#FFFFFF"
+  viewbox_preferred: [0, 0, 1600, 1080]
+hierarchy:
+  primary_first_fixation: true
+  no_equal_weight_default: true
+spacing_profile: journal_178mm
+typography_profile: journal_width_178mm
+output:
+  required: [svg, pdf, png, validation_json, validation_md]
+  png_dpi: 300
+  pdf_single_page: true
+review:
+  required: [native_width, grayscale]
+  conditional: [blurred_saliency, bbox_debug, colorblind_simulation]
+

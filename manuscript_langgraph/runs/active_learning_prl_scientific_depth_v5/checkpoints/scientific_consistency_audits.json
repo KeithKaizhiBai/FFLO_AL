@@ -1,0 +1,32 @@
+{
+  "free_energy_status": "PASS_WITH_NOTATION_FIX",
+  "count_semantics_status": "PASS",
+  "accounting": {
+    "candidate_grid_size": 77361,
+    "stage_I": {
+      "selected_call_records": 8192,
+      "unique_selected_coordinates": 7305,
+      "unique_exact_endpoint_coordinates": 6880,
+      "training_eligible_records": 6880,
+      "trusted_exact_records": 6104,
+      "selected_without_endpoint_record": 425
+    },
+    "stage_II": {
+      "selected_call_records": 9216,
+      "unique_selected_coordinates": 7885,
+      "unique_exact_endpoint_coordinates": 7434,
+      "training_eligible_records": 7434,
+      "trusted_exact_records": 6598,
+      "selected_without_endpoint_record": 451
+    },
+    "cross_stage": {
+      "stage_I_endpoint_subset_of_stage_II": true,
+      "shared_exact_coordinates": 6880,
+      "stage_II_new_exact_coordinates": 554,
+      "shared_coordinate_phase_changes": 0
+    },
+    "headline_scope": "Stage-I unique exact endpoint coordinates / prescribed candidate grid",
+    "sampling_fraction": 0.08893370044337585,
+    "exact_location_reduction": 11.244331395348837
+  }
+}

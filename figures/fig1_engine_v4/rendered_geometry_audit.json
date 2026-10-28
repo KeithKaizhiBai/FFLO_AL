@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "reliability_card": {
+    "x": 1278,
+    "y": 385,
+    "width": 312,
+    "height": 130,
+    "right": 1590,
+    "bottom": 515
+  },
+  "reliability_text": {
+    "reliability-title": {
+      "x": 1294,
+      "y": 399,
+      "width": 117.59375,
+      "height": 19,
+      "right": 1411.59375,
+      "bottom": 418
+    },
+    "reliability-row-1": {
+      "x": 1319,
+      "y": 428,
+      "width": 181.4375,
+      "height": 17.3671875,
+      "right": 1500.4375,
+      "bottom": 445.3671875
+    },
+    "reliability-row-2": {
+      "x": 1319,
+      "y": 458,
+      "width": 172.53125,
+      "height": 17.3671875,
+      "right": 1491.53125,
+      "bottom": 475.3671875
+    },
+    "reliability-row-3": {
+      "x": 1319,
+      "y": 488,
+      "width": 136.046875,
+      "height": 17.3671875,
+      "right": 1455.046875,
+      "bottom": 505.3671875
+    }
+  },
+  "clearances": {
+    "reliability-title": {
+      "left": 16,
+      "top": 14,
+      "right": 178.40625,
+      "bottom": 97,
+      "pass": true
+    },
+    "reliability-row-1": {
+      "left": 41,
+      "top": 43,
+      "right": 89.5625,
+      "bottom": 69.6328125,
+      "pass": true
+    },
+    "reliability-row-2": {
+      "left": 41,
+      "top": 73,
+      "right": 98.46875,
+      "bottom": 39.6328125,
+      "pass": true
+    },
+    "reliability-row-3": {
+      "left": 41,
+      "top": 103,
+      "right": 134.953125,
+      "bottom": 9.6328125,
+      "pass": true
+    }
+  },
+  "asset_boxes": {
+    "asset-engine-v4-central": {
+      "x": 0,
+      "y": 0,
+      "width": 291.7027587890625,
+      "height": 217.594482421875,
+      "right": 291.7027587890625,
+      "bottom": 217.594482421875
+    },
+    "asset-engine-v4-bdg": {
+      "x": 0,
+      "y": 0,
+      "width": 98.39054870605469,
+      "height": 69.35614013671875,
+      "right": 98.39054870605469,
+      "bottom": 69.35614013671875
+    },
+    "asset-engine-v4-observation": {
+      "x": 0,
+      "y": 0,
+      "width": 98.39054870605469,
+      "height": 85.14566802978516,
+      "right": 98.39054870605469,
+      "bottom": 85.14566802978516
+    }
+  },
+  "asset_containment": {
+    "asset-engine-v4-central": {
+      "left": 0,
+      "top": 0,
+      "right": 1308.2972412109375,
+      "bottom": 862.405517578125,
+      "pass": true
+    },
+    "asset-engine-v4-bdg": {
+      "left": 0,
+      "top": 0,
+      "right": 1501.6094512939453,
+      "bottom": 1010.6438598632812,
+      "pass": true
+    },
+    "asset-engine-v4-observation": {
+      "left": 0,
+      "top": 0,
+      "right": 1501.6094512939453,
+      "bottom": 994.8543319702148,
+      "pass": true
+    }
+  },
+  "status": "pass",
+  "failures": []
+}

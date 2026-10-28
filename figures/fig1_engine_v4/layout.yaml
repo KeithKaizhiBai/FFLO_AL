@@ -1,0 +1,59 @@
+schema_version: 1
+canvas: {width: 1600, height: 1080}
+
+cards:
+  central: {x: 325, y: 150, width: 925, height: 690}
+  parameter: {x: 555, y: 18, width: 410, height: 112}
+  next_calls: {x: 22, y: 225, width: 278, height: 192}
+  acquisition: {x: 22, y: 590, width: 278, height: 235}
+  bdg: {x: 1278, y: 150, width: 312, height: 215}
+  reliability: {x: 1278, y: 385, width: 312, height: 130}
+  observation: {x: 1278, y: 535, width: 312, height: 270}
+  surrogate: {x: 585, y: 870, width: 430, height: 150}
+
+scientific_subobjects:
+  thermodynamic_landscape:
+    x: 385
+    y: 216
+    width: 805
+    height: 300
+    parent: central
+    scientific_content_bbox: {x: 521, y: 216, width: 533, height: 300}
+  topology_resolution: {x: 351, y: 535, width: 873, height: 275, parent: central}
+
+central_internal:
+  inner: {x: 26, y: 14, width: 873, height: 662}
+  thermodynamic_region: {x: 26, y: 48, width: 873, height: 310}
+  landscape: {x: 60, y: 66, width: 805, height: 300}
+  scientific_content: {x: 196, y: 66, width: 533, height: 300}
+  topology_region: {x: 26, y: 385, width: 873, height: 275}
+
+bdg_internal:
+  hamiltonian: {x: 8, y: 48, width: 64, height: 126}
+  spectrum: {x: 78, y: 48, width: 59, height: 126}
+  free_energy: {x: 145, y: 38, width: 153, height: 146}
+
+routes:
+  next_parameter: {source: next_calls, target: parameter, points: [[306, 248], [306, 150], [300, 55], [549, 78]], from_family: selected, to_family: exact}
+  parameter_bdg: {source: parameter, target: bdg, points: [[971, 72], [1130, 28], [1400, 66], [1434, 144]], from_family: exact, to_family: exact}
+  bdg_reliability: {source: bdg, target: reliability, points: [[1434, 371], [1434, 373], [1434, 377], [1434, 379]], from_family: exact, to_family: physical}
+  reliability_observation: {source: reliability, target: observation, points: [[1434, 521], [1434, 523], [1434, 527], [1434, 529]], from_family: physical, to_family: physical}
+  observation_surrogate: {source: observation, target: surrogate, points: [[1272, 760], [1256, 950], [1150, 950], [1021, 935]], from_family: physical, to_family: learning}
+  surrogate_acquisition: {source: surrogate, target: acquisition, points: [[579, 945], [470, 1010], [310, 930], [240, 831]], from_family: learning, to_family: decision}
+  acquisition_next: {source: acquisition, target: next_calls, points: [[82, 584], [32, 544], [32, 470], [82, 423]], from_family: decision, to_family: selected}
+
+reliability_card:
+  title_bbox: {x: 1294, y: 397, width: 120, height: 22}
+  rows:
+    - {id: reliability-row-1, text: optimization convergence, x: 1319, y: 427, width: 263.75, height: 21.5}
+    - {id: reliability-row-2, text: spectral/topological trust, x: 1319, y: 457, width: 250.75, height: 21.5}
+    - {id: reliability-row-3, text: numerical reliability, x: 1319, y: 487, width: 197.75, height: 21.5}
+
+expected_metrics:
+  primary_visual_area_fraction_min: 0.55
+  landscape_fraction_of_central_min: 0.35
+  scientific_surface_fill_ratio_min: 0.65
+  independent_card_gap_min_px: 20
+  right_column_gaps_px: [20, 20]
+  main_workflow_routes: 7
+  secondary_flow_layers: 7

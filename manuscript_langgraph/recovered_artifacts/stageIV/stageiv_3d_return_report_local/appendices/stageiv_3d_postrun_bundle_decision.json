@@ -1,0 +1,135 @@
+{
+  "caveats": [
+    "This bundle only aggregates report-only Stage IV post-run audits.",
+    "It does not run thermodynamic exact calculations, Delta-q searches, or active-learning iterations.",
+    "A missing hidden fixed-mu reference keeps the Stage IV capability claim inconclusive."
+  ],
+  "component_decisions": {
+    "convergence_audit": {
+      "audit_cloud_size": 20000,
+      "caveats": [
+        "This audit uses report-only nearest-neighbor/KNN proxy surfaces and must be paired with visual slice/surface review.",
+        "Missing surfaces are never converted to zero shift.",
+        "Stage III fixed-mu hidden-slice validation is reported separately if reference data are supplied."
+      ],
+      "component_min_size": 12,
+      "component_radius": 0.035,
+      "decision_class": "Decision C",
+      "final_dataset_path": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1\\dataset_iter025.npz",
+      "final_dataset_sha256": "7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842",
+      "final_iteration": 25,
+      "mu_domain_complete": false,
+      "mu_range_limited": true,
+      "need_new_exact_calculation": true,
+      "neighbor_k": 8,
+      "recommended_next_action": "inspect_failed_surfaces_before_more_exact_work",
+      "run_dir": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+      "run_id": "stageiv_3d_convergence_audit",
+      "source_run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+      "stageiv_convergence_status": "not_converged",
+      "support_radius": 0.075,
+      "surface_max_distance": 0.18,
+      "topology_component_stable": false,
+      "topology_surface_component_count_last3": [
+        3,
+        4,
+        3
+      ],
+      "topology_surface_coverage_p95_final": 0.015317527016765012,
+      "topology_surface_shift_p95_last3": [
+        0.00558353725352583,
+        0.005906681186021189,
+        0.005996195716502644
+      ],
+      "topology_volume_map_change_last3": [
+        0.001412248042110669,
+        0.001922583952832607,
+        0.0025614754098360654
+      ],
+      "trusted_topology_surprise_last3": [
+        0.065,
+        0.11229946524064172,
+        0.140625
+      ]
+    },
+    "hidden_slice_audit": {
+      "component_min_size": 24,
+      "config": "configs\\stageiv_3d_production.json",
+      "decision_class": "Decision D",
+      "evaluated_iterations": [],
+      "grid_n": 201,
+      "hidden_slice_passed": false,
+      "hidden_slice_status": "inconclusive",
+      "knn_k": 8,
+      "mu_reference": 0.55,
+      "need_new_exact_calculation": false,
+      "reason": "reference_dataset_missing",
+      "recommended_next_action": "provide_stageiii_frozen_reference_dataset_after_stageiv_return",
+      "reference_dataset": null,
+      "run_dir": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+      "run_id": "stageiv_3d_hidden_slice_audit",
+      "source_run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+      "support_radius": 0.075
+    },
+    "postrun_summary": {
+      "latest_dataset": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1\\dataset_iter025.npz",
+      "latest_dataset_iteration": 25,
+      "notes": [
+        "This is a lightweight post-run summary, not a publication-grade 3D convergence audit.",
+        "Run the dedicated Stage IV 3D convergence audit before making scientific closure claims."
+      ],
+      "phase_counts": [
+        {
+          "code": 0,
+          "count": 2350,
+          "label": "normal"
+        },
+        {
+          "code": 1,
+          "count": 141,
+          "label": "uniform_SC"
+        },
+        {
+          "code": 2,
+          "count": 4590,
+          "label": "FFLO"
+        }
+      ],
+      "postrun_status": "summary_only",
+      "run_dir": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+      "sample_count": 7081,
+      "topology_counts": [
+        {
+          "code": -1,
+          "count": 2350,
+          "label": "not_applicable"
+        },
+        {
+          "code": 0,
+          "count": 3265,
+          "label": "trivial"
+        },
+        {
+          "code": 1,
+          "count": 1466,
+          "label": "topological"
+        }
+      ]
+    }
+  },
+  "convergence_status": "not_converged",
+  "decision_class": "Decision D",
+  "hidden_reference_dataset": null,
+  "hidden_slice_passed": false,
+  "hidden_slice_status": "inconclusive",
+  "latest_dataset": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1\\dataset_iter025.npz",
+  "latest_dataset_iteration": 25,
+  "need_new_exact_calculation": true,
+  "output_dir": "ML_Phase_StageIV_Topology3D\\reports\\stageiv_3d_postrun_bundle_local",
+  "postrun_bundle_status": "hidden_slice_reference_missing",
+  "recommended_next_action": "rerun_with_reference_dataset_for_hidden_fixed_mu_validation",
+  "run_dir": "ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "run_id": "stageiv_3d_postrun_bundle",
+  "sample_count": 7081,
+  "source_run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1"
+}

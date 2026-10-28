@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "resume_from": "GATE_CITED_INTRODUCTION_MANUSCRIPT_HUMAN_REVIEW",
+  "continuation_instruction": "Review the physics-first Introduction and claim-to-citation matrix; explicitly approve the cited Introduction/manuscript gate or request targeted revisions. Do not infer approval from automated citation checks."
+}

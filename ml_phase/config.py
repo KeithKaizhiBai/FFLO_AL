@@ -43,6 +43,7 @@ class ActiveLearningConfig:
     allow_underfilled_batch_after_min_iter: bool = True
     random_seed: int = 42
     hidden_ground_truth: str = ""
+    acquisition_profile: str = "full"
 
     # Physical thresholds
     delta_eps: float = 1e-3
@@ -88,6 +89,32 @@ class ActiveLearningConfig:
     w_eta_response: float = 0.3
     w_gradient_response: float = 0.3
     w_reg_response: float = 0.3
+    w_cls_simple: float = 1.0
+    w_ns_simple: float = 1.0
+    w_uf_simple: float = 0.5
+    w_grad_simple: float = 0.2
+    w_reg_simple: float = 0.1
+    w_ext_simple_schedule: str = "piecewise"
+    w_ext_simple_start: float = 0.02
+    w_ext_simple_mid: float = 0.01
+    w_ext_simple_end: float = 0.0
+    w_ext_simple_mid_iter: int = 10
+    w_ext_simple_end_iter: int = 30
+    surprise_cleanup_qedge_penalty: float = 0.85
+    surprise_cleanup_qedge_floor: float = 0.05
+    surprise_cleanup_response_weight: float = 0.25
+    surprise_cleanup_explore_scale: float = 0.5
+    topo_phase_weight: float = 0.45
+    topo_spectral_weight: float = 0.45
+    topo_coverage_weight: float = 0.10
+    topo_late_phase_weight: float = 0.25
+    topo_late_spectral_weight: float = 0.65
+    topo_late_coverage_weight: float = 0.10
+    topo_late_iter: int = 30
+    topo_pf_margin_scale: float = 0.02
+    topo_edge_length: float = 0.06
+    topo_gapless_length: float = 0.06
+    topo_coverage_length: float = 0.08
     b_delta_gate_mode: str = "normal_sc_competition"
     q_boundary_gate_mode: str = "psc"
     interior_filter_mode: str = "soft_penalty"
@@ -137,8 +164,9 @@ class ActiveLearningConfig:
     val_fraction: float = 0.15
 
     # Runtime
-    points_per_iter: int = 64
-    iterations: int = 5
+    oracle_mode: str = "robust_al"
+    points_per_iter: int = 256
+    iterations: int = 100
     dry_run: bool = True
     mode: str = "local"
     world_size: int = 1
@@ -210,12 +238,16 @@ def validate_active_learning_config(cfg: ActiveLearningConfig) -> ActiveLearning
 
     if run_mode not in {"discovery", "refinement"}:
         raise ValueError("run_mode must be 'discovery' or 'refinement'.")
+    if str(cfg.oracle_mode) not in {"legacy", "robust_al", "robust_incremental"}:
+        raise ValueError("oracle_mode must be 'legacy', 'robust_al', or 'robust_incremental'.")
+    if str(cfg.acquisition_profile) not in {"full", "simple_phase", "surprise_cleanup", "topo_trivial"}:
+        raise ValueError("acquisition_profile must be 'full', 'simple_phase', 'surprise_cleanup', or 'topo_trivial'.")
     if domain_mode not in {"full", "prior_band"}:
         raise ValueError("candidate_domain_mode must be 'full' or 'prior_band'.")
     if selection_mode not in {"topk", "stochastic"}:
         raise ValueError("selection_mode must be 'topk' or 'stochastic'.")
-    if initialization != "random_grid":
-        raise ValueError("Only initialization='random_grid' is currently supported.")
+    if initialization not in {"random_grid", "sobol_scrambled"}:
+        raise ValueError("initialization must be 'random_grid' or 'sobol_scrambled'.")
     if int(cfg.initial_seed_size) < 0:
         raise ValueError("initial_seed_size must be non-negative.")
     if int(cfg.batch_size_max) < 0:
@@ -261,8 +293,32 @@ def validate_active_learning_config(cfg: ActiveLearningConfig) -> ActiveLearning
         raise ValueError("active_pool_max_fraction_end must be in (0, 1].")
     if int(cfg.active_selection_min_iterations) < 0:
         raise ValueError("active_selection_min_iterations must be non-negative.")
+    if str(cfg.w_ext_simple_schedule) not in {"constant", "piecewise"}:
+        raise ValueError("w_ext_simple_schedule must be 'constant' or 'piecewise'.")
     if str(cfg.w_ext_schedule) not in {"constant", "piecewise"}:
         raise ValueError("w_ext_schedule must be 'constant' or 'piecewise'.")
+    if not (0.0 <= float(cfg.surprise_cleanup_qedge_penalty) <= 1.0):
+        raise ValueError("surprise_cleanup_qedge_penalty must be between 0 and 1.")
+    if not (0.0 <= float(cfg.surprise_cleanup_qedge_floor) <= 1.0):
+        raise ValueError("surprise_cleanup_qedge_floor must be between 0 and 1.")
+    if float(cfg.surprise_cleanup_response_weight) < 0.0:
+        raise ValueError("surprise_cleanup_response_weight must be non-negative.")
+    if float(cfg.surprise_cleanup_explore_scale) < 0.0:
+        raise ValueError("surprise_cleanup_explore_scale must be non-negative.")
+    topo_weights = [
+        float(cfg.topo_phase_weight),
+        float(cfg.topo_spectral_weight),
+        float(cfg.topo_coverage_weight),
+        float(cfg.topo_late_phase_weight),
+        float(cfg.topo_late_spectral_weight),
+        float(cfg.topo_late_coverage_weight),
+    ]
+    if any(w < 0.0 for w in topo_weights):
+        raise ValueError("topology acquisition weights must be non-negative.")
+    if float(cfg.topo_pf_margin_scale) <= 0.0:
+        raise ValueError("topo_pf_margin_scale must be positive.")
+    if float(cfg.topo_edge_length) <= 0.0 or float(cfg.topo_gapless_length) <= 0.0 or float(cfg.topo_coverage_length) <= 0.0:
+        raise ValueError("topology acquisition length scales must be positive.")
     if str(cfg.b_delta_gate_mode) not in {"none", "normal_sc_competition"}:
         raise ValueError("b_delta_gate_mode must be 'none' or 'normal_sc_competition'.")
     if str(cfg.q_boundary_gate_mode) not in {"psc", "uf_competition"}:

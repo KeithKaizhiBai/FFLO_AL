@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{enumitem}
+\setlist{nosep}
+\begin{document}
+\title{Stage IV 3D Topology-Aware Return Report}
+\author{Report-only audit}
+\date{2026-06-27}
+\maketitle
+\section*{Executive Summary}
+Final unique samples: \textbf{7081}. Thermodynamic counts: normal=2350, uniform\_SC=141, FFLO=4590.
+
+Topology counts: trivial=3265, topological=1466, gapless\_SC=0, unresolved=0, not\_applicable=2350.
+
+Official convergence audit status: \textbf{not\_converged}. Hidden fixed-mu validation: \textbf{inconclusive}.
+
+\section*{Convergence Diagnostics}
+\begin{itemize}
+\item Topology volume-map change last three transitions: [0.001412248042110669, 0.001922583952832607, 0.0025614754098360654].
+\item Topology surface p95 shift last three transitions: [0.00558353725352583, 0.005906681186021189, 0.005996195716502644].
+\item Final topology surface coverage p95: 0.015317527016765012.
+\item Trusted topology surprise last three transitions: [0.065, 0.11229946524064172, 0.140625].
+\item Topology component count last three iterations: [3, 4, 3].
+\item Mu-domain complete: False; mu-range limited: True.
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/phase_3d_transparent.png}
+\caption{Transparent 3D thermodynamic point cloud with diagnostic phase-boundary surfaces}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/phase_3d_jakt_view.png}
+\caption{Thermodynamic phase map from the kBT/t-J\_A/t view, with mu/t retained as depth and opacity}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/topology_3d_transparent.png}
+\caption{Transparent 3D topology-aware point cloud with diagnostic phase and topology-boundary surfaces}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/phase_mu_slice_atlas.png}
+\caption{Thermodynamic phase atlas by mu/t slice with boundary curves}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/topology_mu_slice_atlas.png}
+\caption{Topology atlas by mu/t slice with boundary curves}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/convergence_metrics_summary.png}
+\caption{Convergence metrics summary}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/pfaffian_margin_bulk_gap_histograms.png}
+\caption{Pfaffian margin and bulk-gap histograms}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/dataset_growth_phase_topology.png}
+\caption{Dataset and topology-count growth}
+\end{figure}
+\section*{Caveats}
+\begin{itemize}
+\item The 3D boundary surfaces and 2D boundary curves are report-only smooth diagnostic fits built from final exact labels with local long-edge filtering.
+\item The \(k_B T/t\)-\(J_A/t\) view is a comparison projection of the 3D data cloud and should not be interpreted as a single fixed-\(\mu\) phase diagram.
+\item The convergence audit is report-only and uses nearest-neighbor/KNN proxy surfaces.
+\item Hidden fixed-mu validation remains inconclusive until the frozen Stage III reference dataset is supplied.
+\item Do not claim formal Stage IV convergence from this returned run alone.
+\end{itemize}
+\end{document}

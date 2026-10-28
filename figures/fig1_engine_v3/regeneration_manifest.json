@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-01-ENGINE-V3",
+  "generated_at": "2026-08-25T16:20:17.064820+00:00",
+  "commit_hash": null,
+  "physics_recomputed": false,
+  "source_figures_overwritten": false,
+  "source_candidates": [
+    "../fig1_engine",
+    "../fig1_engine_v2"
+  ],
+  "proposal_gate": {
+    "gate": "GATE_FIG1_V3_PROPOSAL",
+    "state": "APPROVED",
+    "date": "2026-08-26"
+  },
+  "automated_validation": "pass",
+  "specific_validation": "pass",
+  "warnings": 2,
+  "human_review_items": 1,
+  "approval": {
+    "gate": "GATE_FIG1_ENGINE_V3_FINAL_APPROVAL",
+    "state": "HUMAN_WAIT"
+  },
+  "sha256": {
+    "fig1_contract.yaml": "f572d7af25a683869c0e819ab36990a30778ed4b392376e016810b7b0194d6b9",
+    "layout.yaml": "aaeda13d0b25564b1331acaf59a7a6d5f113e1c54ddab9030eb01c7e59df4530",
+    "asset_registry.yaml": "dc3f40af0ec36c213710ec82e55fd13a396afa5cdb0c5103b12d984038b14dde",
+    "asset_manifest.json": "3984991b45171e7d51e79b1ce3af313577cfb85ecac330cc7ab0024036c6e729",
+    "asset_validation.json": "6ef2d5491207e991ff77544d87596b7b8f249a723a499057afac80f53266c26f",
+    "engine_preflight.json": "f62de82b99dc71386c743c4dbccea54ba3b2675c851e6c3e49cbcd14d3c2233c",
+    "geometry_manifest.json": "7aeea2205c84892199f22ad2b8909fdcb77c0cd982e4713b5d583ff89b4a2302",
+    "fig1_engine_v3.svg": "e7bcef3f2912e56719aa4b3c56b4b6b82f23b0f66430b7ddcbd35045ee90857e",
+    "fig1_engine_v3.pdf": "b1138f2b314443ff874092d4639a0e14c9d370dbd2b9ae7a0bbdf89bd907cda1",
+    "fig1_engine_v3.png": "36d6d9e0acdf6757622901d40a7d6c83d970539621edadf1b515a7f9540599e8",
+    "fig1_engine_v3_grayscale.png": "5f447a96bd5a31f3e30df17ad8a520ce4dab953954a9a295ed644df0b70ca9f9",
+    "central_panel_preview.png": "bed4432cdc9217c58629b1b373f66ef7dd8b3a6da57309876f7eacdb8dba6760",
+    "saliency_preview.png": "fdcef7573bb10898f197b5c76830e10e067e422cf3e54b37ecab94a3cb48a7d4",
+    "rendered_geometry_audit.json": "e712beef6450c91148520b58e0bb9943249bb73aa00b904ff1cd6ec463709516",
+    "pdf_page_audit.json": "b4a5148d956d93b55d93a5e0278a2a15bcd6c625919b16cc93030f6991d175a7",
+    "print_preview_audit.json": "64a2f66c0eae06033bdb530e55c55428dcab9eba8004144cc18e5385450595a5",
+    "saliency_audit.json": "4b7216e806bbcacf8bcb57676440b9aa958fb7fd60df9597465679f036d55604",
+    "fig1_engine_v3_specific_lint.json": "2b1bf51a4d7c1f21cae23c9cabfdbc6ed078af7d11cc2cef47b2d28a6a4fbbed",
+    "validation_report.json": "3e3d379df57970522bd6fb85ba6e9071722a0487fb1ab7d4f2b1452462c69058",
+    "visual_narrative_report.json": "ef3b77b0f9b99729e0f1fa470520fd8511e0faf5dedff54c00a5afc92665b6c1",
+    "refinement_log.yaml": "bde98f74d045a0933194d3ebc52e88157afacdbf6846aabfcf60dd99fc56ae45",
+    "visual_review.md": "98c812e4c2bd0883362460c219742ef04235fec33f4237cace78b2ab138e3dfd"
+  }
+}

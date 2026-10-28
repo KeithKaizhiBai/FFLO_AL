@@ -1,0 +1,6 @@
+code,label,count
+-1,not_applicable,2350
+0,trivial,3265
+1,topological,1466
+2,gapless_SC,0
+3,unresolved,0

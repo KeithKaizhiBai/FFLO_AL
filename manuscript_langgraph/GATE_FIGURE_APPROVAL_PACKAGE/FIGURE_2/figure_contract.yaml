@@ -1,0 +1,13 @@
+{
+  "figure_id": "FIG-02-THERMO",
+  "claim_ids": ["CLM-2D-THERMO", "CLM-ORACLE-RELIABILITY"],
+  "scientific_role": "Show cold-start sampling, boundary-focused acquisition, the final exact thermodynamic reconstruction, and configured closure metrics.",
+  "panels": {
+    "A": "initial 512-point cold-start random-grid design",
+    "B": "early, middle, and late selected-point snapshots",
+    "C": "final normal/uniform-SC/FFLO map with exact points and hard-risk markers",
+    "D": "last-iteration convergence metrics normalized by configured thresholds"
+  },
+  "required_caveats": ["run_config records initialization=random_grid, not scrambled Sobol", "hard-risk points remain an explicit uncertainty layer", "rendered boundaries are support-restricted guides from frozen exact labels"],
+  "prohibited": ["all uncertainty eliminated", "ML replaces the BdG solver"]
+}

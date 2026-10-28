@@ -1,0 +1,14 @@
+schema_version: 1
+gate_id: GATE_FIGURE_APPROVAL
+decision: approve_with_edits
+approval_authority: explicit_human_user_instruction
+approved_on: 2026-08-27
+figures:
+  FIG-01-PIPELINE: SCIENTIFIC_FREEZE
+  FIG-02-THERMO: SCIENTIFIC_FREEZE
+  FIG-03-STAGEIII-TOPOLOGY: SCIENTIFIC_FREEZE
+  FIG-04-STAGEIV-3D-EXTENSION: SCIENTIFIC_FREEZE_WITH_NONCLOSURE_CAVEAT
+remaining_gates:
+  INTRO_CITATION_LOOP_GATE: permission_not_granted
+  GATE_FINAL_LATEX_INTEGRATION: blocked
+  GATE_FINAL_MANUSCRIPT_APPROVAL: pending_human_approval

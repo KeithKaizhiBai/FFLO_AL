@@ -1,0 +1,379 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+\setlist[itemize]{leftmargin=1.5em}
+\setlist[enumerate]{leftmargin=1.5em}
+\captionsetup{font=small, labelfont=bf}
+\sloppy
+\title{Phase-II Robust Active-Learning Convergence, Numerical Reliability, and Optimization Report}
+\date{2026-06-20}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+
+\section{Executive Summary}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.43\linewidth}p{0.47\linewidth}@{}}
+\toprule
+Item & Value \\
+\midrule
+main\_phase\_converged & True \\
+publication\_boundary\_audit & pass \\
+publication\_ready\_for\_main\_phase\_map & True \\
+frozen dataset & dataset\_iter035 \\
+dataset total & 7434 \\
+normal / uniform-SC / FFLO & 1867 / 715 / 4852 \\
+trusted surprise & 0/127 \\
+hard-risk surprise & 75/129 \\
+targeted rerun count & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Final Phase-II status.}
+\end{table}
+
+Phase-II should be read as one continuous workflow: exact seed labels, surrogate training, full acquisition, robust exact-oracle labeling, trusted-label append, StopController review, and hard-risk publication audit.  The machine-learning model schedules exact BdG calls; it does not replace the thermodynamic phase criterion.
+
+\section{From Random Seed to Closed-Loop Active Learning}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/phase2_from_seed_loop.png}
+\caption{RankCapK3 active-learning loop from random seed.}
+\end{figure}
+
+
+The final loop contains an initial exact seed set followed by acquisition-selected batches.  Every batch is merged, filtered through trusted-label criteria, appended to the dataset, and checked against main phase-map stability and boundary-shift criteria.
+
+\section{Optimization Timeline}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\linewidth]{figures/phase2_optimization_timeline.png}
+\caption{Phase-II optimization and validation timeline.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.18\linewidth}p{0.30\linewidth}p{0.42\linewidth}@{}}
+\toprule
+stage & objective & main\_result \\
+\midrule
+Initial exact grid & Reference phase structure & Coarse exact map available; active learning need is boundary refinement \\
+Acquisition development & Avoid deep-normal oversampling while retaining discovery & Full acquisition retained for FFLO/uniform-SC coverage; simple-phase not used for final discovery \\
+Robust exact oracle & Separate phase labels from numerical reliability & Trusted, training-eligible, rerun-required, q/Delta unresolved layers recorded \\
+Incremental q-window & Reduce repeated q-window work & Incremental strip computation retained with fallback and reliability audit \\
+Local-refinement audit & Find why optimized variants timed out & Mandatory overflow produced approximately 85 boxes in failed variants \\
+RankCapK3 & Bound selected refinement targets & Fixed-point acceptance passed; selected targets <= 3 with physics-equivalent labels \\
+One- and five-iteration validation & Check real AL behavior before full run & RankCapK3 remained stable and reduced local boxes in active-loop context \\
+Full loop & Run production discovery with optimized oracle & 30 acquisition batches completed; main phase nearly stable but all-selected surprise remained high \\
+Trusted-surprise tail & Use trusted labels as formal main-phase surprise gate & Stopped at iter034; trusted surprise 0/127; dataset\_iter035 frozen \\
+Hard-risk publication audit & Test whether hard-risk frontier can move main boundaries & Decision A; targeted rerun count 0; publication boundary audit pass \\
+\bottomrule
+\end{tabular}
+\caption{Stage-level objective and outcome.}
+\end{table}
+
+\section{Acquisition Function Development}
+
+Acquisition development controlled three competing needs: discover new FFLO and uniform-SC regions, keep attention near main thermodynamic boundaries, and avoid wasting batches in deep normal interiors.  The final full profile retained boundary terms, uncertainty terms, stochastic sampling, observation repulsion, and batch repulsion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/phase2_acquisition_oracle_flow.png}
+\caption{Responsibility split between acquisition and exact oracle.}
+\end{figure}
+
+
+\section{Exact-Oracle Reliability Evolution}
+
+The robust oracle records phase labels separately from reliability metadata: trusted exact status, training eligibility, rerun-required status, q-unresolved status, and Delta-unresolved status.  This separation lets the report distinguish main phase convergence from the still-active numerical frontier.
+
+\section{Incremental q-Window and Local-Refinement Optimization}
+
+Incremental q-window computation reduces repeated q-strip work without changing the thermodynamic phase criterion.  Local refinement was the larger bottleneck: failed cluster-optional variants overflowed to about 85 local boxes because mandatory risk targets bypassed the intended cap.  RankCapK3 fixed this by using basin-level risk annotation and a hard total cap of three refined basins.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.55\linewidth}p{0.35\linewidth}@{}}
+\toprule
+metric & value \\
+\midrule
+baseline\_local\_boxes & 6.0 \\
+rankcap\_mean\_local\_boxes & 2.79296875 \\
+rankcap\_max\_local\_boxes & 3 \\
+baseline\_local\_refinement\_runtime\_sec & 189.767 \\
+rankcap\_local\_refinement\_runtime\_sec & 88.28558737352148 \\
+local\_refinement\_runtime\_reduction\_percent & 53.47684930808756 \\
+baseline\_point\_total\_runtime\_sec & 234.194 \\
+rankcap\_point\_total\_runtime\_sec & 117.28463183327355 \\
+point\_total\_runtime\_reduction\_percent & 49.91988187858205 \\
+total\_wall\_hours & 36.571320979444444 \\
+wall\_minutes\_per\_exact\_iteration & 70.78320189569892 \\
+\bottomrule
+\end{tabular}
+\caption{Optimization performance summary.}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/local_box_distribution.png}
+\caption{Local-box distribution under RankCapK3.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/local_box_gate.png}
+\caption{Local-box gate and cap behavior.}
+\end{figure}
+
+
+\section{Validation Ladder}
+
+The optimized oracle was not promoted directly into a full run.  It passed fixed-point acceptance, one-iteration active-learning validation, five-iteration validation, a full-loop run, tail continuation, and the publication hard-risk boundary-impact audit.
+
+\section{Full-Loop and Tail-Continuation Results}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.45\linewidth}p{0.30\linewidth}@{}}
+\toprule
+phase & count \\
+\midrule
+ &  \\
+\bottomrule
+\end{tabular}
+\caption{Frozen dataset\_iter035 phase counts.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.43\linewidth}p{0.47\linewidth}@{}}
+\toprule
+Item & Value \\
+\midrule
+phase\_map\_change & 0.001628727653468802 \\
+normal/SC boundary shift & 0.004166666666666666 \\
+uniform/FFLO boundary shift & 0.0 \\
+boundary\_coverage\_p95 & 0.0046875000000001586 \\
+trusted surprise & 0/127 \\
+all-selected surprise & 75/256 \\
+hard-risk surprise & 75/129 \\
+\bottomrule
+\end{tabular}
+\caption{Final StopController metrics.}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/dataset_growth_and_phase_counts.png}
+\caption{Dataset growth and phase counts.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/surrogate_metric_curves.png}
+\caption{Surrogate metric curves.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/runtime_curve.png}
+\caption{Runtime learning curve.}
+\end{figure}
+
+
+\section{Final Phase Diagram}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/final_phase_map_clean.png}
+\caption{Clean final main phase map with extracted boundaries.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/final_phase_map_with_uncertainty.png}
+\caption{Final phase map with hard-risk uncertainty markers.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/final_dataset_coverage.png}
+\caption{Final exact dataset coverage.}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/hard_risk_uncertainty_band.png}
+\caption{Hard-risk uncertainty band.}
+\end{figure}
+
+
+\section{Convergence Logic}
+
+Phase-map change and boundary-shift metrics measure stability of dense monitor-grid predictions between iterations.  Boundary coverage measures how densely exact samples cover the current main boundaries.  All-selected surprise is an acquisition-difficulty diagnostic, whereas trusted surprise is the clean exact-label gate for main phase convergence.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/tail_surprise_layers.png}
+\caption{Trusted and hard-risk surprise layers at the tail endpoint.}
+\end{figure}
+
+
+\section{Hard-Risk Boundary-Impact Audit}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.65\linewidth}p{0.25\linewidth}@{}}
+\toprule
+reason & count \\
+\midrule
+rerun\_required & 110 \\
+untrusted\_exact & 129 \\
+training\_ineligible & 110 \\
+q\_unresolved & 0 \\
+delta\_unresolved & 0 \\
+hard\_risk\_total & 129 \\
+multi\_reason\_overlap & 110 \\
+rerun\_required\_only & 0 \\
+non\_rerun\_hard\_risk & 19 \\
+\bottomrule
+\end{tabular}
+\caption{Hard-risk reason counts.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.31\linewidth}p{0.14\linewidth}p{0.16\linewidth}p{0.31\linewidth}@{}}
+\toprule
+gate & status & value & threshold \\
+\midrule
+p95 <= tol & pass & 0 & 0.00416667 \\
+sig. Hausdorff <= tol & pass & 0 & 0.00416667 \\
+strict Hausdorff diag. & diagnostic & 0.8125 & diagnostic; sig. arc >= 0.05 \\
+topology stable & pass & False & False \\
+no moving cluster & pass & 0 & 0 \\
+counts reconciled & pass & 129 & 129 \\
+metadata present & pass & False & False \\
+targeted list empty & pass & 0 & 0 \\
+publication audit & pass & True & True \\
+\bottomrule
+\end{tabular}
+\caption{Publication audit gate summary.}
+\end{table}
+
+The strict Hausdorff diagnostic reaches 0.8125 for isolated dense-grid uncertainty-marker fragments, but the significant local Hausdorff gate value is zero.  No meaningful main-boundary topology change is detected, and the targeted rerun list is empty.
+
+\section{Supporting Report Map}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.48\linewidth}p{0.36\linewidth}@{}}
+\toprule
+directory & role \\
+\midrule
+\_supporting\_reports & supporting container \\
+report\_active\_learning\_r0015\_note & main report \\
+report\_phase2\_robust\_al\_final\_202606 & main report \\
+acquisition\_profile\_smoke & Phase-II supporting report \\
+hard\_risk\_boundary\_impact\_audit & Phase-II supporting report \\
+hard\_risk\_boundary\_impact\_audit\_v2 & Phase-II supporting report \\
+local\_refinement\_rankcap\_acceptance & Phase-II supporting report \\
+local\_refinement\_refactor & Phase-II supporting report \\
+local\_refinement\_refactor\_goal\_run & Phase-II supporting report \\
+local\_refinement\_target\_construction\_dryrun & Phase-II supporting report \\
+local\_refinement\_target\_logic\_audit & Phase-II supporting report \\
+phase\_boundary\_stability\_audit & Phase-II supporting report \\
+rankcap\_k3\_5iter\_validation & Phase-II supporting report \\
+rankcap\_k3\_5iter\_validation\_recheck & Phase-II supporting report \\
+rankcap\_k3\_full\_loop & Phase-II supporting report \\
+rankcap\_k3\_one\_iter\_validation & Phase-II supporting report \\
+\bottomrule
+\end{tabular}
+\caption{Main report and supporting-report map.}
+\end{table}
+
+\section{Consistency and Reproduction}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.28\linewidth}p{0.20\linewidth}p{0.24\linewidth}p{0.12\linewidth}@{}}
+\toprule
+check & expected & actual & status \\
+\midrule
+dataset\_total & 7434 & 7434 & pass \\
+normal\_count & 1867 & 1867 & pass \\
+uniform\_SC\_count & 715 & 715 & pass \\
+FFLO\_count & 4852 & 4852 & pass \\
+final\_iteration & 34 & 34 & pass \\
+phase\_map\_change & <0.002 & 0.001628727653468802 & pass \\
+hard\_risk\_total & 129 & 129 & pass \\
+rerun\_required\_count & 110 & 110 & pass \\
+local\_box\_mean & approx 2.79 & 2.79296875 & pass \\
+local\_box\_max & 3 & 3 & pass \\
+figure\_sources\_exist & all copied/generated & 11 & pass \\
+\bottomrule
+\end{tabular}
+\caption{Report consistency checks.}
+\end{table}
+
+The reproduction manifest records source run IDs, dataset paths and hashes, configuration, tolerance values, input report paths, and output hashes.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}p{0.43\linewidth}p{0.47\linewidth}@{}}
+\toprule
+Item & Value \\
+\midrule
+git commit & f3c277bb419ec4108b40ebba56635ef72c2ad895 \\
+candidate grid hash & f7af1e7dab418e71... \\
+phase map hash & 7d96f6593d368e76... \\
+\bottomrule
+\end{tabular}
+\caption{Reproduction identifiers.}
+\end{table}
+
+\section{Do-Not-Claim List}
+
+\begin{enumerate}\item Do not claim the hard-risk numerical frontier has disappeared.\item Do not treat provisional hard-risk labels as definitive phase labels.\item Do not claim eta anomalies have all become physical effects.\item Do not treat topology reference curves as pointwise topology labels.\item Do not present a single-seed run as a complete multi-seed benchmark.\item Do not claim hidden-ground-truth benchmarking is complete.\item Do not treat synchronized global stress-test islands as physical boundary instabilities.\end{enumerate}
+
+\section{Final Decision and Next Stage}
+
+Freeze \texttt{dataset\_iter035}, RankCapK3 production oracle settings, and the trusted-surprise StopController configuration for the Phase-II main phase-map result.  Do not launch another full active-learning loop for this result.  The next physics stages are branch-resolved topology classification, hidden-ground-truth evaluation, multi-seed benchmarking, and final publication figure polishing.
+
+
+\end{document}

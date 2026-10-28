@@ -1,0 +1,7 @@
+{
+  "namespace": "qahe3d_intro_citation_adapter",
+  "upstream_graph": "intro_citation_loop",
+  "reused_semantics": ["claim map", "retrieval permission gate", "version resolution", "full-text policy", "claim-citation mapping", "placement audit", "paragraph blueprint", "human approval boundary"],
+  "new_prerequisites": ["GATE_SCOPE_APPROVAL passed", "GATE_CLAIM_APPROVAL passed", "GATE_FIGURE_APPROVAL passed", "external retrieval separately approved"],
+  "forbidden": ["runtime import from QAHE3D", "full manuscript upload to retrieval APIs", "Introduction generation before Results freeze", "two-way synchronization"]
+}

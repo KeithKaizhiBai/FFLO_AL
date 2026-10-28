@@ -1,0 +1,11 @@
+{
+  "workflow_status": "HUMAN_WAIT",
+  "current_gate": "GATE_READER_REVISION_SCIENCE_CHOICES",
+  "gate_status": "HUMAN_WAIT",
+  "author_identity_approved": true,
+  "physics_changed": false,
+  "v8_unchanged": true,
+  "scientific_content_figures_bibliography_unchanged": true,
+  "administrative_availability_updated": true,
+  "single_column_manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_author_revision_v9/manuscript_single_column_review.pdf"
+}

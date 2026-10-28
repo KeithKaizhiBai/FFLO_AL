@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "required_paths": {
+    "parent_final_state": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/runs/active_learning_public_reproducible_v4/final_state.json",
+    "parent_main_source": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/revised_main_text.tex",
+    "parent_supplement_source": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/revised_supplement.tex",
+    "parent_main_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/revised_manuscript_candidate.pdf",
+    "parent_supplement_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/revised_supplement_candidate.pdf",
+    "parent_variant": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_variants/public_reproducible_v4/main.tex",
+    "exact_oracle": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/ml_phase/exact_oracle.py",
+    "free_energy": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/eta_phase_diagram_cuda.py",
+    "fermi_sum": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/tfflo_1d_cuda.py",
+    "stage1_endpoint": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz",
+    "stage1_config": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/run_config.json",
+    "stage2_endpoint": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz",
+    "fig2_manifest": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig2_strict_data/fig2_data_manifest.yaml",
+    "fig3_samples": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig3_strict_data/canonical/fig3_exact_topology_samples.csv",
+    "fig4_samples": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data/canonical/fig4_exact_3d_samples.csv"
+  },
+  "parent_source_hashes": {
+    "parent_main_pdf": "151b2221df9824aa7e3d66790f5eb6091553ed68e7fb9b9a54147351157bcf06",
+    "parent_supplement_pdf": "eaa651fdf0c10ff5fd8901e9ba6583c98437fd4ea4b27531216ce042da665608",
+    "parent_main_tex": "b64586f0b9d1bb9fc6127249911bf119d82e71321bdbe8b50d60236a7ff392a4",
+    "parent_supplement_tex": "8fc01a97cb54af84f7e2c2f5be261fe98c51cce92a11ac899d081c3af88421b8"
+  },
+  "current_word_counts": {
+    "abstract": 133,
+    "introduction": 472,
+    "results": 675,
+    "discussion": 194,
+    "total": 1477
+  },
+  "git_worktree_available": false
+}

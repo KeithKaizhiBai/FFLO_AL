@@ -1,0 +1,5 @@
+mu_center,half_width,all_retained,FFLO,trusted_gapped_FFLO,cFFLO,tFFLO,outside_displayed_topology_subset
+-0.45,0.025,272,176,176,121,55,96
+0.15,0.025,154,97,97,70,27,57
+0.85,0.025,223,148,148,75,73,75
+1.45,0.025,142,35,35,35,0,107

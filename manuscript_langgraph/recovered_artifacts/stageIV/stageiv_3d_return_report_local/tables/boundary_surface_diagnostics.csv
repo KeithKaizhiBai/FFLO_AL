@@ -1,0 +1,8 @@
+surface,subset_points,positive_points,negative_points,edge_threshold_normalized,raw_crossing_point_count,fit_point_count,status,smooth_method,formal_use,smooth_grid_n_t,smooth_grid_n_mu,smooth_valid_grid_points,smooth_support_radius_normalized,smooth_status,jakt_smooth_grid_n_t,jakt_smooth_grid_n_mu,jakt_smooth_valid_grid_points,jakt_smooth_support_radius_normalized,jakt_smooth_status
+thermodynamic_normal_sc,7081,4731,2350,0.21398051976671703,4916,4916,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,72.0,72.0,4912.0,0.045,ok,,,,,
+thermodynamic_uniform_sc_fflo,4731,4590,141,0.15631356066162852,1119,1119,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,72.0,72.0,4637.0,0.0698894730580633,ok,,,,,
+jakt_view_thermodynamic_normal_sc,7081,4731,2350,0.21398051976671703,4916,4916,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,,,,,,72.0,72.0,4912.0,0.045,ok
+jakt_view_thermodynamic_uniform_sc_fflo,4731,4590,141,0.15631356066162852,1119,1119,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,,,,,,72.0,72.0,4637.0,0.0698894730580633,ok
+topology_view_normal_sc,7081,4731,2350,0.21398051976671703,4916,4916,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,72.0,72.0,4912.0,0.045,ok,,,,,
+topology_view_uniform_sc_fflo,4731,4590,141,0.15631356066162852,1119,1119,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,72.0,72.0,4637.0,0.0698894730580633,ok,,,,,
+topology_cfflo_tfflo,4590,1445,3145,0.15810398187812655,5269,5269,ok,rbf_thin_plate_spline_J_of_T_mu,diagnostic_visualization_only,72.0,72.0,3695.0,0.045,ok,,,,,

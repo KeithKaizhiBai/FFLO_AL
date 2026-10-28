@@ -1,0 +1,138 @@
+{
+  "a0_max": 0.6418269955464422,
+  "alpha_p0": 2.106574698989941,
+  "alpha_ppi": 3.0,
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 1.1598990394843782,
+    "p0": 2.106574698989941,
+    "ppi": 3.0,
+    "uf": 2.724406960221848
+  },
+  "boundary_priorities": {
+    "gap_nodal": 0.0,
+    "normal_sc": 0.0,
+    "p0_topology": 0.0,
+    "ppi_topology": 0.0,
+    "uniform_fflo": 0.0
+  },
+  "boundary_summary": {
+    "gap": {
+      "alpha": 3.0,
+      "lambda": 0.49999999999999994,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 3.6696553473146516e-07
+    },
+    "ns": {
+      "alpha": 1.1598990394843782,
+      "lambda": 0.3,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.04553965490203669
+    },
+    "p0": {
+      "alpha": 2.106574698989941,
+      "lambda": 0.6,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.0009401118710056209
+    },
+    "ppi": {
+      "alpha": 3.0,
+      "lambda": 0.6,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.0002706440530599115
+    },
+    "uf": {
+      "alpha": 2.724406960221848,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.4999999999999999,
+      "raw_score_mean": 0.006774014777724681
+    }
+  },
+  "candidate_count": 78643,
+  "candidate_source_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "dataset_path": "ML_Phase_StageV_V3_SparseArc/active_runs/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter011.npz",
+  "dataset_samples": 1654,
+  "device": "cpu",
+  "gap_topology_relevance_mean": 0.15229325335696256,
+  "high_contribution_fraction_p0": 0.25,
+  "high_contribution_fraction_ppi": 0.25,
+  "iteration": 11,
+  "lambda_state": {
+    "gap": 0.49999999999999994,
+    "ns": 0.3,
+    "p0": 0.6,
+    "ppi": 0.6,
+    "uf": 0.0
+  },
+  "lambda_t": 0.0,
+  "mean_contribution_p0": 2.7726453101137682,
+  "mean_contribution_ppi": 3.508042378754355,
+  "mean_selection_probability": 0.0016564191565877735,
+  "mode": "acquisition",
+  "partition_strategy": "cost_aware",
+  "requested_candidate_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "requested_micro_batch_size": 64,
+  "run_id": "stagev_v3_sparse_arc_boundary_support_3d_v1",
+  "selected_batch_size": 64,
+  "selection_score": "A_total_v2",
+  "source_correction_by_source": {
+    "component_boundary_guard": 1.0449373635316674,
+    "global_sobol": -0.26565488148409333,
+    "opposite_Z2_bracket_gap": 1.044746633031548,
+    "p0_zero_surface_sparse_patch": 1.197955324243905,
+    "ppi_zero_surface_sparse_patch": 1.7107999873845359,
+    "topology_surface_normal_jitter": 1.0449373635316674,
+    "topology_surface_tangent_jitter": 1.0449373635316674,
+    "unknown_explicit": -0.16534419436140002
+  },
+  "sparse_proposal_status": "ok",
+  "sparse_surface_samples": 736,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_schema_version": "stagev_v3_sparse_arc_acq_1",
+  "stagev2_score_max": 0.7554192655298201,
+  "stagev2_tail_data_used_for_training": false,
+  "stagev3_candidate_count": 78643,
+  "stagev3_candidate_source_counts": {
+    "component_boundary_guard": 2621,
+    "global_sobol": 36044,
+    "opposite_Z2_bracket_gap": 2622,
+    "p0_zero_surface_sparse_patch": 1930,
+    "ppi_zero_surface_sparse_patch": 692,
+    "topology_surface_normal_jitter": 2621,
+    "topology_surface_tangent_jitter": 2621,
+    "unknown_explicit": 29492
+  },
+  "stagev3_schema_version": "stagev_v3_sparse_arc_acq_1",
+  "support_counts": {
+    "gap_nodal": 0,
+    "normal_sc": 467,
+    "p0_topology": 544,
+    "ppi_topology": 195,
+    "uniform_fflo": 67
+  },
+  "topology_c_topo_available": true,
+  "topology_c_topo_mean": 0.14179990951661042,
+  "topology_channel_suppressed": false,
+  "topology_sparse_component_count": 4,
+  "topology_sparse_coverage_p95": 0.04102529598780937,
+  "topology_sparse_patch_samples": 37,
+  "topology_sparse_surface_samples": 736,
+  "world_size": 8
+}

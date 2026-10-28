@@ -1,0 +1,158 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,tabularx,graphicx,xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\code}[1]{\texttt{#1}}
+\title{Evidence-first PRL LangGraph\\Implementation and Readiness Report}
+\author{Active Learning FFLO / Topology Project}
+\date{2026-08-07}
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{blue!55!black}{blue!4}{\parbox{0.92\textwidth}{\textbf{Status note
+(2026-08-12).} This document records the original architecture baseline. Its
+Stage I--III recommendation and pending scope/claim status are superseded by
+\code{audits/MANUSCRIPT\_SCOPE.md} and the dated claim-approval record. The
+current approved scope spans Stages I--IV and the workflow stops at
+\code{GATE\_FIGURE\_APPROVAL}.}}
+\end{center}
+
+\begin{abstract}
+An isolated evidence-first manuscript workflow has been built and revalidated
+for the Active Learning FFLO project. The package preserves the supplied
+prompt, audits the available artifacts, proposes manuscript scope and figures,
+freezes claims through explicit registries, registers a 15-node LangGraph, and
+retains a Stage III Results-by-figure vertical slice as an approval package. It
+does not modify physics code, physical definitions, frozen data, or QAHE3D. The
+default run stops at \code{GATE\_SCOPE\_APPROVAL}.
+\end{abstract}
+
+\section{Repository audit}
+The curated manifest contains 37 entries: 34 present and three explicitly
+missing. It covers representative reports and audit PDFs, frozen datasets,
+convergence records, phase/topology maps, plotting and report sources, \LaTeX{}
+sources, AI-workflow documentation, the recorded prompt, and LangGraph source.
+No pre-existing paper manuscript draft was found. The missing records are the
+Stage II endpoint, Stage III endpoint, and Stage III convergence-report bundle;
+none was reconstructed from prose.
+
+\section{Scientific scope assessment}
+The strongest current line is: \emph{Cold-start active learning reconstructs
+thermodynamic and topological FFLO phase diagrams using a numerically audited
+BdG oracle.} Active learning remains a scheduler for exact BdG calls. Stages
+I--III form the main narrative: the two-dimensional discovery problem, exact
+oracle reliability and thermodynamic closure, and the audited Stage III
+cFFLO/tFFLO result.
+
+Stage IV is conditional and may be used only as a visibly non-converged 3D
+demonstration. Stage V belongs in Discussion because V3/V4 superiority is not
+established. Stage VI belongs in Outlook because the world model is not ready
+for EIG and the requested spectral descriptors are absent.
+
+\section{Manuscript workflow design}
+The graph uses evidence order rather than article reading order:
+\begin{center}
+\small\ttfamily
+artifact/provenance $\rightarrow$ readiness $\rightarrow$ scope/claims\\
+$\rightarrow$ figures/Results $\rightarrow$ Methods/Supplement/Discussion\\
+$\rightarrow$ Introduction $\rightarrow$ Abstract/Title $\rightarrow$ audits
+$\rightarrow$ LaTeX $\rightarrow$ final approval
+\end{center}
+The staged boundaries are \code{GATE\_SCOPE\_APPROVAL},
+\code{GATE\_CLAIM\_APPROVAL}, \code{GATE\_FIGURE\_APPROVAL}, permission-gated
+Introduction retrieval, and \code{GATE\_FINAL\_MANUSCRIPT\_APPROVAL}. Every
+Results paragraph records observation, interpretation, evidence source, figure
+reference, caveats, and unsupported-sentence flags.
+
+\section{Publication-readiness gaps}
+The local checkout does not provide the Stage II/III final raw endpoints or the
+Stage III convergence/figure bundle. It also does not provide matched-budget
+random/Sobol baselines, a multi-seed benchmark, or an independent
+hidden-ground-truth evaluator.
+
+The strongest available evidence remains the signed-off audit layer. Phase II
+passed the publication-boundary audit. Stage III returned Decision A under the
+configured audit, with final coverage $p_{95}=0.006185<0.00625$ and trusted
+surprise below 0.02 over the final three transitions. A $k=6$ sensitivity gives
+coverage $p_{95}=0.006269$, slightly above the threshold, while map and
+component structure remain stable. This sensitivity must remain visible.
+
+\section{Four-figure plan and regeneration needs}
+\begin{table}[htbp]
+\small
+\begin{tabularx}{\textwidth}{p{0.07\textwidth}p{0.23\textwidth}X p{0.14\textwidth}}
+\toprule
+ID & Scientific role & Required evidence and caveat & Status \\
+\midrule
+Fig. 1 & Model, exact oracle, label hierarchy, and AL loop & Canonical model/numerics; schematic is not numerical evidence & Ready \\
+Fig. 2 & 2D thermodynamic discovery and closure & Recover frozen endpoint; retain hard-risk layer & Blocked \\
+Fig. 3 & Stage III cFFLO/tFFLO result and convergence & Recover final raw/figure bundle; state $k$-sensitivity & Blocked \\
+Fig. 4 & Benchmark or caveated 3D extension & Prefer matched multi-seed benchmark; otherwise label Stage IV non-converged & Conditional \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Figures 2 and 3 remain blocked pending frozen raw bundles. Figure 1 is ready
+for a reproducible vector redraw. Figure 4 requires a scope decision and must
+be omitted if neither a caveated Stage IV demonstration nor an authorized
+matched benchmark is available. Final scientific figures cannot be manually
+edited without their source scripts.
+
+\section{Graph execution semantics}
+Evidence and claims are frozen before Results. Results are drafted figure by
+figure with paragraph-level trace metadata. Methods, Supplement, and Discussion
+are constrained by approved Results. The Introduction citation loop cannot run
+until Results claims and external retrieval are approved. Abstract/Title are
+generated last. Conditional edges stop execution at unresolved scope, claim,
+figure, retrieval, or final human boundaries.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.84\textwidth]{figures/workflow_overview.pdf}
+\caption{Evidence-first PRL generation order. Red nodes preserve human or
+permission boundaries. No node can promote a scientific claim or fabricate a
+missing artifact.}
+\end{figure}
+
+\section{QAHE3D adaptation boundary}
+Only reusable semantics were adapted: Introduction claim maps,
+permission-gated retrieval, version/full-text resolution, claim--citation
+mapping, placement audit, paragraph blueprints, and agent governance concepts.
+File-level upstream SHA-256 hashes are recorded. No QAHE3D code is imported at
+runtime and no QAHE3D file was changed. The Active Learning adapter requires
+approved scope, claims, and figure-traced Results.
+
+\section{Stage III vertical slice}
+The vertical slice reaches \code{GATE\_FIGURE\_APPROVAL}. It contains a claim
+contract, figure contract, evidence extract, caption, three Results paragraphs,
+paragraph metadata, consistency stub, audit report, and an isolated \LaTeX{}
+fragment. The metadata explicitly separates observation and interpretation and
+records source and figure references. All unsupported-sentence lists are empty.
+The fragment compiles and renders cleanly, but its figure remains a QA
+placeholder because the frozen figure source is absent.
+
+\section{Readiness decision and next steps}
+The architecture is ready for scientific review, but the default invocation
+stops at:
+\begin{center}
+\small\ttfamily GATE\_SCOPE\_APPROVAL
+\end{center}
+After scope approval, the graph stops independently at claim and figure
+approval. First choose the physics-first Stages I--III scope, then review the
+claim registry and Stage III slice. Recover frozen Stage II/III bundles without
+recomputation. A methods-efficiency positioning additionally requires separately
+authorized matched baselines, multiple seeds, and hidden ground truth.
+
+\section{Validation}
+The graph registers 15 nodes and emits 16 gate records on a fully traversed test
+invocation; the unapproved invocation stops at scope. Fourteen automated tests
+pass. The Stage III QA fragment compiles to two pages and was visually
+inspected. Prompt integrity was reverified against the SHA-256 recorded in the
+prompt provenance file. No exact calculation, external retrieval, production
+manuscript merge, or physics-definition change was performed.
+
+\end{document}

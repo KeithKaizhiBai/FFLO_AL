@@ -1,0 +1,289 @@
+{
+  "manuscript_double_column": {
+    "textwidth_pt": 510.0,
+    "columnwidth_pt": 246.0,
+    "actual_single_column": false,
+    "pages": 6,
+    "source_fingerprint": "60f9f0424a8482d775a977d74ee578d6f64244cdd0a47f7cdd0c93d82bec684b",
+    "embedded_forms": [
+      {
+        "page": 2,
+        "name": "/Im1",
+        "bbox": [
+          0.0,
+          0.0,
+          504.566929,
+          340.582677
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          396.948
+        ],
+        "rendered_width_mm": 179.25133995244582,
+        "rendered_height_mm": 120.9946544412566
+      },
+      {
+        "page": 3,
+        "name": "/Im2",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          397.376
+        ],
+        "rendered_width_mm": 179.25133999862933,
+        "rendered_height_mm": 120.84360000179029
+      },
+      {
+        "page": 4,
+        "name": "/Im3",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          397.376
+        ],
+        "rendered_width_mm": 179.25133999862933,
+        "rendered_height_mm": 120.84360000179029
+      },
+      {
+        "page": 5,
+        "name": "/Im4",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          1.00703,
+          0.0,
+          0.0,
+          1.00703,
+          54.0,
+          397.376
+        ],
+        "rendered_width_mm": 179.25133999862933,
+        "rendered_height_mm": 120.84360000179029
+      }
+    ]
+  },
+  "manuscript_single_column_review": {
+    "textwidth_pt": 468.0,
+    "columnwidth_pt": 468.0,
+    "actual_single_column": true,
+    "pages": 8,
+    "source_fingerprint": "60f9f0424a8482d775a977d74ee578d6f64244cdd0a47f7cdd0c93d82bec684b",
+    "embedded_forms": [
+      {
+        "page": 2,
+        "name": "/Im1",
+        "bbox": [
+          0.0,
+          0.0,
+          504.566929,
+          340.582677
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.273
+        ],
+        "rendered_width_mm": 164.48801995636242,
+        "rendered_height_mm": 111.02941344609472
+      },
+      {
+        "page": 3,
+        "name": "/Im2",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.666
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 110.89080000164283
+      },
+      {
+        "page": 4,
+        "name": "/Im3",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.666
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 110.89080000164283
+      },
+      {
+        "page": 5,
+        "name": "/Im4",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          340.15748032
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          405.666
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 110.89080000164283
+      }
+    ]
+  },
+  "supplement": {
+    "textwidth_pt": 468.0,
+    "columnwidth_pt": 468.0,
+    "actual_single_column": true,
+    "pages": 12,
+    "source_fingerprint": "60f9f0424a8482d775a977d74ee578d6f64244cdd0a47f7cdd0c93d82bec684b",
+    "embedded_forms": [
+      {
+        "page": 3,
+        "name": "/Im1",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          291.96850394
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          427.155
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 103.30900000105869
+      },
+      {
+        "page": 4,
+        "name": "/Im2",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          291.96850394
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          258.158
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 103.30900000105869
+      },
+      {
+        "page": 6,
+        "name": "/Im3",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          291.96850394
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          427.155
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 103.30900000105869
+      },
+      {
+        "page": 9,
+        "name": "/Im4",
+        "bbox": [
+          0.0,
+          0.0,
+          464.88188976,
+          291.96850394
+        ],
+        "matrix": [
+          1.003,
+          0.0,
+          0.0,
+          1.003,
+          72.0,
+          229.163
+        ],
+        "rendered_width_mm": 164.49199999866264,
+        "rendered_height_mm": 103.30900000105869
+      },
+      {
+        "page": 11,
+        "name": "/Im5",
+        "bbox": [
+          0.0,
+          0.0,
+          504.56692913,
+          425.19685039
+        ],
+        "matrix": [
+          0.92409,
+          0.0,
+          0.0,
+          0.92409,
+          72.0,
+          184.52
+        ],
+        "rendered_width_mm": 164.4880199987422,
+        "rendered_height_mm": 138.61349999879354
+      }
+    ]
+  }
+}

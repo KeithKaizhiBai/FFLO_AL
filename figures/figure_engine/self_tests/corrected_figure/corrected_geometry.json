@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "figure_id": "ENGINE-SELFTEST-CORRECTED",
+  "canvas": {"x": 0, "y": 0, "width": 400, "height": 240},
+  "objects": [
+    {"id": "primary_card", "type": "card", "role": "primary", "parent": "canvas", "bbox": {"x": 10, "y": 20, "width": 230, "height": 180}, "independent": true, "visual_weight_object": true},
+    {"id": "secondary_card", "type": "card", "role": "secondary", "parent": "canvas", "bbox": {"x": 280, "y": 50, "width": 100, "height": 120}, "independent": true, "visual_weight_object": true},
+    {"id": "landscape", "type": "plot", "role": "primary_scientific_subobject", "parent": "primary_card", "bbox": {"x": 28, "y": 72, "width": 180, "height": 100}, "scientific_content_bbox": {"x": 38, "y": 82, "width": 160, "height": 80}, "visual_weight_object": false},
+    {"id": "good_text_1", "type": "text", "role": "body", "parent": "primary_card", "bbox": {"x": 28, "y": 34, "width": 150, "height": 18}, "font_family": "Arial", "font_stretch": "normal", "font_size_pt": 7.0, "transform": {"scale_x": 1.0, "scale_y": 1.0}},
+    {"id": "good_text_2", "type": "text", "role": "body", "parent": "secondary_card", "bbox": {"x": 298, "y": 64, "width": 58, "height": 18}, "font_family": "Arial", "font_stretch": "normal", "font_size_pt": 7.0, "transform": {"scale_x": 1.0, "scale_y": 1.0}}
+  ],
+  "routes": [
+    {
+      "id": "good_workflow", "type": "main_workflow", "source": "primary_card", "target": "secondary_card",
+      "widths_px": {"tail": 6, "mid": 17, "near_head": 23},
+      "opacities": {"tail": 0.24, "mid": 0.58, "head": 0.84},
+      "samples": [
+        {"center": [244, 110]}, {"center": [245, 110]}, {"center": [246, 110]}, {"center": [247, 110]},
+        {"center": [248, 110]}, {"center": [249, 110]}, {"center": [250, 110]}, {"center": [251, 110]},
+        {"center": [252, 110]}, {"center": [253, 110]}, {"center": [254, 110]}, {"center": [255, 110]},
+        {"center": [256, 110]}, {"center": [257, 110]}, {"center": [258, 110]}, {"center": [259, 110]},
+        {"center": [260, 110]}, {"center": [261, 110]}, {"center": [262, 110]}, {"center": [263, 110]},
+        {"center": [264, 110]}, {"center": [265, 110]}, {"center": [266, 110]}, {"center": [267, 110]},
+        {"center": [268, 110]}, {"center": [269, 110]}, {"center": [270, 110]}, {"center": [271, 110]},
+        {"center": [272, 110]}, {"center": [273, 110]}, {"center": [274, 110]}, {"center": [275, 110]},
+        {"center": [276, 110]}, {"center": [277, 110]}, {"center": [278, 110]}, {"center": [279, 110]},
+        {"center": [280, 110]}, {"center": [281, 110]}, {"center": [282, 110]}, {"center": [283, 110]},
+        {"center": [284, 110]}, {"center": [285, 110]}, {"center": [286, 110]}, {"center": [287, 110]},
+        {"center": [288, 110]}, {"center": [289, 110]}, {"center": [290, 110]}, {"center": [291, 110]}
+      ]
+    }
+  ]
+}

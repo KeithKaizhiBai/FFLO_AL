@@ -1,0 +1,902 @@
+schema_version: 3
+figure_id: SM-FIG-STAGEIV-NUMERICAL-DIAGNOSTICS-V1
+figure_type: supplement
+template: multi_panel_template
+scientific_message: Archived Stage-IV iteration histories document numerical evolution
+  without assigning physical convergence.
+visual_message: Six matched small plots expose raw sample, label, map-change, displacement,
+  and surprise histories without threshold lines.
+primary_object:
+  id: sample_and_trust_growth
+  asset_type: convergence_plot
+  scientific_role: Archived sample and trust-count growth
+  visual_role: primary
+primary_visual_object:
+  id: sample_and_trust_growth
+  scientific_role: Archived sample and trust-count growth
+  expected_rank: 1
+secondary_objects:
+- id: thermodynamic_composition
+  asset_type: convergence_plot
+  scientific_role: Archived thermodynamic composition by iteration
+  visual_role: secondary
+- id: topology_composition
+  asset_type: convergence_plot
+  scientific_role: Archived topology-label composition by iteration
+  visual_role: secondary
+- id: map_change_history
+  asset_type: convergence_plot
+  scientific_role: Last-three archived topology-map changes
+  visual_role: secondary
+- id: surface_shift_history
+  asset_type: convergence_plot
+  scientific_role: Last-three archived proxy-surface p95 displacements
+  visual_role: secondary
+- id: trusted_surprise_history
+  asset_type: convergence_plot
+  scientific_role: Last-three archived trusted-topology surprise fractions
+  visual_role: secondary
+tertiary_information: []
+secondary_visual_objects:
+- thermodynamic_composition
+- topology_composition
+- map_change_history
+- surface_shift_history
+- trusted_surprise_history
+tertiary_visual_objects: []
+reading_order: &id001
+- sample_and_trust_growth
+- thermodynamic_composition
+- topology_composition
+- map_change_history
+- surface_shift_history
+- trusted_surprise_history
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    sample_and_trust_growth:
+    - sample_and_trust_growth
+    thermodynamic_composition:
+    - thermodynamic_composition
+    topology_composition:
+    - topology_composition
+    map_change_history:
+    - map_change_history
+    surface_shift_history:
+    - surface_shift_history
+    trusted_surprise_history:
+    - trusted_surprise_history
+  scientific_asset_fill_ratio_audits: []
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking: *id001
+  severity: warning
+forbidden_visual_priorities:
+- decorative_threshold
+- pass_fail_scoreboard
+data_sources:
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/tables/dataset_iteration_summary.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_audit_local/tables/stageiv_3d_convergence_failure_decomposition.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_iteration_history.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_last3_raw_diagnostics.csv
+assets:
+- id: sample_and_trust_growth
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_iteration_history.csv
+  schematic: false
+  bbox: sample_and_trust_growth
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+- id: thermodynamic_composition
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_iteration_history.csv
+  schematic: false
+  bbox: thermodynamic_composition
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+- id: topology_composition
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_iteration_history.csv
+  schematic: false
+  bbox: topology_composition
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+- id: map_change_history
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_last3_raw_diagnostics.csv
+  schematic: false
+  bbox: map_change_history
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+- id: surface_shift_history
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_last3_raw_diagnostics.csv
+  schematic: false
+  bbox: surface_shift_history
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+- id: trusted_surprise_history
+  type: convergence_plot
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_last3_raw_diagnostics.csv
+  schematic: false
+  bbox: trusted_surprise_history
+  features:
+  - raw_metric
+  - units_or_definition
+  - iteration_or_budget_axis
+layout:
+  canvas:
+    viewbox:
+    - 0
+    - 0
+    - 1600
+    - 1350
+    print_mm:
+    - 178.0
+    - 150.0
+  template_profile: supplement_diagnostics
+  primary_area_fraction_min: 0.09
+  bounding_boxes: geometry_manifest.json
+  alignment_anchors:
+  - shared_iteration_axes
+  - matched_two_column_grid
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements:
+  - id: primary_area
+    object_id: sample_and_trust_growth
+    reference: canvas
+    minimum_fraction: 0.09
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings:
+    diagnostic: selected
+    physical: physical
+    topology: topology_tfflo
+  allowed_extra_hex: []
+  contrast_pairs:
+  - id: body_on_white
+    role: body_text
+    foreground: neutral.body
+    background: neutral.white
+text_budget:
+  maximum_words_in_artwork: 125
+  maximum_words_per_panel: 18
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption
+required_elements: *id001
+required_labels:
+- diagnostic only
+- iteration
+forbidden_elements:
+- threshold_line
+- pass_fail_label
+- smoothing
+- interpolation
+forbidden_claims:
+- physically converged Stage IV topology
+- threshold-certified closure
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  require_engine_preflight: true
+  engine_preflight_record: engine_preflight.json
+  strict_palette: true
+  prohibited_text:
+  - PASS
+  - FAIL
+  - threshold
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+approval:
+  gate: GATE_SM_STAGEIV_DIAGNOSTICS_HUMAN_SCIENCE_AND_VISUAL_REVIEW
+  state: HUMAN_WAIT
+strict_data:
+  enabled: true
+  track: STRICT_DATA_FIGURE_TRACK
+  claim_freeze:
+  - CLM-3D-EXTENSION
+  panels:
+  - panel_id: sample_and_trust_growth
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: Archived sample and trust-count growth
+    visual_priority: primary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - &id002
+      path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_iteration_history.csv
+      sha256: 845c3f9648c60eab2c6b52002e7d90a3168fc2faa132e7f24bf5af66348bbfe2
+      version: stageiv_iteration_history_archived_copy
+      row_count: 26
+      fields:
+      - iteration
+      - sample_count
+      - normal_count
+      - uniform_sc_count
+      - fflo_count
+      - topology_not_applicable_count
+      - trivial_count
+      - topological_count
+      - gapless_sc_count
+      - topology_unresolved_count
+      - trusted_exact_count
+      - topology_trusted_count
+      - rerun_required_count
+      - q_unresolved_count
+      - delta_unresolved_count
+      units:
+        iteration: index
+        sample_count: count
+        all count fields: count
+    source_versions:
+    - stageiv_iteration_history_archived_copy
+    source_hashes:
+    - 845c3f9648c60eab2c6b52002e7d90a3168fc2faa132e7f24bf5af66348bbfe2
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: defined in panel label
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 26
+    selected_row_count: 26
+    excluded_row_count: 0
+    selection_filters:
+    - all archived iterations
+    excluded_data:
+    - nonselected rows remain in the canonical source table
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: not applicable; archived aggregate diagnostic
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived-field selection; fractions use displayed archived
+          counts only
+        implementation: figures/build_fig4_v2_and_sm_diagnostics.py
+        parameters: {}
+        validator: canonical table hash and reference-value audit
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      mode: diagnostic_only
+      raw_trace_visible: true
+      threshold_line_visible: false
+      pass_fail_labels_visible: false
+    sensitivity_notes:
+    - operational thresholds are not rendered or interpreted as physical criteria
+    expected_counts: {}
+    expected_reference_values:
+      final_sample_count: 7081
+      final_trusted_exact: 6767
+    numerical_tolerances: {}
+    scientific_invariants:
+    - archived values are immutable
+    - no threshold-based pass/fail inference
+    allowed_claims:
+    - archived numerical stability history
+    - iteration-resolved diagnostic
+    required_caveats:
+    - numerical diagnostic only; not a physical convergence criterion
+    forbidden_claims:
+    - physically converged Stage IV topology
+    - threshold-certified closure
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics: {}
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: sample_and_trust_growth
+    validators:
+    - strict_data_checker
+    - sm_stageiv_specific_validation
+    human_review_items:
+    - diagnostic interpretation
+    - absence of threshold semantics
+    output_artifacts:
+    - sm_stageiv_numerical_diagnostics.svg
+    - sm_stageiv_numerical_diagnostics.pdf
+    - sm_stageiv_numerical_diagnostics.png
+  - panel_id: thermodynamic_composition
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: Archived thermodynamic composition by iteration
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - *id002
+    source_versions:
+    - stageiv_iteration_history_archived_copy
+    source_hashes:
+    - 845c3f9648c60eab2c6b52002e7d90a3168fc2faa132e7f24bf5af66348bbfe2
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: defined in panel label
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 26
+    selected_row_count: 25
+    excluded_row_count: 1
+    selection_filters:
+    - iterations 1 through 25
+    excluded_data:
+    - nonselected rows remain in the canonical source table
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: not applicable; archived aggregate diagnostic
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived-field selection; fractions use displayed archived
+          counts only
+        implementation: figures/build_fig4_v2_and_sm_diagnostics.py
+        parameters: {}
+        validator: canonical table hash and reference-value audit
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      mode: diagnostic_only
+      raw_trace_visible: true
+      threshold_line_visible: false
+      pass_fail_labels_visible: false
+    sensitivity_notes:
+    - operational thresholds are not rendered or interpreted as physical criteria
+    expected_counts: {}
+    expected_reference_values:
+      final_counts:
+      - 2350
+      - 141
+      - 4590
+    numerical_tolerances: {}
+    scientific_invariants:
+    - archived values are immutable
+    - no threshold-based pass/fail inference
+    allowed_claims:
+    - archived numerical stability history
+    - iteration-resolved diagnostic
+    required_caveats:
+    - numerical diagnostic only; not a physical convergence criterion
+    forbidden_claims:
+    - physically converged Stage IV topology
+    - threshold-certified closure
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics: {}
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: thermodynamic_composition
+    validators:
+    - strict_data_checker
+    - sm_stageiv_specific_validation
+    human_review_items:
+    - diagnostic interpretation
+    - absence of threshold semantics
+    output_artifacts:
+    - sm_stageiv_numerical_diagnostics.svg
+    - sm_stageiv_numerical_diagnostics.pdf
+    - sm_stageiv_numerical_diagnostics.png
+  - panel_id: topology_composition
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: Archived topology-label composition by iteration
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - *id002
+    source_versions:
+    - stageiv_iteration_history_archived_copy
+    source_hashes:
+    - 845c3f9648c60eab2c6b52002e7d90a3168fc2faa132e7f24bf5af66348bbfe2
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: defined in panel label
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 26
+    selected_row_count: 25
+    excluded_row_count: 1
+    selection_filters:
+    - iterations 1 through 25
+    excluded_data:
+    - nonselected rows remain in the canonical source table
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: not applicable; archived aggregate diagnostic
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived-field selection; fractions use displayed archived
+          counts only
+        implementation: figures/build_fig4_v2_and_sm_diagnostics.py
+        parameters: {}
+        validator: canonical table hash and reference-value audit
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      mode: diagnostic_only
+      raw_trace_visible: true
+      threshold_line_visible: false
+      pass_fail_labels_visible: false
+    sensitivity_notes:
+    - operational thresholds are not rendered or interpreted as physical criteria
+    expected_counts: {}
+    expected_reference_values:
+      final_counts:
+      - 3265
+      - 1466
+    numerical_tolerances: {}
+    scientific_invariants:
+    - archived values are immutable
+    - no threshold-based pass/fail inference
+    allowed_claims:
+    - archived numerical stability history
+    - iteration-resolved diagnostic
+    required_caveats:
+    - numerical diagnostic only; not a physical convergence criterion
+    forbidden_claims:
+    - physically converged Stage IV topology
+    - threshold-certified closure
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics: {}
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: topology_composition
+    validators:
+    - strict_data_checker
+    - sm_stageiv_specific_validation
+    human_review_items:
+    - diagnostic interpretation
+    - absence of threshold semantics
+    output_artifacts:
+    - sm_stageiv_numerical_diagnostics.svg
+    - sm_stageiv_numerical_diagnostics.pdf
+    - sm_stageiv_numerical_diagnostics.png
+  - panel_id: map_change_history
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: Last-three archived topology-map changes
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - &id003
+      path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/sm_stageiv_numerical_diagnostics/canonical/stageiv_last3_raw_diagnostics.csv
+      sha256: 04fc987092e1590256257c8d1ca70904073696dcdbd00eac51aa061fdbaebf0d
+      version: stageiv_last3_raw_diagnostics_no_threshold_fields
+      row_count: 12
+      fields:
+      - metric
+      - order
+      - end_iteration
+      - transition
+      - value
+      - source_field
+      units:
+        end_iteration: index
+        value: native metric units
+    source_versions:
+    - stageiv_last3_raw_diagnostics_no_threshold_fields
+    source_hashes:
+    - 04fc987092e1590256257c8d1ca70904073696dcdbd00eac51aa061fdbaebf0d
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: defined in panel label
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 12
+    selected_row_count: 3
+    excluded_row_count: 9
+    selection_filters:
+    - metric == topology_volume_map_change
+    excluded_data:
+    - nonselected rows remain in the canonical source table
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: not applicable; archived aggregate diagnostic
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived-field selection; fractions use displayed archived
+          counts only
+        implementation: figures/build_fig4_v2_and_sm_diagnostics.py
+        parameters: {}
+        validator: canonical table hash and reference-value audit
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      mode: diagnostic_only
+      raw_trace_visible: true
+      threshold_line_visible: false
+      pass_fail_labels_visible: false
+    sensitivity_notes:
+    - operational thresholds are not rendered or interpreted as physical criteria
+    expected_counts: {}
+    expected_reference_values:
+      values:
+      - 0.0014122480421106
+      - 0.0019225839528326
+      - 0.002561475409836
+    numerical_tolerances: {}
+    scientific_invariants:
+    - archived values are immutable
+    - no threshold-based pass/fail inference
+    allowed_claims:
+    - archived numerical stability history
+    - iteration-resolved diagnostic
+    required_caveats:
+    - numerical diagnostic only; not a physical convergence criterion
+    forbidden_claims:
+    - physically converged Stage IV topology
+    - threshold-certified closure
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics: {}
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: map_change_history
+    validators:
+    - strict_data_checker
+    - sm_stageiv_specific_validation
+    human_review_items:
+    - diagnostic interpretation
+    - absence of threshold semantics
+    output_artifacts:
+    - sm_stageiv_numerical_diagnostics.svg
+    - sm_stageiv_numerical_diagnostics.pdf
+    - sm_stageiv_numerical_diagnostics.png
+  - panel_id: surface_shift_history
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: Last-three archived proxy-surface p95 displacements
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - *id003
+    source_versions:
+    - stageiv_last3_raw_diagnostics_no_threshold_fields
+    source_hashes:
+    - 04fc987092e1590256257c8d1ca70904073696dcdbd00eac51aa061fdbaebf0d
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: defined in panel label
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 12
+    selected_row_count: 3
+    excluded_row_count: 9
+    selection_filters:
+    - metric == topology_surface_shift_p95
+    excluded_data:
+    - nonselected rows remain in the canonical source table
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: not applicable; archived aggregate diagnostic
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived-field selection; fractions use displayed archived
+          counts only
+        implementation: figures/build_fig4_v2_and_sm_diagnostics.py
+        parameters: {}
+        validator: canonical table hash and reference-value audit
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      mode: diagnostic_only
+      raw_trace_visible: true
+      threshold_line_visible: false
+      pass_fail_labels_visible: false
+    sensitivity_notes:
+    - operational thresholds are not rendered or interpreted as physical criteria
+    expected_counts: {}
+    expected_reference_values:
+      values:
+      - 0.0055835372535258
+      - 0.0059066811860211
+      - 0.0059961957165026
+    numerical_tolerances: {}
+    scientific_invariants:
+    - archived values are immutable
+    - no threshold-based pass/fail inference
+    allowed_claims:
+    - archived numerical stability history
+    - iteration-resolved diagnostic
+    required_caveats:
+    - numerical diagnostic only; not a physical convergence criterion
+    forbidden_claims:
+    - physically converged Stage IV topology
+    - threshold-certified closure
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics: {}
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: surface_shift_history
+    validators:
+    - strict_data_checker
+    - sm_stageiv_specific_validation
+    human_review_items:
+    - diagnostic interpretation
+    - absence of threshold semantics
+    output_artifacts:
+    - sm_stageiv_numerical_diagnostics.svg
+    - sm_stageiv_numerical_diagnostics.pdf
+    - sm_stageiv_numerical_diagnostics.png
+  - panel_id: trusted_surprise_history
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: Last-three archived trusted-topology surprise fractions
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - *id003
+    source_versions:
+    - stageiv_last3_raw_diagnostics_no_threshold_fields
+    source_hashes:
+    - 04fc987092e1590256257c8d1ca70904073696dcdbd00eac51aa061fdbaebf0d
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: defined in panel label
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 12
+    selected_row_count: 3
+    excluded_row_count: 9
+    selection_filters:
+    - metric == trusted_topology_surprise
+    excluded_data:
+    - nonselected rows remain in the canonical source table
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: not applicable; archived aggregate diagnostic
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived-field selection; fractions use displayed archived
+          counts only
+        implementation: figures/build_fig4_v2_and_sm_diagnostics.py
+        parameters: {}
+        validator: canonical table hash and reference-value audit
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      mode: diagnostic_only
+      raw_trace_visible: true
+      threshold_line_visible: false
+      pass_fail_labels_visible: false
+    sensitivity_notes:
+    - operational thresholds are not rendered or interpreted as physical criteria
+    expected_counts: {}
+    expected_reference_values:
+      values:
+      - 0.065
+      - 0.1122994652406417
+      - 0.140625
+    numerical_tolerances: {}
+    scientific_invariants:
+    - archived values are immutable
+    - no threshold-based pass/fail inference
+    allowed_claims:
+    - archived numerical stability history
+    - iteration-resolved diagnostic
+    required_caveats:
+    - numerical diagnostic only; not a physical convergence criterion
+    forbidden_claims:
+    - physically converged Stage IV topology
+    - threshold-certified closure
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics: {}
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: trusted_surprise_history
+    validators:
+    - strict_data_checker
+    - sm_stageiv_specific_validation
+    human_review_items:
+    - diagnostic interpretation
+    - absence of threshold semantics
+    output_artifacts:
+    - sm_stageiv_numerical_diagnostics.svg
+    - sm_stageiv_numerical_diagnostics.pdf
+    - sm_stageiv_numerical_diagnostics.png
+  output_artifacts:
+  - sm_stageiv_numerical_diagnostics.svg
+  - sm_stageiv_numerical_diagnostics.pdf
+  - sm_stageiv_numerical_diagnostics.png

@@ -1,0 +1,7 @@
+Diagnostic,Definition,Domain,Operational setting,Interpretation
+phase-map change,changed-cell fraction,fixed $241\times321$ monitor,$<0.002$,map stability
+Normal--SC shift,bidirectional $p_{95}$,normalized domain,$<0.004167$,boundary stability
+SC--FFLO shift,bidirectional $p_{95}$,normalized domain,$<0.004167$,boundary stability
+coverage,boundary-to-exact $p_{95}$,normalized domain,$<0.00625$,sampling support
+label surprise,prediction/return mismatch,selected calls,$<0.05$,sequential stability
+patience,successive eligible iterations,iteration history,4,operational termination

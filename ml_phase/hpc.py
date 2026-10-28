@@ -11,8 +11,8 @@ import pandas as pd
 
 def partition_points(points: np.ndarray, world_size: int, strategy: str = "round_robin") -> List[np.ndarray]:
     points = np.asarray(points, dtype=np.float64)
-    if points.ndim != 2 or points.shape[1] != 2:
-        raise ValueError("points must be shape (n, 2) with columns [kT, JA]")
+    if points.ndim != 2 or points.shape[1] not in {2, 3}:
+        raise ValueError("points must be shape (n, 2) [kT, JA] or shape (n, 3) [kT, JA, mu]")
     if world_size <= 0:
         raise ValueError("world_size must be positive")
 
@@ -37,7 +37,7 @@ def partition_points(points: np.ndarray, world_size: int, strategy: str = "round
             buckets[r].append(points[idx])
             loads[r] += cost
         for b in buckets:
-            shards.append(np.array(b, dtype=np.float64) if b else np.empty((0, 2), dtype=np.float64))
+            shards.append(np.array(b, dtype=np.float64) if b else np.empty((0, points.shape[1]), dtype=np.float64))
         return shards
     raise ValueError(f"Unsupported partition strategy: {strategy}")
 
@@ -53,14 +53,17 @@ def write_point_shards(
     iter_dir.mkdir(parents=True, exist_ok=True)
 
     points = np.asarray(points, dtype=np.float64)
+    if points.ndim != 2 or points.shape[1] not in {2, 3}:
+        raise ValueError("points must be shape (n, 2) [kT, JA] or shape (n, 3) [kT, JA, mu]")
+    columns = ["kT", "JA"] + (["mu"] if points.shape[1] == 3 else [])
     all_csv = iter_dir / "selected_points.csv"
-    pd.DataFrame(points, columns=["kT", "JA"]).to_csv(all_csv, index=False)
+    pd.DataFrame(points, columns=columns).to_csv(all_csv, index=False)
 
     shards = partition_points(points, world_size=world_size, strategy=strategy)
     shard_paths: list[Path] = []
     for rank, shard in enumerate(shards):
         p = iter_dir / f"selected_points_rank{rank:03d}_of{world_size:03d}.csv"
-        pd.DataFrame(shard, columns=["kT", "JA"]).to_csv(p, index=False)
+        pd.DataFrame(shard, columns=columns).to_csv(p, index=False)
         shard_paths.append(p)
 
     (iter_dir / "partition_metadata.json").write_text(
@@ -70,6 +73,7 @@ def write_point_shards(
                 "world_size": world_size,
                 "strategy": strategy,
                 "n_selected_points": int(points.shape[0]),
+                "point_columns": columns,
                 "rank_sizes": [int(s.shape[0]) for s in shards],
             },
             indent=2,
@@ -136,22 +140,43 @@ def _add_boundary_band_metadata(
     delta_opt = np.asarray(merged.get("delta_opt", np.full(n, np.nan)), dtype=np.float64)
     positive_delta_gap = np.asarray(merged.get("positive_delta_gap", np.full(n, np.nan)), dtype=np.float64)
     delta_unresolved = np.asarray(merged.get("delta_unresolved", np.zeros(n, dtype=np.int8))).astype(bool)
+    delta_ambiguous = np.asarray(merged.get("delta_boundary_ambiguous", np.zeros(n, dtype=np.int8))).astype(bool) | np.asarray(
+        merged.get("boundary_ambiguous", np.zeros(n, dtype=np.int8))
+    ).astype(bool)
+    q_unresolved = np.asarray(merged.get("q_unresolved", np.zeros(n, dtype=np.int8))).astype(bool)
 
     trusted_clean = trusted & (status == 0)
     finite_gap = np.isfinite(positive_delta_gap)
+    stable_normal = (
+        (delta_opt < float(delta_eps))
+        & finite_gap
+        & (positive_delta_gap > float(positive_delta_gap_tol))
+        & (status == 0)
+        & ~q_unresolved
+    )
     boundary_band_normal = (
-        delta_unresolved
+        (delta_unresolved | delta_ambiguous)
         & (delta_opt < float(delta_eps))
         & finite_gap
         & (positive_delta_gap >= 0.0)
         & (positive_delta_gap <= float(positive_delta_gap_tol))
+        & (status == 0)
+        & ~q_unresolved
     )
-    training_eligible = trusted_clean | boundary_band_normal
+    training_eligible = trusted_clean | stable_normal | boundary_band_normal
     needs_rerun = ~(training_eligible)
 
     merged["delta_boundary_band_normal"] = boundary_band_normal.astype(np.int8)
+    merged["stable_normal_exact"] = stable_normal.astype(np.int8)
     merged["training_eligible_exact"] = training_eligible.astype(np.int8)
     merged["needs_rerun_exact"] = needs_rerun.astype(np.int8)
+    if "confidence_state" not in merged:
+        confidence = np.full(n, "trusted", dtype="<U32")
+        confidence[q_unresolved] = "coverage_unresolved"
+        confidence[delta_ambiguous & ~stable_normal] = "boundary_ambiguous"
+        confidence[status != 0] = "solver_failed"
+        merged["confidence_state"] = confidence
+    merged["rerun_required"] = needs_rerun.astype(np.int8)
 
 
 def _per_point_mask(merged: dict[str, np.ndarray], n: int) -> np.ndarray:
@@ -233,6 +258,7 @@ def _write_rerun_points(iter_dir: Path, merged: dict[str, np.ndarray]) -> Path |
             columns=[
                 "kT",
                 "JA",
+                "mu",
                 "q_opt",
                 "delta_opt",
                 "phase_candidate",
@@ -254,6 +280,7 @@ def _write_rerun_points(iter_dir: Path, merged: dict[str, np.ndarray]) -> Path |
             {
                 "kT": float(np.asarray(merged["kT"])[i]),
                 "JA": float(np.asarray(merged["JA"])[i]),
+                "mu": float(np.asarray(merged.get("mu", np.full(n, 0.55)))[i]),
                 "q_opt": float(np.asarray(merged.get("q_opt", np.full(n, np.nan)))[i]),
                 "delta_opt": float(np.asarray(merged.get("delta_opt", np.full(n, np.nan)))[i]),
                 "phase_candidate": int(np.asarray(merged.get("phase_candidate", np.full(n, -1)))[i]),
@@ -315,7 +342,7 @@ def _parse_args() -> argparse.Namespace:
     mode.add_argument("--partition", action="store_true", help="Partition selected points.")
     mode.add_argument("--merge", action="store_true", help="Merge exact shard npz files.")
 
-    p.add_argument("--points-file", type=Path, default=None, help="CSV file with columns kT, JA for partition mode.")
+    p.add_argument("--points-file", type=Path, default=None, help="CSV file with columns kT, JA and optional mu for partition mode.")
     p.add_argument("--strategy", type=str, default="round_robin", help="Partition strategy.")
     return p.parse_args()
 
@@ -326,7 +353,8 @@ def main() -> None:
         if args.points_file is None:
             raise ValueError("--points-file is required for --partition")
         df = pd.read_csv(args.points_file)
-        points = df[["kT", "JA"]].to_numpy(dtype=np.float64)
+        columns = ["kT", "JA"] + (["mu"] if "mu" in df.columns else [])
+        points = df[columns].to_numpy(dtype=np.float64)
         paths = write_point_shards(args.run_dir, args.iteration, points, args.world_size, args.strategy)
         print(f"Wrote {len(paths)} shard files under {args.run_dir / f'iter{args.iteration:03d}'}")
         return

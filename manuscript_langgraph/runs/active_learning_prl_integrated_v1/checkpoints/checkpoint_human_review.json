@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "run_id": "active_learning_prl_integrated_v1",
+  "resume_from": "GATE_PRL_INTEGRATED_MANUSCRIPT_HUMAN_REVIEW",
+  "continuation_instruction": "In the active Codex task, explicitly approve GATE_PRL_INTEGRATED_MANUSCRIPT_HUMAN_REVIEW or list targeted revisions. After approval, update this run's gate record and continue without changing the parent run or frozen figures.",
+  "note": "There is no automatic resume before an explicit human decision."
+}

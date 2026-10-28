@@ -1,0 +1,68 @@
+schema_version: 1
+gate_id: GATE_COMPACT_THERMODYNAMIC_LANDSCAPE_ASSET
+asset_id: thermodynamic_landscape
+scope: asset_only
+physics_recomputed: false
+master_figure_modified: false
+
+scientific_meaning:
+  object: 'F(Delta,q)'
+  representative_across_parameter_space: true
+  simultaneous_stability_claim: false
+  topology_from_free_energy_depth: false
+  dominant_structures:
+    normal: {Delta: approximately_0, q: not_phase_defining}
+    uniform_sc: {Delta: positive, q: approximately_0}
+    fflo_sector: {Delta: positive, abs_q: positive}
+
+thermodynamic_landscape_geometry:
+  asset_id: thermodynamic_landscape
+  projected_surface_aspect_ratio:
+    preferred_minimum: 1.55
+    preferred_maximum: 1.90
+    hard_maximum: 2.10
+  projected_surface_height_width_ratio:
+    preferred_minimum: 0.34
+    hard_minimum: 0.30
+  foreground_fill_fraction:
+    preferred_minimum: 0.68
+    hard_minimum: 0.62
+  internal_whitespace_fraction:
+    preferred_maximum: 0.24
+    hard_maximum: 0.30
+  dominant_minima_projected_triangle_fraction:
+    hard_minimum: 0.08
+  vertical_relief_fraction:
+    preferred_minimum: 0.28
+    hard_minimum: 0.22
+
+camera_constraints:
+  projection: orthographic
+  elevation_deg: [25, 34]
+  azimuth_deg: [-62, -40]
+  box_aspect_x: [1.30, 1.50]
+  box_aspect_y: 1.00
+  box_aspect_z: [0.74, 0.92]
+  nonuniform_post_render_transform: forbidden
+
+phase_labels:
+  required:
+    - Normal
+    - Uniform SC
+    - FFLO sector
+  forbidden:
+    - cFFLO and tFFLO are simultaneous minima at one parameter point
+    - topology determined by free-energy depth
+    - ML replaces the solver
+  leader_preferred_px: [18, 34]
+  leader_hard_maximum_px: 45
+
+validation:
+  hard_fail: true
+  warnings_do_not_select_candidate: true
+  human_gate_required: true
+  final_candidate_count: 2
+
+approval:
+  gate: GATE_COMPACT_THERMODYNAMIC_LANDSCAPE_ASSET
+  state: HUMAN_WAIT

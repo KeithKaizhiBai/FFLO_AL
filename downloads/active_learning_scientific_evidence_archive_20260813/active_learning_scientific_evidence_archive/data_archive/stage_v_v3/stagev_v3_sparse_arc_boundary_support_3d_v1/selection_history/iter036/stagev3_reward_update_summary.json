@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 2.6428018937798305,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 36,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 0.00546875,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "insufficient_data",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 3328,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": -0.03364131251179572,
+    "rank_correlation_a0_ns": 0.2846348969042548,
+    "rank_correlation_a0_p0": 0.5108430117184105,
+    "rank_correlation_a0_ppi": 0.0531756633149938,
+    "rank_correlation_a0_uf": 0.863396033707449,
+    "rank_correlation_delta_vs_a0_gap": 0.03364131251179572,
+    "rank_correlation_delta_vs_a0_ns": -0.03996151432835099,
+    "rank_correlation_delta_vs_a0_p0": 0.2755357476821513,
+    "rank_correlation_delta_vs_a0_ppi": 0.6705022043567438,
+    "rank_correlation_delta_vs_a0_uf": -0.12978223667481315,
+    "rank_correlation_model_gap": 0.0,
+    "rank_correlation_model_ns": 0.24467338257590382,
+    "rank_correlation_model_p0": 0.7863787594005618,
+    "rank_correlation_model_ppi": 0.7236778676717376,
+    "rank_correlation_model_uf": 0.7336137970326359,
+    "reward_sample_count": 3328,
+    "reward_sample_count_gap": 3328,
+    "reward_sample_count_ns": 3328,
+    "reward_sample_count_p0": 3328,
+    "reward_sample_count_ppi": 3328,
+    "reward_sample_count_uf": 3328,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

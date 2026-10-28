@@ -1,0 +1,8 @@
+delta: delta_opt
+abs_q: abs(q_opt) / pi
+deltaf: free_energy_gap_to_normal
+log_gap: log(max(topology_bulk_gap, 0) + 1.0e-8)
+k_gap: topology_k_at_bulk_gap / pi
+p0: sign(P0) * log1p(abs(P0))
+ppi: sign(Ppi) * log1p(abs(Ppi))
+pf_margin: log(max(topology_pfaffian_margin, 0) + 1.0e-12)

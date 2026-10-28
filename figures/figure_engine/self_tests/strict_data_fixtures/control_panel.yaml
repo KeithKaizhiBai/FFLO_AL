@@ -1,0 +1,53 @@
+panel_id: control
+claim_ids: [CLM-TEST]
+scientific_role: exact_2d_phase_map
+visual_priority: primary
+panel_type: EXACT_SAMPLE_DATA
+source_artifacts:
+  - {path: frozen.csv, sha256: abc, version: v1, row_count: 3, fields: [kT, JA, phase], units: {kT: kBT/t, JA: JA/t, phase: code}}
+source_versions: [v1]
+source_hashes: [abc]
+source_scripts: []
+coordinate_system: Cartesian
+axis_fields: [kT, JA]
+axis_units: {kT: kBT/t, JA: JA/t}
+axis_orientation: {x: increasing_right, y: increasing_up}
+parameter_ranges: {kT: [0, 0.56], JA: [0, 2.12]}
+input_row_count: 3
+selected_row_count: 3
+excluded_row_count: 0
+selection_filters: []
+excluded_data: []
+missing_data_policy: preserve_and_mask
+label_fields: [phase]
+label_semantics: exact_BdG_phase_code
+phase_mapping: {normal: 0, uniform_SC: 1, FFLO: 2}
+topology_mapping: {}
+trust_mask: trusted_exact
+transformations:
+  interpolation: {enabled: false, authorized: false}
+  smoothing: {enabled: false, authorized: false}
+  boundary_extraction: {enabled: false, authorized: false}
+  aggregation: {enabled: false, authorized: false}
+  normalization: {enabled: false, authorized: false}
+uncertainty_layer: separate
+hard_risk_layer: separate
+convergence_status: {}
+sensitivity_notes: []
+expected_counts: {normal: 1, uniform_SC: 1, FFLO: 1}
+expected_reference_values: {}
+numerical_tolerances: {}
+scientific_invariants: [phase_counts_reconcile]
+allowed_claims: [exact observations shown]
+required_caveats: []
+forbidden_claims: [all uncertainty eliminated]
+forbidden_operations: [silent_interpolation, silent_smoothing]
+style_tokens: canonical
+legend_semantics:
+  registered_phase_encoding: {normal: gray, uniform_SC: green, FFLO: blue}
+  rendered_phase_encoding: {normal: gray, uniform_SC: green, FFLO: blue}
+exact_vs_derived_encoding: {visually_distinct: true}
+primary_visual_object: exact_samples
+validators: [strict_data_checker]
+human_review_items: [scientific_readability]
+output_artifacts: [control.svg]

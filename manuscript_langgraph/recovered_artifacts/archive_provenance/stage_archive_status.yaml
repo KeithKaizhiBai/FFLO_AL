@@ -1,0 +1,127 @@
+stages:
+  - stage_name: "Stage I"
+    run_ids:
+      - "active_boundary_discovery_rankcap_k3_full_loop_v1"
+    reports:
+      - "reports_archive/stage_i/rankcap_k3_full_loop_enhanced"
+    figure_sources:
+      - "reports_archive/stage_i_v/stagei_to_stagev_comprehensive_report"
+    scripts:
+      - "code_archive/canonical"
+      - "code_archive/canonical/scripts"
+    missing_artifacts:
+      - "standalone Stage-I-only final report"
+    final_dataset: "data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/dataset_iter031.npz"
+    audit_status: "completed_baseline; final main-phase convergence is established by the Stage II tail audit"
+  - stage_name: "Stage II"
+    run_ids:
+      - "active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1"
+    reports:
+      - "reports_archive/stage_ii/phase2_robust_al_final_202606"
+      - "reports_archive/stage_ii/hard_risk_boundary_impact_audit_v2"
+    figure_sources:
+      - "figures_archive/figure_data/stage_ii"
+    scripts:
+      - "code_archive/canonical/ml_phase"
+    missing_artifacts:
+      []
+    final_dataset: "data_archive/stage_ii/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/dataset_iter035.npz"
+    audit_status: "main phase map publication audit passed; hard-risk frontier documented"
+  - stage_name: "Stage III"
+    run_ids:
+      - "topology_pass_dataset_iter035_v1"
+      - "active_phase_topology_from_scratch_full_loop_v2"
+    reports:
+      - "reports_archive/stage_iii/topology_pass_dataset_iter035_v1"
+      - "reports_archive/stage_iii/topology_convergence_audit_full_loop_v2"
+    figure_sources:
+      - "figures_archive/figure_data/stage_iii"
+    scripts:
+      - "code_archive/stage_iii"
+    missing_artifacts:
+      []
+    final_dataset: "data_archive/stage_iii/topology_pass_dataset_iter035_v1/dataset_iter035_topology_ground_v1.npz"
+    audit_status: "2D cFFLO/tFFLO topology classification and convergence audit passed"
+  - stage_name: "Stage IV"
+    run_ids:
+      - "active_phase_topology_3d_t_ja_mu_from_scratch_v1"
+    reports:
+      - "reports_archive/stage_iv/stageiv_3d_return_report_local"
+      - "reports_archive/stage_iv/stageiv_mu_slice_boundary_audit_local"
+    figure_sources:
+      - "figures_archive/figure_data/stage_iv"
+    scripts:
+      - "code_archive/stage_iv"
+    missing_artifacts:
+      []
+    final_dataset: "data_archive/stage_iv/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.npz"
+    audit_status: "3D structures recovered; formal 3D convergence not passed"
+  - stage_name: "Stage V-v1"
+    run_ids:
+      - "stagev_acqv2_boundary_support_learned_residual_3d_v1"
+    reports:
+      - "reports_archive/stage_v_v1/stagev_acqv2_return_report_local"
+    figure_sources:
+      []
+    scripts:
+      - "code_archive/canonical"
+    missing_artifacts:
+      - "dataset_iter100 final merged local copy"
+    final_dataset: "data_archive/stage_v_v1/stagev_acqv2_boundary_support_learned_residual_3d_v1/dataset_iter093.npz"
+    audit_status: "prototype; scalar reward learned but acquisition remained imbalanced"
+  - stage_name: "Stage V-v2 and coverage tail"
+    run_ids:
+      - "stagev_v2_multihead_boundary_learning_3d_v1"
+      - "stagev2_topology_surface_coverage_tail_v1"
+    reports:
+      - "reports_archive/stage_v_v2/stagev_v2_formal_audit_local"
+      - "reports_archive/stage_v_v2_tail/stagev_v2_tail_latex_report_local"
+    figure_sources:
+      - "figures_archive/figure_data/stage_v_v2"
+    scripts:
+      - "code_archive/canonical"
+    missing_artifacts:
+      []
+    final_dataset: "data_archive/stage_v_v2_tail/stagev2_topology_surface_coverage_tail_v1/dataset_iter101.npz"
+    audit_status: "Decision C; topology map change, coverage, and surprise/support remained limiting"
+  - stage_name: "Stage V-v3"
+    run_ids:
+      - "stagev_v3_sparse_arc_boundary_support_3d_v1"
+    reports:
+      - "reports_archive/stage_v_v3/stagev_v3_return_report_local"
+    figure_sources:
+      - "figures_archive/figure_data/stage_v_v3"
+    scripts:
+      - "code_archive/stage_v_v3"
+    missing_artifacts:
+      []
+    final_dataset: "data_archive/stage_v_v3/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter097.npz"
+    audit_status: "Decision C; coverage improved by about 47.7% versus v2-tail but remained above gate"
+  - stage_name: "Stage V-v4"
+    run_ids:
+      - "stagev_v4_phase_structure_graph_acquisition_3d_v1"
+    reports:
+      - "reports_archive/stage_v_v4/stagev_v4_graph_acq_smoke"
+    figure_sources:
+      []
+    scripts:
+      - "code_archive/stage_v_v4"
+    missing_artifacts:
+      - "final cumulative dataset"
+      - "formal production convergence audit"
+      - "final return report"
+    final_dataset: "missing locally"
+    audit_status: "implementation/package validated; local final production result not present"
+  - stage_name: "Stage VI"
+    run_ids:
+      []
+    reports:
+      []
+    figure_sources:
+      []
+    scripts:
+      []
+    missing_artifacts:
+      - "no independent Stage VI world-model experiment was found"
+    final_dataset: "not present"
+    audit_status: "not_present"

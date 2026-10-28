@@ -1,0 +1,587 @@
+schema_version: 3
+figure_id: FIG-04-STAGEIV-3D-STRICT-V2
+figure_type: manuscript
+template: multi_panel_template
+scientific_message: Reliability-aware active learning reveals thermodynamic and topology-resolved
+  structures across a finite three-dimensional sampled domain.
+visual_message: The exact three-dimensional thermodynamic cloud is primary; trusted
+  topology support and exact fixed-mu slices define the available evidence without
+  a convergence scoreboard.
+primary_object:
+  id: exact_3d_thermodynamic_cloud
+  asset_type: phase_map
+  scientific_role: Reliability-aware active learning reveals thermodynamic and topology-resolved
+    structures across a finite three-dimensional sampled domain.
+  visual_role: primary
+primary_visual_object:
+  id: exact_3d_thermodynamic_cloud
+  scientific_role: Reliability-aware active learning reveals thermodynamic and topology-resolved
+    structures across a finite three-dimensional sampled domain.
+  expected_rank: 1
+secondary_objects:
+- id: exact_3d_topology_support
+  asset_type: data_panel
+  scientific_role: exact_3d_topology_support
+  visual_role: secondary
+- id: fixed_mu_slice_audit
+  asset_type: data_panel
+  scientific_role: fixed_mu_slice_audit
+  visual_role: secondary
+tertiary_information: []
+secondary_visual_objects:
+- exact_3d_topology_support
+- fixed_mu_slice_audit
+tertiary_visual_objects: []
+reading_order:
+- exact_3d_thermodynamic_cloud
+- exact_3d_topology_support
+- fixed_mu_slice_audit
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    exact_3d_thermodynamic_cloud:
+    - exact_3d_thermodynamic_cloud
+    exact_3d_topology_support:
+    - exact_3d_topology_support
+    fixed_mu_slice_audit:
+    - fixed_mu_slice_audit
+  scientific_asset_fill_ratio_audits: []
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking:
+  - exact_3d_thermodynamic_cloud
+  - exact_3d_topology_support
+  - fixed_mu_slice_audit
+  severity: warning
+forbidden_visual_priorities:
+- equal_weight_dashboard
+- caveat_hidden_in_caption
+data_sources:
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/figure_data/stageiv_mu_slice_boundary_audit_local/stageiv_narrow_mu_slice_metrics.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local/tables/boundary_surface_diagnostics.csv
+assets:
+- id: exact_3d_thermodynamic_cloud
+  type: phase_map
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz
+  schematic: false
+  bbox: exact_3d_thermodynamic_cloud
+  features:
+  - consistent_phase_colors
+  - common_axes_for_comparison
+  - boundary_semantics
+- id: exact_3d_topology_support
+  type: exact_sample_data
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz
+  schematic: false
+  bbox: exact_3d_topology_support
+  features: []
+- id: fixed_mu_slice_audit
+  type: exact_sample_data
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/figure_data/stageiv_mu_slice_boundary_audit_local/stageiv_narrow_mu_slice_metrics.csv
+  schematic: false
+  bbox: fixed_mu_slice_audit
+  features: []
+layout:
+  canvas:
+    viewbox:
+    - 0
+    - 0
+    - 1600
+    - 1100
+    print_mm:
+    - 178.0
+    - 120.0
+  template_profile: high_dimensional
+  primary_area_fraction_min: 0.45
+  bounding_boxes: geometry_manifest.json
+  alignment_anchors:
+  - shared_parameter_axes
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements:
+  - id: primary_area
+    object_id: exact_3d_thermodynamic_cloud
+    reference: canvas
+    minimum_fraction: 0.45
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings:
+    phase: physical
+    topology_cfflo: topology_cfflo
+    topology_transition: topology_transition
+    topology_tfflo: topology_tfflo
+  allowed_extra_hex: []
+  contrast_pairs:
+  - id: body_on_white
+    role: body_text
+    foreground: neutral.body
+    background: neutral.white
+text_budget:
+  maximum_words_in_artwork: 110
+  maximum_words_per_panel: 28
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption_or_supplement
+required_elements:
+- exact_3d_thermodynamic_cloud
+- exact_3d_topology_support
+- fixed_mu_slice_audit
+required_labels: []
+forbidden_elements:
+- hidden_nonconvergence
+- operational_threshold_as_physical_convergence
+- pass_fail_scoreboard
+- threshold_line
+- unauthorized_interpolation
+forbidden_claims:
+- complete 3D phase diagram
+- fully converged 3D topology atlas
+- physically converged 3D topology
+- threshold-certified 3D topology
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  require_engine_preflight: true
+  engine_preflight_record: engine_preflight.json
+  strict_palette: true
+  prohibited_text:
+  - PASS
+  - FAIL
+  - not converged
+  - convergence gate
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+approval:
+  gate: GATE_FIG4_V2_HUMAN_SCIENCE_AND_VISUAL_REVIEW
+  state: HUMAN_WAIT
+  supersedes_after_approval: FIG-04-STAGEIV-3D-STRICT
+strict_data:
+  enabled: true
+  track: STRICT_DATA_FIGURE_TRACK
+  claim_freeze:
+  - CLM-3D-EXTENSION
+  panels:
+  - panel_id: exact_3d_thermodynamic_cloud
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: 3D extension exact-sample thermodynamic observations
+    visual_priority: primary
+    panel_type: EXACT_SAMPLE_DATA
+    source_artifacts:
+    - &id001
+      path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz
+      sha256: 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+      version: dataset_iter025
+      row_count: 7081
+      fields:
+      - x
+      - y_reg
+      - y_phase
+      - y_eta_sign
+      - y_strong_diode
+      - mu
+      - q_min
+      - q_max
+      - n_q
+      - q_index
+      - q_edge_distance
+      - q_edge_hit
+      - q_refinement_level
+      - q_status
+      - q_expanded
+      - q_unresolved
+      - delta_min
+      - delta_max
+      - n_delta
+      - n_delta_refined
+      - delta_refinement_level
+      - delta_status
+      - delta_boundary_ambiguous
+      - delta_boundary_band_normal
+      - delta_refined
+      - delta_unresolved
+      - free_energy_gap_to_normal
+      - positive_delta_gap
+      - positive_delta_checked
+      - phase_candidate
+      - exact_status_code
+      - trusted_exact
+      - training_eligible_exact
+      - needs_rerun_exact
+      - topology_enabled
+      - topology_applicable
+      - topology_pending
+      - topology_label_code
+      - topology_z2
+      - topology_spectral_status_code
+      - topology_trusted
+      - topology_p0
+      - topology_ppi
+      - topology_pf_product
+      - topology_pfaffian_margin
+      - topology_bulk_gap
+      - topology_k_at_bulk_gap
+      - topology_gap_tol
+      - topology_gap_nk
+      - topology_gap_backend_code
+      - topology_runtime_sec
+      - topology_error_code
+      units:
+        x[:,0]: kBT/t
+        x[:,1]: JA/t
+        x[:,2]: mu/t
+        topology_z2: Z2 code
+    source_versions:
+    - dataset_iter025
+    source_hashes:
+    - 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    - mu
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+      mu: mu/t
+    axis_orientation:
+      kT: increasing
+      JA: increasing
+      mu: increasing
+    parameter_ranges: {}
+    input_row_count: 7081
+    selected_row_count: 7081
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - y_phase
+    label_semantics: frozen exact/audit fields
+    phase_mapping:
+      normal: 0
+      uniform_SC: 1
+      FFLO: 2
+    topology_mapping: {}
+    trust_mask: topology_trusted == 1 and y_phase == 2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes: []
+    expected_counts:
+      normal: 2350
+      uniform_SC: 141
+      FFLO: 4590
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - higher-dimensional exploration
+    - finite-domain exact support
+    required_caveats:
+    - finite sampled domain
+    - discrete exact support with no inferred continuous surface or complete atlas
+    forbidden_claims:
+    - complete 3D phase diagram
+    - fully converged 3D topology atlas
+    - physically converged 3D topology
+    - threshold-certified 3D topology
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: exact_3d_thermodynamic_cloud
+    validators:
+    - strict_data_checker
+    - fig4_specific_validation
+    human_review_items:
+    - finite-domain wording
+    - discrete-support semantics
+    - absence of threshold claims
+    output_artifacts: &id002
+    - fig4_strict_data_v2.svg
+    - fig4_strict_data_v2.pdf
+    - fig4_strict_data_v2.png
+  - panel_id: exact_3d_topology_support
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: trusted 3D cFFLO/tFFLO exact support
+    visual_priority: secondary
+    panel_type: EXACT_SAMPLE_DATA
+    source_artifacts:
+    - *id001
+    source_versions:
+    - dataset_iter025
+    source_hashes:
+    - 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    - mu
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+      mu: mu/t
+    axis_orientation:
+      kT: increasing
+      JA: increasing
+      mu: increasing
+    parameter_ranges: {}
+    input_row_count: 7081
+    selected_row_count: 4590
+    excluded_row_count: 2491
+    selection_filters:
+    - topology_trusted == 1
+    - topology_applicable == 1
+    - y_phase == 2
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - topology_z2
+    - topology_bulk_gap
+    - topology_trusted
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping:
+      cFFLO: 0
+      tFFLO: 1
+      gap_closing: diagnostic_only_not_stable_phase
+    trust_mask: topology_trusted == 1 and topology_applicable == 1 and y_phase ==
+      2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes:
+    - Stage IV strict topology closure remains open
+    - FFLO-only topology counts exclude 141 uniform-SC points
+    - k=6 sensitivity is the retained Stage III caveat and is not a substitute for
+      the failed Stage IV 3D closure gates
+    expected_counts:
+      cFFLO: 3145
+      tFFLO: 1445
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - higher-dimensional exploration
+    - finite-domain exact support
+    required_caveats:
+    - finite sampled domain
+    - discrete exact support with no inferred continuous surface or complete atlas
+    forbidden_claims:
+    - complete 3D phase diagram
+    - fully converged 3D topology atlas
+    - physically converged 3D topology
+    - threshold-certified 3D topology
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: exact_3d_topology_support
+    validators:
+    - strict_data_checker
+    - fig4_specific_validation
+    human_review_items:
+    - finite-domain wording
+    - discrete-support semantics
+    - absence of threshold claims
+    output_artifacts: *id002
+  - panel_id: fixed_mu_slice_audit
+    claim_ids:
+    - CLM-3D-EXTENSION
+    scientific_role: archived support-restricted fixed-mu slice audit
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIV/figure_data/stageiv_mu_slice_boundary_audit_local/stageiv_narrow_mu_slice_metrics.csv
+      sha256: b04df1392a6464e945f5c9467d00b5457933d00b6a8e161fd11752f826f807e7
+      version: stageiv_narrow_mu_slice_metrics
+      row_count: 20
+      fields:
+      - mu_center
+      - slice_half_width
+      - exact_points
+      - normal_count
+      - uniform_SC_count
+      - FFLO_count
+      - trusted_count
+      - normal_sc_bracket_count
+      - low_support_warning
+      - support_status
+      units:
+        mu_center: mu/t
+        slice_half_width: mu/t
+    - *id001
+    source_versions:
+    - stageiv_narrow_mu_slice_metrics
+    - dataset_iter025
+    source_hashes:
+    - b04df1392a6464e945f5c9467d00b5457933d00b6a8e161fd11752f826f807e7
+    - 7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842
+    source_scripts:
+    - figures/build_fig4_v2_and_sm_diagnostics.py
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    - mu
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+      mu: mu/t
+    axis_orientation:
+      kT: increasing
+      JA: increasing
+      mu: increasing
+    parameter_ranges: {}
+    input_row_count: 20
+    selected_row_count: 4
+    excluded_row_count: 16
+    selection_filters:
+    - evenly spaced archived slice-table indices [0, 6, 13, 19]
+    excluded_data:
+    - the other 16 archived slice rows remain in the source table and are not inferred
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: topology_trusted == 1 and y_phase == 2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct archived table field selection
+        implementation: future builder
+        parameters: {}
+        validator: source-row and endpoint exact match
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes: []
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - higher-dimensional exploration
+    - finite-domain exact support
+    required_caveats:
+    - finite sampled domain
+    - discrete exact support with no inferred continuous surface or complete atlas
+    forbidden_claims:
+    - complete 3D phase diagram
+    - fully converged 3D topology atlas
+    - physically converged 3D topology
+    - threshold-certified 3D topology
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: fixed_mu_slice_audit
+    validators:
+    - strict_data_checker
+    - fig4_specific_validation
+    human_review_items:
+    - finite-domain wording
+    - discrete-support semantics
+    - absence of threshold claims
+    output_artifacts: *id002
+  output_artifacts: *id002

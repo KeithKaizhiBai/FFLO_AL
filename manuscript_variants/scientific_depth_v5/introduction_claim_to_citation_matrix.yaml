@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "claim_count": 12,
+  "unique_source_count": 50,
+  "claims": [
+    {
+      "claim_id": "INTRO-CITED-01",
+      "claim": "Spin or Fermi-surface mismatch can favor finite-center-of-mass-momentum pairing.",
+      "keys": [
+        "FuldeFerrell1964",
+        "LarkinOvchinnikov1965",
+        "CasalbuoniNardulli2004",
+        "MatsudaShimahara2007",
+        "KinnunenEtAl2018"
+      ],
+      "scope_limit": "foundational and review context; no claim about the present model"
+    },
+    {
+      "claim_id": "INTRO-CITED-02",
+      "claim": "Candidate FFLO phenomenology has been investigated in heavy-fermion and organic superconductors.",
+      "keys": [
+        "RadovanEtAl2003",
+        "BianchiEtAl2003",
+        "KenzelmannEtAl2008",
+        "LortzEtAl2007",
+        "MayaffreEtAl2014"
+      ],
+      "scope_limit": "representative experimental literature; does not assert universal or uncontested identification"
+    },
+    {
+      "claim_id": "INTRO-CITED-03",
+      "claim": "Population-imbalanced ultracold gases provide a tunable setting for mismatched pairing and FFLO-related phases.",
+      "keys": [
+        "LiaoEtAl2010",
+        "ZwierleinEtAl2006",
+        "PartridgeEtAl2006",
+        "SheehyRadzihovsky2007",
+        "RadzihovskySheehy2010"
+      ],
+      "scope_limit": "broader finite-momentum-pairing context; not direct evidence for the lattice model"
+    },
+    {
+      "claim_id": "INTRO-CITED-04",
+      "claim": "Altermagnets combine compensated order with symmetry-structured momentum-dependent spin splitting.",
+      "keys": [
+        "SmejkalSinovaJungwirth2022",
+        "SmejkalEtAl2022",
+        "Mazin2022",
+        "SmejkalEtAl2020"
+      ],
+      "scope_limit": "field definition and symmetry context"
+    },
+    {
+      "claim_id": "INTRO-CITED-05",
+      "claim": "Model studies connect altermagnetism to unconventional or finite-momentum superconductivity.",
+      "keys": [
+        "ChakrabortyBlackSchaffer2024",
+        "HongParkKim2025",
+        "BoseVadnaisParamekanti2024"
+      ],
+      "scope_limit": "model precedents only; not evidence for our phase diagram"
+    },
+    {
+      "claim_id": "INTRO-CITED-06",
+      "claim": "Altermagnetic structures have been proposed as routes to topological superconductivity and Majorana modes.",
+      "keys": [
+        "ZhuEtAl2023",
+        "GhorashiHughesCano2024"
+      ],
+      "scope_limit": "neighboring models and heterostructures; not a claim of equivalence"
+    },
+    {
+      "claim_id": "INTRO-CITED-07",
+      "claim": "Finite-momentum pairing and topological superfluidity can coexist in spin-orbit-coupled models.",
+      "keys": [
+        "ZhangYi2013",
+        "QuEtAl2013",
+        "CaoEtAl2014"
+      ],
+      "scope_limit": "precedent only; project topology remains internally audited"
+    },
+    {
+      "claim_id": "INTRO-CITED-08",
+      "claim": "Gapped one-dimensional class-D BdG systems admit a Z2/Pfaffian distinction.",
+      "keys": [
+        "Kitaev2001",
+        "BudichArdonne2013"
+      ],
+      "scope_limit": "topological authority still requires a bulk-gap applicability guard"
+    },
+    {
+      "claim_id": "INTRO-CITED-09",
+      "claim": "Topological-superconductor classifications and Majorana platforms provide the broader conceptual setting.",
+      "keys": [
+        "ReadGreen2000",
+        "LutchynSauDasSarma2010",
+        "OregRefaelVonOppen2010",
+        "Alicea2012",
+        "Beenakker2013",
+        "SatoAndo2017",
+        "QiZhang2011",
+        "SchnyderEtAl2008",
+        "RyuEtAl2010"
+      ],
+      "scope_limit": "general background; no platform-realization claim for this work"
+    },
+    {
+      "claim_id": "INTRO-CITED-10",
+      "claim": "Active learning and Bayesian design formalize informative sequential data acquisition.",
+      "keys": [
+        "CohnAtlasLadner1994",
+        "MacKay1992",
+        "ShahriariEtAl2016"
+      ],
+      "scope_limit": "methodological background; no production-policy superiority claim"
+    },
+    {
+      "claim_id": "INTRO-CITED-11",
+      "claim": "Active learning has been used to accelerate phase-diagram reconstruction in materials and simulations.",
+      "keys": [
+        "TerayamaEtAl2019",
+        "DaiBrussGlotzer2020",
+        "LookmanEtAl2019"
+      ],
+      "scope_limit": "phase-diagram precedent; no equivalence of oracle or stopping rules"
+    },
+    {
+      "claim_id": "INTRO-CITED-12",
+      "claim": "Adaptive sampling and scientific machine learning can reduce expensive calculation budgets across chemistry and atomistic physics.",
+      "keys": [
+        "TranUlissi2018",
+        "PodryabinkinShapeev2017",
+        "JinnouchiEtAl2019",
+        "VandermauseEtAl2020",
+        "BatraEtAl2021",
+        "NoeEtAl2019"
+      ],
+      "scope_limit": "cross-domain computational context only"
+    }
+  ]
+}

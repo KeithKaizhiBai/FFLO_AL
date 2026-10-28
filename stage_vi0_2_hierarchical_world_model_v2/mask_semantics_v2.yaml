@@ -1,0 +1,7 @@
+NOT_APPLICABLE: physical branch absent; never numeric zero
+UNKNOWN: observable not saved/computed; masked
+UNTRUSTED: value present but reliability gate fails; masked
+VALID: finite value and all level gates pass
+normal_q: NOT_APPLICABLE
+missing_spectral_fingerprint: UNKNOWN
+topology_valid: trusted_SC and spectral_trusted and topology_trusted

@@ -1,0 +1,11 @@
+{
+  "phase": 4,
+  "status": "pass",
+  "automated_scientific_checks": 29,
+  "main_figure_pdf_pages": [1, 1, 1, 1],
+  "approval_package_pages": 6,
+  "rendered_pages_inspected": 6,
+  "visual_qa": "pass",
+  "figure_approval": "pending_human_approval",
+  "new_physics_calculation": false
+}

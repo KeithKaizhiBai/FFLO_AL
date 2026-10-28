@@ -1,0 +1,5 @@
+ensemble_members: 2
+seeds: 1
+max_epochs: 60
+probe_cloud: 10000
+checkpoint_grid: [1024, 3000, 5000, 7168]

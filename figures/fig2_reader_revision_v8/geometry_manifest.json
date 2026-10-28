@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 1100
+  },
+  "objects": [
+    {
+      "id": "cold_start",
+      "type": "plot",
+      "role": "tertiary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 105,
+        "y": 125,
+        "width": 345,
+        "height": 350
+      }
+    },
+    {
+      "id": "exact_call_allocation",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 105,
+        "y": 590,
+        "width": 345,
+        "height": 350
+      }
+    },
+    {
+      "id": "final_phase_map",
+      "type": "plot",
+      "role": "primary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 520,
+        "y": 115,
+        "width": 1040,
+        "height": 715
+      }
+    },
+    {
+      "id": "raw_convergence",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 520,
+        "y": 875,
+        "width": 1040,
+        "height": 185
+      }
+    }
+  ],
+  "routes": [],
+  "scientific_content_bbox": {
+    "final_phase_map": {
+      "x": 520,
+      "y": 115,
+      "width": 1040,
+      "height": 715
+    }
+  }
+}

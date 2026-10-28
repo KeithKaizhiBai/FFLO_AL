@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "figure_id": "FIG-04-STAGEIV-3D-STRICT-V2",
+  "contract": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/figure_contract.yaml",
+  "generated_at": "2026-08-31T08:30:06.863648+00:00",
+  "engine_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/figure_engine",
+  "rule_hashes": {
+    "principles": "2392d3688b0aab686731a73f4578b0bf69e5f9913a4f71305e4d451ef5b97d30",
+    "visual_narrative": "e450dcfe2acb35f1d0b099aefc9fe10f814c86ef8dceeb06a220dc4e939b99ff",
+    "typography": "57d0935ebb8d999e87031d465e127795f0fdd60567e287cc2b6a97469b703fde",
+    "layout": "19f5e97d49aad915f89e8f1b4c1f579e62f68c33bd1aff4188f98d3296ca9870",
+    "spacing": "dd3ce1607cdb78b49fea5322c64eee2e25f0181ac9bb230954dd7d8e4d9b36bf",
+    "color": "e645a493410217480d72f45d6935bb5f47fdbffc45b961b267eeeadba5ca2c78",
+    "arrow": "2e129ec90aae972cd28dd535116abe41fcb6d5f0b851eef0e985548d30ff49e0",
+    "annotation": "b86f4a0726e864d932e524e7ebaef4a31b3301a6d2df878fce2f324e670f40e3",
+    "asset": "b32ded0953dee9e510fb6e17151d1e179cabd6465c1129fd11fff13c38d32598",
+    "validation": "9b9416de08e8beaee0efd04930a54e24b4d0508e548c307b22e603bd52305eff",
+    "strict_data": "83aba26f63024c4f5beb44cf88c6f14d3fd38be50127fb9901d9746d076b49c7",
+    "enforcement": "85dc539382cc55f599af2a58e8baa8893455f7141fe7d9ca355d9b5be99171ad",
+    "palette": "718f99d49bd754cba8bd3f161a9ccd9d2e18a856ee112ca67afecb5f9a05cb69",
+    "fonts": "bee477289d58a97fdcdf1969b0cf9f67568a086862bd2453b16e9c51911a7b14",
+    "svg_style": "fa278e57ad4f04d9aeca7b769bb2b2b1fa858accdeb836b33bf858c64f0778bb"
+  },
+  "status": "pass",
+  "hard_failure_count": 0,
+  "warning_count": 0,
+  "human_review_count": 1,
+  "checks_passed": 55,
+  "checks_total": 56,
+  "checks": [
+    {
+      "category": "output",
+      "name": "editable_svg_present",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/fig4_strict_data_v2.svg",
+      "evidence": {}
+    },
+    {
+      "category": "output",
+      "name": "pdf_present",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/fig4_strict_data_v2.pdf",
+      "evidence": {}
+    },
+    {
+      "category": "output",
+      "name": "png_preview_present",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/fig4_strict_data_v2.png",
+      "evidence": {}
+    },
+    {
+      "category": "output",
+      "name": "png_resolution",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "PNG preview is 2102x1417 px.",
+      "evidence": {}
+    },
+    {
+      "category": "output",
+      "name": "white_background",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Top-right corner RGB=(255, 255, 255).",
+      "evidence": {}
+    },
+    {
+      "category": "output",
+      "name": "pdf_single_page",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Pages:           1",
+      "evidence": {}
+    },
+    {
+      "category": "output",
+      "name": "pdf_page_size_recorded",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Page size:       504.567 x 340.157 pts",
+      "evidence": {}
+    },
+    {
+      "category": "integration",
+      "name": "engine_preflight",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Engine preflight record matches the current contract and all canonical rule hashes: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/engine_preflight.json",
+      "evidence": {
+        "record": {
+          "schema_version": 1,
+          "figure_id": "FIG-04-STAGEIV-3D-STRICT-V2",
+          "contract": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/figure_contract.yaml",
+          "rule_hashes": {
+            "principles": "2392d3688b0aab686731a73f4578b0bf69e5f9913a4f71305e4d451ef5b97d30",
+            "visual_narrative": "e450dcfe2acb35f1d0b099aefc9fe10f814c86ef8dceeb06a220dc4e939b99ff",
+            "typography": "57d0935ebb8d999e87031d465e127795f0fdd60567e287cc2b6a97469b703fde",
+            "layout": "19f5e97d49aad915f89e8f1b4c1f579e62f68c33bd1aff4188f98d3296ca9870",
+            "spacing": "dd3ce1607cdb78b49fea5322c64eee2e25f0181ac9bb230954dd7d8e4d9b36bf",
+            "color": "e645a493410217480d72f45d6935bb5f47fdbffc45b961b267eeeadba5ca2c78",
+            "arrow": "2e129ec90aae972cd28dd535116abe41fcb6d5f0b851eef0e985548d30ff49e0",
+            "annotation": "b86f4a0726e864d932e524e7ebaef4a31b3301a6d2df878fce2f324e670f40e3",
+            "asset": "b32ded0953dee9e510fb6e17151d1e179cabd6465c1129fd11fff13c38d32598",
+            "validation": "9b9416de08e8beaee0efd04930a54e24b4d0508e548c307b22e603bd52305eff",
+            "strict_data": "83aba26f63024c4f5beb44cf88c6f14d3fd38be50127fb9901d9746d076b49c7",
+            "enforcement": "85dc539382cc55f599af2a58e8baa8893455f7141fe7d9ca355d9b5be99171ad",
+            "palette": "718f99d49bd754cba8bd3f161a9ccd9d2e18a856ee112ca67afecb5f9a05cb69",
+            "fonts": "bee477289d58a97fdcdf1969b0cf9f67568a086862bd2453b16e9c51911a7b14",
+            "svg_style": "fa278e57ad4f04d9aeca7b769bb2b2b1fa858accdeb836b33bf858c64f0778bb"
+          },
+          "gate": {
+            "gate": "GATE_FIG4_V2_HUMAN_SCIENCE_AND_VISUAL_REVIEW",
+            "state": "HUMAN_WAIT",
+            "supersedes_after_approval": "FIG-04-STAGEIV-3D-STRICT"
+          }
+        },
+        "figure_matches": true,
+        "hashes_match_current_rules": true,
+        "contract_matches": true
+      }
+    },
+    {
+      "category": "asset",
+      "name": "declared_asset_semantics",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Every visual-role object has a well-formed asset declaration.",
+      "evidence": {
+        "missing_role_assets": [],
+        "malformed": []
+      }
+    },
+    {
+      "category": "asset",
+      "name": "schematic_not_quantitative_evidence",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Quantitative scientific asset types are not supplied by schematic generators.",
+      "evidence": []
+    },
+    {
+      "category": "asset",
+      "name": "required_scientific_features",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Every typed scientific asset declares the features required by asset_rules.yaml.",
+      "evidence": []
+    },
+    {
+      "category": "strict_data",
+      "name": "panel_contracts",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Every strict-data panel satisfies the versioned structural contract.",
+      "evidence": {
+        "errors": {
+          "exact_3d_thermodynamic_cloud": [],
+          "exact_3d_topology_support": [],
+          "fixed_mu_slice_audit": []
+        },
+        "routes": {
+          "exact_3d_thermodynamic_cloud": [
+            "GATE_DATA_SCOPE_FREEZE",
+            "GATE_SOURCE_PROVENANCE",
+            "GATE_DATA_SEMANTICS",
+            "GATE_REPRODUCIBLE_RECONSTRUCTION",
+            "GATE_SCIENTIFIC_INVARIANTS",
+            "GATE_VISUAL_NARRATIVE",
+            "GATE_STYLE_AND_LAYOUT",
+            "GATE_EXPORT_INTEGRITY",
+            "GATE_HUMAN_SCIENCE_REVIEW",
+            "GATE_HUMAN_VISUAL_REVIEW",
+            "GATE_FIGURE_FREEZE"
+          ],
+          "exact_3d_topology_support": [
+            "GATE_DATA_SCOPE_FREEZE",
+            "GATE_SOURCE_PROVENANCE",
+            "GATE_DATA_SEMANTICS",
+            "GATE_REPRODUCIBLE_RECONSTRUCTION",
+            "GATE_SCIENTIFIC_INVARIANTS",
+            "GATE_VISUAL_NARRATIVE",
+            "GATE_STYLE_AND_LAYOUT",
+            "GATE_EXPORT_INTEGRITY",
+            "GATE_HUMAN_SCIENCE_REVIEW",
+            "GATE_HUMAN_VISUAL_REVIEW",
+            "GATE_FIGURE_FREEZE"
+          ],
+          "fixed_mu_slice_audit": [
+            "GATE_DATA_SCOPE_FREEZE",
+            "GATE_SOURCE_PROVENANCE",
+            "GATE_DATA_SEMANTICS",
+            "GATE_TRANSFORMATION_AUTHORIZATION",
+            "GATE_REPRODUCIBLE_RECONSTRUCTION",
+            "GATE_SCIENTIFIC_INVARIANTS",
+            "GATE_VISUAL_NARRATIVE",
+            "GATE_STYLE_AND_LAYOUT",
+            "GATE_EXPORT_INTEGRITY",
+            "GATE_HUMAN_SCIENCE_REVIEW",
+            "GATE_HUMAN_VISUAL_REVIEW",
+            "GATE_FIGURE_FREEZE"
+          ]
+        }
+      }
+    },
+    {
+      "category": "strict_data",
+      "name": "source_provenance",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Every strict-data source exists and matches its registered hash, version, rows, fields, and units.",
+      "evidence": []
+    },
+    {
+      "category": "strict_data",
+      "name": "row_reconciliation",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Selected and excluded counts reconcile with every declared input.",
+      "evidence": []
+    },
+    {
+      "category": "strict_data",
+      "name": "output_manifest_complete",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "All contract-declared strict-data outputs are present.",
+      "evidence": []
+    },
+    {
+      "category": "svg",
+      "name": "parse",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "SVG parses successfully.",
+      "evidence": {}
+    },
+    {
+      "category": "svg",
+      "name": "editable_text",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "SVG contains 82 editable text nodes.",
+      "evidence": {}
+    },
+    {
+      "category": "svg",
+      "name": "raster_policy",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "SVG contains 0 image nodes; raster exception declared=False.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "svg_nonuniform_scaling",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No SVG group uses non-uniform scale.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "svg_skew",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No SVG group uses skew transforms.",
+      "evidence": []
+    },
+    {
+      "category": "svg",
+      "name": "engine_metadata",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "SVG records figure id, contract path, and engine schema.",
+      "evidence": {
+        "figure_id": "FIG-04-STAGEIV-3D-STRICT-V2",
+        "contract": "figure_contract.yaml",
+        "engine_schema": "3"
+      }
+    },
+    {
+      "category": "color",
+      "name": "semantic_mappings",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Every contract color role maps to a canonical semantic family.",
+      "evidence": []
+    },
+    {
+      "category": "color",
+      "name": "approved_palette",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Unknown SVG colors: 0; strict palette=True.",
+      "evidence": []
+    },
+    {
+      "category": "color",
+      "name": "minimum_contrast",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Registered contrast pairs: 1; failures: 0.",
+      "evidence": {
+        "pairs": [
+          {
+            "id": "body_on_white",
+            "role": "body_text",
+            "foreground": "#252B36",
+            "background": "#FFFFFF",
+            "ratio": 14.213,
+            "minimum": 4.5
+          }
+        ],
+        "failures": []
+      }
+    },
+    {
+      "category": "scientific",
+      "name": "required_labels",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "All contract-required scientific labels are present.",
+      "evidence": []
+    },
+    {
+      "category": "scientific",
+      "name": "prohibited_claims",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No contract-prohibited claim appears in the artwork.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "geometry_manifest",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/figures/fig4_strict_data_v2/geometry_manifest.json",
+      "evidence": {}
+    },
+    {
+      "category": "geometry",
+      "name": "canvas_clipping",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "All registered objects fit the canvas.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "parent_containment",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "All registered child objects fit their parent boxes.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "independent_card_gutters",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Independent cards retain at least 20 px clearance.",
+      "evidence": {
+        "issues": [],
+        "observed_min": Infinity
+      }
+    },
+    {
+      "category": "layout",
+      "name": "primary_visual_area",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Primary registered area fraction 0.7054; required minimum 0.4500.",
+      "evidence": {
+        "primary_ids": [
+          "exact_3d_thermodynamic_cloud"
+        ],
+        "primary_registered": [
+          "exact_3d_thermodynamic_cloud"
+        ]
+      }
+    },
+    {
+      "category": "layout",
+      "name": "declared_area_requirements",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "All contract-declared scientific subobjects meet their minimum area fractions.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "text_text_overlap",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No undeclared text-text overlaps.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "text_border_clearance",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Registered text clears its parent border by at least 4 px.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "text_plot_clearance",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Text clears unrelated plots by at least 6 px unless an overlay is declared.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "phase_label_clearance",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Phase-label clearance is at least 10 px.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "leader_text_clearance",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Annotation leaders clear unrelated text by at least 5 px.",
+      "evidence": []
+    },
+    {
+      "category": "geometry",
+      "name": "leader_leader_crossing",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Annotation leaders do not cross one another.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "minimum_font_size",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "All registered text is at least 7 pt.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "normal_width_fonts",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No condensed/narrow/compressed fonts are used.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "nonuniform_text_scaling",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No text uses non-uniform scaling.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "skewed_text",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "No text uses skew transforms.",
+      "evidence": []
+    },
+    {
+      "category": "typography",
+      "name": "preferred_math_font",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Preferred STIX math stack is used for new output; legacy fallbacks are reported.",
+      "evidence": {
+        "families": [],
+        "fallback_used": false
+      }
+    },
+    {
+      "category": "typography",
+      "name": "sans_font_stack",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Non-math text uses the approved normal-width sans stack.",
+      "evidence": []
+    },
+    {
+      "category": "arrow",
+      "name": "workflow_source_target",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Every main workflow route has distinct registered source and target roles.",
+      "evidence": []
+    },
+    {
+      "category": "arrow",
+      "name": "workflow_profile",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Main workflow routes inherit tapered width, opacity, and sampling tokens from arrow_rules.yaml.",
+      "evidence": []
+    },
+    {
+      "category": "arrow",
+      "name": "workflow_card_crossing",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Main workflow route interiors do not pass through unrelated cards.",
+      "evidence": []
+    },
+    {
+      "category": "arrow",
+      "name": "annotation_length",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Annotation leaders do not exceed 48 px.",
+      "evidence": []
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_scientific_subobject",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary visual object resolves to a registered scientific subobject, never its parent card.",
+      "evidence": {
+        "primary_visual_object": "exact_3d_thermodynamic_cloud",
+        "resolved_object": {
+          "id": "exact_3d_thermodynamic_cloud",
+          "type": "plot",
+          "role": "primary",
+          "parent": "canvas",
+          "visual_weight_object": true,
+          "bbox": {
+            "x": 70,
+            "y": 140,
+            "width": 990,
+            "height": 830
+          }
+        }
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_area",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary scientific subobject satisfies its explicit contract area requirement.",
+      "evidence": [
+        {
+          "reference": "canvas",
+          "actual": 0.466875,
+          "minimum": 0.45,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_reading_order",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The declared reading order begins with the primary scientific subobject and all narrative regions resolve.",
+      "evidence": {
+        "reading_order": [
+          "exact_3d_thermodynamic_cloud",
+          "exact_3d_topology_support",
+          "fixed_mu_slice_audit"
+        ],
+        "region_members": {
+          "exact_3d_thermodynamic_cloud": [
+            "exact_3d_thermodynamic_cloud"
+          ],
+          "exact_3d_topology_support": [
+            "exact_3d_topology_support"
+          ],
+          "fixed_mu_slice_audit": [
+            "fixed_mu_slice_audit"
+          ]
+        },
+        "unresolved": {}
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "scientific_asset_fill_ratio",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Declared scientific content fills the asset bbox above its figure-specific minimum.",
+      "evidence": []
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_saliency_rank",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Blurred saliency is a warning-only proxy; it never certifies first fixation or aesthetic quality.",
+      "evidence": {
+        "expected": [
+          "exact_3d_thermodynamic_cloud",
+          "exact_3d_topology_support",
+          "fixed_mu_slice_audit"
+        ],
+        "observed": [
+          "exact_3d_thermodynamic_cloud",
+          "exact_3d_topology_support",
+          "fixed_mu_slice_audit"
+        ]
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_contrast_hierarchy",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Primary mean contrast should not fall below the median declared tertiary-region contrast.",
+      "evidence": {
+        "primary": 22.3207388996243,
+        "tertiary": []
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_equal_weight_regions",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Four or more regions with near-primary mass trigger an equal-weight warning.",
+      "evidence": {
+        "comparable_regions": [],
+        "minimum_for_warning": 4
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_first_fixation_human_review",
+      "severity": "human_review",
+      "passed": false,
+      "detail": "Human review is required to decide whether actual first fixation matches the declared reading order.",
+      "evidence": {
+        "expected_first_fixation": "exact_3d_thermodynamic_cloud"
+      }
+    }
+  ],
+  "gate": {
+    "gate": "GATE_FIG4_V2_HUMAN_SCIENCE_AND_VISUAL_REVIEW",
+    "state": "HUMAN_WAIT",
+    "supersedes_after_approval": "FIG-04-STAGEIV-3D-STRICT"
+  }
+}

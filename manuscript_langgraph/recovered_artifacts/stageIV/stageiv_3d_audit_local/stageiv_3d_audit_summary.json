@@ -1,0 +1,111 @@
+{
+  "acquisition_quota_status": "confirmed",
+  "caveats": [
+    "No new exact calculation was run.",
+    "Stage III hidden fixed-mu validation is blocked by missing reference artifact.",
+    "Smoothed surfaces remain diagnostic visualizations only.",
+    "The normal-state single-band corridor is a diagnostic, not a topology label."
+  ],
+  "cfflo_single_fraction": 0.3567567567567568,
+  "convergence_metrics": {
+    "topology_surface_component_count_last3": [
+      3,
+      4,
+      3
+    ],
+    "topology_surface_coverage_p95_final": 0.015317527016765012,
+    "topology_surface_shift_p95_last3": [
+      0.00558353725352583,
+      0.005906681186021189,
+      0.005996195716502644
+    ],
+    "topology_volume_map_change_last3": [
+      0.001412248042110669,
+      0.001922583952832607,
+      0.0025614754098360654
+    ],
+    "trusted_topology_surprise_last3": [
+      0.065,
+      0.11229946524064172,
+      0.140625
+    ]
+  },
+  "decision_class": "Decision D",
+  "final_dataset": "D:\\PhD Study\\4th\\SC_GBU\\Fu_FFLO\\active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624\\ML_Phase_StageIV_Topology3D\\active_runs\\active_phase_topology_3d_t_ja_mu_from_scratch_v1\\dataset_iter025.npz",
+  "final_dataset_sha256": "7acab805115bcfcae56e94e2541bfdaa727de7767f2d7dd34330f163e2695842",
+  "from_scratch_restart_needed": false,
+  "hard_risk_topology_surface_status": "not_concentrated_on_topology_surface",
+  "hidden_slice_status": "inconclusive",
+  "lower_mu_range_limited": true,
+  "main_limiting_factor": "trusted_topology_surprise",
+  "need_new_exact_calculation": false,
+  "phase_counts": [
+    {
+      "code": 0,
+      "count": 2350,
+      "label": "normal"
+    },
+    {
+      "code": 1,
+      "count": 141,
+      "label": "uniform_SC"
+    },
+    {
+      "code": 2,
+      "count": 4590,
+      "label": "FFLO"
+    }
+  ],
+  "recommended_domain_change": "lower_mu_extension_to_guard_min_-1.0",
+  "recommended_mu_extension": "lower_mu_extension_to_guard_min_-1.0",
+  "recommended_next_action": "collect_missing_stageiii_reference_then_choose_same_window_topology_tail_or_lower_mu_extension_from_edge_audit",
+  "recommended_tail_batches": "2_to_4_after_reference_collection",
+  "recommended_tail_quota": "spectral/topology_surface_coverage_focused; preserve phase quota",
+  "reliability": {
+    "delta_unresolved": 0,
+    "q_unresolved": 0,
+    "rerun_required": 0,
+    "topology_trusted": 4731,
+    "training_eligible_exact": 7081,
+    "trusted_exact": 6767
+  },
+  "run_id": "stageiv_3d_audit",
+  "sample_count": 7081,
+  "secondary_limiting_factors": [
+    "coverage",
+    "surface_shift",
+    "component_instability",
+    "mu_edge_limitation"
+  ],
+  "single_band_hypothesis_status": "supported",
+  "source_run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "tfflo_single_fraction": 0.9653979238754326,
+  "topology_counts": [
+    {
+      "code": -1,
+      "count": 2350,
+      "label": "not_applicable"
+    },
+    {
+      "code": 0,
+      "count": 3265,
+      "label": "trivial"
+    },
+    {
+      "code": 1,
+      "count": 1466,
+      "label": "topological"
+    },
+    {
+      "code": 2,
+      "count": 0,
+      "label": "gapless_SC"
+    },
+    {
+      "code": 3,
+      "count": 0,
+      "label": "unresolved"
+    }
+  ],
+  "upper_mu_range_limited": false
+}

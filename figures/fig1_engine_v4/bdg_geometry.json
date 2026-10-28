@@ -1,0 +1,21 @@
+{
+  "hamiltonian": {
+    "x": 8,
+    "y": 48,
+    "width": 64,
+    "height": 126
+  },
+  "spectrum": {
+    "x": 78,
+    "y": 48,
+    "width": 59,
+    "height": 126
+  },
+  "free_energy": {
+    "x": 145,
+    "y": 38,
+    "width": 153,
+    "height": 146
+  },
+  "free_energy_width_fraction": 0.5543478260869565
+}

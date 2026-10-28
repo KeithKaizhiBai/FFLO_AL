@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "artifact": "fig2_strict_data.png",
+  "first_sha256": "cfc5a58eb40f1cb3fbbdbd0e4d1467d526e52954a2a48f90a06835fecc471f78",
+  "second_sha256": "cfc5a58eb40f1cb3fbbdbd0e4d1467d526e52954a2a48f90a06835fecc471f78",
+  "deterministic": true
+}

@@ -1,0 +1,576 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.1)  12 JUL 2026 17:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**world_model_validation_report.tex
+(./world_model_validation_report.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen149
+\Hy@linkcounter=\count196
+\Hy@pagecounter=\count197
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count198
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count199
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4749.
+\XeTeXLinkMargin=\dimen150
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count266
+\Field@Width=\dimen151
+\Fld@charsize=\dimen152
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count267
+\c@Item=\count268
+\c@Hfootnote=\count269
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count270
+\c@bookmark@seq@number=\count271
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip49
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count272
+\float@exts=\toks18
+\float@box=\box50
+\@float@everytoks=\toks19
+\@floatcapt=\box51
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count273
+\l__pdf_internal_box=\box52
+)
+(./world_model_validation_report.aux)
+\openout1 = `world_model_validation_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(51.21495pt, 511.8651pt, 51.21495pt)
+* v-part:(T,H,B)=(51.21495pt, 692.54008pt, 51.21495pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=511.8651pt
+* \textheight=692.54008pt
+* \oddsidemargin=-21.05504pt
+* \evensidemargin=-21.05504pt
+* \topmargin=-58.05504pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count274
+\scratchdimen=\dimen153
+\scratchbox=\box53
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen154
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 1.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count280
+)
+LaTeX Info: Redefining \ref on input line 1.
+LaTeX Info: Redefining \pageref on input line 1.
+LaTeX Info: Redefining \nameref on input line 1.
+ (./world_model_validation_report.out) (./world_model_validation_report.out)
+\@outlinefile=\write3
+\openout3 = `world_model_validation_report.out'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+ [1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../figures/figure_01_predicted_exact.png, id=36, 500.88669pt x 430.28445pt>
+File: ../figures/figure_01_predicted_exact.png Graphic file (type png)
+<use ../figures/figure_01_predicted_exact.png>
+Package pdftex.def Info: ../figures/figure_01_predicted_exact.png  used on inpu
+t line 1.
+(pdftex.def)             Requested size: 470.91495pt x 404.53966pt.
+<../figures/figure_02_residuals.png, id=38, 518.1203pt x 430.28445pt>
+File: ../figures/figure_02_residuals.png Graphic file (type png)
+<use ../figures/figure_02_residuals.png>
+Package pdftex.def Info: ../figures/figure_02_residuals.png  used on input line
+ 2.
+(pdftex.def)             Requested size: 470.91495pt x 391.09987pt.
+<../figures/figure_03_calibration.png, id=39, 502.55446pt x 249.60947pt>
+File: ../figures/figure_03_calibration.png Graphic file (type png)
+<use ../figures/figure_03_calibration.png>
+Package pdftex.def Info: ../figures/figure_03_calibration.png  used on input li
+ne 3.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_04_error_epistemic.png, id=40, 502.55446pt x 249.60947pt>
+File: ../figures/figure_04_error_epistemic.png Graphic file (type png)
+<use ../figures/figure_04_error_epistemic.png>
+Package pdftex.def Info: ../figures/figure_04_error_epistemic.png  used on inpu
+t line 4.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_05_risk_coverage.png, id=41, 502.55446pt x 249.60947pt>
+File: ../figures/figure_05_risk_coverage.png Graphic file (type png)
+<use ../figures/figure_05_risk_coverage.png>
+Package pdftex.def Info: ../figures/figure_05_risk_coverage.png  used on input 
+line 5.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_06_v3_spatial.png, id=42, 466.97539pt x 249.60947pt>
+File: ../figures/figure_06_v3_spatial.png Graphic file (type png)
+<use ../figures/figure_06_v3_spatial.png>
+Package pdftex.def Info: ../figures/figure_06_v3_spatial.png  used on input lin
+e 6.
+(pdftex.def)             Requested size: 470.91495pt x 251.71506pt.
+<../figures/figure_07_v4_spatial.png, id=43, 466.97539pt x 249.60947pt>
+File: ../figures/figure_07_v4_spatial.png Graphic file (type png)
+<use ../figures/figure_07_v4_spatial.png>
+Package pdftex.def Info: ../figures/figure_07_v4_spatial.png  used on input lin
+e 7.
+(pdftex.def)             Requested size: 470.91495pt x 251.71506pt.
+<../figures/figure_08_v3_to_v4.png, id=44, 502.55446pt x 249.60947pt>
+File: ../figures/figure_08_v3_to_v4.png Graphic file (type png)
+<use ../figures/figure_08_v3_to_v4.png>
+Package pdftex.def Info: ../figures/figure_08_v3_to_v4.png  used on input line 
+8.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_09_v4_to_v3.png, id=45, 502.55446pt x 249.60947pt>
+File: ../figures/figure_09_v4_to_v3.png Graphic file (type png)
+<use ../figures/figure_09_v4_to_v3.png>
+Package pdftex.def Info: ../figures/figure_09_v4_to_v3.png  used on input line 
+9.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_10_probe_uncertainty.png, id=46, 567.59746pt x 249.60947pt>
+File: ../figures/figure_10_probe_uncertainty.png Graphic file (type png)
+<use ../figures/figure_10_probe_uncertainty.png>
+Package pdftex.def Info: ../figures/figure_10_probe_uncertainty.png  used on in
+put line 10.
+(pdftex.def)             Requested size: 470.91495pt x 207.092pt.
+<../figures/figure_11_sequential_uncertainty.png, id=47, 502.55446pt x 249.6094
+7pt>
+File: ../figures/figure_11_sequential_uncertainty.png Graphic file (type png)
+<use ../figures/figure_11_sequential_uncertainty.png>
+Package pdftex.def Info: ../figures/figure_11_sequential_uncertainty.png  used 
+on input line 11.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_12_sequential_future_error.png, id=48, 502.55446pt x 249.609
+47pt>
+File: ../figures/figure_12_sequential_future_error.png Graphic file (type png)
+<use ../figures/figure_12_sequential_future_error.png>
+Package pdftex.def Info: ../figures/figure_12_sequential_future_error.png  used
+ on input line 12.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_13_retrospective_information.png, id=49, 574.82446pt x 249.6
+0947pt>
+File: ../figures/figure_13_retrospective_information.png Graphic file (type png
+)
+<use ../figures/figure_13_retrospective_information.png>
+Package pdftex.def Info: ../figures/figure_13_retrospective_information.png  us
+ed on input line 13.
+(pdftex.def)             Requested size: 470.91495pt x 204.49063pt.
+<../figures/figure_14_phase_reconstruction.png, id=50, 430.28445pt x 249.60947p
+t>
+File: ../figures/figure_14_phase_reconstruction.png Graphic file (type png)
+<use ../figures/figure_14_phase_reconstruction.png>
+Package pdftex.def Info: ../figures/figure_14_phase_reconstruction.png  used on
+ input line 14.
+(pdftex.def)             Requested size: 470.91495pt x 273.17725pt.
+<../figures/figure_15_failure_localization.png, id=51, 502.55446pt x 249.60947p
+t>
+File: ../figures/figure_15_failure_localization.png Graphic file (type png)
+<use ../figures/figure_15_failure_localization.png>
+Package pdftex.def Info: ../figures/figure_15_failure_localization.png  used on
+ input line 15.
+(pdftex.def)             Requested size: 470.91495pt x 233.90164pt.
+<../figures/figure_16_decision_summary.png, id=52, 548.69608pt x 285.74446pt>
+File: ../figures/figure_16_decision_summary.png Graphic file (type png)
+<use ../figures/figure_16_decision_summary.png>
+Package pdftex.def Info: ../figures/figure_16_decision_summary.png  used on inp
+ut line 16.
+(pdftex.def)             Requested size: 470.91495pt x 245.23839pt.
+
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_01_predicted_exact.png>] [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_02_residuals.png> <../figures/figure_03_calibration.png>]
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_04_error_epistemic.png> <../figures/figure_05_risk_coverage
+.png>] [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_06_v3_spatial.png> <../figures/figure_07_v4_spatial.png>]
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_08_v3_to_v4.png> <../figures/figure_09_v4_to_v3.png>]
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_10_probe_uncertainty.png> <../figures/figure_11_sequential_
+uncertainty.png>] [8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_12_sequential_future_error.png> <../figures/figure_13_retro
+spective_information.png>] [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_14_phase_reconstruction.png> <../figures/figure_15_failure_
+localization.png>] [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \clearpage
+               \section{Production isolation}Only schemas, fixed transforms,...
+ <../figures/figure_16_decision_summary.png>] [11
+
+
+]
+(./world_model_validation_report.aux)
+Package rerunfilecheck Info: File `world_model_validation_report.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: BCA4BC4EC9B3C190D78B2C346E197018;448.
+ ) 
+Here is how much of TeX's memory you used:
+ 8778 strings out of 478268
+ 142061 string characters out of 5846348
+ 434713 words of memory out of 5000000
+ 26857 multiletter control sequences out of 15000+600000
+ 472899 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,6n,63p,1536b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on world_model_validation_report.pdf (11 pages, 751950 bytes).
+PDF statistics:
+ 167 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,36 @@
+schema_version: 1
+figure_id: FIG-01-ENGINE-V2
+gate: {id: GATE_FIG1_ASSET_REFINEMENT_APPROVAL, state: HUMAN_WAIT}
+entries:
+  - asset: thermodynamic_landscape
+    previous_version: fig1_engine_v1
+    problem: embedded_plot_appearance_and_insufficient_basin_depth
+    scientific_goal: preserve representative Normal, Uniform SC, cFFLO, and tFFLO branches without implying coexistence
+    visual_goal: dominant physical state-space landscape with stronger smooth basin separation
+    change: landscape/central area increased to 0.3132, vertical contrast increased 1.42x, and cFFLO/tFFLO markers separated by green/purple semantic colors
+    validation_result: pass
+    human_review_needed: true
+  - asset: exact_bdg_oracle
+    previous_version: fig1_engine_v1
+    problem: free_energy_output_not_dominant_enough
+    scientific_goal: preserve H_BdG_to_spectrum_to_free_energy_chain
+    visual_goal: make F(Delta,q) the primary object inside the oracle card
+    change: F(Delta,q) minimap enlarged to 22338 px2 and made larger than both spectrum and Hamiltonian subobjects
+    validation_result: pass
+    human_review_needed: true
+  - asset: physical_observation
+    previous_version: fig1_engine_v1
+    problem: checklist_visual_language
+    scientific_goal: retain phase, order, energy, gap, topology, and uncertainty outputs
+    visual_goal: compact aligned physical measurement summary
+    change: checklist glyphs replaced by six aligned physical quantity/value rows
+    validation_result: pass
+    human_review_needed: true
+  - asset: workflow_arrows
+    previous_version: fig1_engine_v1
+    problem: engineered_connector_appearance
+    scientific_goal: preserve exact, physical, learning, decision, and selected-call semantics
+    visual_goal: layered tapered information flow within canonical profiles
+    change: canonical secondary-flow ribbon layered over each unchanged canonical main-workflow ribbon
+    validation_result: pass
+    human_review_needed: true

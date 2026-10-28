@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "profile_id": "PRL_INTEGRATED_MAIN_TEXT",
+  "packets": [
+    {
+      "packet_id": "METHOD_PACKET_MODEL",
+      "source_sentences": [
+        "MODEL_SPEC:physical_model",
+        "METHODS_TEX:oracle"
+      ],
+      "source_evidence_ids": [
+        "E-MODEL-SPEC"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "first_required_at": "ANCHOR-FIG1",
+      "main_text_content": "Nambu basis, BdG block Hamiltonian, F(Delta,q), and exact minimization authority.",
+      "supplement_only_content": "Full parameter definitions, analytic Pfaffian formulas, and implementation details.",
+      "forbidden_expansion": [
+        "new Hamiltonian convention",
+        "surrogate-generated labels"
+      ]
+    },
+    {
+      "packet_id": "METHOD_PACKET_THERMODYNAMIC_LABELS",
+      "source_sentences": [
+        "MODEL_SPEC:observables_and_labels",
+        "METHODS_TEX:oracle"
+      ],
+      "source_evidence_ids": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY",
+        "CLM-2D-THERMO"
+      ],
+      "first_required_at": "ANCHOR-FIG1",
+      "main_text_content": "Normal/uniform-SC/FFLO thresholds and normal-reference comparison.",
+      "supplement_only_content": "Complete tolerance table and positive-Delta gap implementation.",
+      "forbidden_expansion": [
+        "change phase thresholds",
+        "hard-risk as phase"
+      ]
+    },
+    {
+      "packet_id": "METHOD_PACKET_RELIABILITY",
+      "source_sentences": [
+        "METHODS_TEX:reliability",
+        "RES-FIG1-002-S01"
+      ],
+      "source_evidence_ids": [
+        "E-NUMERICS-SPEC",
+        "E-PHASEII-AUDIT"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "first_required_at": "ANCHOR-FIG1",
+      "main_text_content": "q-window expansion, Delta refinement, and separated numerical states.",
+      "supplement_only_content": "Basin clustering, rank-and-cap details, bug history, and full software architecture.",
+      "forbidden_expansion": [
+        "mathematically exact",
+        "finite-resolution-free"
+      ]
+    },
+    {
+      "packet_id": "METHOD_PACKET_ACTIVE_LEARNING",
+      "source_sentences": [
+        "METHODS_TEX:active_learning",
+        "RES-FIG1-002-S02"
+      ],
+      "source_evidence_ids": [
+        "E-NUMERICS-SPEC",
+        "E-FIG2-STRICT-DATA"
+      ],
+      "claim_ids": [
+        "CLM-ORACLE-RELIABILITY",
+        "CLM-2D-THERMO"
+      ],
+      "first_required_at": "ANCHOR-FIG1",
+      "main_text_content": "Surrogate observables, acquisition role, and exact micro-batch selection.",
+      "supplement_only_content": "Weights, ensemble implementation, validation split, and repulsion formulas.",
+      "forbidden_expansion": [
+        "ML solver",
+        "learned acquisition superiority"
+      ]
+    },
+    {
+      "packet_id": "METHOD_PACKET_TOPOLOGY",
+      "source_sentences": [
+        "METHODS_TEX:topology",
+        "RES-FIG3-001-S03"
+      ],
+      "source_evidence_ids": [
+        "E-STAGEIII-PASS",
+        "E-FIG3-STRICT-DATA"
+      ],
+      "claim_ids": [
+        "CLM-2D-TOPOLOGY",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "first_required_at": "ANCHOR-FIG3",
+      "main_text_content": "Trusted gapped FFLO mask, full-BZ gap, Pfaffians, and Z2 labels.",
+      "supplement_only_content": "Analytic Pfaffian expressions, validation sample count, and scale-aware tolerance.",
+      "forbidden_expansion": [
+        "contour as exact boundary",
+        "gap closing as stable phase"
+      ]
+    },
+    {
+      "packet_id": "METHOD_PACKET_CONVERGENCE",
+      "source_sentences": [
+        "METHODS_TEX:convergence",
+        "RES-FIG2-001-S04",
+        "RES-FIG3-002-S01"
+      ],
+      "source_evidence_ids": [
+        "E-PHASEII-AUDIT",
+        "E-STAGEIII-CONVERGENCE"
+      ],
+      "claim_ids": [
+        "CLM-2D-THERMO",
+        "CLM-2D-TOPOLOGY"
+      ],
+      "first_required_at": "ANCHOR-FIG2",
+      "main_text_content": "Map change, boundary shift, coverage, surprise, and component stability.",
+      "supplement_only_content": "Monitor-grid interpolation and complete history tables.",
+      "forbidden_expansion": [
+        "all refinements exhausted",
+        "remove k=6 sensitivity"
+      ]
+    },
+    {
+      "packet_id": "METHOD_PACKET_3D",
+      "source_sentences": [
+        "METHODS_TEX:convergence_and_3D",
+        "RES-FIG4-001-S03",
+        "RES-FIG4-002-S02"
+      ],
+      "source_evidence_ids": [
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT",
+        "E-FIG4-STRICT-DATA"
+      ],
+      "claim_ids": [
+        "CLM-3D-EXTENSION"
+      ],
+      "first_required_at": "ANCHOR-FIG4",
+      "main_text_content": "Three coordinates, exact point cloud, four fixed-mu slices, and strict nonclosure.",
+      "supplement_only_content": "Complete convergence histories, slice table, and support diagnostics.",
+      "forbidden_expansion": [
+        "continuous topology surface",
+        "complete 3D atlas"
+      ]
+    }
+  ]
+}

@@ -31,3 +31,16 @@
 *.pt binary
 *.pth binary
 *.ckpt binary
+
+# Frozen evidence and manuscript provenance are byte-hash validated.
+# Preserve recorded line endings instead of normalizing these exported assets.
+/downloads/** -text
+/manuscript_langgraph/** -text
+/output/pdf/** -text
+/figures/** -text
+/docs/** -text
+/scripts/** -text
+/release_metadata/** -text
+/AGENTS.md -text
+/eta_phase_diagram_cuda.py -text
+/tfflo_1d_cuda.py -text

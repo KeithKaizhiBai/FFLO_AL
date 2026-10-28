@@ -1,0 +1,3641 @@
+[
+  {
+    "iteration": 0,
+    "completed_iterations": 1,
+    "exact_call_count": 506,
+    "metrics": {
+      "phase_map_change": null,
+      "boundary_shift_normal_sc": null,
+      "boundary_shift_uniform_fflo": null,
+      "label_surprise_rate": null,
+      "selected_A0_mean": null,
+      "selected_A0_baseline": null,
+      "selected_A0_ratio": null,
+      "q_edge_trigger_rate": 0.666015625,
+      "rerun_required_rate": 0.01171875,
+      "boundary_coverage_p95": null
+    },
+    "metric_availability": {
+      "phase_map_change": false,
+      "boundary_shift_normal_sc": false,
+      "boundary_shift_uniform_fflo": false,
+      "label_surprise_rate": false,
+      "selected_A0_ratio": false,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": false
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": null,
+        "mean": null,
+        "p95": null,
+        "available": false,
+        "n_current": 0,
+        "n_previous": 0
+      },
+      "uniform_fflo": {
+        "value": null,
+        "mean": null,
+        "p95": null,
+        "available": false,
+        "n_current": 0,
+        "n_previous": 0
+      },
+      "coverage_boundary_counts": {}
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": false,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 0,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 1,
+    "completed_iterations": 2,
+    "exact_call_count": 744,
+    "metrics": {
+      "phase_map_change": null,
+      "boundary_shift_normal_sc": null,
+      "boundary_shift_uniform_fflo": null,
+      "label_surprise_rate": 0.16796875,
+      "selected_A0_mean": 1.060971322832582,
+      "selected_A0_baseline": 1.060971322832582,
+      "selected_A0_ratio": 1.0,
+      "q_edge_trigger_rate": 0.39453125,
+      "rerun_required_rate": 0.0703125,
+      "boundary_coverage_p95": 0.022711525354099874
+    },
+    "metric_availability": {
+      "phase_map_change": false,
+      "boundary_shift_normal_sc": false,
+      "boundary_shift_uniform_fflo": false,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": null,
+        "mean": null,
+        "p95": null,
+        "available": false,
+        "n_current": 0,
+        "n_previous": 0
+      },
+      "uniform_fflo": {
+        "value": null,
+        "mean": null,
+        "p95": null,
+        "available": false,
+        "n_current": 0,
+        "n_previous": 0
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 462,
+        "uniform_fflo": 0
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": false,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 0,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 2,
+    "completed_iterations": 3,
+    "exact_call_count": 984,
+    "metrics": {
+      "phase_map_change": 0.015860705006398572,
+      "boundary_shift_normal_sc": 0.025194555463432928,
+      "boundary_shift_uniform_fflo": null,
+      "label_surprise_rate": 0.17578125,
+      "selected_A0_mean": 0.9304169020547631,
+      "selected_A0_baseline": 0.9956941124436727,
+      "selected_A0_ratio": 0.9344404977662231,
+      "q_edge_trigger_rate": 0.45703125,
+      "rerun_required_rate": 0.0625,
+      "boundary_coverage_p95": 0.019022513099369052
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": false,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.025194555463432928,
+        "mean": 0.011283561772173087,
+        "p95": 0.025194555463432928,
+        "available": true,
+        "n_current": 478,
+        "n_previous": 462
+      },
+      "uniform_fflo": {
+        "value": null,
+        "mean": null,
+        "p95": null,
+        "available": false,
+        "n_current": 0,
+        "n_previous": 0
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 478,
+        "uniform_fflo": 0
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": false,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 0,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 3,
+    "completed_iterations": 4,
+    "exact_call_count": 1220,
+    "metrics": {
+      "phase_map_change": 0.009539690541745841,
+      "boundary_shift_normal_sc": 0.017500310017095157,
+      "boundary_shift_uniform_fflo": null,
+      "label_surprise_rate": 0.17578125,
+      "selected_A0_mean": 1.0081965465782923,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 1.0083361098866432,
+      "q_edge_trigger_rate": 0.359375,
+      "rerun_required_rate": 0.07421875,
+      "boundary_coverage_p95": 0.015047399972693639
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": false,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.017500310017095157,
+        "mean": 0.006121447828128993,
+        "p95": 0.017500310017095157,
+        "available": true,
+        "n_current": 494,
+        "n_previous": 478
+      },
+      "uniform_fflo": {
+        "value": null,
+        "mean": null,
+        "p95": null,
+        "available": false,
+        "n_current": 61,
+        "n_previous": 0
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 494,
+        "uniform_fflo": 61
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": false,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 0,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 4,
+    "completed_iterations": 5,
+    "exact_call_count": 1453,
+    "metrics": {
+      "phase_map_change": 0.011582063313555926,
+      "boundary_shift_normal_sc": 0.007511565157216666,
+      "boundary_shift_uniform_fflo": 0.5269885149498256,
+      "label_surprise_rate": 0.16015625,
+      "selected_A0_mean": 1.144055017126341,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 1.1442133871422546,
+      "q_edge_trigger_rate": 0.46875,
+      "rerun_required_rate": 0.08984375,
+      "boundary_coverage_p95": 0.011704273465752191
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.007511565157216666,
+        "mean": 0.003416193632445274,
+        "p95": 0.007511565157216666,
+        "available": true,
+        "n_current": 484,
+        "n_previous": 494
+      },
+      "uniform_fflo": {
+        "value": 0.5269885149498256,
+        "mean": 0.19274595717501583,
+        "p95": 0.5269885149498256,
+        "available": true,
+        "n_current": 181,
+        "n_previous": 61
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 484,
+        "uniform_fflo": 181
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": false,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 0,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 5,
+    "completed_iterations": 6,
+    "exact_call_count": 1692,
+    "metrics": {
+      "phase_map_change": 0.012629102519357298,
+      "boundary_shift_normal_sc": 0.01000488162098879,
+      "boundary_shift_uniform_fflo": 0.16369918487588403,
+      "label_surprise_rate": 0.08984375,
+      "selected_A0_mean": 0.9008415172199485,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.9009662195142282,
+      "q_edge_trigger_rate": 0.359375,
+      "rerun_required_rate": 0.0625,
+      "boundary_coverage_p95": 0.01135282820492523
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.01000488162098879,
+        "mean": 0.0039353643702763645,
+        "p95": 0.01000488162098879,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 484
+      },
+      "uniform_fflo": {
+        "value": 0.16369918487588403,
+        "mean": 0.023754656023105784,
+        "p95": 0.16369918487588403,
+        "available": true,
+        "n_current": 246,
+        "n_previous": 181
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 246
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": false,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 0,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 6,
+    "completed_iterations": 7,
+    "exact_call_count": 1924,
+    "metrics": {
+      "phase_map_change": 0.003645247605382557,
+      "boundary_shift_normal_sc": 0.0031249999999999334,
+      "boundary_shift_uniform_fflo": 0.005129613438435472,
+      "label_surprise_rate": 0.08984375,
+      "selected_A0_mean": 0.8752286679728747,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8753498247144649,
+      "q_edge_trigger_rate": 0.421875,
+      "rerun_required_rate": 0.09375,
+      "boundary_coverage_p95": 0.011267347735824886
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0031249999999999334,
+        "mean": 0.0012932388911931665,
+        "p95": 0.0031249999999999334,
+        "available": true,
+        "n_current": 506,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.005129613438435472,
+        "mean": 0.001880117827214731,
+        "p95": 0.005129613438435472,
+        "available": true,
+        "n_current": 247,
+        "n_previous": 246
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 506,
+        "uniform_fflo": 247
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": false,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 1,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 7,
+    "completed_iterations": 8,
+    "exact_call_count": 2158,
+    "metrics": {
+      "phase_map_change": 0.002430165070255038,
+      "boundary_shift_normal_sc": 0.0031249999999999963,
+      "boundary_shift_uniform_fflo": 0.003125000000000001,
+      "label_surprise_rate": 0.06640625,
+      "selected_A0_mean": 0.8888922395622277,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8890152877338783,
+      "q_edge_trigger_rate": 0.38671875,
+      "rerun_required_rate": 0.08203125,
+      "boundary_coverage_p95": 0.008854166666666764
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0031249999999999963,
+        "mean": 0.0010963045392518328,
+        "p95": 0.0031249999999999963,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 506
+      },
+      "uniform_fflo": {
+        "value": 0.003125000000000001,
+        "mean": 0.0009657001635509383,
+        "p95": 0.003125000000000001,
+        "available": true,
+        "n_current": 246,
+        "n_previous": 247
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 246
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 2,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 8,
+    "completed_iterations": 9,
+    "exact_call_count": 2390,
+    "metrics": {
+      "phase_map_change": 0.0020811520016545803,
+      "boundary_shift_normal_sc": 0.004166666666666652,
+      "boundary_shift_uniform_fflo": 0.0031249999999999993,
+      "label_surprise_rate": 0.08203125,
+      "selected_A0_mean": 0.8784553489361506,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8785769523428993,
+      "q_edge_trigger_rate": 0.38671875,
+      "rerun_required_rate": 0.09375,
+      "boundary_coverage_p95": 0.008838834764831913
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.004166666666666652,
+        "mean": 0.0012276287722429364,
+        "p95": 0.004166666666666652,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 503
+      },
+      "uniform_fflo": {
+        "value": 0.0031249999999999993,
+        "mean": 0.0004665132924335375,
+        "p95": 0.0031249999999999993,
+        "available": true,
+        "n_current": 243,
+        "n_previous": 246
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 243
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 2,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 9,
+    "completed_iterations": 10,
+    "exact_call_count": 2617,
+    "metrics": {
+      "phase_map_change": 0.002158710461343571,
+      "boundary_shift_normal_sc": 0.002916666666666647,
+      "boundary_shift_uniform_fflo": 0.003125000000000001,
+      "label_surprise_rate": 0.08984375,
+      "selected_A0_mean": 0.764199484447269,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.7643052715665084,
+      "q_edge_trigger_rate": 0.3984375,
+      "rerun_required_rate": 0.11328125,
+      "boundary_coverage_p95": 0.008838834764831764
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002916666666666647,
+        "mean": 0.0013193756194251702,
+        "p95": 0.002916666666666647,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.003125000000000001,
+        "mean": 0.0004534565366187545,
+        "p95": 0.003125000000000001,
+        "available": true,
+        "n_current": 244,
+        "n_previous": 243
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 244
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 2,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 10,
+    "completed_iterations": 11,
+    "exact_call_count": 2836,
+    "metrics": {
+      "phase_map_change": 0.0018355502126394436,
+      "boundary_shift_normal_sc": 0.0026041666666667463,
+      "boundary_shift_uniform_fflo": 0.003125000000000001,
+      "label_surprise_rate": 0.140625,
+      "selected_A0_mean": 1.0791133565133553,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 1.0792627367414784,
+      "q_edge_trigger_rate": 0.44140625,
+      "rerun_required_rate": 0.140625,
+      "boundary_coverage_p95": 0.0069877124296867975
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666667463,
+        "mean": 0.000739835926030192,
+        "p95": 0.0026041666666667463,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.003125000000000001,
+        "mean": 0.0008873456790123459,
+        "p95": 0.003125000000000001,
+        "available": true,
+        "n_current": 242,
+        "n_previous": 244
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 242
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 11,
+    "completed_iterations": 12,
+    "exact_call_count": 3053,
+    "metrics": {
+      "phase_map_change": 0.0011504504853866936,
+      "boundary_shift_normal_sc": 0.0026041666666666795,
+      "boundary_shift_uniform_fflo": 0.003125000000000001,
+      "label_surprise_rate": 0.10546875,
+      "selected_A0_mean": 0.9683782398580506,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.9685122911711089,
+      "q_edge_trigger_rate": 0.421875,
+      "rerun_required_rate": 0.1484375,
+      "boundary_coverage_p95": 0.006987712429686861
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666795,
+        "mean": 0.0006138392857142845,
+        "p95": 0.0026041666666666795,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 503
+      },
+      "uniform_fflo": {
+        "value": 0.003125000000000001,
+        "mean": 0.0003803596127247569,
+        "p95": 0.003125000000000001,
+        "available": true,
+        "n_current": 240,
+        "n_previous": 242
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 240
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 12,
+    "completed_iterations": 13,
+    "exact_call_count": 3272,
+    "metrics": {
+      "phase_map_change": 0.001215082535127519,
+      "boundary_shift_normal_sc": 0.0026041666666668352,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.12890625,
+      "selected_A0_mean": 1.0578151123743318,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 1.0579615443148176,
+      "q_edge_trigger_rate": 0.42578125,
+      "rerun_required_rate": 0.140625,
+      "boundary_coverage_p95": 0.006588078458684151
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666668352,
+        "mean": 0.000867371543675693,
+        "p95": 0.0026041666666668352,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0001080567081604422,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 242,
+        "n_previous": 240
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 242
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 13,
+    "completed_iterations": 14,
+    "exact_call_count": 3492,
+    "metrics": {
+      "phase_map_change": 0.0020035935419655897,
+      "boundary_shift_normal_sc": 0.0031250000000000444,
+      "boundary_shift_uniform_fflo": 0.003125000000000001,
+      "label_surprise_rate": 0.07421875,
+      "selected_A0_mean": 0.9591459473539026,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.9592787206529765,
+      "q_edge_trigger_rate": 0.4453125,
+      "rerun_required_rate": 0.140625,
+      "boundary_coverage_p95": 0.006987712429686763
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0031250000000000444,
+        "mean": 0.0011582440785373113,
+        "p95": 0.0031250000000000444,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 503
+      },
+      "uniform_fflo": {
+        "value": 0.003125000000000001,
+        "mean": 0.0004461191961191966,
+        "p95": 0.003125000000000001,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 242
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": false,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 2,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 14,
+    "completed_iterations": 15,
+    "exact_call_count": 3716,
+    "metrics": {
+      "phase_map_change": 0.0015123899639353162,
+      "boundary_shift_normal_sc": 0.0031249999999999334,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.08984375,
+      "selected_A0_mean": 0.809016810359453,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8091288014815696,
+      "q_edge_trigger_rate": 0.4609375,
+      "rerun_required_rate": 0.12109375,
+      "boundary_coverage_p95": 0.006572257727905829
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0031249999999999334,
+        "mean": 0.0011316617014233673,
+        "p95": 0.0031249999999999334,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 15,
+    "completed_iterations": 16,
+    "exact_call_count": 3934,
+    "metrics": {
+      "phase_map_change": 0.0015640956037279766,
+      "boundary_shift_normal_sc": 0.004166666666666652,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.0859375,
+      "selected_A0_mean": 0.8841979634655253,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.884320361814773,
+      "q_edge_trigger_rate": 0.44140625,
+      "rerun_required_rate": 0.1484375,
+      "boundary_coverage_p95": 0.006987712429686856
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.004166666666666652,
+        "mean": 0.0011552625133317807,
+        "p95": 0.004166666666666652,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 503
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 16,
+    "completed_iterations": 17,
+    "exact_call_count": 4146,
+    "metrics": {
+      "phase_map_change": 0.0013960522744018303,
+      "boundary_shift_normal_sc": 0.0031249999999999334,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.109375,
+      "selected_A0_mean": 0.9037508083602859,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.9038759133838725,
+      "q_edge_trigger_rate": 0.5,
+      "rerun_required_rate": 0.16796875,
+      "boundary_coverage_p95": 0.006271663843120912
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0031249999999999334,
+        "mean": 0.0010436553704746383,
+        "p95": 0.0031249999999999334,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 17,
+    "completed_iterations": 18,
+    "exact_call_count": 4355,
+    "metrics": {
+      "phase_map_change": 0.0009307015162678869,
+      "boundary_shift_normal_sc": 0.0026041666666666804,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.12890625,
+      "selected_A0_mean": 0.8637782552062055,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8638978268823706,
+      "q_edge_trigger_rate": 0.46484375,
+      "rerun_required_rate": 0.1796875,
+      "boundary_coverage_p95": 0.006556436997127755
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666804,
+        "mean": 0.0007365110890433618,
+        "p95": 0.0026041666666666804,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 503
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 18,
+    "completed_iterations": 19,
+    "exact_call_count": 4557,
+    "metrics": {
+      "phase_map_change": 0.00046535075813394344,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.12109375,
+      "selected_A0_mean": 0.884540413413468,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.884662859167607,
+      "q_edge_trigger_rate": 0.44921875,
+      "rerun_required_rate": 0.203125,
+      "boundary_coverage_p95": 0.006588078458684112
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.00037202380952380836,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 19,
+    "completed_iterations": 20,
+    "exact_call_count": 4761,
+    "metrics": {
+      "phase_map_change": 0.000672173317304585,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.1015625,
+      "selected_A0_mean": 0.8672621233884794,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8673821773318879,
+      "q_edge_trigger_rate": 0.484375,
+      "rerun_required_rate": 0.1875,
+      "boundary_coverage_p95": 0.006588078458684112
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0005311673280423264,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 20,
+    "completed_iterations": 21,
+    "exact_call_count": 4962,
+    "metrics": {
+      "phase_map_change": 0.0005170563979266039,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.12109375,
+      "selected_A0_mean": 0.8321177797636214,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8322329687222383,
+      "q_edge_trigger_rate": 0.5078125,
+      "rerun_required_rate": 0.2109375,
+      "boundary_coverage_p95": 0.006588078458684111
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0004046911133135101,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 21,
+    "completed_iterations": 22,
+    "exact_call_count": 5166,
+    "metrics": {
+      "phase_map_change": 0.0007497317769935756,
+      "boundary_shift_normal_sc": 0.0026041666666666804,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.140625,
+      "selected_A0_mean": 0.7162207921725312,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.7163199376651483,
+      "q_edge_trigger_rate": 0.453125,
+      "rerun_required_rate": 0.1875,
+      "boundary_coverage_p95": 0.006588078458684116
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666804,
+        "mean": 0.0005775577557755759,
+        "p95": 0.0026041666666666804,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 22,
+    "completed_iterations": 23,
+    "exact_call_count": 5365,
+    "metrics": {
+      "phase_map_change": 0.0008402166466307312,
+      "boundary_shift_normal_sc": 0.002604166666666685,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.125,
+      "selected_A0_mean": 0.790959636716943,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.7910691282085048,
+      "q_edge_trigger_rate": 0.4609375,
+      "rerun_required_rate": 0.203125,
+      "boundary_coverage_p95": 0.0062500000000001235
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666685,
+        "mean": 0.0006586554344235201,
+        "p95": 0.002604166666666685,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 23,
+    "completed_iterations": 24,
+    "exact_call_count": 5562,
+    "metrics": {
+      "phase_map_change": 0.0006333940874600897,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.125,
+      "selected_A0_mean": 0.7379425940615184,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.7380447464743092,
+      "q_edge_trigger_rate": 0.48046875,
+      "rerun_required_rate": 0.21875,
+      "boundary_coverage_p95": 0.0062500000000001235
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0005042989417989406,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 24,
+    "completed_iterations": 25,
+    "exact_call_count": 5768,
+    "metrics": {
+      "phase_map_change": 0.00042657152828944815,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.12109375,
+      "selected_A0_mean": 0.6994597311515101,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.6995565564327204,
+      "q_edge_trigger_rate": 0.57421875,
+      "rerun_required_rate": 0.1875,
+      "boundary_coverage_p95": 0.006269497458808945
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.00033688822751322677,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 25,
+    "completed_iterations": 26,
+    "exact_call_count": 5961,
+    "metrics": {
+      "phase_map_change": 0.000672173317304585,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.13671875,
+      "selected_A0_mean": 0.7575430537988561,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.7576479194772452,
+      "q_edge_trigger_rate": 0.6328125,
+      "rerun_required_rate": 0.2421875,
+      "boundary_coverage_p95": 0.006271663843121154
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0005259900990099,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 506,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 506,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 26,
+    "completed_iterations": 27,
+    "exact_call_count": 6159,
+    "metrics": {
+      "phase_map_change": 0.0007238789570972454,
+      "boundary_shift_normal_sc": 0.0026041666666666795,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.14453125,
+      "selected_A0_mean": 0.6884035911710962,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.6884988859655394,
+      "q_edge_trigger_rate": 0.62890625,
+      "rerun_required_rate": 0.22265625,
+      "boundary_coverage_p95": 0.006250000000000111
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666795,
+        "mean": 0.0005714197224975209,
+        "p95": 0.0026041666666666795,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 506
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 8.698677800974452e-06,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 240,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 240
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 27,
+    "completed_iterations": 28,
+    "exact_call_count": 6344,
+    "metrics": {
+      "phase_map_change": 0.0009565543361642171,
+      "boundary_shift_normal_sc": 0.0026041666666666817,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.1640625,
+      "selected_A0_mean": 0.7462748090906487,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.746378114920895,
+      "q_edge_trigger_rate": 0.46484375,
+      "rerun_required_rate": 0.25,
+      "boundary_coverage_p95": 0.0062500000000001235
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666817,
+        "mean": 0.0007468553459119487,
+        "p95": 0.0026041666666666817,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 503
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 8.698677800974452e-06,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 240
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 28,
+    "completed_iterations": 29,
+    "exact_call_count": 6542,
+    "metrics": {
+      "phase_map_change": 0.0007238789570972454,
+      "boundary_shift_normal_sc": 0.0026041666666666795,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.1328125,
+      "selected_A0_mean": 0.5829482159346635,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.5830289126816314,
+      "q_edge_trigger_rate": 0.63671875,
+      "rerun_required_rate": 0.21875,
+      "boundary_coverage_p95": 0.006556436997127805
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666795,
+        "mean": 0.0005745701058201045,
+        "p95": 0.0026041666666666795,
+        "available": true,
+        "n_current": 504,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 504,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 29,
+    "completed_iterations": 30,
+    "exact_call_count": 6720,
+    "metrics": {
+      "phase_map_change": 0.000400718708393118,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.17578125,
+      "selected_A0_mean": 0.5706954074094659,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.57077440801643,
+      "q_edge_trigger_rate": 0.69921875,
+      "rerun_required_rate": 0.27734375,
+      "boundary_coverage_p95": 0.006588078458684116
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0003055830855632629,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 504
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 30,
+    "completed_iterations": 31,
+    "exact_call_count": 6880,
+    "metrics": {
+      "phase_map_change": 0.0006204676775119246,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.18359375,
+      "selected_A0_mean": 0.9015226433813408,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.90164743996301,
+      "q_edge_trigger_rate": 0.66015625,
+      "rerun_required_rate": 0.36328125,
+      "boundary_coverage_p95": 0.006588078458684216
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0004883778437190892,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 506,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 506,
+        "uniform_fflo": 239
+      }
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": false,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 3,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": false,
+    "patience_counter": 0,
+    "patience": 4,
+    "hard_stop": true,
+    "stop": true,
+    "stop_reason": "max_iterations",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 31,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4
+    }
+  },
+  {
+    "iteration": 31,
+    "completed_iterations": 32,
+    "exact_call_count": 7030,
+    "metrics": {
+      "phase_map_change": 0.0005816884476674293,
+      "boundary_shift_normal_sc": 0.002604166666666674,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.20703125,
+      "label_surprise_all_selected": 0.20703125,
+      "label_surprise_trusted": 0.0,
+      "label_surprise_hard_risk": 0.43089430894308944,
+      "label_surprise_selected_for_gate": 0.0,
+      "selected_A0_mean": 0.7811262563351684,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.7812343866049496,
+      "q_edge_trigger_rate": 0.6796875,
+      "rerun_required_rate": 0.3828125,
+      "boundary_coverage_p95": 0.006250000000000112
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "label_surprise_all_selected": true,
+      "label_surprise_trusted": true,
+      "label_surprise_hard_risk": true,
+      "label_surprise_selected_for_gate": true,
+      "trusted_surprise_denominator_valid": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.002604166666666674,
+        "mean": 0.0004615891856247929,
+        "p95": 0.002604166666666674,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 506
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 239,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 239
+      }
+    },
+    "surprise_details": {
+      "stop_surprise_mode": "trusted",
+      "selected_gate_metric": "label_surprise_trusted",
+      "all_selected": {
+        "rate": 0.20703125,
+        "available": true,
+        "n_denominator": 256,
+        "n_surprise": 53,
+        "denominator_fraction_selected": 1.0
+      },
+      "trusted": {
+        "rate": 0.0,
+        "available": true,
+        "n_denominator": 133,
+        "n_surprise": 0,
+        "denominator_fraction_selected": 0.51953125
+      },
+      "hard_risk": {
+        "rate": 0.43089430894308944,
+        "available": true,
+        "n_denominator": 123,
+        "n_surprise": 53,
+        "denominator_fraction_selected": 0.48046875
+      },
+      "selected_count_matched": 256,
+      "trusted_surprise_denominator_valid": true,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "trusted_fraction_selected": 0.51953125,
+      "hard_risk_fraction_selected": 0.48046875,
+      "rerun_required_count": 98,
+      "q_unresolved_count": 0,
+      "delta_unresolved_count": 0
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": true,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 4,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": true,
+    "main_phase_convergence_pass": true,
+    "patience_counter": 1,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "main_phase_converged": false,
+    "numerical_frontier_status": "active",
+    "publication_ready": false,
+    "publication_ready_reason": "hard_risk_boundary_impact_not_audited",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 36,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4,
+      "stop_surprise_mode": "trusted",
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25
+    }
+  },
+  {
+    "iteration": 32,
+    "completed_iterations": 33,
+    "exact_call_count": 7164,
+    "metrics": {
+      "phase_map_change": 0.0003360866586522925,
+      "boundary_shift_normal_sc": 0.0026041666666666574,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.2421875,
+      "label_surprise_all_selected": 0.2421875,
+      "label_surprise_trusted": 0.0,
+      "label_surprise_hard_risk": 0.496,
+      "label_surprise_selected_for_gate": 0.0,
+      "selected_A0_mean": 0.8442356870043685,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8443525534287836,
+      "q_edge_trigger_rate": 0.70703125,
+      "rerun_required_rate": 0.421875,
+      "boundary_coverage_p95": 0.0062500000000000585
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "label_surprise_all_selected": true,
+      "label_surprise_trusted": true,
+      "label_surprise_hard_risk": true,
+      "label_surprise_selected_for_gate": true,
+      "trusted_surprise_denominator_valid": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666574,
+        "mean": 0.00026608910891089,
+        "p95": 0.0026041666666666574,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 8.698677800974452e-06,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 240,
+        "n_previous": 239
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 240
+      }
+    },
+    "surprise_details": {
+      "stop_surprise_mode": "trusted",
+      "selected_gate_metric": "label_surprise_trusted",
+      "all_selected": {
+        "rate": 0.2421875,
+        "available": true,
+        "n_denominator": 256,
+        "n_surprise": 62,
+        "denominator_fraction_selected": 1.0
+      },
+      "trusted": {
+        "rate": 0.0,
+        "available": true,
+        "n_denominator": 131,
+        "n_surprise": 0,
+        "denominator_fraction_selected": 0.51171875
+      },
+      "hard_risk": {
+        "rate": 0.496,
+        "available": true,
+        "n_denominator": 125,
+        "n_surprise": 62,
+        "denominator_fraction_selected": 0.48828125
+      },
+      "selected_count_matched": 256,
+      "trusted_surprise_denominator_valid": true,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "trusted_fraction_selected": 0.51171875,
+      "hard_risk_fraction_selected": 0.48828125,
+      "rerun_required_count": 108,
+      "q_unresolved_count": 0,
+      "delta_unresolved_count": 0
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": true,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 4,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": true,
+    "main_phase_convergence_pass": true,
+    "patience_counter": 2,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "main_phase_converged": false,
+    "numerical_frontier_status": "active",
+    "publication_ready": false,
+    "publication_ready_reason": "hard_risk_boundary_impact_not_audited",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 36,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4,
+      "stop_surprise_mode": "trusted",
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25
+    }
+  },
+  {
+    "iteration": 33,
+    "completed_iterations": 34,
+    "exact_call_count": 7300,
+    "metrics": {
+      "phase_map_change": 0.0007238789570972454,
+      "boundary_shift_normal_sc": 0.0026041666666666795,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.203125,
+      "label_surprise_all_selected": 0.203125,
+      "label_surprise_trusted": 0.0,
+      "label_surprise_hard_risk": 0.43333333333333335,
+      "label_surprise_selected_for_gate": 0.0,
+      "selected_A0_mean": 0.8170170899418489,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.817130188532038,
+      "q_edge_trigger_rate": 0.6484375,
+      "rerun_required_rate": 0.4140625,
+      "boundary_coverage_p95": 0.006588078458684216
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "label_surprise_all_selected": true,
+      "label_surprise_trusted": true,
+      "label_surprise_hard_risk": true,
+      "label_surprise_selected_for_gate": true,
+      "trusted_surprise_denominator_valid": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.0026041666666666795,
+        "mean": 0.0005734323432343213,
+        "p95": 0.0026041666666666795,
+        "available": true,
+        "n_current": 505,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 240,
+        "n_previous": 240
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 505,
+        "uniform_fflo": 240
+      }
+    },
+    "surprise_details": {
+      "stop_surprise_mode": "trusted",
+      "selected_gate_metric": "label_surprise_trusted",
+      "all_selected": {
+        "rate": 0.203125,
+        "available": true,
+        "n_denominator": 256,
+        "n_surprise": 52,
+        "denominator_fraction_selected": 1.0
+      },
+      "trusted": {
+        "rate": 0.0,
+        "available": true,
+        "n_denominator": 136,
+        "n_surprise": 0,
+        "denominator_fraction_selected": 0.53125
+      },
+      "hard_risk": {
+        "rate": 0.43333333333333335,
+        "available": true,
+        "n_denominator": 120,
+        "n_surprise": 52,
+        "denominator_fraction_selected": 0.46875
+      },
+      "selected_count_matched": 256,
+      "trusted_surprise_denominator_valid": true,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "trusted_fraction_selected": 0.53125,
+      "hard_risk_fraction_selected": 0.46875,
+      "rerun_required_count": 106,
+      "q_unresolved_count": 0,
+      "delta_unresolved_count": 0
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": true,
+      "C5_boundary_coverage_p95": false
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 4,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": true,
+    "main_phase_convergence_pass": true,
+    "patience_counter": 3,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": false,
+    "stop_reason": "",
+    "main_phase_converged": false,
+    "numerical_frontier_status": "active",
+    "publication_ready": false,
+    "publication_ready_reason": "hard_risk_boundary_impact_not_audited",
+    "numerical_cleanup_warning": false,
+    "numerical_cleanup_list": "",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 36,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4,
+      "stop_surprise_mode": "trusted",
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25
+    }
+  },
+  {
+    "iteration": 34,
+    "completed_iterations": 35,
+    "exact_call_count": 7434,
+    "metrics": {
+      "phase_map_change": 0.001628727653468802,
+      "boundary_shift_normal_sc": 0.004166666666666666,
+      "boundary_shift_uniform_fflo": 0.0,
+      "label_surprise_rate": 0.29296875,
+      "label_surprise_all_selected": 0.29296875,
+      "label_surprise_trusted": 0.0,
+      "label_surprise_hard_risk": 0.5813953488372093,
+      "label_surprise_selected_for_gate": 0.0,
+      "selected_A0_mean": 0.8705884913014145,
+      "selected_A0_baseline": 0.9998615904885458,
+      "selected_A0_ratio": 0.8707090057095135,
+      "q_edge_trigger_rate": 0.69921875,
+      "rerun_required_rate": 0.4296875,
+      "boundary_coverage_p95": 0.0046875000000001586
+    },
+    "metric_availability": {
+      "phase_map_change": true,
+      "boundary_shift_normal_sc": true,
+      "boundary_shift_uniform_fflo": true,
+      "label_surprise_rate": true,
+      "label_surprise_all_selected": true,
+      "label_surprise_trusted": true,
+      "label_surprise_hard_risk": true,
+      "label_surprise_selected_for_gate": true,
+      "trusted_surprise_denominator_valid": true,
+      "selected_A0_ratio": true,
+      "q_edge_trigger_rate": true,
+      "rerun_required_rate": true,
+      "boundary_coverage_p95": true
+    },
+    "boundary_details": {
+      "normal_sc": {
+        "value": 0.004166666666666666,
+        "mean": 0.0011948506630853329,
+        "p95": 0.004166666666666666,
+        "available": true,
+        "n_current": 503,
+        "n_previous": 505
+      },
+      "uniform_fflo": {
+        "value": 0.0,
+        "mean": 0.0,
+        "p95": 0.0,
+        "available": true,
+        "n_current": 240,
+        "n_previous": 240
+      },
+      "coverage_boundary_counts": {
+        "normal_sc": 503,
+        "uniform_fflo": 240
+      }
+    },
+    "surprise_details": {
+      "stop_surprise_mode": "trusted",
+      "selected_gate_metric": "label_surprise_trusted",
+      "all_selected": {
+        "rate": 0.29296875,
+        "available": true,
+        "n_denominator": 256,
+        "n_surprise": 75,
+        "denominator_fraction_selected": 1.0
+      },
+      "trusted": {
+        "rate": 0.0,
+        "available": true,
+        "n_denominator": 127,
+        "n_surprise": 0,
+        "denominator_fraction_selected": 0.49609375
+      },
+      "hard_risk": {
+        "rate": 0.5813953488372093,
+        "available": true,
+        "n_denominator": 129,
+        "n_surprise": 75,
+        "denominator_fraction_selected": 0.50390625
+      },
+      "selected_count_matched": 256,
+      "trusted_surprise_denominator_valid": true,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "trusted_fraction_selected": 0.49609375,
+      "hard_risk_fraction_selected": 0.50390625,
+      "rerun_required_count": 110,
+      "q_unresolved_count": 0,
+      "delta_unresolved_count": 0
+    },
+    "conditions": {
+      "C1_phase_map_change": true,
+      "C2_boundary_shift_normal_sc": true,
+      "C3_boundary_shift_uniform_fflo": true,
+      "C4_label_surprise_rate": true,
+      "C5_boundary_coverage_p95": true
+    },
+    "diagnostic_conditions": {
+      "selected_A0_ratio_below_tol": false,
+      "q_edge_trigger_rate_below_tol": false,
+      "rerun_required_rate_below_tol": false
+    },
+    "passed_condition_count": 5,
+    "required_pass_count": 4,
+    "mandatory_gates": [],
+    "mandatory_gates_pass": true,
+    "convergence_pass": true,
+    "main_phase_convergence_pass": true,
+    "patience_counter": 4,
+    "patience": 4,
+    "hard_stop": false,
+    "stop": true,
+    "stop_reason": "converged_main_phase_boundaries",
+    "main_phase_converged": true,
+    "numerical_frontier_status": "active",
+    "publication_ready": false,
+    "publication_ready_reason": "hard_risk_boundary_impact_not_audited",
+    "numerical_cleanup_warning": true,
+    "numerical_cleanup_list": "ML_Phase_512_RankCapK3_TailContinuation/active_runs/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/iter034/rerun_points.csv",
+    "thresholds": {
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25,
+      "selected_A0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625
+    },
+    "stop_config": {
+      "min_iterations": 5,
+      "patience": 4,
+      "max_iterations": 36,
+      "max_exact_calls": null,
+      "warmup_reference_iters": 3,
+      "map_tol": 0.002,
+      "boundary_shift_tol": 0.004166666666666667,
+      "surprise_tol": 0.05,
+      "selected_a0_ratio_tol": 0.15,
+      "qedge_rate_tol": 0.01,
+      "rerun_rate_tol": 0.01,
+      "coverage_tol": 0.00625,
+      "allow_missing_boundary": false,
+      "required_pass_count": 4,
+      "stop_surprise_mode": "trusted",
+      "trusted_surprise_min_denominator": 64,
+      "trusted_surprise_min_fraction": 0.25
+    }
+  }
+]

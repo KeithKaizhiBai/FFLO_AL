@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "project_root_policy": "all paths are relative to the AL_FFLO project root",
+  "archive_read_only_root": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive",
+  "archive_source_commit": "8405b03639043bbc5dc43e154ed7f7465e77cc75",
+  "artifacts": {
+    "ARC-MANIFEST": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/ACTIVE_LEARNING_ARCHIVE_MANIFEST.yaml",
+    "STAGEI-HISTORY": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1",
+    "STAGEII-ENDPOINT": "manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz",
+    "STAGEII-RUN-BUNDLE": "manuscript_langgraph/recovered_artifacts/stageII/run_bundle",
+    "STAGEII-REPORT": "manuscript_langgraph/recovered_artifacts/stageII/phase2_robust_al_final_202606",
+    "STAGEIII-ENDPOINT": "manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz",
+    "STAGEIII-PASS": "manuscript_langgraph/recovered_artifacts/stageIII/topology_pass_dataset_iter035_v1",
+    "STAGEIII-CONVERGENCE": "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2",
+    "STAGEIV-ENDPOINT": "manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz",
+    "STAGEIV-RETURN": "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local",
+    "STAGEIV-MU-SLICE-AUDIT": "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_mu_slice_boundary_audit_local",
+    "STAGEIV-CURVE-FIX": "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/reports_archive/stage_iv/stageiv_curve_extraction_fix_local"
+  }
+}

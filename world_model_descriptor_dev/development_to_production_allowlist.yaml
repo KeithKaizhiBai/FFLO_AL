@@ -1,0 +1,7 @@
+allowed:
+  - descriptor_schema.yaml
+  - mask_semantics.yaml
+  - fixed_physical_transforms.yaml
+  - model_architecture.yaml
+  - loss_definition_source_code
+  - unit_tests

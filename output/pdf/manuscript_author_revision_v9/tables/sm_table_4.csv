@@ -1,0 +1,10 @@
+Setting,Stages I--II,Stage III,Stage IV
+Input coordinates,"$T,J_A$","$T,J_A$","$T,J_A,\mu$"
+Hidden layers (ReLU),"$64,64$","$64,64$","$96,96$"
+Members per task,5,5,5
+Epochs (regression/classification),$240/240$,$240/240$,$180/180$
+Optimization batch size,512,512,512
+Learning rate,$10^{-3}$,$10^{-3}$,$10^{-3}$
+Weight decay,$10^{-5}$,$10^{-5}$,$10^{-5}$
+Validation fraction,0.15,0.15,0.15
+Base seed,42,42,20260623

@@ -1,0 +1,89 @@
+schema_version: 2
+figure_id: REQUIRED
+figure_type: manuscript
+template: manuscript_figure_template
+
+scientific_message: REQUIRED
+visual_message: REQUIRED
+
+primary_object:
+  id: REQUIRED_CONTAINER_OR_PANEL
+  asset_type: REQUIRED
+  scientific_role: REQUIRED
+  visual_role: primary
+
+primary_visual_object:
+  id: REQUIRED_SCIENTIFIC_SUBOBJECT
+  scientific_role: REQUIRED
+  expected_rank: 1
+
+secondary_objects: []
+tertiary_information: []
+secondary_visual_objects: []
+tertiary_visual_objects: []
+
+reading_order:
+  - REQUIRED_SCIENTIFIC_SUBOBJECT
+  - REQUIRED_SUPPORTING_REGION
+
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    REQUIRED_SUPPORTING_REGION: [REQUIRED_GEOMETRY_OBJECT]
+  scientific_asset_fill_ratio_audits: []
+
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking: [REQUIRED_SCIENTIFIC_SUBOBJECT]
+  severity: warning
+
+forbidden_visual_priorities:
+  - workflow_before_physics
+
+data_sources: []
+assets: []
+
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1080], print_mm: [178.0, 120.15]}
+  template_profile: multi_panel
+  bounding_boxes: {}
+  alignment_anchors: []
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements:
+    - {id: primary_visual_object_area, object_id: REQUIRED_SCIENTIFIC_SUBOBJECT, reference: REQUIRED_CONTAINER_OR_PANEL, minimum_fraction: 0.30}
+
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+
+text_budget:
+  maximum_words_in_artwork: 120
+  maximum_words_per_panel: 35
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption_or_supplement
+
+required_elements: []
+required_labels: []
+forbidden_elements: []
+forbidden_claims: []
+
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+
+approval:
+  gate: REQUIRED
+  state: HUMAN_WAIT

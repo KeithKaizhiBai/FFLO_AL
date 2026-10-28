@@ -1,0 +1,21 @@
+{
+  "node_id": "latex_integration",
+  "purpose": "latex integration",
+  "inputs": [
+    "approved_sections",
+    "approved_figures",
+    "approved_supplement"
+  ],
+  "outputs": [
+    "isolated_build",
+    "merge_patch"
+  ],
+  "prerequisites": [
+    "prl_length_claim_gate"
+  ],
+  "forbidden_actions": [
+    "no production merge without approval"
+  ],
+  "gate": "LATEX_INTEGRATION_BOUNDARY",
+  "failure_behavior": "build only an isolated candidate; production release remains blocked by GATE_FINAL_MANUSCRIPT_APPROVAL"
+}

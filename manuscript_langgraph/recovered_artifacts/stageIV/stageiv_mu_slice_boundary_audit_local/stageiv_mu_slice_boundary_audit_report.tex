@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.78in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlist{nosep}
+\begin{document}
+\title{Stage IV-A Mu-Slice Thermodynamic-Boundary Audit}
+\author{Report-only audit}
+\date{2026-06-28}
+\maketitle
+\section*{Executive Summary}
+The audit uses the frozen Stage IV-A returned dataset \texttt{dataset\_iter025} with 7081 samples. It does not run exact BdG calculations, does not continue active learning, and does not modify thermodynamic or topology labels.
+
+Baseline counts are reproduced: normal=2350, uniform-SC=141, FFLO=4590, trivial=3265, topological=1466, gapless-SC=0, unresolved=0.
+
+The final classification is \textbf{Class A - broad-bin projection artifact}. The recommended next action is \textbf{curve\_extraction\_fix\_only}.
+
+\section*{Direct Answers}
+\begin{enumerate}
+\item The suspicious wide-bin panels are primarily the high-\(\mu\) bins 0.50\_0.83, 0.83\_1.17, 1.17\_1.50.
+\item Broad-bin projection artifact: partial.
+\item Narrow fixed-\(\mu\) slices were generated with adaptive half-widths from 0.025 to 0.075.
+\item Local normal/SC bracket support was computed with mutual KNN edges. Sampling support limited: False.
+\item Thermodynamic margin support is partial; weak-margin fractions are reported in CSV tables.
+\item Smooth-fit artifact likelihood is medium.
+\item Sampling insufficiency is False.
+\item Lower-\(\mu\) edge relation: True; single-band relation: partial.
+\item Hard-risk correlation: partial.
+\item Overall explanation: Class A - broad-bin projection artifact.
+\item Need new exact calculation: False.
+\item No exact-tail points are recommended for this specific issue under the current classification. The CSV contains 24 optional traceability candidates if a later decision changes.
+\item Stage IV-A remains useful: tFFLO is clearly discovered and the single-band hypothesis is supported, but formal 3D convergence is not yet passed.
+\end{enumerate}
+\section*{Figures}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig01_original_wide_bin_phase_atlas_highlighted.png}
+\caption{Original wide-bin phase atlas with the high-mu anomaly bins identified.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig02_wide_bin_points_colored_by_mu.png}
+\caption{Same wide-bin support, colored by actual chemical potential. This tests projection mixing within each wide bin.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig03_narrow_fixed_mu_exact_label_atlas.png}
+\caption{Narrow fixed-mu exact-label atlas without smooth curves.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig04_narrow_fixed_mu_atlas_with_brackets.png}
+\caption{Narrow fixed-mu exact-label atlas with local normal/SC bracket midpoints.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig05_anomaly_bin_local_bracket_support.png}
+\caption{Local normal/SC bracket support in anomaly bins.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig06_smooth_curve_vs_bracket_supported_curve.png}
+\caption{Support-respecting bracket median curves compared with smooth spline diagnostics.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig07_delta_opt_anomaly_bins.png}
+\caption{Thermodynamic order-parameter map in anomaly bins.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig08_free_energy_margin_anomaly_bins.png}
+\caption{Absolute free-energy margin to the normal state in anomaly bins.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig09_weak_margin_hard_risk_overlay.png}
+\caption{Weak-margin and hard-risk overlay near anomalous normal/SC support.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig10_boundary_reconstruction_sensitivity.png}
+\caption{Sensitivity of boundary reconstruction to local KNN/filter choices.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig11_acquisition_channel_support_by_mu_bin.png}
+\caption{Acquisition channel support by mu bin.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig12_selected_points_anomaly_bins_by_iteration.png}
+\caption{Selected points in anomaly bins by iteration and acquisition channel.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig13_normal_sc_brackets_single_band_projection.png}
+\caption{Normal/SC brackets projected over the normal-state single-pair corridor.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig14_phase_tail_candidates_for_unsupported_arcs.png}
+\caption{Report-only phase-tail candidate points for unsupported or weak anomaly arcs.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig15_final_decision_summary_panel.png}
+\caption{Final decision summary panel.}
+\end{figure}
+\section*{Caveats}
+\begin{itemize}
+\item Smooth curves and surfaces are report-only diagnostics and are not final physical phase boundaries.
+\item The normal-state single-pair corridor is a diagnostic and is not used as a topology label.
+\item Candidate points are recommendations only; this script does not submit or run exact calculations.
+\item The Stage III hidden-slice reference remains missing from the returned package.
+\end{itemize}
+\end{document}

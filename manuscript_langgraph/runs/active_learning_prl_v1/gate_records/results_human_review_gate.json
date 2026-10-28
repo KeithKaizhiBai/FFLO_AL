@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_RESULTS_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "evidence": [
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_candidate.tex",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_candidate.md",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/figure_captions_candidate.tex",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_sentence_evidence_trace.yaml",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/figure_caption_evidence_trace.yaml",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_claim_evidence_audit.md",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_observation_interpretation_audit.md",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_forbidden_claim_audit.md",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_numerical_consistency_audit.md",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/manuscript_conflict_ledger.yaml",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/changed_files_manifest.yaml",
+    "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_review_packet.pdf"
+  ],
+  "findings": [
+    "Results, captions, traces, and automated audits are ready for scientific review"
+  ],
+  "next_action": "explicit human approval is required before Methods",
+  "decision": "pending_human_review",
+  "results_package": "output/pdf/manuscript_results_review_v1",
+  "results_scientific_freeze": false,
+  "external_retrieval_permission": false,
+  "new_physics_permission": false
+}

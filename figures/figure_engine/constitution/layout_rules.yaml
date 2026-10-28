@@ -1,0 +1,61 @@
+schema_version: 1
+rule_set: layout_rules
+authority: canonical
+
+required_declarations:
+  - canvas
+  - print_size
+  - bounding_boxes
+  - alignment_anchors
+  - visual_hierarchy
+  - primary_object_area
+  - secondary_object_area
+  - annotation_area
+
+hierarchy:
+  roles: [primary, secondary, tertiary]
+  no_equal_weight_default: true
+  primary_must_be_first_fixation: true
+  tertiary_must_not_exceed_primary_visual_weight: true
+
+containment:
+  object_must_fit_parent: true
+  clipping_tolerance_px: 2
+  declared_antialias_overhang_px: 3
+  nested_assets_allowed: true
+  intentional_overlay_requires_contract_entry: true
+
+alignment:
+  preferred_anchors: [left, right, horizontal_center, top, baseline, plot_axis]
+  tolerance_px: 2
+  repeated_panels_share_axes: true
+  comparable_panels_share_scale_unless_declared: true
+
+template_profiles:
+  schematic:
+    primary_area_fraction_min: 0.50
+    workflow_visual_weight_max_fraction: 0.40
+  phase_map:
+    primary_area_fraction_min: 0.42
+    map_is_largest_panel: true
+  topology:
+    primary_area_fraction_min: 0.40
+    topology_map_is_largest_panel: true
+  multi_panel:
+    primary_area_fraction_min: 0.34
+    equal_panels_allowed_only_for_direct_comparison: true
+  high_dimensional:
+    primary_area_fraction_min: 0.34
+    require_overview_plus_slices: true
+  supplement_diagnostics:
+    primary_area_fraction_min: 0.09
+    equal_panels_allowed_for_direct_metric_comparison: true
+    require_shared_iteration_axis_when_applicable: true
+
+forbidden:
+  - touching_independent_cards
+  - inconsistent_gutters
+  - arbitrary_unregistered_coordinates
+  - decorative_empty_panels
+  - duplicated_primary_views_without_scientific_reason
+  - dashboard_equal_weight_by_default

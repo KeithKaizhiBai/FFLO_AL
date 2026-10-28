@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "scope_id": "AL_FFLO_PRL_RELIABILITY_AWARE_3D_V2",
+  "supersedes_scope_id": "AL_FFLO_PRL_PHYSICS_FIRST_V1",
+  "status": "approved",
+  "approval_gate": "GATE_SCOPE_APPROVAL",
+  "GATE_SCOPE_APPROVAL": "approved",
+  "approved_at": "2026-08-12",
+  "approval_authority": "explicit_human_user_instruction",
+  "approval_record": "manuscript_langgraph/audits/scope_revision_record_20260812.yaml",
+  "prior_approval_record": "manuscript_langgraph/audits/scope_approval_record.yaml",
+  "recommended_paper_line": "Reliability-aware active learning enables exploration of thermodynamic, topology-resolved, and higher-dimensional FFLO phase spaces.",
+  "main_text_focus": [
+    "reliability-aware closed-loop active learning for expensive BdG exploration",
+    "adaptive q-window, free-energy labeling, local refinement, and explicit reliability states as the enabling foundation",
+    "normal, uniform-SC, FFLO, cFFLO, and tFFLO reconstruction under frozen definitions",
+    "Stage III two-dimensional topology-aware convergence",
+    "Stage IV extension from two-dimensional reconstruction to higher-dimensional parameter exploration, with formal non-convergence stated"
+  ],
+  "main_text_stages": [
+    {"stage": "I", "role": "proof-of-concept thermodynamic phase discovery", "figure": "FIG-02"},
+    {"stage": "II", "role": "exact-oracle reliability and numerical validation", "figure": "FIG-01 and FIG-02", "condition": "recover raw endpoint before final Figure 2"},
+    {"stage": "III", "role": "topology-aware phase discovery and convergence", "figure": "FIG-03", "condition": "recover final raw convergence bundle before final Figure 3"},
+    {"stage": "IV", "role": "higher-dimensional active-learning extension", "figure": "FIG-04", "condition": "recover the Stage IV raw/report/figure bundle and state that strict 3D topology convergence was not passed"}
+  ],
+  "supplement_scope": [
+    "oracle improvements and label hierarchy",
+    "acquisition details",
+    "numerical and convergence audits",
+    "AI-assisted workflow"
+  ],
+  "discussion_scope": [
+    "Stage V exploratory learned-acquisition studies as operational but non-superior methodology",
+    "future adaptive discovery policies motivated by the Stage V negative comparative result"
+  ],
+  "outlook_scope": [
+    "Stage VI hierarchical world-model descriptors",
+    "future EIG only after uncertainty and spectral descriptors are validated"
+  ],
+  "forbidden_main_claims": [
+    "machine learning replaces the exact BdG solver",
+    "V4 is superior to V3",
+    "the three-dimensional topology surface is converged",
+    "the hierarchical world model is EIG-ready",
+    "all numerical uncertainty has been eliminated",
+    "Codex or AI coding history is the scientific contribution"
+  ],
+  "unresolved_scope_decisions": [
+    "recovery of the Stage II, Stage III, and Stage IV frozen figure-reproduction bundles",
+    "none at the figure-contract level; all four figures are frozen"
+  ],
+  "downstream_gate_constraints": {
+    "GATE_CLAIM_APPROVAL": "approved",
+    "GATE_FIGURE_APPROVAL": "approved_with_fig4_nonclosure_caveat",
+    "INTRO_CITATION_LOOP_GATE": "blocked_until_results_claims_frozen_and_explicit_permission",
+    "FIG-04": "main_text_approved_with_strict_nonclosure_caveat"
+  }
+}

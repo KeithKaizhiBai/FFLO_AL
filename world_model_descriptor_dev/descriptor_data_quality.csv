@@ -1,0 +1,11 @@
+run,check,value,status
+V3,final_row_count,7069,pass
+V3,duplicate_coordinates,0,pass
+V3,conflicting_labels,0,pass
+V3,normal_q_stored_zero,0,documented_not_applicable
+V3,nonfinite_core_values,0,pass
+V4,final_row_count,7080,pass
+V4,duplicate_coordinates,0,pass
+V4,conflicting_labels,0,pass
+V4,normal_q_stored_zero,0,documented_not_applicable
+V4,nonfinite_core_values,0,pass

@@ -1,0 +1,17 @@
+schema_version: 1
+cases:
+  - {id: wrong_phase_count, mutation: expected_counts.FFLO, value: 2, expected: wrong_phase_count}
+  - {id: phase_color_swap, mutation: legend_semantics.rendered_phase_encoding.normal, value: green, expected: phase_color_swap}
+  - {id: hard_risk_as_fourth_phase, mutation: phase_mapping.hard_risk, value: 3, expected: hard_risk_as_fourth_phase}
+  - {id: missing_units, mutation: axis_units, value: {}, expected: missing_units}
+  - {id: unauthorized_interpolation, mutation: transformations.interpolation.enabled, value: true, expected: unauthorized_interpolation}
+  - {id: unauthorized_smoothing, mutation: transformations.smoothing.enabled, value: true, expected: unauthorized_smoothing}
+  - {id: missing_trusted_topology_mask, fixture: topology, mutation: trust_mask, value: null, expected: missing_trusted_topology_mask}
+  - {id: missing_k6_sensitivity, fixture: topology, mutation: sensitivity_notes, value: [], expected: missing_k6_sensitivity}
+  - {id: gap_closing_labeled_as_phase, fixture: topology, mutation: topology_mapping.gap_closing, value: stable_phase, expected: gap_closing_labeled_as_phase}
+  - {id: normalized_gate_ratio_used_as_main_convergence, mutation: convergence_status.main_metric_representation, value: normalized_gate_ratio_only, expected: normalized_gate_ratio_used_as_main_convergence}
+  - {id: 3d_complete_atlas_claim, fixture: high_dimensional, mutation: allowed_claims, value: [complete 3D phase diagram], expected: 3d_complete_atlas_claim}
+  - {id: 3d_missing_evidence_scope_caveat, fixture: high_dimensional, mutation: required_caveats, value: [], expected: 3d_missing_evidence_scope_caveat}
+  - {id: unsupported_threshold_line_in_diagnostic_mode, fixture: diagnostic_only, mutation: convergence_status.threshold_line_visible, value: true, expected: unsupported_threshold_line_in_diagnostic_mode}
+  - {id: unsupported_pass_fail_label_in_diagnostic_mode, fixture: diagnostic_only, mutation: convergence_status.pass_fail_labels_visible, value: true, expected: unsupported_pass_fail_label_in_diagnostic_mode}
+  - {id: exact_and_interpolated_layers_indistinguishable, fixture: hybrid, mutation: exact_vs_derived_encoding.visually_distinct, value: false, expected: exact_and_interpolated_layers_indistinguishable}

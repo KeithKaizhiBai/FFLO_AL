@@ -1,0 +1,151 @@
+{
+  "candidate_id": "candidate_A",
+  "camera": {
+    "elevation_deg": 33,
+    "azimuth_deg": -44,
+    "projection": "orthographic",
+    "box_aspect": [
+      1.35,
+      1.0,
+      0.82
+    ]
+  },
+  "projected_surface_bbox_px": {
+    "x": 234,
+    "y": 103,
+    "width": 341,
+    "height": 192
+  },
+  "projected_surface_aspect_ratio": 1.7760416666666667,
+  "projected_surface_height_width_ratio": 0.5630498533724341,
+  "foreground_fill_fraction": 0.7029569892473119,
+  "internal_whitespace_fraction": 0.29704301075268813,
+  "dominant_minima_projected_triangle_fraction": 0.09492894930965837,
+  "vertical_relief_fraction": 0.3185858772313536,
+  "labels": [
+    {
+      "id": "normal",
+      "bbox": {
+        "x": 207.33552441413042,
+        "y": 148.86087464124898,
+        "width": 54.75,
+        "height": 26.5
+      },
+      "marker": [
+        264.7105244141304,
+        186.11087464124898
+      ],
+      "leader_length_px": 27.0
+    },
+    {
+      "id": "uniform",
+      "bbox": {
+        "x": 382.2686505119319,
+        "y": 201.89964541599255,
+        "width": 84.75,
+        "height": 29.549999999999983
+      },
+      "marker": [
+        429.6436505119319,
+        254.67464541599253
+      ],
+      "leader_length_px": 27.0
+    },
+    {
+      "id": "fflo",
+      "bbox": {
+        "x": 542.6073698336439,
+        "y": 234.24251283881296,
+        "width": 89.375,
+        "height": 30.600000000000023
+      },
+      "marker": [
+        555.2948698336439,
+        231.54251283881297
+      ],
+      "leader_length_px": 27.0
+    }
+  ],
+  "nonuniform_transform": false,
+  "delta_axis_projected_length_fraction": 0.41886186969475675,
+  "q_axis_projected_length_fraction": 0.23287946591052588,
+  "projected_axis_angle_deg": 57.16478070194692,
+  "prohibited_text_found": [],
+  "minima_projected_px": {
+    "normal": [
+      264.7105244141304,
+      186.11087464124898
+    ],
+    "uniform": [
+      429.6436505119319,
+      254.67464541599253
+    ],
+    "fflo": [
+      555.2948698336439,
+      231.54251283881297
+    ]
+  },
+  "minima_coordinates": {
+    "normal": {
+      "Delta": 0.07,
+      "q": -0.23
+    },
+    "uniform": {
+      "Delta": 0.58,
+      "q": 0.0
+    },
+    "fflo": {
+      "Delta": 0.74,
+      "q": 0.64
+    }
+  },
+  "surface_alpha_threshold": 8,
+  "vertical_relief_definition": "peak-coordinate projected y displacement between F_peak and the contour floor divided by colored-surface bbox height",
+  "foreground_definition": "count(alpha>8) inside the tight colored-surface bbox divided by that bbox area",
+  "candidate_file_stem": "candidate_A_compact_hero",
+  "candidate_style": "compact_3d_hero",
+  "contour_floor": {
+    "enabled": false,
+    "levels": 0
+  },
+  "axis_geometry": {
+    "origin": [
+      185.0,
+      320.0
+    ],
+    "delta_end": [
+      247.71346413592647,
+      355.369781114277
+    ],
+    "q_end": [
+      236.33295559524484,
+      293.00133948032567
+    ],
+    "directions_derived_from_3d_projection": true
+  },
+  "validation": {
+    "candidate_id": "candidate_A",
+    "status": "pass",
+    "hard_checks": {
+      "projected_surface_aspect_ratio": true,
+      "projected_surface_height_width_ratio": true,
+      "foreground_fill_fraction": true,
+      "internal_whitespace_fraction": true,
+      "dominant_minima_projected_triangle_fraction": true,
+      "vertical_relief_fraction": true,
+      "phase_labels_do_not_overlap": true,
+      "phase_labels_remain_local": true,
+      "leader_hard_maximum": true,
+      "no_nonuniform_transform": true,
+      "both_parameter_directions_visible": true,
+      "prohibited_text_absent": true
+    },
+    "hard_failures": [],
+    "warnings": [
+      "whitespace_preferred"
+    ],
+    "label_overlap_pairs": [],
+    "longest_leader_px": 27.0,
+    "human_review_required": true
+  }
+}

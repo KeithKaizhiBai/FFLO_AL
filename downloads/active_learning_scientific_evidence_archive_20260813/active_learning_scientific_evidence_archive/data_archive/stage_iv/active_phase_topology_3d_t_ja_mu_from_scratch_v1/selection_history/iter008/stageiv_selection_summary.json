@@ -1,0 +1,51 @@
+{
+  "mode": "acquisition",
+  "run_id": "active_phase_topology_3d_t_ja_mu_from_scratch_v1",
+  "iteration": 8,
+  "dataset_path": "ML_Phase_StageIV_Topology3D/active_runs/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter008.npz",
+  "dataset_samples": 2783,
+  "world_size": 8,
+  "partition_strategy": "cost_aware",
+  "device": "cpu",
+  "candidate_source_counts": {
+    "global_sobol": 45875,
+    "topology_bracket_jitter": 9830,
+    "thermodynamic_bracket_jitter": 6554,
+    "mu_edge_guard": 3277
+  },
+  "requested_candidate_source_counts": {
+    "global_sobol": 45875,
+    "topology_bracket_jitter": 9830,
+    "thermodynamic_bracket_jitter": 6554,
+    "mu_edge_guard": 3277
+  },
+  "topology_bracket_pair_count": 1171,
+  "thermodynamic_bracket_pair_count": 1552,
+  "candidate_count": 65536,
+  "duplicate_count": 0,
+  "topology_context_counts": {
+    "trusted_topology_points": 1508,
+    "trivial_points": 1089,
+    "topological_points": 419,
+    "gapless_points": 0
+  },
+  "weights": {
+    "phase": 0.45,
+    "spectral": 0.4,
+    "coverage": 0.15
+  },
+  "requested_batch_size": 256,
+  "selected_batch_size": 256,
+  "underfilled": false,
+  "channel_requested_counts": {
+    "phase": 115,
+    "spectral": 102,
+    "coverage": 39
+  },
+  "channel_fulfilled_counts": {
+    "phase": 115,
+    "spectral": 102,
+    "coverage": 39,
+    "backfill": 0
+  }
+}

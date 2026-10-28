@@ -1,0 +1,70 @@
+[
+  {
+    "gate_id": "ARTIFACT_PROVENANCE_AUDIT",
+    "status": "PASS",
+    "evidence": [
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/manuscript_artifact_manifest.csv"
+    ],
+    "findings": [
+      "manifest_rows=65",
+      "missing_rows=0"
+    ],
+    "next_action": "build or review the artifact manifest"
+  },
+  {
+    "gate_id": "PUBLICATION_READINESS_GATE",
+    "status": "PASS",
+    "evidence": [
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/publication_gap_matrix.csv"
+    ],
+    "findings": [
+      "no blocking gap recorded"
+    ],
+    "next_action": "close blockers or narrow the approved scope"
+  },
+  {
+    "gate_id": "GATE_SCOPE_APPROVAL",
+    "status": "PASS",
+    "evidence": [
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/manuscript_scope.yaml"
+    ],
+    "findings": [
+      "approved physics-first scope is machine-readable"
+    ],
+    "next_action": "review claim_registry.yaml"
+  },
+  {
+    "gate_id": "GATE_CLAIM_APPROVAL",
+    "status": "PASS",
+    "evidence": [
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/claim_registry.yaml"
+    ],
+    "findings": [
+      "claim registry schema is valid"
+    ],
+    "next_action": "human reviews claim_registry.yaml"
+  },
+  {
+    "gate_id": "FIGURE_EVIDENCE_CONTRACT",
+    "status": "PASS",
+    "evidence": [
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/figure_registry.yaml",
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/figure_redesign_request.yaml"
+    ],
+    "findings": [
+      "figure registry and redesign requests are present"
+    ],
+    "next_action": "generate the Stage III approval package and review source gaps"
+  },
+  {
+    "gate_id": "GATE_FIGURE_APPROVAL",
+    "status": "HUMAN_WAIT",
+    "evidence": [
+      "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/GATE_FIGURE_APPROVAL_PACKAGE/paragraph_metadata.json"
+    ],
+    "findings": [
+      "Figures 1-4 captions and Results candidates are evidence-traceable"
+    ],
+    "next_action": "human reviews the Figures 1-4 approval package"
+  }
+]

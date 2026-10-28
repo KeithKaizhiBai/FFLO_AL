@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_RESULTS_FIG4_CAPTION_CORRECTION",
+  "status": "PASS",
+  "decision": "approved_and_applied",
+  "approval_record": "manuscript_langgraph/runs/active_learning_prl_v1/gate_records/results_fig4_caption_correction_approval.json"
+}

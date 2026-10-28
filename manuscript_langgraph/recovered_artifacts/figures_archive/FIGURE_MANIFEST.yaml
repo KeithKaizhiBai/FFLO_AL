@@ -1,0 +1,96 @@
+figures:
+  stage_ii_final_phase_map:
+    purpose: "Frozen thermodynamic normal/uniform-SC/FFLO map with hard-risk uncertainty overlay."
+    source_dataset: "data_archive/stage_ii/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/dataset_iter035.npz"
+    plotting_script: "figures_archive/plotting_scripts/build_phase2_final_audit_and_report.py"
+    required_inputs:
+      - "data_archive/stage_ii/active_boundary_discovery_rankcap_k3_tail_surprise_continuation_v1/dataset_iter035.npz"
+      - "figures_archive/plotting_scripts/build_phase2_final_audit_and_report.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_ii_final_phase_map.png"
+    original_source: "project_history/reports/report_phase2_robust_al_final_202606/figures/final_phase_map_with_uncertainty.png"
+  stage_ii_hard_risk_band:
+    purpose: "Hard-risk uncertainty band used by the publication boundary audit."
+    source_dataset: "figures_archive/figure_data/stage_ii/hard_risk_boundary_impact_audit_v2"
+    plotting_script: "figures_archive/plotting_scripts/build_hard_risk_boundary_impact_audit.py"
+    required_inputs:
+      - "figures_archive/figure_data/stage_ii/hard_risk_boundary_impact_audit_v2"
+      - "figures_archive/plotting_scripts/build_hard_risk_boundary_impact_audit.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_ii_hard_risk_band.png"
+    original_source: "project_history/reports/report_phase2_robust_al_final_202606/figures/hard_risk_uncertainty_band.png"
+  stage_iii_final_topology_map:
+    purpose: "Final 2D cFFLO/tFFLO contour with trusted exact support."
+    source_dataset: "data_archive/stage_iii/topology_pass_dataset_iter035_v1/dataset_iter035_topology_ground_v1.npz"
+    plotting_script: "figures_archive/plotting_scripts/build_topology_convergence_audit.py"
+    required_inputs:
+      - "data_archive/stage_iii/topology_pass_dataset_iter035_v1/dataset_iter035_topology_ground_v1.npz"
+      - "figures_archive/plotting_scripts/build_topology_convergence_audit.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_iii_final_topology_map.png"
+      - "figures_archive/generated_figures/stage_iii_final_topology_map.pdf"
+    original_source: "active_phase_topology_from_scratch_full_loop_v1_hpc/ML_Phase_512_TopoTrivial_FullLoop/reports/topology_convergence_audit_full_loop_v2/figures/fig01_final_map_contour.png"
+  stage_iii_boundary_convergence:
+    purpose: "Overlay of final-five topology contours for the formal convergence audit."
+    source_dataset: "figures_archive/figure_data/stage_iii/topology_convergence_audit_full_loop_v2"
+    plotting_script: "figures_archive/plotting_scripts/build_topology_convergence_audit.py"
+    required_inputs:
+      - "figures_archive/figure_data/stage_iii/topology_convergence_audit_full_loop_v2"
+      - "figures_archive/plotting_scripts/build_topology_convergence_audit.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_iii_boundary_convergence.png"
+      - "figures_archive/generated_figures/stage_iii_boundary_convergence.pdf"
+    original_source: "active_phase_topology_from_scratch_full_loop_v1_hpc/ML_Phase_512_TopoTrivial_FullLoop/reports/topology_convergence_audit_full_loop_v2/figures/fig02_final5_contour_overlay.png"
+  stage_iv_3d_phase_map:
+    purpose: "Transparent 3D thermodynamic phase map in (kBT, JA, mu)."
+    source_dataset: "data_archive/stage_iv/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.npz"
+    plotting_script: "figures_archive/plotting_scripts/build_stageiv_3d_return_report.py"
+    required_inputs:
+      - "data_archive/stage_iv/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.npz"
+      - "figures_archive/plotting_scripts/build_stageiv_3d_return_report.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_iv_3d_phase_map.png"
+      - "figures_archive/generated_figures/stage_iv_3d_phase_map.pdf"
+    original_source: "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ML_Phase_StageIV_Topology3D/reports/stageiv_3d_return_report_local/figures/phase_3d_transparent.png"
+  stage_iv_mu_slice_atlas:
+    purpose: "Fixed-mu thermodynamic slice atlas for 2D/3D comparison."
+    source_dataset: "data_archive/stage_iv/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.npz"
+    plotting_script: "figures_archive/plotting_scripts/build_stageiv_3d_return_report.py"
+    required_inputs:
+      - "data_archive/stage_iv/active_phase_topology_3d_t_ja_mu_from_scratch_v1/dataset_iter025.npz"
+      - "figures_archive/plotting_scripts/build_stageiv_3d_return_report.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_iv_mu_slice_atlas.png"
+      - "figures_archive/generated_figures/stage_iv_mu_slice_atlas.pdf"
+    original_source: "active_phase_topology_3d_t_ja_mu_from_scratch_v1_identity_guard_hpc_20260624/ML_Phase_StageIV_Topology3D/reports/stageiv_3d_return_report_local/figures/phase_mu_slice_atlas.png"
+  stage_v_v2_topology_audit:
+    purpose: "Stage V-v2 final 3D topology map used by the multi-head audit."
+    source_dataset: "data_archive/stage_v_v2/stagev_v2_multihead_boundary_learning_3d_v1/dataset_iter097.npz"
+    plotting_script: "figures_archive/plotting_scripts/build_stagev_v2_formal_audit.py"
+    required_inputs:
+      - "data_archive/stage_v_v2/stagev_v2_multihead_boundary_learning_3d_v1/dataset_iter097.npz"
+      - "figures_archive/plotting_scripts/build_stagev_v2_formal_audit.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_v_v2_topology_audit.png"
+      - "figures_archive/generated_figures/stage_v_v2_topology_audit.pdf"
+    original_source: "stagev_v2_multihead_boundary_learning_3d_v1_hpc/ML_Phase_StageV_V2_Multihead/reports/stagev_v2_formal_audit_local/figures/fig02_final_3d_fflo_topology_map.png"
+  stage_v_v3_sparse_arc_result:
+    purpose: "Stage V-v3 final topology point cloud after sparse-arc-aware acquisition."
+    source_dataset: "data_archive/stage_v_v3/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter097.npz"
+    plotting_script: "figures_archive/plotting_scripts/build_stagev_v3_return_report.py"
+    required_inputs:
+      - "data_archive/stage_v_v3/stagev_v3_sparse_arc_boundary_support_3d_v1/dataset_iter097.npz"
+      - "figures_archive/plotting_scripts/build_stagev_v3_return_report.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_v_v3_sparse_arc_result.png"
+    original_source: "stagev_v3_sparse_arc_boundary_support_3d_v1_hpc/ML_Phase_StageV_V3_SparseArc/reports/stagev_v3_return_report_local/figures/stagev3_final_topology_point_cloud.png"
+  stage_v_v3_reward_learning:
+    purpose: "Reward/value-model learning diagnostics for the sparse-arc acquisition function."
+    source_dataset: "figures_archive/figure_data/stage_v_v3/stagev_v3_return_report_local"
+    plotting_script: "figures_archive/plotting_scripts/build_stagev_v3_return_report.py"
+    required_inputs:
+      - "figures_archive/figure_data/stage_v_v3/stagev_v3_return_report_local"
+      - "figures_archive/plotting_scripts/build_stagev_v3_return_report.py"
+    generated_files:
+      - "figures_archive/generated_figures/stage_v_v3_reward_learning.png"
+    original_source: "stagev_v3_sparse_arc_boundary_support_3d_v1_hpc/ML_Phase_StageV_V3_SparseArc/reports/stagev_v3_return_report_local/figures/stagev3_reward_learning.png"

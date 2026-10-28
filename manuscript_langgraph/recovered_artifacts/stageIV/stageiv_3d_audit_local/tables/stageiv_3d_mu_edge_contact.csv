@@ -1,0 +1,13 @@
+edge,mu_edge,width,trusted_tfflo_count,trusted_cfflo_count,topology_boundary_proxy_count,range_limited,phase,mu_min_observed,mu_max_observed,count
+lower,-0.5,0.02,58,79,114,True,,,,
+upper,1.5,0.02,0,19,0,False,,,,
+lower,-0.5,0.04,91,126,175,True,,,,
+upper,1.5,0.04,0,28,0,False,,,,
+lower,-0.5,0.08,130,231,263,True,,,,
+upper,1.5,0.08,0,58,0,False,,,,
+lower,-0.5,0.1,145,262,298,True,,,,
+upper,1.5,0.1,0,64,0,False,,,,
+lower,-0.5,0.15,178,338,375,True,,,,
+upper,1.5,0.15,0,80,1,True,,,,
+summary,,,,,,,tFFLO,-0.5,1.283287945560402,1445
+summary,,,,,,,cFFLO,-0.5,1.5,3145

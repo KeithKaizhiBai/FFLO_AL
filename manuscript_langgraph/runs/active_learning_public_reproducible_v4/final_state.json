@@ -1,0 +1,14 @@
+{
+  "gate_id": "GATE_PUBLIC_MANUSCRIPT_AND_SUPPLEMENT_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "run_id": "active_learning_public_reproducible_v4",
+  "parent_run_id": "active_learning_manuscript_stageiv_revision_v3",
+  "resume_command": "python3 manuscript_langgraph/scripts/run_public_manuscript_reproducible.py --resume-after-human-review",
+  "scientific_freeze": false,
+  "publication_freeze": false,
+  "submission_ready": false,
+  "manuscript_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/revised_manuscript_candidate.pdf",
+  "supplement_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/revised_supplement_candidate.pdf",
+  "review_package_pdf": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/compiled_review_package.pdf",
+  "workflow_status": "human_review_wait"
+}

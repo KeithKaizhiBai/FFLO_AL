@@ -1,0 +1,33 @@
+\section{Results}
+\textit{Exact oracle and active-learning scheduler.---}
+For external coordinates $x=(k_BT/t,J_A/t,\mu/t,\ldots)$, the exact calculation minimizes the normal-referenced free energy $F(\Delta,q)$ constructed from the BdG spectrum.  The lowest numerically reliable minimum defines a Normal, uniform-superconducting, or FFLO state.  Minima close to a scanned $q$ edge trigger expansion of the momentum window, whereas near-zero-$\Delta$ competition triggers a refined comparison with the normal state.  Phase identity is stored separately from numerical status.  Only thermodynamically accepted, reliable, and gapped FFLO states are passed to the topological calculation.  The surrogate then selects the next microbatch of coordinates; it neither supplies a phase label nor replaces the exact calculation (Fig.~\ref{fig:framework}).  Complete equations, tolerances, algorithms, network architecture, and acquisition rules are given in the Supplemental Material.
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.96\textwidth]{\detokenize{/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/figures/Fig1_candidate.pdf}}
+\caption{\textbf{Exact physics and adaptive scheduling.} Representative minima of $F(\Delta,q)$ distinguish Normal, uniform-SC, and finite-$q$ FFLO states.  A full-zone gap and Pfaffian invariant distinguish cFFLO, a gap-closing transition region, and reopened tFFLO only within the reliable gapped FFLO subset.  The surrounding surrogate and acquisition cycle schedules subsequent exact calls and does not determine physical labels.}
+\label{fig:framework}\end{figure*}
+
+\textit{Two-dimensional thermodynamic reconstruction.---}
+The two-dimensional search starts from a sparse random sample of the complete candidate grid.  As the exact dataset grows, subsequent evaluations concentrate around the Normal--superconducting and uniform-SC--FFLO structures while retaining exploratory coverage (Fig.~\ref{fig:thermo}).  The primary discovery run evaluates 6,880 unique coordinates out of 77,361 prescribed candidate locations, corresponding to an 8.89\% sampling fraction and an 11.24-fold reduction in exact locations relative to exhaustive evaluation of that grid.  Later iterations change the reconstructed phase regions and their principal boundaries only weakly.  Numerically delicate evaluations are retained separately rather than promoted to an additional phase; phase counts, return accounting, diagnostic histories, and operational stopping settings are reported in the Supplemental Material.
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.96\textwidth]{\detokenize{/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/figures/Fig2_candidate.pdf}}
+\caption{\textbf{Adaptive reconstruction of the two-dimensional thermodynamic phases.} \textbf{(a)} Sparse random-grid initialization. \textbf{(b)} Iteration-resolved exact-call allocation. \textbf{(c)} Final exact-sample map of the Normal, uniform-SC, and FFLO regions; open symbols mark numerically flagged evaluations rather than a phase. \textbf{(d)} Numerical histories used to monitor changes in the reconstructed map and boundaries.  Complete counts and operational settings are provided in the Supplemental Material.}
+\label{fig:thermo}\end{figure*}
+
+\textit{Topology-resolved FFLO structure.---}
+Topology is evaluated only after thermodynamic acceptance and only for reliable gapped FFLO observations.  A full-Brillouin-zone minimum-gap calculation establishes applicability, and the signs of the Pfaffians at $k=0$ and $\pi$ assign cFFLO ($\nu=0$) or tFFLO ($\nu=1$).  The discrete exact observations support connected topology-resolved structure (Fig.~\ref{fig:topology}).  A contour reconstructed within the sampled support and local opposite-$\mathbb Z_2$ brackets guide the eye toward the gap-closing region; neither is an exact phase boundary or a third stable phase.  Changing the interpolation neighborhood from $k=8$ to $k=6$ or $12$ produces a small but measurable variation in the derived contour.  We therefore use it only as a guide, and do not claim that all possible nodal alternatives or refinements have been exhausted.
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.96\textwidth]{\detokenize{/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/figures/Fig3_candidate.pdf}}
+\caption{\textbf{Topology-resolved cFFLO and tFFLO structure.} \textbf{(a)} Reliable gapped FFLO observations classified by the full-zone gap and Pfaffian invariant. \textbf{(b)} A support-restricted reconstruction and local opposite-$\mathbb Z_2$ brackets indicate the gap-closing region but not an exact boundary. \textbf{(c)} Raw numerical histories. \textbf{(d)} Neighborhood sensitivity for $k=6,8,$ and $12$; the finite variation motivates treating the contour as a diagnostic guide.}
+\label{fig:topology}\end{figure*}
+
+\textit{Higher-dimensional exploration.---}
+The same oracle--scheduler separation extends to $x=(k_BT/t,J_A/t,\mu/t)$ over $\mu/t\in[-0.5,1.5]$.  The exact three-dimensional point cloud reveals systematic thermodynamic and topology-aware structure, and four narrow fixed-$\mu$ bins expose how that structure evolves across the third coordinate (Fig.~\ref{fig:3d}).  The slices contain exact observations only, with no interpolation between them.  This support is sufficient to demonstrate higher-dimensional exploration, but not to establish a converged continuous topological surface or a complete three-dimensional atlas.
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.96\textwidth]{\detokenize{/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_public_reproducible_v4/figures/Fig4_candidate.pdf}}
+\caption{\textbf{Higher-dimensional active-learning exploration.} \textbf{(a)} Exact thermodynamic observations in $(k_BT/t,J_A/t,\mu/t)$ over a finite chemical-potential interval. \textbf{(b)} Discrete reliable FFLO topology support. \textbf{(c)} Four fixed-$\mu$ bins shown without interpolation between slices.  The data reveal three-dimensional structure but do not define a continuous topological surface or complete atlas.}
+\label{fig:3d}\end{figure*}
+\FloatBarrier

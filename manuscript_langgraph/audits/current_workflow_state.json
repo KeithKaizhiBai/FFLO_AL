@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-08-27",
+  "approval_source": "persisted manuscript workflow records",
+  "derived_approvals": {
+    "scope_approved": true,
+    "claim_approved": true,
+    "figure_approved": true,
+    "results_human_approved": true,
+    "results_correction_approved": true,
+    "external_retrieval_approved": false,
+    "final_manuscript_approved": false
+  },
+  "workflow_status": "awaiting_introduction_retrieval_permission",
+  "current_stop": "INTRO_CITATION_LOOP_GATE",
+  "next_action": "human authorizes external Introduction retrieval",
+  "gate_results": [
+    {
+      "gate_id": "ARTIFACT_PROVENANCE_AUDIT",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/manuscript_artifact_manifest.csv"
+      ],
+      "findings": [
+        "manifest_rows=65",
+        "missing_rows=0"
+      ],
+      "next_action": "build or review the artifact manifest"
+    },
+    {
+      "gate_id": "PUBLICATION_READINESS_GATE",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/audits/publication_gap_matrix.csv"
+      ],
+      "findings": [
+        "no blocking gap recorded"
+      ],
+      "next_action": "close blockers or narrow the approved scope"
+    },
+    {
+      "gate_id": "GATE_SCOPE_APPROVAL",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/manuscript_scope.yaml"
+      ],
+      "findings": [
+        "approved physics-first scope is machine-readable"
+      ],
+      "next_action": "review claim_registry.yaml"
+    },
+    {
+      "gate_id": "GATE_CLAIM_APPROVAL",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/claim_registry.yaml"
+      ],
+      "findings": [
+        "claim registry schema is valid"
+      ],
+      "next_action": "human reviews claim_registry.yaml"
+    },
+    {
+      "gate_id": "FIGURE_EVIDENCE_CONTRACT",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/registries/figure_registry.yaml",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/figure_redesign_request.yaml"
+      ],
+      "findings": [
+        "figure registry and redesign requests are present"
+      ],
+      "next_action": "generate the Stage III approval package and review source gaps"
+    },
+    {
+      "gate_id": "GATE_FIGURE_APPROVAL",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/paragraph_metadata.json"
+      ],
+      "findings": [
+        "Figures 1-4 captions and Results candidates are evidence-traceable"
+      ],
+      "next_action": "human reviews the Figures 1-4 approval package"
+    },
+    {
+      "gate_id": "GATE_RESULTS_HUMAN_REVIEW",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_candidate.tex",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_candidate.md",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/figure_captions_candidate.tex",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_sentence_evidence_trace.yaml",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/figure_caption_evidence_trace.yaml",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_claim_evidence_audit.md",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_observation_interpretation_audit.md",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_forbidden_claim_audit.md",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/results_numerical_consistency_audit.md",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/manuscript_conflict_ledger.yaml",
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_results_review_v1/changed_files_manifest.yaml"
+      ],
+      "findings": [
+        "Results, captions, traces, and automated audits are ready for scientific review"
+      ],
+      "next_action": "explicit human approval is required before Methods"
+    },
+    {
+      "gate_id": "METHODS_WRITER_PREREQUISITES",
+      "status": "PASS",
+      "evidence": [],
+      "findings": [
+        "Methods are downstream of approved scope, claims, and figure-traced Results"
+      ],
+      "next_action": "approve scope, claims, and the vertical slice before drafting Methods"
+    },
+    {
+      "gate_id": "SUPPLEMENT_BUILDER_PREREQUISITES",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/contracts/supplement_structure.yaml"
+      ],
+      "findings": [
+        "S1-S7 structure is present"
+      ],
+      "next_action": "populate only evidence-linked Supplement sections after approvals"
+    },
+    {
+      "gate_id": "DISCUSSION_SCOPE_GUARD",
+      "status": "PASS",
+      "evidence": [],
+      "findings": [
+        "Stage IV is main-text supported-with-caveat; Stage V is Discussion-only; Stage VI is future work"
+      ],
+      "next_action": "retain claim destinations from the registry"
+    },
+    {
+      "gate_id": "GATE_MANUSCRIPT_FIGURE_SOURCE_REPAIR",
+      "status": "PASS",
+      "evidence": [
+        "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/output/pdf/manuscript_methods_sm_discussion_review_v1/manuscript_figure_source_repair_record.md"
+      ],
+      "findings": [
+        "Figures 1--4 resolve to the registered Figure Engine / strict-data freezes and Fig. 4 text matches its four slices"
+      ],
+      "next_action": "continue"
+    },
+    {
+      "gate_id": "INTRO_CITATION_LOOP_GATE",
+      "status": "HUMAN_WAIT",
+      "evidence": [],
+      "findings": [
+        "Results are frozen; Introduction retrieval still requires explicit external-retrieval approval",
+        "claim needs, citation requirements, bibliography audit, and retrieval plan were prepared without external access"
+      ],
+      "next_action": "approve external retrieval separately after Results stabilization"
+    }
+  ],
+  "safety_checks": {
+    "claim_gate_explicitly_approved": true,
+    "figure_gate_reached": true,
+    "figure_gate_explicitly_approved": true,
+    "results_gate_auto_passed": false,
+    "manuscript_figure_source_repair_verified": true,
+    "external_introduction_retrieval_authorized": false,
+    "physics_recomputed": false
+  }
+}

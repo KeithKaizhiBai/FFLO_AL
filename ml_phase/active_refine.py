@@ -43,7 +43,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--resume-dataset", type=Path, default=None, help="Existing dataset_iterXXX.npz to continue from.")
     p.add_argument("--run-mode", type=str, default="discovery", choices=["discovery", "refinement"])
     p.add_argument("--candidate-domain-mode", type=str, default="full", choices=["full", "prior_band"])
-    p.add_argument("--initialization", type=str, default="random_grid", choices=["random_grid"])
+    p.add_argument("--initialization", type=str, default="random_grid", choices=["random_grid", "sobol_scrambled"])
     p.add_argument("--initial-seed-size", type=int, default=512)
     p.add_argument("--batch-size-max", type=int, default=256)
     p.add_argument("--batch-size-min", type=int, default=0)
@@ -59,6 +59,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--sampling-power-schedule", type=str, default="piecewise", choices=["constant", "linear", "piecewise"])
     p.add_argument("--score-threshold-abs", type=float, default=0.0)
     p.add_argument("--score-threshold-rel", type=float, default=0.0)
+    p.add_argument("--acquisition-profile", type=str, default="full", choices=["full", "simple_phase", "surprise_cleanup", "topo_trivial"])
     p.add_argument("--active-pool-rule", type=str, default="max_threshold", choices=["legacy_or", "max_threshold"])
     p.add_argument("--active-pool-quantile", type=float, default=0.90)
     p.add_argument("--active-pool-quantile-schedule", type=str, default="piecewise", choices=["constant", "piecewise"])
@@ -92,18 +93,40 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--w-ext-end", type=float, default=0.03)
     p.add_argument("--w-ext-mid-iter", type=int, default=10)
     p.add_argument("--w-ext-end-iter", type=int, default=30)
+    p.add_argument("--w-cls-simple", type=float, default=1.0)
+    p.add_argument("--w-ns-simple", type=float, default=1.0)
+    p.add_argument("--w-uf-simple", type=float, default=0.5)
+    p.add_argument("--w-grad-simple", type=float, default=0.2)
+    p.add_argument("--w-reg-simple", type=float, default=0.1)
+    p.add_argument("--w-ext-simple-schedule", type=str, default="piecewise", choices=["constant", "piecewise"])
+    p.add_argument("--w-ext-simple-start", type=float, default=0.02)
+    p.add_argument("--w-ext-simple-mid", type=float, default=0.01)
+    p.add_argument("--w-ext-simple-end", type=float, default=0.0)
+    p.add_argument("--w-ext-simple-mid-iter", type=int, default=10)
+    p.add_argument("--w-ext-simple-end-iter", type=int, default=30)
+    p.add_argument("--surprise-cleanup-qedge-penalty", type=float, default=0.85)
+    p.add_argument("--surprise-cleanup-qedge-floor", type=float, default=0.05)
+    p.add_argument("--surprise-cleanup-response-weight", type=float, default=0.25)
+    p.add_argument("--surprise-cleanup-explore-scale", type=float, default=0.5)
     p.add_argument("--random-seed", type=int, default=42)
     p.add_argument("--finite-t-band-width", type=float, default=None)
     p.add_argument("--hidden-ground-truth", type=Path, default=None)
     p.add_argument("--start-iteration", type=int, default=0, help="Iteration number used for output paths.")
     p.add_argument("--run-id", type=str, required=True, help="Run identifier")
-    p.add_argument("--iterations", type=int, default=5, help="Number of active-learning iterations")
-    p.add_argument("--points-per-iter", type=int, default=64, help="Selected exact points per iteration")
+    p.add_argument("--iterations", type=int, default=100, help="Number of active-learning iterations")
+    p.add_argument("--points-per-iter", type=int, default=256, help="Selected exact points per iteration")
     p.add_argument("--mode", type=str, default="local", choices=["local", "hpc"], help="Execution mode")
     p.add_argument("--world-size", type=int, default=1, help="Number of H100 ranks/tasks for hpc mode")
     p.add_argument("--partition-strategy", type=str, default="round_robin", help="round_robin|contiguous|cost_aware")
     p.add_argument("--dry-run", action="store_true", help="Select points but skip exact oracle")
     p.add_argument("--device", type=str, default=None, help="Torch device for local exact oracle, e.g. cuda:0")
+    p.add_argument(
+        "--oracle-mode",
+        type=str,
+        default="robust_al",
+        choices=["legacy", "robust_al", "robust_incremental"],
+        help="Exact-oracle mode used for pointwise BdG labels.",
+    )
     p.add_argument("--output-root", type=Path, default=Path("ML_Phase"), help="Output root")
     p.add_argument("--n-ensemble", type=int, default=5, help="Model ensemble size")
     p.add_argument("--reg-epochs", type=int, default=240, help="Regression epochs per ensemble member")
@@ -154,13 +177,23 @@ def _parse_args() -> argparse.Namespace:
 
 
 def _dataset_from_result(dataset: FlatDataset, result: Dict[str, np.ndarray], cfg: ActiveLearningConfig) -> FlatDataset:
-    new_x = np.stack([result["kT"], result["JA"]], axis=1).astype(np.float64)
+    use_mu = ("mu" in result) or int(dataset.x.shape[1]) >= 3
+    if use_mu:
+        mu_vals = result.get("mu", np.full(np.asarray(result["kT"]).shape[0], 0.55, dtype=np.float64))
+        new_x = np.stack([result["kT"], result["JA"], mu_vals], axis=1).astype(np.float64)
+        old_x = dataset.x
+        if old_x.shape[1] == 2:
+            old_mu = dataset.records.get("mu", np.full(old_x.shape[0], 0.55, dtype=np.float64))
+            old_x = np.column_stack([old_x, old_mu]).astype(np.float64)
+    else:
+        new_x = np.stack([result["kT"], result["JA"]], axis=1).astype(np.float64)
+        old_x = dataset.x
     new_y_reg = np.stack(
         [result["delta_opt"], result["q_opt"], result["eta"], result["ic_plus"], result["ic_minus"]],
         axis=1,
     ).astype(np.float64)
 
-    x_all = np.vstack([dataset.x, new_x])
+    x_all = np.vstack([old_x, new_x])
     y_reg_all = np.vstack([dataset.y_reg, new_y_reg])
 
     # Deduplicate by (kT, JA), keep latest entry.
@@ -177,6 +210,7 @@ def _dataset_from_result(dataset: FlatDataset, result: Dict[str, np.ndarray], cf
     records: Dict[str, np.ndarray] = {
         "kT": x_all[:, 0],
         "JA": x_all[:, 1],
+        "mu": x_all[:, 2] if x_all.shape[1] >= 3 else np.full(x_all.shape[0], 0.55, dtype=np.float64),
         "delta_opt": y_reg_all[:, 0],
         "q_opt": y_reg_all[:, 1],
         "eta": y_reg_all[:, 2],
@@ -253,6 +287,34 @@ def _save_dataset(iter_dir: Path, iteration: int, dataset: FlatDataset) -> Tuple
     return npz_path, csv_path
 
 
+def _topology_context_from_dataset(dataset: FlatDataset) -> Dict[str, np.ndarray]:
+    records = dataset.records
+    n = int(dataset.x.shape[0])
+    empty = np.empty((0, 2), dtype=np.float64)
+    if n == 0:
+        return {
+            "trivial_points": empty,
+            "topological_points": empty,
+            "gapless_points": empty,
+            "trusted_topology_points": empty,
+        }
+    topo_enabled = np.asarray(records.get("topology_enabled", np.zeros(n, dtype=np.int8))).astype(bool)
+    topo_trusted = np.asarray(records.get("topology_trusted", np.zeros(n, dtype=np.int8))).astype(bool)
+    topo_label = np.asarray(records.get("topology_label_code", np.full(n, -1, dtype=np.int64))).astype(np.int64)
+    finite_xy = np.all(np.isfinite(dataset.x), axis=1)
+    base = topo_enabled & topo_trusted & finite_xy
+    trivial = base & (topo_label == 0)
+    topological = base & (topo_label == 1)
+    gapless = base & (topo_label == 2)
+    trusted = trivial | topological | gapless
+    return {
+        "trivial_points": dataset.x[trivial],
+        "topological_points": dataset.x[topological],
+        "gapless_points": dataset.x[gapless],
+        "trusted_topology_points": dataset.x[trusted],
+    }
+
+
 def _save_candidate_csv(
     iter_dir: Path,
     grid_points: np.ndarray,
@@ -271,6 +333,12 @@ def _save_candidate_csv(
             "A_numerical": scores.get("A_numerical", np.zeros(grid_points.shape[0], dtype=np.float64)),
             "A_explore": scores.get("A_explore", np.zeros(grid_points.shape[0], dtype=np.float64)),
             "A_response": scores.get("A_response", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "A_spectral": scores.get("A_spectral", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "A_topology": scores.get("A_topology", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "A_topology_pf_margin": scores.get("A_topology_pf_margin", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "A_topology_z2_edge": scores.get("A_topology_z2_edge", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "A_topology_gapless_edge": scores.get("A_topology_gapless_edge", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "A_coverage": scores.get("A_coverage", np.zeros(grid_points.shape[0], dtype=np.float64)),
             "Aselect_initial": scores.get("Aselect_initial", scores["score"]),
             "R_obs": scores.get("R_obs", np.ones(grid_points.shape[0], dtype=np.float64)),
             "active_pool_mask": scores.get("active_pool_mask", np.zeros(grid_points.shape[0], dtype=np.int8)),
@@ -309,11 +377,23 @@ def _save_candidate_csv(
             "q_edge_risk_score": scores["q_edge_risk_score"],
             "E_q_SC": scores["q_edge_risk_score"],
             "q_edge_risk_raw": scores.get("q_edge_risk_raw", np.zeros(grid_points.shape[0], dtype=np.float64)),
+            "surprise_cleanup_qedge_factor": scores.get(
+                "surprise_cleanup_qedge_factor", np.ones(grid_points.shape[0], dtype=np.float64)
+            ),
             "delta_refine_risk_score": scores["delta_refine_risk_score"],
             "extrapolation_risk_score": scores["extrapolation_risk_score"],
             "E_ext_uncertain": scores["extrapolation_risk_score"],
             "extrapolation_raw": scores.get("extrapolation_raw", np.zeros(grid_points.shape[0], dtype=np.float64)),
             "w_ext_current": scores.get("w_ext_current", np.full(grid_points.shape[0], np.nan, dtype=np.float64)),
+            "topology_pfaffian_margin_pred": scores.get("topology_pfaffian_margin_pred", np.full(grid_points.shape[0], np.nan, dtype=np.float64)),
+            "topology_distance_to_trivial": scores.get("topology_distance_to_trivial", np.full(grid_points.shape[0], np.inf, dtype=np.float64)),
+            "topology_distance_to_topological": scores.get("topology_distance_to_topological", np.full(grid_points.shape[0], np.inf, dtype=np.float64)),
+            "topology_distance_to_gapless": scores.get("topology_distance_to_gapless", np.full(grid_points.shape[0], np.inf, dtype=np.float64)),
+            "topology_distance_to_trusted": scores.get("topology_distance_to_trusted", np.full(grid_points.shape[0], np.inf, dtype=np.float64)),
+            "topology_trivial_count": scores.get("topology_trivial_count", np.zeros(grid_points.shape[0], dtype=np.int64)),
+            "topology_topological_count": scores.get("topology_topological_count", np.zeros(grid_points.shape[0], dtype=np.int64)),
+            "topology_gapless_count": scores.get("topology_gapless_count", np.zeros(grid_points.shape[0], dtype=np.int64)),
+            "topology_trusted_count": scores.get("topology_trusted_count", np.zeros(grid_points.shape[0], dtype=np.int64)),
             "interior_penalty": scores.get("interior_penalty", np.ones(grid_points.shape[0], dtype=np.float64)),
             "interior_penalty_applied": scores.get("interior_penalty_applied", np.zeros(grid_points.shape[0], dtype=np.int8)),
             "high_confidence_interior": scores.get("high_confidence_interior", np.zeros(grid_points.shape[0], dtype=np.int8)),
@@ -363,6 +443,12 @@ def _save_monitor_predictions(
         A_numerical=np.asarray(scores.get("A_numerical", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         A_explore=np.asarray(scores.get("A_explore", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         A_response=np.asarray(scores.get("A_response", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        A_spectral=np.asarray(scores.get("A_spectral", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        A_topology=np.asarray(scores.get("A_topology", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        A_topology_pf_margin=np.asarray(scores.get("A_topology_pf_margin", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        A_topology_z2_edge=np.asarray(scores.get("A_topology_z2_edge", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        A_topology_gapless_edge=np.asarray(scores.get("A_topology_gapless_edge", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        A_coverage=np.asarray(scores.get("A_coverage", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         cls_uncertainty_mix=np.asarray(scores.get("cls_uncertainty", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         cls_entropy=np.asarray(scores.get("cls_entropy", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         cls_margin_uncertainty=np.asarray(scores.get("cls_margin_uncertainty", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
@@ -383,8 +469,21 @@ def _save_monitor_predictions(
         B_q_gated=np.asarray(scores.get("B_q_gated", scores.get("q_boundary_score", np.zeros(grid.points.shape[0], dtype=np.float64))), dtype=np.float64),
         gradient_score=np.asarray(scores.get("gradient_score", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         E_q_SC=np.asarray(scores.get("q_edge_risk_score", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
+        surprise_cleanup_qedge_factor=np.asarray(
+            scores.get("surprise_cleanup_qedge_factor", np.ones(grid.points.shape[0], dtype=np.float64)),
+            dtype=np.float64,
+        ),
         E_ext_uncertain=np.asarray(scores.get("extrapolation_risk_score", np.zeros(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         w_ext_current=np.asarray(scores.get("w_ext_current", np.full(grid.points.shape[0], np.nan, dtype=np.float64)), dtype=np.float64),
+        topology_pfaffian_margin_pred=np.asarray(scores.get("topology_pfaffian_margin_pred", np.full(grid.points.shape[0], np.nan, dtype=np.float64)), dtype=np.float64),
+        topology_distance_to_trivial=np.asarray(scores.get("topology_distance_to_trivial", np.full(grid.points.shape[0], np.inf, dtype=np.float64)), dtype=np.float64),
+        topology_distance_to_topological=np.asarray(scores.get("topology_distance_to_topological", np.full(grid.points.shape[0], np.inf, dtype=np.float64)), dtype=np.float64),
+        topology_distance_to_gapless=np.asarray(scores.get("topology_distance_to_gapless", np.full(grid.points.shape[0], np.inf, dtype=np.float64)), dtype=np.float64),
+        topology_distance_to_trusted=np.asarray(scores.get("topology_distance_to_trusted", np.full(grid.points.shape[0], np.inf, dtype=np.float64)), dtype=np.float64),
+        topology_trivial_count=np.asarray(scores.get("topology_trivial_count", np.zeros(grid.points.shape[0], dtype=np.int64)), dtype=np.int64),
+        topology_topological_count=np.asarray(scores.get("topology_topological_count", np.zeros(grid.points.shape[0], dtype=np.int64)), dtype=np.int64),
+        topology_gapless_count=np.asarray(scores.get("topology_gapless_count", np.zeros(grid.points.shape[0], dtype=np.int64)), dtype=np.int64),
+        topology_trusted_count=np.asarray(scores.get("topology_trusted_count", np.zeros(grid.points.shape[0], dtype=np.int64)), dtype=np.int64),
         interior_penalty=np.asarray(scores.get("interior_penalty", np.ones(grid.points.shape[0], dtype=np.float64)), dtype=np.float64),
         interior_penalty_applied=np.asarray(scores.get("interior_penalty_applied", np.zeros(grid.points.shape[0], dtype=np.int8)), dtype=np.int8),
         high_confidence_interior=np.asarray(scores.get("high_confidence_interior", np.zeros(grid.points.shape[0], dtype=np.int8)), dtype=np.int8),
@@ -662,6 +761,49 @@ def _select_random_seed_points(
                 "final_score": np.nan,
                 "selection_score": np.nan,
                 "sampling_probability_before_pick": float(1.0 / max(int(selectable.size) - rank, 1)),
+            }
+        )
+    return selected_points, pd.DataFrame(rows)
+
+
+def _select_sobol_seed_points(
+    cfg: ActiveLearningConfig,
+    iteration: int,
+) -> tuple[np.ndarray, pd.DataFrame]:
+    if str(cfg.candidate_domain_mode) != "full":
+        raise ValueError("sobol_scrambled initialization currently requires candidate_domain_mode='full'.")
+    n_select = max(0, int(cfg.initial_seed_size))
+    seed = int(cfg.random_seed) + int(iteration) * 1000003
+    if n_select == 0:
+        selected_points = np.empty((0, 2), dtype=np.float64)
+    else:
+        engine = torch.quasirandom.SobolEngine(dimension=2, scramble=True, seed=seed)
+        unit = engine.draw(n_select).cpu().numpy().astype(np.float64, copy=False)
+        lo = np.array([float(cfg.kt_min), float(cfg.ja_min)], dtype=np.float64)
+        hi = np.array([float(cfg.kt_max), float(cfg.ja_max)], dtype=np.float64)
+        selected_points = lo + unit * (hi - lo)
+
+    rows: list[dict[str, object]] = []
+    for rank, point in enumerate(selected_points):
+        rows.append(
+            {
+                "selection_rank": int(rank + 1),
+                "selection_source": "sobol_scrambled_seed",
+                "selection_pool": "sobol_scrambled_seed",
+                "boundary_type": "",
+                "grid_index": -1,
+                "kT": float(point[0]),
+                "JA": float(point[1]),
+                "A0_main": np.nan,
+                "A_phase": np.nan,
+                "A_numerical": np.nan,
+                "A_explore": np.nan,
+                "A_response": np.nan,
+                "R_obs": 1.0,
+                "R_batch": 1.0,
+                "final_score": np.nan,
+                "selection_score": np.nan,
+                "sampling_probability_before_pick": np.nan,
             }
         )
     return selected_points, pd.DataFrame(rows)
@@ -1173,8 +1315,8 @@ def _write_random_seed_diagnostics(
     summary = {
         "run_mode": str(cfg.run_mode),
         "candidate_domain_mode": str(cfg.candidate_domain_mode),
-        "selection_policy": "random_initial_seed",
-        "selection_mode": "random_grid",
+        "selection_policy": "initial_seed",
+        "selection_mode": str(cfg.initialization),
         "midpoint_selection": "disabled",
         "finite_t_band_width": None,
         "candidate_pool_total": int(candidate_mask.size),
@@ -1218,7 +1360,7 @@ def _write_hpc_selection_artifacts(
     print(f"HPC mode: wrote {len(shard_paths)} point-shard files.")
     print(f"Iteration artifacts: {iter_dir}")
     if args.submit:
-        _maybe_submit_slurm(args.slurm_script, args.run_id, iteration)
+        _maybe_submit_slurm(args.slurm_script, args.run_id, iteration, args.oracle_mode)
 
 
 def _evaluate_on_validation(bundle: ModelBundle, dataset: FlatDataset, n_exact_calls: int, cfg: ActiveLearningConfig) -> dict:
@@ -1235,11 +1377,12 @@ def _evaluate_on_validation(bundle: ModelBundle, dataset: FlatDataset, n_exact_c
     return metrics.to_dict()
 
 
-def _maybe_submit_slurm(script: Path, run_id: str, iteration: int) -> None:
+def _maybe_submit_slurm(script: Path, run_id: str, iteration: int, oracle_mode: str) -> None:
     cmd = ["sbatch", str(script)]
     env = os.environ.copy()
     env["RUN_ID"] = run_id
     env["ITER"] = str(iteration)
+    env["ORACLE_MODE"] = str(oracle_mode)
     print("Submitting SLURM array job:")
     print(" ".join(cmd))
     subprocess.run(cmd, check=True, env=env)
@@ -1276,6 +1419,7 @@ def run_active_refinement(args: argparse.Namespace) -> None:
         sampling_power_schedule=args.sampling_power_schedule,
         score_threshold_abs=args.score_threshold_abs,
         score_threshold_rel=args.score_threshold_rel,
+        acquisition_profile=args.acquisition_profile,
         active_pool_rule=args.active_pool_rule,
         active_pool_quantile=args.active_pool_quantile,
         active_pool_quantile_schedule=args.active_pool_quantile_schedule,
@@ -1309,6 +1453,21 @@ def run_active_refinement(args: argparse.Namespace) -> None:
         w_ext_end=args.w_ext_end,
         w_ext_mid_iter=args.w_ext_mid_iter,
         w_ext_end_iter=args.w_ext_end_iter,
+        w_cls_simple=args.w_cls_simple,
+        w_ns_simple=args.w_ns_simple,
+        w_uf_simple=args.w_uf_simple,
+        w_grad_simple=args.w_grad_simple,
+        w_reg_simple=args.w_reg_simple,
+        w_ext_simple_schedule=args.w_ext_simple_schedule,
+        w_ext_simple_start=args.w_ext_simple_start,
+        w_ext_simple_mid=args.w_ext_simple_mid,
+        w_ext_simple_end=args.w_ext_simple_end,
+        w_ext_simple_mid_iter=args.w_ext_simple_mid_iter,
+        w_ext_simple_end_iter=args.w_ext_simple_end_iter,
+        surprise_cleanup_qedge_penalty=args.surprise_cleanup_qedge_penalty,
+        surprise_cleanup_qedge_floor=args.surprise_cleanup_qedge_floor,
+        surprise_cleanup_response_weight=args.surprise_cleanup_response_weight,
+        surprise_cleanup_explore_scale=args.surprise_cleanup_explore_scale,
         random_seed=args.random_seed,
         finite_t_band_width=args.finite_t_band_width,
         hidden_ground_truth=str(args.hidden_ground_truth or ""),
@@ -1316,6 +1475,7 @@ def run_active_refinement(args: argparse.Namespace) -> None:
         points_per_iter=args.points_per_iter,
         dry_run=bool(args.dry_run),
         mode=args.mode,
+        oracle_mode=args.oracle_mode,
         world_size=args.world_size,
         partition_strategy=args.partition_strategy,
         enable_early_stop=not bool(args.disable_early_stop),
@@ -1390,12 +1550,15 @@ def run_active_refinement(args: argparse.Namespace) -> None:
         )
         if is_discovery_seed:
             grid = build_candidate_grid(cfg)
-            selected_points, selected_meta = _select_random_seed_points(
-                cfg=cfg,
-                grid_points=grid.points,
-                candidate_mask=grid.candidate_mask,
-                iteration=iteration,
-            )
+            if str(cfg.initialization) == "sobol_scrambled":
+                selected_points, selected_meta = _select_sobol_seed_points(cfg=cfg, iteration=iteration)
+            else:
+                selected_points, selected_meta = _select_random_seed_points(
+                    cfg=cfg,
+                    grid_points=grid.points,
+                    candidate_mask=grid.candidate_mask,
+                    iteration=iteration,
+                )
             pd.DataFrame(selected_points, columns=["kT", "JA"]).to_csv(iter_dir / "selected_points.csv", index=False)
             _write_selected_by_pool(iter_dir, selected_meta.to_dict("records") if not selected_meta.empty else [])
             _write_boundary_candidate_csv(iter_dir)
@@ -1412,7 +1575,7 @@ def run_active_refinement(args: argparse.Namespace) -> None:
                 break
 
             if args.dry_run:
-                print(f"Dry-run discovery seed iteration {iteration}: selected {len(selected_points)} random points.")
+                print(f"Dry-run discovery seed iteration {iteration}: selected {len(selected_points)} initial-seed points.")
                 _save_dataset(iter_dir, iteration, dataset)
                 continue
 
@@ -1424,6 +1587,8 @@ def run_active_refinement(args: argparse.Namespace) -> None:
                 save_every=1,
                 enable_q_expansion=True,
                 enable_delta_refinement=True,
+                oracle_mode=str(args.oracle_mode),
+                branch_dir=iter_dir / "branch_candidates",
             )
             result = oracle.to_dict()
             np.savez(iter_dir / "exact_local_iter.npz", **result)
@@ -1460,7 +1625,15 @@ def run_active_refinement(args: argparse.Namespace) -> None:
         bundle = train_models(dataset.x, dataset.y_reg, dataset.y_phase, cfg)
         grid = build_candidate_grid(cfg)
         pred_grid = predict_models(bundle, grid.points)
-        score_pack = compute_acquisition_scores(cfg, grid, pred_grid, existing_points=dataset.x, iteration=iteration)
+        topology_context = _topology_context_from_dataset(dataset)
+        score_pack = compute_acquisition_scores(
+            cfg,
+            grid,
+            pred_grid,
+            existing_points=dataset.x,
+            iteration=iteration,
+            topology_context=topology_context,
+        )
         boundary_band_points = _load_boundary_band_points(run_dir, cfg)
         score_pack = _apply_candidate_exclusions(
             cfg=cfg,
@@ -1512,6 +1685,12 @@ def run_active_refinement(args: argparse.Namespace) -> None:
 
         # diagnostics and learning-curve metrics against current exact data
         current_metrics = _evaluate_on_validation(bundle, dataset, n_exact_calls=n_exact_calls, cfg=cfg)
+        current_metrics["topology_context"] = {
+            "trivial_count": int(topology_context["trivial_points"].shape[0]),
+            "topological_count": int(topology_context["topological_points"].shape[0]),
+            "gapless_count": int(topology_context["gapless_points"].shape[0]),
+            "trusted_topology_count": int(topology_context["trusted_topology_points"].shape[0]),
+        }
         metrics_history.append(current_metrics)
         fig_paths = write_iteration_figures(
             figures_dir=cfg.figures_dir,
@@ -1549,6 +1728,8 @@ def run_active_refinement(args: argparse.Namespace) -> None:
             save_every=1,
             enable_q_expansion=True,
             enable_delta_refinement=True,
+            oracle_mode=str(args.oracle_mode),
+            branch_dir=iter_dir / "branch_candidates",
         )
         result = oracle.to_dict()
         np.savez(iter_dir / "exact_local_iter.npz", **result)

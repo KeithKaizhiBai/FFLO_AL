@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_CITED_INTRODUCTION_MANUSCRIPT_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "decision": "pending_human_review",
+  "candidate_pdf": "output/pdf/manuscript_prl_integrated_cited_v1/manuscript_prl_integrated_cited_candidate.pdf",
+  "candidate_sha256": "31e00ef238302a8645ae4e3b9e166ae3f4e90ca21e504d81c399772a6b73cc84",
+  "retrieval_approved": true,
+  "retrieval_executed": true,
+  "citation_audit": "PASS",
+  "scientific_freeze": false,
+  "publication_freeze": false,
+  "frozen_results_modified": false,
+  "frozen_figures_modified": false,
+  "physics_recomputed": false
+}

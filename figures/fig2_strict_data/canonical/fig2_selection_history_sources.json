@@ -1,0 +1,492 @@
+[
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter000/selected_points.csv",
+    "sha256": "eb68f3a2f5a6ddc43a063840097e6eaf51036c2ac136f31cbae0312eeb06a4f0",
+    "version": "selection_iter000",
+    "row_count": 512,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter001/selected_points.csv",
+    "sha256": "47dafdde1ba9b012d74c4726c47dea0477698fa440ba0ce63856de7c3cc8af97",
+    "version": "selection_iter001",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter002/selected_points.csv",
+    "sha256": "fe9e57005ef25ef0c852cc7387e27a0cdf36718af18b7044661d115ba39d68e8",
+    "version": "selection_iter002",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter003/selected_points.csv",
+    "sha256": "cd1a74d5550715b25fa22135f430cba7817f1168e1b02effe7c59a78adfe7ff5",
+    "version": "selection_iter003",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter004/selected_points.csv",
+    "sha256": "7a360de461c339ba1a675c84d9246285b51ada4b05363f6c955ee5be5ecff4d6",
+    "version": "selection_iter004",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter005/selected_points.csv",
+    "sha256": "d700a5889e4c56e983158006d4f021abbcb2577c297b57055eee728bedea6834",
+    "version": "selection_iter005",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter006/selected_points.csv",
+    "sha256": "330e1c0103f84cb063b76374cbe780ccdd83ab94e2d24a8d61a12d412d46297a",
+    "version": "selection_iter006",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter007/selected_points.csv",
+    "sha256": "78746248c9efd0171b5147703b7e0be339b677c7feb115c7f5729028f7105635",
+    "version": "selection_iter007",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter008/selected_points.csv",
+    "sha256": "9d7136fee1764cfe700ea82b278971170522d8cc13d48cd421310ac189e79e5a",
+    "version": "selection_iter008",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter009/selected_points.csv",
+    "sha256": "2ccc44152f8e4dc1e206c49d50881cf5b9432ea0404f0b002aad733652c91a9a",
+    "version": "selection_iter009",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter010/selected_points.csv",
+    "sha256": "2f79ea80bbba6d90fc57f61557ffc1c9ca42075e97edb25a68653cb77188fba7",
+    "version": "selection_iter010",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter011/selected_points.csv",
+    "sha256": "95be3dc35f83163fd4027b1e97004e3a2c0c3eac1c6de3f774d9a89fdb491ff5",
+    "version": "selection_iter011",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter012/selected_points.csv",
+    "sha256": "0d7f13e4840368282a4f2efb7348a36d93fee9e7bfe4633a8a48835f9cc9c563",
+    "version": "selection_iter012",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter013/selected_points.csv",
+    "sha256": "146d7faa4d2aa4d65c6b4eaeacba11ad8ef1ab4cc6f588f5715281f3acd841d0",
+    "version": "selection_iter013",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter014/selected_points.csv",
+    "sha256": "dd1fc779d97a060e9ec8896adb68f16e0acfb2efca156b65e5ef1587a05d3864",
+    "version": "selection_iter014",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter015/selected_points.csv",
+    "sha256": "5a8c793f3091b5a3879a742d82f30f9911b61b8ddfd87ad696ba7c40863ec16e",
+    "version": "selection_iter015",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter016/selected_points.csv",
+    "sha256": "fb2fcfa505e97dca53d56951c80ac5b22e6151c3adc00fcbc1ce126056320ac2",
+    "version": "selection_iter016",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter017/selected_points.csv",
+    "sha256": "ebe8f3b897d954f0f56432ed51a249c0acb2305c8b0d0ff904355396df7773be",
+    "version": "selection_iter017",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter018/selected_points.csv",
+    "sha256": "816a2517b4a343b9dd944b8ad402a32420f81c7376b20e9443bd84551124f8af",
+    "version": "selection_iter018",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter019/selected_points.csv",
+    "sha256": "e7c17383329c42ee7aad35ca766643f3b1ea4926869c86c71ae1e44de0fdf17f",
+    "version": "selection_iter019",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter020/selected_points.csv",
+    "sha256": "38a3649a60be872db4c56b0992b5aad806320b052665f1db2cb66928c03a5c5e",
+    "version": "selection_iter020",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter021/selected_points.csv",
+    "sha256": "4967c3c81074565a819dcdcf337a16646e28fa8765006c97dc6b8af1c2847c2b",
+    "version": "selection_iter021",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter022/selected_points.csv",
+    "sha256": "df5119b2a65a698d9e51a34379f33c54635c4aab49d0dee76aaa7fd0c5a7de3b",
+    "version": "selection_iter022",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter023/selected_points.csv",
+    "sha256": "1470328249c73d4978936a28c3eb1b573682043a8fb2907811c2aeb2c4188f88",
+    "version": "selection_iter023",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter024/selected_points.csv",
+    "sha256": "4e964c41ea4f5a8b3bebfcada62d53d569a7ce074d2bf11b0f7382757be36a3a",
+    "version": "selection_iter024",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter025/selected_points.csv",
+    "sha256": "ac2e61d07bfcd8e888601e12ac922e047972aee7a5c6780cba2a5aae459c1fd3",
+    "version": "selection_iter025",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter026/selected_points.csv",
+    "sha256": "625192e296f4ae39cbad0bb66c928c36c32e24a91b70f3c826673c7e600d6c69",
+    "version": "selection_iter026",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter027/selected_points.csv",
+    "sha256": "50c639cbeee6d3c8b6d1356f3f10389cd94ef116c25f09d9fe224fcf84314864",
+    "version": "selection_iter027",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter028/selected_points.csv",
+    "sha256": "d38c131b443fb5dcb15e52f7567faf933d5e43a3db34e40df9f5255f76ccff9d",
+    "version": "selection_iter028",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter029/selected_points.csv",
+    "sha256": "52338307111db5699b31817375d47f372f4fd8c844a5448403644db61fd47a8a",
+    "version": "selection_iter029",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/data_archive/stage_i/active_boundary_discovery_rankcap_k3_full_loop_v1/selection_history/iter030/selected_points.csv",
+    "sha256": "22c1251450f59b30e3df443c999e21d09754c33d17f09415f4303dd0322bcae2",
+    "version": "selection_iter030",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/selection_history/iter031/selected_points.csv",
+    "sha256": "1dbb903c50c6a76ad22742eee7d996105e863e2c546a4dd67ce0bec70e0dd0c4",
+    "version": "selection_iter031",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/selection_history/iter032/selected_points.csv",
+    "sha256": "197cceb32886efa993f01368634aea188560f0153cb1868007bac2650a063dd9",
+    "version": "selection_iter032",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/selection_history/iter033/selected_points.csv",
+    "sha256": "bdb6d15325412b716808b54756167a2dd492effebc3cdbece0a8a7f5aedc1a8b",
+    "version": "selection_iter033",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  },
+  {
+    "path": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageII/run_bundle/selection_history/iter034/selected_points.csv",
+    "sha256": "e53a6e3b06d7c63408a57e1ce66f5bd67898ee604ee6bcf87fb5567bf126d6c9",
+    "version": "selection_iter034",
+    "row_count": 256,
+    "fields": [
+      "kT",
+      "JA"
+    ],
+    "units": {
+      "kT": "kBT/t",
+      "JA": "JA/t"
+    }
+  }
+]

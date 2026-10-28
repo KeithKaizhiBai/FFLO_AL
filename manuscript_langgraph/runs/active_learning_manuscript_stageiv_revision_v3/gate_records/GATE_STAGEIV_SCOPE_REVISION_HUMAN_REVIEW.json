@@ -1,0 +1,11 @@
+{
+  "gate_id": "GATE_STAGEIV_SCOPE_REVISION_HUMAN_REVIEW",
+  "status": "HUMAN_WAIT",
+  "items": [
+    "Figure 4 v2",
+    "Stage-IV SM diagnostics",
+    "main-text wording",
+    "Supplement wording"
+  ],
+  "automatic_approval": false
+}

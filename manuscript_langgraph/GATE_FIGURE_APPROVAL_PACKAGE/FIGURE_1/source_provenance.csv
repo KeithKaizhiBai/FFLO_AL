@@ -1,0 +1,4 @@
+artifact_id,path,role,sha256
+E-MODEL-SPEC,MODEL_SPEC.md,Hamiltonian and thermodynamic definitions,44227726342db9658bef6d885296dfa371ead4240d209be59832d391a8fd6359
+E-NUMERICS-SPEC,docs/NUMERICS_SPEC.md,reliability and numerical semantics,0593dbfe91b4eb76deee5cf62bbb6d356d808d44288a4b0845a708995a22606a
+E-STAGEIII-PASS,docs/report_qa/20260620_stageiii_topology_pass_dataset_iter035.md,Pfaffian and spectral hierarchy,9364d32e8d2dd59e26225aa716b04be27cab66b23b23779a437a7d31d4929716

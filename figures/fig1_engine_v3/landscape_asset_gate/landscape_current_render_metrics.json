@@ -1,0 +1,240 @@
+{
+  "candidate_id": "current_v3",
+  "projected_surface_aspect_ratio": 2.076923076923077,
+  "projected_surface_height_width_ratio": 0.48148148148148145,
+  "foreground_fill_fraction": 0.20025341322787837,
+  "internal_whitespace_fraction": 0.7997465867721216,
+  "dominant_minima_projected_triangle_fraction": 0.026717158803651886,
+  "vertical_relief_fraction": 0.146,
+  "labels": [
+    {
+      "id": "normal",
+      "bbox": {
+        "x": 422.08450321911425,
+        "y": 308.0211108744634,
+        "width": 84.5,
+        "height": 42
+      },
+      "marker": [
+        500.33450321911425,
+        286.0211108744634
+      ],
+      "leader_length_px": 39.81205847478876
+    },
+    {
+      "id": "uniform",
+      "bbox": {
+        "x": 654.0118460959009,
+        "y": 378.09049149148404,
+        "width": 134.75,
+        "height": 42
+      },
+      "marker": [
+        723.3868460959009,
+        350.09049149148404
+      ],
+      "leader_length_px": 23.08679276123039
+    },
+    {
+      "id": "cfflo",
+      "bbox": {
+        "x": 840.947522635721,
+        "y": 339.6614316411015,
+        "width": 77.5,
+        "height": 24
+      },
+      "marker": [
+        921.697522635721,
+        373.6614316411015
+      ],
+      "leader_length_px": 42.2965719651132
+    },
+    {
+      "id": "tfflo",
+      "bbox": {
+        "x": 1031.386394121138,
+        "y": 353.3885787662499,
+        "width": 72.0,
+        "height": 24
+      },
+      "marker": [
+        1025.386394121138,
+        387.3885787662499
+      ],
+      "leader_length_px": 42.2965719651132
+    }
+  ],
+  "nonuniform_transform": false,
+  "delta_axis_projected_length_fraction": 0.31,
+  "q_axis_projected_length_fraction": 0.1,
+  "projected_axis_angle_deg": 21.0,
+  "prohibited_text_found": [],
+  "camera": {
+    "elevation_deg": 30,
+    "azimuth_deg": -55,
+    "projection": "perspective_default",
+    "box_aspect": [
+      5.0,
+      1.0,
+      0.46
+    ]
+  },
+  "lighting": {
+    "azimuth_deg": 310,
+    "altitude_deg": 42,
+    "hillshade_vertical_exaggeration": 1.12
+  },
+  "surface_png_px": [
+    567,
+    273
+  ],
+  "surface_alpha_foreground_inside_tight_bbox": 0.2797061844680892,
+  "asset_bbox": {
+    "x": 385,
+    "y": 208,
+    "width": 805,
+    "height": 300,
+    "parent": "central",
+    "scientific_content_bbox": {
+      "x": 455,
+      "y": 228,
+      "width": 665,
+      "height": 260
+    }
+  },
+  "actual_colored_surface_bbox": {
+    "x": 455,
+    "y": 228,
+    "width": 665,
+    "height": 260
+  },
+  "minima_coordinates": {
+    "normal": [
+      0.0,
+      0.0
+    ],
+    "uniform": [
+      0.43,
+      0.0
+    ],
+    "cfflo": [
+      0.76,
+      0.38
+    ],
+    "tfflo": [
+      0.92,
+      0.66
+    ]
+  },
+  "marker_coordinates_master_px": {
+    "normal": [
+      500.33450321911425,
+      286.0211108744634
+    ],
+    "uniform": [
+      723.3868460959009,
+      350.09049149148404
+    ],
+    "cfflo": [
+      921.697522635721,
+      373.6614316411015
+    ],
+    "tfflo": [
+      1025.386394121138,
+      387.3885787662499
+    ]
+  },
+  "label_coordinates_master_px": {
+    "normal": {
+      "x": 422.08450321911425,
+      "y": 308.0211108744634,
+      "width": 84.5,
+      "height": 42,
+      "anchor": [
+        464.33450321911425,
+        308.0211108744634
+      ],
+      "marker": [
+        500.33450321911425,
+        286.0211108744634
+      ]
+    },
+    "uniform": {
+      "x": 654.0118460959009,
+      "y": 378.09049149148404,
+      "width": 134.75,
+      "height": 42,
+      "anchor": [
+        721.3868460959009,
+        378.09049149148404
+      ],
+      "marker": [
+        723.3868460959009,
+        350.09049149148404
+      ]
+    },
+    "cfflo": {
+      "x": 840.947522635721,
+      "y": 339.6614316411015,
+      "width": 77.5,
+      "height": 24,
+      "anchor": [
+        879.697522635721,
+        339.6614316411015
+      ],
+      "marker": [
+        921.697522635721,
+        373.6614316411015
+      ]
+    },
+    "tfflo": {
+      "x": 1031.386394121138,
+      "y": 353.3885787662499,
+      "width": 72.0,
+      "height": 24,
+      "anchor": [
+        1067.386394121138,
+        353.3885787662499
+      ],
+      "marker": [
+        1025.386394121138,
+        387.3885787662499
+      ]
+    }
+  },
+  "metric_note": "Current vertical relief and axis visibility are deterministic projection diagnostics reconstructed from the recorded generator parameters; no exact physics was run.",
+  "validation": {
+    "candidate_id": "current_v3",
+    "status": "fail",
+    "hard_checks": {
+      "projected_surface_aspect_ratio": true,
+      "projected_surface_height_width_ratio": true,
+      "foreground_fill_fraction": false,
+      "internal_whitespace_fraction": false,
+      "dominant_minima_projected_triangle_fraction": false,
+      "vertical_relief_fraction": false,
+      "phase_labels_do_not_overlap": true,
+      "phase_labels_remain_local": true,
+      "leader_hard_maximum": true,
+      "no_nonuniform_transform": true,
+      "both_parameter_directions_visible": false,
+      "prohibited_text_absent": true
+    },
+    "hard_failures": [
+      "foreground_fill_fraction",
+      "internal_whitespace_fraction",
+      "dominant_minima_projected_triangle_fraction",
+      "vertical_relief_fraction",
+      "both_parameter_directions_visible"
+    ],
+    "warnings": [
+      "aspect_in_preferred_range",
+      "fill_preferred",
+      "whitespace_preferred",
+      "vertical_relief_preferred"
+    ],
+    "label_overlap_pairs": [],
+    "longest_leader_px": 42.2965719651132,
+    "human_review_required": true
+  }
+}

@@ -1,0 +1,316 @@
+schema_version: 1
+rule_set: visual_narrative_rules
+authority: canonical
+
+integration:
+  status: active
+  approved_gate: GATE_VISUAL_NARRATIVE_INTEGRATION
+  activated_on: 2026-08-25
+  backward_compatibility: >-
+    Schema-v1 contracts remain valid unless visual_narrative.enabled is true.
+    Schema-v2 contracts always require the narrative fields.
+  may_not_override:
+    - scientific_figure_principles
+    - physical_definitions
+    - numerical_definitions
+    - typography_rules
+    - layout_rules
+    - spacing_rules
+    - color_rules
+    - asset_rules
+    - validation_rules
+
+mission:
+  statement: >-
+    Convert a scientific claim into a controlled visual argument whose reading
+    order moves from physical object, to physical evidence, to computational
+    instrument.
+  pipeline:
+    - scientific_meaning
+    - visual_narrative
+    - layout_and_assets
+    - generation
+    - validation
+  governing_question: does_the_figure_tell_the_scientific_story_in_the_intended_order
+
+argument_model:
+  default_sequence:
+    - physical_system_or_state_space
+    - discovered_physical_state_or_structure
+    - supporting_scientific_evidence
+    - computational_method
+  ai_for_science_priority: physical_object_greater_than_machine_learning_workflow
+  forbidden_sequences:
+    - algorithm_before_physical_question
+    - machine_learning_as_physics_solver
+    - workflow_as_primary_scientific_result
+
+contract_extension_proposal:
+  required_when_activated:
+    - visual_message
+    - primary_visual_object
+    - reading_order
+    - secondary_visual_objects
+    - tertiary_visual_objects
+    - saliency_expectation
+    - forbidden_visual_priorities
+  field_shapes:
+    visual_message: nonempty_string
+    primary_visual_object:
+      required: [id, scientific_role, expected_rank]
+      expected_rank: 1
+    reading_order:
+      type: ordered_unique_object_id_list
+      minimum_items: 2
+    secondary_visual_objects:
+      type: object_id_list
+    tertiary_visual_objects:
+      type: object_id_list
+    saliency_expectation:
+      required: [method, expected_ranking, severity]
+    forbidden_visual_priorities:
+      type: nonempty_string_list
+
+visual_hierarchy:
+  roles: [primary, secondary, tertiary]
+  primary:
+    requirements:
+      - exists_in_contract_assets_and_geometry
+      - largest_declared_scientific_visual_mass
+      - expected_first_fixation
+      - strongest_scientifically_relevant_contrast
+      - detail_density_not_below_tertiary_median
+    area:
+      source: existing_layout_or_contract_threshold
+      no_new_global_fraction: true
+    hard_fail_when_activated:
+      - missing_primary_visual_object
+      - primary_object_missing_from_geometry
+      - primary_area_below_existing_contract_threshold
+  secondary:
+    requirements:
+      - supports_primary_without_replacing_it
+      - expected_after_primary
+      - may_have_high_local_detail_when_scientifically_required
+  tertiary:
+    requirements:
+      - visually_subordinate_to_primary
+      - lower_background_contrast_when_card_based
+      - lower_or_equal_text_density_than_secondary
+    forbidden:
+      - workflow_component_dominates_physical_result
+      - multiple_equal_weight_dashboard_cards
+
+reading_order:
+  declaration_required_when_activated: true
+  object_ids_must_resolve: true
+  first_item_must_equal_primary_visual_object: true
+  duplicate_items_forbidden: true
+  expected_order_is_directional: true
+  evaluation:
+    hard_fail:
+      - missing_or_unresolved_primary
+      - declared_first_item_is_not_primary
+      - workflow_declared_before_physical_object
+    warning:
+      - observed_saliency_rank_differs_from_expected
+      - secondary_object_competes_with_primary
+      - tertiary_object_precedes_secondary_physical_evidence
+    human_review:
+      - actual_eye_movement_matches_declared_argument
+      - scientific_transition_is_intuitive_without_caption
+
+saliency:
+  purpose: reproducible_proxy_not_artistic_judgment
+  optional_artifacts:
+    - saliency_preview.png
+    - saliency_audit.json
+    - visual_narrative_report.md
+  preprocessing:
+    input: final_print_render
+    normalize_canvas_width_px: 1600
+    convert_to: grayscale_luminance
+    gaussian_blur_sigma_fraction_of_canvas_width: 0.00375
+    background_estimator: median_outer_border_luminance
+  region_source:
+    required: declared_narrative_regions_in_geometry_manifest
+    no_implicit_whole_card_substitution_for_scientific_subobject: true
+  metrics:
+    area_fraction: region_area_divided_by_declared_reference_area
+    integrated_visual_mass: sum_absolute_luminance_difference_from_background_after_blur
+    mean_contrast: integrated_visual_mass_divided_by_region_area
+    detail_density: mean_absolute_difference_between_unblurred_and_blurred_region
+  ranking:
+    primary_metric: integrated_visual_mass
+    tie_breaker: mean_contrast
+    report_top_n: 3
+    expected_primary_rank: 1
+  severity:
+    missing_primary_region: hard_fail
+    primary_below_existing_area_threshold: hard_fail
+    unexpected_saliency_rank: warning
+    primary_mean_contrast_below_tertiary_median: warning
+    four_or_more_equal_weight_cards: warning
+    perceptual_first_fixation: human_review
+  equal_weight_proxy:
+    comparable_mass_ratio_interval: [0.80, 1.25]
+    minimum_competing_regions_for_warning: 4
+  reporting:
+    required_fields:
+      - expected_ranking
+      - observed_ranking
+      - integrated_visual_mass_by_region
+      - mean_contrast_by_region
+      - warnings
+      - human_review_required
+
+physical_first:
+  reader_questions:
+    - what_physical_system_is_explored
+    - what_physical_state_or_structure_is_discovered
+    - how_the_computational_method_helps
+  required_priority: physical_result_before_computational_procedure
+  workflow_must_not:
+    - replace_exact_solver
+    - become_largest_scientific_object
+    - use_higher_contrast_than_primary_without_declared_reason
+  hard_fail_when_activated:
+    - workflow_replaces_physical_object_in_contract
+    - prohibited_visual_claim_present
+  warning:
+    - aggregate_workflow_visual_mass_exceeds_physical_evidence
+
+thermodynamic_landscape:
+  scientific_role: physical_terrain_of_representative_free_energy_minima
+  required:
+    - basin_structure
+    - visible_minima
+    - relative_depth_cues
+    - physical_phase_labels
+    - minimal_readable_axes
+  narrative_requirement: different_physical_phases_correspond_to_different_representative_minima
+  forbidden:
+    - plot_as_icon
+    - tiny_contour_map
+    - decorative_wireframe
+    - excessive_axes
+    - all_minima_implied_at_one_parameter_point
+    - topology_inferred_from_free_energy_depth
+  warning:
+    - landscape_region_rank_below_secondary_physical_layer
+    - colored_surface_occupies_minor_fraction_of_declared_landscape_bbox
+    - labels_obscure_basin_structure
+  human_review:
+    - surface_reads_as_physical_terrain
+    - basin_identity_is_immediate_at_print_size
+
+phase_annotations:
+  visual_language: map_labels
+  preferred_components:
+    - local_minimum_marker
+    - short_phase_label
+    - short_local_leader
+  constraints:
+    reuse_annotation_length_rule: true
+    label_must_remain_local_to_associated_basin: true
+    phase_definition_must_match_model_spec: true
+  avoid:
+    - detached_text_box
+    - long_arrow
+    - repeated_definition_text
+    - annotation_density_that_hides_surface
+
+topology_hierarchy:
+  narrative_sequence:
+    - thermodynamic_fflo_branch
+    - trusted_gap_and_pfaffian_audit
+    - cfflo_or_tfflo_classification
+  required_semantics:
+    cfflo: gapped_bulk_nu_0
+    transition: isolated_bulk_gap_closing
+    tfflo: reopened_gapped_bulk_nu_1
+    boundary_state: visually_separate_from_bulk
+  forbidden:
+    - free_energy_alone_determines_topology
+    - transition_merged_with_final_tfflo_phase
+    - boundary_state_drawn_as_gapless_bulk
+
+workflow_visualization:
+  narrative_role: exploration_orbit_around_physics
+  prefer:
+    - smooth_outer_loop
+    - organic_information_flow
+    - tapered_ribbons
+    - semantic_color_transitions
+  avoid:
+    - software_flowchart
+    - isolated_equal_weight_cards
+    - thick_ui_borders
+    - dashboard_appearance
+  preserve:
+    - exact_computation_semantics
+    - physical_information_semantics
+    - learning_semantics
+    - decision_semantics
+    - selected_call_semantics
+  warning:
+    - workflow_ranked_above_secondary_physical_evidence
+    - outer_loop_contrast_competes_with_primary
+
+card_philosophy:
+  statement: cards_are_containers_not_independent_visual_objects
+  hierarchy:
+    primary_cards: strongest_structural_presence
+    secondary_cards: moderate_structural_presence
+    tertiary_cards: light_background_low_border_contrast_low_text_density
+  forbidden:
+    - equal_border_weight_for_all_roles
+    - equal_title_weight_for_all_roles
+    - card_grid_as_default_composition
+
+aesthetic_principles:
+  color:
+    add_new_semantic_colors: false
+    improve_with: [depth, hierarchy, base_highlight_tint]
+  whitespace:
+    goal: compactness_with_breathing_room
+    avoid: [touching_boxes, unassigned_large_empty_region, density_maximization]
+  simplicity:
+    rule: remove_explanation_before_shrinking_text
+    forbidden: figure_as_poster
+  material_feeling:
+    prefer: smooth_physical_depth
+    avoid: [metallic_gloss, arbitrary_rainbow, decorative_texture]
+
+figure_1_reference:
+  intended_reading_order:
+    - thermodynamic_landscape
+    - topology_resolution
+    - exact_bdg_oracle_and_reliability
+    - active_learning_cycle
+  primary_visual_object: thermodynamic_landscape
+  secondary_visual_objects: [topology_resolution]
+  tertiary_visual_objects:
+    - exact_bdg_oracle
+    - physical_observation
+    - reliability
+    - surrogate
+    - acquisition
+    - next_exact_calls
+    - parameter_space
+  forbidden_visual_priorities:
+    - workflow_before_physics
+    - topology_before_thermodynamic_landscape
+    - machine_learning_card_as_first_fixation
+  scientific_asset_fill_ratio:
+    asset_id: thermodynamic_landscape
+    content_kind: rendered_free_energy_surface
+    minimum: 0.65
+    severity: hard_fail
+
+governance:
+  automated_pass_is_not_human_approval: true
+  narrative_warning_does_not_invalidate_scientific_data: true
+  visual_proxy_must_not_be_used_as_physics_criterion: true
+  rule_change_requires_separate_justification: true
+  figure_specific_audit_may_tighten_but_not_weaken_canonical_rules: true

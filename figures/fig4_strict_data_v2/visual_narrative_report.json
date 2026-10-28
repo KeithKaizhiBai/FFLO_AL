@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "status": "pass",
+  "hard_failure_count": 0,
+  "warning_count": 0,
+  "human_review_count": 1,
+  "primary_visual_object": "exact_3d_thermodynamic_cloud",
+  "reading_order": [
+    "exact_3d_thermodynamic_cloud",
+    "exact_3d_topology_support",
+    "fixed_mu_slice_audit"
+  ],
+  "saliency": {
+    "method": "Gaussian-blurred grayscale distance from median outer-border luminance",
+    "gaussian_sigma_px": 7.882499999999999,
+    "background_luminance": 255.0,
+    "image_size_px": [
+      2102,
+      1417
+    ],
+    "regions": {
+      "exact_3d_thermodynamic_cloud": {
+        "integrated_visual_mass": 31072031.0,
+        "mean_contrast": 22.3207388996243,
+        "detail_density": 15.38541739998707,
+        "sample_count": 1392070
+      },
+      "exact_3d_topology_support": {
+        "integrated_visual_mass": 6496730.0,
+        "mean_contrast": 26.447099531854263,
+        "detail_density": 14.317602279666191,
+        "sample_count": 245650
+      },
+      "fixed_mu_slice_audit": {
+        "integrated_visual_mass": 6417035.0,
+        "mean_contrast": 19.141614962414987,
+        "detail_density": 22.687498508531203,
+        "sample_count": 335240
+      }
+    },
+    "ranking": [
+      "exact_3d_thermodynamic_cloud",
+      "exact_3d_topology_support",
+      "fixed_mu_slice_audit"
+    ]
+  },
+  "checks": [
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_scientific_subobject",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary visual object resolves to a registered scientific subobject, never its parent card.",
+      "evidence": {
+        "primary_visual_object": "exact_3d_thermodynamic_cloud",
+        "resolved_object": {
+          "id": "exact_3d_thermodynamic_cloud",
+          "type": "plot",
+          "role": "primary",
+          "parent": "canvas",
+          "visual_weight_object": true,
+          "bbox": {
+            "x": 70,
+            "y": 140,
+            "width": 990,
+            "height": 830
+          }
+        }
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_primary_area",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The primary scientific subobject satisfies its explicit contract area requirement.",
+      "evidence": [
+        {
+          "reference": "canvas",
+          "actual": 0.466875,
+          "minimum": 0.45,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_reading_order",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "The declared reading order begins with the primary scientific subobject and all narrative regions resolve.",
+      "evidence": {
+        "reading_order": [
+          "exact_3d_thermodynamic_cloud",
+          "exact_3d_topology_support",
+          "fixed_mu_slice_audit"
+        ],
+        "region_members": {
+          "exact_3d_thermodynamic_cloud": [
+            "exact_3d_thermodynamic_cloud"
+          ],
+          "exact_3d_topology_support": [
+            "exact_3d_topology_support"
+          ],
+          "fixed_mu_slice_audit": [
+            "fixed_mu_slice_audit"
+          ]
+        },
+        "unresolved": {}
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "scientific_asset_fill_ratio",
+      "severity": "hard_fail",
+      "passed": true,
+      "detail": "Declared scientific content fills the asset bbox above its figure-specific minimum.",
+      "evidence": []
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_saliency_rank",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Blurred saliency is a warning-only proxy; it never certifies first fixation or aesthetic quality.",
+      "evidence": {
+        "expected": [
+          "exact_3d_thermodynamic_cloud",
+          "exact_3d_topology_support",
+          "fixed_mu_slice_audit"
+        ],
+        "observed": [
+          "exact_3d_thermodynamic_cloud",
+          "exact_3d_topology_support",
+          "fixed_mu_slice_audit"
+        ]
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_contrast_hierarchy",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Primary mean contrast should not fall below the median declared tertiary-region contrast.",
+      "evidence": {
+        "primary": 22.3207388996243,
+        "tertiary": []
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_equal_weight_regions",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Four or more regions with near-primary mass trigger an equal-weight warning.",
+      "evidence": {
+        "comparable_regions": [],
+        "minimum_for_warning": 4
+      }
+    },
+    {
+      "category": "visual_narrative",
+      "name": "narrative_first_fixation_human_review",
+      "severity": "human_review",
+      "passed": false,
+      "detail": "Human review is required to decide whether actual first fixation matches the declared reading order.",
+      "evidence": {
+        "expected_first_fixation": "exact_3d_thermodynamic_cloud"
+      }
+    }
+  ],
+  "automatic_aesthetic_approval": false
+}

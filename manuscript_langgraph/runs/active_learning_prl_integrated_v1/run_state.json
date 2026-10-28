@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "active_learning_prl_integrated_v1",
+  "parent_run_id": "active_learning_prl_v1",
+  "publication_profile": "PRL_INTEGRATED_MAIN_TEXT",
+  "scientific_content_authority": "inherited_from_frozen_intermediate_review",
+  "publication_form": "new_candidate",
+  "human_approval": "pending",
+  "workflow_status": "awaiting_prl_integrated_manuscript_human_review",
+  "current_gate": "GATE_PRL_INTEGRATED_MANUSCRIPT_HUMAN_REVIEW",
+  "gate_status": "HUMAN_WAIT",
+  "candidate_pdf": "output/pdf/manuscript_prl_integrated_v1/manuscript_prl_integrated_candidate.pdf",
+  "external_retrieval": false,
+  "new_physics": false
+}

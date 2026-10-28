@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "profile_id": "PRL_INTEGRATED_CITED_MAIN_TEXT",
+  "variant_id": "PRL_INTEGRATED_CITED_MAIN_TEXT",
+  "run_id": "active_learning_prl_integrated_cited_v1",
+  "parent_run_id": "active_learning_prl_integrated_v1",
+  "scientific_content_authority": "active_learning_prl_integrated_v1",
+  "literature_retrieval_authorized": true,
+  "literature_scope": [
+    "finite-momentum_FFLO_pairing",
+    "altermagnetism_and_superconductivity",
+    "one-dimensional_topological_superconductivity",
+    "active_learning_for_phase_diagrams"
+  ],
+  "citation_policy": {
+    "external_background_requires_verified_source": true,
+    "project_results_use_internal_frozen_evidence": true,
+    "search_snippet_citations_forbidden": true,
+    "unsupported_novelty_claims_forbidden": true,
+    "doi_and_official_url_required_when_available": true
+  },
+  "standalone_methods_section": false,
+  "standalone_results_section": false,
+  "standalone_outlook_section": false,
+  "caption_source": "frozen_approved_captions",
+  "frozen_figures_modified": false,
+  "target_journal": "undecided",
+  "working_layout": "PRL-style REVTeX",
+  "human_approval": "pending"
+}

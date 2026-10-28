@@ -1,0 +1,36 @@
+schema_version: 1
+figure_id: EXAMPLE-PHASE-MAP
+figure_type: manuscript
+template: multi_panel_template
+scientific_message: Active learning reconstructs a thermodynamic phase map while retaining uncertainty and raw convergence evidence.
+primary_object: {id: final_phase_map, asset_type: phase_map, scientific_role: thermodynamic_phase_reconstruction, visual_role: primary}
+secondary_objects:
+  - {id: acquisition_trajectory, asset_type: active_learning_trajectory, scientific_role: sampling_evolution, visual_role: secondary}
+  - {id: convergence, asset_type: convergence_plot, scientific_role: reconstruction_audit, visual_role: secondary}
+tertiary_information: [{id: initial_design, scientific_role: initialization_context, visual_role: tertiary}]
+data_sources: [frozen_phase_dataset.npz]
+assets:
+  - {id: final_phase_map, type: phase_map, source: frozen_phase_dataset.npz, schematic: false, bbox: required, features: [consistent_phase_colors, common_axes_for_comparison, boundary_semantics]}
+  - {id: acquisition_trajectory, type: active_learning_trajectory, source: frozen_phase_dataset.npz, schematic: false, bbox: required, features: [iteration_or_budget, sampled_points, common_domain]}
+  - {id: convergence, type: convergence_plot, source: convergence_table.csv, schematic: false, bbox: required, features: [raw_metric, units_or_definition, iteration_or_budget_axis]}
+layout:
+  canvas: {viewbox: [0, 0, 1600, 1100], print_mm: [178.0, 122.4]}
+  template_profile: phase_map
+  bounding_boxes: {}
+  alignment_anchors: [shared_phase_axes, shared_iteration_axis]
+  declared_overlays: [uncertainty_over_phase_identity]
+  declared_exceptions: []
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings: {phase: physical, uncertainty: uncertainty, samples: selected}
+  allowed_extra_hex: []
+  contrast_pairs:
+    - {id: body_on_white, role: body_text, foreground: neutral.body, background: neutral.white}
+text_budget: {maximum_words_in_artwork: 90, maximum_words_per_panel: 22, minimum_font_size_pt: 7.0, move_excess_to: caption}
+required_elements: [phase_identity, uncertainty_layer, raw_convergence]
+required_labels: [Normal, Uniform SC, FFLO]
+forbidden_elements: [random_rainbow, normalized_convergence_only]
+forbidden_claims: [all uncertainty eliminated]
+validation_requirements: {hard_fail: true, require_geometry_manifest: true, require_editable_svg: true, require_pdf: true, require_png_preview: true, require_grayscale_review: true, require_engine_preflight: true}
+provenance: {physics_recomputed: false, parameters_recorded: true, commit_hash_when_available: true}
+approval: {gate: EXAMPLE_GATE, state: HUMAN_WAIT}

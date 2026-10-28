@@ -1,0 +1,60 @@
+{
+  "alpha_state": {
+    "gap": 3.0,
+    "ns": 3.0,
+    "p0": 3.0,
+    "ppi": 3.0,
+    "uf": 3.0
+  },
+  "iteration": 70,
+  "lambda_state": {
+    "gap": 0.7,
+    "ns": 3.1832314562052486e-13,
+    "p0": 0.7,
+    "ppi": 0.7,
+    "uf": 0.0
+  },
+  "model_status_by_boundary": {
+    "gap": "trained",
+    "ns": "trained",
+    "p0": "trained",
+    "ppi": "trained",
+    "uf": "trained"
+  },
+  "new_reward_rows": 64,
+  "reward_history_rows": 5504,
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_data_used_for_training": false,
+  "stagev2_tail_data_used_for_training": false,
+  "validation": {
+    "rank_correlation_a0_gap": 0.03158118790293213,
+    "rank_correlation_a0_ns": 0.29625620925089013,
+    "rank_correlation_a0_p0": 0.4210848037728383,
+    "rank_correlation_a0_ppi": -0.006578000971001336,
+    "rank_correlation_a0_uf": 0.8528530430838044,
+    "rank_correlation_delta_vs_a0_gap": 0.5545494709644414,
+    "rank_correlation_delta_vs_a0_ns": -0.08507868229226531,
+    "rank_correlation_delta_vs_a0_p0": 0.31647276488301423,
+    "rank_correlation_delta_vs_a0_ppi": 0.7076190300827223,
+    "rank_correlation_delta_vs_a0_uf": -0.1964425256418173,
+    "rank_correlation_model_gap": 0.5861306588673736,
+    "rank_correlation_model_ns": 0.21117752695862482,
+    "rank_correlation_model_p0": 0.7375575686558525,
+    "rank_correlation_model_ppi": 0.701041029111721,
+    "rank_correlation_model_uf": 0.6564105174419871,
+    "reward_sample_count": 5504,
+    "reward_sample_count_gap": 5504,
+    "reward_sample_count_ns": 5504,
+    "reward_sample_count_p0": 5504,
+    "reward_sample_count_ppi": 5504,
+    "reward_sample_count_uf": 5504,
+    "scientific_metric_improved_coverage_p0": 1.0,
+    "scientific_metric_improved_coverage_ppi": 1.0,
+    "scientific_metric_improved_gap": 1.0,
+    "scientific_metric_improved_ns": 1.0,
+    "scientific_metric_improved_p0": 1.0,
+    "scientific_metric_improved_ppi": 1.0,
+    "scientific_metric_improved_uf": 1.0
+  }
+}

@@ -1,0 +1,12 @@
+forbidden:
+  - V3_or_V4_data_rows
+  - model_checkpoints
+  - normalization_statistics
+  - optimizer_state
+  - ensemble_weights
+  - latent_coordinates
+  - cluster_centroids
+  - teacher_targets
+  - selected_coordinates
+  - reward_histories
+  - replay_buffers

@@ -1,0 +1,5 @@
+- The strict formal 3D topology convergence gates were not all closed; all four displayed ratios exceed one.
+- The point cloud is not a fitted or complete 3D topology surface.
+- Broad-mu smooth projections are excluded from the candidate.
+- Narrow-slice support guides are diagnostic and do not establish exact physical boundaries.
+- The figure must not be described as a complete 3D phase diagram or fully converged topology atlas.

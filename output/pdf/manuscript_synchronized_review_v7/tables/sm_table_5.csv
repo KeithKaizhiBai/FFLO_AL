@@ -1,0 +1,10 @@
+Quantity,Stage I,Stage II,Meaning
+prescribed candidate locations,"77,361","77,361",common Cartesian domain
+selected call records,"8,192","9,216","requests, including repeats"
+unique selected coordinates,"7,305","7,885",deduplicated requested locations
+unique exact endpoint coordinates,"6,880","7,434",retained exact observations
+training-eligible records,"6,880","7,434",clean learning view
+trusted exact records,"6,104","6,598",reliable subset
+selected without endpoint record,425,451,no retained endpoint return
+sampling fraction,8.893\%,--,Stage-I discovery headline
+exact-location reduction,11.244$\times$,--,"grid locations, not wall time"

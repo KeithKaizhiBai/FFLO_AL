@@ -1,0 +1,11 @@
+group,count,hard_risk_count,on_topology_boundary_proxy,inside_single_band_corridor
+trusted_exact_false,314,314,0,168
+training_eligible_false,0,0,0,0
+rerun_required,0,0,0,0
+q_unresolved,0,0,0,0
+delta_unresolved,0,0,0,0
+fflo_topology_untrusted,0,0,0,0
+hard_risk_phase_normal,314,314,0,168
+hard_risk_phase_uniform_SC,0,0,0,0
+hard_risk_phase_FFLO,0,0,0,0
+hard_risk_total,314,314,0,168

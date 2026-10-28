@@ -1,0 +1,45 @@
+{
+  "batch_size_max": 256,
+  "default_acquisition_batches": 50,
+  "default_n_iters": 51,
+  "disabled_features": [
+    "k2",
+    "energy_window",
+    "branch_reuse",
+    "Powell",
+    "adaptive_box",
+    "GPU_batching",
+    "Hamiltonian_cache"
+  ],
+  "excluded_nodes_default": "gpuh01",
+  "initial_seed_size": 512,
+  "initialization": "sobol_scrambled",
+  "oracle_mode": "robust_incremental",
+  "output_root": "ML_Phase_512_TopoTrivial_FullLoop",
+  "production_gate": {
+    "acquisition_profile": "topo_trivial",
+    "exact_topology_classification_flag": "--enable-topology-classification",
+    "topology_aware_acquisition_required": true
+  },
+  "rankcap": {
+    "enabled": true,
+    "high_risk_overflow_policy": "rank_and_cap",
+    "mandatory_basins_can_exceed_cap": false,
+    "max_optional_refined_basins": 3,
+    "max_total_refined_basins": 3,
+    "variant": "k3"
+  },
+  "result_archive": "active_phase_topology_from_scratch_full_loop_v1_results.tar.gz",
+  "run_id": "active_phase_topology_from_scratch_full_loop_v1",
+  "run_mode": "discovery",
+  "stop_controller": {
+    "surprise_mode": "trusted",
+    "trusted_surprise_min_denominator": 64,
+    "trusted_surprise_min_fraction": 0.25
+  },
+  "topology_reference": {
+    "purpose": "unit/regression/reference/post-run comparison only",
+    "source": "reports/topology_pass_dataset_iter035_v1",
+    "training_warm_start": false
+  }
+}

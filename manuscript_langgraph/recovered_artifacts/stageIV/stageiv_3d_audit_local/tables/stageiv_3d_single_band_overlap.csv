@@ -1,0 +1,5 @@
+group,denominator,inside_single_pair_corridor,outside_single_pair_corridor,inside_fraction,operational_definition
+tFFLO,1445,1395,50,0.9653979238754326,"single_pair_diagnostic == 1, equivalent to one pair of normal-state Fermi crossings in the preflight scan"
+cFFLO,3145,1122,2023,0.3567567567567568,"single_pair_diagnostic == 1, equivalent to one pair of normal-state Fermi crossings in the preflight scan"
+topology_boundary_proxy,3231,2212,1019,0.6846177653977097,"single_pair_diagnostic == 1, equivalent to one pair of normal-state Fermi crossings in the preflight scan"
+preflight_scan,3072,2029,1043,0.6604817708333334,"computed on the normal-state (JA, mu) guard grid, independent of thermodynamic labels"

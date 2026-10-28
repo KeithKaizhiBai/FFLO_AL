@@ -1,0 +1,111 @@
+{
+  "a0_max": 0.6485077350505764,
+  "alpha_p0": 1.7426066981612294,
+  "alpha_ppi": 2.380369644271841,
+  "alpha_state": {
+    "gap": 2.9099999999999997,
+    "ns": 1.1094331026001778,
+    "p0": 1.7426066981612294,
+    "ppi": 2.380369644271841,
+    "uf": 1.9091154797409824
+  },
+  "boundary_priorities": {
+    "gap_nodal": 0.0,
+    "normal_sc": 0.0,
+    "p0_topology": 0.0,
+    "ppi_topology": 0.0,
+    "uniform_fflo": 0.0
+  },
+  "boundary_summary": {
+    "gap": {
+      "alpha": 2.9099999999999997,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.49999999999999994,
+      "raw_score_mean": 1.4177374495983985e-06
+    },
+    "ns": {
+      "alpha": 1.1094331026001778,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.044687910720063666
+    },
+    "p0": {
+      "alpha": 1.7426066981612294,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.004241373929801797
+    },
+    "ppi": {
+      "alpha": 2.380369644271841,
+      "lambda": 0.35,
+      "ranknorm_mean": 0.5,
+      "raw_score_mean": 0.0018254577808777517
+    },
+    "uf": {
+      "alpha": 1.9091154797409824,
+      "lambda": 0.0,
+      "ranknorm_mean": 0.5000000000000002,
+      "raw_score_mean": 0.005527543696083784
+    }
+  },
+  "candidate_count": 65536,
+  "candidate_source_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "dataset_path": "ML_Phase_StageV_V2_Multihead/active_runs/stagev_v2_multihead_boundary_learning_3d_v1/dataset_iter006.npz",
+  "dataset_samples": 1333,
+  "device": "cpu",
+  "high_contribution_fraction_p0": 0.25,
+  "high_contribution_fraction_ppi": 0.25,
+  "iteration": 6,
+  "lambda_state": {
+    "gap": 0.0,
+    "ns": 0.0,
+    "p0": 0.0,
+    "ppi": 0.35,
+    "uf": 0.0
+  },
+  "lambda_t": 0.0,
+  "mean_contribution_p0": 2.172363102181982,
+  "mean_contribution_ppi": 2.9269950162105,
+  "mean_selection_probability": 0.00012794433903576906,
+  "mode": "acquisition",
+  "partition_strategy": "cost_aware",
+  "requested_candidate_counts": {
+    "boundary_support_jitter": 16384,
+    "global_sobol": 36044,
+    "mu_edge_guard": 6554,
+    "sparse_fill": 6554
+  },
+  "requested_micro_batch_size": 64,
+  "run_id": "stagev_v2_multihead_boundary_learning_3d_v1",
+  "selected_batch_size": 64,
+  "selection_score": "A_total_v2",
+  "source_correction_by_source": {
+    "boundary_support_jitter": 0.1251862962101348,
+    "global_sobol": -0.26903128654771197,
+    "mu_edge_guard": 0.583301145500372,
+    "sparse_fill": 0.583301145500372
+  },
+  "stageiv_data_used_for_training": false,
+  "stagev1_data_used_for_training": false,
+  "stagev2_schema_version": "stagev_v2_multihead_acq_1",
+  "stagev2_score_max": 0.9593705942074345,
+  "support_counts": {
+    "gap_nodal": 0,
+    "normal_sc": 489,
+    "p0_topology": 131,
+    "ppi_topology": 39,
+    "uniform_fflo": 62
+  },
+  "topology_channel_suppressed": false,
+  "world_size": 8
+}

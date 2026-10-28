@@ -1,0 +1,10 @@
+per_level_model: independent_deep_ensemble
+ensemble_members_smoke: 2
+ensemble_members_full: 5
+hidden_layers: [128, 128, 128]
+activation: SiLU
+regression: heteroscedastic_Gaussian_NLL
+classification: binary_cross_entropy
+log_variance_bounds: [-8, 5]
+gradient_clip: 5.0
+future_production_state_transfer: forbidden

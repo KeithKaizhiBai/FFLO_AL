@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "external_retrieval_authorized": false,
+  "verified_local_bibliography_entries": 0,
+  "candidate_strategy": "project-specific and conservative; no unsupported priority or novelty claims",
+  "gaps": [
+    {
+      "gap_id": "CIT-GAP-FFLO",
+      "need": "historical and current FFLO context",
+      "candidate_text_impact": "omitted from provisional Introduction",
+      "status": "requires_future_external_permission"
+    },
+    {
+      "gap_id": "CIT-GAP-ALTERMAGNET",
+      "need": "external altermagnetism background",
+      "candidate_text_impact": "limited to the present model",
+      "status": "requires_future_external_permission"
+    },
+    {
+      "gap_id": "CIT-GAP-TOPOLOGY",
+      "need": "external topological-superconductivity context",
+      "candidate_text_impact": "only project-defined diagnostics stated",
+      "status": "requires_future_external_permission"
+    },
+    {
+      "gap_id": "CIT-GAP-AL",
+      "need": "active learning for expensive phase diagrams",
+      "candidate_text_impact": "no literature-wide comparison or novelty claim",
+      "status": "requires_future_external_permission"
+    },
+    {
+      "gap_id": "CIT-GAP-NOVELTY",
+      "need": "claim-level novelty positioning",
+      "candidate_text_impact": "novelty claim withheld",
+      "status": "requires_future_external_permission"
+    }
+  ]
+}

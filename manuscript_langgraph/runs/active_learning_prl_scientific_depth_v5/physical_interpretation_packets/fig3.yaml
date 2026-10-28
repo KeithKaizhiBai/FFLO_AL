@@ -1,0 +1,30 @@
+figure_id: Fig3
+direct_visual_observations:
+- Within trusted gapped FFLO support, cFFLO occupies lower JA and extends to higher temperature.
+- tFFLO appears predominantly at higher JA and lower temperature.
+- The two supports meet along a curved gap-closing region.
+frozen_data_support:
+- fig3_exact_topology_samples.csv
+- fig3_archived_k8_boundary_iter018.csv
+- fig3_k_sensitivity.csv
+parameter_dependence:
+- supported_trend: Sampled tFFLO support is shifted to higher JA and lower kBT than cFFLO support.
+  strength_of_support: trusted exact topology labels
+permitted_interpretations:
+- Topology resolves two gapped bulk sectors inside one thermodynamic FFLO sector.
+- Pfaffian sign change is meaningful only with a full-zone gap and a close/reopen sequence.
+forbidden_inferences:
+- q sign defines topology
+- contour is an exact phase boundary
+- gap-closing guide is a stable third phase
+method_role: Adds a spectral applicability mask and invariant after thermodynamic selection.
+main_text_candidate_points:
+- bulk-state distinction
+- higher-JA/lower-T tFFLO support
+- contour limitation
+caption_only_points: []
+supplement_only_points:
+- k=6,8,12 numerical values
+- coverage thresholds
+uncertainties_or_missing_evidence:
+- Narrow nodal alternatives are not exhaustively excluded.

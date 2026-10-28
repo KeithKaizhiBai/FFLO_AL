@@ -1,0 +1,37 @@
+schema_version: 1
+figure_id: fig1
+purpose: reusable_success_memory
+
+patterns:
+  - type: physics_first_hierarchy
+    pattern: central_physical_state_space_precedes_surrounding_scheduler_cycle
+    evidence: primary_registered_area_fraction_0.6025
+    reuse_for: [fig2_phase_map, fig3_topology_map, fig4_slice_atlas]
+
+  - type: exact_oracle_as_evidence_source
+    pattern: H_BdG_to_spectrum_to_free_energy_chain_is_secondary_but_legible
+    reuse_for: [methods_schematic, figure1]
+
+  - type: topology_sequence
+    pattern: cfflo_gapped_then_separate_gap_closing_then_tfflo_reopened_gapped
+    reuse_for: [fig1_schematic, fig3_quantitative_topology]
+
+  - type: scheduler_subordination
+    pattern: surrogate_and_acquisition_schedule_exact_calls_without_generating_physics
+    reuse_for: [fig1, discussion_schematic]
+
+  - type: semantic_color_families
+    pattern: exact_orange_physical_green_learning_blue_decision_purple_boundary_red
+    reuse_for: [fig1, fig2, fig3, fig4]
+
+  - type: contract_before_drawing
+    pattern: scientific_message_roles_sources_forbidden_claims_and_gate_frozen_before_build
+    reuse_for: [all_figures]
+
+  - type: negative_control_validation
+    pattern: every_new_hard_rule_requires_a_fixture_that_fails_for_the_expected_reason
+    reuse_for: [figure_engine_development]
+
+  - type: automated_pass_not_human_approval
+    pattern: machine_validation_and_scientific_freeze_are_separate_gates
+    reuse_for: [all_figures]

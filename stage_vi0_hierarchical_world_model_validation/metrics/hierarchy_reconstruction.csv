@@ -1,0 +1,9 @@
+run,level,accuracy,n
+V3,normal_SC,0.9130127298444131,1414
+V3,uniform_FFLO,0.9867452135493373,679
+V3,gapped_nodal,1.0,679
+V3,topology_tendency,0.7982326951399117,679
+V4,normal_SC,0.905367231638418,1416
+V4,uniform_FFLO,0.9749403341288783,838
+V4,gapped_nodal,1.0,838
+V4,topology_tendency,0.8926014319809069,838

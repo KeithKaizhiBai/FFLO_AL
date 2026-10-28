@@ -1,0 +1,756 @@
+schema_version: 3
+figure_id: FIG-03-STAGEIII-TOPOLOGY-STRICT
+figure_type: manuscript
+template: multi_panel_template
+scientific_message: Topology-aware exact sampling resolves cFFLO/tFFLO structure and its configured convergence audit.
+visual_message: topology_exact_map is primary; supporting panels expose provenance, sensitivity, and convergence status.
+primary_object:
+  id: topology_exact_map
+  asset_type: phase_map
+  scientific_role: Topology-aware exact sampling resolves cFFLO/tFFLO structure and its configured convergence audit.
+  visual_role: primary
+primary_visual_object:
+  id: topology_exact_map
+  scientific_role: Topology-aware exact sampling resolves cFFLO/tFFLO structure and its configured convergence audit.
+  expected_rank: 1
+secondary_objects:
+- id: audited_boundary_geometry
+  asset_type: data_panel
+  scientific_role: audited_boundary_geometry
+  visual_role: secondary
+- id: raw_topology_convergence
+  asset_type: data_panel
+  scientific_role: raw_topology_convergence
+  visual_role: secondary
+tertiary_information:
+- id: k_sensitivity
+  scientific_role: k_sensitivity
+  visual_role: tertiary
+secondary_visual_objects:
+- audited_boundary_geometry
+- raw_topology_convergence
+tertiary_visual_objects:
+- k_sensitivity
+reading_order: &id001
+- topology_exact_map
+- audited_boundary_geometry
+- raw_topology_convergence
+- k_sensitivity
+visual_narrative:
+  enabled: true
+  narrative_regions:
+    topology_exact_map:
+    - topology_exact_map
+    audited_boundary_geometry:
+    - audited_boundary_geometry
+    raw_topology_convergence:
+    - raw_topology_convergence
+    k_sensitivity:
+    - k_sensitivity
+  scientific_asset_fill_ratio_audits: []
+saliency_expectation:
+  method: blurred_region_visual_mass
+  expected_ranking: *id001
+  severity: warning
+forbidden_visual_priorities:
+- equal_weight_dashboard
+- caveat_hidden_in_caption
+data_sources:
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_points_by_iteration.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_convergence_metrics_by_iteration.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_shift_by_iteration.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_coverage.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_surprise_by_iteration.csv
+- /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_sensitivity_summary.csv
+assets:
+- id: topology_exact_map
+  type: phase_map
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz
+  schematic: false
+  bbox: topology_exact_map
+  features:
+  - consistent_phase_colors
+  - common_axes_for_comparison
+  - boundary_semantics
+- id: audited_boundary_geometry
+  type: exact_sample_data
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_points_by_iteration.csv
+  schematic: false
+  bbox: audited_boundary_geometry
+  features: []
+- id: raw_topology_convergence
+  type: exact_sample_data
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_convergence_metrics_by_iteration.csv
+  schematic: false
+  bbox: raw_topology_convergence
+  features: []
+- id: k_sensitivity
+  type: exact_sample_data
+  source: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_sensitivity_summary.csv
+  schematic: false
+  bbox: k_sensitivity
+  features: []
+layout:
+  canvas:
+    viewbox:
+    - 0
+    - 0
+    - 1600
+    - 1100
+    print_mm:
+    - 178.0
+    - 120.0
+  template_profile: phase_map
+  primary_area_fraction_min: 0.42
+  bounding_boxes: future_geometry_manifest.json
+  alignment_anchors:
+  - shared_parameter_axes
+  declared_overlays: []
+  declared_exceptions: []
+  area_requirements:
+  - id: primary_area
+    object_id: topology_exact_map
+    reference: canvas
+    minimum_fraction: 0.42
+color_semantics:
+  palette: al_fflo_manuscript_v1
+  mappings:
+    phase: physical
+    topology_cfflo: topology_cfflo
+    topology_transition: topology_transition
+    topology_tfflo: topology_tfflo
+  allowed_extra_hex: []
+  contrast_pairs:
+  - id: body_on_white
+    role: body_text
+    foreground: neutral.body
+    background: neutral.white
+text_budget:
+  maximum_words_in_artwork: 110
+  maximum_words_per_panel: 28
+  minimum_font_size_pt: 7.0
+  move_excess_to: caption_or_supplement
+required_elements: *id001
+required_labels: []
+forbidden_elements:
+- unauthorized_interpolation
+- hidden_nonconvergence
+forbidden_claims:
+- all refinements exhausted
+- gap closing as stable phase
+validation_requirements:
+  hard_fail: true
+  require_geometry_manifest: true
+  require_editable_svg: true
+  require_pdf: true
+  require_png_preview: true
+  require_grayscale_review: true
+  require_engine_preflight: true
+  engine_preflight_record: future_engine_preflight.json
+  strict_palette: true
+provenance:
+  physics_recomputed: false
+  parameters_recorded: true
+  commit_hash_when_available: true
+approval:
+  gate: GATE_FIG3_RENDER_AUTHORIZATION
+  state: BLOCKED_BY_FIG2_HUMAN_GATE
+strict_data:
+  enabled: true
+  track: STRICT_DATA_FIGURE_TRACK
+  claim_freeze:
+  - CLM-2D-TOPOLOGY
+  panels:
+  - panel_id: topology_exact_map
+    claim_ids:
+    - CLM-2D-TOPOLOGY
+    scientific_role: trusted gapped FFLO topology-resolved exact samples
+    visual_priority: primary
+    panel_type: EXACT_SAMPLE_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz
+      sha256: 6583230495ad9e3eb45b0cff034d5525fa443bd43b1b31a754defeaabdfb5ab4
+      version: dataset_iter018
+      row_count: 4345
+      fields:
+      - x
+      - y_reg
+      - y_phase
+      - y_eta_sign
+      - y_strong_diode
+      - q_min
+      - q_max
+      - n_q
+      - q_index
+      - q_edge_distance
+      - q_edge_hit
+      - q_refinement_level
+      - q_status
+      - q_expanded
+      - q_unresolved
+      - delta_min
+      - delta_max
+      - n_delta
+      - n_delta_refined
+      - delta_refinement_level
+      - delta_status
+      - delta_boundary_ambiguous
+      - delta_boundary_band_normal
+      - delta_refined
+      - delta_unresolved
+      - free_energy_gap_to_normal
+      - positive_delta_gap
+      - positive_delta_checked
+      - phase_candidate
+      - exact_status_code
+      - trusted_exact
+      - training_eligible_exact
+      - needs_rerun_exact
+      - topology_enabled
+      - topology_applicable
+      - topology_pending
+      - topology_label_code
+      - topology_z2
+      - topology_spectral_status_code
+      - topology_trusted
+      - topology_p0
+      - topology_ppi
+      - topology_pf_product
+      - topology_pfaffian_margin
+      - topology_bulk_gap
+      - topology_k_at_bulk_gap
+      - topology_gap_tol
+      - topology_gap_nk
+      - topology_gap_backend_code
+      - topology_runtime_sec
+      - topology_error_code
+      units:
+        x[:,0]: kBT/t
+        x[:,1]: JA/t
+        topology_z2: Z2 code
+        topology_bulk_gap: t
+    source_versions:
+    - dataset_iter018
+    source_hashes:
+    - 6583230495ad9e3eb45b0cff034d5525fa443bd43b1b31a754defeaabdfb5ab4
+    source_scripts:
+    - prepare_fig3_fig4_contracts.py
+    - future figure-specific builder
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+    axis_orientation:
+      kT: increasing
+      JA: increasing
+    parameter_ranges: {}
+    input_row_count: 4345
+    selected_row_count: 3213
+    excluded_row_count: 1132
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - topology_z2
+    - topology_bulk_gap
+    - topology_trusted
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: &id002
+      cFFLO: 0
+      tFFLO: 1
+      gap_closing: diagnostic_only_not_stable_phase
+    trust_mask: topology_trusted == 1 and y_phase == 2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes:
+    - k=8 audit is the configured main result
+    - k=6 coverage p95=0.006269 exceeds 0.00625
+    expected_counts:
+      cFFLO: 2290
+      tFFLO: 923
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - Decision A under the configured audit
+    required_caveats:
+    - k=6 coverage p95=0.006269 slightly exceeds threshold
+    - gap closing is a diagnostic transition, not a stable phase
+    forbidden_claims:
+    - all possible topology refinements exhausted
+    - raw Delaunay edges are the boundary
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: topology_exact_map
+    validators:
+    - strict_data_checker
+    - future_figure_specific_validator
+    human_review_items:
+    - claim wording
+    - trust-mask visibility
+    - caveat visibility
+    output_artifacts: []
+  - panel_id: audited_boundary_geometry
+    claim_ids:
+    - CLM-2D-TOPOLOGY
+    scientific_role: archived k=8 topology-boundary geometry with support audit
+    visual_priority: secondary
+    panel_type: DERIVED_BOUNDARY_GEOMETRY
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_points_by_iteration.csv
+      sha256: b3158db8a395a0f6bd07d372914023c00cf7fcb5e52e18f51e35ab1eb244dd3a
+      version: topology_boundary_points_v2
+      row_count: 11200
+      fields:
+      - iteration
+      - component_id
+      - contour_kind
+      - sample_id
+      - kT
+      - JA
+      - x_norm
+      - y_norm
+      - component_arc_length_norm
+      - component_support_fraction
+      units:
+        kT: kBT/t
+        JA: JA/t
+        x_norm: normalized
+        y_norm: normalized
+    source_versions:
+    - topology_boundary_points_v2
+    source_hashes:
+    - b3158db8a395a0f6bd07d372914023c00cf7fcb5e52e18f51e35ab1eb244dd3a
+    source_scripts:
+    - prepare_fig3_fig4_contracts.py
+    - future figure-specific builder
+    coordinate_system: Cartesian
+    axis_fields:
+    - kT
+    - JA
+    axis_units:
+      kT: kBT/t
+      JA: JA/t
+    axis_orientation:
+      kT: increasing
+      JA: increasing
+    parameter_ranges: {}
+    input_row_count: 11200
+    selected_row_count: 646
+    excluded_row_count: 10554
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - topology_z2
+    - topology_bulk_gap
+    - topology_trusted
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: *id002
+    trust_mask: topology_trusted == 1 and y_phase == 2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: true
+        authorized: true
+        algorithm: archived deterministic IDW contour extraction
+        grid: 401x401
+        connectivity: archived component connectivity
+        component_rule: archived v2 component filter
+        support_definition: support radius 0.045; two-sided/bracket audit
+        validator: archived support and sensitivity tables
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes:
+    - k=8 audit is the configured main result
+    - k=6 coverage p95=0.006269 exceeds 0.00625
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - Decision A under the configured audit
+    required_caveats:
+    - raw brackets are support diagnostics only
+    forbidden_claims:
+    - all possible topology refinements exhausted
+    - raw Delaunay edges are the boundary
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: audited_boundary_geometry
+    validators:
+    - strict_data_checker
+    - future_figure_specific_validator
+    human_review_items:
+    - claim wording
+    - trust-mask visibility
+    - caveat visibility
+    output_artifacts: []
+  - panel_id: raw_topology_convergence
+    claim_ids:
+    - CLM-2D-TOPOLOGY
+    scientific_role: raw map-change, shift, coverage, and surprise traces
+    visual_priority: secondary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_convergence_metrics_by_iteration.csv
+      sha256: 4f51c08cbaffce743f16456d9094e581c5d169d5e268318c37295cc5b3610863
+      version: topology_map_change_v2
+      row_count: 18
+      fields:
+      - transition_from_iteration
+      - transition_to_iteration
+      - valid_common_points
+      - valid_common_fraction_of_audit_mask
+      - newly_valid_fraction
+      - no_longer_valid_fraction
+      - changed_grid_count
+      - topology_map_change
+      - map_change_pass
+      units:
+        topology_map_change: fraction
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_shift_by_iteration.csv
+      sha256: 22975fd79647ec0de0a5da5b9f131daac1256170d2c8cc846721bd94fb8c8636
+      version: topology_boundary_shift_v2
+      row_count: 18
+      fields:
+      - transition_from_iteration
+      - transition_to_iteration
+      - status
+      - directed_curr_to_prev_median
+      - directed_prev_to_curr_median
+      - symmetric_median
+      - symmetric_p90
+      - symmetric_p95
+      - symmetric_hausdorff
+      units:
+        symmetric_p95: normalized distance
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_boundary_coverage.csv
+      sha256: da4662db3fa2790dc7b7a5d7c5a1f88e99537ebc6e7701c204c305d9d47fe079
+      version: topology_boundary_coverage_v2
+      row_count: 19
+      fields:
+      - iteration
+      - coverage_status
+      - coverage_median
+      - coverage_p90
+      - coverage_p95
+      - coverage_max
+      - bracket_coverage_p95
+      - bracket_coverage_median
+      - bracket_coverage_max
+      units:
+        coverage_p95: normalized distance
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_surprise_by_iteration.csv
+      sha256: a8c4e82892128fd7b3e361cea46b499147c8835af7194fb5249f4480e98e0963
+      version: topology_surprise_v2
+      row_count: 18
+      fields:
+      - iteration
+      - new_rows
+      - trusted_denominator
+      - trusted_n_surprise
+      - trusted_topology_surprise
+      - trusted_status
+      - all_selected_denominator
+      - all_selected_n_surprise
+      - all_selected_topology_surprise
+      - hard_risk_denominator
+      - hard_risk_n_surprise
+      - hard_risk_topology_surprise
+      - reliable_prediction_fraction_new
+      units:
+        trusted_topology_surprise: fraction
+    source_versions:
+    - topology_map_change_v2
+    - topology_boundary_shift_v2
+    - topology_boundary_coverage_v2
+    - topology_surprise_v2
+    source_hashes:
+    - 4f51c08cbaffce743f16456d9094e581c5d169d5e268318c37295cc5b3610863
+    - 22975fd79647ec0de0a5da5b9f131daac1256170d2c8cc846721bd94fb8c8636
+    - da4662db3fa2790dc7b7a5d7c5a1f88e99537ebc6e7701c204c305d9d47fe079
+    - a8c4e82892128fd7b3e361cea46b499147c8835af7194fb5249f4480e98e0963
+    source_scripts:
+    - prepare_fig3_fig4_contracts.py
+    - future figure-specific builder
+    coordinate_system: Cartesian
+    axis_fields:
+    - iteration
+    - metric
+    axis_units:
+      iteration: index
+      metric: native units
+    axis_orientation:
+      iteration: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 73
+    selected_row_count: 73
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields: []
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: {}
+    trust_mask: topology_trusted == 1 and y_phase == 2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct selection of archived audit fields
+        implementation: future builder
+        parameters: {}
+        validator: source-row and endpoint exact match
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status:
+      main_metric_representation: raw_physical_metrics
+      raw_trace_visible: true
+      configured_decision: Decision A
+      k8_coverage_p95: 0.006185
+      threshold: 0.00625
+    sensitivity_notes: []
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - Decision A under the configured audit
+    required_caveats: []
+    forbidden_claims:
+    - all possible topology refinements exhausted
+    - raw Delaunay edges are the boundary
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: raw_topology_convergence
+    validators:
+    - strict_data_checker
+    - future_figure_specific_validator
+    human_review_items:
+    - claim wording
+    - trust-mask visibility
+    - caveat visibility
+    output_artifacts: []
+  - panel_id: k_sensitivity
+    claim_ids:
+    - CLM-2D-TOPOLOGY
+    scientific_role: k=6/8/12 topology-boundary sensitivity
+    visual_priority: tertiary
+    panel_type: DERIVED_NUMERICAL_DATA
+    source_artifacts:
+    - path: /Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO/manuscript_langgraph/recovered_artifacts/stageIII/figure_data/topology_convergence_audit_full_loop_v2/topology_sensitivity_summary.csv
+      sha256: 63da32831b77c4577e0019cab94442d184d718834fe580b9f0638515c970bbce
+      version: topology_sensitivity_v2
+      row_count: 3
+      fields:
+      - idw_and_knn_k
+      - final_boundary_components
+      - final_topological_region_components
+      - final_total_arc_length
+      - final_coverage_p95
+      - final_bracket_coverage_p95
+      - final_contour_point_count
+      - grid_resolution
+      - support_radius
+      - interpolation_seed
+      units:
+        final_coverage_p95: normalized distance
+    source_versions:
+    - topology_sensitivity_v2
+    source_hashes:
+    - 63da32831b77c4577e0019cab94442d184d718834fe580b9f0638515c970bbce
+    source_scripts:
+    - prepare_fig3_fig4_contracts.py
+    - future figure-specific builder
+    coordinate_system: Cartesian
+    axis_fields:
+    - k
+    - metric
+    axis_units:
+      k: neighbors
+      metric: native units
+    axis_orientation:
+      k: increasing
+      metric: increasing
+    parameter_ranges: {}
+    input_row_count: 3
+    selected_row_count: 3
+    excluded_row_count: 0
+    selection_filters: []
+    excluded_data: []
+    missing_data_policy: preserve_and_mask
+    label_fields:
+    - topology_z2
+    - topology_bulk_gap
+    - topology_trusted
+    label_semantics: frozen exact/audit fields
+    phase_mapping: {}
+    topology_mapping: *id002
+    trust_mask: topology_trusted == 1 and y_phase == 2
+    transformations:
+      interpolation:
+        enabled: false
+        authorized: false
+      smoothing:
+        enabled: false
+        authorized: false
+      boundary_extraction:
+        enabled: false
+        authorized: false
+      aggregation:
+        enabled: false
+        authorized: false
+      normalization:
+        enabled: false
+        authorized: false
+      derivation_formula:
+        enabled: true
+        authorized: true
+        formula: direct selection of archived audit fields
+        implementation: future builder
+        parameters: {}
+        validator: source-row and endpoint exact match
+    uncertainty_layer: separate
+    hard_risk_layer: separate_not_phase_identity
+    convergence_status: {}
+    sensitivity_notes:
+    - k=8 audit is the configured main result
+    - k=6 coverage p95=0.006269 exceeds 0.00625
+    expected_counts: {}
+    expected_reference_values: {}
+    numerical_tolerances: {}
+    scientific_invariants:
+    - frozen labels are immutable
+    allowed_claims:
+    - Decision A under the configured audit
+    required_caveats:
+    - k=6 coverage p95=0.006269 slightly exceeds threshold
+    forbidden_claims:
+    - all possible topology refinements exhausted
+    - raw Delaunay edges are the boundary
+    forbidden_operations:
+    - manual label change
+    - unauthorized interpolation
+    - unauthorized smoothing
+    style_tokens: al_fflo_manuscript_v1
+    legend_semantics:
+      registered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+      rendered_phase_encoding:
+        normal: neutral.secondary
+        uniform_SC: physical.highlight
+        FFLO: physical.dark
+    exact_vs_derived_encoding:
+      visually_distinct: true
+    primary_visual_object: k_sensitivity
+    validators:
+    - strict_data_checker
+    - future_figure_specific_validator
+    human_review_items:
+    - claim wording
+    - trust-mask visibility
+    - caveat visibility
+    output_artifacts: []
+  output_artifacts:
+  - future_fig-03-stageiii-topology-strict.svg
+  - future_fig-03-stageiii-topology-strict.pdf

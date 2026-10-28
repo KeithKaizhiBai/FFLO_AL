@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "gate_id": "GATE_FIGURE_APPROVAL",
+  "decision": "approve_with_edits",
+  "approved_by": "explicit_human_user_instruction",
+  "approved_on": "2026-08-27",
+  "per_figure": {
+    "FIG-01-PIPELINE": "approve",
+    "FIG-02-THERMO": "approve",
+    "FIG-03-STAGEIII-TOPOLOGY": "approve",
+    "FIG-04-STAGEIV-3D-EXTENSION": "approve_with_nonclosure_caveat"
+  },
+  "mandatory_edits_or_caveats": [
+    "retain the Stage III k=6 sensitivity deviation and diagnostic-only boundary wording",
+    "retain the Stage IV strict nonclosure, limited-domain, and no-continuous-surface wording",
+    "do not describe Figure 4 as a complete 3D phase diagram or converged topology atlas"
+  ],
+  "external_retrieval_permission": false,
+  "new_physics_permission": false,
+  "latex_integration_permission": false
+}

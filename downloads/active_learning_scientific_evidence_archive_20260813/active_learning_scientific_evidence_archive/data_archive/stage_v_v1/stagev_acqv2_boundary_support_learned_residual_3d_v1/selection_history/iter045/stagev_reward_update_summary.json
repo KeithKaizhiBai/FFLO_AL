@@ -1,0 +1,12 @@
+{
+  "bad_sampling_detected": 0.0,
+  "iteration": 45,
+  "lambda_t": 0.7,
+  "new_reward_rows": 64,
+  "rank_correlation_a0": 0.5430148967594478,
+  "rank_correlation_delta_vs_a0": 0.23375426648352304,
+  "rank_correlation_model": 0.7767691632429709,
+  "reward_history_rows": 3904,
+  "reward_model_status": "trained",
+  "reward_sample_count": 3904
+}

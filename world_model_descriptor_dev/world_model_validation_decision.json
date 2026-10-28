@@ -1,0 +1,42 @@
+{
+  "hardware_detected": true,
+  "selected_device": "cpu",
+  "mps_available": false,
+  "mps_stable": false,
+  "v3_input_reproduced": true,
+  "v4_input_reproduced": true,
+  "descriptor_schema_complete": false,
+  "phase_criterion_verified": true,
+  "core_fields_used": [
+    "delta",
+    "abs_q",
+    "deltaf",
+    "log_gap",
+    "k_gap",
+    "p0",
+    "ppi",
+    "pf_margin"
+  ],
+  "optional_fields_used": [],
+  "within_run_status_v3": "strict spatial topology support insufficient",
+  "within_run_status_v4": "strict spatial topology support insufficient",
+  "cross_run_status_v3_to_v4": "completed with sampling-overlap caveat",
+  "cross_run_status_v4_to_v3": "completed with sampling-overlap caveat",
+  "calibration_status": "mixed/insufficient",
+  "uncertainty_error_alignment": "field- and split-dependent",
+  "sequential_uncertainty_trend": "non-monotonic",
+  "retrospective_information_value_status": "historical reductions not uniformly distinguishable from controls/noise",
+  "label_free_phase_recovery_status": "poor: post-hoc accuracy=0.6715",
+  "main_decision": "Decision C - descriptor semantics incomplete or inconsistent",
+  "main_limiting_factor": "strict spatial extrapolation fails and topology masks leave too little holdout support",
+  "recommended_next_action": "revise y_tilde mask/schema and spatial coverage diagnostics before likelihood calibration or EIG",
+  "safe_for_future_strict_cold_start": false,
+  "forbidden_state_transfer_confirmed": true,
+  "caveats": [
+    "local full subset uses 2 ensemble members and one seed",
+    "second-basin fields unavailable in common final schema",
+    "cross-run tests contain broad sampling overlap despite local-near-duplicate filtering"
+  ],
+  "wall_time_sec": 31.528200834000017,
+  "peak_rss_mb": 560.796875
+}

@@ -1,0 +1,139 @@
+{
+  "active_figure_id": "FIG-01-04-MAIN-TEXT-CONTRACTS",
+  "paragraph_metadata": [
+    {
+      "paragraph_id": "RES-FIG1-001",
+      "observation": "The workflow keeps the audited BdG oracle, reliability hierarchy, and scheduling policy distinct.",
+      "interpretation": "Reliability metadata enables scalable active learning without replacing the physical solver.",
+      "evidence_source": [
+        "MODEL_SPEC.md",
+        "docs/NUMERICS_SPEC.md"
+      ],
+      "figure_reference": [
+        "FIG-01-PIPELINE"
+      ],
+      "claims_used": [
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-MODEL-SPEC",
+        "E-NUMERICS-SPEC"
+      ],
+      "figure_panels_cited": [
+        "1A",
+        "1B",
+        "1C",
+        "1D"
+      ],
+      "caveats": [
+        "schematic only",
+        "finite-resolution effects remain",
+        "unresolved is a numerical status"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG2-001",
+      "observation": "A 512-point random-grid cold start grows to a 7,434-point endpoint and satisfies the configured thermodynamic closure audit.",
+      "interpretation": "Active sampling reconstructs the frozen two-dimensional thermodynamic phase structure.",
+      "evidence_source": [
+        "manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz",
+        "manuscript_langgraph/recovered_artifacts/stageII/run_bundle/stop_metrics_history.json"
+      ],
+      "figure_reference": [
+        "FIG-02-THERMO"
+      ],
+      "claims_used": [
+        "CLM-2D-THERMO",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-STAGEI-COLDSTART",
+        "E-PHASEII-AUDIT",
+        "E-PHASEII-HARD-RISK"
+      ],
+      "figure_panels_cited": [
+        "2A",
+        "2B",
+        "2C",
+        "2D"
+      ],
+      "caveats": [
+        "129 hard-risk points remain explicit",
+        "support-restricted rendering",
+        "random_grid not Sobol"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG3-001",
+      "observation": "The 4,345-point endpoint contains 3,213 trusted FFLO labels and the configured k=8 audit returns Decision A.",
+      "interpretation": "The guarded cold-start loop supports a converged two-dimensional cFFLO/tFFLO result under the configured audit.",
+      "evidence_source": [
+        "manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz",
+        "manuscript_langgraph/recovered_artifacts/stageIII/topology_convergence_audit_full_loop_v2"
+      ],
+      "figure_reference": [
+        "FIG-03-STAGEIII-TOPOLOGY"
+      ],
+      "claims_used": [
+        "CLM-2D-TOPOLOGY",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-STAGEIII-CONVERGENCE",
+        "E-STAGEIII-PASS"
+      ],
+      "figure_panels_cited": [
+        "3A",
+        "3B",
+        "3C",
+        "3D"
+      ],
+      "caveats": [
+        "k=6 coverage 0.006269 is slightly above threshold",
+        "brackets are diagnostics only",
+        "nodal superconductivity not exhaustively excluded"
+      ],
+      "unsupported_sentence_flags": []
+    },
+    {
+      "paragraph_id": "RES-FIG4-001",
+      "observation": "The 7,081-point endpoint reveals thermodynamic and topology-aware support in three dimensions, while all four strict topology ratios exceed threshold.",
+      "interpretation": "The result demonstrates active-learning-enabled higher-dimensional exploration but not formal 3D topology closure.",
+      "evidence_source": [
+        "manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz",
+        "manuscript_langgraph/recovered_artifacts/stageIV/stageiv_3d_return_report_local",
+        "downloads/active_learning_scientific_evidence_archive_20260813/active_learning_scientific_evidence_archive/reports_archive/stage_iv/stageiv_curve_extraction_fix_local"
+      ],
+      "figure_reference": [
+        "FIG-04-STAGEIV-3D-EXTENSION"
+      ],
+      "claims_used": [
+        "CLM-3D-EXTENSION",
+        "CLM-ORACLE-RELIABILITY"
+      ],
+      "evidence_used": [
+        "E-STAGEIV-AUDIT",
+        "E-STAGEIV-MU-SLICE-AUDIT",
+        "E-STAGEIV-CURVE-FIX"
+      ],
+      "figure_panels_cited": [
+        "4A",
+        "4B",
+        "4C",
+        "4D"
+      ],
+      "caveats": [
+        "strict 3D topology closure not passed",
+        "point cloud not fitted surface",
+        "narrow-slice guides are diagnostic"
+      ],
+      "unsupported_sentence_flags": []
+    }
+  ],
+  "results_claims_frozen": false,
+  "figure_contracts_approved": false,
+  "workflow_status": "awaiting_figure_approval",
+  "next_action": "review the Figures 1-4 approval package"
+}

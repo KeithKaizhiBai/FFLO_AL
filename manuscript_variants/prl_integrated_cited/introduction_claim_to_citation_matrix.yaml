@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "claim_count": 6,
+  "claims": [
+    {
+      "claim_id": "INTRO-CITED-01",
+      "claim": "Spin/exchange splitting can favor superconducting pairing with nonzero center-of-mass momentum.",
+      "keys": [
+        "FuldeFerrell1964",
+        "LarkinOvchinnikov1965",
+        "CasalbuoniNardulli2004"
+      ],
+      "scope_limit": "general FF/LO motivation; no claim about the present altermagnetic model"
+    },
+    {
+      "claim_id": "INTRO-CITED-02",
+      "claim": "Altermagnets combine compensated order with momentum-dependent spin splitting.",
+      "keys": [
+        "SmejkalSinovaJungwirth2022"
+      ],
+      "scope_limit": "field-level definition only"
+    },
+    {
+      "claim_id": "INTRO-CITED-03",
+      "claim": "Model studies show that altermagnetic splitting can support unconventional or finite-momentum superconductivity.",
+      "keys": [
+        "ChakrabortyBlackSchaffer2024",
+        "HongParkKim2025"
+      ],
+      "scope_limit": "motivation across distinct models; not evidence for our phase diagram"
+    },
+    {
+      "claim_id": "INTRO-CITED-04",
+      "claim": "Finite-momentum pairing can coexist with topological superfluidity in spin-orbit-coupled models.",
+      "keys": [
+        "ZhangYi2013"
+      ],
+      "scope_limit": "precedent only; not the topology authority for our model"
+    },
+    {
+      "claim_id": "INTRO-CITED-05",
+      "claim": "Gapped one-dimensional class-D BdG systems admit a Z2/Pfaffian distinction.",
+      "keys": [
+        "Kitaev2001",
+        "BudichArdonne2013"
+      ],
+      "scope_limit": "topological background; our labels still require the frozen full-zone audit"
+    },
+    {
+      "claim_id": "INTRO-CITED-06",
+      "claim": "Active learning can direct evaluations toward informative phase-boundary regions.",
+      "keys": [
+        "TerayamaEtAl2019",
+        "DaiBrussGlotzer2020",
+        "LookmanEtAl2019"
+      ],
+      "scope_limit": "methodological precedent; no superiority claim for our acquisition"
+    }
+  ]
+}

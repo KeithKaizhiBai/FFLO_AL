@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "width": 1600,
+    "height": 1350
+  },
+  "objects": [
+    {
+      "id": "sample_and_trust_growth",
+      "type": "plot",
+      "role": "primary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 130,
+        "y": 140,
+        "width": 620,
+        "height": 330
+      }
+    },
+    {
+      "id": "thermodynamic_composition",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 850,
+        "y": 140,
+        "width": 620,
+        "height": 330
+      }
+    },
+    {
+      "id": "topology_composition",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 130,
+        "y": 530,
+        "width": 620,
+        "height": 330
+      }
+    },
+    {
+      "id": "map_change_history",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 850,
+        "y": 530,
+        "width": 620,
+        "height": 330
+      }
+    },
+    {
+      "id": "surface_shift_history",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 130,
+        "y": 920,
+        "width": 620,
+        "height": 330
+      }
+    },
+    {
+      "id": "trusted_surprise_history",
+      "type": "plot",
+      "role": "secondary",
+      "parent": "canvas",
+      "visual_weight_object": true,
+      "bbox": {
+        "x": 850,
+        "y": 920,
+        "width": 620,
+        "height": 330
+      }
+    }
+  ],
+  "routes": [],
+  "scientific_content_bbox": {
+    "sample_and_trust_growth": {
+      "x": 130,
+      "y": 140,
+      "width": 620,
+      "height": 330
+    }
+  }
+}
