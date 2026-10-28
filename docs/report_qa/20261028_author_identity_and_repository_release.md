@@ -30,5 +30,9 @@ need rebinding on another machine. Upload does not certify numerical
 reproduction, create an archival DOI, or approve outstanding scientific claims.
 
 SSH identity and a push dry-run were verified after the user configured local
-Git authentication. At the time of this preparation note, actual publication
-and remote verification remain to be recorded in the project handoff.
+Git authentication. Payload commit `b0c97936e6a8a989ebed194e9c4c18a699f22ba3`
+was then pushed successfully to `main`. Seven remote files (oracle source,
+Stage II/III/IV endpoints and all three PDFs) were read back and matched their
+manifest SHA256 values. The payload contained 3,672 selected files and
+323,364,046 bytes; existing remote-only files were preserved. This publication
+receipt is a documentation-only follow-up, not a new scientific revision.

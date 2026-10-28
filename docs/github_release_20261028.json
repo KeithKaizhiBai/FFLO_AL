@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "repository": "https://github.com/KeithKaizhiBai/FFLO_AL",
+  "visibility": "public",
+  "branch": "main",
+  "payload_commit": "b0c97936e6a8a989ebed194e9c4c18a699f22ba3",
+  "baseline_commit": "f3c277bb419ec4108b40ebba56635ef72c2ad895",
+  "payload_status": "pushed_and_representative_remote_bytes_verified",
+  "selected_payload_files": 3672,
+  "selected_payload_bytes": 323364046,
+  "baseline_file_deletions": 0,
+  "manifest_path_at_payload_commit": "release_metadata/20261028/file_manifest.csv",
+  "all_selected_staged_bytes_match_manifest": true,
+  "remote_sha256_verified_files": [
+    "ml_phase/exact_oracle.py",
+    "manuscript_langgraph/recovered_artifacts/stageII/dataset_iter035.npz",
+    "manuscript_langgraph/recovered_artifacts/stageIII/dataset_iter018.npz",
+    "manuscript_langgraph/recovered_artifacts/stageIV/dataset_iter025.npz",
+    "output/pdf/manuscript_author_revision_v9/manuscript_double_column.pdf",
+    "output/pdf/manuscript_author_revision_v9/manuscript_single_column_review.pdf",
+    "output/pdf/manuscript_author_revision_v9/supplement.pdf"
+  ],
+  "manuscript_tests_passed": 65,
+  "secret_scan": "no_obvious_pattern_hits_not_a_security_guarantee",
+  "physics_recomputed": false,
+  "remaining_scientific_approval_gate": "HUMAN_WAIT",
+  "complete_stage_vi_replay_available": false,
+  "cross_machine_figure_engine_verified": false,
+  "receipt_scope": "Documentation-only follow-up; does not change science or manuscript artwork"
+}

@@ -4,18 +4,18 @@
   "status": "local_copy_complete_not_committed_or_uploaded",
   "source_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO",
   "checkout": "/private/tmp/fflo_github_upload_20261028",
-  "selected_files": 3672,
-  "selected_bytes": 323364046,
-  "copy_files": 2,
-  "copy_bytes": 671756,
+  "selected_files": 3673,
+  "selected_bytes": 323366096,
+  "copy_files": 3,
+  "copy_bytes": 673806,
   "groups": {
     "root_source": {
       "files": 9,
       "bytes": 166752
     },
     "documentation": {
-      "files": 150,
-      "bytes": 1444343
+      "files": 151,
+      "bytes": 1446393
     },
     "historical_archive_manifest": {
       "files": 8,

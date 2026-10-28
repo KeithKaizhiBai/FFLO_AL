@@ -1,6 +1,6 @@
 # Project Summary
 
-## 2026-10-28 author identity and GitHub upload preparation
+## 2026-10-28 author identity and verified GitHub publication
 
 User confirmed Kai-Zhi Bai, kzbai@connect.hku.hk, Department of Physics,
 The University of Hong Kong, Pokfulam Road, Hong Kong, China. Existing
@@ -12,13 +12,16 @@ sentences now point to the user-specified public project repository
 content/figures/bibliography are protected; all other author gates remain
 HUMAN_WAIT. 65 manuscript tests pass; independent scoped review passed.
 
-Upload is authorized, but not yet completed. Existing repository cloned at
-`/tmp/fflo_github_upload_20261028`, baseline
-`f3c277bb419ec4108b40ebba56635ef72c2ad895`. The GitHub connector confirms admin
-permission. After the user configured local Git authentication, SSH verified
-the KeithKaizhiBai identity and a push dry-run succeeded. Publication still
-requires the actual push and remote-commit verification; HTTPS credentials
-were not used. Do not claim upload success before that verification.
+Upload completed to `https://github.com/KeithKaizhiBai/FFLO_AL` main branch.
+Payload commit: `b0c97936e6a8a989ebed194e9c4c18a699f22ba3`, based on
+`f3c277bb419ec4108b40ebba56635ef72c2ad895`. SSH authenticated the user and the
+remote accepted the ordinary fast-forward push. The 3,672 selected files
+(323,364,046 bytes) matched the staged bytes; no baseline files were deleted.
+Seven files were fetched back from the public commit and matched SHA256:
+the exact oracle, Stage II/III/IV endpoints, and all three v9 PDFs. A subsequent
+documentation-only receipt commit records this completed payload publication.
+See `docs/github_release_20261028.json`; staging clone remains at
+`/tmp/fflo_github_upload_20261028`. No credentials were copied into the release.
 
 `scripts/prepare_github_update_20261028.py` prepares a non-destructive allowlist
 update (dry-run default). It excludes secrets/runtime/cache and duplicate large
