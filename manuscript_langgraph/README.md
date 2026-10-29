@@ -30,6 +30,17 @@ invocations stop independently at the Introduction retrieval gate and
 
 ## Current status
 
+2026-10-29 reader entry: use `reports/manuscript/v9/` for the latest authored
+draft, and `reports/manuscript/README.md` for v1–v9. The historical status below
+describes an earlier graph checkpoint, not the latest PDF location. Current
+unresolved scientific choices remain in the v9 author-review record.
+
+After a workflow creates a reviewed source/PDF set, maintain its mapping in
+`scripts/export_clean_manuscripts.py` and run that script with `--verify`.
+Reader exports keep only required TeX, original PDFs, used figures and Bib;
+audits and build debris stay in workflow storage. Never prune the frozen
+parent trees to make a reader package. Exporting does not advance a Gate.
+
 All Figures 1--4 are scientifically frozen and the overall Figure gate is
 approved with the permanent Figure 3 sensitivity and Figure 4 nonclosure
 caveats. The existing SQLite thread was resumed through the real Results node,

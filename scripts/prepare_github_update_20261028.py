@@ -171,6 +171,8 @@ def candidate_files(root: Path) -> tuple[dict[Path, str], dict[str, int], list[s
     for folder in ("ml_phase", "scripts", "tests", "hpc_hotfix_scripts", "hpc_packages"):
         tree(folder, "program", suffixes=CODE_CONFIG_SUFFIXES)
     tree("docs", "documentation")
+    tree("reports/manuscript", "reader_manuscript", suffixes={".tex", ".pdf", ".bib", ".png", ".jpg", ".jpeg", ".eps", ".md"})
+    add(root / "reports/README.md", "reader_manuscript")
     tree("manuscript_variants", "manuscript_variants")
     language = root / "manuscript_langgraph"
     for path in language.iterdir():

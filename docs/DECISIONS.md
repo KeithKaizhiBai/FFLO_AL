@@ -1,5 +1,21 @@
 # Decisions
 
+## D87 — Separate clean reader versions from immutable workflow evidence (2026-10-29)
+
+At user direction, expose manuscripts under `reports/manuscript/v1`–`v9`
+with only TeX, compiled PDFs, used figures and bibliography files. Keep audit
+JSON, Markdown/CSV companions, compilation debris and review gates outside
+those reader folders. Preserve original workflow bundles, especially the
+every-file-hashed v7/v8 parents; do not prune their files as a cleanup shortcut.
+
+Export only mechanical path and entry-name changes. Preserve TeX input
+boundaries rather than flattening, because flattening changed page wrapping.
+Require dependency closure, original asset/PDF byte hashes, clean compile,
+page-text comparison and rendered-page comparison. Keep intermediate builds
+in temporary directories. No physics calculation or scientific Gate advance.
+The current explicit restricted TeX mode matches historical compilation;
+unrestricted shell escape is not authorized by this decision.
+
 ## D86 — Synchronized author-review candidate (2026-09-11)
 
 At explicit user direction, replace v6's per-result float barriers and reduced

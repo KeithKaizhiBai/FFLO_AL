@@ -1,0 +1,89 @@
+{
+  "documents": {
+    "manuscript": [
+      "output/pdf/manuscript_synchronized_review_v7/source/manuscript_double_column.tex",
+      "output/pdf/manuscript_synchronized_review_v7/manuscript_double_column.pdf"
+    ],
+    "review": [
+      "output/pdf/manuscript_synchronized_review_v7/source/manuscript_single_column_review.tex",
+      "output/pdf/manuscript_synchronized_review_v7/manuscript_single_column_review.pdf"
+    ],
+    "supplement": [
+      "output/pdf/manuscript_synchronized_review_v7/source/supplement.tex",
+      "output/pdf/manuscript_synchronized_review_v7/supplement.pdf"
+    ]
+  },
+  "input_hashes": {
+    "output/pdf/manuscript_synchronized_review_v7/source/manuscript_double_column.tex": "c188a20b120dcfac06ddad59930de540d559b6b8e777aeac6158b0c8c587df78",
+    "output/pdf/manuscript_synchronized_review_v7/source/preamble.tex": "02f7ddc4927659096a5a20755947e0520fd45eff3a8403e7283375e4680cc74d",
+    "output/pdf/manuscript_synchronized_review_v7/source/metadata.tex": "1d43a19875678aeb3e0d815222509ce61e3c4ca6244be277002a65b8d8e99d84",
+    "output/pdf/manuscript_synchronized_review_v7/source/main_content.tex": "d2a3bfdfcfc7e98e38d3d263210b84c599ba8dbf17a52ecb1fcaa14b9e067af0",
+    "output/pdf/manuscript_synchronized_review_v7/source/sections/abstract.tex": "9e47c0f4184ac9c0632846e8a94e45e6f8924ec27bcdd45879d40b749447d690",
+    "output/pdf/manuscript_synchronized_review_v7/source/sections/introduction.tex": "069bb1a28e55a76d00a9b1e99e159d4e11eeef97c1a752a847bf074aa3eeb2e9",
+    "output/pdf/manuscript_synchronized_review_v7/source/sections/results.tex": "e36b2d8ff2ac7c665ea761b1d3a5e4a892345d652e7d73abb4399986d0cd9ad1",
+    "output/pdf/manuscript_synchronized_review_v7/source/sections/discussion.tex": "ab1ce0fa053debeb0593c6ac72a185edfa509dfadb5a5e84cec7f84a2a791579",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/Fig1_candidate.pdf": "5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/Fig2_candidate.pdf": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/Fig3_candidate.pdf": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/Fig4_candidate.pdf": "b1f8f4d812ea913e7005789d60e46dc2529e8ccfc9c2b5eb47c9d8df54cc76f9",
+    "output/pdf/manuscript_synchronized_review_v7/source/references.bib": "a4c31abce4b248384b7435c42c1529423a1c0bc8be03c3c90b5212285b0b559d",
+    "output/pdf/manuscript_synchronized_review_v7/manuscript_double_column.pdf": "c0e63010d0503f37a88c28d65eedb712df529ec4e43a56e509c7b2c64202b401",
+    "output/pdf/manuscript_synchronized_review_v7/source/manuscript_single_column_review.tex": "10aa23cd9c49dfa4cd246dc7aa5692896731e988a9f6d2221f6908459ee01ce4",
+    "output/pdf/manuscript_synchronized_review_v7/manuscript_single_column_review.pdf": "1be63af165dfd6fd3a55458f0414435caaac1ce4a4ab8b7caa87240f08a9d820",
+    "output/pdf/manuscript_synchronized_review_v7/source/supplement.tex": "dc659328b6f76751c01960af23196ddf6922aa1c2204794d219f361b466b177d",
+    "output/pdf/manuscript_synchronized_review_v7/source/sections/supplement.tex": "210c6f85578c294f254aad79431d026db1573ee996aa30bdca5829884e8f37a6",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/S1_reliability_flow.pdf": "e8d8868ba194cf4f79dbf6137928bf10a90609b51173b75844c8b1061aa18e63",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/S2_surrogate_architecture.pdf": "456fb779ba5706cfe0df1f0b8df12c7a084c2baf3ab31b1d56c36ce8c84daa64",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/S3_acquisition_decomposition.pdf": "ed62c60de0aa2148a2f3c4569da9453fd829faa5572cff0b071805c744c890bb",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/S4_sampling_efficiency.pdf": "e2519043d7bfe5b952ee76e3c547bdd5eeebafa32bec546883fb56434901a6bb",
+    "output/pdf/manuscript_synchronized_review_v7/source/figures/sm_stageiv_numerical_diagnostics.pdf": "5042dc9235a5c31f01377dda1c8dc652f3379aadbda42207b53977bb2458f9eb",
+    "output/pdf/manuscript_synchronized_review_v7/supplement.pdf": "e6a27f69a09569f84a5a07a820b356c573c2e44d5a2b7b41d37989eff2e75966"
+  },
+  "export_hashes": {
+    "figures/Fig1_candidate.pdf": "5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715",
+    "figures/Fig2_candidate.pdf": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "figures/Fig3_candidate.pdf": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "figures/Fig4_candidate.pdf": "b1f8f4d812ea913e7005789d60e46dc2529e8ccfc9c2b5eb47c9d8df54cc76f9",
+    "figures/S1_reliability_flow.pdf": "e8d8868ba194cf4f79dbf6137928bf10a90609b51173b75844c8b1061aa18e63",
+    "figures/S2_surrogate_architecture.pdf": "456fb779ba5706cfe0df1f0b8df12c7a084c2baf3ab31b1d56c36ce8c84daa64",
+    "figures/S3_acquisition_decomposition.pdf": "ed62c60de0aa2148a2f3c4569da9453fd829faa5572cff0b071805c744c890bb",
+    "figures/S4_sampling_efficiency.pdf": "e2519043d7bfe5b952ee76e3c547bdd5eeebafa32bec546883fb56434901a6bb",
+    "figures/sm_stageiv_numerical_diagnostics.pdf": "5042dc9235a5c31f01377dda1c8dc652f3379aadbda42207b53977bb2458f9eb",
+    "manuscript.pdf": "c0e63010d0503f37a88c28d65eedb712df529ec4e43a56e509c7b2c64202b401",
+    "manuscript.tex": "098ed76a02e642c3b0140f4d50d095e68a3fc5f2726fabe5769588387e07a610",
+    "references.bib": "a4c31abce4b248384b7435c42c1529423a1c0bc8be03c3c90b5212285b0b559d",
+    "review.pdf": "1be63af165dfd6fd3a55458f0414435caaac1ce4a4ab8b7caa87240f08a9d820",
+    "review.tex": "9349323ab860af2d38af889d3109ffb1cfc5d4a1c4c47d10a9f8778454f41cf9",
+    "supplement.pdf": "e6a27f69a09569f84a5a07a820b356c573c2e44d5a2b7b41d37989eff2e75966",
+    "supplement.tex": "a05f0d5ba9805e20dd6ff9ab0d33a1b7df9ddc11d847d4b43f40f080c4b8fc86",
+    "tex/main_content.tex": "a5cf36ced2681fa95d7e6d5d2de50d07632dcc2da4832f61e6299988f1a00af8",
+    "tex/metadata.tex": "1d43a19875678aeb3e0d815222509ce61e3c4ca6244be277002a65b8d8e99d84",
+    "tex/preamble.tex": "5cf3fd5f9a1d7e1d1000dfe4c77499ebb9b1a55317bb5b0eae0f78883d81aa90",
+    "tex/sections/abstract.tex": "9e47c0f4184ac9c0632846e8a94e45e6f8924ec27bcdd45879d40b749447d690",
+    "tex/sections/discussion.tex": "ab1ce0fa053debeb0593c6ac72a185edfa509dfadb5a5e84cec7f84a2a791579",
+    "tex/sections/introduction.tex": "069bb1a28e55a76d00a9b1e99e159d4e11eeef97c1a752a847bf074aa3eeb2e9",
+    "tex/sections/results.tex": "e36b2d8ff2ac7c665ea761b1d3a5e4a892345d652e7d73abb4399986d0cd9ad1",
+    "tex/sections/supplement.tex": "210c6f85578c294f254aad79431d026db1573ee996aa30bdca5829884e8f37a6"
+  },
+  "original_pdfs_preserved_byte_for_byte": true,
+  "clean_compile": {
+    "supplement": {
+      "pages": 12,
+      "page_text_identical": true,
+      "all_pages_pixel_identical_72dpi": true,
+      "undefined_references": false
+    },
+    "manuscript": {
+      "pages": 6,
+      "page_text_identical": true,
+      "all_pages_pixel_identical_72dpi": true,
+      "undefined_references": false
+    },
+    "review": {
+      "pages": 8,
+      "page_text_identical": true,
+      "all_pages_pixel_identical_72dpi": true,
+      "undefined_references": false
+    }
+  }
+}

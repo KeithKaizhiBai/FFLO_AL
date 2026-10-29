@@ -38,6 +38,7 @@
 /manuscript_langgraph/** -text
 /output/pdf/** -text
 /figures/** -text
+/reports/manuscript/** -text
 /docs/** -text
 /scripts/** -text
 /release_metadata/** -text

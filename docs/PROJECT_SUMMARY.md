@@ -1,5 +1,46 @@
 # Project Summary
 
+## 2026-10-29 clean manuscript versions and visible PDF entry
+
+Reader-facing manuscripts are now in `reports/manuscript/v1/` through `v9/`.
+Start at `reports/README.md`; `reports/latest` is a local relative shortcut to
+v9. The latest files are `manuscript.pdf`, `supplement.pdf`, and `review.pdf`.
+Each version contains only required TeX, original compiled PDFs, referenced
+figure files and the used bibliography. TeX helpers are kept under `tex/`;
+all asset paths are relative. No source body, artwork, dataset or physics
+definition changed. Saved PDFs/figures/bibliographies are byte-identical.
+
+The main sequence selects the cited v1, not the earlier uncited/layout trials.
+v6 did not create a new SM; its index points to the inherited v5 Supplement.
+Earlier trials, fallback copies and combined review packets remain only in
+the original workflow area. Original v7/v8 trees were not pruned or moved:
+every-file parent hash guards and machine-readable companion records remain
+valid. `reports/Test` remains an unrelated ACM template exercise, not a paper.
+
+The reader collection contains 9 versions, 18 document PDFs and 158 files
+(68,557,332 bytes), versus 504 mixed files in the corresponding workflow
+packages. This is reader-package simplification, not deletion of archive data.
+`manuscript_langgraph/scripts/export_clean_manuscripts.py` maintains exports,
+refuses to overwrite changed versions, and compiles in temporary directories.
+All 18 clean builds match original page text and full-page 72-dpi RGB renders;
+113 manuscript/export tests pass. Full input/output hashes and build checks
+are in `docs/report_qa/20261029_manuscript_exports/`.
+
+Required TeX input boundaries are preserved: flattening changed historical
+line wrapping. Compilation uses explicit TeX restricted mode, matching the
+historical build; unrestricted shell escape is not enabled. A v9 SM spacing
+difference caused by disabling restricted mode was isolated with reversible
+A/B checks, without changing source text. See the dated report Q&A note.
+
+Root README and workflow instructions now point to the clean reader folders.
+The cleanup itself was local-only. The user subsequently authorized GitHub
+synchronization on 2026-10-29. The upload allowlist includes the reader folders;
+the synchronization baseline is
+`ac1532d7355d895a7e6fc30b3da5d631dd8b5661`. The new dated release inventory is
+`release_metadata/20261029/`, separate from the preserved 20261028 inventory.
+Publication verification is recorded separately after the push.
+Scientific/figure approval gates remain HUMAN_WAIT.
+
 ## 2026-10-28 author identity and verified GitHub publication
 
 User confirmed Kai-Zhi Bai, kzbai@connect.hku.hk, Department of Physics,

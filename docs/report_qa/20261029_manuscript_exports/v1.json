@@ -1,0 +1,43 @@
+{
+  "documents": {
+    "manuscript": [
+      "manuscript_variants/prl_integrated_cited/main.tex",
+      "output/pdf/manuscript_prl_integrated_cited_v1/manuscript_prl_integrated_cited_candidate.pdf"
+    ]
+  },
+  "input_hashes": {
+    "manuscript_variants/prl_integrated_cited/main.tex": "86ec0f8e2b8bdf6d84e8e8b1810b053d7092aebc5737371149c6284d1f22a392",
+    "manuscript_variants/prl_integrated_cited/sections/abstract.tex": "f4ba2b8b7250d9d452d1b56a5a4a0dc17b6aa56311f97d2622d74a1fa8d2df2f",
+    "manuscript_variants/prl_integrated_cited/sections/introduction.tex": "39b429f8b7d015f8b9c08e4e6b0997c80dc67ff243540e9b7663c2c9d0606ee7",
+    "manuscript_variants/prl_integrated_cited/sections/integrated_results_methods.tex": "96c5d7c80a6adc06b6d03d336f2120210d6efc4280fcc9baec7594c33ca2c264",
+    "manuscript_variants/prl_integrated_cited/sections/discussion.tex": "8a843fad5308b5d5e316e1ea32b1239c37aed56d6237799d4cb227ed78889526",
+    "output/pdf/manuscript_prl_integrated_cited_v1/figures/Fig1_candidate.pdf": "5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715",
+    "output/pdf/manuscript_prl_integrated_cited_v1/figures/Fig2_candidate.pdf": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "output/pdf/manuscript_prl_integrated_cited_v1/figures/Fig3_candidate.pdf": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "output/pdf/manuscript_prl_integrated_cited_v1/figures/Fig4_candidate.pdf": "3eb78a0c3c479e5c7837ccb5e175b35349b06ad4b942383d8f569d0e60cb5ccb",
+    "manuscript_variants/prl_integrated_cited/references.bib": "2acf071403a0c3dc5f35676166411621311e6fbcb2b22d8683e64f4ec8df9b33",
+    "output/pdf/manuscript_prl_integrated_cited_v1/manuscript_prl_integrated_cited_candidate.pdf": "31e00ef238302a8645ae4e3b9e166ae3f4e90ca21e504d81c399772a6b73cc84"
+  },
+  "export_hashes": {
+    "figures/Fig1_candidate.pdf": "5c10a6a9c78e6697f4f8878057e898931344b3eb705d50ccdb435b2b8fccc715",
+    "figures/Fig2_candidate.pdf": "77eba3a2e61d64f6f7febf16fa0822ab74f5be0fddeee4f1aad3f66126d866ec",
+    "figures/Fig3_candidate.pdf": "752f4645b87c0cf55da822dc949c7e06630e217dfc62d287f510aa05447992d8",
+    "figures/Fig4_candidate.pdf": "3eb78a0c3c479e5c7837ccb5e175b35349b06ad4b942383d8f569d0e60cb5ccb",
+    "manuscript.pdf": "31e00ef238302a8645ae4e3b9e166ae3f4e90ca21e504d81c399772a6b73cc84",
+    "manuscript.tex": "6e2ea75d9f60b7d2cda8ebca6e111e2a8a3259b9a78103445f32870c2b32b3a1",
+    "references.bib": "2acf071403a0c3dc5f35676166411621311e6fbcb2b22d8683e64f4ec8df9b33",
+    "tex/sections/abstract.tex": "f4ba2b8b7250d9d452d1b56a5a4a0dc17b6aa56311f97d2622d74a1fa8d2df2f",
+    "tex/sections/discussion.tex": "8a843fad5308b5d5e316e1ea32b1239c37aed56d6237799d4cb227ed78889526",
+    "tex/sections/integrated_results_methods.tex": "e128c2f1b50f3e2cadea0e29f41f97757874a9958fca408ffe8a0f9b6f848dfe",
+    "tex/sections/introduction.tex": "39b429f8b7d015f8b9c08e4e6b0997c80dc67ff243540e9b7663c2c9d0606ee7"
+  },
+  "original_pdfs_preserved_byte_for_byte": true,
+  "clean_compile": {
+    "manuscript": {
+      "pages": 6,
+      "page_text_identical": true,
+      "all_pages_pixel_identical_72dpi": true,
+      "undefined_references": false
+    }
+  }
+}

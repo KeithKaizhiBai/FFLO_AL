@@ -1,0 +1,22 @@
+\documentclass[aps,prl,reprint,onecolumn,11pt,tightenlines,superscriptaddress,floatfix]{revtex4-2}
+\input{tex/preamble.tex}
+\externaldocument[main-]{manuscript}
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\makeatletter\def\p@subsection{}\makeatother
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\newcounter{algorithm}\renewcommand{\thealgorithm}{S\arabic{algorithm}}
+\makeatletter
+\newenvironment{AnchoredFigure}{\par\addvspace{10pt}\noindent\begin{minipage}{\textwidth}\def\@captype{figure}}{\end{minipage}\par\addvspace{10pt}}
+\newenvironment{AnchoredTable}{\par\addvspace{8pt}\noindent\begin{minipage}{\textwidth}\def\@captype{table}}{\end{minipage}\par\addvspace{8pt}}
+\makeatother
+\begin{document}\raggedbottom\title{Supplemental Material: \ManuscriptTitle}
+\input{tex/authors_sm.tex}
+\maketitle
+\begin{center}\small\href{mailto:kzbai@connect.hku.hk}{kzbai@connect.hku.hk}\end{center}
+\LayoutAudit
+\input{tex/sections/supplement.tex}
+\end{document}
