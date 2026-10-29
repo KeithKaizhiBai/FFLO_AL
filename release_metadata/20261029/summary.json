@@ -5,9 +5,9 @@
   "source_root": "/Users/baikaizhi/Desktop/PhD_study/4th/GBU_SC/AL_FFLO",
   "checkout": "/private/tmp/fflo_github_upload_20261028",
   "selected_files": 3845,
-  "selected_bytes": 392008531,
-  "copy_files": 177,
-  "copy_bytes": 69440942,
+  "selected_bytes": 392008809,
+  "copy_files": 1,
+  "copy_bytes": 672890,
   "groups": {
     "root_source": {
       "files": 9,
@@ -15,7 +15,7 @@
     },
     "documentation": {
       "files": 161,
-      "bytes": 1500961
+      "bytes": 1501239
     },
     "historical_archive_manifest": {
       "files": 8,

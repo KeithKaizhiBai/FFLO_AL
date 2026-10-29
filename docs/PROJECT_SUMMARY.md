@@ -38,7 +38,11 @@ synchronization on 2026-10-29. The upload allowlist includes the reader folders;
 the synchronization baseline is
 `ac1532d7355d895a7e6fc30b3da5d631dd8b5661`. The new dated release inventory is
 `release_metadata/20261029/`, separate from the preserved 20261028 inventory.
-Publication verification is recorded separately after the push.
+Synchronization completed with payload commit
+`834a023fbe2221ae683830bdb4ce8f1f9cc854a7`. Remote main and seven fetched
+files (three indexes, v1 main, and all three v9 PDFs) matched local hashes.
+The publication receipt is `release_metadata/20261029/publication.json`;
+a documentation-only follow-up records the verified payload publication.
 Scientific/figure approval gates remain HUMAN_WAIT.
 
 ## 2026-10-28 author identity and verified GitHub publication
